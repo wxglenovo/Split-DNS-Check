@@ -189,7 +189,9 @@ def split_parts(merged_rules):
         if max_len - min_len <= BALANCE_THRESHOLD:
             break
         max_idx, min_idx = lens.index(max_len), lens.index(min_len)
-        move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len)//2)
+        move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len) // 2)
+        if move_count <= 0:
+            break
         part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
         part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
 
@@ -225,12 +227,13 @@ def dns_validate(rules, part):
         completed, start_time = 0, time.time()
         for future in as_completed(futures):
             res = future.result()
-            if res: valid_rules.append(res)
+            if res:
+                valid_rules.append(res)
             completed += 1
             if completed % DNS_BATCH_SIZE == 0 or completed == total_rules:
                 elapsed = time.time() - start_time
-                speed = completed / elapsed
-                eta = (total_rules - completed)/speed if speed > 0 else 0
+                speed = completed / elapsed if elapsed > 0 else 0
+                eta = (total_rules - completed) / speed if speed > 0 else 0
                 print(f"✅ 已验证 {completed}/{total_rules} 条 | 有效 {len(valid_rules)}条 | 速度 {speed:.1f}条/秒 | 预计完成时间 {eta:.1f} 秒")
 
     return valid_rules
@@ -241,7 +244,7 @@ def dns_validate(rules, part):
 def update_not_written_counter(part_num):
     part_key = f"validated_part_{part_num}"
     counter = load_json(NOT_WRITTEN_FILE)
-    for i in range(1, PARTS+1):
+    for i in range(1, PARTS + 1):
         counter.setdefault(f"validated_part_{i}", {})
 
     validated_file = os.path.join(DIST_DIR, f"{part_key}.txt")
@@ -250,10 +253,12 @@ def update_not_written_counter(part_num):
     tmp_rules = set(open(tmp_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(tmp_file) else set()
 
     part_counter = counter.get(part_key, {})
-    for r in tmp_rules: part_counter[r] = WRITE_COUNTER_MAX
-    for r in existing_rules - tmp_rules: part_counter[r] = part_counter.get(r, WRITE_COUNTER_MAX) - 1
+    for r in tmp_rules:
+        part_counter[r] = WRITE_COUNTER_MAX
+    for r in existing_rules - tmp_rules:
+        part_counter[r] = part_counter.get(r, WRITE_COUNTER_MAX) - 1
 
-    to_retry = [r for r in existing_rules if part_counter.get(r,0) <= 0]
+    to_retry = [r for r in existing_rules if part_counter.get(r, 0) <= 0]
     if to_retry:
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
             rf.write("\n".join(to_retry) + "\n")
@@ -263,7 +268,8 @@ def update_not_written_counter(part_num):
     with open(validated_file, "w", encoding="utf-8") as f:
         f.write("\n".join(sorted(existing_rules.union(tmp_rules))))
 
-    for r in to_retry: part_counter.pop(r,None)
+    for r in to_retry:
+        part_counter.pop(r, None)
     counter[part_key] = part_counter
     save_json(NOT_WRITTEN_FILE, counter)
     return len(to_retry)
@@ -288,23 +294,47 @@ def process_part(part):
     old_rules = set(open(out_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(out_file) else set()
 
     delete_counter = load_json(DELETE_COUNTER_FILE)
-    rules_to_validate = [r for r in lines if delete_counter.get(r,4)<7]
+
+    # rules_to_validate: 当前需要进行 DNS 验证的规则（删除计数 < 7）
+    rules_to_validate = [r for r in lines if delete_counter.get(r, 4) < 7]
+
+    # 对于删除计数 >=7 的规则，增加计数（跳过验证）
     for r in lines:
-        if delete_counter.get(r,4) >= 7: delete_counter[r] += 1
+        if delete_counter.get(r, 4) >= 7:
+            delete_counter[r] = delete_counter.get(r, 0) + 1
 
     final_rules = set(old_rules)
+
+    # failure_counts 用于统计连续失败的分布（1..4）
+    failure_counts = {}
+
     valid = dns_validate(rules_to_validate, part)
     added_count = 0
+
     for r in rules_to_validate:
         if r in valid:
             final_rules.add(r)
             delete_counter[r] = 0
             added_count += 1
         else:
-            delete_counter[r] = delete_counter.get(r,0)+1
-            if delete_counter[r]>=DELETE_THRESHOLD: final_rules.discard(r)
+            delete_counter[r] = delete_counter.get(r, 0) + 1
 
+            # 记录 failure_counts（最多计到 4）
+            fc = min(delete_counter[r], 4)
+            failure_counts[fc] = failure_counts.get(fc, 0) + 1
+
+            if delete_counter[r] >= DELETE_THRESHOLD:
+                final_rules.discard(r)
+
+    # 保存 delete_counter.json
     save_json(DELETE_COUNTER_FILE, delete_counter)
+
+    # ===== 新增：打印连续失败统计日志（你要求的部分） =====
+    for i in range(1, max(failure_counts.keys(), default=0) + 1):
+        if failure_counts.get(i, 0) > 0:
+            print(f"⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
+    # =====================================================
+
     deleted_validated = update_not_written_counter(part)
     total_count = len(final_rules)
 
@@ -326,7 +356,7 @@ if __name__ == "__main__":
     if args.force_update:
         download_all_sources()
 
-    if not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR,"part_01.txt")):
+    if not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
         download_all_sources()
 
