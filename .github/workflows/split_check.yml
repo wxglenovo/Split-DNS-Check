@@ -1,3 +1,4 @@
+
 name: Split & DNS Check
 
 on:
@@ -46,6 +47,40 @@ jobs:
           echo "💻 当前 Git 配置："
           git config --global --list
 
+      - name: ✅ 智能 Git 历史瘦身
+        run: |
+          set -euo pipefail
+          echo "⏳ 测试克隆速度（--no-tags + 浅克隆）"
+          START=$(date +%s)
+          git clone --no-tags --depth=1 \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo || true
+          END=$(date +%s)
+          ELAPSED=$((END - START))
+          echo "✅ 克隆耗时: ${ELAPSED}s"
+
+          if (( ELAPSED <= 60 )); then
+            echo "✅ 克隆速度良好 → 跳过 Git 历史瘦身"
+            exit 0
+          fi
+
+          echo "⚠ 克隆耗时超过 60 秒 → 自动触发 Git 瘦身!"
+          cd repo
+          du -sh .git || true
+          TS=$(date +"%Y%m%d-%H%M")
+          TAG="auto-backup-$TS"
+          BRANCH="backup-$TS"
+          git tag "$TAG"
+          git branch "$BRANCH"
+          git push --atomic --force --thin \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git \
+            "$TAG" "$BRANCH"
+          NEW_TREE=$(git write-tree)
+          NEW_COMMIT=$(echo "🧹 Repo auto-squash on $TS" | git commit-tree "$NEW_TREE")
+          git reset --hard "$NEW_COMMIT"
+          git push --force --thin \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
+          echo "✅ Git 历史瘦身完成! 备份 tag: $TAG 分支: $BRANCH"
+
       - name: ✅ 定时强制更新规则（每6小时）
         run: |
           BJ_TIME=$(date -u -d '+8 hour' +"%Y-%m-%d %H:%M")
@@ -63,16 +98,35 @@ jobs:
         run: |
           mkdir -p dist logs tmp
           echo "📁 确保 dist/logs/tmp 文件夹存在"
-          [ -f dist/delete_counter.json ] || echo "{}" > dist/delete_counter.json
-          [ -f dist/not_written_counter.json ] || echo "{}" > dist/not_written_counter.json
-          [ -f dist/retry_rules.txt ] || touch dist/retry_rules.txt
+          if [ ! -f dist/delete_counter.json ]; then
+            echo "{}" > dist/delete_counter.json
+            echo "✅ 已创建 delete_counter.json"
+          else
+            echo "ℹ️ delete_counter.json 已存在"
+          fi
+
+          if [ ! -f dist/not_written_counter.json ]; then
+            echo "{}" > dist/not_written_counter.json
+            echo "✅ 已创建 not_written_counter.json"
+          else
+            echo "ℹ️ not_written_counter.json 已存在"
+          fi
+
+          if [ ! -f dist/retry_rules.txt ]; then
+            touch dist/retry_rules.txt
+            echo "✅ 已创建 retry_rules.txt"
+          else
+            echo "ℹ️ retry_rules.txt 已存在"
+          fi
+
           echo "dist/retry_rules.txt 内容预览（前5行）:"
           head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
 
+      # 其余步骤保持原样（确保规则、DNS 验证、日志上传、提交等）
       - name: ✅ 确保规则文件与分片存在
         run: |
-          if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 已存在"
+          if [ -f "merged_rules.txt" ] && [ -f "tmp/part_X.txt" ]; then
+            echo "ℹ️ merged_rules.txt 和 tmp/part_X.txt 均已存在，无需拉取"
           else
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
@@ -122,6 +176,9 @@ jobs:
             echo "ℹ️ 日志文件不存在"
             STATS="无日志"
           fi
+
+          echo "📦 准备提交文件:"
+          ls -l dist || echo "⚠ dist 不存在"
 
           git add tmp/last_part.txt dist/delete_counter.json dist/not_written_counter.json merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
