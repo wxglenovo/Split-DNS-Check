@@ -8,6 +8,7 @@ import argparse
 import dns.resolver
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
+import hashlib
 
 # ===============================
 # 配置区（Config）
@@ -26,8 +27,9 @@ DNS_BATCH_SIZE = 540  # 每批540条
 WRITE_COUNTER_MAX = 6
 DNS_THREADS = 80      # 固定80线程
 
-BALANCE_THRESHOLD = 2  # 分片数量差距超过2条才触发微调
-BALANCE_MOVE_LIMIT = 50  # 每次最多移动50条规则
+# 哈希分片微调参数
+BALANCE_THRESHOLD = 2
+BALANCE_MOVE_LIMIT = 50
 
 os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)
@@ -120,10 +122,8 @@ def download_all_sources():
     filtered_rules, updated_delete_counter = filter_and_update_high_delete_count_rules(merged)
     split_parts(filtered_rules)
 
-    # ✅ 先保存 delete_counter.json
     save_json(DELETE_COUNTER_FILE, updated_delete_counter)
 
-    # ✅ 然后再检测并合并 retry_rules
     if os.path.exists(RETRY_FILE):
         with open(RETRY_FILE, "r", encoding="utf-8") as rf:
             retry_rules = [r.strip() for r in rf if r.strip()]
@@ -154,7 +154,7 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
             skipped_rules.append(rule)
             updated_delete_counter[rule] = del_cnt + 1
             if updated_delete_counter[rule] >= 24:
-                updated_delete_counter[rule] = 5
+                updated_delete_counter[rule] = 6
                 reset_rules.append(rule)
 
     for rule in skipped_rules[:20]:
@@ -162,46 +162,42 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
     print(f"🔢 共 {len(skipped_rules)} 条规则被跳过验证（删除计数≥7）")
 
     for rule in reset_rules[:20]:
-        print(f"🔁 删除计数达到24，重置为 5：{rule}")
-    print(f"🔢 共 {len(reset_rules)} 条规则已重置为 5")
+        print(f"🔁 删除计数达到24，重置为 6：{rule}")
+    print(f"🔢 共 {len(reset_rules)} 条规则的删除计数达到24，已重置为 6")
 
     return low_delete_count_rules, updated_delete_counter
 
 # ===============================
-# 智能哈希分片 + 轻量微调
+# 哈希分片 + 轻量微调平衡
 # ===============================
 def split_parts(merged_rules):
     sorted_rules = sorted(merged_rules)
     total = len(sorted_rules)
-    print(f"🪓 智能哈希分片 {total} 条规则，分为 {PARTS} 片")
+    print(f"🪓 分片 {total} 条规则，分为 {PARTS} 片")
 
-    # 初始哈希分片
-    parts = [[] for _ in range(PARTS)]
+    # 哈希分片
+    part_buckets = [[] for _ in range(PARTS)]
     for rule in sorted_rules:
-        index = hash(rule) % PARTS
-        parts[index].append(rule)
+        h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
+        idx = h % PARTS
+        part_buckets[idx].append(rule)
 
-    # 微调平衡
-    lengths = [len(p) for p in parts]
-    max_len, min_len = max(lengths), min(lengths)
-    iteration = 0
-    while max_len - min_len > BALANCE_THRESHOLD and iteration < 10:
-        max_idx = lengths.index(max_len)
-        min_idx = lengths.index(min_len)
-        move_count = min((max_len - min_len) // 2, BALANCE_MOVE_LIMIT)
-        move_rules = parts[max_idx][-move_count:]
-        parts[max_idx] = parts[max_idx][:-move_count]
-        parts[min_idx].extend(move_rules)
-        lengths = [len(p) for p in parts]
-        max_len, min_len = max(lengths), min(lengths)
-        iteration += 1
+    # 轻量微调
+    while True:
+        lens = [len(b) for b in part_buckets]
+        max_len, min_len = max(lens), min(lens)
+        if max_len - min_len <= BALANCE_THRESHOLD:
+            break
+        max_idx, min_idx = lens.index(max_len), lens.index(min_len)
+        move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len)//2)
+        part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
+        part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
 
-    # 写入文件
-    for i, part_rules in enumerate(parts):
+    for i, bucket in enumerate(part_buckets):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(sorted(part_rules)))
-        print(f"📄 分片 {i+1}: {len(part_rules)} 条 → {filename}")
+            f.write("\n".join(bucket))
+        print(f"📄 分片 {i+1}: {len(bucket)} 条 → {filename}")
 
 # ===============================
 # DNS 验证 + retry_rules 插入顶部
@@ -213,7 +209,6 @@ def dns_validate(rules, part):
             retry_rules = [l.strip() for l in rf if l.strip()]
 
     combined_rules = retry_rules + rules if retry_rules else rules
-
     tmp_file = os.path.join(TMP_DIR, f"vpart_{part}.tmp")
     with open(tmp_file, "w", encoding="utf-8") as f:
         f.write("\n".join(combined_rules))
@@ -226,13 +221,11 @@ def dns_validate(rules, part):
     valid_rules = []
     total_rules = len(combined_rules)
     with ThreadPoolExecutor(max_workers=DNS_THREADS) as executor:
-        futures = {executor.submit(check_domain, rule): rule for rule in combined_rules}
-        completed = 0
-        start_time = time.time()
+        futures = {executor.submit(check_domain, r): r for r in combined_rules}
+        completed, start_time = 0, time.time()
         for future in as_completed(futures):
-            result = future.result()
-            if result:
-                valid_rules.append(result)
+            res = future.result()
+            if res: valid_rules.append(res)
             completed += 1
             if completed % DNS_BATCH_SIZE == 0 or completed == total_rules:
                 elapsed = time.time() - start_time
@@ -248,26 +241,19 @@ def dns_validate(rules, part):
 def update_not_written_counter(part_num):
     part_key = f"validated_part_{part_num}"
     counter = load_json(NOT_WRITTEN_FILE)
-    for i in range(1, PARTS + 1):
-        pk = f"validated_part_{i}"
-        if pk not in counter:
-            counter[pk] = {}
+    for i in range(1, PARTS+1):
+        counter.setdefault(f"validated_part_{i}", {})
 
     validated_file = os.path.join(DIST_DIR, f"{part_key}.txt")
     tmp_file = os.path.join(TMP_DIR, f"vpart_{part_num}.tmp")
-
     existing_rules = set(open(validated_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(validated_file) else set()
     tmp_rules = set(open(tmp_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(tmp_file) else set()
 
     part_counter = counter.get(part_key, {})
+    for r in tmp_rules: part_counter[r] = WRITE_COUNTER_MAX
+    for r in existing_rules - tmp_rules: part_counter[r] = part_counter.get(r, WRITE_COUNTER_MAX) - 1
 
-    for rule in tmp_rules:
-        part_counter[rule] = WRITE_COUNTER_MAX
-
-    for rule in (existing_rules - tmp_rules):
-        part_counter[rule] = part_counter.get(rule, WRITE_COUNTER_MAX) - 1
-
-    to_retry = [r for r in existing_rules if part_counter.get(r, 0) <= 0]
+    to_retry = [r for r in existing_rules if part_counter.get(r,0) <= 0]
     if to_retry:
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
             rf.write("\n".join(to_retry) + "\n")
@@ -275,11 +261,9 @@ def update_not_written_counter(part_num):
         existing_rules -= set(to_retry)
 
     with open(validated_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(sorted(existing_rules)))
+        f.write("\n".join(sorted(existing_rules.union(tmp_rules))))
 
-    for r in to_retry:
-        part_counter.pop(r, None)
-
+    for r in to_retry: part_counter.pop(r,None)
     counter[part_key] = part_counter
     save_json(NOT_WRITTEN_FILE, counter)
     return len(to_retry)
@@ -304,44 +288,29 @@ def process_part(part):
     old_rules = set(open(out_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(out_file) else set()
 
     delete_counter = load_json(DELETE_COUNTER_FILE)
-    rules_to_validate = []
-    final_rules = set(old_rules)
-    added_count = 0
-    removed_count = 0
-
+    rules_to_validate = [r for r in lines if delete_counter.get(r,4)<7]
     for r in lines:
-        del_cnt = delete_counter.get(r, 4)
-        if del_cnt < 7:
-            rules_to_validate.append(r)
-        else:
-            delete_counter[r] = del_cnt + 1
+        if delete_counter.get(r,4) >= 7: delete_counter[r] += 1
 
+    final_rules = set(old_rules)
     valid = dns_validate(rules_to_validate, part)
-    failure_counts = {}
-
-    for rule in rules_to_validate:
-        if rule in valid:
-            final_rules.add(rule)
-            delete_counter[rule] = 0
+    added_count = 0
+    for r in rules_to_validate:
+        if r in valid:
+            final_rules.add(r)
+            delete_counter[r] = 0
             added_count += 1
         else:
-            delete_counter[rule] = delete_counter.get(rule, 0) + 1
-            failure_counts[delete_counter[rule]] = failure_counts.get(delete_counter[rule], 0) + 1
-            if delete_counter[rule] >= DELETE_THRESHOLD:
-                removed_count += 1
-                final_rules.discard(rule)
+            delete_counter[r] = delete_counter.get(r,0)+1
+            if delete_counter[r]>=DELETE_THRESHOLD: final_rules.discard(r)
 
     save_json(DELETE_COUNTER_FILE, delete_counter)
-
-    for i in range(1, max(failure_counts.keys(), default=0) + 1):
-        if failure_counts.get(i, 0):
-            print(f"⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
+    deleted_validated = update_not_written_counter(part)
+    total_count = len(final_rules)
 
     with open(out_file, "w", encoding="utf-8") as f:
         f.write("\n".join(sorted(final_rules)))
 
-    deleted_validated = update_not_written_counter(part)
-    total_count = len(final_rules)
     print(f"✅ 分片 {part} 完成: 总{total_count}, 新增{added_count}, 删除{deleted_validated}, 过滤{len(rules_to_validate)-len(valid)}")
     print(f"COMMIT_STATS:总{total_count},新增{added_count},删除{deleted_validated},过滤{len(rules_to_validate)-len(valid)}")
 
@@ -357,7 +326,7 @@ if __name__ == "__main__":
     if args.force_update:
         download_all_sources()
 
-    if not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
+    if not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR,"part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
         download_all_sources()
 
