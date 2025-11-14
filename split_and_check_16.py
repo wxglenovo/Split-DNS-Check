@@ -28,7 +28,7 @@ WRITE_COUNTER_MAX = 6
 DNS_THREADS = 80      # 固定80线程
 
 # 哈希分片微调参数
-BALANCE_THRESHOLD = 2
+BALANCE_THRESHOLD = 1
 BALANCE_MOVE_LIMIT = 50
 
 os.makedirs(TMP_DIR, exist_ok=True)
