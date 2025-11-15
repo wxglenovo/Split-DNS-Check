@@ -58,12 +58,12 @@ jobs:
           ELAPSED=$((END - START))
           echo "✅ 克隆耗时: ${ELAPSED}s"
 
-          if (( ELAPSED <= 60 )); then
+          if (( ELAPSED <= 30 )); then
             echo "✅ 克隆速度良好 → 跳过 Git 历史瘦身"
             exit 0
           fi
 
-          echo "⚠ 克隆耗时超过 60 秒 → 自动触发 Git 瘦身!"
+          echo "⚠ 克隆耗时超过 30 秒 → 自动触发 Git 瘦身!"
           cd repo
           du -sh .git || true
           TS=$(date +"%Y%m%d-%H%M")
