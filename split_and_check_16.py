@@ -140,27 +140,35 @@ def download_all_sources():
 # ===============================
 def filter_and_update_high_delete_count_rules(all_rules_set):
     delete_counter = load_json(DELETE_COUNTER_FILE)
-    low_delete_count_rules = set()
+    low_delete_count_rules = set()          # <7 的，继续验证
     updated_delete_counter = delete_counter.copy()
 
-    skipped_rules = []
-    reset_rules = []
+    skipped_rules = []                     # >=7 的
+    reset_rules = []                       # 达到 24 的
 
     for rule in all_rules_set:
         del_cnt = delete_counter.get(rule, 4)
+
+        # <7 → 进入 DNS 验证
         if del_cnt < 7:
             low_delete_count_rules.add(rule)
+
+        # >=7 → 跳过验证并 +1
         else:
             skipped_rules.append(rule)
             updated_delete_counter[rule] = del_cnt + 1
+
+            # 达到 24 → 重置为 6
             if updated_delete_counter[rule] >= 24:
                 updated_delete_counter[rule] = 6
                 reset_rules.append(rule)
 
+    # 打印前 20 条跳过验证的
     for rule in skipped_rules[:20]:
         print(f"⚠ 删除计数 ≥7，跳过验证：{rule}")
     print(f"🔢 共 {len(skipped_rules)} 条规则被跳过验证（删除计数≥7）")
 
+    # 打印前 20 条恢复验证的
     for rule in reset_rules[:20]:
         print(f"🔁 删除计数达到24，重置为 6：{rule}")
     print(f"🔢 共 {len(reset_rules)} 条规则的删除计数达到24，已重置为 6")
