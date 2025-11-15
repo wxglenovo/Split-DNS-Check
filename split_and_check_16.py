@@ -294,35 +294,25 @@ def process_part(part):
     old_rules = set(open(out_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(out_file) else set()
 
     delete_counter = load_json(DELETE_COUNTER_FILE)
-
-    # 当前需要进行 DNS 验证的规则（删除计数 < 7）
-    rules_to_validate = [r for r in lines if delete_counter.get(r, 4) < 7]
-
-    # 对于删除计数 >=7 的规则，增加计数（跳过验证）
+    rules_to_validate = [r for r in lines if delete_counter.get(r,4)<7]
     for r in lines:
-        if delete_counter.get(r, 4) >= 7:
-            delete_counter[r] = delete_counter.get(r, 0) + 1
+        if delete_counter.get(r,4) >= 7: delete_counter[r] += 1
 
     final_rules = set(old_rules)
-
-    # failure_counts 用于统计连续失败次数
-    failure_counts = {}
-
     valid = dns_validate(rules_to_validate, part)
     added_count = 0
 
+    # 统计连续失败次数
+    failure_counts = {}
     for r in rules_to_validate:
         if r in valid:
             final_rules.add(r)
             delete_counter[r] = 0
             added_count += 1
         else:
-            delete_counter[r] = delete_counter.get(r, 0) + 1
-
-            # 用实际 delete_counter 记录连续失败次数
-            fc = delete_counter[r]
+            delete_counter[r] = delete_counter.get(r,0)+1
+            fc = delete_counter[r]  # 用实际连续失败次数，不限制上限
             failure_counts[fc] = failure_counts.get(fc, 0) + 1
-
             if delete_counter[r] >= DELETE_THRESHOLD:
                 final_rules.discard(r)
 
@@ -332,19 +322,15 @@ def process_part(part):
     # ===== 打印连续失败统计 =====
     print("\n📊 连续失败统计:")
     for i in range(1, 5):
-        count = failure_counts.get(i, 0)
-        if count > 0:
-            print(f"    ⚠ 连续失败 {i}/4 的规则条数: {count}")
-
-    # 打印超过 4 的统计
-    over_4 = {k: v for k, v in failure_counts.items() if k > 4}
+        if failure_counts.get(i, 0) > 0:
+            print(f"    ⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
+    over_4 = {k:v for k,v in failure_counts.items() if k > 4}
     if over_4:
         print("\n🚨 超过 4/4 的连续失败次数（建议重点检查）:")
         for k, v in sorted(over_4.items()):
             print(f"    🔥 连续失败 {k}/4 的规则条数: {v}")
     print("--------------------------------------------------")
 
-    # 更新 not_written_counter.json
     deleted_validated = update_not_written_counter(part)
     total_count = len(final_rules)
 
