@@ -333,6 +333,16 @@ def process_part(part):
     for i in range(1, max(failure_counts.keys(), default=0) + 1):
         if failure_counts.get(i, 0) > 0:
             print(f"⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
+    for k, v in sorted(consecutive_fail_counts.items()):
+    print(f"⚠ 连续失败 {k}/4 的规则条数: {v}")
+
+# 新增：打印 4/4 以上的失败次数明细
+over_4 = {k: v for k, v in consecutive_fail_counts.items() if k > 4}
+if over_4:
+    print("\n🚨 以下为超过 4/4 的连续失败次数（建议重点检查）：")
+    for k, v in sorted(over_4.items()):
+        print(f"    🔥 连续失败 {k}/4 的规则条数: {v}")
+
     # =====================================================
 
     deleted_validated = update_not_written_counter(part)
