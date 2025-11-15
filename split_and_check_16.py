@@ -295,7 +295,7 @@ def process_part(part):
 
     delete_counter = load_json(DELETE_COUNTER_FILE)
 
-    # rules_to_validate: 当前需要进行 DNS 验证的规则（删除计数 < 7）
+    # 当前需要进行 DNS 验证的规则（删除计数 < 7）
     rules_to_validate = [r for r in lines if delete_counter.get(r, 4) < 7]
 
     # 对于删除计数 >=7 的规则，增加计数（跳过验证）
@@ -305,7 +305,7 @@ def process_part(part):
 
     final_rules = set(old_rules)
 
-    # failure_counts 用于统计连续失败的分布（1..4）
+    # failure_counts 用于统计连续失败次数
     failure_counts = {}
 
     valid = dns_validate(rules_to_validate, part)
@@ -319,8 +319,8 @@ def process_part(part):
         else:
             delete_counter[r] = delete_counter.get(r, 0) + 1
 
-            # 记录 failure_counts（最多计到 4）
-            fc = min(delete_counter[r], 4)
+            # 用实际 delete_counter 记录连续失败次数
+            fc = delete_counter[r]
             failure_counts[fc] = failure_counts.get(fc, 0) + 1
 
             if delete_counter[r] >= DELETE_THRESHOLD:
@@ -329,12 +329,14 @@ def process_part(part):
     # 保存 delete_counter.json
     save_json(DELETE_COUNTER_FILE, delete_counter)
 
-    # ===== 整理连续失败统计输出 =====
+    # ===== 打印连续失败统计 =====
     print("\n📊 连续失败统计:")
     for i in range(1, 5):
         count = failure_counts.get(i, 0)
         if count > 0:
             print(f"    ⚠ 连续失败 {i}/4 的规则条数: {count}")
+
+    # 打印超过 4 的统计
     over_4 = {k: v for k, v in failure_counts.items() if k > 4}
     if over_4:
         print("\n🚨 超过 4/4 的连续失败次数（建议重点检查）:")
@@ -351,7 +353,6 @@ def process_part(part):
 
     print(f"✅ 分片 {part} 完成: 总{total_count}, 新增{added_count}, 删除{deleted_validated}, 过滤{len(rules_to_validate)-len(valid)}")
     print(f"COMMIT_STATS:总{total_count},新增{added_count},删除{deleted_validated},过滤{len(rules_to_validate)-len(valid)}")
-
 
 # ===============================
 # 主入口
