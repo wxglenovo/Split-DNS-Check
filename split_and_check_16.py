@@ -329,17 +329,20 @@ def process_part(part):
     # 保存 delete_counter.json
     save_json(DELETE_COUNTER_FILE, delete_counter)
 
-    # ===== 新增：打印连续失败统计日志（你要求的部分） =====
-    for i in range(1, max(failure_counts.keys(), default=0) + 1):
-        if failure_counts.get(i, 0) > 0:
-            print(f"⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
+# ===== 新增：打印连续失败统计日志（你要求的部分） =====
+max_fc = max(failure_counts.keys(), default=0)
 
-    # 打印超过 4 次的统计（DELETE_COUNTER 会继续增长）
-    over_4 = {k: v for k, v in failure_counts.items() if k > 4}
-    if over_4:
-        print("\n🚨 以下为超过 4/4 的连续失败次数（建议重点检查）：")
-        for k, v in sorted(over_4.items()):
-            print(f"🔥 连续失败 {k}/4 的规则条数: {v}")
+# 打印 1/4 ~ 4/4 范围内的统计
+for i in range(1, 5):
+    if failure_counts.get(i, 0) > 0:
+        print(f"⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
+
+# 打印超过 4/4 的统计
+over_4 = {k: v for k, v in failure_counts.items() if k > 4}
+if over_4:
+    print("\n🚨 以下为超过 4/4 的连续失败次数（建议重点检查）：")
+    for k, v in sorted(over_4.items()):
+        print(f"    🔥 连续失败 {k}/4 的规则条数: {v}")
 
     # =====================================================
 
