@@ -13,13 +13,12 @@ import hashlib
 URLS_TXT = "urls.txt"
 TMP_DIR = "tmp"
 DIST_DIR = "dist"
-MASTER_RULE = "merged_rules.txt"
+MASTER_RULE = os.path.join(DIST_DIR, "merged_rules.txt")  # 确保路径正确
 PARTS = 16
 DNS_TIMEOUT = 2
 DELETE_COUNTER_FILE = os.path.join(DIST_DIR, "delete_counter.bin")
 NOT_WRITTEN_FILE = os.path.join(DIST_DIR, "not_written_counter.bin")
 RETRY_FILE = os.path.join(DIST_DIR, "retry_rules.txt")
-MASTER_RULE = os.path.join(DIST_DIR, "merged_rules.txt")
 DELETE_THRESHOLD = 4
 DNS_BATCH_SIZE = 540
 WRITE_COUNTER_MAX = 6
@@ -27,9 +26,16 @@ DNS_THREADS = 80
 BALANCE_THRESHOLD = 1
 BALANCE_MOVE_LIMIT = 50
 
+# 创建必要的目录
 os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)
 
+# ===============================
+# 在主处理流程之前确保文件存在
+# ===============================
+if not os.path.exists(MASTER_RULE):
+    print("⚠ merged_rules.txt 文件缺失，正在下载并生成...")
+    download_all_sources()  # 确保这个步骤会创建 merged_rules.txt
 # ===============================
 # 确保文件存在并初始化为空字典
 # ===============================
