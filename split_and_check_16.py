@@ -10,6 +10,7 @@ import hashlib
 # ===============================
 # 配置区（Config）
 # ===============================
+MASTER_RULE = "merged_rules.txt"
 URLS_TXT = "urls.txt"
 TMP_DIR = "tmp"
 DIST_DIR = "dist"
@@ -218,7 +219,7 @@ def update_not_written_counter(part_num, tmp_rules, validated_rules):
     return to_retry
 
 # ===============================
-# 下载并合并规则源
+# 下载所有规则源并生成合并规则
 # ===============================
 def download_all_sources():
     """
@@ -258,7 +259,7 @@ def download_all_sources():
     split_parts(filtered_rules)
     
     return True
-
+    
 # ===============================
 # 函数定义区
 # ===============================
