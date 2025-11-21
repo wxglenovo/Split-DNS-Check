@@ -633,6 +633,7 @@ $third-party,xmlhttprequest,domain=subhd.tv|subhdtw.com|zzzzz688.com
 </a></div>
 </button><tool-tip id="tooltip-367c6469-7e79-47ee-b445-9da7f7b27d5a" for="action-menu-c6535aba-af68-4e2d-8f0f-7f799a516f13-button" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Additional navigation options</tool-tip>
 </button><tool-tip id="tooltip-cbae3114-7a09-4c6f-b64a-3db25b678fba" for="icon-button-9e392cc8-cd51-43cb-9eee-cf69e2196487" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Appearance settings</tool-tip>
+</button><tool-tip id="tooltip-edddb6cd-0121-4183-9969-f0cc3cf3c7d9" for="icon-button-655af5fe-4641-4593-9655-611d69ecae6c" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Appearance settings</tool-tip>
 </div></anchored-position>  </focus-group>
 </html>
 </p>
@@ -654,12 +655,18 @@ $third-party,xmlhttprequest,domain=subhd.tv|subhdtw.com|zzzzz688.com
 <a icon="repo-forked" id="fork-button" href="/login?return_to=%2Fcjx82630%2Fcjxlist" rel="nofollow" data-hydro-click="{&quot;event_type&quot;:&quot;authentication.click&quot;,&quot;payload&quot;:{&quot;location_in_page&quot;:&quot;repo details fork button&quot;,&quot;repository_id&quot;:26562123,&quot;auth_type&quot;:&quot;LOG_IN&quot;,&quot;originating_url&quot;:&quot;https://github.com/cjx82630/cjxlist&quot;,&quot;user_id&quot;:null}}" data-hydro-click-hmac="af799b572695354822bef784319ec373669c5d822d3be95b687b1d441652d7a3" data-view-component="true" class="btn-sm btn">    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-repo-forked mr-2">
 <a id="insights-tab" href="/durablenapkin/scamblocklist/pulse" data-tab-item="i5insights-tab" data-selected-links="repo_graphs repo_contributors dependency_graph dependabot_updates pulse people community /durablenapkin/scamblocklist/pulse" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-analytics-event="{&quot;category&quot;:&quot;Underline navbar&quot;,&quot;action&quot;:&quot;Click tab&quot;,&quot;label&quot;:&quot;Insights&quot;,&quot;target&quot;:&quot;UNDERLINE_NAV.TAB&quot;}" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item">
 <a tabindex="-1" id="item-002beb2a-91fa-4723-8bca-c56e65062ec0" href="/durablenapkin/scamblocklist/pulls" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+<a tabindex="-1" id="item-247a2e03-ce37-4884-b59a-14b4e0068907" href="/cjx82630/cjxlist/pulse" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+<a tabindex="-1" id="item-292f2da1-f04e-411b-bde6-8666da40f2f3" href="/privacy-protection-tools/anti-AD/pulls" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
 <a tabindex="-1" id="item-75f1a3dc-885c-4b9a-bacb-0904cbce471f" href="/cjx82630/cjxlist/security" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+<a tabindex="-1" id="item-8a8f8781-0cf7-4d3c-b871-4e9afacc6d4a" href="/durablenapkin/scamblocklist/pulse" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+<a tabindex="-1" id="item-badc2bd6-b673-4cf1-868b-bd4557d81cc5" href="/cjx82630/cjxlist/pulls" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
 <button data-target="react-partial-anchor.anchor" id="icon-button-9085a267-136c-424e-81bd-ffb2cde7c073" aria-labelledby="tooltip-de42fd61-511f-4dd5-aaf6-e4e5ba5ec7d2" type="button" disabled="disabled" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium AppHeader-button HeaderMenu-link border cursor-wait">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-sliders Button-visual">
 <button data-target="react-partial-anchor.anchor" id="icon-button-d642d078-4e7f-4d20-b664-c36b101b2f47" aria-labelledby="tooltip-3b77792f-ffd0-43af-98a2-2aae576d11f0" type="button" disabled="disabled" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium AppHeader-button HeaderMenu-link border cursor-wait">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-sliders Button-visual">
+<button id="action-menu-d3cf644d-a772-4f88-ad9d-91175c4ba8da-button" popovertarget="action-menu-d3cf644d-a772-4f88-ad9d-91175c4ba8da-overlay" aria-controls="action-menu-d3cf644d-a772-4f88-ad9d-91175c4ba8da-list" aria-haspopup="true" aria-labelledby="tooltip-5c9bcd42-30e6-4a85-8505-fc3466661d00" type="button" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium UnderlineNav-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-kebab-horizontal Button-visual">
 <details class="details-reset details-overlay details-overlay-dark lh-default color-fg-default hx_rsm" open>
 <div class="zeroclipboard-container">
 <div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="code-search-feedback-form" data-turbo="false" action="/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="3q8u1u1ZKR9rinX4WXembWiWLxEPoD63FWLVg/vYExtU1xyRIWDPiF487Z3y3FaInn68q1xYvYuYEvRL84z6/g==" />
+<div data-view-component="true" class="Overlay-body">        <!-- '"` --><!-- </textarea></xmp> --></option></form><form id="code-search-feedback-form" data-turbo="false" action="/search/feedback" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="tJ+EYfZc2AF7fTbDOUdKFNplPVwKXwJsV8KxqEl23wSsjZngsJlH7aKG4msRJbfsQOdnskutRC5h3RZcI6L1nw==" />
 <h3 class="sr-only" id="sr-footer-heading">Footer navigation</h3>
 <header class="HeaderMktg header-logged-out js-details-container js-header Details f4 py-3" role="banner" data-is-top="true" data-color-mode=light data-light-theme=light data-dark-theme=dark>
 <include-fragment src="/cjx82630/cjxlist/used_by_list" accept="text/fragment+html" data-nonce="v2:62259e9c-6547-87e9-bb6c-7cc750303f3a" data-view-component="true">
@@ -686,6 +693,7 @@ $third-party,xmlhttprequest,domain=subhd.tv|subhdtw.com|zzzzz688.com
 <path d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549 5.508 5.508 0 0 1 3.034 4.084.75.75 0 1 1-1.482.235 4 4 0 0 0-7.9 0 .75.75 0 0 1-1.482-.236A5.507 5.507 0 0 1 3.102 8.05 3.493 3.493 0 0 1 2 5.5ZM11 4a3.001 3.001 0 0 1 2.22 5.018 5.01 5.01 0 0 1 2.56 3.012.749.749 0 0 1-.885.954.752.752 0 0 1-.549-.514 3.507 3.507 0 0 0-2.522-2.372.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5.75.75 0 0 1 11 4Zm-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5Z"></path>
 <path d="M7.998 15.035c-4.562 0-7.873-2.914-7.998-3.749V9.338c.085-.628.677-1.686 1.588-2.065.013-.07.024-.143.036-.218.029-.183.06-.384.126-.612-.201-.508-.254-1.084-.254-1.656 0-.87.128-1.769.693-2.484.579-.733 1.494-1.124 2.724-1.261 1.206-.134 2.262.034 2.944.765.05.053.096.108.139.165.044-.057.094-.112.143-.165.682-.731 1.738-.899 2.944-.765 1.23.137 2.145.528 2.724 1.261.566.715.693 1.614.693 2.484 0 .572-.053 1.148-.254 1.656.066.228.098.429.126.612.012.076.024.148.037.218.924.385 1.522 1.471 1.591 2.095v1.872c0 .766-3.351 3.795-8.002 3.795Zm0-1.485c2.28 0 4.584-1.11 5.002-1.433V7.862l-.023-.116c-.49.21-1.075.291-1.727.291-1.146 0-2.059-.327-2.71-.991A3.222 3.222 0 0 1 8 6.303a3.24 3.24 0 0 1-.544.743c-.65.664-1.563.991-2.71.991-.652 0-1.236-.081-1.727-.291l-.023.116v4.255c.419.323 2.722 1.433 5.002 1.433ZM6.762 2.83c-.193-.206-.637-.413-1.682-.297-1.019.113-1.479.404-1.713.7-.247.312-.369.789-.369 1.554 0 .793.129 1.171.308 1.371.162.181.519.379 1.442.379.853 0 1.339-.235 1.638-.54.315-.322.527-.827.617-1.553.117-.935-.037-1.395-.241-1.614Zm4.155-.297c-1.044-.116-1.488.091-1.681.297-.204.219-.359.679-.242 1.614.091.726.303 1.231.618 1.553.299.305.784.54 1.638.54.922 0 1.28-.198 1.442-.379.179-.2.308-.578.308-1.371 0-.765-.123-1.242-.37-1.554-.233-.296-.693-.587-1.713-.7Z"></path><path d="M6.25 9.037a.75.75 0 0 1 .75.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 .75-.75Zm4.25.75v1.501a.75.75 0 0 1-1.5 0V9.787a.75.75 0 0 1 1.5 0Z"></path>
 <script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/notifications-global-eb21f5b0029d.js" defer="defer"></script>
+<script type="application/json" id="client-env">{"locale":"en","featureFlags":["a11y_status_checks_ruleset","actions_custom_images_public_preview_visibility","actions_custom_images_storage_billing_ui_visibility","actions_enable_snapshot_keyword","actions_image_version_event","alternate_user_config_repo","api_insights_show_missing_data_banner","attestations_filtering","client_version_header","codespaces_prebuild_region_target_update","contentful_lp_footnotes","copilot_agent_cli_public_preview","copilot_agent_task_list_v2","copilot_agent_tasks_btn_code_nav","copilot_agent_tasks_btn_code_view","copilot_agent_tasks_btn_code_view_lines","copilot_agent_tasks_btn_repo","copilot_api_agentic_issue_marshal_yaml","copilot_api_draft_issues_with_dependencies","copilot_api_github_draft_update_issue_skill","copilot_byok","copilot_byok_capabilities","copilot_chat_agents_empty_state","copilot_chat_attach_multiple_images","copilot_chat_file_redirect","copilot_chat_input_commands","copilot_chat_opening_thread_switch","copilot_chat_reduce_quota_checks","copilot_chat_search_bar_redirect","copilot_chat_selection_attachments","copilot_chat_vision_in_claude","copilot_chat_vision_preview_gate","copilot_coding_agent_task_response","copilot_custom_copilots","copilot_custom_copilots_feature_preview","copilot_duplicate_thread","copilot_extensions_hide_in_dotcom_chat","copilot_extensions_removal_on_marketplace","copilot_features_raycast_logo","copilot_file_block_ref_matching","copilot_free_to_paid_telem","copilot_ftp_hyperspace_upgrade_prompt","copilot_ftp_settings_upgrade","copilot_ftp_upgrade_to_pro_from_models","copilot_ftp_your_copilot_settings","copilot_immersive_generate_thread_name_async","copilot_immersive_issues_readonly_viewer","copilot_immersive_issues_show_relationships","copilot_immersive_structured_model_picker","copilot_immersive_task_hyperlinking","copilot_immersive_task_within_chat_thread","copilot_org_policy_page_focus_mode","copilot_security_alert_assignee_options","copilot_share_active_subthread","copilot_spaces_as_attachments","copilot_spaces_ga","copilot_spark_empty_state","copilot_spark_loading_webgl","copilot_spark_progressive_error_handling","copilot_spark_use_billing_headers","copilot_stable_conversation_view","copilot_swe_agent_progress_commands","copilot_swe_agent_use_subagents","copilot_workbench_agent_seed_tool","copilot_workbench_agent_user_edit_awareness","copilot_workbench_cache","copilot_workbench_preview_analytics","copilot_workbench_use_single_prompt","data_router_force_refetch_on_navigation","direct_to_salesforce","disable_dashboard_universe_2025_private_preview","dom_node_counts","dotcom_chat_client_side_skills","enterprise_ai_controls","failbot_report_error_react_apps_on_page","failbot_verify_history_replace_state","fetch_graphql_improved_error_serialization","ghost_pilot_confidence_truncation_25","ghost_pilot_confidence_truncation_40","global_search_multi_orgs","hyperspace_2025_logged_out_batch_1","hyperspace_nudges_universe25","hyperspace_nudges_universe25_post_event","initial_per_page_pagination_updates","inp_reduced_threshold","issue_fields_report_usage","issues_expanded_file_types","issues_lazy_load_comment_box_suggestions","issues_react_bots_timeline_pagination","issues_react_prohibit_title_fallback","issues_react_remove_placeholders","issues_report_sidebar_interactions","issues_sticky_sidebar","item_picker_label_tsq_migration","item_picker_project_tsq_migration","kb_convert_to_space","lifecycle_label_name_updates","link_contact_sales_swp_marketo","marketing_pages_search_explore_provider","mcp_registry_install","mcp_registry_oss_v0_1_api","memex_default_issue_create_repository","memex_grouped_by_edit_route","memex_mwl_filter_field_delimiter","mission_control_use_body_html","new_traffic_page_banner","open_agent_session_in_vscode_insiders","open_agent_session_in_vscode_stable","pinned_issue_fields","primer_react_segmented_control_tooltip","projects_assignee_max_limit","react_fetch_graphql_ignore_expected_errors","record_sso_banner_metrics","repos_insights_remove_new_url","ruleset_deletion_confirmation","sample_network_conn_type","scheduled_reminders_updated_limits","site_features_copilot_universe","site_homepage_collaborate_video","site_homepage_contentful","site_homepage_eyebrow_banner","site_homepage_universe_animations","site_msbuild_webgl_hero","spark_fix_rename","spark_force_push_after_checkout","spark_improve_image_upload","spark_kv_encocoded_keys","spark_show_data_access_on_publish","spark_sync_repository_after_iteration","viewscreen_sandbox","webp_support","workbench_store_readonly"],"copilotApiOverrideUrl":"https://api.githubcopilot.com"}</script>
 <span class="ActionListItem-visual ActionListItem-visual--leading">
 <span class="d-block h4 color-fg-default my-1" id="open-source-repositories-heading">Repositories</span>
 <span class="text-bold">109</span>
@@ -703,6 +711,7 @@ $third-party,xmlhttprequest,domain=subhd.tv|subhdtw.com|zzzzz688.com
 <template id="comment-icon">
 <template id="plus-circle-icon">
 <th>官网地址</th>
+<ul aria-labelledby="action-menu-d3cf644d-a772-4f88-ad9d-91175c4ba8da-button" id="action-menu-d3cf644d-a772-4f88-ad9d-91175c4ba8da-list" role="menu" data-view-component="true" class="ActionListWrap--inset ActionListWrap">
 =468x60_
 ?action=impression&
 ?action=tracking_script
@@ -14159,6 +14168,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||4unblockme.info^
 ||4w-wrestling.us.intellitxt.com^
 ||4w5wihkwyhsav2ha.grandhaus.at^
+||4wgftef.icu^
 ||4wu3gf.cn^
 ||4xfaster.tk^
 ||4xicd08qs.com^
@@ -19065,6 +19075,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||akuettddwkwtdx.com^
 ||akumeha.onelink.me^$popup
 ||akumulatorowy-raj.pl^
+||akunkerjaonline.com^
 ||akuntanbahagia.com^
 ||akusherok.ru^
 ||akustik-hautnah-erleben.de^
@@ -23701,6 +23712,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||axee.info^
 ||axeo.zonedock.net^
 ||axeramus-poeta.blogspot.com^
+||axetradeviax-system.com^
 ||axiondyna-systems-app.com^
 ||axionics.buzz^
 ||axisbnkclicks.com^
@@ -27636,6 +27648,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||cangzhou.htkaoyan.com^
 ||canid.20inchlabs.com^
 ||canilbraganca.com.br^
+||caninsurancecy.com^
 ||canmake.vn^
 ||cannabisace.com^
 ||cannabisdispensarynearme.com^
@@ -35158,6 +35171,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||drivinrain.co.uk^
 ||drjamesdds.com^
 ||drjctivspweild.com^
+||drkaraaltinhair.com^
 ||drkarendickson.com^
 ||drkenherman.com^
 ||drkubilayokan.com^
@@ -37473,6 +37487,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||ero-spinylla.net^
 ||eroartis.com^
 ||eroder.co.za^
+||erodiumvodums.com^
 ||eroforcesale.com^
 ||erolaksoy.net^
 ||erombflowms.com^
@@ -38834,6 +38849,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||faithfull.kdm.pl^
 ||faithlifeave.com^
 ||faithsific.com^
+||fakeamu.com^
 ||fakeprofilealert.com^
 ||fakesemoiin23.com^
 ||fakt.you2.pl^
@@ -42336,6 +42352,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||gjrrr.hotelcollection.com^
 ||gjusvoqmkddfahvoccst.com^
 ||gjv7fg.ru^
+||gjwkufnkofzgj.online^
 ||gk-temir.com^
 ||gk4aiims.000webhostapp.com^
 ||gkbykg.com^
@@ -42391,6 +42408,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||glittermakercodes.com^
 ||glmaamwyjkx.com^
 ||glmhz.com^
+||glnlhdmefbfaudr.com^
 ||glo-glo-oom.com^
 ||globa3llaunchdata.store^
 ||global-erty.ge^
@@ -43391,6 +43409,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||graficoarts.com^
 ||grafik.com.au^
 ||grafoirizz.pro^
+||grafono.com^
 ||grafpedia.com^$third-party
 ||gragroogrig.net^
 ||grainboards.com^
@@ -43841,6 +43860,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||guide-81027605.zjlions.org^
 ||guide-free.com^
 ||guidefromcappadocia.com^
+||guidemark.eewardmoving.com^
 ||guideofgeorgia.org^
 ||guidesun.tk^
 ||guidhk.com^
@@ -47400,6 +47420,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||infos.wojo.com^
 ||infoscoopnexus.com^
 ||infoserendipitystories.com^
+||infoservice-pe.com^
 ||infoshawmember.weebly.com^
 ||infosistemasconsultores.com^
 ||infosslidclient.duckdns.org^
@@ -48969,6 +48990,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||jean-yves-bertrand.com^
 ||jeannettes.info^
 ||jeayfm.com^
+||jebustidies.shop^
 ||jectthoroughfared.tk^
 ||jeehathu.com^
 ||jeeploversrus.com^
@@ -49599,6 +49621,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||jumpanonymousde.tk^
 ||jumpe.58xmgys.com^
 ||jumpers.mobi^
+||jumpfiledoor.click^
 ||jumpflip.net^
 ||jumpform.net^
 ||jumpfree.info^
@@ -49866,6 +49889,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||kanzaman.org^
 ||kaolinic.us^
 ||kaomanko.axesslove.com^
+||kapadokyalirehber.com^
 ||kapitec01.webtrekk.net^
 ||kapitrustex-app.net^
 ||kappa0.rtb.appier.net^
@@ -50079,6 +50103,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||kerolinduxaprestivonam.store^
 ||kerteszetihulladek.hu^
 ||kerui.designmehair.net^
+||kervansarayderbenthotel.com^
 ||kescvj.site^
 ||keshavatech.org^
 ||kesro.com^
@@ -70969,6 +70994,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||sensiblecrane.pro^
 ||sensiblemacaque.pro^
 ||sensisaustralia.demdex.net^
+||sensor.emolm.com^
 ||sensors.saasexch.com^
 ||sensorverti.com^
 ||sensovia.digital^
@@ -75033,6 +75059,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||sudazoom.com^
 ||suddenbloody.tk^
 ||suddenproxie.co.cc^
+||sudefehuwgiqi.website^
 ||sudesh-khokar.000webhostapp.com^
 ||sudiva-taloco.pics^
 ||suedschwarzwald.de.intellitxt.com^
@@ -84386,6 +84413,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||werlkfaertgho.alrafayinterior.com^
 ||wernmen.net^
 ||wernovalitux9p2qh.store^
+||wero-wallet.qsvx.fr^
 ||wertoniox.net^
 ||wesbgz.travel.co.jp^
 ||wescraft.ca^
@@ -96650,6 +96678,7 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||www.m.dvhyb.info^
 ||www.m.facebook.com-newterms-jjoehjyttejg.espeventus.com^
 ||www.m.networkadex.com^
+||www.m.sdubhf.sbs^
 ||www.m0.net^
 ||www.m2230.com^
 ||www.m2arquitectura.co^
@@ -101496,8 +101525,13 @@ zzkdhb.com##p[style^="width: 100%; margin: 0px;"]
 ||www.sberbanksoftrevolution.online^
 ||www.sbi-support.com^
 ||www.sbrt-computing.com^
+||www.sbs.snapon.com^
 ||www.sbstechsupport.com^
 ||www.sbzcqxbgte.cn^
+||www.sc-soft.tk^
+||www.scaleflashtap.bid^
+||www.scaleit2fit.com^
+||www.scalekitflash.download^
 ||www.scamalert.world^
 ||www.scan-trail.com^
 ||www.scanastrologymagazine.com^
