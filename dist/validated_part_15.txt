@@ -16,10 +16,12 @@ $$a[href="/js/app.htm?url="]
 -728x90/
 -ShareButton2.
 -assets/ads.$~script
+-client-report.honkaiimpact3.com^
 -cookie-dialog.
 -didomi.js
 -follow-icon-
 -share-buttons3/$~stylesheet
+-ulog.*.kwaipros.com^
 .194007.com/4058.gif
 .bhphotovideo.com/mo/
 .cn/sc/*?n=$script,third-party
@@ -86,6 +88,7 @@ $$a[href="/js/app.htm?url="]
 /^(\S+\.)?777\-?partners?\.(net|com)$/
 /^(\S+\.)?delivery([\d]{2}|dom|modo).com$/
 /^(\S+\.)?widgets?\./
+/^188\.42\.84\.\d{1,3}/
 /^https?:\/\/(35|104)\.(\d){1,3}\.(\d){1,3}\.(\d){1,3}\//$popup,third-party
 /^https?:\/\/.*\.(club|bid|biz|xyz|site|pro|info|online|icu|monster|buzz|website|biz|re|casa|top|one|space|network|live|systems|ml|world|life|co)\/.*/$~image,~media,~subdocument,third-party,domain=1cloudfile.com|adblockstreamtape.art|adblockstreamtape.site|bowfile.com|clipconverter.cc|cricplay2.xyz|desiupload.co|dood.la|dood.pm|dood.so|dood.to|dood.watch|dood.ws|dopebox.to|downloadpirate.com|drivebuzz.icu|embedstream.me|eplayvid.net|fmovies.ps|gdriveplayer.us|gospeljingle.com|hexupload.net|kissanimes.net|krunkercentral.com|movies2watch.tv|myflixer.pw|myflixer.today|myflixertv.to|powvideo.net|proxyer.org|scloud.online|sflix.to|skidrowcodex.net|streamtape.com|theproxy.ws|vidbam.org|vidembed.cc|vidembed.io|videobin.co|vidlii.com|vidoo.org|vipbox.lc
 /^https?:\/\/fdts\.ebay-kleinanzeigen\.de\/[a-z0-9]{13,18}\.js\?/$script,domain=kleinanzeigen.de
@@ -683,6 +686,9 @@ $$a[href="/js/app.htm?url="]
 @@/urchin.js$domain=on.cc
 @@://192.168.$generichide
 @@_300_250.$domain=nanrenwo.net
+@@|daraz.com^|
+@@|www.daraz.pk^|
+@@|www3.doubleclick.net^|
 @@||120.132.57.41/pjk/pag/
 @@||163.com/user/event?id=
 @@||16668tu.com/css/ad.css
@@ -707,6 +713,8 @@ $$a[href="/js/app.htm?url="]
 @@||advertisement.taobao.com^
 @@||akamaihd.net/nbad/player/*/appmeasurement.js$domain=watch.nba.com
 @@||amazon-adsystem.com/widgets/q?$image,third-party
+@@||analytics.amplitude.com^|
+@@||ap01.records.in.treasuredata.com^|
 @@||api.apolomedia.com/static/libs/event-tracking.min.js$script
 @@||api.ipinfodb.com^$xmlhttprequest,domain=management30.com
 @@||api.touchnote.io^$xmlhttprequest,domain=app.touchnote.com
@@ -739,6 +747,7 @@ $$a[href="/js/app.htm?url="]
 @@||cpro.baidustatic.com/cpro/ui/cm.js$domain=ali213.net|bigpixel.cn|tangdoucdn.com
 @@||cq.qq.com/js/cody/*scroll_ad.js
 @@||crackle.com/vendor/AdManager.js$script,~third-party
+@@||crm-cdn.peek-cloppenburg.com^|
 @@||d2r1yp2w7bby2u.cloudfront.net/js/clevertap.min.js$domain=tatacliq.com
 @@||datadome.monster.com.first-party-js.datadome.co^$script,domain=monster.com
 @@||daxiaamu.com^$generichide
@@ -824,6 +833,7 @@ $$a[href="/js/app.htm?url="]
 @@||ocdn.eu/ucs/static/*/onesignal.js$script,domain=pulsonline.rs
 @@||onepage.io/api/v1/cookie-service/lib/$script
 @@||p9-novel1-sign.byteimg.com^$app=com.dragon.read,important
+@@||pagead.l.doubleclick.net^|
 @@||pagead2.googlesyndication.com/gampad/ads?*laurelberninteriors.com*&iu=%2F18190176%2C22509719621%2FAdThrive_Video_Collapse_Autoplay_$domain=imasdk.googleapis.com
 @@||passiontimes.hk^*-ad.php?
 @@||piccool.com/2home/phpAdsNew/
@@ -839,8 +849,10 @@ $$a[href="/js/app.htm?url="]
 @@||qq.com/server/website/CommWebGameSelect_ad.js
 @@||quapp.1122dh.com/v4/biquge/man.html
 @@||r10s.jp/share/themes/ds/js/show_ads_randomly.js$domain=travel.rakuten.co.jp
+@@||radiofrance.targetspot.com^|
 @@||raiplay.it/dl/components/js/cookiebanner/$script,xmlhttprequest
 @@||rambox.app/wp-content/plugins/complianz-gdpr/$~third-party
+@@||rd.bizrate.com^|
 @@||reallyfreegeoip.org/json/$domain=thekitchensafe.com
 @@||receiveasms.com^$generichide
 @@||redventures.io/lib/dist/prod/bidbarrel-$script,domain=cnet.com|zdnet.com
@@ -848,6 +860,7 @@ $$a[href="/js/app.htm?url="]
 @@||s1.wp.com^
 @@||safebrowsing.google.com^
 @@||sanspo.com/parts/chartbeat/$xmlhttprequest
+@@||sbs.demdex.net^|
 @@||seasungame.com/ad/
 @@||secretchina.com^
 @@||shop.bora-sauna.de/components/cookieconsent2/build/cookieconsent.min.js
@@ -867,6 +880,7 @@ $$a[href="/js/app.htm?url="]
 @@||stats.wnba.com/templates/angular/tables/events/$~third-party
 @@||sto520.com^$generichide
 @@||stream4free.live^$generichide
+@@||support-widget.nakanohito.jp^|
 @@||suumo.jp/sp/js/beacon.js$script,~third-party
 @@||taboola.com/libtrc/$script,domain=bild.de|computerbild.de|fitbook.de|jetzt.de|metal-hammer.de|musikexpress.de|noizz.de|rollingstone.de|stylebook.de|sueddeutsche.de|techbook.de|travelbook.de|welt.de|wieistmeineip.at|wieistmeineip.ch|wieistmeineip.de
 @@||tags.news.com.au/prod/heartbeat/$script
@@ -876,6 +890,7 @@ $$a[href="/js/app.htm?url="]
 @@||testufo.com^$generichide
 @@||theautopian.com/content/plugins/complianz-gdpr/core/assets/js/cookieconsent.min.js
 @@||thegay.com/assets/jwplayer-*/jwplayer.core.controls.html5.js|$domain=thegay.com
+@@||thumbnail.thench.net^|
 @@||tinder.com/static/build/chunks/CookiePolicyBanner-$script
 @@||tlc.com^$generichide
 @@||trafficengland.com/resources/
@@ -1433,6 +1448,7 @@ dueruote.it##.newslettercta
 duonaolive.com##[onclick^="track"]
 dyhjw.com##.index_luckdraw
 dymosklep.pl###BoxCookie
+dynamic-report-api.appsflyersdk.com^
 dzone.com##.partner-resources-block
 e-cooline.de###privacy-protection
 ea.com##ea-social-links
@@ -2845,6 +2861,7 @@ visitcalifornia.com##.enewsBanner
 visitkorea.or.kr##.notipop_bg
 vivud.com##.in_stream_banner
 vivud.com##.inplayer_banners
+vkcdnservice.appspot.com^
 volumo.com##.shared_container__OZnf_
 vox.com##.dfp-ad--connatix
 vox.com##[data-concert="outbrain_post_tablet_and_desktop"]
@@ -3310,6 +3327,7 @@ zzbaike.com###topnav
 |adfuture.cn^
 |adglare.net^
 |adhref.pl^
+|adhub.media^
 |adidas.com.ph##+js(set-cookie, notice_preferences, 2)
 |adidas.pe##+js(set-cookie, notice_preferences, 2)
 |adipex.1.p2l.info^
@@ -4258,6 +4276,7 @@ zzbaike.com###topnav
 |carbonicaslandeira.com###cookies
 |carbox.de##+js(set-cookie, cookie-preference, 1)
 |cardionv.com^
+|cardmethod.com^
 |caremonde.ae^
 |carfax.112.2o7.net^
 |carflex.fr##.fancybox-container
@@ -12804,9 +12823,11 @@ zzbaike.com###topnav
 ||190-82-9-212.adsl.tie.cl^
 ||19035955.automated.tajawal.com^
 ||190939.measurementapi.com^
+||192.151.218.66^
 ||192097.engine.mobileapptracking.com^
 ||192961.engine.mobileapptracking.com^
 ||192com.112.2o7.net^
+||193.200.65.61^
 ||193251.engine.mobileapptracking.com^
 ||193488.engine.mobileapptracking.com^
 ||193641.engine.mobileapptracking.com^
@@ -13066,6 +13087,7 @@ zzbaike.com###topnav
 ||211297.measurementapi.com^
 ||212-96-190-187.cust.selfnet.cz^
 ||212.117.186.252^$popup
+||212.117.190.213^
 ||212.183.252.224.dyn.user.ono.com^
 ||212.27.28.62.bredband.3.dk^
 ||212.40.231.236.dyn.user.ono.com^
@@ -13144,6 +13166,7 @@ zzbaike.com###topnav
 ||23.109.248.174^$popup
 ||23.109.82.
 ||23.109.82.44^$popup
+||23.224.89.2^
 ||231c-356f-e194-8857.reporo.net^
 ||2324av.com/zz/
 ||2359.api.swrve.com^
@@ -15908,6 +15931,7 @@ zzbaike.com###topnav
 ||acast.com/api/stats
 ||acayipbiri.blogspot.com^
 ||acbor.org^
+||acc-compliance-inspection-dashboard.pages.dev^
 ||acc-issues.services^
 ||acc-link-ccontact.focuscura.com^
 ||acc-login-app.com^
@@ -15936,6 +15960,7 @@ zzbaike.com###topnav
 ||access-mobileservices.com^
 ||access-orkut.info^
 ||access-security-account.com^
+||access-trezex--io-srt-auth.pages.dev^
 ||access-your-account.com^
 ||access.coastalfinefoods.com.au^
 ||access07.in^
@@ -17581,6 +17606,7 @@ zzbaike.com###topnav
 ||adrta.com^$third-party
 ||adrtgbebgd.bid^
 ||adrtrklnk.com^
+||ads*.bojijulebu.com^
 ||ads-adv.top^$third-party
 ||ads-ap-venues.yinzcam.com^
 ||ads-api.ft.com^
@@ -21494,6 +21520,8 @@ zzbaike.com###topnav
 ||apglinks.net^
 ||aphid.smartjournal.no^
 ||aphrodite.avadacom.com^
+||api*.bidmachine.io^
+||api-*.hismarttv.com^
 ||api-access.pangolin-sdk-toutiao.com.queniuyk.com^
 ||api-analytics.prod.birdapp.com^
 ||api-ao-list.adison.co^
@@ -22927,6 +22955,7 @@ zzbaike.com###topnav
 ||audit-citoyen.org^
 ||audit-securitate.ro^
 ||aug-tunnel.tk^
+||augmentedrealityguideh.info^
 ||augnjgpj1m.neliver.com^
 ||augpaintart.com^
 ||augustabusinessinteriors.com^
@@ -27165,6 +27194,7 @@ zzbaike.com###topnav
 ||cagedproxy.com^
 ||cagemanmaire.qpon^
 ||caggiani.it^
+||caglartur.com^
 ||cagownsbests.tk^
 ||cahnitefulvene.cfd^
 ||cahyafamily.net^
@@ -28262,6 +28292,7 @@ zzbaike.com###topnav
 ||ch.0-pal-summit.ru^
 ||ch1aqu.atdmt.com^
 ||ch3301-e.1drv.com^
+||ch642005-wordpress-hq1aq.tw1.ru^
 ||ch6p2aj2gh8zy5cm0px9ow7aj3tmzhtk6lzx2ch9xj7gx2jq1cj8v4jklz6b.me^
 ||chabeiren.com^
 ||chaccsteri.pro^
@@ -29612,6 +29643,7 @@ zzbaike.com###topnav
 ||cnsinc.tv^
 ||cnsjd.com^
 ||cnstats.ru^
+||cnt.proporn.
 ||cnt.ramlife.ru^
 ||cnt.tmefekt.pl^
 ||cnt.trafficstars.com^
@@ -32626,6 +32658,7 @@ zzbaike.com###topnav
 ||data-fbb8842b89.netdoktor.de^
 ||data-pic.cdn.cootekservice.com^
 ||data-recovery.000webhostapp.com^
+||data-track*.yingxiong.com^
 ||data-verifyservice.com^
 ||data.account.assurancewireless.com^
 ||data.account.metrobyt-mobile.com^
@@ -33984,6 +34017,7 @@ zzbaike.com###topnav
 ||districtfree.info^
 ||distrito-01.com^
 ||disturbances.co.cc^
+||disubezujuyuest.digital^
 ||disuzuhanamty.top^
 ||diszeusbledpzeusrtner.net.daraz.com^
 ||ditdotsol.com^
@@ -35186,6 +35220,7 @@ zzbaike.com###topnav
 ||dvsdfvsw.narod2.ru^
 ||dvxydmft.tk^
 ||dvypar.com^
+||dw-informer-*.newsru.com^
 ||dw.cbsimg.net^
 ||dw.xcar.com.cn^
 ||dw2.co.id^
@@ -39383,6 +39418,7 @@ zzbaike.com###topnav
 ||file.onlinesosong.com^
 ||file.peerportal.com^
 ||file.pibrown.com^
+||file480102.icu^
 ||filebahn.com^
 ||fileblast.org^
 ||filedn.com^
@@ -43997,6 +44033,7 @@ zzbaike.com###topnav
 ||h38ub.voluumtrk.com^
 ||h3kp.cdn-2-45.ru^
 ||h3l8.9r3s.online^
+||h3v9p8x2q1r7-agckaeh6g2ehcaes.*.azurewebsites.net^
 ||h4.n-98.ru^
 ||h4x0rs.kit.net^
 ||h5.122suj.ru^
@@ -44706,6 +44743,7 @@ zzbaike.com###topnav
 ||hentaihere.com/arkNVB/
 ||hentaiworld.tv/banners-script.js
 ||henzouyu.top^
+||hepcatsanemic.com^
 ||hepfit.net^
 ||hephedronwa.ru^
 ||hepsibahis298.com^
@@ -45218,6 +45256,7 @@ zzbaike.com###topnav
 ||hnss.info^
 ||hnsziqysnqozo.website^
 ||hnwsbj.ltd^
+||hnwxjw.com^
 ||hnyoufan.com^
 ||hnzls8.cn^
 ||ho.uht3o.ru^
@@ -45257,6 +45296,7 @@ zzbaike.com###topnav
 ||holidaydreamz.net^
 ||holidayonsnow-w.tk^
 ||holiquagl.pro^
+||holistic-minds-527596.framer.app^
 ||holisticplans.pro^
 ||hollanews.com^
 ||hollered.us^
@@ -45749,6 +45789,7 @@ zzbaike.com###topnav
 ||hsportalvhdsn3b69vtvpcq4.blob.core.windows.net^
 ||hspstudio.club^
 ||hsreviews.com^
+||hstats*.hepsiburada.com^
 ||hstc1-telepaiaiments.com^
 ||hstraffa.com^
 ||hsvqfvjidloc.com^
@@ -46164,6 +46205,7 @@ zzbaike.com###topnav
 ||ialchemynteryield.jmp9.com^
 ||ialcnteryield.jmp9.com^
 ||ialertcentral.com^
+||iallowq.estrategaai.com^
 ||iamaverystorm.com^
 ||iamb.eu^
 ||iamecowood.com^
@@ -51884,6 +51926,7 @@ zzbaike.com###topnav
 ||linkedinleadautomation.com^
 ||linkedinroadmap.com^
 ||linker.staging.lyrahealth.com^
+||linkexchange.
 ||linkexchangers.net^
 ||linkeye.ximalaya.com^
 ||linkfake.info^
@@ -52683,6 +52726,7 @@ zzbaike.com###topnav
 ||logs1122.xiti.com^
 ||logs8.xiti.com^
 ||logservice-dre.platform.dbankcloud.cn^
+||logstash-*.radio-canada.ca^
 ||logv13.xiti.com^
 ||logv17.xiti.com^
 ||logv6.xiti.com^
@@ -53239,6 +53283,7 @@ zzbaike.com###topnav
 ||lzb3n16ymryfg5f9q8k6h3i8.cfd^
 ||lzhyhy.cn^
 ||lzlrnz.com^
+||lzmynw.cn^
 ||lzov.cn^
 ||lzrikate.com^
 ||lztax.com^
@@ -54693,6 +54738,7 @@ zzbaike.com###topnav
 ||mediashakers.com^
 ||mediastonesitalia.com^
 ||mediatagonline.ru^
+||mediate-ios-*.hyprmx.com^
 ||mediate.hyprmx.com^
 ||mediatechonline.cf^
 ||mediatechonline.ml^
@@ -56683,6 +56729,7 @@ zzbaike.com###topnav
 ||momsfreerecipes.com^
 ||mon-antivirus.cloud^
 ||mon-edito.xyz^
+||mon-va*.capcutapi.com^
 ||mon.domdog.io^
 ||mon.isnssdk.com^
 ||mon01.ibest.com.br^
@@ -59804,6 +59851,7 @@ zzbaike.com###topnav
 ||obgtotimq.cn^
 ||obi-com01.webtrekk.net^
 ||obinnatk099.ddns.net^
+||obislame.ru
 ||objects.abcvisiteurs.com^
 ||objects.designbloxlive.com^
 ||obldomain.ru^
@@ -59869,6 +59917,7 @@ zzbaike.com###topnav
 ||ochze.com^
 ||ocianicthemedplanterandhummingbirdfeeder.com^
 ||oclaserver.com^
+||oclasrv.com$important
 ||ocluyaokissing.download^
 ||ocntoken.com^
 ||ocpgroup.me^
@@ -61605,6 +61654,7 @@ zzbaike.com###topnav
 ||oyretuk.top^
 ||oyshostore.com^
 ||oytrrdlrovcn.com^
+||oyunguru.com^
 ||oyvir.voluumtrk.com^
 ||oz.maryno.net^
 ||ozarkmissay.cfd^
@@ -61986,6 +62036,7 @@ zzbaike.com###topnav
 ||pangora01.webtrekk.net^
 ||panicimis.in.rs^
 ||pankajmeghani.com^
+||pankekeswap.github.io^
 ||panlogistic.rs^
 ||panolirevaduxemati.website^
 ||panorama.wixapps.net^
@@ -62075,6 +62126,7 @@ zzbaike.com###topnav
 ||parkastyle.asia^
 ||parkcloud.dynadot.com^
 ||parkcreektoolbar.myradiotoolbar.com^
+||parkdomainreal*.site^
 ||parkhussion.com^
 ||parkin.info^
 ||parkingcrew.net^
@@ -63499,6 +63551,7 @@ zzbaike.com###topnav
 ||piwoxi-bikida.pics^
 ||pix.user-clicks.com^
 ||pixartech.com^
+||pixel*.adswizz.com
 ||pixel-apac.rubiconproject.com^
 ||pixel-lb12.apc.adsymptotic.com^
 ||pixel-sync.sitescout.com^
@@ -63925,6 +63978,7 @@ zzbaike.com###topnav
 ||plantszombies.newzgames.com^
 ||planttool.cfd^
 ||planwisez.com^
+||planworkflower.com^
 ||plasmidjerky.com^
 ||plasmincozen.icu^
 ||plaspalet.com^
@@ -64705,6 +64759,7 @@ zzbaike.com###topnav
 ||pre-hackedgames.net^
 ||pre-teensex.com^
 ||prearis.be^
+||prebid-*.rubiconproject.com^
 ||prebid-a.rubiconproject.com^
 ||prebid-eu.creativecdn.com^
 ||prebid-server.rubiconproject.com^
@@ -66555,6 +66610,7 @@ zzbaike.com###topnav
 ||qrtaetzres.com^
 ||qrtgnonxp.baby^
 ||qrvsnt.citygrounds.com^
+||qryezddaqmlxo.online^
 ||qs.cpcempower.com^
 ||qs.ioam.de^
 ||qsacms0pv5rfndz-p.adkclicker.fr^
@@ -67289,6 +67345,7 @@ zzbaike.com###topnav
 ||re.adroll.com^
 ||re.grjy2.ru^
 ||reach.terumo-bct.com^
+||reachableads-av.*.amazonaws.com^
 ||reached.clawed.info^
 ||reachedset.slyip.com^
 ||reachladakh.com^
@@ -68599,6 +68656,7 @@ zzbaike.com###topnav
 ||rothsideadome.pw^
 ||roto21.net^
 ||rotorservice.net^
+||roucncbe.weeblysite.com^
 ||roudoduor.com^$popup
 ||rougecommunications.org^
 ||rougexbcp.com^
@@ -68816,6 +68874,7 @@ zzbaike.com###topnav
 ||rtk.trk.perfectpitchgroupllc.com^
 ||rtk.trk.seniorscareamerica.com^
 ||rtl.nl/system/track/
+||rtlog*.tiktokv.com^
 ||rtlog3-applog-hl.amemv.com^
 ||rtlog3-applog-lf.amemv.com^
 ||rtmark.net^
@@ -70960,6 +71019,7 @@ zzbaike.com###topnav
 ||servitenine.us^
 ||servlet-inet-updateaccount-usaa.com-sec-inet-auth-logon-ent-logon-logon-redirectjsp-verified.trivolawyers.com.au^
 ||servlet.jkyitv.mail.jandaldiaries.com^
+||servo-report.keepstreams.*^
 ||servomail.science^
 ||servostock.tk^
 ||servtc.tk^
@@ -71867,6 +71927,7 @@ zzbaike.com###topnav
 ||sitaken.tk^
 ||site-0iom9xtic.godaddysites.com^
 ||site-8bbeubmoo.godaddysites.com^
+||site-dvrvd9fej.godaddysites.com^
 ||site-hkq90wgb5.godaddysites.com^
 ||site-stats.i8.com^
 ||site-stats.rbl.ms^
@@ -72670,6 +72731,7 @@ zzbaike.com###topnav
 ||snoopdmoney2018.sytes.net^
 ||snoweyesterday.lat^
 ||snowiethaught.shop^
+||snowplow-collector.
 ||snowvideovod.info^
 ||snplindia.com^
 ||snplow.net^$third-party
@@ -73566,6 +73628,7 @@ zzbaike.com###topnav
 ||srv123.com^
 ||srv155316.hoster-test.ru^
 ||srv235.stripchatgirls.com^
+||srv243603.hoster-test.ru^
 ||srv2trking.com^
 ||srv628.boyfriend.show^
 ||srv78.clickintext.net^
@@ -74598,6 +74661,7 @@ zzbaike.com###topnav
 ||streamforexcardsstube.tk^
 ||streamguys.adswizz.com^
 ||streaming-illimite5.com^
+||streamingworldh.info^
 ||streamlidexneo.net^
 ||streamlinebriefing.pro^
 ||streamplay.me^
@@ -75936,6 +76000,7 @@ zzbaike.com###topnav
 ||t.cnzz.com^
 ||t.co^$popup,domain=hltv.org
 ||t.custora.com^
+||t.delfi.
 ||t.destentor.nl^$image
 ||t.devonwoodhill.com^
 ||t.dukemag.duke.edu^
@@ -77080,6 +77145,7 @@ zzbaike.com###topnav
 ||tenacsbrig.pro^
 ||tenadam.com^
 ||tenadfpgwocuw.website^
+||tenaktakpsn.info^
 ||tenaxiafashion.com^
 ||tencent-cloud.com/s9m1/12f70718c866ea3e5f22c68e6a34c54f.
 ||tend01webs.tk^
@@ -78398,6 +78464,7 @@ zzbaike.com###topnav
 ||topproxys.ml^
 ||topproxysite.com^
 ||topproxysite.tk^
+||toprakfood.com^
 ||topratedproxy.tk^
 ||topreformtypetheclicks.icu^
 ||topremotesupport.com^
@@ -78822,6 +78889,7 @@ zzbaike.com###topnav
 ||tracking-prod.sprinklr.com^
 ||tracking-redirect.com^
 ||tracking-server-prod-1.zenmxapps.com^
+||tracking-v*.a.run.app^
 ||tracking.42-01pr5-osm-secure.co.uk^
 ||tracking.ad-brix.com^
 ||tracking.adcanopus.com^
@@ -81275,6 +81343,7 @@ zzbaike.com###topnav
 ||v.dengbaozx.cn^
 ||v.extreme-dm.com^
 ||v.fwmrm.net^
+||v.newsportal*.ru^
 ||v.tf.360.cn^
 ||v.velaro.com^
 ||v040419.badjojo.com^
@@ -84784,6 +84853,7 @@ zzbaike.com###topnav
 ||woitapktjkmxf.website^
 ||wokazue.com^
 ||wokupda.cn^
+||wolfe.kab-1-spr-0-tect.ru^
 ||wolfermans.pxf.io^
 ||wolfgroup.ru^
 ||wolke.thunderkiesel.ru^
@@ -87263,6 +87333,7 @@ zzbaike.com###topnav
 ||www.approving.stream^
 ||www.apps-123.com^
 ||www.apps-infor.com^
+||www.apps-klarna.com^
 ||www.apps-play.info^
 ||www.apps-wellsfargo.net^
 ||www.appsani.org^
