@@ -594,10 +594,15 @@ $$a[href="/js/app.htm?url="]
 ://loader.*.com/loader.min.js|$script,~third-party
 ://www.*.com/*/-1/70/$script,subdocument,third-party,xmlhttprequest
 :4443/ty/x-$script,third-party
+<!-- '"` --><!-- </textarea></xmp> --></option></form><form id="custom-scopes-dialog-form" data-turbo="false" action="/search/custom_scopes" accept-charset="UTF-8" method="post"><input type="hidden" data-csrf="true" name="authenticity_token" value="aG3UnpMzXHzLUNQ4wh6wcsxug+B2xApQG47oN0jCGYShuKst0bzsV+c4HE7VCNno/Km5nIRCvNpzxNOXAuFFzQ==" />
 <!DOCTYPE html>
 </a>        <a class="Link--secondary no-underline d-inline-block" href="/privacy-protection-tools/anti-AD/activity">
 </a>        <a class="Link--secondary no-underline mr-3 d-inline-block" href="/durablenapkin/scamblocklist/branches">
 </a>    <tool-tip id="tooltip-874a1a8f-6936-49bf-902b-5109390eee94" for="repository-details-watch-button" popover="manual" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute">You must be signed in to change notification settings</tool-tip>
+</a>    <tool-tip id="tooltip-c4fc1321-9854-4a20-96e1-eca3d75356b0" for="repository-details-watch-button" popover="manual" data-direction="s" data-type="description" data-view-component="true" class="sr-only position-absolute">You must be signed in to change notification settings</tool-tip>
+</button><tool-tip id="tooltip-68abf999-e631-4d09-9042-ca17bd851453" for="icon-button-b169a03e-173c-494b-8cb6-4c2ce24af423" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Dismiss alert</tool-tip>
+</button><tool-tip id="tooltip-85cec964-099f-4e01-a11f-c2e9d2eae887" for="icon-button-d034603e-bd8a-40a6-b28c-3d15d908d700" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Appearance settings</tool-tip>
+</button><tool-tip id="tooltip-ed8516bc-b901-402e-86f0-99e019628fc1" for="action-menu-7a2b8642-591e-4a8f-a0b5-9cbbd815d2e0-button" popover="manual" data-direction="s" data-type="label" data-view-component="true" class="sr-only position-absolute">Additional navigation options</tool-tip>
 </svg>
 <a
 <a class="HeaderMenu-dropdown-link d-block no-underline position-relative py-2 Link--secondary d-flex flex-items-center Link--has-description mb-lg-3" data-analytics-event="{&quot;location&quot;:&quot;navbar&quot;,&quot;action&quot;:&quot;github_spark&quot;,&quot;context&quot;:&quot;platform&quot;,&quot;tag&quot;:&quot;link&quot;,&quot;label&quot;:&quot;github_spark_link_platform_navbar&quot;}" href="https://github.com/features/spark">
@@ -607,9 +612,12 @@ $$a[href="/js/app.htm?url="]
 <a href="/signup?ref_cta=Sign+up&amp;ref_loc=header+logged+out&amp;ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E&amp;source=header-repo&amp;source_repo=privacy-protection-tools%2Fanti-AD"
 <a href="/topics/hostsfile" title="Topic: hostsfile" data-view-component="true" class="topic-tag topic-tag-link">
 <a href="/topics/surge" title="Topic: surge" data-view-component="true" class="topic-tag topic-tag-link">
+<a href="https://github.com/actions-user"
 <a href="https://subscribe.adblockplus.org?location=https://easylist-downloads.adblockplus.org/easyprivacy.txt&amp;title=EasyPrivacy" title="EasyPrivacy" rel="nofollow">ABP ADB 点此订阅EasyPrivacy</a><br>
 <a id="code-tab" href="/durablenapkin/scamblocklist" data-tab-item="i0code-tab" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages repo_deployments repo_attestations /durablenapkin/scamblocklist" data-pjax="#repo-content-pjax-container" data-turbo-frame="repo-content-turbo-frame" data-hotkey="g c" data-analytics-event="{&quot;category&quot;:&quot;Underline navbar&quot;,&quot;action&quot;:&quot;Click tab&quot;,&quot;label&quot;:&quot;Code&quot;,&quot;target&quot;:&quot;UNDERLINE_NAV.TAB&quot;}" aria-current="page" data-view-component="true" class="UnderlineNav-item no-wrap js-responsive-underlinenav-item js-selected-navigation-item selected">
 <a tabindex="-1" id="item-d49b6617-dc59-42c1-8d1c-e3efc9788332" href="/cjx82630/cjxlist/actions" role="menuitem" data-view-component="true" class="ActionListContent ActionListContent--visual16">
+<anchored-position data-target="action-menu.overlay" id="action-menu-a285f6e3-0528-49d2-9253-bd9b1ae1c66d-overlay" anchor="action-menu-a285f6e3-0528-49d2-9253-bd9b1ae1c66d-button" align="start" side="outside-bottom" anchor-offset="normal" popover="auto" data-view-component="true">
+<button data-target="react-partial-anchor.anchor" id="icon-button-e47ee32e-9f1d-45e6-aa38-48036740a78f" aria-labelledby="tooltip-e0bdc4b1-b4ab-4a44-b60b-7c69c9ccaab0" type="button" disabled="disabled" data-view-component="true" class="Button Button--iconOnly Button--invisible Button--medium AppHeader-button HeaderMenu-link border cursor-wait">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-sliders Button-visual">
 <button id="action-menu-348b4320-0f52-41d0-b5a8-a9fc89322d70-button" popovertarget="action-menu-348b4320-0f52-41d0-b5a8-a9fc89322d70-overlay" aria-controls="action-menu-348b4320-0f52-41d0-b5a8-a9fc89322d70-list" aria-haspopup="true" aria-labelledby="tooltip-6ef4400b-8273-445b-8227-6689bb0a64b1" type="button" data-view-component="true" class="Button Button--iconOnly Button--secondary Button--medium UnderlineNav-item">  <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-kebab-horizontal Button-visual">
 <div class="FormControl FormControl--fullWidth">
 <div class="HeaderMenu-dropdown dropdown-menu rounded m-0 p-0 pt-2 pt-lg-4 position-relative position-lg-absolute left-0 left-lg-n3 pb-2 pb-lg-4">
@@ -625,7 +633,9 @@ $$a[href="/js/app.htm?url="]
 <h1 id="search-suggestions-dialog-header" class="sr-only">Search code, repositories, users, issues, pull requests...</h1>
 <h2 class="mb-3 h4">About</h2>
 <html
+<include-fragment src="/privacy-protection-tools/anti-AD/used_by_list" accept="text/fragment+html" data-nonce="v2:57894cb0-f1af-5352-d1cd-08b4a915c908" data-view-component="true">
 <input id="query-builder-test" name="query-builder-test" value="" autocomplete="off" type="text" role="combobox" spellcheck="false" aria-expanded="false" aria-describedby="validation-46a15b58-d2d2-4ce0-b79c-7bc23f9b9d4e" data-target="query-builder.input" data-action="
+<input type="hidden" data-csrf="true" value="jJS6k363ySI28EWo0q4uNpf9oQrQjNBgtFu8DQvXeHYHAL5ecAKz/l63rmPVMu2DHRO4jmvNWglqsq58fnnnJA==" />
 <li hidden="hidden" data-menu-item="i5wiki-tab" data-targets="action-list.items" role="none" data-view-component="true" class="ActionListItem">
 <li><a href="https://easylist.to/" rel="nofollow">easylist.to</a> - 感谢提供出色的easylist</li>
 <li><a href="https://github.com/jdlingyu/ad-wars">jdlingyu/ad-wars</a> - 只是 ad-wars 的帮助文档</li>
@@ -650,6 +660,7 @@ $$a[href="/js/app.htm?url="]
 <path d="m8.533.133 5.25 1.68A1.75 1.75 0 0 1 15 3.48V7c0 1.566-.32 3.182-1.303 4.682-.983 1.498-2.585 2.813-5.032 3.855a1.697 1.697 0 0 1-1.33 0c-2.447-1.042-4.049-2.357-5.032-3.855C1.32 10.182 1 8.566 1 7V3.48a1.75 1.75 0 0 1 1.217-1.667l5.25-1.68a1.748 1.748 0 0 1 1.066 0Zm-.61 1.429.001.001-5.25 1.68a.251.251 0 0 0-.174.237V7c0 1.36.275 2.666 1.057 3.859.784 1.194 2.121 2.342 4.366 3.298a.196.196 0 0 0 .154 0c2.245-.957 3.582-2.103 4.366-3.297C13.225 9.666 13.5 8.358 13.5 7V3.48a.25.25 0 0 0-.174-.238l-5.25-1.68a.25.25 0 0 0-.153 0ZM11.28 6.28l-3.5 3.5a.75.75 0 0 1-1.06 0l-1.5-1.5a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l.97.97 2.97-2.97a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Z"></path>
 <react-partial
 <script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/17688-a9e16fb5ed13.js" defer="defer"></script>
+<script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/89708-7e15c2dde8ff.js" defer="defer"></script>
 <script crossorigin="anonymous" type="application/javascript" src="https://github.githubassets.com/assets/element-registry-970f25f733ed.js" defer="defer"></script>
 <scrollable-region data-labelled-by="feedback-dialog-title">
 <span data-content="Insights">Insights</span>
@@ -13377,6 +13388,7 @@ zzbaike.com###topnav
 ||2n27.com^
 ||2ndfind.com^
 ||2ndream.com^
+||2njv3k.icu^
 ||2nowup.yourbestplace4findcontents.icu^
 ||2nowup.yourbestplaceforfindcontents.icu^
 ||2nu78.lat^
@@ -13915,6 +13927,7 @@ zzbaike.com###topnav
 ||4kxczstxil.com^
 ||4kyu.cn^
 ||4l.ve5l.ru^
+||4lm8n.icu^
 ||4meme.com^
 ||4mj6dxvrio.s.ad6media.fr^
 ||4necp.voluumtrk.com^
@@ -16252,6 +16265,7 @@ zzbaike.com###topnav
 ||actt244.neoplus.adsl.tpnet.pl^
 ||acttionservicefr.web.app^
 ||actualite.rtsnoiwe.info^
+||actualizarla-facturacion.com^
 ||actualizarlacajade.wixsite.com^
 ||actvebnpapp.firebaseapp.com^
 ||acub37.neoplus.adsl.tpnet.pl^
@@ -18627,6 +18641,7 @@ zzbaike.com###topnav
 ||aiarbitrage-system.com^
 ||aib-bandage.ru^
 ||aibcqjlvxxd.com^
+||aibhgttjydbofain.sbs^
 ||aibit-invest.com^
 ||aicipc.actonservice.com^
 ||aicsteel.cf^
@@ -19005,6 +19020,7 @@ zzbaike.com###topnav
 ||alebilet.pl-9371004.icu^
 ||alebilet.pl-9682187.icu^
 ||alebilet.pl-99372615.icu^
+||alebilet.pl-a203949589102.icu^
 ||alebilet.pl-a3433456.icu^
 ||alebilet.pl-a3852104.icu^
 ||alebilet.pl-bilety8473538.icu^
@@ -20035,6 +20051,7 @@ zzbaike.com###topnav
 ||allegrolokalnie.narzedzia-i-sprzet-warsztatowy-5343455.icu^
 ||allegrolokalnie.ods-c948y7576.rest^
 ||allegrolokalnie.oferta-112.top^
+||allegrolokalnie.oferta-2342553.icu^
 ||allegrolokalnie.oferta-456807423.icu^
 ||allegrolokalnie.oferta-522712.pl^
 ||allegrolokalnie.oferta-58010866.click^
@@ -22547,6 +22564,7 @@ zzbaike.com###topnav
 ||asabenin.org^
 ||asalambda.com^
 ||asamute.com^
+||asantehsil.com^
 ||asap.sharethrough.com^
 ||asb.ltd^
 ||asbestosproxy.co.cc^
@@ -34863,6 +34881,7 @@ zzbaike.com###topnav
 ||drctcldff.com^
 ||drcwmb.loan^
 ||drderrick.org^
+||drderyamuftuoglu.com^
 ||drdiscuss.com^
 ||drdvvfgqzwkutc.bid^
 ||drdwck.loan^
@@ -34882,10 +34901,12 @@ zzbaike.com###topnav
 ||dreamlands.com^
 ||dreamlikefostergala.com^
 ||dreamnesia.net^
+||dreamomni2.online^
 ||dreamory.icu^
 ||dreampartners.ru^
 ||dreamprice.net^
 ||dreamproxies.ga^
+||dreamsfi.com^
 ||dreamslanhouse.sitebr.net^
 ||dreamtheatre.co^
 ||dreamvpn.us^
@@ -40062,6 +40083,7 @@ zzbaike.com###topnav
 ||flyinfethiye.com^
 ||flyingadvert.com^$popup
 ||flyingbuzzard.pro^
+||flyingjungle.com^
 ||flykev.info^
 ||flymesocial.com^
 ||flyplaycsgo.com^
@@ -40332,6 +40354,7 @@ zzbaike.com###topnav
 ||forms.telstraglobal.com^
 ||forms.verisigninc.com^
 ||forms.web.roberthalf.com^
+||formsolutionlab.com^
 ||formtools.com^
 ||formulavitali.com^
 ||formylittlesite.xyz^
@@ -43641,6 +43664,7 @@ zzbaike.com###topnav
 ||growingio.com^$third-party
 ||growivo.site^
 ||growlifenews.com^
+||grown-mouth.com^
 ||growth.adroll.com^
 ||growthpic.weishi.qq.com^
 ||growthrx.in^
@@ -48777,6 +48801,7 @@ zzbaike.com###topnav
 ||iyogi.demdex.net^
 ||iyogo.shop^
 ||iyq-i.tlnk.io^
+||iytas.com^
 ||iywexwhxwaczugu4qpjgbpcfkwebeawuef88wiz989.com^
 ||iyyxtyxdeypk.com^
 ||iz319xlstbsqs34623cb.com^
@@ -50151,6 +50176,7 @@ zzbaike.com###topnav
 ||kerryaleman.com^
 ||kerryrobinson.us^
 ||kerseysuffolk.com^
+||kervansaraytermalbursa.com^
 ||kesarwaningo.org^
 ||kese2.com^
 ||kese4446.com^
@@ -50560,6 +50586,7 @@ zzbaike.com###topnav
 ||kompozitizgara.com.tr^
 ||komunikacije.viamedia.ba^
 ||kona.kontera.com^
+||kondrackicelej.org^
 ||konecorporate.com^
 ||koneomobiledsp.com^
 ||konfirmasih71.weebly.com^
@@ -51771,6 +51798,7 @@ zzbaike.com###topnav
 ||linhas2012.h19.ru^
 ||linheatal.narod.ru^
 ||link-1762443310.allvaluelink.com^
+||link-1763572407.allvaluelink.com^
 ||link-app-staging.agvisorpro.com^
 ||link-beta.qonto.co^
 ||link-dev.tradee.com^
@@ -52992,6 +53020,7 @@ zzbaike.com###topnav
 ||lqj.kjukenhi.in^
 ||lqkkoozmakmky.top^
 ||lqpzdi.coppel.com^
+||lqpzqdtgxebxx.space^
 ||lqqfmqpeptide.review^
 ||lquodkeqws.com^
 ||lr-in-prod.com^
@@ -53165,6 +53194,7 @@ zzbaike.com###topnav
 ||luredtocostarica.com^
 ||lurevanthius.sbs^
 ||lurisso.blogspot.com^
+||lurksfoiling.qpon^
 ||lurteanien.com^
 ||lusech.live^
 ||lushchime.pro^
@@ -58823,6 +58853,7 @@ zzbaike.com###topnav
 ||nie.roanoke.com^
 ||niemazaco.com^
 ||nieuwuilenburg.nl^
+||niftydistribution.pro^
 ||niftyfood.gq^
 ||niftyfood.tk^
 ||niftygifty.co.uk^
@@ -61800,6 +61831,7 @@ zzbaike.com###topnav
 ||packlight.tk^
 ||packlogicielsgratuit.blogspot.com^
 ||packsonikolas.info^
+||paclume.sbs^
 ||pacontainer.s3.amazonaws.com^
 ||pacu-ypiy.com^
 ||pacyhacks.com^
@@ -63969,6 +64001,7 @@ zzbaike.com###topnav
 ||planetsex.pl^
 ||planetunblocker.com^
 ||planfoundations.com^
+||planhubz.com^
 ||planikafires.gr^
 ||planning-locatie-collectie.com^
 ||planosdesaudebrasilia.net.br^
@@ -66620,6 +66653,7 @@ zzbaike.com###topnav
 ||qsesrrwefp.yi.org^
 ||qsewlv.site^
 ||qsjabsnas.com^
+||qsplashr.cesarlytics.com^
 ||qsqycbedepgsahjyw.in^
 ||qsrconsult.com^
 ||qsremukimaxi.today^
@@ -67442,6 +67476,7 @@ zzbaike.com###topnav
 ||rec2.smartlook.com^
 ||recallhealing.co.il^
 ||recalsuffo.pro^
+||recaltimia.digital^
 ||recandritlo.com^
 ||recapp.tk^
 ||recashholdings.com^
@@ -75699,6 +75734,7 @@ zzbaike.com###topnav
 ||sweetswift2.cf^
 ||sweettuatara.pro^
 ||swellcoming.com^
+||swiftbit-invexorapp.com^
 ||swiftforce.info^
 ||swiftsurf.co.cc^
 ||swifttrim.com^
@@ -78545,6 +78581,7 @@ zzbaike.com###topnav
 ||totalcloak.tk^
 ||totalfanshop.net^
 ||totalhealthdentalcenter.com^
+||totalkilo.jevago.com^
 ||totallandscapefortmyers.golfagronomics.com^
 ||totally-web-proxy.tk^
 ||totallyconneted.com^
@@ -79680,6 +79717,7 @@ zzbaike.com###topnav
 ||tunnelhostingssurfip.tk^
 ||tunnelmein.tk^
 ||tunnelmother.co.cc^
+||tunnelpers.casainfinitasessions.com^
 ||tunnelschool.info^
 ||tunnelstyle.co.cc^
 ||tunnelsurfing.com^
@@ -79809,6 +79847,7 @@ zzbaike.com###topnav
 ||twintersndfuxgr.download^
 ||twirlstouch.gregtakayama.com^
 ||twistanonymotk.tk^
+||twistedare.dvgfinance.com^
 ||twisterproxy.info^
 ||twistysdownload.com^
 ||twitchauth.tk^
@@ -84837,6 +84876,7 @@ zzbaike.com###topnav
 ||wnhs.madcollective.com^
 ||wnifhkhtpemse.space^
 ||wninfo1212.ru^
+||wnlnufsbeepus.site^
 ||wnlyjhb.com^
 ||wnsmusic.qq.com^
 ||wnstpoiqrv.com^
