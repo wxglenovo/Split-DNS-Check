@@ -520,12 +520,6 @@ def process_part(part):
 
     print("--------------------------------------------------")
 
-    # 保存丢弃规则到 retry_rules.txt 文件
-    if retry_rules:
-        print(f"🔁 写入 {len(retry_rules)} 条丢弃规则到 {RETRY_FILE}")
-        with open(RETRY_FILE, "a", encoding="utf-8") as f:
-            f.write("\n".join(retry_rules) + "\n")
-        print(f"🔥 {len(retry_rules)} 条规则丢弃，写入 {RETRY_FILE} 以待重试")
 
     # 保存最终规则
     print(f"保存最终规则到 {out_file}, 规则数量: {len(final_rules)}")
