@@ -288,25 +288,40 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
-def split_parts(merged_rules):
+import hashlib
+import os
+
+PARTS = 16  # 分片数量
+BALANCE_THRESHOLD = 5  # 负载均衡阈值：差距小于或等于该值时停止负载均衡
+BALANCE_MOVE_LIMIT = 100  # 每次移动规则的最大数量
+TMP_DIR = "tmp"  # 存储分片的文件夹路径
+
+def split_parts(merged_rules, delete_counter):
     """
     将规则列表分割成多个分片，并进行负载均衡。
-    1. 根据规则的哈希值将规则分配到不同的分片中。
-    2. 对分片进行负载均衡，确保每个分片的规则数量相对平衡。
-    3. 将分片的规则保存到文件中。
+    1. 根据delete_counter值结合哈希值将规则分配到不同的分片中。
+    2. delete_counter每个值平均分配规则到分片中（例如delete_counter=0均分配完，再分delete_counter=1，以此类推）。
+    3. 对分片进行负载均衡，确保每个分片的规则数量相对平衡。
+    4. 将分片的规则保存到文件中。
     """
-    # 1. 对规则进行排序，以确保一致性
-    sorted_rules = sorted(merged_rules)
-    total = len(sorted_rules)  # 规则总数
+    # 1. 计算不同 delete_counter 值的规则
+    counter_buckets = {i: [] for i in range(29)}  # 假设 delete_counter 最大为 28
+    for rule, count in delete_counter.items():
+        counter_buckets[count].append(rule)
+    
+    # 2. 将规则按 delete_counter 值进行分配
     part_buckets = [[] for _ in range(PARTS)]  # 初始化 PARTS 个分片
+    
+    # 依次处理每个 delete_counter 值的规则
+    for delete_val in range(29):  # 假设最大删除计数为 28
+        rules_for_counter = counter_buckets[delete_val]
+        # 根据哈希值分配规则到分片中
+        for rule in rules_for_counter:
+            h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)  # 计算规则的哈希值
+            idx = h % PARTS  # 使用哈希值对分片进行分配
+            part_buckets[idx].append(rule)
 
-    # 2. 首先根据规则的哈希值进行初步分配
-    for rule in sorted_rules:
-        h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)  # 计算规则的哈希值
-        idx = h % PARTS  # 使用哈希值对分片进行初步分配
-        part_buckets[idx].append(rule)
-
-    # 3. 然后进行负载均衡优化
+    # 3. 进行负载均衡优化
     while True:
         # 计算每个分片的规则数量
         lens = [len(b) for b in part_buckets]
@@ -315,17 +330,17 @@ def split_parts(merged_rules):
         # 4. 如果负载差距足够小，则结束负载均衡
         if max_len - min_len <= BALANCE_THRESHOLD:
             break
-        
+
         # 5. 找到最大负载和最小负载的分片
         max_idx, min_idx = lens.index(max_len), lens.index(min_len)
-        
+
         # 计算可以移动的规则数量（限制每次移动的最大数量）
         move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len) // 2)
 
         # 6. 如果需要移动的规则数小于等于 0，则退出负载均衡
         if move_count <= 0:
             break
-        
+
         # 7. 将规则从负载最大的分片移动到负载最小的分片
         part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
         part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
@@ -334,8 +349,8 @@ def split_parts(merged_rules):
     for i, bucket in enumerate(part_buckets):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(bucket))  # 将规则写入文件
-        print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")
+            f.write("\n".join(bucket))  # 将规则写入文件中
+        print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
 
 # ===============================
 # 保留已有验证次数较多的规则的分配
