@@ -1,3 +1,4 @@
+
 import os
 import msgpack
 import requests
@@ -7,8 +8,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import hashlib
 import pickle
-import concurrent.futures
-
 
 # ===============================
 # 配置区（Config）
@@ -17,6 +16,7 @@ URLS_TXT = "urls.txt"
 TMP_DIR = "tmp"
 DIST_DIR = "dist"
 MASTER_RULE = "merged_rules.txt"
+
 
 PARTS = 16
 DNS_TIMEOUT = 2
@@ -35,92 +35,91 @@ BALANCE_MOVE_LIMIT = 50
 os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)  # 确保 dist 目录存在
 
-
-
-
-# ===============================
-# 哈希分片 + 负载均衡优化
-# ===============================
-def split_parts(merged_rules):
-    sorted_rules = sorted(merged_rules)
-    total = len(sorted_rules)
-    part_buckets = [[] for _ in range(PARTS)]
-    
-    # 首先，根据规则的哈希值进行初步分配
-    for rule in sorted_rules:
-        h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-        idx = h % PARTS
-        part_buckets[idx].append(rule)
-
-    # 然后，进行负载均衡优化
-    while True:
-        lens = [len(b) for b in part_buckets]
-        max_len, min_len = max(lens), min(lens)
-        
-        # 如果负载差距足够小，则结束
-        if max_len - min_len <= BALANCE_THRESHOLD:
-            break
-        
-        max_idx, min_idx = lens.index(max_len), lens.index(min_len)
-        move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len) // 2)
-        
-        # 如果移动数量小于等于 0，则退出
-        if move_count <= 0:
-            break
-        
-        # 从负载最大的分片移至负载最小的分片
-        part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
-        part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
-    
-    # 将分配好的规则写入文件
-    for i, bucket in enumerate(part_buckets):
-        filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
-        with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(bucket))
-        print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")
-
-
-
-
-
 # ===============================
 # 文件确保函数（写入空 msgpack dict）
 # ===============================
-def ensure_bin_file(path):
+def ensure_bin_file(path, default_data={}):
+    """
+    确保给定路径的二进制文件存在。如果文件不存在，则初始化为空的 msgpack 文件。
+    1. 检查目标路径的目录是否存在，如果不存在则创建。
+    2. 如果目标文件不存在，则尝试创建并写入一个空的 msgpack 数据。
+    3. 如果发生异常，捕获并输出错误信息。
+    """
+    # 确保目标文件所在的目录存在
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    
+    # 如果文件不存在，则初始化
     if not os.path.exists(path):
         try:
             with open(path, "wb") as f:
-                f.write(msgpack.packb({}, use_bin_type=True))
+                f.write(msgpack.packb(default_data, use_bin_type=True))
+            print(f"✅ 已创建 {path} 并初始化为默认数据")
         except Exception as e:
             print(f"⚠ 初始化 {path} 失败: {e}")
 
-ensure_bin_file(DELETE_COUNTER_FILE)
-ensure_bin_file(NOT_WRITTEN_FILE)
+# 使用不同的数据初始化
+ensure_bin_file(DELETE_COUNTER_FILE, default_data={})  # 空字典
+ensure_bin_file(NOT_WRITTEN_FILE, default_data={})     # 空字典
+ensure_bin_file(HASH_LIST_FILE, default_data=[])       # 空列表
+
+# 确保重试规则文件存在
 if not os.path.exists(RETRY_FILE):
     open(RETRY_FILE, "w", encoding="utf-8").close()
+    print(f"✅ {RETRY_FILE} 已创建")
+else:
+    print(f"ℹ️ {RETRY_FILE} 已存在")
 
 # ===============================
-# 二进制读写（msgpack）
+# 二进制读取（msgpack）
 # ===============================
 def load_bin(path, print_stats=False):
+    """
+    读取给定路径的二进制文件（msgpack 格式）。
+    1. 检查文件是否存在，如果存在则尝试加载文件。
+    2. 使用 msgpack 解码数据，如果文件为空或发生错误，则返回空字典。
+    3. 如果加载数据时发生异常，捕获异常并打印错误信息。
+    4. 可选地打印统计信息（如文件大小、加载数据量）。
+    """
+    # 1. 检查文件是否存在，如果存在则尝试读取
     if os.path.exists(path):
         try:
+            file_size = os.path.getsize(path)
+            if print_stats:
+                print(f"🗂 读取文件 {path}，大小 {file_size} 字节")
+            
             with open(path, "rb") as f:
-                raw = f.read()
+                raw = f.read()  # 读取文件的原始数据
                 if not raw:
-                    return {}
-                data = msgpack.unpackb(raw, raw=False)
-            return data
+                    print(f"⚠ {path} 为空文件，返回空字典")
+                    return {}  # 如果文件为空，则返回空字典
+                
+                data = msgpack.unpackb(raw, raw=False)  # 使用 msgpack 解码数据
+                if print_stats:
+                    print(f"✅ 加载 {path} 数据成功，大小 {len(data)} 条记录")
+            return data  # 返回解码后的数据
+        
         except Exception as e:
+            # 2. 如果读取文件或解码过程中发生异常，打印错误并返回空字典
             print(f"⚠ 读取 {path} 错误: {e}")
             return {}
-    return {}
+    else:
+        print(f"⚠ 文件 {path} 不存在")
+    
+    return {}  # 如果文件不存在，返回空字典
 
+# ===============================
+# 二进制写入（msgpack）
+# ===============================
 def save_bin(path, data):
+    """
+    将数据保存到指定路径的二进制文件（msgpack 格式）。
+    1. 尝试将数据序列化并保存为二进制文件。
+    2. 如果发生错误，捕获异常并打印错误信息。
+    """
     try:
         with open(path, "wb") as f:
-            f.write(msgpack.packb(data, use_bin_type=True))      
+            f.write(msgpack.packb(data, use_bin_type=True))
+        print(f"✅ {path} 已保存")
     except Exception as e:
         print(f"⚠ 保存 {path} 错误: {e}")
 
@@ -315,7 +314,107 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
     return low_delete_count_rules, updated_delete_counter, skipped_count
 
 
+# ===============================
+# 哈希分片 + 负载均衡优化
+# ===============================
+def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
+    """
+    将规则列表分割成多个分片，并进行负载均衡。
+    """
+ # 确保 hash_list.bin 存在，如果不存在，则初始化为空的列表
+    if not os.path.exists(HASH_LIST_FILE):
+        save_bin(HASH_LIST_FILE, {'hash_list': []})  # 创建空的哈希列表
+        print(f"✅ {HASH_LIST_FILE} 已创建")
 
+    # 1. 如果使用现有的哈希值列表文件，则直接加载哈希值列表
+    if use_existing_hashes:
+        data = load_bin(HASH_LIST_FILE)  # 加载现有的哈希列表
+        hash_list = data.get('hash_list', [])  # 获取哈希值列表
+        if not hash_list:  # 如果哈希列表为空
+            print("⚠ 哈希值列表为空，将重新计算并分配规则。")
+            use_existing_hashes = False  # 设置为 False，重新计算哈希
+    else:
+        hash_list = []  # 如果不使用现有哈希值，则初始化为空列表
+
+    # 强制重新计算哈希并保存到 hash_list
+    if not hash_list:
+        print("🔄 重新计算哈希值...")
+        for rule in merged_rules:
+            h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
+            h = h % (2**64)  # 将哈希值限制在 64 位范围内
+            hash_list.append(h)
+        save_bin(HASH_LIST_FILE, {'hash_list': hash_list})  # 保存哈希值列表
+        print(f"✅ {HASH_LIST_FILE} 已保存 {len(hash_list)} 个哈希值")
+
+    # 继续后续的处理
+    # 计算不同 delete_counter 值的规则
+    counter_buckets = {i: [] for i in range(29)}  # 假设 delete_counter 最大为 28
+    for rule, count in delete_counter.items():
+        counter_buckets[count].append(rule)
+    
+    # 3. 初始化 PARTS 个分片（列表，存储分片内的规则）
+    part_buckets = [[] for _ in range(PARTS)]  # PARTS 为分片数量，通常为 16
+
+    # 4. 依次处理每个 delete_counter 值的规则
+    for delete_val in range(29):  # 假设最大删除计数为 28
+        rules_for_counter = counter_buckets[delete_val]  # 获取该删除计数对应的规则集合
+        # 根据规则的哈希值将规则分配到分片中
+        for rule in rules_for_counter:
+            if use_existing_hashes:
+                # 使用现有哈希值列表来获取规则的哈希值
+                h = hash_list.pop(0)
+            else:
+                # 使用 SHA-256 哈希计算规则的哈希值，并转为十六进制整数
+                h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
+                h = h % (2**64)  # 将哈希值限制在 64 位范围内
+                hash_list.append(h)  # 保存规则的哈希值
+
+            idx = h % PARTS  # 使用哈希值对分片进行分配，确保规则的均匀分布
+            part_buckets[idx].append(rule)
+
+    # 5. 计算完毕，更新 hash_list 和其他数据并保存到 bin 文件
+    data = {
+        'hash_list': hash_list,  # 保存哈希列表
+        'part_buckets': part_buckets,  # 保存分片规则
+    }
+    
+    # 保存更新后的数据到 hash_list.bin 文件
+    save_bin(HASH_LIST_FILE, data)
+
+    # 6. 进行负载均衡优化
+    part_buckets = balance_parts(part_buckets)
+
+    # 7. 将分配好的规则写入文件
+    for i, bucket in enumerate(part_buckets):
+        filename = os.path.join("tmp", f"part_{i+1:02d}.txt")  # 分片文件名
+        os.makedirs("tmp", exist_ok=True)  # 确保临时目录存在
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write("\n".join(bucket))  # 将规则写入文件中
+        print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
+
+
+def balance_parts(part_buckets):
+    """
+    对分片进行负载均衡优化。
+    """
+    avg = sum(len(b) for b in part_buckets) // PARTS
+
+    # 进行负载均衡：将多余的规则从负载大的分片移动到负载小的分片
+    for i, bucket in enumerate(part_buckets):
+        while len(bucket) > avg * 1.2:  # 如果负载大于平均值的 120%
+            rule = bucket.pop()
+            target = find_lowest_part(part_buckets)  # 寻找负载最小的分片
+            part_buckets[target].append(rule)
+
+    return part_buckets
+
+def find_lowest_part(part_buckets):
+    """
+    查找负载最小的分片索引
+    """
+    lens = [len(b) for b in part_buckets]
+    return lens.index(min(lens))
+    
 # ===============================
 # DNS 验证
 # ===============================
