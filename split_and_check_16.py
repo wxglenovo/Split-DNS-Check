@@ -19,7 +19,7 @@ MASTER_RULE = "merged_rules.txt"
 
 PARTS = 16
 DNS_TIMEOUT = 2
-HASH_LIST_FILE =os.path.join(DIST_DIR, "hash_list.bin") 
+HASH_LIST_FILE = "dist/hash_list.bin"
 DELETE_COUNTER_FILE = os.path.join(DIST_DIR, "delete_counter.bin")
 NOT_WRITTEN_FILE = os.path.join(DIST_DIR, "not_written_counter.bin")
 RETRY_FILE = os.path.join(DIST_DIR, "retry_rules.txt")
@@ -301,19 +301,10 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
-def save_hash_list(hashes, filename):
-    """
-    将哈希值列表以二进制格式保存到文件。
-    """
-    try:
-        # 确保 dist 目录存在
-        os.makedirs(os.path.dirname(filename), exist_ok=True)
-        print(f"🔐 正在保存哈希值列表到 {filename}, 哈希数量: {len(hashes)}")
-        with open(filename, 'wb') as f:
-            pickle.dump(hashes, f)
-        print(f"🔐 哈希值列表已保存到 {filename}")
-    except Exception as e:
-        print(f"⚠ 保存哈希值列表到 {filename} 时发生错误: {e}")
+def save_hash_list(hash_list, filename):
+    """保存哈希列表到文件"""
+    with open(filename, 'wb') as f:
+        msgpack.dump(hash_list, f)
         
 def load_hash_list(filename):
     """
@@ -369,31 +360,37 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
             idx = h % PARTS  # 使用哈希值对分片进行分配，确保规则的均匀分布
             part_buckets[idx].append(rule)
 
-    # 5. 进行负载均衡优化
+    # 5. 计算完毕，确保保存哈希值文件的目录存在
+    os.makedirs(os.path.dirname(HASH_LIST_FILE), exist_ok=True)  # 确保目标目录存在
+
+    # 更新 hash_list.bin 文件
+    save_hash_list(hash_list, HASH_LIST_FILE)
+
+    # 6. 进行负载均衡优化
     while True:
         # 计算每个分片的规则数量
         lens = [len(b) for b in part_buckets]  # 获取每个分片内规则的数量
         max_len, min_len = max(lens), min(lens)  # 找到最大和最小规则数
 
-        # 6. 如果负载差距足够小，则结束负载均衡
+        # 7. 如果负载差距足够小，则结束负载均衡
         if max_len - min_len <= BALANCE_THRESHOLD:
             break  # 如果差距小于或等于阈值，结束负载均衡
 
-        # 7. 找到最大负载和最小负载的分片
+        # 8. 找到最大负载和最小负载的分片
         max_idx, min_idx = lens.index(max_len), lens.index(min_len)
 
         # 计算可以移动的规则数量（限制每次移动的最大数量）
         move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len) // 2)
 
-        # 8. 如果需要移动的规则数小于等于 0，则退出负载均衡
+        # 9. 如果需要移动的规则数小于等于 0，则退出负载均衡
         if move_count <= 0:
             break
 
-        # 9. 将规则从负载最大的分片移动到负载最小的分片
+        # 10. 将规则从负载最大的分片移动到负载最小的分片
         part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
         part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
 
-    # 10. 将分配好的规则写入文件
+    # 11. 将分配好的规则写入文件
     for i, bucket in enumerate(part_buckets):
         filename = os.path.join("tmp", f"part_{i+1:02d}.txt")  # 分片文件名
         os.makedirs("tmp", exist_ok=True)  # 确保临时目录存在
@@ -401,8 +398,9 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
             f.write("\n".join(bucket))  # 将规则写入文件中
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
 
-    # 11. 更新哈希值列表文件
+    # 12. 更新哈希值列表文件
     save_hash_list(hash_list, HASH_LIST_FILE)  # 确保路径是 dist/hash_list.bin
+
 
 def balance_parts(part_buckets):
     """
