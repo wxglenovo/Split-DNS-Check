@@ -35,6 +35,9 @@ BALANCE_MOVE_LIMIT = 50
 os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)  # 确保 dist 目录存在
 
+
+
+
 def split_parts(merged_rules, balance_threshold=1, balance_move_limit=50):
     """
     使用哈希值将规则分片，并通过负载均衡优化规则分配到各个分片中。
@@ -65,7 +68,12 @@ def split_parts(merged_rules, balance_threshold=1, balance_move_limit=50):
         lens = [len(bucket) for bucket in part_buckets]
         print(f"lens (rule counts per partition): {lens}")
 
-        # Check if lens is a list of integers
+        # Debugging: Check if `lens` contains only integers
+        for i, length in enumerate(lens):
+            if not isinstance(length, int):
+                print(f"Error: lens[{i}] is not an integer! It is a {type(length)}: {length}")
+        
+        # Ensure lens contains only integers
         if not all(isinstance(length, int) for length in lens):
             print(f"Error: lens contains non-integer values - {lens}")
             break
@@ -101,6 +109,7 @@ def split_parts(merged_rules, balance_threshold=1, balance_move_limit=50):
     with open(hash_list_file, "wb") as f:
         msgpack.dump(hash_list, f)
     print(f"🔢 哈希值已保存至 {hash_list_file}")
+
 
 
 
