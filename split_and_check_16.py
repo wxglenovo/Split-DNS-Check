@@ -288,14 +288,6 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
-import hashlib
-import os
-
-PARTS = 16  # 分片数量
-BALANCE_THRESHOLD = 5  # 负载均衡阈值：差距小于或等于该值时停止负载均衡
-BALANCE_MOVE_LIMIT = 100  # 每次移动规则的最大数量
-TMP_DIR = "tmp"  # 存储分片的文件夹路径
-
 def split_parts(merged_rules, delete_counter):
     """
     将规则列表分割成多个分片，并进行负载均衡。
@@ -355,23 +347,23 @@ def split_parts(merged_rules, delete_counter):
 # ===============================
 # 保留已有验证次数较多的规则的分配
 # ===============================
-def prioritize_high_success_rules(part_buckets, counter):
+def prioritize_high_success_rules(part_buckets, counter, delete_counter):
     """
     优先保留验证成功次数较多的规则，避免重新验证。
-    通过判断 `write_counter` 来确定规则的验证状态。
+    通过判断 `delete_counter` 来确定规则的验证状态。
     1. 遍历每个分片中的规则。
-    2. 对于验证成功次数较少的规则，重新分配分片并进行哈希调整。
+    2. 对于验证失败次数多的规则，重新分配分片并进行哈希调整。
     3. 保留验证成功次数多的规则。
     """
     # 1. 遍历每个分片中的规则
     for i, bucket in enumerate(part_buckets):
         # 使用 [:] 是为了在迭代时不修改原列表，避免因移除元素导致的问题
         for rule in bucket[:]:
-            # 获取该规则的验证次数，默认值为 WRITE_COUNTER_MAX
-            write_count = counter.get(rule, WRITE_COUNTER_MAX)
+            # 获取该规则的 delete_counter 值，默认为 0
+            del_count = delete_counter.get(rule, 0)
             
-            # 2. 如果规则验证成功次数较多，则继续保留在当前分片
-            if write_count > 4:
+            # 2. 如果规则验证失败次数较多，则继续分配到新的分片
+            if del_count > 4:  # 例如 delete_counter > 4 认为是验证失败较多的规则
                 continue  # 验证成功次数较多的规则，跳过处理
             
             # 3. 对验证失败次数多的规则，重新计算哈希并调整分片
@@ -392,10 +384,10 @@ def prioritize_high_success_rules(part_buckets, counter):
 # ===============================
 # 负载均衡优化（针对验证失败的规则）
 # ===============================
-def load_balance_failed_rules(part_buckets, counter):
+def load_balance_failed_rules_by_delete_counter(part_buckets, counter, delete_counter):
     """
-    对验证失败次数多的规则重新计算哈希，进行负载均衡优化。
-    1. 遍历每个分片，找出失败次数多的规则。
+    对验证失败次数多的规则（通过 delete_counter 判断）重新计算哈希，进行负载均衡优化。
+    1. 遍历每个分片，找出失败次数多的规则（根据 delete_counter）。
     2. 将这些规则重新计算哈希并分配到合适的分片。
     3. 通过哈希分配规则，减少某些分片负载过高的情况。
     """
@@ -403,11 +395,11 @@ def load_balance_failed_rules(part_buckets, counter):
     failed_rules = []  # 用于存储失败次数较多的规则
     for i, bucket in enumerate(part_buckets):
         for rule in bucket:
-            # 获取规则的验证次数，若未验证则默认为 WRITE_COUNTER_MAX
-            write_count = counter.get(rule, WRITE_COUNTER_MAX)
+            # 获取该规则的删除计数（失败次数）
+            rule_delete_counter = delete_counter.get(rule, 0)  # 默认 0，表示没有失败
             
-            # 如果验证失败次数较多（<=1 次），则将该规则标记为失败规则
-            if write_count <= 1:
+            # 如果删除计数大于某个阈值（例如 3），则认为该规则验证失败次数多，需要重新分配
+            if rule_delete_counter >= 3:
                 failed_rules.append(rule)
 
     # 2. 重新计算失败规则的哈希值并重新分配
@@ -428,8 +420,6 @@ def load_balance_failed_rules(part_buckets, counter):
 
     # 4. 返回重新负载均衡后的分片列表
     return part_buckets
-
-
 
 # ===============================
 # DNS 验证
