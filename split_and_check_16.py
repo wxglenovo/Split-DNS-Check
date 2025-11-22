@@ -304,12 +304,6 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     """
     将规则列表分割成多个分片，并进行负载均衡。
-    
-    - merged_rules: 所有的规则列表
-    - delete_counter: 用于删除的规则计数器
-    - use_existing_hashes: 是否使用已有的哈希值进行分片，避免重新计算
-    
-    返回分片后的规则列表
     """
     if not os.path.exists(HASH_LIST_FILE):
         save_bin(HASH_LIST_FILE, {'hash_list': []})
@@ -334,6 +328,10 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
         save_bin(HASH_LIST_FILE, {'hash_list': hash_list})
         print(f"✅ 哈希值计算完成，并保存至 {HASH_LIST_FILE}")
     
+    # 确保 merged_rules 是列表类型
+    if not isinstance(merged_rules, list):
+        merged_rules = list(merged_rules)  # 将 merged_rules 转换为列表
+
     # 负载均衡 - 根据规则哈希值来分配分片
     part_buckets = {i: [] for i in range(PARTS)}  # 初始化空的分片字典
 
@@ -362,6 +360,7 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
         print(f"分片 {part_num} 规则数量: {len(rules)}")
 
     return part_buckets
+
         
 # ===============================
 # DNS 验证
