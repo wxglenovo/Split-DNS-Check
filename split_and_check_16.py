@@ -322,6 +322,10 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     """
     将规则列表分割成多个分片，并进行负载均衡。
     """
+    if not os.path.exists(HASH_LIST_FILE):
+        save_bin(HASH_LIST_FILE, {'hash_list': []})  # 创建空的哈希列表
+        print(f"✅ {HASH_LIST_FILE} 已创建")
+
     # 1. 如果使用现有的哈希值列表文件，则直接加载哈希值列表
     if use_existing_hashes:
         data = load_bin(HASH_LIST_FILE)  # 加载现有的哈希列表
