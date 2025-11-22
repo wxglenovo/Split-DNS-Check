@@ -19,9 +19,9 @@ MASTER_RULE = "merged_rules.txt"
 
 PARTS = 16
 DNS_TIMEOUT = 2
-HASH_LIST_FILE = os.path.join(DIST_DIR, "hash_list.bin")
 DELETE_COUNTER_FILE = os.path.join(DIST_DIR, "delete_counter.bin")
 NOT_WRITTEN_FILE = os.path.join(DIST_DIR, "not_written_counter.bin")
+HASH_LIST_FILE = os.path.join(DIST_DIR, "hash_list.bin")
 RETRY_FILE = os.path.join(DIST_DIR, "retry_rules.txt")
 DELETE_THRESHOLD = 4
 DNS_BATCH_SIZE = 540
@@ -30,41 +30,43 @@ DNS_THREADS = 80
 BALANCE_THRESHOLD = 1
 BALANCE_MOVE_LIMIT = 50
 
+# 确保文件夹存在
 os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)
 
 # ===============================
 # 文件确保函数（写入空 msgpack dict）
 # ===============================
-def ensure_bin_file(path):
+def ensure_bin_file(path, default_data={}):
     """
     确保给定路径的二进制文件存在。如果文件不存在，则初始化为空的 msgpack 文件。
     1. 检查目标路径的目录是否存在，如果不存在则创建。
     2. 如果目标文件不存在，则尝试创建并写入一个空的 msgpack 数据。
     3. 如果发生异常，捕获并输出错误信息。
     """
-    # 1. 确保目标文件所在的目录存在
+    # 确保目标文件所在的目录存在
     os.makedirs(os.path.dirname(path), exist_ok=True)
     
-    # 2. 如果文件不存在，则尝试初始化文件
+    # 如果文件不存在，则初始化
     if not os.path.exists(path):
         try:
             with open(path, "wb") as f:
-                # 使用 msgpack 序列化空字典 {}，并写入文件
-                f.write(msgpack.packb({}, use_bin_type=True))
+                f.write(msgpack.packb(default_data, use_bin_type=True))
+            print(f"✅ 已创建 {path} 并初始化为默认数据")
         except Exception as e:
-            # 3. 如果在创建或写入文件时发生异常，捕获并输出错误信息
             print(f"⚠ 初始化 {path} 失败: {e}")
 
-# 确保删除计数器文件存在，如果不存在则初始化
-ensure_bin_file(DELETE_COUNTER_FILE)
-# 确保未写入计数器文件存在，如果不存在则初始化
-ensure_bin_file(NOT_WRITTEN_FILE)
-# 确保未写入计数器文件存在，如果不存在则初始化
-ensure_bin_file(HASH_LIST_FILE)
-# 如果重试规则文件不存在，则创建空文件
+# 使用不同的数据初始化
+ensure_bin_file(DELETE_COUNTER_FILE, default_data={})  # 空字典
+ensure_bin_file(NOT_WRITTEN_FILE, default_data={})     # 空字典
+ensure_bin_file(HASH_LIST_FILE, default_data=[])       # 空列表
+
+# 确保重试规则文件存在
 if not os.path.exists(RETRY_FILE):
     open(RETRY_FILE, "w", encoding="utf-8").close()
+    print(f"✅ {RETRY_FILE} 已创建")
+else:
+    print(f"ℹ️ {RETRY_FILE} 已存在")
 
 # ===============================
 # 二进制读取（msgpack）
@@ -75,21 +77,33 @@ def load_bin(path, print_stats=False):
     1. 检查文件是否存在，如果存在则尝试加载文件。
     2. 使用 msgpack 解码数据，如果文件为空或发生错误，则返回空字典。
     3. 如果加载数据时发生异常，捕获异常并打印错误信息。
-    4. 可选地打印统计信息（当前未启用）。
+    4. 可选地打印统计信息（如文件大小、加载数据量）。
     """
     # 1. 检查文件是否存在，如果存在则尝试读取
     if os.path.exists(path):
         try:
+            file_size = os.path.getsize(path)
+            if print_stats:
+                print(f"🗂 读取文件 {path}，大小 {file_size} 字节")
+            
             with open(path, "rb") as f:
                 raw = f.read()  # 读取文件的原始数据
                 if not raw:
+                    print(f"⚠ {path} 为空文件，返回空字典")
                     return {}  # 如果文件为空，则返回空字典
+                
                 data = msgpack.unpackb(raw, raw=False)  # 使用 msgpack 解码数据
+                if print_stats:
+                    print(f"✅ 加载 {path} 数据成功，大小 {len(data)} 条记录")
             return data  # 返回解码后的数据
+        
         except Exception as e:
             # 2. 如果读取文件或解码过程中发生异常，打印错误并返回空字典
             print(f"⚠ 读取 {path} 错误: {e}")
             return {}
+    else:
+        print(f"⚠ 文件 {path} 不存在")
+    
     return {}  # 如果文件不存在，返回空字典
 
 # ===============================
@@ -357,6 +371,8 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     save_bin(HASH_LIST_FILE, data)
 
     # 6. 进行负载均衡优化
+    max_balance_iter = 50  # 负载均衡最大迭代次数
+    iter_count = 0
     while True:
         # 计算每个分片的规则数量
         lens = [len(b) for b in part_buckets]  # 获取每个分片内规则的数量
@@ -373,12 +389,14 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
         move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len) // 2)
 
         # 9. 如果需要移动的规则数小于等于 0，则退出负载均衡
-        if move_count <= 0:
+        if move_count <= 0 or iter_count >= max_balance_iter:
             break
 
         # 10. 将规则从负载最大的分片移动到负载最小的分片
         part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
         part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
+        
+        iter_count += 1
 
     # 11. 将分配好的规则写入文件
     for i, bucket in enumerate(part_buckets):
