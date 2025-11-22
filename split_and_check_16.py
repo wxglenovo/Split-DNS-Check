@@ -322,20 +322,30 @@ def split_parts(merged_rules, balance_threshold=1, balance_move_limit=50):
         # 保存规则的哈希值，便于后续的操作
         hash_list.append(h)
 
+    # Debugging: print part_buckets to check its structure
+    print(f"part_buckets structure: {part_buckets}")
+    
     # 2. 负载均衡优化：将规则数量不均衡的分片进行调整
     while True:
-        # 计算每个分片的规则数量，确保lens是整数
-        lens = [len(b) for b in part_buckets]  # 计算每个分片的规则数量
+        # Debugging: print lens before calculation
+        lens = [len(b) for b in part_buckets]
+        print(f"lens (rule counts per partition): {lens}")
+
+        # Make sure lens contains integers (rule counts per partition)
+        if any(not isinstance(length, int) for length in lens):
+            print("Error: lens contains non-integer values")
+            break
+
         max_len, min_len = max(lens), min(lens)  # 找出规则数量最多和最少的分片
 
-        # 如果负载差距足够小，则结束负载均衡
+        # If load difference is small enough, break the loop
         if max_len - min_len <= balance_threshold:
             break
 
         max_idx, min_idx = lens.index(max_len), lens.index(min_len)  # 获取负载最多和最少的分片索引
         move_count = min(balance_move_limit, (max_len - min_len) // 2)  # 计算需要移动的规则数量
         
-        # 如果移动数量小于等于 0，则退出
+        # If moving count is less than or equal to 0, break
         if move_count <= 0:
             break
 
@@ -355,7 +365,6 @@ def split_parts(merged_rules, balance_threshold=1, balance_move_limit=50):
     with open(hash_list_file, "wb") as f:
         msgpack.dump(hash_list, f)
     print(f"🔢 哈希值已保存至 {hash_list_file}")
-
         
 # ===============================
 # DNS 验证
