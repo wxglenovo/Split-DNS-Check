@@ -1,5 +1,3 @@
-
-
 name: Split & DNS Check
 
 on:
@@ -96,12 +94,11 @@ jobs:
             echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
           fi
 
-         - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
+      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
           mkdir -p dist logs tmp
           echo "📁 确保 dist/logs/tmp 文件夹存在"
           
-          # 初始化 not_written_counter.bin 和 hash_list.bin
           for f in delete_counter.bin not_written_counter.bin hash_list.bin; do
             if [ ! -f "dist/$f" ]; then
               if [ "$f" == "hash_list.bin" ]; then
@@ -125,7 +122,6 @@ jobs:
 
           echo "dist/retry_rules.txt 内容预览（前5行）:"
           head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
-
 
       - name: ✅ 确保规则文件与分片存在
         run: |
