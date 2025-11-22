@@ -344,6 +344,7 @@ def split_parts(merged_rules, delete_counter):
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(bucket))  # 将规则写入文件中
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
+        
 # ===============================
 # 保留已有验证次数较多的规则的分配
 # ===============================
