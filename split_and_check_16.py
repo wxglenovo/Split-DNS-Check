@@ -513,7 +513,7 @@ def process_part(part):
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
     # 9. 更新 `not_written_counter` 计数器，并获取删除的规则数量
-    deleted_validated = update_not_written_counter(part)
+    deleted_validated = update_not_written_counter(part, valid)  # 传入 valid_rules
 
     total_count = len(final_rules)  # 最终规则总数
 
@@ -552,6 +552,7 @@ def process_part(part):
     # 13. 打印统计信息并输出
     print(f"✅ 分片 {part} 完成: 总{total_count}, 新增{added_count}, 删除{deleted_validated}, 过滤{len(rules_to_validate) - len(valid)}")
     print(f"COMMIT_STATS: 总 {total_count}, 新增 {added_count}, 删除 {deleted_validated}, 过滤 {len(rules_to_validate) - len(valid)}")
+
 
 
 # ===============================
