@@ -340,10 +340,10 @@ def split_parts(merged_rules, delete_counter):
     # 8. 将分配好的规则写入文件
     for i, bucket in enumerate(part_buckets):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
+        os.makedirs(TMP_DIR, exist_ok=True)  # 确保临时目录存在
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(bucket))  # 将规则写入文件中
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
-
 # ===============================
 # 保留已有验证次数较多的规则的分配
 # ===============================
