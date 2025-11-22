@@ -403,7 +403,7 @@ def update_not_written_counter(part_num, valid_rules):
         part_counter[r] = 6  # 设置 `write_counter` 为 6，表示这些规则验证成功
 
     # 4. 对于当前分片对应 validated_part_X.txt 中的规则，但未出现在新验证成功规则 `valid_rules` 中的规则，递减 `write_counter`
-    for r in existing_rules - valid_rules:
+    for r in existing_rules - set(valid_rules):  # 将 valid_rules 转换为 set
         part_counter[r] = max(part_counter.get(r, 6) - 1, 0)  # 如果规则在临时验证列表中没有出现，递减 `write_counter`
 
     # 5. 处理 `write_counter = 1` 的规则
