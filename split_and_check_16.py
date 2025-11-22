@@ -165,39 +165,40 @@ def download_all_sources():
 def filter_and_update_high_delete_count_rules(all_rules_set):
     """
     过滤和更新删除计数 >=7 的规则
-    1. 如果规则在合并的规则列表中，重置删除计数为 6；
-    2. 如果不在合并规则中，继续增加删除计数，直到删除计数达到 26 时，删除该规则的删除计数记录。
+    1. 如果规则在 merged_rules_temp.txt 的规则列表中，重置删除计数为 6；
+    2. 如果不在 merged_rules_temp.txt 规则列表中，继续增加删除计数，直到删除计数达到 28 时，删除该规则的删除计数记录。
     """
-    delete_counter = load_bin(DELETE_COUNTER_FILE)
-    low_delete_count_rules = set()
-    updated_delete_counter = delete_counter.copy()
-    skipped_rules = []
-    reset_rules = []
-    removed_rules = []  # 用于存放将删除的规则
+    delete_counter = load_bin(DELETE_COUNTER_FILE)  # 加载删除计数器
+    low_delete_count_rules = set()  # 计数小于 7 的规则
+    updated_delete_counter = delete_counter.copy()  # 初始化更新后的删除计数器
+    skipped_rules = []  # 被跳过的规则
+    reset_rules = []  # 被重置删除计数为 6 的规则
+    removed_rules = []  # 删除计数超过 28 的规则
 
-    # 读取合并规则文件中的所有规则
-    with open(MASTER_RULE, "r", encoding="utf-8") as f:
-        merged_rules = set(f.read().splitlines())
+    # 读取合并规则文件 merged_rules_temp.txt 中的所有规则
+    with open(os.path.join(TMP_DIR, "merged_rules_temp.txt"), "r", encoding="utf-8") as f:
+        merged_rules = set(f.read().splitlines())  # 合并规则列表
 
+    # 处理每个规则
     for rule in all_rules_set:
-        del_cnt = int(delete_counter.get(rule, 4))
+        del_cnt = int(delete_counter.get(rule, 4))  # 获取规则的删除计数，默认值为 4
         if del_cnt < 7:
-            low_delete_count_rules.add(rule)
+            low_delete_count_rules.add(rule)  # 保留删除计数小于 7 的规则
         else:
-            skipped_rules.append(rule)
-            updated_delete_counter[rule] = del_cnt + 1
-            
+            skipped_rules.append(rule)  # 删除计数大于等于 7 的规则，跳过验证
+            updated_delete_counter[rule] = del_cnt + 1  # 增加删除计数
+
             # 处理删除计数达到 24 的规则
             if updated_delete_counter[rule] >= 24:
                 if rule in merged_rules:
-                    updated_delete_counter[rule] = 6  # 重置为 6
-                    reset_rules.append(rule)
-                elif updated_delete_counter[rule] > 26:
-                    # 删除该规则的删除计数记录
+                    updated_delete_counter[rule] = 6  # 删除计数重置为 6
+                    reset_rules.append(rule)  # 重置计数的规则
+                elif updated_delete_counter[rule] >= 28:
+                    # 删除计数超过 28 的规则，移除计数记录
                     removed_rules.append(rule)
                     updated_delete_counter.pop(rule, None)
 
-    # 输出删除计数日志
+    # 输出删除计数的日志
     if reset_rules:
         for rule in reset_rules[:20]:  # 输出前 20 条规则
             print(f"🔁 删除计数达到24，重置为 6：{rule}")
@@ -209,11 +210,11 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
         print(f"🔢 共 {len(skipped_rules)} 条规则被跳过验证（删除计数≥7）")
     
     if removed_rules:
-        print(f"❌ 共 {len(removed_rules)} 条规则的删除计数超过 26，已从计数器中移除。")
+        print(f"❌ 共 {len(removed_rules)} 条规则的删除计数超过 28，已从计数器中移除。")
 
     skipped_count = len(skipped_rules)
     return low_delete_count_rules, updated_delete_counter, skipped_count
-    
+
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
