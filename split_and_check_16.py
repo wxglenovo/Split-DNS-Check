@@ -301,38 +301,20 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
-# ===============================
-# 哈希分片 + 负载均衡优化 + 删除计数逻辑
-# ===============================
-
-# 删除计数初始化
-delete_counter = {}
-def update_delete_counter(rule):
-    """
-    更新删除计数（delete_counter）
-    """
-    if rule not in delete_counter:
-        delete_counter[rule] = 0
-    delete_counter[rule] += 1
-
 def split_parts(merged_rules):
     sorted_rules = sorted(merged_rules)
     total = len(sorted_rules)
     part_buckets = [[] for _ in range(PARTS)]
-    hash_list = []  # 存储所有规则的哈希值
-    
+    hash_list = []  # 存储每条规则的哈希值
+
     # 首先，根据规则的哈希值进行初步分配
     for rule in sorted_rules:
-        # 计算哈希值
         h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
         idx = h % PARTS
         part_buckets[idx].append(rule)
-        
-        # 记录哈希值
+
+        # 保存规则的哈希值（作为整数）
         hash_list.append(h)
-        
-        # 同时更新删除计数
-        update_delete_counter(rule)
 
     # 然后，进行负载均衡优化
     while True:
@@ -354,20 +336,14 @@ def split_parts(merged_rules):
         part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
         part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
 
-    # 将分配好的规则写入文件，并更新哈希计数
+    # 将分配好的规则写入文件
     for i, bucket in enumerate(part_buckets):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(bucket))
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")
 
-    # 将删除计数保存至 delete_counter.bin
-    delete_counter_file = os.path.join(TMP_DIR, "delete_counter.bin")
-    with open(delete_counter_file, "wb") as f:
-        msgpack.dump(delete_counter, f)
-    print(f"🔢 删除计数已保存至 {delete_counter_file}")
-
-    # 将哈希值保存至 hash_list.bin
+    # 将哈希值列表以 msgpack 格式存入 hash_list.bin
     hash_list_file = os.path.join(TMP_DIR, "hash_list.bin")
     with open(hash_list_file, "wb") as f:
         msgpack.dump(hash_list, f)
