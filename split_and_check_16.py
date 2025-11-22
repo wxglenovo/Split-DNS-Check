@@ -7,6 +7,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import hashlib
 import pickle
+import concurrent.futures
+
 
 # ===============================
 # 配置区（Config）
