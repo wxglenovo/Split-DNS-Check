@@ -119,10 +119,10 @@ def save_bin(path, data):
         # 1. 打开文件进行写操作，并将数据序列化为 msgpack 格式
         with open(path, "wb") as f:
             f.write(msgpack.packb(data, use_bin_type=True))  # 使用 msgpack 序列化数据并写入文件
+        print(f"✅ {path} 文件已成功保存")
     except Exception as e:
         # 2. 如果保存数据过程中发生异常，打印错误信息
         print(f"⚠ 保存 {path} 错误: {e}")
-
 
 # ===============================
 # 打印 not_written_counter 统计（单独函数）
@@ -322,6 +322,7 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     """
     将规则列表分割成多个分片，并进行负载均衡。
     """
+    # 确保 hash_list.bin 存在，如果不存在，则初始化为空的列表
     if not os.path.exists(HASH_LIST_FILE):
         save_bin(HASH_LIST_FILE, {'hash_list': []})  # 创建空的哈希列表
         print(f"✅ {HASH_LIST_FILE} 已创建")
@@ -336,7 +337,18 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     else:
         hash_list = []  # 如果不使用现有哈希值，则初始化为空列表
 
-    # 2. 计算不同 delete_counter 值的规则
+    # 强制重新计算哈希并保存到 hash_list
+    if not hash_list:
+        print("🔄 重新计算哈希值...")
+        for rule in merged_rules:
+            h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
+            h = h % (2**64)  # 将哈希值限制在 64 位范围内
+            hash_list.append(h)
+        save_bin(HASH_LIST_FILE, {'hash_list': hash_list})  # 保存哈希值列表
+        print(f"✅ {HASH_LIST_FILE} 已保存 {len(hash_list)} 个哈希值")
+
+    # 继续后续的处理
+    # 计算不同 delete_counter 值的规则
     counter_buckets = {i: [] for i in range(29)}  # 假设 delete_counter 最大为 28
     for rule, count in delete_counter.items():
         counter_buckets[count].append(rule)
