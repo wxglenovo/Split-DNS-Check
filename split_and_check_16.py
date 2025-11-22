@@ -449,54 +449,87 @@ def update_not_written_counter(part_num, valid_rules):
 # 处理分片
 # ===============================
 def process_part(part):
+    """
+    处理每个分片的规则，验证规则并更新相关计数，最终保存验证结果。
+    1. 如果分片文件不存在，尝试重新拉取规则源。
+    2. 读取当前分片的规则，并根据规则的验证结果更新相关的计数器。
+    3. 将验证通过的规则加入最终规则集，失败的规则增加删除计数，并根据删除计数更新规则的状态。
+    4. 打印当前分片的验证统计信息，包括连续失败规则的统计和 `write_counter` 的规则分布。
+    5. 最终保存更新后的规则并记录统计信息。
+    """
     part = int(part)
     part_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
+
+    # 1. 如果分片文件不存在，尝试重新拉取规则源
     if not os.path.exists(part_file):
         print(f"⚠ 分片 {part} 缺失，重新拉取规则…")
-        download_all_sources()
+        download_all_sources()  # 重新拉取所有规则源
+
+    # 2. 如果分片仍然不存在，终止处理
     if not os.path.exists(part_file):
         print("❌ 分片仍不存在，终止")
         return
+
+    # 读取当前分片的规则
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
+
     out_file = os.path.join(DIST_DIR, f"validated_part_{part}.txt")
+    
+    # 3. 读取已有的已验证规则
     old_rules = set(open(out_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(out_file) else set()
+
+    # 4. 加载删除计数器
     delete_counter = load_bin(DELETE_COUNTER_FILE)
+    
+    # 5. 过滤掉删除计数 >= 7 的规则，准备待验证规则
     rules_to_validate = [r for r in lines if int(delete_counter.get(r, 4)) < 7]
+    
+    # 6. 增加已验证失败规则的删除计数
     for r in lines:
         if int(delete_counter.get(r, 4)) >= 7:
-            delete_counter[r] = int(delete_counter.get(r, 4)) + 1
-    final_rules = set(old_rules)
-    valid = dns_validate(rules_to_validate, part)
+            delete_counter[r] = int(delete_counter.get(r, 4)) + 1  # 更新已失败规则的删除计数
+
+    final_rules = set(old_rules)  # 初始化最终规则集为已有验证规则
+    valid = dns_validate(rules_to_validate, part)  # 进行 DNS 验证，返回有效规则
     added_count = 0
     failure_counts = {}
+
+    # 7. 更新验证结果，处理失败计数并统计连续失败的规则
     for r in rules_to_validate:
         if r in valid:
-            final_rules.add(r)
-            delete_counter[r] = 0
+            final_rules.add(r)  # 验证通过的规则加入最终规则
+            delete_counter[r] = 0  # 验证成功规则的删除计数重置为 0
             added_count += 1
         else:
+            # 失败规则增加删除计数，统计不同失败等级
             delete_counter[r] = int(delete_counter.get(r, 0)) + 1
-            fc = min(int(delete_counter[r]), 4)  # 只统计 1/4 至 4/4 的失败计数
+            fc = min(int(delete_counter[r]), 4)  # 统计失败等级，只统计 1/4 至 4/4
             failure_counts[fc] = failure_counts.get(fc, 0) + 1
-            if delete_counter[r] >= DELETE_THRESHOLD:
+            if delete_counter[r] >= DELETE_THRESHOLD:  # 删除计数达到阈值，删除该规则
                 final_rules.discard(r)
-    save_bin(DELETE_COUNTER_FILE, delete_counter)
-    deleted_validated = update_not_written_counter(part)
-    total_count = len(final_rules)
 
-    # 打印连续失败统计（包括 1/4 至 7/4）
+    # 8. 保存更新后的删除计数器
+    save_bin(DELETE_COUNTER_FILE, delete_counter)
+
+    # 9. 更新 `not_written_counter` 计数器，并获取删除的规则数量
+    deleted_validated = update_not_written_counter(part)
+
+    total_count = len(final_rules)  # 最终规则总数
+
+    # 10. 打印当前分片连续失败统计（包括 1/4 至 7/4）
     print("\n📊 当前分片连续失败统计:")
     for i in range(1, 8):  # 扩展统计范围，打印 1/4 至 7/4
         if failure_counts.get(i, 0) > 0:
             print(f"    ⚠ 连续失败 {i}/4 的规则条数: {failure_counts[i]}")
 
+    # 11. 打印当前分片 `write_counter` 规则统计
     print("\n📊 当前分片 write_counter 规则统计:")
     part_key = f"validated_part_{part}"
     counter = load_bin(NOT_WRITTEN_FILE)
     part_counter = counter.get(part_key, {})
 
-    # 初始化每个 write_counter 的计数
+    # 初始化每个 `write_counter` 的计数
     counts = {i: 0 for i in range(1, 8)}  # 支持 1/4 至 7/4 的统计
 
     for v in part_counter.values():
@@ -504,7 +537,7 @@ def process_part(part):
         if 1 <= v <= 7:  # 只统计 1 至 7 的范围
             counts[v] += 1
 
-    total_rules = sum(counts.values())
+    total_rules = sum(counts.values())  # 总规则数
     print(f"    ℹ️ 总规则条数: {total_rules}")
     for i in range(1, 8):
         if counts[i] > 0:
@@ -512,10 +545,11 @@ def process_part(part):
 
     print("--------------------------------------------------")
 
-    # 保存最终规则
+    # 12. 保存最终规则
     with open(out_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(sorted(final_rules)))
+        f.write("\n".join(sorted(final_rules)))  # 将最终规则写入文件
 
+    # 13. 打印统计信息并输出
     print(f"✅ 分片 {part} 完成: 总{total_count}, 新增{added_count}, 删除{deleted_validated}, 过滤{len(rules_to_validate) - len(valid)}")
     print(f"COMMIT_STATS: 总 {total_count}, 新增 {added_count}, 删除 {deleted_validated}, 过滤 {len(rules_to_validate) - len(valid)}")
 
