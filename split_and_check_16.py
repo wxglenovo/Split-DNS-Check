@@ -79,7 +79,6 @@ def load_bin(path, print_stats=False):
     3. 如果加载数据时发生异常，捕获异常并打印错误信息。
     4. 可选地打印统计信息（如文件大小、加载数据量）。
     """
-    # 1. 检查文件是否存在，如果存在则尝试读取
     if os.path.exists(path):
         try:
             file_size = os.path.getsize(path)
@@ -87,25 +86,25 @@ def load_bin(path, print_stats=False):
                 print(f"🗂 读取文件 {path}，大小 {file_size} 字节")
             
             with open(path, "rb") as f:
-                raw = f.read()  # 读取文件的原始数据
+                raw = f.read()
                 if not raw:
                     print(f"⚠ {path} 为空文件，返回空字典")
                     return {}  # 如果文件为空，则返回空字典
                 
-                data = msgpack.unpackb(raw, raw=False)  # 使用 msgpack 解码数据
+                # 使用 msgpack 反序列化
+                data = msgpack.unpackb(raw, raw=False)
                 if print_stats:
                     print(f"✅ 加载 {path} 数据成功，大小 {len(data)} 条记录")
-            return data  # 返回解码后的数据
+            return data
         
         except Exception as e:
-            # 2. 如果读取文件或解码过程中发生异常，打印错误并返回空字典
             print(f"⚠ 读取 {path} 错误: {e}")
             return {}
     else:
         print(f"⚠ 文件 {path} 不存在")
     
     return {}  # 如果文件不存在，返回空字典
-
+    
 # ===============================
 # 二进制写入（msgpack）
 # ===============================
@@ -452,20 +451,6 @@ def find_lowest_part(part_buckets):
     lens = [len(b) for b in part_buckets]
     return lens.index(min(lens))
 
-
-def save_bin(file_path, data):
-    """将数据保存到二进制文件"""
-    with open(file_path, 'wb') as f:
-        pickle.dump(data, f)
-    print(f"✅ 数据已保存到 {file_path}")
-
-def load_bin(file_path):
-    """从二进制文件加载数据"""
-    if os.path.exists(file_path):
-        with open(file_path, 'rb') as f:
-            return pickle.load(f)
-    else:
-        return {}  # 如果文件不存在，返回空字典
         
 # ===============================
 # DNS 验证
