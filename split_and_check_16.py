@@ -90,17 +90,40 @@ def print_not_written_stats():
 # 单条规则 DNS 验证
 # ===============================
 def check_domain(rule):
+    """
+    用于验证给定的规则是否能够解析其域名。
+    1. 解析规则中的域名。
+    2. 尝试解析域名。
+    3. 如果解析成功，返回原始规则；如果失败，返回 None。
+    """
+    # 创建 DNS 解析器实例，并设置超时
     resolver = dns.resolver.Resolver()
     resolver.timeout = DNS_TIMEOUT
     resolver.lifetime = DNS_TIMEOUT
+    
+    # 从规则中提取域名，去除前导 | 和其他字符
     domain = rule.lstrip("|").split("^")[0].replace("*", "")
+    
+    # 如果域名为空，返回 None 表示无效规则
     if not domain:
         return None
+    
     try:
+        # 尝试解析域名
         resolver.resolve(domain)
-        return rule
+        return rule  # 如果解析成功，返回原规则
+    except dns.resolver.NXDOMAIN:
+        # 如果域名不存在，不做任何处理，直接返回 None
+        pass
+    except dns.resolver.Timeout:
+        # 如果域名解析超时，不做任何处理，直接返回 None
+        pass
     except Exception:
-        return None
+        # 其他异常错误，不做任何处理，直接返回 None
+        pass
+    
+    # 如果无法解析，返回 None
+    return None
 
 # ===============================
 # 下载并合并规则源
