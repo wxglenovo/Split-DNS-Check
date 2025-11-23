@@ -226,7 +226,7 @@ def download_all_sources():
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
 
     # 打印规则源合并后的统计信息
-    print(f"📚 规则源合并规则 {len(all_rules)} 条，⏩共 {skipped_count} 条规则被跳过验证，🧮需要验证 {len(filtered_rules)} 条规则，🪓 分为 {PARTS} 片")
+    print(f"📚 规则源合并规则 {len(temp_file )} 条，⏩共 {skipped_count} 条规则被跳过验证，🧮需要验证 {len(filtered_rules)} 条规则，🪓 分为 {PARTS} 片")
 
     # 切分规则，并传递删除计数器给分片处理函数
     split_parts(filtered_rules, updated_delete_counter)  # 传递 updated_delete_counter
