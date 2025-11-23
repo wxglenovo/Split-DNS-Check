@@ -735,24 +735,55 @@ def process_part(part):
 # ===============================
 # 主入口
 # ===============================
-import os
-import logging
-from utils import safe_load_msgpack, save_hashes_in_batches, check_and_save_hashes
 
-# 设置日志
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+# 清理损坏的 hash_list.bin 文件
+def clean_hash_file():
+    if os.path.exists('dist/hash_list.bin'):
+        os.remove('dist/hash_list.bin')
 
-def main():
-    # 假设在此处加载一些数据并处理
-    hash_list = ['hash1', 'hash2', 'hash3']  # 模拟哈希列表
-    check_and_save_hashes(hash_list)  # 调用检查并保存哈希值函数
+# 读取 hash_list.bin 文件
+def load_hash_list(file_path):
+    try:
+        with open(file_path, 'rb') as f:
+            return msgpack.load(f)
+    except msgpack.exceptions.UnpackException as e:
+        print(f"⚠ 无法解包文件 {file_path}：{e}")
+        return {}  # 返回空字典，表示读取失败
+    except Exception as e:
+        print(f"⚠ 读取文件 {file_path} 出现错误：{e}")
+        return {}
 
-    # 假设你有更大的哈希列表需要分批保存
-    large_hash_list = ['hash'] * 100000  # 模拟一个大的哈希列表
-    save_hashes_in_batches(large_hash_list)  # 分批保存哈希值
+# 保存哈希列表到文件
+def save_hash_list(file_path, data):
+    try:
+        with open(file_path, 'wb') as f:
+            msgpack.dump(data, f)
+        print(f"✅ 文件 {file_path} 已保存")
+    except Exception as e:
+        print(f"⚠ 写入文件 {file_path} 出现错误：{e}")
 
+# 重新生成哈希列表
+def regenerate_hash_list():
+    clean_hash_file()  # 删除损坏的文件
+    new_data = generate_hashes()  # 生成新的哈希值
+    save_hash_list('dist/hash_list.bin', new_data)  # 保存新哈希列表
+
+# 示例生成哈希列表的逻辑
+def generate_hashes():
+    # 这里替换为你自己的哈希生成逻辑
+    return {"hash1": "value1", "hash2": "value2"}  # 示例数据
+
+# 主程序逻辑
 if __name__ == "__main__":
-    main()
+    # 1. 检查 hash_list.bin 文件是否存在并且有效
+    if not os.path.exists('dist/hash_list.bin') or os.path.getsize('dist/hash_list.bin') == 0:
+        regenerate_hash_list()  # 如果文件不存在或为空，重新生成
+    else:
+        # 2. 尝试加载哈希列表
+        hash_data = load_hash_list('dist/hash_list.bin')  # 读取文件
+        if not hash_data:
+            regenerate_hash_list()  # 如果读取失败，重新生成哈希列表
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--part", help="验证指定分片 1~16")
     parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
