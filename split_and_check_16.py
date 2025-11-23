@@ -317,7 +317,18 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
-def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
+def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_size=50000):
+    """
+    将规则列表分割成多个分片，并进行负载均衡。
+    1. 检查并创建 `hash_list.bin` 文件，如果文件不存在则初始化为空的哈希列表。
+    2. 如果 `use_existing_hashes` 为 True，则加载现有的哈希值列表；否则，重新计算每条规则的哈希值。
+    3. 根据 `delete_counter` 将规则按照删除计数分配到不同的桶中，并根据哈希值将规则分配到不同的分片，delete_counter值越小，越少被移动到别的分片中。
+    4. 对分片进行负载均衡优化，将负载较大的分片中的规则移动到负载较小的分片中，只将 `delete_counter` 值较大的规则重新计算哈希值，进行移动。更新哈希值列表，每个分片的数量相差不能超过 1。
+    5. 更新并保存最终的哈希值列表和分片规则到 `hash_list.bin` 文件。
+    6. 将分配好的规则写入对应的分片文件中，并输出每个分片的处理结果。
+    """
+
+   def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_size=50000):
     """
     将规则列表分割成多个分片，并进行负载均衡。
     1. 检查并创建 `hash_list.bin` 文件，如果文件不存在则初始化为空的哈希列表。
@@ -343,23 +354,31 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     else:
         hash_list = []  # 如果不使用现有哈希值，则初始化为空列表
 
-    # 强制重新计算哈希并保存到 hash_list
+    # 2. 强制重新计算哈希并保存到 hash_list
     if not hash_list:
         print("🔄 重新计算哈希值...")
-        for rule in merged_rules:
-            # 使用 SHA-256 计算规则的哈希值并转换为十六进制整数
-            h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-            h = h % (2**64)  # 将哈希值限制在 64 位范围内
-            hash_list.append(h)
-        save_bin(HASH_LIST_FILE, {'hash_list': hash_list})  # 保存哈希值列表
+        for i in range(0, len(merged_rules), batch_size):
+            batch = merged_rules[i:i+batch_size]
+            batch_hashes = []
+            for rule in batch:
+                # 使用 SHA-256 计算规则的哈希值并转换为十六进制整数
+                h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
+                h = h % (2**64)  # 将哈希值限制在 64 位范围内
+                batch_hashes.append(h)
+            hash_list.extend(batch_hashes)
+            
+            # 每处理一批规则，保存一次
+            save_bin(HASH_LIST_FILE, {'hash_list': hash_list})
+            print(f"🔄 已处理并保存 {len(batch)} 条规则哈希值，当前哈希列表大小: {len(hash_list)}")
+
         print(f"✅ {HASH_LIST_FILE} 已保存 {len(hash_list)} 个哈希值")
 
-    # 2. 计算不同 delete_counter 值的规则
+    # 3. 计算不同 delete_counter 值的规则
     counter_buckets = {i: [] for i in range(29)}  # 假设 delete_counter 最大为 28
     for rule, count in delete_counter.items():
         counter_buckets[count].append(rule)  # 将规则按 delete_counter 值分类
 
-    # 3. 初始化 PARTS 个分片（列表，存储分片内的规则）
+    # 4. 初始化 PARTS 个分片（列表，存储分片内的规则）
     part_buckets = [[] for _ in range(PARTS)]  # PARTS 为分片数量，通常为 16
 
     # 依次处理每个 delete_counter 值的规则
@@ -380,7 +399,7 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
             idx = h % PARTS  # 计算规则应该分配到哪个分片
             part_buckets[idx].append(rule)
 
-    # 4. 进行负载均衡优化
+    # 5. 进行负载均衡优化
     part_buckets = balance_parts(part_buckets)  # 调用负载均衡函数优化分片
 
     # 负载均衡后，统一更新哈希列表
@@ -395,7 +414,7 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
             else:
                 final_hash_list.append(hash_list.pop(0))  # 使用原有的哈希值
 
-    # 5. 更新并保存最终的哈希值列表和分片规则到 hash_list.bin 文件
+    # 6. 更新并保存最终的哈希值列表和分片规则到 hash_list.bin 文件
     data = {
         'hash_list': final_hash_list,  # 保存更新后的哈希列表
         'part_buckets': part_buckets,  # 保存分片规则
@@ -403,13 +422,14 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
 
     save_bin(HASH_LIST_FILE, data)  # 保存更新后的数据到 hash_list.bin 文件
 
-    # 6. 将分配好的规则写入文件
+    # 7. 将分配好的规则写入文件
     for i, bucket in enumerate(part_buckets):
         filename = os.path.join("tmp", f"part_{i+1:02d}.txt")  # 分片文件名
         os.makedirs("tmp", exist_ok=True)  # 确保临时目录存在
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(bucket))  # 将规则写入文件中
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
+
 
 
 def balance_parts(part_buckets):
