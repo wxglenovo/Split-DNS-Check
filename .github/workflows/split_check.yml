@@ -99,15 +99,14 @@ jobs:
           mkdir -p dist logs tmp
           echo "📁 确保 dist/logs/tmp 文件夹存在"
           
-          for f in delete_counter.bin not_written_counter.bin hash_list.bin; do
+          # 设置 dist 文件夹的权限
+          chmod -R 777 dist/
+          
+          # 以下是原来的操作
+          for f in delete_counter.bin not_written_counter.bin; do
             if [ ! -f "dist/$f" ]; then
-              if [ "$f" == "hash_list.bin" ]; then
-                python3 -c "import pickle; pickle.dump([], open('dist/$f', 'wb'))"
-                echo "✅ 已创建 $f"
-              else
-                python3 -c "import pickle; pickle.dump({}, open('dist/$f', 'wb'))" # 创建空字典文件
-                echo "✅ 已创建 $f"
-              fi
+              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
+              echo "✅ 已创建 $f"
             else
               echo "ℹ️ $f 已存在"
             fi
@@ -118,6 +117,14 @@ jobs:
             echo "✅ 已创建 retry_rules.txt"
           else
             echo "ℹ️ retry_rules.txt 已存在"
+          fi
+
+          # 创建 hash_list.bin 文件（如果不存在）
+          if [ ! -f dist/hash_list.bin ]; then
+            python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
+            echo "✅ 已创建 hash_list.bin"
+          else
+            echo "ℹ️ hash_list.bin 已存在"
           fi
 
           echo "dist/retry_rules.txt 内容预览（前5行）:"
