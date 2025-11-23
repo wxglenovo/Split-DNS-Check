@@ -178,12 +178,16 @@ def check_domain(rule):
 # ===============================
 # 下载并合并规则源
 # ===============================
+import os
+import requests
+
 def download_all_sources():
     """
     下载所有规则源，合并规则，过滤并更新删除计数
-    1. 下载所有规则源并合并为一个规则列表。
-    2. 对规则列表中的每条规则进行过滤，更新删除计数。
-    3. 根据规则是否在 merged_rules_temp.txt 中，重置或增加删除计数。
+    1. 下载所有规则源并合并为一个规则列表 all_rules。
+    2. 将 all_rules 列表存储到临时文件 merged_rules_temp.txt。
+    3. 过滤 delete_counter >= 7 的规则，并进行分片处理。
+    4. 根据规则是否在 merged_rules_temp.txt 中，重置或增加删除计数。
     """
     # 检查规则源文件是否存在
     if not os.path.exists(URLS_TXT):
@@ -202,11 +206,10 @@ def download_all_sources():
         try:
             r = requests.get(url, timeout=20)
             r.raise_for_status()  # 确保请求成功
-            for line in r.text.splitlines():
-                line = line.strip()
-                if line:
-                    all_rules.append(line)  # 不去重，直接添加到列表
-        except Exception as e:
+            new_rules = [line.strip() for line in r.text.splitlines() if line.strip()]
+            all_rules.extend(new_rules)  # 不去重，直接添加到列表
+            print(f"🔄 下载 {url} 成功，获取 {len(new_rules)} 条规则")
+        except requests.RequestException as e:
             print(f"⚠ 下载失败 {url}: {e}")
     
     print(f"✅ 合并 {len(all_rules)} 条规则")
@@ -216,7 +219,7 @@ def download_all_sources():
     with open(temp_file, "w", encoding="utf-8") as f:
         f.write("\n".join(all_rules))
     
-    # 过滤并更新删除计数 >= 7 的规则
+    # 过滤 delete_counter >= 7 的规则
     filtered_rules, updated_delete_counter, skipped_count = filter_and_update_high_delete_count_rules(all_rules)
     
     # 将更新后的删除计数保存到文件
