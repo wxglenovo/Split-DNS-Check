@@ -8,6 +8,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import hashlib
 import pickle
+import concurrent.futures
+
 
 # ===============================
 # 配置区（Config）
@@ -317,6 +319,24 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
+def save_hash_batch(batch_hashes, hash_list_file):
+    """
+    异步保存哈希列表的函数，每次保存一批哈希值。
+    """
+    # 获取现有哈希列表，如果不存在就创建一个空的列表
+    if os.path.exists(hash_list_file):
+        data = load_bin(hash_list_file)  # 加载现有的哈希列表
+        hash_list = data.get('hash_list', [])
+    else:
+        hash_list = []
+
+    # 将新的哈希值追加到现有哈希列表
+    hash_list.extend(batch_hashes)
+
+    # 保存更新后的哈希列表
+    save_bin(hash_list_file, {'hash_list': hash_list})
+    print(f"✅ 保存了 {len(batch_hashes)} 个哈希值, 当前哈希列表大小: {len(hash_list)}")
+
 def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_size=50000):
     """
     将规则列表分割成多个分片，并进行负载均衡。
@@ -346,22 +366,22 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_s
     # 2. 强制重新计算哈希并保存到 hash_list
     if not hash_list:
         print("🔄 重新计算哈希值...")
-        # 将 merged_rules 转换为列表，以便进行切片操作
-        for i in range(0, len(list(merged_rules)), batch_size):  # 将 set 转为 list 进行切片
-            batch = list(merged_rules)[i:i+batch_size]  # 转为 list 后进行切片
-            batch_hashes = []
-            for rule in batch:
-                # 使用 SHA-256 计算规则的哈希值并转换为十六进制整数
-                h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-                h = h % (2**64)  # 将哈希值限制在 64 位范围内
-                batch_hashes.append(h)
-            hash_list.extend(batch_hashes)
+        
+        # 使用线程池并行化哈希计算和保存
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:  # 使用4个线程
+            futures = []
             
-            # 每处理一批规则，保存一次
-            save_bin(HASH_LIST_FILE, {'hash_list': hash_list})
-            print(f"🔄 已处理并保存 {len(batch)} 条规则哈希值，当前哈希列表大小: {len(hash_list)}")
+            for i in range(0, len(list(merged_rules)), batch_size):
+                batch = list(merged_rules)[i:i + batch_size]
+                
+                # 每处理一批规则，就启动一个线程来处理并保存哈希值
+                futures.append(executor.submit(process_and_save_hashes, batch, HASH_LIST_FILE))
+                
+            # 等待所有线程执行完成
+            for future in concurrent.futures.as_completed(futures):
+                future.result()  # 获取结果，确保异常被捕获并处理
 
-        print(f"✅ {HASH_LIST_FILE} 已保存 {len(hash_list)} 个哈希值")
+        print(f"✅ {HASH_LIST_FILE} 哈希值保存完毕")
 
     # 3. 计算不同 delete_counter 值的规则
     counter_buckets = {i: [] for i in range(29)}  # 假设 delete_counter 最大为 28
@@ -419,6 +439,22 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_s
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(bucket))  # 将规则写入文件中
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
+
+
+def process_and_save_hashes(batch, hash_list_file):
+    """
+    处理一批规则并保存其哈希值到文件
+    """
+    batch_hashes = []
+    for rule in batch:
+        # 使用 SHA-256 计算规则的哈希值并转换为十六进制整数
+        h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
+        h = h % (2**64)  # 将哈希值限制在 64 位范围内
+        batch_hashes.append(h)
+    
+    # 保存哈希值
+    save_hash_batch(batch_hashes, hash_list_file)
+
 
 def balance_parts(part_buckets):
     """
