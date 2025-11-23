@@ -346,8 +346,9 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_s
     # 2. 强制重新计算哈希并保存到 hash_list
     if not hash_list:
         print("🔄 重新计算哈希值...")
-        for i in range(0, len(merged_rules), batch_size):
-            batch = merged_rules[i:i+batch_size]
+        # 将 merged_rules 转换为列表，以便进行切片操作
+        for i in range(0, len(list(merged_rules)), batch_size):  # 将 set 转为 list 进行切片
+            batch = list(merged_rules)[i:i+batch_size]  # 转为 list 后进行切片
             batch_hashes = []
             for rule in batch:
                 # 使用 SHA-256 计算规则的哈希值并转换为十六进制整数
