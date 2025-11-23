@@ -732,9 +732,9 @@ def process_part(part):
 
 
 
-# ===============================
-# 主入口
-# ===============================
+
+import os
+import msgpack
 
 # 清理损坏的 hash_list.bin 文件
 def clean_hash_file():
@@ -783,16 +783,53 @@ if __name__ == "__main__":
         hash_data = load_hash_list('dist/hash_list.bin')  # 读取文件
         if not hash_data:
             regenerate_hash_list()  # 如果读取失败，重新生成哈希列表
+import os
+import msgpack
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--part", help="验证指定分片 1~16")
-    parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
-    args = parser.parse_args()
+# 清理损坏的 hash_list.bin 文件
+def clean_hash_file():
+    if os.path.exists('dist/hash_list.bin'):
+        os.remove('dist/hash_list.bin')
 
-    if args.force_update:
-        download_all_sources()
-    if not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
-        print("⚠ 缺少规则或分片，自动拉取")
-        download_all_sources()
-    if args.part:
-        process_part(args.part)
+# 读取 hash_list.bin 文件
+def load_hash_list(file_path):
+    try:
+        with open(file_path, 'rb') as f:
+            return msgpack.load(f)
+    except msgpack.exceptions.UnpackException as e:
+        print(f"⚠ 无法解包文件 {file_path}：{e}")
+        return {}  # 返回空字典，表示读取失败
+    except Exception as e:
+        print(f"⚠ 读取文件 {file_path} 出现错误：{e}")
+        return {}
+
+# 保存哈希列表到文件
+def save_hash_list(file_path, data):
+    try:
+        with open(file_path, 'wb') as f:
+            msgpack.dump(data, f)
+        print(f"✅ 文件 {file_path} 已保存")
+    except Exception as e:
+        print(f"⚠ 写入文件 {file_path} 出现错误：{e}")
+
+# 重新生成哈希列表
+def regenerate_hash_list():
+    clean_hash_file()  # 删除损坏的文件
+    new_data = generate_hashes()  # 生成新的哈希值
+    save_hash_list('dist/hash_list.bin', new_data)  # 保存新哈希列表
+
+# 示例生成哈希列表的逻辑
+def generate_hashes():
+    # 这里替换为你自己的哈希生成逻辑
+    return {"hash1": "value1", "hash2": "value2"}  # 示例数据
+
+# 主程序逻辑
+if __name__ == "__main__":
+    # 1. 检查 hash_list.bin 文件是否存在并且有效
+    if not os.path.exists('dist/hash_list.bin') or os.path.getsize('dist/hash_list.bin') == 0:
+        regenerate_hash_list()  # 如果文件不存在或为空，重新生成
+    else:
+        # 2. 尝试加载哈希列表
+        hash_data = load_hash_list('dist/hash_list.bin')  # 读取文件
+        if not hash_data:
+            regenerate_hash_list()  # 如果读取失败，重新生成哈希列表
