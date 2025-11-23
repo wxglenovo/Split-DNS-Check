@@ -735,7 +735,24 @@ def process_part(part):
 # ===============================
 # 主入口
 # ===============================
+import os
+import logging
+from utils import safe_load_msgpack, save_hashes_in_batches, check_and_save_hashes
+
+# 设置日志
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+
+def main():
+    # 假设在此处加载一些数据并处理
+    hash_list = ['hash1', 'hash2', 'hash3']  # 模拟哈希列表
+    check_and_save_hashes(hash_list)  # 调用检查并保存哈希值函数
+
+    # 假设你有更大的哈希列表需要分批保存
+    large_hash_list = ['hash'] * 100000  # 模拟一个大的哈希列表
+    save_hashes_in_batches(large_hash_list)  # 分批保存哈希值
+
 if __name__ == "__main__":
+    main()
     parser = argparse.ArgumentParser()
     parser.add_argument("--part", help="验证指定分片 1~16")
     parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
