@@ -1,4 +1,3 @@
-
 import os
 import msgpack
 import requests
@@ -8,8 +7,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import hashlib
 import pickle
-import concurrent.futures
-
 
 # ===============================
 # 配置区（Config）
@@ -22,9 +19,9 @@ MASTER_RULE = "merged_rules.txt"
 
 PARTS = 16
 DNS_TIMEOUT = 2
+HASH_LIST_FILE =os.path.join(DIST_DIR, "hash_list.bin") 
 DELETE_COUNTER_FILE = os.path.join(DIST_DIR, "delete_counter.bin")
 NOT_WRITTEN_FILE = os.path.join(DIST_DIR, "not_written_counter.bin")
-HASH_LIST_FILE = os.path.join(DIST_DIR, "hash_list.bin")
 RETRY_FILE = os.path.join(DIST_DIR, "retry_rules.txt")
 DELETE_THRESHOLD = 4
 DNS_BATCH_SIZE = 540
@@ -33,43 +30,40 @@ DNS_THREADS = 80
 BALANCE_THRESHOLD = 1
 BALANCE_MOVE_LIMIT = 50
 
-# 确保文件夹存在
 os.makedirs(TMP_DIR, exist_ok=True)
-os.makedirs(DIST_DIR, exist_ok=True)  # 确保 dist 目录存在
+os.makedirs(DIST_DIR, exist_ok=True)
 
 # ===============================
 # 文件确保函数（写入空 msgpack dict）
 # ===============================
-def ensure_bin_file(path, default_data={}):
+def ensure_bin_file(path):
     """
     确保给定路径的二进制文件存在。如果文件不存在，则初始化为空的 msgpack 文件。
     1. 检查目标路径的目录是否存在，如果不存在则创建。
     2. 如果目标文件不存在，则尝试创建并写入一个空的 msgpack 数据。
     3. 如果发生异常，捕获并输出错误信息。
     """
-    # 确保目标文件所在的目录存在
+    # 1. 确保目标文件所在的目录存在
     os.makedirs(os.path.dirname(path), exist_ok=True)
     
-    # 如果文件不存在，则初始化
+    # 2. 如果文件不存在，则尝试初始化文件
     if not os.path.exists(path):
         try:
             with open(path, "wb") as f:
-                f.write(msgpack.packb(default_data, use_bin_type=True))
-            print(f"✅ 已创建 {path} 并初始化为默认数据")
+                # 使用 msgpack 序列化空字典 {}，并写入文件
+                f.write(msgpack.packb({}, use_bin_type=True))
         except Exception as e:
+            # 3. 如果在创建或写入文件时发生异常，捕获并输出错误信息
             print(f"⚠ 初始化 {path} 失败: {e}")
 
-# 使用不同的数据初始化
-ensure_bin_file(DELETE_COUNTER_FILE, default_data={})  # 空字典
-ensure_bin_file(NOT_WRITTEN_FILE, default_data={})     # 空字典
-ensure_bin_file(HASH_LIST_FILE, default_data=[])       # 空列表
+# 确保删除计数器文件存在，如果不存在则初始化
+ensure_bin_file(DELETE_COUNTER_FILE)
+# 确保未写入计数器文件存在，如果不存在则初始化
+ensure_bin_file(NOT_WRITTEN_FILE)
 
-# 确保重试规则文件存在
+# 如果重试规则文件不存在，则创建空文件
 if not os.path.exists(RETRY_FILE):
     open(RETRY_FILE, "w", encoding="utf-8").close()
-    print(f"✅ {RETRY_FILE} 已创建")
-else:
-    print(f"ℹ️ {RETRY_FILE} 已存在")
 
 # ===============================
 # 二进制读取（msgpack）
@@ -80,35 +74,22 @@ def load_bin(path, print_stats=False):
     1. 检查文件是否存在，如果存在则尝试加载文件。
     2. 使用 msgpack 解码数据，如果文件为空或发生错误，则返回空字典。
     3. 如果加载数据时发生异常，捕获异常并打印错误信息。
-    4. 可选地打印统计信息（如文件大小、加载数据量）。
+    4. 可选地打印统计信息（当前未启用）。
     """
     # 1. 检查文件是否存在，如果存在则尝试读取
     if os.path.exists(path):
         try:
-            file_size = os.path.getsize(path)
-            if print_stats:
-                print(f"🗂 读取文件 {path}，大小 {file_size} 字节")
-            
             with open(path, "rb") as f:
                 raw = f.read()  # 读取文件的原始数据
                 if not raw:
-                    print(f"⚠ {path} 为空文件，返回空字典")
                     return {}  # 如果文件为空，则返回空字典
-                
                 data = msgpack.unpackb(raw, raw=False)  # 使用 msgpack 解码数据
-                if print_stats:
-                    print(f"✅ 加载 {path} 数据成功，大小 {len(data)} 条记录")
             return data  # 返回解码后的数据
-        
         except Exception as e:
             # 2. 如果读取文件或解码过程中发生异常，打印错误并返回空字典
             print(f"⚠ 读取 {path} 错误: {e}")
             return {}
-    else:
-        print(f"⚠ 文件 {path} 不存在")
-    
     return {}  # 如果文件不存在，返回空字典
-
 # ===============================
 # 二进制写入（msgpack）
 # ===============================
@@ -119,10 +100,11 @@ def save_bin(path, data):
     2. 如果发生错误，捕获异常并打印错误信息。
     """
     try:
+        # 1. 打开文件进行写操作，并将数据序列化为 msgpack 格式
         with open(path, "wb") as f:
-            f.write(msgpack.packb(data, use_bin_type=True))
-        print(f"✅ {path} 已保存")
+            f.write(msgpack.packb(data, use_bin_type=True))  # 使用 msgpack 序列化数据并写入文件
     except Exception as e:
+        # 2. 如果保存数据过程中发生异常，打印错误信息
         print(f"⚠ 保存 {path} 错误: {e}")
 
 # ===============================
@@ -319,120 +301,99 @@ def filter_and_update_high_delete_count_rules(all_rules_set):
 # ===============================
 # 哈希分片 + 负载均衡优化
 # ===============================
-def save_hash_batch(batch_hashes, hash_list_file):
+def save_hash_list(hashes, filename):
     """
-    异步保存哈希列表的函数，每次保存一批哈希值。
+    将哈希值列表以二进制格式保存到文件。
     """
-    # 获取现有哈希列表，如果不存在就创建一个空的列表
-    if os.path.exists(hash_list_file):
-        data = load_bin(hash_list_file)  # 加载现有的哈希列表
-        hash_list = data.get('hash_list', [])
-    else:
-        hash_list = []
+    try:
+        # 确保 dist 目录存在
+        os.makedirs(os.path.dirname(filename), exist_ok=True)
+        print(f"🔐 正在保存哈希值列表到 {filename}, 哈希数量: {len(hashes)}")
+        with open(filename, 'wb') as f:
+            pickle.dump(hashes, f)
+        print(f"🔐 哈希值列表已保存到 {filename}")
+    except Exception as e:
+        print(f"⚠ 保存哈希值列表到 {filename} 时发生错误: {e}")
+        
+def load_hash_list(filename):
+    """
+    从二进制文件中加载哈希值列表。
+    """
+    if os.path.exists(filename):
+        try:
+            with open(filename, 'rb') as f:
+                return pickle.load(f)
+        except Exception as e:
+            print(f"⚠ 加载哈希值列表时发生错误: {e}")
+    return []  # 如果文件不存在，返回空列表
 
-    # 将新的哈希值追加到现有哈希列表
-    hash_list.extend(batch_hashes)
-
-    # 保存更新后的哈希列表
-    save_bin(hash_list_file, {'hash_list': hash_list})
-    print(f"✅ 保存了 {len(batch_hashes)} 个哈希值, 当前哈希列表大小: {len(hash_list)}")
-
-def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_size=50000):
+def split_parts(merged_rules, delete_counter, use_existing_hashes=False):
     """
     将规则列表分割成多个分片，并进行负载均衡。
-    1. 检查并创建 `hash_list.bin` 文件，如果文件不存在则初始化为空的哈希列表。
-    2. 如果 `use_existing_hashes` 为 True，则加载现有的哈希值列表；否则，重新计算每条规则的哈希值。
-    3. 根据 `delete_counter` 将规则按照删除计数分配到不同的桶中，并根据哈希值将规则分配到不同的分片，delete_counter值越小，越少被移动到别的分片中。
-    4. 对分片进行负载均衡优化，将负载较大的分片中的规则移动到负载较小的分片中，只将 `delete_counter` 值较大的规则重新计算哈希值，进行移动。更新哈希值列表，每个分片的数量相差不能超过 1。
-    5. 更新并保存最终的哈希值列表和分片规则到 `hash_list.bin` 文件。
-    6. 将分配好的规则写入对应的分片文件中，并输出每个分片的处理结果。
+    1. 根据 delete_counter 值结合哈希值将规则分配到不同的分片中，并生成哈希值列表文件，使用二进制存储。
+    2. 每次调整后更新哈希值列表文件以便下轮使用。
+    3. 后面每次采用哈希值列表文件切割分片，并进行负载均衡。
+    4. 将分片的规则保存到文件中。
     """
-
-    # 确保 hash_list.bin 存在，如果不存在，则初始化为空的哈希列表
-    if not os.path.exists(HASH_LIST_FILE):
-        save_bin(HASH_LIST_FILE, {'hash_list': []})  # 创建空的哈希列表
-        print(f"✅ {HASH_LIST_FILE} 已创建")
-
+    
     # 1. 如果使用现有的哈希值列表文件，则直接加载哈希值列表
     if use_existing_hashes:
-        data = load_bin(HASH_LIST_FILE)  # 加载现有的哈希列表
-        hash_list = data.get('hash_list', [])  # 获取哈希值列表
+        hash_list = load_hash_list(HASH_LIST_FILE)  # 加载现有的哈希列表
         if not hash_list:  # 如果哈希列表为空
             print("⚠ 哈希值列表为空，将重新计算并分配规则。")
             use_existing_hashes = False  # 设置为 False，重新计算哈希
     else:
         hash_list = []  # 如果不使用现有哈希值，则初始化为空列表
 
-    # 2. 强制重新计算哈希并保存到 hash_list
-    if not hash_list:
-        print("🔄 重新计算哈希值...")
-        
-        # 使用线程池并行化哈希计算和保存
-        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:  # 使用4个线程
-            futures = []
-            
-            for i in range(0, len(list(merged_rules)), batch_size):
-                batch = list(merged_rules)[i:i + batch_size]
-                
-                # 每处理一批规则，就启动一个线程来处理并保存哈希值
-                futures.append(executor.submit(process_and_save_hashes, batch, HASH_LIST_FILE))
-                
-            # 等待所有线程执行完成
-            for future in concurrent.futures.as_completed(futures):
-                future.result()  # 获取结果，确保异常被捕获并处理
-
-        print(f"✅ {HASH_LIST_FILE} 哈希值保存完毕")
-
-    # 3. 计算不同 delete_counter 值的规则
+    # 2. 计算不同 delete_counter 值的规则
     counter_buckets = {i: [] for i in range(29)}  # 假设 delete_counter 最大为 28
     for rule, count in delete_counter.items():
-        counter_buckets[count].append(rule)  # 将规则按 delete_counter 值分类
-
-    # 4. 初始化 PARTS 个分片（列表，存储分片内的规则）
+        counter_buckets[count].append(rule)
+    
+    # 3. 初始化 PARTS 个分片（列表，存储分片内的规则）
     part_buckets = [[] for _ in range(PARTS)]  # PARTS 为分片数量，通常为 16
 
-    # 依次处理每个 delete_counter 值的规则
+    # 4. 依次处理每个 delete_counter 值的规则
     for delete_val in range(29):  # 假设最大删除计数为 28
         rules_for_counter = counter_buckets[delete_val]  # 获取该删除计数对应的规则集合
         # 根据规则的哈希值将规则分配到分片中
         for rule in rules_for_counter:
             if use_existing_hashes:
                 # 使用现有哈希值列表来获取规则的哈希值
-                h = hash_list.pop(0)  # 从现有哈希列表中获取哈希值
+                h = hash_list.pop(0)
             else:
                 # 使用 SHA-256 哈希计算规则的哈希值，并转为十六进制整数
                 h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-                h = h % (2**64)  # 将哈希值限制在 64 位范围内
                 hash_list.append(h)  # 保存规则的哈希值
 
-            # 使用哈希值对分片进行分配，确保规则的均匀分布
-            idx = h % PARTS  # 计算规则应该分配到哪个分片
+            idx = h % PARTS  # 使用哈希值对分片进行分配，确保规则的均匀分布
             part_buckets[idx].append(rule)
 
     # 5. 进行负载均衡优化
-    part_buckets = balance_parts(part_buckets)  # 调用负载均衡函数优化分片
+    while True:
+        # 计算每个分片的规则数量
+        lens = [len(b) for b in part_buckets]  # 获取每个分片内规则的数量
+        max_len, min_len = max(lens), min(lens)  # 找到最大和最小规则数
 
-    # 负载均衡后，统一更新哈希列表
-    final_hash_list = []
-    for bucket in part_buckets:
-        for rule in bucket:
-            # 只对 delete_counter 值较大的规则重新计算哈希值
-            if delete_counter.get(rule, 0) > 0:
-                h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-                h = h % (2**64)  # 将哈希值限制在 64 位范围内
-                final_hash_list.append(h)
-            else:
-                final_hash_list.append(hash_list.pop(0))  # 使用原有的哈希值
+        # 6. 如果负载差距足够小，则结束负载均衡
+        if max_len - min_len <= BALANCE_THRESHOLD:
+            break  # 如果差距小于或等于阈值，结束负载均衡
 
-    # 6. 更新并保存最终的哈希值列表和分片规则到 hash_list.bin 文件
-    data = {
-        'hash_list': final_hash_list,  # 保存更新后的哈希列表
-        'part_buckets': part_buckets,  # 保存分片规则
-    }
+        # 7. 找到最大负载和最小负载的分片
+        max_idx, min_idx = lens.index(max_len), lens.index(min_len)
 
-    save_bin(HASH_LIST_FILE, data)  # 保存更新后的数据到 hash_list.bin 文件
+        # 计算可以移动的规则数量（限制每次移动的最大数量）
+        move_count = min(BALANCE_MOVE_LIMIT, (max_len - min_len) // 2)
 
-    # 7. 将分配好的规则写入文件
+        # 8. 如果需要移动的规则数小于等于 0，则退出负载均衡
+        if move_count <= 0:
+            break
+
+        # 9. 将规则从负载最大的分片移动到负载最小的分片
+        part_buckets[min_idx].extend(part_buckets[max_idx][-move_count:])
+        part_buckets[max_idx] = part_buckets[max_idx][:-move_count]
+
+    # 10. 将分配好的规则写入文件
     for i, bucket in enumerate(part_buckets):
         filename = os.path.join("tmp", f"part_{i+1:02d}.txt")  # 分片文件名
         os.makedirs("tmp", exist_ok=True)  # 确保临时目录存在
@@ -440,48 +401,30 @@ def split_parts(merged_rules, delete_counter, use_existing_hashes=False, batch_s
             f.write("\n".join(bucket))  # 将规则写入文件中
         print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")  # 输出每个分片的日志
 
-
-def process_and_save_hashes(batch, hash_list_file):
-    """
-    处理一批规则并保存其哈希值到文件
-    """
-    batch_hashes = []
-    for rule in batch:
-        # 使用 SHA-256 计算规则的哈希值并转换为十六进制整数
-        h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-        h = h % (2**64)  # 将哈希值限制在 64 位范围内
-        batch_hashes.append(h)
-    
-    # 保存哈希值
-    save_hash_batch(batch_hashes, hash_list_file)
-
+    # 11. 更新哈希值列表文件
+    save_hash_list(hash_list, HASH_LIST_FILE)  # 确保路径是 dist/hash_list.bin
 
 def balance_parts(part_buckets):
     """
     对分片进行负载均衡优化。
-    1. 计算每个分片的规则数量的平均值。
-    2. 将负载较大的分片中的规则移到负载较小的分片中，直到分片间的负载平衡，确保每个分片的规则数量相差不超过 1。
-    3. 返回优化后的分片规则。
     """
-    avg = sum(len(b) for b in part_buckets) // PARTS  # 计算平均每个分片的规则数量
+    avg = sum(len(b) for b in part_buckets) // PARTS
 
     # 进行负载均衡：将多余的规则从负载大的分片移动到负载小的分片
     for i, bucket in enumerate(part_buckets):
-        while len(bucket) > avg:  # 如果负载大于平均值
-            rule = bucket.pop()  # 从负载大的分片中移除规则
+        while len(bucket) > avg * 1.2:  # 如果负载大于平均值的 120%
+            rule = bucket.pop()
             target = find_lowest_part(part_buckets)  # 寻找负载最小的分片
-            part_buckets[target].append(rule)  # 将规则移动到负载最小的分片
+            part_buckets[target].append(rule)
 
     return part_buckets
 
 def find_lowest_part(part_buckets):
     """
     查找负载最小的分片索引
-    1. 计算每个分片的规则数量。
-    2. 返回规则数量最少的分片的索引。
     """
-    lens = [len(b) for b in part_buckets]  # 计算每个分片的规则数量
-    return lens.index(min(lens))  # 返回负载最小的分片索引
+    lens = [len(b) for b in part_buckets]
+    return lens.index(min(lens))
 
 # ===============================
 # DNS 验证
@@ -732,104 +675,19 @@ def process_part(part):
 
 
 
-
-import os
-import msgpack
-
-# 清理损坏的 hash_list.bin 文件
-def clean_hash_file():
-    if os.path.exists('dist/hash_list.bin'):
-        os.remove('dist/hash_list.bin')
-
-# 读取 hash_list.bin 文件
-def load_hash_list(file_path):
-    try:
-        with open(file_path, 'rb') as f:
-            return msgpack.load(f)
-    except msgpack.exceptions.UnpackException as e:
-        print(f"⚠ 无法解包文件 {file_path}：{e}")
-        return {}  # 返回空字典，表示读取失败
-    except Exception as e:
-        print(f"⚠ 读取文件 {file_path} 出现错误：{e}")
-        return {}
-
-# 保存哈希列表到文件
-def save_hash_list(file_path, data):
-    try:
-        with open(file_path, 'wb') as f:
-            msgpack.dump(data, f)
-        print(f"✅ 文件 {file_path} 已保存")
-    except Exception as e:
-        print(f"⚠ 写入文件 {file_path} 出现错误：{e}")
-
-# 重新生成哈希列表
-def regenerate_hash_list():
-    clean_hash_file()  # 删除损坏的文件
-    new_data = generate_hashes()  # 生成新的哈希值
-    save_hash_list('dist/hash_list.bin', new_data)  # 保存新哈希列表
-
-# 示例生成哈希列表的逻辑
-def generate_hashes():
-    # 这里替换为你自己的哈希生成逻辑
-    return {"hash1": "value1", "hash2": "value2"}  # 示例数据
-
-# 主程序逻辑
+# ===============================
+# 主入口
+# ===============================
 if __name__ == "__main__":
-    # 1. 检查 hash_list.bin 文件是否存在并且有效
-    if not os.path.exists('dist/hash_list.bin') or os.path.getsize('dist/hash_list.bin') == 0:
-        regenerate_hash_list()  # 如果文件不存在或为空，重新生成
-    else:
-        # 2. 尝试加载哈希列表
-        hash_data = load_hash_list('dist/hash_list.bin')  # 读取文件
-        if not hash_data:
-            regenerate_hash_list()  # 如果读取失败，重新生成哈希列表
-import os
-import msgpack
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--part", help="验证指定分片 1~16")
+    parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
+    args = parser.parse_args()
 
-# 清理损坏的 hash_list.bin 文件
-def clean_hash_file():
-    if os.path.exists('dist/hash_list.bin'):
-        os.remove('dist/hash_list.bin')
-
-# 读取 hash_list.bin 文件
-def load_hash_list(file_path):
-    try:
-        with open(file_path, 'rb') as f:
-            return msgpack.load(f)
-    except msgpack.exceptions.UnpackException as e:
-        print(f"⚠ 无法解包文件 {file_path}：{e}")
-        return {}  # 返回空字典，表示读取失败
-    except Exception as e:
-        print(f"⚠ 读取文件 {file_path} 出现错误：{e}")
-        return {}
-
-# 保存哈希列表到文件
-def save_hash_list(file_path, data):
-    try:
-        with open(file_path, 'wb') as f:
-            msgpack.dump(data, f)
-        print(f"✅ 文件 {file_path} 已保存")
-    except Exception as e:
-        print(f"⚠ 写入文件 {file_path} 出现错误：{e}")
-
-# 重新生成哈希列表
-def regenerate_hash_list():
-    clean_hash_file()  # 删除损坏的文件
-    new_data = generate_hashes()  # 生成新的哈希值
-    save_hash_list('dist/hash_list.bin', new_data)  # 保存新哈希列表
-
-# 示例生成哈希列表的逻辑
-def generate_hashes():
-    # 这里替换为你自己的哈希生成逻辑
-    return {"hash1": "value1", "hash2": "value2"}  # 示例数据
-
-# 主程序逻辑
-if __name__ == "__main__":
-    # 1. 检查 hash_list.bin 文件是否存在并且有效
-    if not os.path.exists('dist/hash_list.bin') or os.path.getsize('dist/hash_list.bin') == 0:
-        regenerate_hash_list()  # 如果文件不存在或为空，重新生成
-    else:
-        # 2. 尝试加载哈希列表
-        hash_data = load_hash_list('dist/hash_list.bin')  # 读取文件
-        if not hash_data:
-            regenerate_hash_list()  # 如果读取失败，重新生成哈希列表
+    if args.force_update:
+        download_all_sources()
+    if not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
+        print("⚠ 缺少规则或分片，自动拉取")
+        download_all_sources()
+    if args.part:
+        process_part(args.part)
