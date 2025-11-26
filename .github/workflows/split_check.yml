@@ -33,6 +33,9 @@ jobs:
           python-version: '3.12'
 
       - run: pip install --upgrade requests dnspython msgpack
+          
+      - name: ✅ 打印 .bin 文件统计
+        run: python3 scripts/print_bin_stats.py
 
       - name: 初始化 dist/tmp/logs
         run: |
