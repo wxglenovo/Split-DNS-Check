@@ -37,7 +37,8 @@ jobs:
           python-version: '3.12'
 
       - name: ✅ 安装依赖
-        run: pip install --upgrade requests dnspython msgpack
+        run: |
+          pip install --upgrade requests dnspython msgpack
 
       - name: ✅ Git 配置
         run: |
@@ -66,31 +67,40 @@ jobs:
 
       - name: ✅ 确保 hash_list.bin 存在并生成
         run: |
-          python3 -c "
+          python3 <<CODE
 import os, pickle, hashlib
+
 hash_file='dist/hash_list.bin'
 rules_file='merged_rules.txt'
+
+# 创建空 hash_list.bin
 if not os.path.exists(hash_file):
     pickle.dump([], open(hash_file,'wb'))
     print('⚠ hash_list.bin 不存在，已创建空文件')
+
+# 读取已有 hash
 try:
     existing_hashes = set(pickle.load(open(hash_file,'rb')))
 except:
     existing_hashes = set()
     pickle.dump([], open(hash_file,'wb'))
     print('⚠ hash_list.bin 损坏，已重置为空')
+
+# 读取 merged_rules.txt
 if os.path.exists(rules_file):
-    with open(rules_file,'r',encoding='utf-8') as f:
-        rules=f.read().splitlines()
+    with open(rules_file,'r', encoding='utf-8') as f:
+        rules = f.read().splitlines()
 else:
-    rules=[]
+    rules = []
     print('⚠ merged_rules.txt 不存在或为空')
-new_hashes=[hashlib.md5(r.encode('utf-8')).hexdigest() for r in rules if hashlib.md5(r.encode('utf-8')).hexdigest() not in existing_hashes]
-total_hashes=list(existing_hashes)+new_hashes
+
+# 更新 hash_list
+new_hashes = [hashlib.md5(r.encode('utf-8')).hexdigest() for r in rules if hashlib.md5(r.encode('utf-8')).hexdigest() not in existing_hashes]
+total_hashes = list(existing_hashes) + new_hashes
 pickle.dump(total_hashes, open(hash_file,'wb'))
 print(f'✅ hash_list.bin 已更新，新增 {len(new_hashes)} 条规则，总计 {len(total_hashes)} 条')
 print('前 5 条 hash:', total_hashes[:5])
-"
+CODE
 
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
