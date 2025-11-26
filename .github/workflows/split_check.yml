@@ -93,6 +93,12 @@ jobs:
           else
             echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
           fi
+          
+          - name: ✅ 强制生成空 hash_list.bin
+            run: |
+              mkdir -p dist
+              python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
+              echo "✅ hash_list.bin 已强制创建为空列表"
 
       - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & hash_list.bin
         run: |
