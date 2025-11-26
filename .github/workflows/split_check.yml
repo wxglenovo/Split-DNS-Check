@@ -46,10 +46,9 @@ jobs:
           echo "💻 当前 Git 配置："
           git config --global --list
 
-      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
+      - name: ✅ 初始化 dist 文件夹和计数器
         run: |
           mkdir -p dist logs tmp
-          echo "📁 确保 dist/logs/tmp 文件夹存在"
           chmod -R 777 dist/
           for f in delete_counter.bin not_written_counter.bin; do
             if [ ! -f "dist/$f" ]; then
@@ -75,10 +74,8 @@ jobs:
 
       - name: ✅ 强制生成 hash_list.bin
         run: |
-          python3 - <<'END'
-import os
-import pickle
-import hashlib
+          python3 - <<'PYTHON'
+import os, pickle, hashlib
 
 rules_file = "merged_rules.txt"
 hash_file = "dist/hash_list.bin"
@@ -91,12 +88,12 @@ if os.path.exists(rules_file):
     print(f"✅ 已生成 hash_list.bin，共 {len(hashes)} 条规则")
 else:
     print(f"⚠ {rules_file} 不存在，无法生成 hash_list.bin")
-END
+PYTHON
 
       - name: ✅ hash_list.bin 预览
         run: python3 -c "import pickle; print(pickle.load(open('dist/hash_list.bin','rb'))[:5])"
 
-      - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
+      - name: ✅ 分片检测 & DNS 验证
         id: detect
         run: |
           LAST_PART_FILE="tmp/last_part.txt"
