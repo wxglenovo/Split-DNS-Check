@@ -96,13 +96,12 @@ jobs:
 
       - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
+          # 创建文件夹并设置权限
           mkdir -p dist logs tmp
-          echo "📁 确保 dist/logs/tmp 文件夹存在"
-          
-          # 设置 dist 文件夹的权限
-          chmod -R 777 dist/
-          
-          # 以下是原来的操作
+          chmod -R 777 dist logs tmp
+          echo "📁 dist/logs/tmp 文件夹已创建并设置权限"
+
+          # 创建 delete_counter.bin 和 not_written_counter.bin（如果不存在）
           for f in delete_counter.bin not_written_counter.bin; do
             if [ ! -f "dist/$f" ]; then
               python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
@@ -111,7 +110,8 @@ jobs:
               echo "ℹ️ $f 已存在"
             fi
           done
-          
+
+          # 创建 retry_rules.txt（如果不存在）
           if [ ! -f dist/retry_rules.txt ]; then
             touch dist/retry_rules.txt
             echo "✅ 已创建 retry_rules.txt"
@@ -119,16 +119,18 @@ jobs:
             echo "ℹ️ retry_rules.txt 已存在"
           fi
 
-          # 创建 hash_list.bin 文件（如果不存在）
-          if [ ! -f dist/hash_list.bin ]; then
-            python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
-            echo "✅ 已创建 hash_list.bin"
-          else
+          # 检查仓库自带 hash_list.bin
+          if [ -f dist/hash_list.bin ]; then
             echo "ℹ️ hash_list.bin 已存在"
+          else
+            echo "❌ hash_list.bin 不存在！请先在仓库中提交空文件"
+            exit 1
           fi
 
+          # 预览 retry_rules.txt 前 5 行
           echo "dist/retry_rules.txt 内容预览（前5行）:"
           head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
+
 
       - name: ✅ 确保规则文件与分片存在
         run: |
