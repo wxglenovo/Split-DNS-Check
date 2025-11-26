@@ -8,7 +8,6 @@ import argparse
 import dns.resolver
 from concurrent.futures import ThreadPoolExecutor, as_completed  # ✅ 这里一定要有
 import time
-import hashlib
 import pickle
 
 # ===============================
@@ -21,7 +20,6 @@ MASTER_RULE = "merged_rules.txt"
 
 PARTS = 16
 DNS_TIMEOUT = 2
-HASH_LIST_FILE = os.path.join(DIST_DIR, "hash_list.bin")
 DELETE_COUNTER_FILE = os.path.join(DIST_DIR, "delete_counter.bin")
 NOT_WRITTEN_FILE = os.path.join(DIST_DIR, "not_written_counter.bin")
 RETRY_FILE = os.path.join(DIST_DIR, "retry_rules.txt")
@@ -29,8 +27,7 @@ DELETE_THRESHOLD = 4
 DNS_BATCH_SIZE = 540
 WRITE_COUNTER_MAX = 6
 DNS_THREADS = 80
-BALANCE_THRESHOLD = 1
-BALANCE_MOVE_LIMIT = 50
+
 
 os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)
