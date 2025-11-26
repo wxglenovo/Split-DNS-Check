@@ -512,67 +512,11 @@ if __name__ == "__main__":
     parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
     args = parser.parse_args()
 
-    # ===============================
-    # 0. 确保 dist 目录存在
-    # ===============================
-    os.makedirs(DIST_DIR, exist_ok=True)
-    os.makedirs(TMP_DIR, exist_ok=True)
-
-    # ===============================
-    # 1. 自动初始化 hash_list.bin
-    # ===============================
-    if not os.path.exists(HASH_LIST_FILE):
-        print("⚠ 未找到 hash_list.bin，自动初始化为空结构")
-        save_bin(HASH_LIST_FILE, {})          # 空字典
-    try:
-        hash_list = load_bin(HASH_LIST_FILE)
-        if not isinstance(hash_list, dict):
-            print("⚠ 发现损坏的 hash_list.bin，已重置为空结构")
-            hash_list = {}
-            save_bin(HASH_LIST_FILE, hash_list)
-    except:
-        print("⚠ 读取 hash_list.bin 出错，已重置为空结构")
-        hash_list = {}
-        save_bin(HASH_LIST_FILE, hash_list)
-
-    # ===============================
-    # 2. 自动初始化 delete_counter.bin
-    # ===============================
-    if not os.path.exists(DELETE_COUNTER_FILE):
-        print("⚠ 未找到 delete_counter.bin，自动初始化为空结构")
-        save_bin(DELETE_COUNTER_FILE, {})
-    try:
-        delete_counter = load_bin(DELETE_COUNTER_FILE)
-        if not isinstance(delete_counter, dict):
-            print("⚠ 发现损坏的 delete_counter.bin，已重置为空结构")
-            delete_counter = {}
-            save_bin(DELETE_COUNTER_FILE, delete_counter)
-    except:
-        print("⚠ 读取 delete_counter.bin 出错，已重置为空结构")
-        delete_counter = {}
-        save_bin(DELETE_COUNTER_FILE, delete_counter)
-
-    # ===============================
-    # 3. 如果缺少源规则或分片，需要强制重新下载
-    # ===============================
     if args.force_update or not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
-        download_all_sources()  # 必须生成 MASTER_RULE + part_XX.txt
+        download_all_sources()
 
-    # ===============================
-    # 4. 映射 MASTER_RULE → all_rules
-    # ===============================
-    if os.path.exists(MASTER_RULE):
-        with open(MASTER_RULE, "r", encoding="utf-8") as f:
-            all_rules = [line.strip() for line in f if line.strip()]
-    else:
-        print("❌ 找不到合并规则文件 merged_rules.txt")
-        exit(1)
-
-    # ===============================
-    # 5. 验证某个分片
-    # ===============================
     if args.part:
-        process_part(int(args.part), all_rules, hash_list, delete_counter)
+        process_part(args.part)
     else:
         print("提示: 使用 --part 指定要验证的分片（1~16）")
