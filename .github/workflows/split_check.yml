@@ -66,29 +66,54 @@ jobs:
 
       - name: ✅ 确保规则文件与分片存在
         run: |
-          if [ ! -f "merged_rules.txt" ] || [ ! -f "tmp/part_01.txt" ]; then
-            echo "⚠ 缺失规则文件，自动拉取"
-            python3 split_and_check_16.py --force-update
-          else
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
+          if [ ! -f "merged_rules.txt" ]; then
+            echo "⚠ merged_rules.txt 不存在，创建空文件"
+            touch merged_rules.txt
+          fi
+          if [ ! -f "tmp/part_01.txt" ]; then
+            echo "⚠ tmp/part_01.txt 不存在，创建空文件"
+            mkdir -p tmp
+            touch tmp/part_01.txt
+          fi
+          echo "ℹ️ 文件检查完成"
 
-      - name: ✅ 强制生成 hash_list.bin
+      - name: ✅ 增量生成 hash_list.bin（完全容错）
         run: |
-          python3 - <<'PYTHON'
+          python3 -c "
 import os, pickle, hashlib
 
-rules_file = "merged_rules.txt"
-hash_file = "dist/hash_list.bin"
+rules_file='merged_rules.txt'
+hash_file='dist/hash_list.bin'
 
+# 创建 hash_list.bin 空文件（如果不存在或损坏）
+if not os.path.exists(hash_file):
+    pickle.dump([], open(hash_file,'wb'))
+    print('⚠ hash_list.bin 不存在，已创建空文件')
+
+# 尝试读取已有 hash
+try:
+    existing_hashes = set(pickle.load(open(hash_file,'rb')))
+except:
+    existing_hashes = set()
+    pickle.dump([], open(hash_file,'wb'))
+    print('⚠ hash_list.bin 损坏，已重置为空')
+
+# 读取规则
 if os.path.exists(rules_file):
-    with open(rules_file, "r", encoding="utf-8") as f:
-        rules = f.read().splitlines()
-    hashes = [hashlib.md5(r.encode("utf-8")).hexdigest() for r in rules]
-    pickle.dump(hashes, open(hash_file, "wb"))
-    print(f"✅ 已生成 hash_list.bin，共 {len(hashes)} 条规则")
+    with open(rules_file,'r',encoding='utf-8') as f:
+        rules=f.read().splitlines()
 else:
-    print(f"⚠ {rules_file} 不存在，无法生成 hash_list.bin")
-PYTHON
+    rules = []
+    print('⚠ merged_rules.txt 不存在或为空')
+
+# 生成新增 hash
+new_hashes = [hashlib.md5(r.encode('utf-8')).hexdigest() for r in rules if hashlib.md5(r.encode('utf-8')).hexdigest() not in existing_hashes]
+
+# 合并保存
+total_hashes = list(existing_hashes) + new_hashes
+pickle.dump(total_hashes, open(hash_file,'wb'))
+print(f'✅ hash_list.bin 已更新，新增 {len(new_hashes)} 条规则，总计 {len(total_hashes)} 条')
+"
 
       - name: ✅ hash_list.bin 预览
         run: python3 -c "import pickle; print(pickle.load(open('dist/hash_list.bin','rb'))[:5])"
@@ -139,7 +164,7 @@ PYTHON
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-          git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化，无需提交"
-          git pull --rebase origin main || echo "⚠ pull失败（忽略）"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
+          git commit -m '🤖 分片 $PART | $STATS' || echo 'ℹ️ 无变化，无需提交'
+          git pull --rebase origin main || echo '⚠ pull失败（忽略）'
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo '⚠ push失败（可能无变化）'
           set -e
