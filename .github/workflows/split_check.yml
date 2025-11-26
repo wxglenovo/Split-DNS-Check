@@ -37,8 +37,7 @@ jobs:
           python-version: '3.12'
 
       - name: ✅ 安装依赖
-        run: |
-          pip install --upgrade requests dnspython msgpack
+        run: pip install --upgrade requests dnspython msgpack
 
       - name: ✅ Git 配置
         run: |
@@ -67,10 +66,8 @@ jobs:
 
       - name: ✅ 确保 hash_list.bin 存在并更新
         run: |
-          python3 - <<PYTHON
-import os
-import pickle
-import hashlib
+          python3 -c "
+import os, pickle, hashlib
 
 hash_file = 'dist/hash_list.bin'
 rules_file = 'merged_rules.txt'
@@ -87,7 +84,7 @@ except:
     print('⚠ hash_list.bin 损坏，已重置为空')
 
 if os.path.exists(rules_file):
-    with open(rules_file, 'r', encoding='utf-8') as f:
+    with open(rules_file,'r', encoding='utf-8') as f:
         rules = f.read().splitlines()
 else:
     rules = []
@@ -98,7 +95,7 @@ total_hashes = list(existing_hashes) + new_hashes
 pickle.dump(total_hashes, open(hash_file,'wb'))
 print(f'✅ hash_list.bin 已更新，新增 {len(new_hashes)} 条规则，总计 {len(total_hashes)} 条')
 print('前 5 条 hash:', total_hashes[:5])
-PYTHON
+          "
 
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
@@ -157,7 +154,7 @@ PYTHON
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-          git commit -m "🤖 分片 ${PART} | ${STATS}" || echo "ℹ️ 无变化，无需提交"
-          git pull --rebase origin main || echo "⚠ pull失败（忽略）"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
+          git commit -m '🤖 分片 ${PART} | ${STATS}' || echo 'ℹ️ 无变化，无需提交'
+          git pull --rebase origin main || echo '⚠ pull失败（忽略）'
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo '⚠ push失败（可能无变化）'
           set -e
