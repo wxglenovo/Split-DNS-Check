@@ -36,97 +36,106 @@ jobs:
           python-version: '3.12'
 
       - name: ✅ 安装依赖
-        run: pip install --upgrade requests dnspython msgpack
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade requests dnspython msgpack
 
       - name: ✅ Git 配置
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          echo "💻 当前 Git 配置："
           git config --global --list
 
-      - name: ✅ 智能 Git 历史瘦身
-        run: |
-          set -euo pipefail
-          echo "⏳ 测试克隆速度（--no-tags + 浅克隆）"
-          START=$(date +%s)
-          git clone --no-tags --depth=1 \
-            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo || true
-          END=$(date +%s)
-          ELAPSED=$((END - START))
-          echo "✅ 克隆耗时: ${ELAPSED}s"
-          if (( ELAPSED <= 30 )); then
-            echo "✅ 克隆速度良好 → 跳过 Git 历史瘦身"
-            exit 0
-          fi
-          echo "⚠ 克隆耗时超过 30 秒 → 自动触发 Git 瘦身!"
-          cd repo
-          du -sh .git || true
-          TS=$(date +"%Y%m%d-%H%M")
-          TAG="auto-backup-$TS"
-          BRANCH="backup-$TS"
-          git tag "$TAG"
-          git branch "$BRANCH"
-          git push --atomic --force --thin \
-            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git \
-            "$TAG" "$BRANCH"
-          NEW_TREE=$(git write-tree)
-          NEW_COMMIT=$(echo "🧹 Repo auto-squash on $TS" | git commit-tree "$NEW_TREE")
-          git reset --hard "$NEW_COMMIT"
-          git push --force --thin \
-            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
-          echo "✅ Git 历史瘦身完成! 备份 tag: $TAG 分支: $BRANCH"
-
-      - name: ✅ 打印 .bin 文件统计
-        run: python3 scripts/print_bin_stats.py
-
-      - name: ✅ 定时强制更新规则（每6小时）
-        run: |
-          BJ_TIME=$(date -u -d '+8 hour' +"%Y-%m-%d %H:%M")
-          CURRENT_HOUR=$(date -u -d '+8 hour' +"%H")
-          echo "🕒 当前北京时间: $BJ_TIME"
-          if [[ "$CURRENT_HOUR" == "00" || "$CURRENT_HOUR" == "06" || "$CURRENT_HOUR" == "12" || "$CURRENT_HOUR" == "18" ]]; then
-            echo "📥 开始强制更新规则..."
-            python3 split_and_check_16.py --force-update
-            echo "✅ 规则强制更新完成"
-          else
-            echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
-          fi
-
-      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
+      - name: ✅ 初始化 dist/logs/tmp 文件夹和计数器
         run: |
           mkdir -p dist logs tmp
-          chmod -R 777 dist/
-          for f in delete_counter.bin not_written_counter.bin; do
-            if [ ! -f "dist/$f" ]; then
-              python3 - <<EOF
-import pickle
-pickle.dump({}, open('dist/$f','wb'))
-EOF
-              echo "✅ 已创建 $f"
-            else
-              echo "ℹ️ $f 已存在"
-            fi
-          done
+          chmod -R 777 dist || true
 
-          if [ ! -f dist/retry_rules.txt ]; then
-            touch dist/retry_rules.txt
-            echo "✅ 已创建 retry_rules.txt"
+          # 创建 msgpack 空 dict 文件（delete_counter.bin & not_written_counter.bin）
+          python - <<'PY'
+import msgpack, os
+for fname in ("dist/delete_counter.bin","dist/not_written_counter.bin"):
+    dname = os.path.dirname(fname)
+    if dname and not os.path.exists(dname):
+        os.makedirs(dname, exist_ok=True)
+    if not os.path.exists(fname):
+        with open(fname,"wb") as f:
+            f.write(msgpack.packb({}, use_bin_type=True))
+        print("created", fname)
+    else:
+        print("exists", fname)
+# retry file
+if not os.path.exists("dist/retry_rules.txt"):
+    open("dist/retry_rules.txt","w",encoding="utf-8").close()
+    print("created dist/retry_rules.txt")
+else:
+    print("dist/retry_rules.txt exists")
+# hash_list.bin as empty list (pickle) to be compatible with some scripts that use pickle
+import pickle
+if not os.path.exists("dist/hash_list.bin"):
+    pickle.dump([], open("dist/hash_list.bin","wb"))
+    print("created dist/hash_list.bin")
+else:
+    print("dist/hash_list.bin exists")
+PY
+
+      - name: ✅ 更新 hash_list.bin（若 merged_rules.txt 存在则同步）
+        if: always()
+        run: |
+          python - <<'PY'
+import os, pickle, hashlib
+hash_file = 'dist/hash_list.bin'
+rules_file = 'merged_rules.txt'
+
+# ensure hash_file exists and is a list
+if not os.path.exists(hash_file):
+    pickle.dump([], open(hash_file,'wb'))
+
+try:
+    existing = pickle.load(open(hash_file,'rb'))
+    if not isinstance(existing, list):
+        existing = []
+except Exception:
+    existing = []
+    pickle.dump(existing, open(hash_file,'wb'))
+
+if os.path.exists(rules_file):
+    with open(rules_file, 'r', encoding='utf-8') as f:
+        rules = [r.strip() for r in f if r.strip()]
+else:
+    rules = []
+
+# Use md5 for compactness, skip duplicates
+existing_set = set(existing)
+new = []
+for r in rules:
+    h = hashlib.md5(r.encode('utf-8')).hexdigest()
+    if h not in existing_set:
+        new.append(h)
+        existing_set.add(h)
+
+all_hashes = list(existing_set)
+pickle.dump(all_hashes, open(hash_file,'wb'))
+print("hash_list updated: +%d, total=%d" % (len(new), len(all_hashes)))
+if len(all_hashes)>0:
+    print("sample:", all_hashes[:5])
+PY
+
+      - name: ✅ 打印 .bin 文件统计
+        run: |
+          if [ -f scripts/print_bin_stats.py ]; then
+            python3 scripts/print_bin_stats.py || true
+          else
+            echo "scripts/print_bin_stats.py not found"
           fi
 
-          if [ ! -f dist/hash_list.bin ]; then
-            python3 - <<EOF
-import pickle
-pickle.dump([], open('dist/hash_list.bin','wb'))
-EOF
-            echo "✅ 已创建 hash_list.bin"
-          fi
-
-      - name: ✅ 确保规则文件与分片存在
+      - name: ✅ 确保规则文件与分片存在（必要时强制更新）
         run: |
           if [ ! -f "merged_rules.txt" ] || [ ! -f "tmp/part_01.txt" ]; then
-            echo "⚠ 缺失规则文件，自动拉取"
-            python3 split_and_check_16.py --force-update
+            echo "missing merged_rules.txt or tmp/part_01.txt - call force-update"
+            python3 split_and_check_16.py --force-update || true
+          else
+            echo "merged_rules.txt and tmp/part_01.txt exist"
           fi
 
       - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
@@ -146,9 +155,10 @@ EOF
           fi
           echo "$PART" > "$LAST_PART_FILE"
           echo "part=$PART" >> $GITHUB_OUTPUT
+          echo "processing part: $PART"
           python3 split_and_check_16.py --part "$PART" | tee logs/split_check_part_${PART}.log || true
 
-      - name: ✅ 上传日志
+      - name: ✅ 上传日志 (artifact)
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -157,21 +167,22 @@ EOF
           if-no-files-found: warn
           retention-days: 14
 
-      - name: ✅ 提交并推送变更
+      - name: ✅ 提交并推送变更（容忍冲突）
         continue-on-error: true
         env:
           PART: ${{ steps.detect.outputs.part }}
         run: |
           set +e
-          if [ -f logs/split_check_part_${PART}.log ]; then
-            STATS=$(grep "COMMIT_STATS" logs/split_check_part_${PART}.log | tail -n1 | sed 's/COMMIT_STATS: //')
+          LOGFILE="logs/split_check_part_${PART}.log"
+          if [ -f "$LOGFILE" ]; then
+            STATS=$(grep "COMMIT_STATS" "$LOGFILE" | tail -n1 | sed 's/COMMIT_STATS: //')
           else
             STATS="无日志"
           fi
-          git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
-          git add dist/retry_rules.txt || true
-          git add dist/validated_part_*.txt || true
-          git commit -m "🤖 分片 $PART | $STATS" || true
-          git pull --rebase origin main || true
-          git push || true
+          echo "准备提交 dist/*.bin dist/retry_rules.txt dist/validated_part_*.txt"
+          git add tmp/last_part.txt dist/*.bin dist/retry_rules.txt dist/validated_part_*.txt 2>/dev/null || true
+          git commit -m "🤖 分片 $PART | $STATS" || echo "no changes to commit"
+          # try to rebase then push; if fails, skip to avoid failing workflow permanently
+          git pull --rebase origin main || echo "pull --rebase failed, continuing"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "push failed (likely no change or conflict)"
           set -e
