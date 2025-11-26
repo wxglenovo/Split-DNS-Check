@@ -384,7 +384,7 @@ def update_not_written_counter(part_num, valid_rules, all_rules):
 # ===============================
 # 处理分片
 # ===============================
-def process_part(part):
+def process_part(part, all_rules, hash_list, delete_counter):
     part = int(part)
     part_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
 
@@ -403,15 +403,15 @@ def process_part(part):
     out_file = os.path.join(DIST_DIR, f"validated_part_{part}.txt")
     old_rules = set(open(out_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(out_file) else set()
 
-    delete_counter = load_bin(DELETE_COUNTER_FILE)
+    # delete_counter 来源于传入参数，不再 load_bin()
     rules_to_validate = [r for r in lines if int(delete_counter.get(r, 4)) < 7]
 
-    # 对 delete_counter >= 7 的规则，直接 +1（保持计数增长）
+    # delete_counter >= 7 的规则计数继续增长
     for r in lines:
         if int(delete_counter.get(r, 4)) >= 7:
             delete_counter[r] = int(delete_counter.get(r, 4)) + 1
 
-    # 读取 retry_rules 并加入验证队列顶部
+    # retry_rules 前置插入
     retry_rules = []
     if os.path.exists(RETRY_FILE):
         with open(RETRY_FILE, "r", encoding="utf-8") as rf:
@@ -421,16 +421,15 @@ def process_part(part):
             for r in reversed(retry_rules):
                 if int(delete_counter.get(r, 4)) < 7 and r not in rules_to_validate:
                     rules_to_validate.insert(0, r)
-            # 清空 retry 文件
             open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
 
     # DNS 验证
     valid = set(dns_validate(rules_to_validate, part))
     added_count = 0
     failure_counts = {}
-
-    # 更新 delete_counter，同时处理 retry_rules 写入
     new_retry_rules = []
+
+    # 更新 delete_counter / retry_rules / 剔除失败规则
     for r in rules_to_validate:
         if r in valid:
             delete_counter[r] = 0
@@ -439,46 +438,35 @@ def process_part(part):
             delete_counter[r] = int(delete_counter.get(r, 0)) + 1
             fc = min(int(delete_counter[r]), WRITE_COUNTER_MAX)
             failure_counts[fc] = failure_counts.get(fc, 0) + 1
-            # 超过阈值的规则不加入 validated
+
             if delete_counter[r] >= DELETE_THRESHOLD and r in valid:
                 valid.discard(r)
-            # write_counter <= 0 的规则写入 retry_rules
+
+            # write_counter <= 0 → 加入 retry_rules
             if delete_counter[r] <= 0:
                 new_retry_rules.append(r)
 
-    # 写入 retry_rules.txt（追加）
+    # 写入 retry_rules
     if new_retry_rules:
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
             for r in new_retry_rules:
                 rf.write(r + "\n")
         print(f"🔥 {len(new_retry_rules)} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry_rules)} 条）")
 
+    # 保存 delete_counter
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # 下载规则源列表 all_rules（用于 update_not_written_counter）
-    all_rules = []
-    if os.path.exists(URLS_TXT):
-        with open(URLS_TXT, "r", encoding="utf-8") as f:
-            urls = [u.strip() for u in f if u.strip()]
-        for url in urls:
-            try:
-                r = requests.get(url, timeout=20)
-                r.raise_for_status()
-                new_rules = [line.strip() for line in r.text.splitlines() if line.strip()]
-                all_rules.extend(new_rules)
-            except Exception as e:
-                print(f"⚠ 下载失败 {url}: {e}")
-
+    # 使用传入的 all_rules（不再重新下载）
     deleted_validated = update_not_written_counter(part, list(valid), all_rules)
     total_count = len(valid)
 
-    # 打印连续失败统计
+    # 连续失败统计
     print("\n📊 当前分片连续失败统计:")
     for i in range(1, WRITE_COUNTER_MAX + 1):
         if failure_counts.get(i, 0) > 0:
             print(f"    ⚠ 连续失败 {i}/{WRITE_COUNTER_MAX} 的规则条数: {failure_counts[i]}")
 
-    # 打印 write_counter 统计
+    # write_counter 统计
     print("\n📊 当前分片 write_counter 规则统计:")
     part_key = f"validated_part_{part}"
     counter = load_bin(NOT_WRITTEN_FILE)
@@ -488,20 +476,25 @@ def process_part(part):
         v = int(v)
         if 1 <= v <= WRITE_COUNTER_MAX:
             counts[v] += 1
+
     total_rules = sum(counts.values())
     print(f"    ℹ️ 总规则条数: {total_rules}")
     for i in range(1, WRITE_COUNTER_MAX + 1):
         if counts[i] > 0:
             print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
+
     print("--------------------------------------------------")
 
-    # 保存最终验证结果（仅 DNS 验证成功的规则，每条一行）
+    # 保存验证成功规则，不加 write_counter
     with open(out_file, "w", encoding="utf-8") as f:
         for r in sorted(valid):
             f.write(r + "\n")
 
-    print(f"✅ 分片 {part} 完成: 总{total_count}, 新增{added_count}, 删除{deleted_validated}, 过滤{len(rules_to_validate) - len(valid)}")
-    print(f"COMMIT_STATS: 总 {total_count}, 新增 {added_count}, 删除 {deleted_validated}, 过滤 {len(rules_to_validate) - len(valid)}")
+    print(f"✅ 分片 {part} 完成: 总{total_count}, 新增{added_count}, 删除{deleted_validated}, "
+          f"过滤{len(rules_to_validate) - len(valid)}")
+    print(f"COMMIT_STATS: 总 {total_count}, 新增 {added_count}, 删除 {deleted_validated}, "
+          f"过滤 {len(rules_to_validate) - len(valid)}")
+
 
 # ===============================
 # 主入口
@@ -509,69 +502,37 @@ def process_part(part):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--part", help="验证指定分片 1~16")
-    parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
+    parser.add_argument("--force-update", action="true", help="强制重新下载规则源并切片")
     args = parser.parse_args()
 
-    # ===============================
-    # 0. 确保 dist 目录存在
-    # ===============================
-    os.makedirs(DIST_DIR, exist_ok=True)
-    os.makedirs(TMP_DIR, exist_ok=True)
-
-    # ===============================
-    # 1. 自动初始化 hash_list.bin
-    # ===============================
-    if not os.path.exists(HASH_LIST_FILE):
-        print("⚠ 未找到 hash_list.bin，自动初始化为空结构")
-        save_bin(HASH_LIST_FILE, {})          # 空字典
+    # 载入 hash_list
     try:
         hash_list = load_bin(HASH_LIST_FILE)
         if not isinstance(hash_list, dict):
-            print("⚠ 发现损坏的 hash_list.bin，已重置为空结构")
-            hash_list = {}
-            save_bin(HASH_LIST_FILE, hash_list)
+            raise Exception()
     except:
-        print("⚠ 读取 hash_list.bin 出错，已重置为空结构")
+        print("⚠ hash_list.bin 损坏，重建空表")
         hash_list = {}
         save_bin(HASH_LIST_FILE, hash_list)
 
-    # ===============================
-    # 2. 自动初始化 delete_counter.bin
-    # ===============================
-    if not os.path.exists(DELETE_COUNTER_FILE):
-        print("⚠ 未找到 delete_counter.bin，自动初始化为空结构")
-        save_bin(DELETE_COUNTER_FILE, {})
+    # 载入 delete_counter
     try:
         delete_counter = load_bin(DELETE_COUNTER_FILE)
         if not isinstance(delete_counter, dict):
-            print("⚠ 发现损坏的 delete_counter.bin，已重置为空结构")
-            delete_counter = {}
-            save_bin(DELETE_COUNTER_FILE, delete_counter)
+            raise Exception()
     except:
-        print("⚠ 读取 delete_counter.bin 出错，已重置为空结构")
+        print("⚠ delete_counter.bin 损坏，重建空表")
         delete_counter = {}
         save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # ===============================
-    # 3. 如果缺少源规则或分片，需要强制重新下载
-    # ===============================
-    if args.force_update or not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
+    # 全量规则 all_rules
+    all_rules = load_all_remote_rules()
+
+    if args.force_update or not os.path.exists(MASTER_RULE):
         print("⚠ 缺少规则或分片，自动拉取")
-        download_all_sources()  # 必须生成 MASTER_RULE + part_XX.txt
+        download_all_sources()
+        all_rules = load_all_remote_rules()
 
-    # ===============================
-    # 4. 映射 MASTER_RULE → all_rules
-    # ===============================
-    if os.path.exists(MASTER_RULE):
-        with open(MASTER_RULE, "r", encoding="utf-8") as f:
-            all_rules = [line.strip() for line in f if line.strip()]
-    else:
-        print("❌ 找不到合并规则文件 merged_rules.txt")
-        exit(1)
-
-    # ===============================
-    # 5. 验证某个分片
-    # ===============================
     if args.part:
         process_part(int(args.part), all_rules, hash_list, delete_counter)
     else:
