@@ -41,18 +41,16 @@ jobs:
         run: |
           mkdir -p dist logs tmp
           chmod -R 777 dist/
-          python3 -c "
-import os, pickle
+          python3 -c "import os,pickle; 
 for f in ['delete_counter.bin','not_written_counter.bin','hash_list.bin']:
-    path = os.path.join('dist', f)
+    path=os.path.join('dist',f)
     if not os.path.exists(path):
-        pickle.dump({}, open(path,'wb'))
+        pickle.dump({},open(path,'wb'))
 for f in ['retry_rules.txt']:
-    path = os.path.join('dist', f)
+    path=os.path.join('dist',f)
     if not os.path.exists(path):
-        open(path,'w', encoding='utf-8').close()
-print('✅ dist 文件夹及必要文件初始化完成')
-"
+        open(path,'w',encoding='utf-8').close()
+print('✅ dist 文件夹及必要文件初始化完成')"
 
       - name: Ensure merged rules and part_01.txt
         run: |
