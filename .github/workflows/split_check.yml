@@ -94,7 +94,7 @@ jobs:
             echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
           fi
 
-      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
+      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & hash_list.bin
         run: |
           # 创建文件夹并设置权限
           mkdir -p dist logs tmp
@@ -119,18 +119,17 @@ jobs:
             echo "ℹ️ retry_rules.txt 已存在"
           fi
 
-          # 检查仓库自带 hash_list.bin
-          if [ -f dist/hash_list.bin ]; then
-            echo "ℹ️ hash_list.bin 已存在"
+          # 自动生成 hash_list.bin（如果不存在）
+          if [ ! -f dist/hash_list.bin ]; then
+            python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
+            echo "✅ hash_list.bin 已创建（空列表）"
           else
-            echo "❌ hash_list.bin 不存在！请先在仓库中提交空文件"
-            exit 1
+            echo "ℹ️ hash_list.bin 已存在"
           fi
 
           # 预览 retry_rules.txt 前 5 行
           echo "dist/retry_rules.txt 内容预览（前5行）:"
           head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
-
 
       - name: ✅ 确保规则文件与分片存在
         run: |
