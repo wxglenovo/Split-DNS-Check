@@ -46,68 +46,8 @@ jobs:
           echo "💻 当前 Git 配置："
           git config --global --list
 
-      - name: ✅ 智能 Git 历史瘦身
-        run: |
-          set -euo pipefail
-          echo "⏳ 测试克隆速度（--no-tags + 浅克隆）"
-          START=$(date +%s)
-          git clone --no-tags --depth=1 \
-            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo || true
-          END=$(date +%s)
-          ELAPSED=$((END - START))
-          echo "✅ 克隆耗时: ${ELAPSED}s"
-          if (( ELAPSED <= 30 )); then
-            echo "✅ 克隆速度良好 → 跳过 Git 历史瘦身"
-            exit 0
-          fi
-          echo "⚠ 克隆耗时超过 30 秒 → 自动触发 Git 瘦身!"
-          cd repo
-          du -sh .git || true
-          TS=$(date +"%Y%m%d-%H%M")
-          TAG="auto-backup-$TS"
-          BRANCH="backup-$TS"
-          git tag "$TAG"
-          git branch "$BRANCH"
-          git push --atomic --force --thin \
-            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git \
-            "$TAG" "$BRANCH"
-          NEW_TREE=$(git write-tree)
-          NEW_COMMIT=$(echo "🧹 Repo auto-squash on $TS" | git commit-tree "$NEW_TREE")
-          git reset --hard "$NEW_COMMIT"
-          git push --force --thin \
-            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
-          echo "✅ Git 历史瘦身完成! 备份 tag: $TAG 分支: $BRANCH"
-
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
-
-      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & hash_list.bin
-        run: |
-          mkdir -p dist logs tmp
-          chmod -R 777 dist logs tmp
-          echo "📁 dist/logs/tmp 文件夹已创建并设置权限"
-
-          for f in delete_counter.bin not_written_counter.bin; do
-            if [ ! -f "dist/$f" ]; then
-              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
-              echo "✅ 已创建 $f"
-            else
-              echo "ℹ️ $f 已存在"
-            fi
-          done
-
-          if [ ! -f dist/retry_rules.txt ]; then
-            touch dist/retry_rules.txt
-            echo "✅ 已创建 retry_rules.txt"
-          else
-            echo "ℹ️ retry_rules.txt 已存在"
-          fi
-
-          # 强制生成空 hash_list.bin
-          python3 -c "import pickle, os; os.makedirs('dist', exist_ok=True); pickle.dump([], open('dist/hash_list.bin','wb'))"
-          echo "✅ hash_list.bin 已强制创建为空列表"
-
-          head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
 
       - name: ✅ 定时强制更新规则（每6小时）
         run: |
@@ -121,12 +61,59 @@ jobs:
           else
             echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
           fi
-    
-      - name: ✅ 强制生成空 hash_list.bin   # ❌ 这里多了缩进，会被 shell 当成命令
+
+      - name: ✅ 初始化 dist 文件夹和计数器 & retry_rules.txt & hash_list.bin
         run: |
-            mkdir -p dist
-            python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
-            echo "✅ hash_list.bin 已强制创建为空列表"
+          mkdir -p dist logs tmp
+          chmod -R 777 dist logs tmp
+          echo "📁 dist/logs/tmp 文件夹已创建并设置权限"
+
+          # delete_counter.bin / not_written_counter.bin
+          for f in delete_counter.bin not_written_counter.bin; do
+            if [ ! -f "dist/$f" ]; then
+              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
+              echo "✅ 已创建 $f"
+            else
+              echo "ℹ️ $f 已存在"
+            fi
+          done
+
+          # retry_rules.txt
+          if [ ! -f dist/retry_rules.txt ]; then
+            touch dist/retry_rules.txt
+            echo "✅ 已创建 retry_rules.txt"
+          else
+            echo "ℹ️ retry_rules.txt 已存在"
+          fi
+
+          # hash_list.bin（仅在 runner 本地使用，不推送）
+          python3 - << 'EOF'
+import os, pickle
+
+hash_file = 'dist/hash_list.bin'
+needs_create = False
+
+if not os.path.exists(hash_file):
+    needs_create = True
+else:
+    try:
+        with open(hash_file,'rb') as f:
+            data = pickle.load(f)
+        if not isinstance(data, list):
+            needs_create = True
+    except Exception:
+        needs_create = True
+
+if needs_create:
+    os.makedirs('dist', exist_ok=True)
+    with open(hash_file,'wb') as f:
+        pickle.dump([], f)
+    print("✅ hash_list.bin 不存在或非法 → 已生成空列表")
+else:
+    print("ℹ️ hash_list.bin 已存在且内容正常 → 保持原样")
+EOF
+
+          head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
 
       - name: ✅ 确保规则文件与分片存在
         run: |
@@ -136,7 +123,7 @@ jobs:
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
           fi
-          
+
       - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
         id: detect
         run: |
@@ -162,7 +149,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dns-log-part-${{ steps.detect.outputs.part }}
-          path: logs/ 
+          path: logs/
           if-no-files-found: warn
           retention-days: 14
 
