@@ -43,25 +43,32 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          echo "💻 当前 Git 配置："
           git config --global --list
+
+      - name: ✅ 智能 Git 历史瘦身
+        run: |
+          set -euo pipefail
+          START=$(date +%s)
+          git clone --no-tags --depth=1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo || true
+          END=$(date +%s)
+          ELAPSED=$((END - START))
+          if (( ELAPSED <= 30 )); then exit 0; fi
+          cd repo
+          TS=$(date +"%Y%m%d-%H%M")
+          TAG="auto-backup-$TS"
+          BRANCH="backup-$TS"
+          git tag "$TAG"
+          git branch "$BRANCH"
+          git push --atomic --force --thin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git "$TAG" "$BRANCH"
+          NEW_TREE=$(git write-tree)
+          NEW_COMMIT=$(echo "🧹 Repo auto-squash on $TS" | git commit-tree "$NEW_TREE")
+          git reset --hard "$NEW_COMMIT"
+          git push --force --thin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git main
 
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
 
-      - name: ✅ 定时强制更新规则（每6小时）
-        run: |
-          BJ_TIME=$(date -u -d '+8 hour' +"%Y-%m-%d %H:%M")
-          CURRENT_HOUR=$(date -u -d '+8 hour' +"%H")
-          echo "🕒 当前北京时间: $BJ_TIME"
-          if [[ "$CURRENT_HOUR" == "00" || "$CURRENT_HOUR" == "06" || "$CURRENT_HOUR" == "12" || "$CURRENT_HOUR" == "18" ]]; then
-            echo "📥 开始强制更新规则..."
-            python3 split_and_check_16.py --force-update
-            echo "✅ 规则强制更新完成"
-          else
-            echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
-
-      - name: ✅ 初始化 dist 文件夹和计数器 & retry_rules.txt & hash_list.bin
+      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & hash_list.bin
         run: |
           mkdir -p dist logs tmp
           chmod -R 777 dist logs tmp
@@ -85,45 +92,29 @@ jobs:
             echo "ℹ️ retry_rules.txt 已存在"
           fi
 
-          # hash_list.bin（仅在 runner 本地使用，不推送）
-          python3 - << 'EOF'
-import os, pickle
-
-hash_file = 'dist/hash_list.bin'
-needs_create = False
-
-if not os.path.exists(hash_file):
-    needs_create = True
-else:
-    try:
-        with open(hash_file,'rb') as f:
-            data = pickle.load(f)
-        if not isinstance(data, list):
-            needs_create = True
-    except Exception:
-        needs_create = True
-
-if needs_create:
-    os.makedirs('dist', exist_ok=True)
-    with open(hash_file,'wb') as f:
-        pickle.dump([], f)
-    print("✅ hash_list.bin 不存在或非法 → 已生成空列表")
-else:
-    print("ℹ️ hash_list.bin 已存在且内容正常 → 保持原样")
-EOF
-
+          # hash_list.bin（只生成一次，空列表）
+          python3 -c "import pickle, os; os.makedirs('dist', exist_ok=True); pickle.dump([], open('dist/hash_list.bin','wb'))"
+          echo "✅ hash_list.bin 已生成（空列表）"
           head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
+
+      - name: ✅ 定时强制更新规则（每6小时）
+        run: |
+          BJ_TIME=$(date -u -d '+8 hour' +"%Y-%m-%d %H:%M")
+          CURRENT_HOUR=$(date -u -d '+8 hour' +"%H")
+          echo "🕒 当前北京时间: $BJ_TIME"
+          if [[ "$CURRENT_HOUR" == "00" || "$CURRENT_HOUR" == "06" || "$CURRENT_HOUR" == "12" || "$CURRENT_HOUR" == "18" ]]; then
+            python3 split_and_check_16.py --force-update
+          else
+            echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
 
       - name: ✅ 确保规则文件与分片存在
         run: |
           if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
+            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 已存在"
           else
-            echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
-          fi
 
-      - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
+      - name: ✅ 分片检测 & DNS 验证
         id: detect
         run: |
           LAST_PART_FILE="tmp/last_part.txt"
@@ -140,7 +131,6 @@ EOF
           fi
           echo "$PART" > "$LAST_PART_FILE"
           echo "part=$PART" >> $GITHUB_OUTPUT
-          echo "💻 本次处理分片: $PART"
           python3 split_and_check_16.py --part "$PART" | tee logs/split_check_part_${PART}.log || true
 
       - name: ✅ 上传日志
@@ -161,15 +151,12 @@ EOF
           if [ -f logs/split_check_part_${PART}.log ]; then
             STATS=$(grep "COMMIT_STATS" logs/split_check_part_${PART}.log | tail -n1 | sed 's/COMMIT_STATS: //')
           else
-            echo "ℹ️ 日志文件不存在"
             STATS="无日志"
           fi
-          echo "📦 准备提交文件:"
-          ls -l dist || echo "⚠ dist 不存在"
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-          git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化，无需提交"
-          git pull --rebase origin main || echo "⚠ pull失败（忽略）"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
+          git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化"
+          git pull --rebase origin main || echo "⚠ pull失败"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败"
           set -e
