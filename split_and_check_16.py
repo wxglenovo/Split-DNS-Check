@@ -12,7 +12,7 @@ import hashlib
 import pickle
 
 # ===============================
-# 配置区（Config）
+# 配置区
 # ===============================
 URLS_TXT = "urls.txt"
 TMP_DIR = "tmp"
@@ -34,7 +34,7 @@ os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)
 
 # ===============================
-# 文件确保函数（写入空 msgpack dict）
+# 文件初始化
 # ===============================
 def ensure_bin_file(path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -51,16 +51,15 @@ if not os.path.exists(RETRY_FILE):
     open(RETRY_FILE, "w", encoding="utf-8").close()
 
 # ===============================
-# 二进制读取/写入（msgpack）
+# 二进制读取/写入
 # ===============================
 def load_bin(path):
     if os.path.exists(path):
         try:
-            with open(path, "rb") as f:
-                raw = f.read()
-                if not raw:
-                    return {}
-                return msgpack.unpackb(raw, raw=False)
+            raw = open(path, "rb").read()
+            if not raw:
+                return {}
+            return msgpack.unpackb(raw, raw=False)
         except Exception as e:
             print(f"⚠ 读取 {path} 错误: {e}")
             return {}
@@ -74,7 +73,61 @@ def save_bin(path, data):
         print(f"⚠ 保存 {path} 错误: {e}")
 
 # ===============================
-# 哈希列表（pickle）
+# DNS 验证单条规则
+# ===============================
+def check_domain(rule):
+    resolver = dns.resolver.Resolver()
+    resolver.timeout = DNS_TIMEOUT
+    resolver.lifetime = DNS_TIMEOUT
+    domain = rule.lstrip("|").split("^")[0].replace("*", "")
+    if not domain:
+        return None
+    try:
+        resolver.resolve(domain)
+        return rule
+    except Exception:
+        return None
+
+# ===============================
+# 下载并生成合并规则及分片
+# ===============================
+def download_all_sources():
+    if not os.path.exists(URLS_TXT):
+        print("❌ urls.txt 不存在")
+        return []
+
+    all_rules = []
+    with open(URLS_TXT, "r", encoding="utf-8") as f:
+        urls = [u.strip() for u in f if u.strip()]
+
+    for url in urls:
+        try:
+            r = requests.get(url, timeout=20)
+            r.raise_for_status()
+            new_rules = [line.strip() for line in r.text.splitlines() if line.strip()]
+            all_rules.extend(new_rules)
+        except Exception as e:
+            print(f"⚠ 下载失败 {url}: {e}")
+
+    all_rules = sorted(set(all_rules))
+    with open(MASTER_RULE, "w", encoding="utf-8") as f:
+        f.write("\n".join(all_rules))
+    print(f"✅ 合并规则写入 {MASTER_RULE}，共 {len(all_rules)} 条")
+
+    # 分片
+    os.makedirs(TMP_DIR, exist_ok=True)
+    part_size = (len(all_rules) + PARTS - 1) // PARTS
+    for i in range(PARTS):
+        part_rules = all_rules[i*part_size:(i+1)*part_size]
+        part_file = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
+        with open(part_file, "w", encoding="utf-8") as f:
+            f.write("\n".join(part_rules))
+        print(f"⏱ 分片 {i+1} 写入 {len(part_rules)} 条规则 -> {part_file}")
+
+    return all_rules
+
+# ===============================
+# 哈希列表存取
 # ===============================
 def save_hash_list(hashes, filename):
     os.makedirs(os.path.dirname(filename), exist_ok=True)
@@ -96,41 +149,8 @@ def load_hash_list(filename):
     return {}
 
 # ===============================
-# 下载所有规则
+# DNS 验证分片
 # ===============================
-def load_all_remote_rules():
-    all_rules = []
-    if not os.path.exists(URLS_TXT):
-        print("❌ urls.txt 不存在")
-        return all_rules
-    with open(URLS_TXT, "r", encoding="utf-8") as f:
-        urls = [u.strip() for u in f if u.strip()]
-    for url in urls:
-        try:
-            r = requests.get(url, timeout=20)
-            r.raise_for_status()
-            lines = [line.strip() for line in r.text.splitlines() if line.strip()]
-            all_rules.extend(lines)
-        except Exception as e:
-            print(f"⚠ 下载失败 {url}: {e}")
-    return all_rules
-
-# ===============================
-# DNS 验证
-# ===============================
-def check_domain(rule):
-    resolver = dns.resolver.Resolver()
-    resolver.timeout = DNS_TIMEOUT
-    resolver.lifetime = DNS_TIMEOUT
-    domain = rule.lstrip("|").split("^")[0].replace("*", "")
-    if not domain:
-        return None
-    try:
-        resolver.resolve(domain)
-        return rule
-    except Exception:
-        return None
-
 def dns_validate(rules, part):
     valid_rules = []
     total_rules = len(rules)
@@ -139,14 +159,18 @@ def dns_validate(rules, part):
         futures = {executor.submit(check_domain, r): r for r in rules}
         completed = 0
         for future in as_completed(futures):
-            res = future.result()
+            res = None
+            try:
+                res = future.result()
+            except Exception:
+                pass
             if res:
                 valid_rules.append(res)
             completed += 1
             if completed % DNS_BATCH_SIZE == 0 or completed == total_rules:
                 elapsed = time.time() - start_time
-                speed = completed / elapsed if elapsed > 0 else 0
-                eta = (total_rules - completed) / speed if speed > 0 else 0
+                speed = completed / elapsed if elapsed else 0
+                eta = (total_rules - completed) / speed if speed else 0
                 print(f"✅ 已验证 {completed}/{total_rules} 条 | 有效 {len(valid_rules)} 条 | 速度 {speed:.1f}/秒 | 预计完成 {eta:.1f}s")
     return valid_rules
 
@@ -156,7 +180,7 @@ def dns_validate(rules, part):
 def update_not_written_counter(part_num, valid_rules, all_rules):
     part_key = f"validated_part_{part_num}"
     counter = load_bin(NOT_WRITTEN_FILE)
-    for i in range(1, PARTS+1):
+    for i in range(1, PARTS + 1):
         counter.setdefault(f"validated_part_{i}", {})
     validated_file = os.path.join(DIST_DIR, f"{part_key}.txt")
     existing_rules = set(open(validated_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(validated_file) else set()
@@ -178,10 +202,7 @@ def update_not_written_counter(part_num, valid_rules, all_rules):
 
     to_retry = [r for r in existing_rules if part_counter.get(r, 0) <= 0]
     if to_retry:
-        existing_retry = set()
-        if os.path.exists(RETRY_FILE):
-            with open(RETRY_FILE, "r", encoding="utf-8") as rf:
-                existing_retry = set([l.strip() for l in rf if l.strip()])
+        existing_retry = set(open(RETRY_FILE, "r", encoding="utf-8").read().splitlines()) if os.path.exists(RETRY_FILE) else set()
         new_retry = [r for r in to_retry if r not in existing_retry]
         if new_retry:
             with open(RETRY_FILE, "a", encoding="utf-8") as rf:
@@ -200,33 +221,26 @@ def update_not_written_counter(part_num, valid_rules, all_rules):
     return len(to_retry)
 
 # ===============================
-# 分片验证（四参数版）
+# process_part
 # ===============================
 def process_part(part, all_rules, hash_list, delete_counter):
     part = int(part)
     part_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
     if not os.path.exists(part_file):
-        print(f"⚠ 分片 {part} 缺失，重新拉取规则…")
-        download_all_sources()
-    if not os.path.exists(part_file):
-        print("❌ 分片仍不存在，终止")
-        return
+        print(f"⚠ 分片 {part} 缺失，自动拉取")
+        all_rules = download_all_sources()
 
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines() if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
-    # DNS 验证
     rules_to_validate = [r for r in lines if int(delete_counter.get(r, 4)) < 7]
-    retry_rules = []
-    if os.path.exists(RETRY_FILE):
-        with open(RETRY_FILE, "r", encoding="utf-8") as rf:
-            retry_rules = [r.strip() for r in rf if r.strip()]
-        if retry_rules:
-            print(f"🔁 将 {len(retry_rules)} 条 retry_rules 插入分片顶部")
-            for r in reversed(retry_rules):
-                if r not in rules_to_validate:
-                    rules_to_validate.insert(0, r)
-            open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
+    for r in lines:
+        if int(delete_counter.get(r, 4)) >= 7:
+            delete_counter[r] += 1
+
+    retry_rules = set(open(RETRY_FILE, "r", encoding="utf-8").read().splitlines()) if os.path.exists(RETRY_FILE) else set()
+    rules_to_validate = list(retry_rules) + [r for r in rules_to_validate if r not in retry_rules]
+    open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
 
     valid = set(dns_validate(rules_to_validate, part))
     added_count = 0
@@ -239,17 +253,16 @@ def process_part(part, all_rules, hash_list, delete_counter):
             added_count += 1
         else:
             delete_counter[r] = int(delete_counter.get(r, 0)) + 1
-            fc = min(int(delete_counter[r]), WRITE_COUNTER_MAX)
+            fc = min(delete_counter[r], WRITE_COUNTER_MAX)
             failure_counts[fc] = failure_counts.get(fc, 0) + 1
-            if delete_counter[r] <= 0:
-                new_retry_rules.append(r)
             if delete_counter[r] >= DELETE_THRESHOLD and r in valid:
                 valid.discard(r)
+            if delete_counter[r] <= 0:
+                new_retry_rules.append(r)
 
     if new_retry_rules:
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
-            for r in new_retry_rules:
-                rf.write(r + "\n")
+            rf.write("\n".join(new_retry_rules) + "\n")
         print(f"🔥 {len(new_retry_rules)} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry_rules)} 条）")
 
     save_bin(DELETE_COUNTER_FILE, delete_counter)
@@ -267,33 +280,31 @@ if __name__ == "__main__":
     parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
     args = parser.parse_args()
 
-    # hash_list
-    if os.path.exists(HASH_LIST_FILE):
-        try:
-            hash_list = load_hash_list(HASH_LIST_FILE)
-        except:
-            print("⚠ hash_list.bin 损坏，重建空表")
-            hash_list = {}
-            save_hash_list(hash_list, HASH_LIST_FILE)
-    else:
+    # 初始化 hash_list
+    try:
+        hash_list = load_hash_list(HASH_LIST_FILE)
+    except:
+        print("⚠ hash_list.bin 损坏，重建空表")
         hash_list = {}
-        save_hash_list(hash_list, HASH_LIST_FILE)
+        save_bin(HASH_LIST_FILE, hash_list)
 
-    # delete_counter
-    delete_counter = load_bin(DELETE_COUNTER_FILE)
-    if not isinstance(delete_counter, dict):
+    # 初始化 delete_counter
+    try:
+        delete_counter = load_bin(DELETE_COUNTER_FILE)
+    except:
         print("⚠ delete_counter.bin 损坏，重建空表")
         delete_counter = {}
         save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # all_rules
-    all_rules = load_all_remote_rules()
-
+    # 下载规则源 / 分片
     if args.force_update or not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
-        download_all_sources()
-        all_rules = load_all_remote_rules()
+        all_rules = download_all_sources()
+    else:
+        with open(MASTER_RULE, "r", encoding="utf-8") as f:
+            all_rules = [l.strip() for l in f if l.strip()]
 
+    # 执行分片验证
     if args.part:
         process_part(int(args.part), all_rules, hash_list, delete_counter)
     else:
