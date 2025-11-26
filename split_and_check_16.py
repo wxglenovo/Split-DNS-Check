@@ -124,10 +124,10 @@ def download_all_sources():
     下载所有规则源，合并规则，过滤并更新删除计数
     逻辑：
       - 新规则 delete_counter = 4
-      - 只要 delete_counter >=7 → delete_counter +1 ，过滤掉，不进入验证
+      - delete_counter >=7 → delete_counter +1 ，过滤掉，不进入验证
       - 在 all_rules 中且 delete_counter>=24 → 重置为6
       - 不在 all_rules 中且 delete_counter>=28 → 删除记录
-    注意：**不在此处处理 retry_rules.txt**，重试文件由 process_part() 负责在执行分片时加入验证。
+    注意：retry_rules.txt 不在此处理
     """
     if not os.path.exists(URLS_TXT):
         print("❌ urls.txt 不存在")
@@ -162,7 +162,7 @@ def download_all_sources():
     for rule, cnt in delete_counter.items():
         cnt = int(cnt)
         if cnt >= 7:
-            cnt += 1  # 只要 >=7 就 +1
+            cnt += 1  # >=7 就 +1
             if rule in all_rules_set and cnt >= 24:
                 cnt = WRITE_COUNTER_MAX
                 reset_rules.append(rule)
@@ -175,7 +175,8 @@ def download_all_sources():
                 cnt = WRITE_COUNTER_MAX
                 reset_rules.append(rule)
             updated_delete_counter[rule] = cnt
-            filtered_rules.append(rule)  # cnt <7 才进入验证
+            if cnt < 7:
+                filtered_rules.append(rule)  # cnt <7 才进入验证
 
     # 处理 all_rules 中的新规则
     for rule in all_rules:
@@ -211,7 +212,6 @@ def download_all_sources():
     # 切分验证规则（不包含 retry_rules）
     split_parts(filtered_rules, updated_delete_counter)
     return True
-
 
 # ===============================
 # 分片 + 负载均衡优化
