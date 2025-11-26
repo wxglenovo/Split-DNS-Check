@@ -502,7 +502,7 @@ def process_part(part, all_rules, hash_list, delete_counter):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--part", help="验证指定分片 1~16")
-    parser.add_argument("--force-update", action="true", help="强制重新下载规则源并切片")
+    parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
     args = parser.parse_args()
 
     # 载入 hash_list
@@ -528,7 +528,7 @@ if __name__ == "__main__":
     # 全量规则 all_rules
     all_rules = load_all_remote_rules()
 
-    if args.force_update or not os.path.exists(MASTER_RULE):
+    if args.force_update or not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
         download_all_sources()
         all_rules = load_all_remote_rules()
