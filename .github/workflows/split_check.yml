@@ -68,29 +68,32 @@ jobs:
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
 
-      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & 
+            - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
+          set -e
+
+          # 创建文件夹并设置权限
           mkdir -p dist logs tmp
           chmod -R 777 dist logs tmp
           echo "📁 dist/logs/tmp 文件夹已创建并设置权限"
 
-          # delete_counter.bin / not_written_counter.bin
+          # 初始化 delete_counter.bin 和 not_written_counter.bin
           for f in delete_counter.bin not_written_counter.bin; do
             if [ ! -f "dist/$f" ]; then
-              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
+              python3 -c "import msgpack; msgpack.dump({}, open('dist/$f','wb'), use_bin_type=True)"
               echo "✅ 已创建 $f"
             else
               echo "ℹ️ $f 已存在"
             fi
           done
 
-          # retry_rules.txt
+          # 初始化 retry_rules.txt
           if [ ! -f dist/retry_rules.txt ]; then
             touch dist/retry_rules.txt
             echo "✅ 已创建 retry_rules.txt"
           else
-            echo "ℹ️ retry_rules.txt 已存在"          fi
-
+            echo "ℹ️ retry_rules.txt 已存在"
+          fi
          
       - name: ✅ 定时强制更新规则（每6小时）
         run: |
