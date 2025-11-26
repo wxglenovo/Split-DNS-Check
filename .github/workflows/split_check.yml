@@ -20,58 +20,48 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      TOTAL_PARTS: 16
       PYTHONUNBUFFERED: 1
+      TOTAL_PARTS: 16
 
     steps:
-      - name: ✅ 拉取代码库
+      - name: 拉取代码库
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: ✅ 设置 Python 环境
+      - name: 设置 Python 环境
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
-      - name: ✅ 安装依赖
+      - name: 安装依赖
         run: pip install --upgrade requests dnspython msgpack
 
-      - name: ✅ 初始化 dist/tmp/logs 文件夹 & 二进制计数器
+      - name: 初始化 dist 文件夹和二进制计数器
         run: |
-          mkdir -p dist tmp logs
-          chmod -R 777 dist
-          for f in delete_counter.bin not_written_counter.bin hash_list.bin; do
-            if [ ! -f "dist/$f" ]; then
-              python3 - <<EOF
-import msgpack, os
-os.makedirs('dist', exist_ok=True)
-if '$f' == 'hash_list.bin':
-    msgpack.packb({}, use_bin_type=True, file=open('dist/hash_list.bin','wb'))
-else:
-    msgpack.packb({}, use_bin_type=True, file=open(f'dist/{f}','wb'))
+          mkdir -p dist logs tmp
+          chmod -R 777 dist/
+          python3 - <<'EOF'
+import os, pickle
+for f in ["delete_counter.bin","not_written_counter.bin","hash_list.bin"]:
+    path = os.path.join("dist", f)
+    if not os.path.exists(path):
+        pickle.dump({}, open(path,'wb'))
+for f in ["retry_rules.txt"]:
+    path = os.path.join("dist", f)
+    if not os.path.exists(path):
+        open(path,'w', encoding='utf-8').close()
 EOF
-              echo "✅ 已创建 $f"
-            else
-              echo "ℹ️ $f 已存在"
-            fi
-          done
-          if [ ! -f dist/retry_rules.txt ]; then
-            touch dist/retry_rules.txt
-            echo "✅ 已创建 retry_rules.txt"
-          else
-            echo "ℹ️ retry_rules.txt 已存在"
-          fi
 
-      - name: ✅ 确保规则文件与分片存在
+      - name: 确保规则文件与分片存在
         run: |
-          if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在"
-          else
+          if [ ! -f "merged_rules.txt" ] || [ ! -f "tmp/part_01.txt" ]; then
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
+          else
+            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在"
 
-      - name: ✅ 分片检测 & DNS 验证
+      - name: 分片检测 & DNS 验证
         id: detect
         run: |
           LAST_PART_FILE="tmp/last_part.txt"
@@ -91,24 +81,25 @@ EOF
           echo "💻 本次处理分片: $PART"
           python3 split_and_check_16.py --part "$PART" | tee logs/split_check_part_${PART}.log || true
 
-      - name: ✅ 上传日志
+      - name: 上传日志
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: dns-log-part-${{ steps.detect.outputs.part }}
           path: logs/
           if-no-files-found: warn
-          retention-days: 14
 
-      - name: ✅ 提交 & 推送变更
+      - name: 提交并推送变更
         continue-on-error: true
+        env:
+          PART: ${{ steps.detect.outputs.part }}
         run: |
           set +e
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          PART="${{ steps.detect.outputs.part }}"
-          git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin dist/hash_list.bin merged_rules.txt dist/retry_rules.txt dist/validated_part_*.txt 2>/dev/null || true
-          git commit -m "🤖 分片 $PART 自动更新" || echo "ℹ️ 无变化，无需提交"
+          git add tmp/last_part.txt dist/*.bin dist/retry_rules.txt || true
+          git add dist/validated_part_*.txt 2>/dev/null || true
+          git commit -m "🤖 分片 $PART | 自动提交" || echo "ℹ️ 无变化，无需提交"
           git pull --rebase origin main || echo "⚠ pull失败（忽略）"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
           set -e
