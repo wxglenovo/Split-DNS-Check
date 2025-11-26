@@ -106,14 +106,16 @@ jobs:
             python3 split_and_check_16.py --force-update
           else
             echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
-
+          fi
+          
       - name: ✅ 确保规则文件与分片存在
         run: |
           if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
             echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 已存在"
           else
             python3 split_and_check_16.py --force-update
-
+          fi
+          
       - name: ✅ 分片检测 & DNS 验证
         id: detect
         run: |
