@@ -68,7 +68,7 @@ jobs:
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
 
-      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & hash_list.bin
+      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt & 
         run: |
           mkdir -p dist logs tmp
           chmod -R 777 dist logs tmp
@@ -89,14 +89,9 @@ jobs:
             touch dist/retry_rules.txt
             echo "✅ 已创建 retry_rules.txt"
           else
-            echo "ℹ️ retry_rules.txt 已存在"
-          fi
+            echo "ℹ️ retry_rules.txt 已存在"          fi
 
-          # hash_list.bin（只生成一次，空列表）
-          python3 -c "import pickle, os; os.makedirs('dist', exist_ok=True); pickle.dump([], open('dist/hash_list.bin','wb'))"
-          echo "✅ hash_list.bin 已生成（空列表）"
-          head -n 5 dist/retry_rules.txt || echo "⚠ 文件为空"
-
+         
       - name: ✅ 定时强制更新规则（每6小时）
         run: |
           BJ_TIME=$(date -u -d '+8 hour' +"%Y-%m-%d %H:%M")
