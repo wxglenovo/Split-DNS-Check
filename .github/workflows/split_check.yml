@@ -83,7 +83,8 @@ jobs:
           else
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
-
+          fi
+          
       - name: ✅ 分片检测 & DNS 验证
         id: detect
         run: |
