@@ -43,7 +43,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           echo "💻 当前 Git 配置："
-          git config --global --list
+          git config --global --list       
+          
+      - name: ✅ 打印 .bin 文件统计
+        run: python3 scripts/print_bin_stats.py
 
       - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
