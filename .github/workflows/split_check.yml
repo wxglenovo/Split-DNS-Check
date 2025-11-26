@@ -120,6 +120,13 @@ jobs:
             echo "✅ 规则强制更新完成"
           else
             echo "ℹ️ 当前时间不满足 6 小时间隔，跳过强制更新"
+          fi
+    
+      - name: ✅ 强制生成空 hash_list.bin   # ❌ 这里多了缩进，会被 shell 当成命令
+        run: |
+            mkdir -p dist
+            python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
+            echo "✅ hash_list.bin 已强制创建为空列表"
 
       - name: ✅ 确保规则文件与分片存在
         run: |
