@@ -46,7 +46,7 @@ jobs:
           echo "💻 当前 Git 配置："
           git config --global --list
 
-      - name: ✅ 初始化 dist 文件夹和计数器
+      - name: ✅ 初始化 dist/logs/tmp 文件夹和计数器
         run: |
           mkdir -p dist logs tmp
           chmod -R 777 dist/
@@ -63,62 +63,47 @@ jobs:
             echo "✅ 已创建 retry_rules.txt"
           else
             echo "ℹ️ retry_rules.txt 已存在"
-
-      - name: ✅ 确保规则文件与分片存在
-        run: |
-          if [ ! -f "merged_rules.txt" ]; then
-            touch merged_rules.txt
-            echo "⚠ merged_rules.txt 不存在，已创建空文件"
           fi
-          if [ ! -f "tmp/part_01.txt" ]; then
-            mkdir -p tmp
-            touch tmp/part_01.txt
-            echo "⚠ tmp/part_01.txt 不存在，已创建空文件"
-          fi
-          echo "ℹ️ 文件检查完成"
 
-      - name: ✅ 增量生成 hash_list.bin（完全容错）
+      - name: ✅ 增量生成 hash_list.bin（保证生成）
         run: |
-          python3 - <<'PYTHON_EOF'
+          python3 -c "
 import os, pickle, hashlib
-
 rules_file='merged_rules.txt'
 hash_file='dist/hash_list.bin'
-
-# 创建 hash_list.bin 空文件（如果不存在或损坏）
 if not os.path.exists(hash_file):
     pickle.dump([], open(hash_file,'wb'))
     print('⚠ hash_list.bin 不存在，已创建空文件')
-
-# 尝试读取已有 hash
 try:
     existing_hashes = set(pickle.load(open(hash_file,'rb')))
 except:
     existing_hashes = set()
     pickle.dump([], open(hash_file,'wb'))
     print('⚠ hash_list.bin 损坏，已重置为空')
-
-# 读取规则
 if os.path.exists(rules_file):
     with open(rules_file,'r',encoding='utf-8') as f:
         rules=f.read().splitlines()
 else:
     rules = []
     print('⚠ merged_rules.txt 不存在或为空')
-
-# 生成新增 hash
 new_hashes = [hashlib.md5(r.encode('utf-8')).hexdigest() for r in rules if hashlib.md5(r.encode('utf-8')).hexdigest() not in existing_hashes]
-
-# 合并保存
 total_hashes = list(existing_hashes) + new_hashes
 pickle.dump(total_hashes, open(hash_file,'wb'))
 print(f'✅ hash_list.bin 已更新，新增 {len(new_hashes)} 条规则，总计 {len(total_hashes)} 条')
-PYTHON_EOF
+"
 
-      - name: ✅ hash_list.bin 预览
-        run: python3 -c "import pickle; print(pickle.load(open('dist/hash_list.bin','rb'))[:5])"
+      - name: ✅ 打印 .bin 文件统计
+        run: python3 scripts/print_bin_stats.py
 
-      - name: ✅ 分片检测 & DNS 验证
+      - name: ✅ 确保规则文件与分片存在
+        run: |
+          if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
+            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
+          else
+            echo "⚠ 缺失规则文件，自动拉取"
+            python3 split_and_check_16.py --force-update
+
+      - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
         id: detect
         run: |
           LAST_PART_FILE="tmp/last_part.txt"
@@ -164,7 +149,7 @@ PYTHON_EOF
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-          git commit -m '🤖 分片 $PART | $STATS' || echo 'ℹ️ 无变化，无需提交'
-          git pull --rebase origin main || echo '⚠ pull失败（忽略）'
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo '⚠ push失败（可能无变化）'
+          git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化，无需提交"
+          git pull --rebase origin main || echo "⚠ pull失败（忽略）"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
           set -e
