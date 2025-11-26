@@ -383,7 +383,6 @@ def process_part(part):
     part = int(part)
     part_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
 
-    # 分片不存在 → 下载规则源
     if not os.path.exists(part_file):
         print(f"⚠ 分片 {part} 缺失，重新拉取规则…")
         download_all_sources()
@@ -395,16 +394,14 @@ def process_part(part):
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines() if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
-    # 读取 delete_counter 并过滤 rules_to_validate
+    # delete_counter 处理
     delete_counter = load_bin(DELETE_COUNTER_FILE)
     rules_to_validate = [r for r in lines if int(delete_counter.get(r, 4)) < 7]
-
-    # 对 delete_counter >=7 的规则 +1 保持计数增长
     for r in lines:
         if int(delete_counter.get(r, 4)) >= 7:
             delete_counter[r] = int(delete_counter.get(r, 4)) + 1
 
-    # 读取 retry_rules 并插入验证队列顶部
+    # 插入 retry_rules 顶部
     retry_rules = []
     if os.path.exists(RETRY_FILE):
         with open(RETRY_FILE, "r", encoding="utf-8") as rf:
@@ -414,13 +411,12 @@ def process_part(part):
             for r in reversed(retry_rules):
                 if int(delete_counter.get(r, 4)) < 7 and r not in rules_to_validate:
                     rules_to_validate.insert(0, r)
-            # 清空 retry 文件
             open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
 
     # DNS 验证
     valid_rules = set(dns_validate(rules_to_validate, part))
     added_count = len(valid_rules)
-    
+
     # 读取原有 validated_part_X.txt
     validated_file = os.path.join(DIST_DIR, f"validated_part_{part}.txt")
     existing_rules = set()
@@ -434,15 +430,15 @@ def process_part(part):
     part_counter = counter.get(part_key, {})
     counter.setdefault(part_key, part_counter)
 
-    # DNS 验证成功规则 → 重置 write_counter
+    # DNS 验证成功 → write_counter 重置
     for r in valid_rules:
         part_counter[r] = WRITE_COUNTER_MAX
 
-    # 原有规则但本次未验证成功 → write_counter 递减
+    # 原有规则未验证成功 → write_counter 递减
     for r in existing_rules - valid_rules:
         part_counter[r] = max(part_counter.get(r, WRITE_COUNTER_MAX) - 1, 0)
 
-    # write_counter <=0 的规则写入 retry_rules.txt 并从 validated_part_X.txt 移除
+    # write_counter <=0 写入 retry_rules.txt 并移除
     to_retry = [r for r in existing_rules.union(valid_rules) if part_counter.get(r, 0) <= 0]
     if to_retry:
         existing_retry = set()
@@ -459,7 +455,7 @@ def process_part(part):
             existing_rules.discard(r)
             valid_rules.discard(r)
 
-    # 最终规则 = 原有规则 + 本次 DNS 验证成功 - write_counter<=0
+    # 最终规则 = 原有规则 + 本次验证成功 - write_counter<=0
     final_rules = sorted(existing_rules.union(valid_rules))
 
     # 写回 validated_part_X.txt
@@ -470,9 +466,9 @@ def process_part(part):
     counter[part_key] = part_counter
     save_bin(NOT_WRITTEN_FILE, counter)
 
-    # 打印统计信息
-    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {len(valid_rules)}, write_counter<=0 移除 {len(to_retry)}")
-    print(f"COMMIT_STATS: 总 {total_count}, 新增 {added_count}, 删除 {deleted_validated}, 过滤 {len(rules_to_validate) - len(valid)}")
+    # 打印统计
+    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
+    print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
 
 # ===============================
 # 主入口
