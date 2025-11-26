@@ -1,4 +1,4 @@
-name: Split & DNS Check
+name: 分片 & DNS 检查
 
 on:
   schedule:
@@ -24,35 +24,42 @@ jobs:
       TOTAL_PARTS: 16
 
     steps:
-      - name: Checkout code
+      - name: 拉取代码库
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Setup Python
+      - name: 设置 Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: 安装依赖
         run: pip install --upgrade requests dnspython msgpack
 
-      - name: Initialize dist folder and bin files
+      - name: 初始化 dist 文件夹和二进制文件
         run: |
           mkdir -p dist logs tmp
-          chmod -R 777 dist/
-          python3 -c "import os,pickle; 
-for f in ['delete_counter.bin','not_written_counter.bin','hash_list.bin']:
-    path=os.path.join('dist',f)
+          chmod -R 777 dist
+          python3 - <<'EOF'
+import os, pickle
+files = ['delete_counter.bin','not_written_counter.bin','hash_list.bin']
+for f in files:
+    path = os.path.join('dist', f)
     if not os.path.exists(path):
-        pickle.dump({},open(path,'wb'))
-for f in ['retry_rules.txt']:
-    path=os.path.join('dist',f)
-    if not os.path.exists(path):
-        open(path,'w',encoding='utf-8').close()
-print('✅ dist 文件夹及必要文件初始化完成')"
+        pickle.dump({}, open(path,'wb'))
+        print(f"✅ 已创建 {f}")
+    else:
+        print(f"ℹ️ {f} 已存在")
+retry_file = os.path.join('dist','retry_rules.txt')
+if not os.path.exists(retry_file):
+    open(retry_file,'w',encoding='utf-8').close()
+    print("✅ 已创建 retry_rules.txt")
+else:
+    print("ℹ️ retry_rules.txt 已存在")
+EOF
 
-      - name: Ensure merged rules and part_01.txt
+      - name: 确保规则文件与分片存在
         run: |
           if [ ! -f "merged_rules.txt" ] || [ ! -f "tmp/part_01.txt" ]; then
             echo "⚠ 缺失规则文件，自动拉取"
@@ -60,7 +67,7 @@ print('✅ dist 文件夹及必要文件初始化完成')"
           else
             echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 已存在"
 
-      - name: DNS Check - determine part
+      - name: 分片检测 & DNS 验证
         id: detect
         run: |
           LAST_PART_FILE="tmp/last_part.txt"
@@ -80,7 +87,7 @@ print('✅ dist 文件夹及必要文件初始化完成')"
           echo "💻 本次处理分片: $PART"
           python3 split_and_check_16.py --part "$PART" | tee logs/split_check_part_${PART}.log || true
 
-      - name: Upload logs
+      - name: 上传日志
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -88,7 +95,7 @@ print('✅ dist 文件夹及必要文件初始化完成')"
           path: logs/
           if-no-files-found: warn
 
-      - name: Commit & push changes
+      - name: 提交并推送变更
         continue-on-error: true
         env:
           PART: ${{ steps.detect.outputs.part }}
