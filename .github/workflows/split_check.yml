@@ -41,8 +41,9 @@ jobs:
         run: |
           mkdir -p dist logs tmp
           chmod -R 777 dist
-          python3 - <<'EOF'
+          python3 - <<EOF
 import os, pickle
+
 files = ['delete_counter.bin','not_written_counter.bin','hash_list.bin']
 for f in files:
     path = os.path.join('dist', f)
@@ -51,6 +52,7 @@ for f in files:
         print(f"✅ 已创建 {f}")
     else:
         print(f"ℹ️ {f} 已存在")
+
 retry_file = os.path.join('dist','retry_rules.txt')
 if not os.path.exists(retry_file):
     open(retry_file,'w',encoding='utf-8').close()
