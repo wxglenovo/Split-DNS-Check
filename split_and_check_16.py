@@ -488,8 +488,7 @@ def process_part(part):
         v = int(v)
         if 1 <= v <= WRITE_COUNTER_MAX:
             counts[v] += 1
-    total_rules = sum(counts.values())
-    print(f"    ℹ️ 总规则条数: {total_rules}")
+    total_rules = sum(counts.values())    
     for i in range(1, WRITE_COUNTER_MAX + 1):
         if counts[i] > 0:
             print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
