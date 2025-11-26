@@ -109,7 +109,8 @@ print('前 5 条 hash:', total_hashes[:5])
             echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
           else
             python3 split_and_check_16.py --force-update
-
+          fi
+          
       - name: ✅ 分片检测 & DNS 验证
         id: detect
         run: |
