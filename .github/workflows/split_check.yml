@@ -45,9 +45,6 @@ jobs:
           echo "💻 当前 Git 配置："
           git config --global --list
 
-      - name: ✅ 打印 .bin 文件统计
-        run: python3 scripts/print_bin_stats.py
-
       - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
           cd $GITHUB_WORKSPACE
@@ -86,16 +83,18 @@ with open('dist/hash_list.bin','wb') as f: pickle.dump({}, f)"
 
       - name: ✅ 确保规则文件与分片存在
         run: |
+          cd $GITHUB_WORKSPACE
           if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 已存在"
+            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
           else
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
           fi
-          
-      - name: ✅ 分片检测 & DNS 验证
+
+      - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
         id: detect
         run: |
+          cd $GITHUB_WORKSPACE
           LAST_PART_FILE="tmp/last_part.txt"
           PART_INPUT="${{ github.event.inputs.part }}"
           if [ -n "$PART_INPUT" ]; then
@@ -127,34 +126,20 @@ with open('dist/hash_list.bin','wb') as f: pickle.dump({}, f)"
         env:
           PART: ${{ steps.detect.outputs.part }}
         run: |
+          cd $GITHUB_WORKSPACE
           set +e
-          # 配置 Git 用户信息（防止 Author unknown）
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          # 提取日志统计
           if [ -f logs/split_check_part_${PART}.log ]; then
             STATS=$(grep "COMMIT_STATS" logs/split_check_part_${PART}.log | tail -n1 | sed 's/COMMIT_STATS: //')
           else
+            echo "ℹ️ 日志文件不存在"
             STATS="无日志"
           fi
           echo "📦 准备提交文件:"
           ls -l dist || echo "⚠ dist 不存在"
-
-          # 添加文件
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-
-          # 提交
           git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化，无需提交"
-
-          # 安全处理远程更新
-          git fetch origin main
-          git reset --soft origin/main
-          git commit --allow-empty -m "🤖 sync with remote before push" || true
-
-          # 推送
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main || echo "⚠ push失败（可能无变化）"
-
+          git pull --rebase origin main || echo "⚠ pull失败（忽略）"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
           set -e
