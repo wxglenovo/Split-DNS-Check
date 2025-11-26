@@ -485,10 +485,35 @@ def process_part(part):
     # 保存 not_written_counter
     counter[part_key] = part_counter
     save_bin(NOT_WRITTEN_FILE, counter)
+    
+    # 统计连续失败次数
+    failure_counts = {}
+    for v in part_counter.values():
+        v = int(v)
+        if v > 1:
+            failure_counts[v] = failure_counts.get(v, 0) + 1
 
+    print("\n📊 当前分片连续失败统计:")
+    for i in range(1, WRITE_COUNTER_MAX + 1):
+        if failure_counts.get(i, 0) > 0:
+            print(f"    ⚠ 连续失败 {i}/{WRITE_COUNTER_MAX} 的规则条数: {failure_counts[i]}")
+
+    # 统计 write_counter 分布
+    counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
+    for v in part_counter.values():
+        v = int(v)
+        if 1 <= v <= WRITE_COUNTER_MAX:
+            counts[v] += 1
+    total_rules = sum(counts.values())
+    print(f"\n📊 当前分片 write_counter 规则统计: 总规则条数 {total_rules}")
+    for i in range(1, WRITE_COUNTER_MAX + 1):
+        if counts[i] > 0:
+            print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
+    print("--------------------------------------------------")
     # 打印统计
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
+  
 
 # ===============================
 # 主入口
