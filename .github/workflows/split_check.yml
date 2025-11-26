@@ -49,19 +49,16 @@ jobs:
       - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
           mkdir -p dist logs tmp
+          echo "📁 确保 dist/logs/tmp 文件夹存在"
           chmod -R 777 dist/
-          
-          # 初始化 delete_counter.bin, not_written_counter.bin
           for f in delete_counter.bin not_written_counter.bin; do
             if [ ! -f "dist/$f" ]; then
-              python3 -c "import msgpack; msgpack.dump({}, open('dist/$f','wb'))"
+              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
               echo "✅ 已创建 $f"
             else
               echo "ℹ️ $f 已存在"
             fi
           done
-
-          # 初始化 retry_rules.txt
           if [ ! -f dist/retry_rules.txt ]; then
             touch dist/retry_rules.txt
             echo "✅ 已创建 retry_rules.txt"
@@ -69,21 +66,33 @@ jobs:
             echo "ℹ️ retry_rules.txt 已存在"
           fi
 
-          # 强制删除旧的 hash_list.bin，确保生成新文件
-          if [ -f dist/hash_list.bin ]; then
-            rm -f dist/hash_list.bin
-            echo "ℹ️ 已删除旧的 hash_list.bin"
-          fi
-
       - name: ✅ 确保规则文件与分片存在
         run: |
-          if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
-          else
+          if [ ! -f "merged_rules.txt" ] || [ ! -f "tmp/part_01.txt" ]; then
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
-          fi
-          
+          else
+            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均已存在，无需拉取"
+
+      - name: ✅ 强制生成 hash_list.bin
+        run: |
+          python3 - << 'EOF'
+import os, pickle, hashlib
+rules_file = "merged_rules.txt"
+hash_file = "dist/hash_list.bin"
+if os.path.exists(rules_file):
+    with open(rules_file,"r",encoding="utf-8") as f:
+        rules = f.read().splitlines()
+    hashes = [hashlib.md5(r.encode("utf-8")).hexdigest() for r in rules]
+    pickle.dump(hashes, open(hash_file,"wb"))
+    print(f"✅ 已生成 hash_list.bin，共 {len(hashes)} 条规则")
+else:
+    print(f"⚠ {rules_file} 不存在，无法生成 hash_list.bin")
+EOF
+
+      - name: ✅ hash_list.bin 预览
+        run: python3 -c "import pickle; print(pickle.load(open('dist/hash_list.bin','rb'))[:5])"
+
       - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
         id: detect
         run: |
@@ -102,7 +111,6 @@ jobs:
           echo "$PART" > "$LAST_PART_FILE"
           echo "part=$PART" >> $GITHUB_OUTPUT
           echo "💻 本次处理分片: $PART"
-          # 确保 Python 脚本运行目录正确
           python3 split_and_check_16.py --part "$PART" | tee logs/split_check_part_${PART}.log || true
 
       - name: ✅ 上传日志
@@ -131,7 +139,6 @@ jobs:
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-          git add dist/hash_list.bin 2>/dev/null || true
           git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化，无需提交"
           git pull --rebase origin main || echo "⚠ pull失败（忽略）"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
