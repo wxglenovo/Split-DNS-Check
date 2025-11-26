@@ -214,66 +214,81 @@ def download_all_sources():
 
 
 # ===============================
-# 哈希分片 + 负载均衡优化
+# 分片 + 负载均衡优化
 # ===============================
-def save_hash_list(hashes, filename):
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-    try:
-        with open(filename, "wb") as f:
-            pickle.dump(hashes, f)
-    except Exception as e:
-        print(f"⚠ 保存哈希列表失败: {e}")
+def split_parts(all_rules, delete_counter):
+    """
+    根据现有 validated_part_X.txt 分片重新分配规则：
+      - 剔除 delete_counter >=7 的规则
+      - 优先将 delete_counter 值小的规则分配回原分片
+      - 新规则均衡分配
+      - 移动 delete_counter 大的规则到负载轻分片
+    """
+    # 读取当前每个分片的已有规则
+    part_existing = {}
+    for i in range(1, PARTS + 1):
+        f = os.path.join(DIST_DIR, f"validated_part_{i}.txt")
+        if os.path.exists(f):
+            with open(f, "r", encoding="utf-8") as ff:
+                part_existing[i] = set(l.strip() for l in ff if l.strip())
+        else:
+            part_existing[i] = set()
 
-def load_hash_list(filename):
-    if os.path.exists(filename):
-        try:
-            with open(filename, "rb") as f:
-                data = pickle.load(f)
-                if isinstance(data, dict):
-                    return data
-        except Exception as e:
-            print(f"⚠ 加载哈希列表失败: {e}")
-    return {}
+    # 过滤 delete_counter >=7 的规则
+    filtered_rules = [r for r in all_rules if int(delete_counter.get(r, 4)) < 7]
 
-def split_parts(filtered_rules, delete_counter):
-    hash_list = load_hash_list(HASH_LIST_FILE)
-    if not isinstance(hash_list, dict):
-        hash_list = {}
+    # 先把规则分为“已有分片规则”和“新规则”
+    rule_to_part = {}
+    for r in filtered_rules:
+        assigned = False
+        for i in range(1, PARTS + 1):
+            if r in part_existing[i]:
+                rule_to_part[r] = i
+                assigned = True
+                break
+        if not assigned:
+            rule_to_part[r] = None  # 新规则
 
-    for rule in filtered_rules:
-        if rule not in hash_list:
-            h = int(hashlib.sha256(rule.encode("utf-8")).hexdigest(), 16)
-            hash_list[rule] = h
+    # 初始化分片桶
+    part_buckets = {i: [] for i in range(1, PARTS + 1)}
+    part_loads = {i: len(part_existing[i]) for i in range(1, PARTS + 1)}
 
-    sorted_rules = sorted(filtered_rules, key=lambda r: hash_list.get(r, 0))
+    # 优先分配已有规则（保持原分片）
+    for r, p in rule_to_part.items():
+        if p:
+            part_buckets[p].append(r)
 
-    part_buckets = [[] for _ in range(PARTS)]
-    for idx, rule in enumerate(sorted_rules):
-        part_idx = idx % PARTS
-        part_buckets[part_idx].append(rule)
+    # 剩余新规则按负载均衡分配（delete_counter 小的优先）
+    new_rules = [r for r, p in rule_to_part.items() if p is None]
+    new_rules.sort(key=lambda r: int(delete_counter.get(r, 4)))  # delete_counter 小优先
 
+    for r in new_rules:
+        # 找负载最小的分片
+        target = min(part_loads.items(), key=lambda x: x[1])[0]
+        part_buckets[target].append(r)
+        part_loads[target] += 1
+
+    # 对 delete_counter 大的规则进行负载移动优化
+    for i in range(1, PARTS + 1):
+        bucket = part_buckets[i]
+        # 按 delete_counter 从大到小排序
+        bucket.sort(key=lambda r: int(delete_counter.get(r, 4)), reverse=True)
+        for r in bucket[:]:  # 遍历拷贝
+            if int(delete_counter.get(r, 4)) > 4:
+                # 移动到负载最轻的分片（不等于当前）
+                target = min((k for k in range(1, PARTS + 1) if k != i), key=lambda k: len(part_buckets[k]))
+                if target != i:
+                    bucket.remove(r)
+                    part_buckets[target].append(r)
+
+    # 写入 TMP_DIR/part_XX.txt
     os.makedirs(TMP_DIR, exist_ok=True)
-    for i, bucket in enumerate(part_buckets):
-        filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
+    for i in range(1, PARTS + 1):
+        filename = os.path.join(TMP_DIR, f"part_{i:02d}.txt")
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(bucket))
-        print(f"📄 分片 {i+1}: {len(bucket)} 条规则 → {filename}")
+            f.write("\n".join(sorted(part_buckets[i])))
+        print(f"📄 分片 {i}: {len(part_buckets[i])} 条规则 → {filename}")
 
-    save_hash_list(hash_list, HASH_LIST_FILE)
-
-# 负载均衡辅助函数（保留原样）
-def find_lowest_part(part_buckets):
-    lens = [len(b) for b in part_buckets]
-    return lens.index(min(lens))
-
-def balance_parts(part_buckets):
-    avg_len = sum(len(b) for b in part_buckets) // len(part_buckets)
-    for i, bucket in enumerate(part_buckets):
-        while len(bucket) > avg_len * 1.2:
-            rule = bucket.pop()
-            target = find_lowest_part(part_buckets)
-            part_buckets[target].append(rule)
-    return part_buckets
 
 # ===============================
 # DNS 验证
