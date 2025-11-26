@@ -46,24 +46,23 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           echo "💻 当前 Git 配置："
           git config --global --list
-          
-      - name: ✅ 打印 .bin 文件统计
-        run: python3 scripts/print_bin_stats.py
 
       - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
           mkdir -p dist logs tmp
           chmod -R 777 dist/
-          
+
+          # 初始化 delete_counter / not_written_counter
           for f in delete_counter.bin not_written_counter.bin; do
             if [ ! -f "dist/$f" ]; then
-              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
+              python3 -c "import msgpack; open('dist/$f','wb').write(msgpack.packb({}, use_bin_type=True))"
               echo "✅ 已创建 $f"
             else
               echo "ℹ️ $f 已存在"
             fi
           done
-          
+
+          # 初始化 retry_rules.txt
           if [ ! -f dist/retry_rules.txt ]; then
             touch dist/retry_rules.txt
             echo "✅ 已创建 retry_rules.txt"
@@ -71,9 +70,9 @@ jobs:
             echo "ℹ️ retry_rules.txt 已存在"
           fi
 
-          # 强制生成 hash_list.bin
+          # 初始化 hash_list.bin 为 list，保证兼容主脚本
           if [ ! -f dist/hash_list.bin ]; then
-            python3 -c "import pickle; pickle.dump({}, open('dist/hash_list.bin','wb'))"
+            python3 -c "import pickle; pickle.dump([], open('dist/hash_list.bin','wb'))"
             echo "✅ 已创建 hash_list.bin"
           else
             echo "ℹ️ hash_list.bin 已存在"
@@ -91,7 +90,7 @@ jobs:
             echo "⚠ 缺失规则文件或分片，自动拉取"
             python3 split_and_check_16.py --force-update
           else
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均存在，仍强制生成 hash_list.bin"
+            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 均存在，仍强制更新 hash_list.bin"
             python3 split_and_check_16.py --force-update
           fi
 
@@ -141,6 +140,7 @@ jobs:
           git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
+          git add dist/hash_list.bin || true
           git commit -m "🤖 分片 $PART | $STATS" || echo "ℹ️ 无变化，无需提交"
           git pull --rebase origin main || echo "⚠ pull失败（忽略）"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
