@@ -64,7 +64,6 @@ jobs:
             echo "✅ 已创建 retry_rules.txt"
           else
             echo "ℹ️ retry_rules.txt 已存在"
-          fi
 
       - name: ✅ 确保规则文件与分片存在
         run: |
@@ -76,10 +75,14 @@ jobs:
 
       - name: ✅ 强制生成 hash_list.bin
         run: |
-          python3 - << 'EOF'
-import os, pickle, hashlib
+          python3 - <<PYTHON
+import os
+import pickle
+import hashlib
+
 rules_file = "merged_rules.txt"
 hash_file = "dist/hash_list.bin"
+
 if os.path.exists(rules_file):
     with open(rules_file,"r",encoding="utf-8") as f:
         rules = f.read().splitlines()
@@ -88,7 +91,7 @@ if os.path.exists(rules_file):
     print(f"✅ 已生成 hash_list.bin，共 {len(hashes)} 条规则")
 else:
     print(f"⚠ {rules_file} 不存在，无法生成 hash_list.bin")
-EOF
+PYTHON
 
       - name: ✅ hash_list.bin 预览
         run: python3 -c "import pickle; print(pickle.load(open('dist/hash_list.bin','rb'))[:5])"
