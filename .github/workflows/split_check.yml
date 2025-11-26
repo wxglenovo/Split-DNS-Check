@@ -83,7 +83,8 @@ jobs:
           else
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
-
+          fi
+          
       - name: ✅ 定时强制更新规则（每6小时）
         run: |
           BJ_TIME=$(date -u -d '+8 hour' +"%Y-%m-%d %H:%M")
