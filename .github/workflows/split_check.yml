@@ -68,7 +68,7 @@ jobs:
       - name: ✅ 打印 .bin 文件统计
         run: python3 scripts/print_bin_stats.py
 
-            - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
+      - name: ✅ 初始化 dist 文件夹和二进制计数器 & retry_rules.txt
         run: |
           set -e
 
@@ -94,6 +94,7 @@ jobs:
           else
             echo "ℹ️ retry_rules.txt 已存在"
           fi
+
          
       - name: ✅ 定时强制更新规则（每6小时）
         run: |
