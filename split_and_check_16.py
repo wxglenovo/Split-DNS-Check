@@ -33,7 +33,23 @@ os.makedirs(TMP_DIR, exist_ok=True)
 os.makedirs(DIST_DIR, exist_ok=True)
 
 # ===============================
-# 二进制读取/写入 (msgpack)
+# 二进制文件初始化
+# ===============================
+def ensure_bin_file(path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    if not os.path.exists(path):
+        with open(path, "wb") as f:
+            f.write(msgpack.packb({}, use_bin_type=True))
+
+ensure_bin_file(DELETE_COUNTER_FILE)
+ensure_bin_file(NOT_WRITTEN_FILE)
+if not os.path.exists(RETRY_FILE):
+    open(RETRY_FILE, "w", encoding="utf-8").close()
+if not os.path.exists(HASH_LIST_FILE):
+    ensure_bin_file(HASH_LIST_FILE)
+
+# ===============================
+# msgpack 读写
 # ===============================
 def load_bin(path):
     if os.path.exists(path):
@@ -53,16 +69,6 @@ def save_bin(path, data):
             f.write(msgpack.packb(data, use_bin_type=True))
     except Exception as e:
         print(f"⚠ 保存 {path} 错误: {e}")
-
-# ===============================
-# 文件初始化
-# ===============================
-for f in [DELETE_COUNTER_FILE, NOT_WRITTEN_FILE]:
-    if not os.path.exists(f):
-        save_bin(f, {})
-
-if not os.path.exists(RETRY_FILE):
-    open(RETRY_FILE, "w", encoding="utf-8").close()
 
 # ===============================
 # DNS 验证单条规则
@@ -150,7 +156,8 @@ def dns_validate(rules, part):
 def update_not_written_counter(part_num, valid_rules, all_rules):
     part_key = f"validated_part_{part_num}"
     counter = load_bin(NOT_WRITTEN_FILE)
-    counter.setdefault(part_key, {})
+    for i in range(1, PARTS + 1):
+        counter.setdefault(f"validated_part_{i}", {})
     validated_file = os.path.join(DIST_DIR, f"{part_key}.txt")
     existing_rules = set(open(validated_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(validated_file) else set()
     all_rules = set(all_rules)
@@ -167,6 +174,7 @@ def update_not_written_counter(part_num, valid_rules, all_rules):
     for r in to_remove:
         existing_rules.discard(r)
         part_counter.pop(r, None)
+        print(f"❌ 删除规则 {r}（write_counter=1 且不在 all_rules）")
 
     to_retry = [r for r in existing_rules if part_counter.get(r, 0) <= 0]
     if to_retry:
@@ -175,6 +183,7 @@ def update_not_written_counter(part_num, valid_rules, all_rules):
         if new_retry:
             with open(RETRY_FILE, "a", encoding="utf-8") as rf:
                 rf.write("\n".join(new_retry) + "\n")
+        print(f"🔥 {len(to_retry)} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
         for r in to_retry:
             existing_rules.discard(r)
             part_counter.pop(r, None)
@@ -200,10 +209,10 @@ def process_part(part, all_rules, hash_list, delete_counter):
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines() if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
-    # 更新 hash_list
+    # 更新 hash_list（保存字符串 SHA256）
     for r in lines:
         if r not in hash_list:
-            hash_list[r] = int(hashlib.sha256(r.encode("utf-8")).hexdigest(), 16)
+            hash_list[r] = hashlib.sha256(r.encode("utf-8")).hexdigest()
     save_bin(HASH_LIST_FILE, hash_list)
 
     rules_to_validate = [r for r in lines if int(delete_counter.get(r, 4)) < 7]
@@ -217,6 +226,7 @@ def process_part(part, all_rules, hash_list, delete_counter):
 
     valid = set(dns_validate(rules_to_validate, part))
     added_count = 0
+    failure_counts = {}
     new_retry_rules = []
 
     for r in rules_to_validate:
@@ -225,12 +235,17 @@ def process_part(part, all_rules, hash_list, delete_counter):
             added_count += 1
         else:
             delete_counter[r] = int(delete_counter.get(r, 0)) + 1
+            fc = min(delete_counter[r], WRITE_COUNTER_MAX)
+            failure_counts[fc] = failure_counts.get(fc, 0) + 1
+            if delete_counter[r] >= DELETE_THRESHOLD and r in valid:
+                valid.discard(r)
             if delete_counter[r] <= 0:
                 new_retry_rules.append(r)
 
     if new_retry_rules:
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
             rf.write("\n".join(new_retry_rules) + "\n")
+        print(f"🔥 {len(new_retry_rules)} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry_rules)} 条）")
 
     save_bin(DELETE_COUNTER_FILE, delete_counter)
     deleted_validated = update_not_written_counter(part, list(valid), all_rules)
@@ -250,12 +265,14 @@ if __name__ == "__main__":
     # 初始化 hash_list
     hash_list = load_bin(HASH_LIST_FILE)
     if not isinstance(hash_list, dict):
+        print("⚠ hash_list.bin 损坏，重建空表")
         hash_list = {}
         save_bin(HASH_LIST_FILE, hash_list)
 
     # 初始化 delete_counter
     delete_counter = load_bin(DELETE_COUNTER_FILE)
     if not isinstance(delete_counter, dict):
+        print("⚠ delete_counter.bin 损坏，重建空表")
         delete_counter = {}
         save_bin(DELETE_COUNTER_FILE, delete_counter)
 
