@@ -29,7 +29,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          persist-credentials: true
 
       - name: ✅ 设置 Python 环境
         uses: actions/setup-python@v4
@@ -39,13 +38,14 @@ jobs:
       - name: ✅ 安装依赖
         run: pip install --upgrade requests dnspython msgpack
 
-      - name: ✅ 初始化 dist 文件夹和二进制计数器
+      - name: ✅ 初始化 dist/logs/tmp 文件夹及 .bin 文件
         run: |
           mkdir -p dist logs tmp
-          chmod -R 777 dist/
+          chmod -R 777 dist
+          
           for f in delete_counter.bin not_written_counter.bin hash_list.bin; do
             if [ ! -f "dist/$f" ]; then
-              python3 -c "import msgpack; msgpack.dump({}, open('dist/$f','wb'))" || python3 -c "import msgpack; import msgpack as m; open('dist/$f','wb').write(m.packb({}, use_bin_type=True))"
+              python3 -c "import pickle; pickle.dump({}, open('dist/$f','wb'))"
               echo "✅ 已创建 $f"
             else
               echo "ℹ️ $f 已存在"
@@ -66,14 +66,13 @@ jobs:
           else
             echo "⚠ 缺失规则文件，自动拉取"
             python3 split_and_check_16.py --force-update
-          fi
 
-
-      - name: ✅ 分片检测 & DNS 验证
+      - name: ✅ 分片检测 & DNS 验证（固定80线程，每批540条）
         id: detect
         run: |
           LAST_PART_FILE="tmp/last_part.txt"
           PART_INPUT="${{ github.event.inputs.part }}"
+          
           if [ -n "$PART_INPUT" ]; then
             PART="$PART_INPUT"
           else
@@ -84,9 +83,11 @@ jobs:
               PART=1
             fi
           fi
+
           echo "$PART" > "$LAST_PART_FILE"
           echo "part=$PART" >> $GITHUB_OUTPUT
           echo "💻 本次处理分片: $PART"
+
           python3 split_and_check_16.py --part "$PART" | tee logs/split_check_part_${PART}.log || true
 
       - name: ✅ 上传日志
@@ -103,11 +104,27 @@ jobs:
         env:
           PART: ${{ steps.detect.outputs.part }}
         run: |
-          set +e
-          git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin dist/hash_list.bin merged_rules.txt || true
+          set -e
+          # 配置 Git 用户
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+          # 添加要提交的文件
+          git add tmp/last_part.txt dist/delete_counter.bin dist/not_written_counter.bin merged_rules.txt || true
           git add dist/retry_rules.txt 2>/dev/null || true
           git add dist/validated_part_*.txt 2>/dev/null || true
-          git commit -m "🤖 分片 $PART 自动更新" || echo "ℹ️ 无变化，无需提交"
-          git pull --rebase origin main || echo "⚠ pull失败（忽略）"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
-          set -e
+
+          # 检查是否有变更
+          if git diff --cached --quiet; then
+            echo "ℹ️ 无变化，无需提交"
+          else
+            if [ -f logs/split_check_part_${PART}.log ]; then
+              STATS=$(grep "COMMIT_STATS" logs/split_check_part_${PART}.log | tail -n1 | sed 's/COMMIT_STATS: //')
+            else
+              STATS="无日志"
+            fi
+
+            git commit -m "🤖 分片 $PART | $STATS"
+            git pull --rebase origin main || echo "⚠ pull失败（忽略）"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main || echo "⚠ push失败（可能无变化）"
+          fi
