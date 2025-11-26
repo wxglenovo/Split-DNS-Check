@@ -220,9 +220,10 @@ def split_parts(all_rules, delete_counter):
     """
     根据现有 validated_part_X.txt 分片重新分配规则：
       - 剔除 delete_counter >=7 的规则
-      - 优先将 delete_counter 值小的规则分配回原分片
+      - 保留原分片 delete_counter 值小的规则
       - 新规则均衡分配
-      - 移动 delete_counter 大的规则到负载轻分片
+      - delete_counter 大的规则尽量移动到负载轻分片
+      - 最终每片数量差距 <=1
     """
     # 读取当前每个分片的已有规则
     part_existing = {}
@@ -251,44 +252,51 @@ def split_parts(all_rules, delete_counter):
 
     # 初始化分片桶
     part_buckets = {i: [] for i in range(1, PARTS + 1)}
-    part_loads = {i: len(part_existing[i]) for i in range(1, PARTS + 1)}
 
-    # 优先分配已有规则（保持原分片）
+    # 先将原有分片规则按 delete_counter 小的优先放回原分片
     for r, p in rule_to_part.items():
         if p:
-            part_buckets[p].append(r)
+            part_buckets[p].append((r, int(delete_counter.get(r, 4))))
 
-    # 剩余新规则按负载均衡分配（delete_counter 小的优先）
-    new_rules = [r for r, p in rule_to_part.items() if p is None]
-    new_rules.sort(key=lambda r: int(delete_counter.get(r, 4)))  # delete_counter 小优先
+    # 新规则按 delete_counter 小优先，分配到规则最少的分片
+    new_rules = [(r, int(delete_counter.get(r, 4))) for r, p in rule_to_part.items() if p is None]
+    new_rules.sort(key=lambda x: x[1])
+    for r, cnt in new_rules:
+        # 找最少规则的分片
+        target = min(part_buckets.items(), key=lambda x: len(x[1]))[0]
+        part_buckets[target].append((r, cnt))
 
-    for r in new_rules:
-        # 找负载最小的分片
-        target = min(part_loads.items(), key=lambda x: x[1])[0]
-        part_buckets[target].append(r)
-        part_loads[target] += 1
-
-    # 对 delete_counter 大的规则进行负载移动优化
-    for i in range(1, PARTS + 1):
-        bucket = part_buckets[i]
-        # 按 delete_counter 从大到小排序
-        bucket.sort(key=lambda r: int(delete_counter.get(r, 4)), reverse=True)
-        for r in bucket[:]:  # 遍历拷贝
-            if int(delete_counter.get(r, 4)) > 4:
-                # 移动到负载最轻的分片（不等于当前）
-                target = min((k for k in range(1, PARTS + 1) if k != i), key=lambda k: len(part_buckets[k]))
-                if target != i:
-                    bucket.remove(r)
-                    part_buckets[target].append(r)
+    # 优化 delete_counter 大的规则，尽量移动到负载轻分片
+    max_iterations = 5
+    for _ in range(max_iterations):
+        counts = [len(part_buckets[i]) for i in range(1, PARTS + 1)]
+        avg = sum(counts) / PARTS
+        moved = False
+        for i in range(1, PARTS + 1):
+            bucket = part_buckets[i]
+            # delete_counter 大到小排序
+            bucket_sorted = sorted(bucket, key=lambda x: x[1], reverse=True)
+            for r, cnt in bucket_sorted:
+                # 找最小负载分片
+                target = min(((k, len(part_buckets[k])) for k in range(1, PARTS + 1) if k != i), key=lambda x: x[1])[0]
+                if len(bucket) - 1 >= avg and len(part_buckets[target]) + 1 <= avg:
+                    bucket.remove((r, cnt))
+                    part_buckets[target].append((r, cnt))
+                    moved = True
+                    break
+            if moved:
+                break
+        if not moved:
+            break
 
     # 写入 TMP_DIR/part_XX.txt
     os.makedirs(TMP_DIR, exist_ok=True)
     for i in range(1, PARTS + 1):
         filename = os.path.join(TMP_DIR, f"part_{i:02d}.txt")
+        rules_only = [r for r, cnt in sorted(part_buckets[i], key=lambda x: x[0])]
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(sorted(part_buckets[i])))
-        print(f"📄 分片 {i}: {len(part_buckets[i])} 条规则 → {filename}")
-
+            f.write("\n".join(rules_only))
+        print(f"📄 分片 {i}: {len(rules_only)} 条规则 → {filename}")
 
 # ===============================
 # DNS 验证
