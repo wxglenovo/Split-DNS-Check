@@ -67,19 +67,19 @@ jobs:
       - name: ✅ 确保规则文件与分片存在
         run: |
           if [ ! -f "merged_rules.txt" ]; then
-            echo "⚠ merged_rules.txt 不存在，创建空文件"
             touch merged_rules.txt
+            echo "⚠ merged_rules.txt 不存在，已创建空文件"
           fi
           if [ ! -f "tmp/part_01.txt" ]; then
-            echo "⚠ tmp/part_01.txt 不存在，创建空文件"
             mkdir -p tmp
             touch tmp/part_01.txt
+            echo "⚠ tmp/part_01.txt 不存在，已创建空文件"
           fi
           echo "ℹ️ 文件检查完成"
 
       - name: ✅ 增量生成 hash_list.bin（完全容错）
         run: |
-          python3 -c "
+          python3 - <<'PYTHON_EOF'
 import os, pickle, hashlib
 
 rules_file='merged_rules.txt'
@@ -113,7 +113,7 @@ new_hashes = [hashlib.md5(r.encode('utf-8')).hexdigest() for r in rules if hashl
 total_hashes = list(existing_hashes) + new_hashes
 pickle.dump(total_hashes, open(hash_file,'wb'))
 print(f'✅ hash_list.bin 已更新，新增 {len(new_hashes)} 条规则，总计 {len(total_hashes)} 条')
-"
+PYTHON_EOF
 
       - name: ✅ hash_list.bin 预览
         run: python3 -c "import pickle; print(pickle.load(open('dist/hash_list.bin','rb'))[:5])"
@@ -146,7 +146,7 @@ print(f'✅ hash_list.bin 已更新，新增 {len(new_hashes)} 条规则，总�
           path: logs/
           if-no-files-found: warn
           retention-days: 14
-          
+
       - name: ✅ 提交并推送变更
         continue-on-error: true
         env:
