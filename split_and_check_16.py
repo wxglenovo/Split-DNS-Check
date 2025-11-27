@@ -527,9 +527,6 @@ def process_part(part):
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
 
-
-
-
 # ===============================
 # 主入口
 # ===============================
