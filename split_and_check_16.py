@@ -121,9 +121,8 @@ def download_all_sources():
     下载所有规则源，合并规则，过滤并更新删除计数 delete_counter
 
     逻辑：
-      - 新规则 delete_counter = 4，加入验证队列
-      - delete_counter >=97 的规则：
-            下载阶段：delete_counter +=1，不进入验证
+      - 新规则 delete_counter = 64，加入验证队列
+      - delete_counter >=97 的规则不进入验证
       - delete_counter >=114 且在 all_rules → 重置为80，如果 reset 后 <97，加入验证队列
       - delete_counter >=118 且不在 all_rules → 删除记录
       - retry_rules.txt 不在此处理
@@ -159,6 +158,7 @@ def download_all_sources():
     reset_rules = set()
     removed_rules = set()
     skipped_rules = []
+
     updated_delete_counter = {}
 
     # ===== 处理旧规则 =====
@@ -175,9 +175,8 @@ def download_all_sources():
             cnt = 80
             reset_rules.add(rule)
 
-        # ③ delete_counter >=97 → 跳过验证，并 +1
+        # ③ delete_counter >=97 → 不进入验证
         if cnt >= 97:
-            cnt += 1
             skipped_rules.append(rule)
         else:
             # delete_counter <97 → 进入验证队列
@@ -188,31 +187,27 @@ def download_all_sources():
     # ===== 处理新规则 =====
     for rule in all_rules:
         if rule not in updated_delete_counter:
-            updated_delete_counter[rule] = 4
+            updated_delete_counter[rule] = 64
             rules_to_validate.add(rule)
 
     # 保存 delete_counter
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
 
     # ===== 输出信息 =====
-
-    # 重置计数输出
     if reset_rules:
         for rule in list(reset_rules)[:20]:
             print(f"🔁 删除计数达到114，重置为 80：{rule}")
         print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥114，已重置为 80")
 
-    # 删除的规则
     if removed_rules:
         for rule in list(removed_rules)[:20]:
-            print(f"🚮 删除计数达到118，移动除录：{rule}")
+            print(f"🚮 删除计数达到118，移除规则：{rule}")
         print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥118 且不在源文件，已移除")
 
-    # 跳过的规则
     if skipped_rules:
-        for rule in skipped_rules[:20]:
-            print(f"⏭ 删除计数达到97，跳过验证：{rule}")
-        print(f"⏩ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥97）")
+        for rule in list(skipped_rules)[:20]:
+            print(f"⏭ 删除计数≥97，跳过验证：{rule}")
+        print(f"⏩ 共 {len(skipped_rules)} 条规则 delete_counter≥97 被跳过验证")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
