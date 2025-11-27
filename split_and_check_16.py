@@ -350,128 +350,73 @@ def dns_validate(rules, part):
 # ===============================
 # 更新 not_written_counter
 # ===============================
-def update_not_written_counter(
-        part_num,
-        dns_success_rules,
-        dns_failed_rules,
-        all_rules,
-        validated_file,
-        not_written_counter_file,
-        delete_counter_file,
-        retry_rules_file):
+def update_not_written_counter(part_num, valid_rules, all_rules):
+    """
+    更新 not_written_counter 并同步 validated_part_X 文件：
+    逻辑：
+      1️⃣ DNS 成功规则 → write_counter 重置为 6
+      2️⃣ 当前分片已有 write_counter 的规则但不在 DNS 成功列表 → write_counter -1
+      3️⃣ write_counter <=1 且规则不在 all_rules → 从 validated_part_X.txt 删除，同时从 not_written_counter.bin 移除
+      4️⃣ write_counter <=0 → 写入 retry_rules.txt 并从 validated_part_X.txt、not_written_counter.bin 移除
+    """
+    part_key = f"validated_part_{part_num}"
+    counter = load_bin(NOT_WRITTEN_FILE)
 
-    # ---------------------------
-    # 1. 加载旧数据
-    # ---------------------------
-    if os.path.exists(not_written_counter_file):
-        with open(not_written_counter_file, "rb") as f:
-            not_written_counter = msgpack.unpack(f, strict_map_key=False)
-    else:
-        not_written_counter = {}
+    # 初始化所有分片
+    for i in range(1, PARTS + 1):
+        counter.setdefault(f"validated_part_{i}", {})
 
-    if os.path.exists(delete_counter_file):
-        with open(delete_counter_file, "rb") as f:
-            delete_counter = msgpack.unpack(f, strict_map_key=False)
-    else:
-        delete_counter = {}
+    validated_file = os.path.join(DIST_DIR, f"{part_key}.txt")
+    existing_rules = set(open(validated_file, "r", encoding="utf-8").read().splitlines()) if os.path.exists(validated_file) else set()
+    all_rules = set(all_rules)
+    part_counter = counter.get(part_key, {})
 
-    # validated rules（上一次成功记录）
-    old_validated = []
-    if os.path.exists(validated_file):
-        with open(validated_file, "r", encoding="utf-8") as f:
-            old_validated = [line.strip() for line in f if line.strip()]
+    valid_rules_set = set(valid_rules)
 
-    new_validated = []               # 本次新的 validated_part_X.txt
-    retry_output = []                # 本次 retry_rules 输出内容
+    # 1️⃣ DNS 成功规则 → write_counter 重置为 6
+    for r in valid_rules_set:
+        part_counter[r] = WRITE_COUNTER_MAX
 
-    dns_success_set = set(dns_success_rules)
-    all_rules_set   = set(all_rules)
+    # 2️⃣ 当前分片已有 write_counter 规则但不在 DNS 成功列表 → write_counter -1
+    for r in existing_rules - valid_rules_set:
+        part_counter[r] = max(part_counter.get(r, WRITE_COUNTER_MAX) - 1, 0)
 
-    # ---------------------------
-    # 2. 先处理 A 类 —— DNS 成功规则
-    # ---------------------------
-    for rule in dns_success_rules:
-        # write_counter = 6
-        not_written_counter[rule] = 6
+    # 3️⃣ write_counter <=1 且不在 all_rules → 删除
+    to_remove = [r for r in existing_rules if part_counter.get(r, 0) <= 1 and r not in all_rules]
+    for r in to_remove:
+        print(f"❌ 删除规则 {r}（write_counter <=1 且不在 all_rules）")
+        existing_rules.discard(r)
+        part_counter.pop(r, None)
 
-        # delete_counter = 0
-        delete_counter[rule] = 0
+    # 4️⃣ write_counter <=0 → 写入 retry_rules.txt 并从 validated_part_X.txt 删除
+    to_retry = [r for r in existing_rules.union(valid_rules_set) if part_counter.get(r, 0) <= 0]
+    if to_retry:
+        # 去重追加 retry_rules
+        existing_retry = set()
+        if os.path.exists(RETRY_FILE):
+            with open(RETRY_FILE, "r", encoding="utf-8") as rf:
+                existing_retry = set(l.strip() for l in rf if l.strip())
+        new_retry = [r for r in to_retry if r not in existing_retry]
+        if new_retry:
+            with open(RETRY_FILE, "a", encoding="utf-8") as rf:
+                rf.write("\n".join(new_retry) + "\n")
+        print(f"🔥 {len(to_retry)} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
 
-        # validated 文件中必须存在
-        if rule not in new_validated:
-            new_validated.append(rule)
+        for r in to_retry:
+            existing_rules.discard(r)
+            valid_rules_set.discard(r)
+            part_counter.pop(r, None)
 
-    # ---------------------------
-    # 3. 再处理旧规则（C 类）
-    # ---------------------------
-    for rule in old_validated:
-        if rule in dns_success_set:
-            # 已由 A 类规则处理，无需重复
-            continue
-
-        # 获取旧 write_counter
-        old_w = not_written_counter.get(rule, 0)
-
-        # -------------------------
-        # C：不在 DNS 成功列表 → write_counter -= 1
-        # -------------------------
-        new_w = old_w - 1
-
-        # delete_counter += 1（只有成功规则清零）
-        delete_counter[rule] = delete_counter.get(rule, 0) + 1
-
-        # C-1：write_counter <=1 且不在 all_rules → 删除
-        if new_w <= 1 and rule not in all_rules_set:
-            if rule in not_written_counter:
-                del not_written_counter[rule]
-            # validated 删除（不加入 new_validated）
-            continue
-
-        # C-2：write_counter <=0 → retry
-        if new_w <= 0:
-            retry_output.append(rule)
-            if rule in not_written_counter:
-                del not_written_counter[rule]
-            # validated 删除（不加入 new_validated）
-            continue
-
-        # C-3：write_counter >1 → 保留
-        not_written_counter[rule] = new_w
-        new_validated.append(rule)
-
-    # ---------------------------
-    # 4. 保存新的 validated 文件
-    # ---------------------------
+    # 写回 validated_part 文件
+    final_rules = sorted(existing_rules.union(valid_rules_set))
     with open(validated_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(new_validated))
+        f.write("\n".join(final_rules))
 
-    # ---------------------------
-    # 5. 保存 not_written_counter.bin
-    # ---------------------------
-    with open(not_written_counter_file, "wb") as f:
-        f.write(msgpack.packb(not_written_counter))
+    # 保存 not_written_counter
+    counter[part_key] = part_counter
+    save_bin(NOT_WRITTEN_FILE, counter)
 
-    # ---------------------------
-    # 6. 保存 delete_counter.bin
-    # ---------------------------
-    with open(delete_counter_file, "wb") as f:
-        f.write(msgpack.packb(delete_counter))
-
-    # ---------------------------
-    # 7. 输出 retry_rules.txt
-    # ---------------------------
-    if retry_output:
-        with open(retry_rules_file, "a", encoding="utf-8") as f:
-            for rule in retry_output:
-                f.write(rule + "\n")
-
-    return {
-        "validated_count": len(new_validated),
-        "retry_count": len(retry_output),
-        "not_written_count": len(not_written_counter),
-        "delete_counter_count": len(delete_counter)
-    }
-
+    return len(to_retry)
 
 # ===============================
 # 处理分片
