@@ -118,13 +118,16 @@ def check_domain(rule):
 # ===============================
 def download_all_sources():
     """
-    下载所有规则源，合并规则，过滤并更新删除计数
-    逻辑：
+    下载所有规则源，合并规则，过滤并更新删除计数 delete_counter
+
+    最终逻辑：
       - 新规则 delete_counter = 4
-      - delete_counter >=7 → delete_counter +1 ，过滤掉，不进入验证
-      - 在 all_rules 中且 delete_counter>=24 → 重置为6
-      - 不在 all_rules 中且 delete_counter>=28 → 删除记录
-    注意：retry_rules.txt 不在此处理
+      - delete_counter <7 的规则进入 DNS 验证
+      - delete_counter >=7 的规则:
+            下载阶段：delete_counter += 1，不进入验证
+            delete_counter >=24 且 rule ∈ all_rules → 重置为 6（重新进入验证）
+      - delete_counter >=28 → 删除记录
+      - retry_rules.txt 不在此处理
     """
     if not os.path.exists(URLS_TXT):
         print("❌ urls.txt 不存在")
@@ -149,33 +152,52 @@ def download_all_sources():
     print(f"✅ 合并 {len(all_rules)} 条规则")
     all_rules_set = set(all_rules)
 
+    # 载入 delete_counter
     delete_counter = load_bin(DELETE_COUNTER_FILE) if os.path.exists(DELETE_COUNTER_FILE) else {}
-    updated_delete_counter = {}
-    filtered_rules = []
-    reset_rules = []
-    removed_rules = []
 
+    updated_delete_counter = {}
+    filtered_rules = []       # <7 的规则，进入验证
+    reset_rules = []          # 被重置为6 的规则
+    removed_rules = []        # 被丢弃的规则
+    skipped_rules = []        # >=7 的规则（下载阶段跳过验证）
+
+    # ================================
     # 处理已有 delete_counter
+    # ================================
     for rule, cnt in delete_counter.items():
         cnt = int(cnt)
+
         if cnt >= 7:
-            cnt += 1  # >=7 就 +1
-            if rule in all_rules_set and cnt >= 24:
-                cnt = WRITE_COUNTER_MAX
+            # >=7 下载阶段 +1，不进入验证
+            cnt += 1
+
+            # delete_counter >=24 且仍在 all_rules → 重置为 6
+            if cnt >= 24 and rule in all_rules_set:
+                cnt = 6
                 reset_rules.append(rule)
-            elif rule not in all_rules_set and cnt >= 28:
+
+            # delete_counter >=28 且不在规则源 → 删除
+            if cnt >= 28 and rule not in all_rules_set:
                 removed_rules.append(rule)
-                continue
+                continue  # 不记录
+
             updated_delete_counter[rule] = cnt
+            skipped_rules.append(rule)
+
         else:
-            if rule in all_rules_set and cnt >= 24:
-                cnt = WRITE_COUNTER_MAX
+            # cnt <7 → 能验证
+            # 若 >=24（理论上不会出现），按逻辑处理
+            if cnt >= 24 and rule in all_rules_set:
+                cnt = 6
                 reset_rules.append(rule)
+
             updated_delete_counter[rule] = cnt
             if cnt < 7:
-                filtered_rules.append(rule)  # cnt <7 才进入验证
+                filtered_rules.append(rule)
 
-    # 处理 all_rules 中的新规则
+    # ================================
+    # 处理新规则
+    # ================================
     for rule in all_rules:
         if rule not in updated_delete_counter:
             updated_delete_counter[rule] = 4
@@ -184,29 +206,26 @@ def download_all_sources():
     # 保存 delete_counter
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
 
+    # ================================
     # 输出信息
+    # ================================
     if reset_rules:
-        for rule in reset_rules[:20]:
-            print(f"🔁 删除计数达到24，重置为 6：{rule}")
-        print(f"🔢 共 {len(reset_rules)} 条规则的删除计数达到24，已重置为 6")
+        print(f"🔁 共 {len(reset_rules)} 条规则 delete_counter≥24 且重新出现，已重置为 6")
 
     if removed_rules:
-        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28，已移除")
+        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28，已删除记录")
 
-    skipped_rules = [r for r, cnt in updated_delete_counter.items() if int(cnt) >= 7]
     if skipped_rules:
-        for rule in skipped_rules[:20]:
-            print(f"⚠ 删除计数 ≥7，跳过验证：{rule}")
-        print(f"🔢 共 {len(skipped_rules)} 条规则被跳过验证（删除计数≥7）")
+        print(f"⚠ 共 {len(skipped_rules)} 条规则 delete_counter≥7，在下载阶段被跳过验证")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
-        f"⏩共 {len(skipped_rules)} 条规则被跳过验证，"
-        f"🧮 需要验证 {len(filtered_rules)} 条规则，"
+        f"⏩跳过 {len(skipped_rules)} 条（delete_counter≥7），"
+        f"🧮 需要验证 {len(filtered_rules)} 条（delete_counter<7），"
         f"🪓 即将切分为 {PARTS} 片"
     )
 
-    # 切分验证规则（不包含 retry_rules）
+    # 切分进入验证的规则
     split_parts(filtered_rules, updated_delete_counter)
     return True
 
@@ -414,12 +433,33 @@ def process_part(part):
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines() if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
+    # 每次 process_part 都重新下载最新规则源
+    all_rules = []
+    with open(URLS_TXT, "r", encoding="utf-8") as f:
+        urls = [u.strip() for u in f if u.strip()]
+
+    for url in urls:
+        try:
+            r = requests.get(url, timeout=20)
+            r.raise_for_status()
+            all_rules.extend([line.strip() for line in r.text.splitlines() if line.strip()])
+        except Exception as e:
+            print(f"⚠ 下载失败 {url}: {e}")
+    all_rules_set = set(all_rules)
+
     # delete_counter 处理
     delete_counter = load_bin(DELETE_COUNTER_FILE)
     rules_to_validate = [r for r in lines if int(delete_counter.get(r, 4)) < 7]
+
     for r in lines:
-        if int(delete_counter.get(r, 4)) >= 7:
-            delete_counter[r] = int(delete_counter.get(r, 4)) + 1
+        cnt = int(delete_counter.get(r, 4))
+        if cnt >= 7:
+            delete_counter[r] = cnt + 1
+        if cnt >= 28 and r not in all_rules_set:
+            # 删除过期规则
+            delete_counter.pop(r, None)
+            if r in lines:
+                lines.remove(r)
 
     # 插入 retry_rules 顶部
     retry_rules = []
@@ -429,7 +469,8 @@ def process_part(part):
         if retry_rules:
             print(f"🔁 将 {len(retry_rules)} 条 retry_rules 插入分片顶部")
             for r in reversed(retry_rules):
-                if int(delete_counter.get(r, 4)) < 7 and r not in rules_to_validate:
+                cnt = int(delete_counter.get(r, 4))
+                if cnt < 7 and r not in rules_to_validate:
                     rules_to_validate.insert(0, r)
             open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
 
@@ -487,7 +528,6 @@ def process_part(part):
     save_bin(NOT_WRITTEN_FILE, counter)
 
     # ===== 打印统计 =====
-    # 连续失败统计 (write_counter 1~WRITE_COUNTER_MAX)
     failure_counts = {}
     for v in part_counter.values():
         v = int(v)
@@ -499,7 +539,6 @@ def process_part(part):
         if failure_counts.get(i, 0) > 0:
             print(f"    ⚠ 连续失败 {i}/{WRITE_COUNTER_MAX} 的规则条数: {failure_counts[i]}")
 
-    # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
     for v in part_counter.values():
         if 1 <= v <= WRITE_COUNTER_MAX:
@@ -510,7 +549,6 @@ def process_part(part):
         if counts[i] > 0:
             print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
 
-    # delete_counter 统计
     delete_counts = {}
     for r in final_rules:
         cnt = int(delete_counter.get(r, 4))
@@ -522,6 +560,7 @@ def process_part(part):
     print("--------------------------------------------------")
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
+
 
 
 # ===============================
