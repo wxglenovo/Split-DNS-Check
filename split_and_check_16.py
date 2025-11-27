@@ -155,34 +155,34 @@ def download_all_sources():
     # 载入 delete_counter
     delete_counter = load_bin(DELETE_COUNTER_FILE) if os.path.exists(DELETE_COUNTER_FILE) else {}
 
-    filtered_rules = []   # DNS 验证队列
-    skipped_rules = []    # 下载阶段跳过验证
-    reset_rules = []      # delete_counter>=24 重置为6
-    removed_rules = []    # delete_counter>=28 且不在 all_rules 删除
+    filtered_rules = set()   # DNS 验证队列
+    skipped_rules = set()    # 下载阶段跳过验证
+    reset_rules = set()      # delete_counter>=24 重置为6
+    removed_rules = set()    # delete_counter>=28 且不在 all_rules 删除
     updated_delete_counter = {}
 
     # 处理已有 delete_counter
     for rule, cnt in delete_counter.items():
         cnt = int(cnt)
         if cnt >= 28 and rule not in all_rules_set:
-            removed_rules.append(rule)
+            removed_rules.add(rule)
             continue
         elif cnt >= 24 and rule in all_rules_set:
             cnt = 6
-            reset_rules.append(rule)
-            filtered_rules.append(rule)
+            reset_rules.add(rule)
+            filtered_rules.add(rule)
         elif cnt >= 7:
             cnt += 1
-            skipped_rules.append(rule)
+            skipped_rules.add(rule)
         else:
-            filtered_rules.append(rule)
+            filtered_rules.add(rule)
         updated_delete_counter[rule] = cnt
 
     # 处理新规则
     for rule in all_rules:
         if rule not in updated_delete_counter:
             updated_delete_counter[rule] = 4
-            filtered_rules.append(rule)
+            filtered_rules.add(rule)
 
     # 保存 delete_counter
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
@@ -196,16 +196,15 @@ def download_all_sources():
         print(f"⚠ 共 {len(skipped_rules)} 条规则 delete_counter>=7，下载阶段跳过验证")
 
     print(
-        f"📚 合并总规则 {len(all_rules)} 条，"
+        f"📚 合并总规则 {len(all_rules_set)} 条，"
         f"⏩跳过 {len(skipped_rules)} 条（delete_counter≥7），"
-        f"🧮 需要验证 {len(filtered_rules)} 条（delete_counter<7+重置24规则），"
+        f"🧮 需要验证 {len(filtered_rules)} 条（cnt<7 + 重置24规则），"
         f"🪓 即将切分为 {PARTS} 片"
     )
 
     # 切分进入验证的规则
-    split_parts(filtered_rules, updated_delete_counter)
+    split_parts(list(filtered_rules), updated_delete_counter)
     return True
-
 
 # ===============================
 # 分片 + 负载均衡优化
