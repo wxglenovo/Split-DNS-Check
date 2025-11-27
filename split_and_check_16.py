@@ -122,12 +122,12 @@ def download_all_sources():
 
     逻辑：
       - 新规则 delete_counter = 4，加入验证队列
-      - delete_counter >=7 的规则：
+      - delete_counter >=97 的规则：
             下载阶段：delete_counter +=1，不进入验证
-      - delete_counter >=24 且在 all_rules → 重置为6，如果 reset 后 <7，加入验证队列
-      - delete_counter >=28 且不在 all_rules → 删除记录
+      - delete_counter >=114 且在 all_rules → 重置为80，如果 reset 后 <97，加入验证队列
+      - delete_counter >=118 且不在 all_rules → 删除记录
       - retry_rules.txt 不在此处理
-      - 剔除 delete_counter >=7 的规则（即最终验证队列只包含 delete_counter <7 的规则）
+      - 剔除 delete_counter >=97 的规则（即最终验证队列只包含 delete_counter <97 的规则）
     """
     if not os.path.exists(URLS_TXT):
         print("❌ urls.txt 不存在")
@@ -165,22 +165,22 @@ def download_all_sources():
     for rule, cnt in delete_counter.items():
         cnt = int(cnt)
 
-        # ① delete_counter >=28 且不在源 → 删除
-        if cnt >= 28 and rule not in all_rules_set:
+        # ① delete_counter >=118 且不在源 → 删除
+        if cnt >= 118 and rule not in all_rules_set:
             removed_rules.add(rule)
             continue
 
-        # ② delete_counter >=24 且在源 → 重置为 6
-        if cnt >= 24 and rule in all_rules_set:
-            cnt = 6
+        # ② delete_counter >=114 且在源 → 重置为 80
+        if cnt >= 114 and rule in all_rules_set:
+            cnt = 80
             reset_rules.add(rule)
 
-        # ③ delete_counter >=7 → 跳过验证，并 +1
-        if cnt >= 7:
+        # ③ delete_counter >=97 → 跳过验证，并 +1
+        if cnt >= 97:
             cnt += 1
             skipped_rules.append(rule)
         else:
-            # delete_counter <7 → 进入验证队列
+            # delete_counter <97 → 进入验证队列
             rules_to_validate.add(rule)
 
         updated_delete_counter[rule] = cnt
@@ -199,25 +199,25 @@ def download_all_sources():
     # 重置计数输出
     if reset_rules:
         for rule in list(reset_rules)[:20]:
-            print(f"🔁 删除计数达到24，重置为 6：{rule}")
-        print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥24，已重置为 6")
+            print(f"🔁 删除计数达到114，重置为 80：{rule}")
+        print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥114，已重置为 80")
 
     # 删除的规则
     if removed_rules:
         for rule in list(removed_rules)[:20]:
-            print(f"🚮 删除计数达到28，移动除录：{rule}")
-        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28 且不在源文件，已移除")
+            print(f"🚮 删除计数达到118，移动除录：{rule}")
+        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥118 且不在源文件，已移除")
 
     # 跳过的规则
     if skipped_rules:
         for rule in skipped_rules[:20]:
-            print(f"⏭ 删除计数达到7，跳过验证：{rule}")
-        print(f"⏩ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥7）")
+            print(f"⏭ 删除计数达到97，跳过验证：{rule}")
+        print(f"⏩ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥97）")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
-        f"⏩ 跳过 {len(skipped_rules)} 条（delete_counter≥7），"
-        f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<7），"
+        f"⏩ 跳过 {len(skipped_rules)} 条（delete_counter≥97），"
+        f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<97），"
         f"🪓 即将切分为 {PARTS} 片"
     )
 
@@ -232,7 +232,7 @@ def download_all_sources():
 def split_parts(all_rules, delete_counter):
     """
     根据现有 validated_part_X.txt 分片重新分配规则：
-      - 剔除 delete_counter >=7 的规则
+      - 剔除 delete_counter >=97 的规则
       - 保留原分片 delete_counter 值小的规则
       - 新规则均衡分配
       - delete_counter 大的规则尽量移动到负载轻分片
@@ -248,8 +248,8 @@ def split_parts(all_rules, delete_counter):
         else:
             part_existing[i] = set()
 
-    # 过滤 delete_counter >=7 的规则
-    filtered_rules = [r for r in all_rules if int(delete_counter.get(r, 4)) < 7]
+    # 过滤 delete_counter >=97 的规则
+    filtered_rules = [r for r in all_rules if int(delete_counter.get(r, 4)) < 97]
 
     # 先把规则分为“已有分片规则”和“新规则”
     rule_to_part = {}
