@@ -159,12 +159,20 @@ def download_all_sources():
     # 保存 delete_counter
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
 
-    # 输出信息
+    # ===== 输出信息 =====
     if reset_rules:
+        for rule in list(reset_rules)[:20]:
+            print(f"🔁 删除计数达到114，重置为 80：{rule}")
         print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥114，已重置为 80")
+
     if removed_rules:
+        for rule in list(removed_rules)[:20]:
+            print(f"🚮 删除计数达到118，移除规则：{rule}")
         print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥118 且不在源文件，已移除")
+
     if skipped_rules:
+        for rule in list(skipped_rules)[:20]:
+            print(f"⏭ 删除计数≥97，跳过验证：{rule}")
         print(f"⏩ 共 {len(skipped_rules)} 条规则 delete_counter≥97 被跳过验证")
 
     print(
@@ -174,9 +182,10 @@ def download_all_sources():
         f"🪓 即将切分为 {PARTS} 片"
     )
 
+    # 切分进入验证的规则
     split_parts(list(rules_to_validate), updated_delete_counter)
     return True
-
+    
 # ===============================
 # 分片 + 负载均衡
 # ===============================
