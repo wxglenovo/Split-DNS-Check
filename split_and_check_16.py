@@ -424,6 +424,9 @@ def process_part(part):
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines() if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
+    # 加载 delete_counter
+    delete_counter = load_bin(DELETE_COUNTER_FILE) if os.path.exists(DELETE_COUNTER_FILE) else {}
+
     # DNS 验证
     valid_rules = set(dns_validate(lines, part))
     added_count = len(valid_rules)
@@ -482,9 +485,10 @@ def process_part(part):
     with open(validated_file, "w", encoding="utf-8") as f:
         f.write("\n".join(final_rules))
 
-    # 保存 not_written_counter
+    # 保存 not_written_counter & delete_counter
     counter[part_key] = part_counter
     save_bin(NOT_WRITTEN_FILE, counter)
+    save_bin(DELETE_COUNTER_FILE, delete_counter)
 
     # 打印统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
