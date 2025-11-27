@@ -204,12 +204,14 @@ def download_all_sources():
 
     # 删除的规则
     if removed_rules:
+        for rule in list(removed_rules)[:20]:
+            print(f"🚮 删除计数达到28，移动除录：{rule}")
         print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28 且不在源文件，已移除")
 
     # 跳过的规则
     if skipped_rules:
         for rule in skipped_rules[:20]:
-            print(f"⚠ 删除计数 ≥7，跳过验证：{rule}")
+            print(f"⏩ 删除计数达到7，跳过验证：{rule}")
         print(f"⏭ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥7）")
 
     print(
