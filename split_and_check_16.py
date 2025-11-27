@@ -350,9 +350,6 @@ def dns_validate(rules, part):
 # ===============================
 # 更新 not_written_counter
 # ===============================
-import os
-import msgpack
-
 def update_not_written_counter(
         part_num,
         dns_success_rules,
