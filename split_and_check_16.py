@@ -155,38 +155,37 @@ def download_all_sources():
     # 载入 delete_counter
     delete_counter = load_bin(DELETE_COUNTER_FILE) if os.path.exists(DELETE_COUNTER_FILE) else {}
 
-    rules_to_validate = set()  # DNS 验证队列
-    skipped_rules = set()      # 下载阶段跳过验证
-    reset_rules = set()        # delete_counter>=24 重置为6
-    removed_rules = set()      # delete_counter>=28 且不在 all_rules 删除
+    rules_to_validate = set()
+    reset_rules = set()
+    removed_rules = set()
+    skipped_rules = []
     updated_delete_counter = {}
 
-    # 处理已有 delete_counter
+    # ===== 处理旧规则 =====
     for rule, cnt in delete_counter.items():
         cnt = int(cnt)
 
-        # 删除条件
+        # ① delete_counter >=28 且不在源 → 删除
         if cnt >= 28 and rule not in all_rules_set:
             removed_rules.add(rule)
             continue
 
-        # 重置条件
+        # ② delete_counter >=24 且在源 → 重置为 6
         if cnt >= 24 and rule in all_rules_set:
             cnt = 6
             reset_rules.add(rule)
 
-        # 跳过验证
+        # ③ delete_counter >=7 → 跳过验证，并 +1
         if cnt >= 7:
             cnt += 1
-            skipped_rules.add(rule)
-
-        # 最终验证队列只包含 delete_counter <7 的规则
-        if cnt < 7:
+            skipped_rules.append(rule)
+        else:
+            # delete_counter <7 → 进入验证队列
             rules_to_validate.add(rule)
 
         updated_delete_counter[rule] = cnt
 
-    # 处理新规则
+    # ===== 处理新规则 =====
     for rule in all_rules:
         if rule not in updated_delete_counter:
             updated_delete_counter[rule] = 4
@@ -195,32 +194,35 @@ def download_all_sources():
     # 保存 delete_counter
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
 
-    # 输出信息
-    # 输出重置计数的规则
+    # ===== 输出信息 =====
+
+    # 重置计数输出
     if reset_rules:
-        for rule in reset_rules[:20]:  # 输出前 20 条规则
+        for rule in list(reset_rules)[:20]:
             print(f"🔁 删除计数达到24，重置为 6：{rule}")
-        print(f"🔢 共 {len(reset_rules)} 条规则的删除计数达到24，已重置为 6")
+        print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥24，已重置为 6")
 
+    # 删除的规则
     if removed_rules:
-        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28，已移除")
+        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28 且不在源文件，已移除")
 
-    if skipped_count > 0:
-        skipped_rules = [r for r, cnt in updated_delete_counter.items() if int(cnt) >= 7]
-        for rule in skipped_rules[:20]:  # 输出前 20 条被跳过的规则
+    # 跳过的规则
+    if skipped_rules:
+        for rule in skipped_rules[:20]:
             print(f"⚠ 删除计数 ≥7，跳过验证：{rule}")
-        print(f"🔢 共 {len(skipped_rules)} 条规则被跳过验证（删除计数≥7）")
+        print(f"⏭ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥7）")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
-        f"⏩跳过 {len(skipped_rules)} 条（delete_counter≥7），"
-        f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<7 + reset<7 规则），"
+        f"⏩ 跳过 {len(skipped_rules)} 条（delete_counter≥7），"
+        f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<7），"
         f"🪓 即将切分为 {PARTS} 片"
     )
 
     # 切分进入验证的规则
     split_parts(list(rules_to_validate), updated_delete_counter)
     return True
+
 
 # ===============================
 # 分片 + 负载均衡优化
