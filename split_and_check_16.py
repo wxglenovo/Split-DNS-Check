@@ -515,11 +515,12 @@ def process_part(part):
         cnt = int(delete_counter.get(r, 0))
         delete_counts[cnt] = delete_counts.get(cnt, 0) + 1
 
-     print("\n📊 当前分片 write_counter 规则统计:")
+    print("\n📊 当前分片 write_counter 规则统计:")
     for i in range(1, WRITE_COUNTER_MAX + 1):
         if counts[i]:
             print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
-     print("\n📊 当前分片连续失败统计:")       
+
+    print("\n📊 当前分片 delete_counter 规则统计:")       
     for k in sorted(delete_counts):
         print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
 
