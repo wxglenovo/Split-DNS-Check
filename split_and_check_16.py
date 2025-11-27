@@ -196,12 +196,20 @@ def download_all_sources():
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
 
     # 输出信息
+    # 输出重置计数的规则
     if reset_rules:
-        print(f"🔁 共 {len(reset_rules)} 条规则 delete_counter>=24 且重新出现，已重置为6（如 cnt<7 将加入验证）")
+        for rule in reset_rules[:20]:  # 输出前 20 条规则
+            print(f"🔁 删除计数达到24，重置为 6：{rule}")
+        print(f"🔢 共 {len(reset_rules)} 条规则的删除计数达到24，已重置为 6")
+
     if removed_rules:
-        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter>=28 且不在源中，已删除")
-    if skipped_rules:
-        print(f"⚠ 共 {len(skipped_rules)} 条规则 delete_counter>=7，下载阶段跳过验证")
+        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥28，已移除")
+
+    if skipped_count > 0:
+        skipped_rules = [r for r, cnt in updated_delete_counter.items() if int(cnt) >= 7]
+        for rule in skipped_rules[:20]:  # 输出前 20 条被跳过的规则
+            print(f"⚠ 删除计数 ≥7，跳过验证：{rule}")
+        print(f"🔢 共 {len(skipped_rules)} 条规则被跳过验证（删除计数≥7）")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
