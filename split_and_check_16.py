@@ -211,8 +211,8 @@ def download_all_sources():
     # 跳过的规则
     if skipped_rules:
         for rule in skipped_rules[:20]:
-            print(f"⏩ 删除计数达到7，跳过验证：{rule}")
-        print(f"⏭ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥7）")
+            print(f"⏭ 删除计数达到7，跳过验证：{rule}")
+        print(f"⏩ 共 {len(skipped_rules)} 条规则被跳过（delete_counter≥7）")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
