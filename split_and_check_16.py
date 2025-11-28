@@ -268,7 +268,11 @@ def update_not_written_counter(part, valid_rules, all_rules_set):
 # ===============================
 def process_part(part, all_rules_set=None):
     part = int(part)
+    part_key = f"validated_part_{part}"
     part_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
+    validated_file = os.path.join(DIST_DIR, f"{part_key}.txt")
+
+    # 分片不存在时自动下载规则源
     if not os.path.exists(part_file):
         print(f"⚠ 分片 {part} 缺失，重新拉取规则…")
         all_rules = download_all_sources()
@@ -277,9 +281,10 @@ def process_part(part, all_rules_set=None):
         print("❌ 分片仍不存在，终止")
         return
 
-    lines = [l.strip() for l in open(part_file, "r", encoding="utf-8") if l.strip()]
-    print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
-    rules_to_validate = list(lines)
+    # 读取 TMP_DIR 分片规则
+    with open(part_file, "r", encoding="utf-8") as f:
+        rules_to_validate = [l.strip() for l in f if l.strip()]
+    print(f"⏱ 验证分片 {part}, 共 {len(rules_to_validate)} 条规则")
 
     # 插入 retry_rules
     to_retry_inserted = 0
@@ -310,13 +315,31 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
+    # ============================
+    # 读取 DIST_DIR/validated_part_X.txt 已存在规则
+    # ============================
+    if os.path.exists(validated_file):
+        with open(validated_file, "r", encoding="utf-8") as vf:
+            existing_rules = set(line.strip() for line in vf if line.strip())
+    else:
+        existing_rules = set()
+
+    # 读取 not_written_counter
+    counter = load_bin(NOT_WRITTEN_FILE)
+    part_counter = counter.get(part_key, {})
+
+    # 初始化老规则 write_counter
+    for r in existing_rules:
+        if r not in part_counter:
+            part_counter[r] = WRITE_COUNTER_MAX
+
     # 更新 not_written_counter
     removed_count, new_retry, removed_no_retry = update_not_written_counter(
         part, valid_rules, all_rules_set
     )
 
-    # 写回 validated_part_X.txt
-    counter_data = load_bin(NOT_WRITTEN_FILE).get(f"validated_part_{part}", {})
+    # 写回 validated_part_X.txt（TMP_DIR）
+    counter_data = load_bin(NOT_WRITTEN_FILE).get(part_key, {})
     final_rules = sorted(counter_data.keys())
     with open(part_file, "w", encoding="utf-8") as f:
         f.write("\n".join(final_rules))
@@ -349,6 +372,7 @@ def process_part(part, all_rules_set=None):
         print(f"🔥 本次写入 retry_rules.txt 的规则共有 {len(new_retry)} 条")
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 成功 {added_count}, 删除 {removed_count}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, 过滤 {len(rules_to_validate) - added_count}")
+
 
 # ===============================
 # 主入口
