@@ -283,11 +283,11 @@ def update_not_written_counter(part, valid_rules, all_rules_set):
 
     # 仅删除不写 retry 的
     for r in to_remove_no_retry:
-        print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
+    #   print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
 
     # 写入 retry 的规则
     for r in to_retry:
-        print(f"🔥 删除规则 {r}（write_counter<=0 → 写入 retry_rules.txt）")
+    #   print(f"🔥 删除规则 {r}（write_counter<=0 → 写入 retry_rules.txt）")
 
     # 4) 删除 from not_written
     for r in to_remove_no_retry:
