@@ -338,7 +338,7 @@ def process_part(part, all_rules_set=None):
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
             for r in new_retry:
                 rf.write(r + "\n")
-        print(f"🔥 {removed_count} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
+        
 
     # 打印删除规则信息
     for r in new_retry:
@@ -375,9 +375,9 @@ def process_part(part, all_rules_set=None):
     print("--------------------------------------------------")
     # 打印写入 retry_rules.txt 信息
     if new_retry:
-        print(f"🔥 {len(to_retry)} 条 write_counter<=0 的规则写入 retry_rules.txt）")
+        print(f"🔥 {removed_count} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
 
-    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
+    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(new_retry)}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
 
 # ===============================
