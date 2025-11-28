@@ -360,12 +360,12 @@ def process_part(part, all_rules_set=None):
     )
 
     # ===== 写回 validated_part_X.txt =====
-    counter_data = load_bin(NOT_WRITTEN_FILE).get(f"validated_part_{part}", {})
-    final_rules = sorted(counter_data.keys())
-    with open(part_file, "w", encoding="utf-8") as f:
-        for r in final_rules:
-            f.write(r + "\n")
-    print(f"💾 分片 {part} 已更新到文件: {part_file}")
+# ===== 写回 validated_part_X.txt =====
+    validated_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
+    with open(validated_file, "w", encoding="utf-8") as f:
+        f.write("\n".join(final_rules))
+    print(f"💾 分片 {part} 已更新到文件: {validated_file}")
+
 
     # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
