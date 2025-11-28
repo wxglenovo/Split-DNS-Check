@@ -115,7 +115,6 @@ def download_all_sources():
         urls = [u.strip() for u in f if u.strip()]
 
     for url in urls:
-        print(f"🌐 获取 {url}")
         try:
             r = requests.get(url, timeout=20)
             r.raise_for_status()
