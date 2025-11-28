@@ -341,7 +341,15 @@ def process_part(part):
     part_key = f"validated_part_{part}"
     part_counter = counter.get(part_key, {})
     counter.setdefault(part_key, part_counter)
-    all_rules_set = set(all_rules)
+
+    # ------- 修复: 读取 all_rules.txt，而不是使用不存在的 all_rules -------
+    all_rules_file = os.path.join(DIST_DIR, "all_rules.txt")
+    if os.path.exists(all_rules_file):
+        with open(all_rules_file, "r", encoding="utf-8") as f:
+            all_rules_set = set(l.strip() for l in f if l.strip())
+    else:
+        all_rules_set = set()
+    # ----------------------------------------------------------------------
 
     # DNS 成功 → write_counter 重置
     for r in valid_rules:
@@ -382,7 +390,7 @@ def process_part(part):
     counter[part_key] = part_counter
     save_bin(NOT_WRITTEN_FILE, counter)
 
-    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
+    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
 
 # ===============================
