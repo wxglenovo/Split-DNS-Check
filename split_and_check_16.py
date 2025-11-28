@@ -324,8 +324,8 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # 更新 not_written_counter 并获取 final_rules、to_retry
-    removed_count = update_not_written_counter(part, valid_rules, all_rules_set)
+    # 更新 not_written_counter 并获取 removed_count、new_retry
+    removed_count, new_retry = update_not_written_counter(part, valid_rules, all_rules_set)
 
     # ===== 打印统计 =====
     part_key = f"validated_part_{part}"
@@ -336,7 +336,7 @@ def process_part(part, all_rules_set=None):
     # 打印删除规则信息
     for r in to_retry:
         print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
-        
+
     # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
     for v in counter_data.values():
@@ -357,7 +357,6 @@ def process_part(part, all_rules_set=None):
     print("\n📊 当前分片 delete_counter 规则统计:")       
     for k in sorted(delete_counts):
         print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
-
 
     print("--------------------------------------------------")
     # 打印写入 retry_rules.txt 信息
