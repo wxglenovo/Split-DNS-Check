@@ -176,6 +176,7 @@ def download_all_sources():
 # ===============================
 def split_parts(all_rules, delete_counter):
     import heapq, os
+    from collections import Counter
 
     # -----------------------------
     # 1) 加载 validated_part_X 并建立 rule->part 映射
@@ -195,10 +196,10 @@ def split_parts(all_rules, delete_counter):
             rule2part[r] = i - 1
 
     # -----------------------------
-    # 2) 分类规则
+    # 2) 分类规则（按16分组）
     # -----------------------------
-    rules_fixed_A = [[] for _ in range(PARTS)]   # dc<16，绝对固定
-    rules_fixed_B = [[] for _ in range(PARTS)]   # 16<=dc<20，可解锁
+    rules_fixed_A = [[] for _ in range(PARTS)]   # group_dc=0，绝对固定
+    rules_fixed_B = [[] for _ in range(PARTS)]   # group_dc=1，可弱固定
     dc_fixed_A = [[] for _ in range(PARTS)]
     dc_fixed_B = [[] for _ in range(PARTS)]
 
@@ -207,26 +208,28 @@ def split_parts(all_rules, delete_counter):
 
     dc_get = delete_counter.get
     for r in all_rules:
-        dc = int(dc_get(r, 64))
-        if dc >= 97:
-            continue
+        dc_raw = int(dc_get(r, 64))
+        group_dc = dc_raw // 16  # 每16为一组
+
+        if dc_raw >= 97:
+            continue  # delete_counter >=97跳过
         p = rule2part.get(r)
         if p is not None:
-            if dc < 16:
+            if group_dc == 0:
                 rules_fixed_A[p].append(r)
-                dc_fixed_A[p].append(dc)
-            elif dc < 20:
+                dc_fixed_A[p].append(group_dc)
+            elif group_dc == 1:
                 rules_fixed_B[p].append(r)
-                dc_fixed_B[p].append(dc)
+                dc_fixed_B[p].append(group_dc)
             else:
                 mov_rules.append(r)
-                mov_dc.append(dc)
+                mov_dc.append(group_dc)
         else:
             mov_rules.append(r)
-            mov_dc.append(dc)
+            mov_dc.append(group_dc)
 
     # -----------------------------
-    # 3) 可移动规则排序（dc大优先移动）
+    # 3) 可移动规则排序（group_dc大优先移动）
     # -----------------------------
     idx = sorted(range(len(mov_dc)), key=mov_dc.__getitem__, reverse=True)
     mov_rules = [mov_rules[i] for i in idx]
@@ -244,14 +247,12 @@ def split_parts(all_rules, delete_counter):
     total_rules = sum(len(rules_bucket[i]) for i in range(PARTS)) + len(mov_rules)
     target_per_part = total_rules // PARTS
 
-    # 收集可解锁B类规则
     unlocked_rules = []
     unlocked_dc = []
     for i in range(PARTS):
         current_size = len(rules_bucket[i])
         excess = current_size - target_per_part
         if excess > 0:
-            # 按 dc 大小排序，先解锁 dc 大的
             dc_list = dc_fixed_B[i]
             r_list = rules_fixed_B[i]
             idx_sort = sorted(range(len(dc_list)), key=dc_list.__getitem__, reverse=True)
@@ -280,14 +281,14 @@ def split_parts(all_rules, delete_counter):
         heapq.heappush(heap, (size + 1, idx))
 
     # -----------------------------
-    # 7) 写回文件（A类固定在前，其余按dc排序）
+    # 7) 写回文件 & 打印分片统计
     # -----------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
     for i in range(PARTS):
-        # 固定A类规则按 dc 排序
+        # 固定A类规则按 group_dc 排序
         rules_A_sorted = [r for _, r in sorted(zip(dc_fixed_A[i], rules_fixed_A[i]), key=lambda x: x[0])]
-        # 其余规则按 dc 排序
+        # 其余规则按 group_dc 排序
         extra_count = len(rules_bucket[i]) - len(rules_A_sorted)
         if extra_count > 0:
             dc_extra = dc_bucket[i][len(rules_A_sorted):]
@@ -303,8 +304,13 @@ def split_parts(all_rules, delete_counter):
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(final_rules))
 
+        # 分片 group_dc 分布统计
+        all_dc = dc_bucket[i]
+        counter = Counter(all_dc)
+        counter_str = ", ".join(f"g{k}:{v}" for k, v in sorted(counter.items()))
         print(f"📄 分片 {i+1}: {len(final_rules)} 条规则 "
-              f"(固定A {len(rules_A_sorted)} + 其他 {len(rules_extra_sorted)})")
+              f"(固定A {len(rules_A_sorted)} + 其他 {len(rules_extra_sorted)}) | group_dc 分布: {counter_str}")
+
 
 # ===============================
 # 更新 not_written_counter
