@@ -296,6 +296,8 @@ def process_part(part, all_rules_set=None):
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
     rules_to_validate = list(lines)
+    # 插入 retry_rules
+    to_retry_inserted = 0
     if os.path.exists(RETRY_FILE):
         with open(RETRY_FILE, "r", encoding="utf-8") as rf:
             retry_rules = [r.strip() for r in rf if r.strip()]
@@ -303,8 +305,9 @@ def process_part(part, all_rules_set=None):
             for r in reversed(retry_rules):
                 if r not in rules_to_validate:
                     rules_to_validate.insert(0, r)
+                    to_retry_inserted += 1
             open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
-            print(f"🔁 将 {len(retry_rules)} 条 retry_rules 插入分片顶部")
+            print(f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片顶部")
 
     valid_rules = set(dns_validate(rules_to_validate, part))
     added_count = len(valid_rules)
@@ -321,13 +324,22 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
+    # 更新 not_written_counter 并获取 final_rules、to_retry
     removed_count = update_not_written_counter(part, valid_rules, all_rules_set)
-     # ===== 打印统计 =====
+
+    # ===== 打印统计 =====
+    part_key = f"validated_part_{part}"
+    counter_data = load_bin(NOT_WRITTEN_FILE).get(part_key, {})
+    final_rules = sorted(set(counter_data.keys()))
+    to_retry = [r for r, v in counter_data.items() if v <= 0]
+
+    # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
-    for v in part_counter.values():
+    for v in counter_data.values():
         if 1 <= v <= WRITE_COUNTER_MAX:
             counts[v] += 1
 
+    # delete_counter 统计
     delete_counts = {}
     for r in final_rules:
         cnt = int(delete_counter.get(r, 0))
