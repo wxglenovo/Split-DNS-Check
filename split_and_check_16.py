@@ -174,113 +174,137 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(all_rules, delete_counter):
-    # -----------------------------------------------------
-    # 1) 加载 validated_part_X 并建立 rule→part 索引（最快）
-    # -----------------------------------------------------
+def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=2000):
+    import heapq, os
+
+    # -----------------------------
+    # 1) 加载 validated_part_X 并建立 rule->part 映射
+    # -----------------------------
     validated = []
     rule2part = {}
-
     for i in range(1, PARTS + 1):
         f = os.path.join(DIST_DIR, f"validated_part_%d.txt" % i)
         if os.path.isfile(f):
-            with open(f, "r", encoding="utf-8") as ff:
-                lines = ff.read().splitlines()
+            lines = f.read().splitlines()
         else:
             lines = []
-
         s = set(lines)
         validated.append(s)
-
-        # 建立rule->part（0-based）
         for r in s:
             rule2part[r] = i - 1
 
-    # -----------------------------------------------------
-    # 2) 分类 固定规则(dc<20) + 可移动规则(dc>=20与新规则)
-    # -----------------------------------------------------
-    dc_get = delete_counter.get
-
-    rules_fixed = [[] for _ in range(PARTS)]
-    dc_fixed = [[] for _ in range(PARTS)]
+    # -----------------------------
+    # 2) 分类规则
+    # -----------------------------
+    rules_fixed_A = [[] for _ in range(PARTS)]   # dc<16，绝对固定
+    rules_fixed_B = [[] for _ in range(PARTS)]   # 16<=dc<20，弱保护，可移动
+    dc_fixed_A = [[] for _ in range(PARTS)]
+    dc_fixed_B = [[] for _ in range(PARTS)]
 
     mov_rules = []
     mov_dc = []
 
+    dc_get = delete_counter.get
     for r in all_rules:
         dc = int(dc_get(r, 64))
         if dc >= 97:
             continue
-
         p = rule2part.get(r)
-
         if p is not None:
-            # 属于旧分片
-            if dc < 20:
-                rules_fixed[p].append(r)
-                dc_fixed[p].append(dc)
+            if dc < 16:
+                rules_fixed_A[p].append(r)
+                dc_fixed_A[p].append(dc)
+            elif dc < 20:
+                rules_fixed_B[p].append(r)
+                dc_fixed_B[p].append(dc)
             else:
                 mov_rules.append(r)
                 mov_dc.append(dc)
         else:
-            # 新规则 → 可移动
             mov_rules.append(r)
             mov_dc.append(dc)
 
-    # -----------------------------------------------------
-    # 3) 可移动规则按 dc 降序排序（数字比 tuple 快很多）
-    # -----------------------------------------------------
+    # -----------------------------
+    # 3) 可移动规则排序（dc大优先）
+    # -----------------------------
     idx = sorted(range(len(mov_dc)), key=mov_dc.__getitem__, reverse=True)
     mov_rules = [mov_rules[i] for i in idx]
     mov_dc = [mov_dc[i] for i in idx]
 
-    # -----------------------------------------------------
-    # 4) 分片初始化（仅固定规则）
-    # -----------------------------------------------------
-    rules_bucket = [lst[:] for lst in rules_fixed]  # 深拷贝
-    dc_bucket = [lst[:] for lst in dc_fixed]
+    # -----------------------------
+    # 4) 初始化分片（A类+B类固定规则）
+    # -----------------------------
+    rules_bucket = [rules_fixed_A[i] + rules_fixed_B[i] for i in range(PARTS)]
+    dc_bucket = [dc_fixed_A[i] + dc_fixed_B[i] for i in range(PARTS)]
 
-    # -----------------------------------------------------
-    # 5) 最小堆均衡分配可移动规则（保持逻辑不变）
-    # -----------------------------------------------------
-    import heapq
+    # -----------------------------
+    # 5) 计算分片当前大小差异，决定是否解锁B类规则
+    # -----------------------------
+    sizes = [len(rules_bucket[i]) for i in range(PARTS)]
+    max_size = max(sizes)
+    min_size = min(sizes)
+    diff = max_size - min_size
+
+    # 解锁B类规则
+    unlocked_rules = []
+    unlocked_dc = []
+    if diff > BALANCE_THRESHOLD:
+        for i in range(PARTS):
+            to_unlock = []
+            to_unlock_dc = []
+            for r, dc in zip(rules_fixed_B[i], dc_fixed_B[i]):
+                to_unlock.append(r)
+                to_unlock_dc.append(dc)
+            # 移出解锁规则
+            for r in to_unlock:
+                rules_bucket[i].remove(r)
+            for dc in to_unlock_dc:
+                dc_bucket[i].remove(dc)
+            unlocked_rules.extend(to_unlock)
+            unlocked_dc.extend(to_unlock_dc)
+
+    # 合并可移动规则
+    all_mov_rules = mov_rules + unlocked_rules
+    all_mov_dc = mov_dc + unlocked_dc
+
+    # -----------------------------
+    # 6) 最小堆均衡分配可移动规则
+    # -----------------------------
     heap = [(len(rules_bucket[i]), i) for i in range(PARTS)]
     heapq.heapify(heap)
 
-    for r, dc in zip(mov_rules, mov_dc):
+    for r, dc in zip(all_mov_rules, all_mov_dc):
         size, idx = heapq.heappop(heap)
         rules_bucket[idx].append(r)
         dc_bucket[idx].append(dc)
         heapq.heappush(heap, (size + 1, idx))
 
-    # -----------------------------------------------------
-    # 6) 写文件（固定规则优先，其次可移动；均按 dc 排序）
-    # -----------------------------------------------------
+    # -----------------------------
+    # 7) 写回文件（A类固定在前，B解锁+移动+C类按dc排序）
+    # -----------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
     for i in range(PARTS):
-        rules_f = rules_fixed[i]
-        dc_f = dc_fixed[i]
-        rules_m = rules_bucket[i][len(rules_f):]  # 可移动部分
-        dc_m = dc_bucket[i][len(dc_f):]
+        # 固定A类规则
+        rules_A_sorted = [r for _, r in sorted(zip(dc_fixed_A[i], rules_fixed_A[i]), key=lambda x: x[0])]
+        # 其余规则（B类移动+C类+新规则）按dc排序
+        extra_count = len(rules_bucket[i]) - len(rules_A_sorted)
+        if extra_count > 0:
+            dc_extra = dc_bucket[i][len(rules_A_sorted):]
+            rules_extra = rules_bucket[i][len(rules_A_sorted):]
+            idx_sort = sorted(range(len(dc_extra)), key=dc_extra.__getitem__)
+            rules_extra_sorted = [rules_extra[j] for j in idx_sort]
+        else:
+            rules_extra_sorted = []
 
-        # 排序固定规则
-        idx_f = sorted(range(len(dc_f)), key=dc_f.__getitem__)
-        rules_f_sorted = [rules_f[j] for j in idx_f]
-
-        # 排序可移动规则
-        idx_m = sorted(range(len(dc_m)), key=dc_m.__getitem__)
-        rules_m_sorted = [rules_m[j] for j in idx_m]
-
-        final_rules = rules_f_sorted + rules_m_sorted
+        final_rules = rules_A_sorted + rules_extra_sorted
 
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(final_rules))
 
         print(f"📄 分片 {i+1}: {len(final_rules)} 条规则 "
-              f"(固定 {len(rules_f_sorted)} + 移动 {len(rules_m_sorted)})")
-
+              f"(固定A {len(rules_A_sorted)} + 其他 {len(rules_extra_sorted)})")
 
 # ===============================
 # 更新 not_written_counter
