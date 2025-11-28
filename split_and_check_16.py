@@ -174,7 +174,7 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=200):
+def split_parts(all_rules, delete_counter):
     import heapq, os
 
     # -----------------------------
@@ -198,7 +198,7 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=200):
     # 2) 分类规则
     # -----------------------------
     rules_fixed_A = [[] for _ in range(PARTS)]   # dc<16，绝对固定
-    rules_fixed_B = [[] for _ in range(PARTS)]   # 16<=dc<20，弱保护，可移动
+    rules_fixed_B = [[] for _ in range(PARTS)]   # 16<=dc<20，可解锁
     dc_fixed_A = [[] for _ in range(PARTS)]
     dc_fixed_B = [[] for _ in range(PARTS)]
 
@@ -239,25 +239,29 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=200):
     dc_bucket = [dc_fixed_A[i] + dc_fixed_B[i] for i in range(PARTS)]
 
     # -----------------------------
-    # 5) 计算分片当前大小差异，决定是否解锁B类规则
+    # 5) 动态解锁B类规则，确保 ±1 条均衡
     # -----------------------------
-    sizes = [len(rules_bucket[i]) for i in range(PARTS)]
-    max_size = max(sizes)
-    min_size = min(sizes)
-    diff = max_size - min_size
+    total_rules = sum(len(rules_bucket[i]) for i in range(PARTS)) + len(mov_rules)
+    target_per_part = total_rules // PARTS
 
-    # 解锁B类规则
+    # 收集可解锁B类规则
     unlocked_rules = []
     unlocked_dc = []
-    if diff > BALANCE_THRESHOLD:
-        for i in range(PARTS):
-            to_unlock = rules_fixed_B[i]
-            to_unlock_dc = dc_fixed_B[i]
-            # 移出解锁规则
-            rules_bucket[i] = [r for r in rules_bucket[i] if r not in to_unlock]
-            dc_bucket[i] = [dc for dc in dc_bucket[i] if dc not in to_unlock_dc]
-            unlocked_rules.extend(to_unlock)
-            unlocked_dc.extend(to_unlock_dc)
+    for i in range(PARTS):
+        current_size = len(rules_bucket[i])
+        excess = current_size - target_per_part
+        if excess > 0:
+            # 按 dc 大小排序，先解锁 dc 大的
+            dc_list = dc_fixed_B[i]
+            r_list = rules_fixed_B[i]
+            idx_sort = sorted(range(len(dc_list)), key=dc_list.__getitem__, reverse=True)
+            to_unlock_count = min(len(idx_sort), excess)
+            for j in idx_sort[:to_unlock_count]:
+                r = r_list[j]
+                rules_bucket[i].remove(r)
+                dc_bucket[i].remove(dc_list[j])
+                unlocked_rules.append(r)
+                unlocked_dc.append(dc_list[j])
 
     # 合并可移动规则
     all_mov_rules = mov_rules + unlocked_rules
@@ -283,7 +287,7 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=200):
     for i in range(PARTS):
         # 固定A类规则按 dc 排序
         rules_A_sorted = [r for _, r in sorted(zip(dc_fixed_A[i], rules_fixed_A[i]), key=lambda x: x[0])]
-        # 其余规则（B解锁+C类+新规则）按 dc 排序
+        # 其余规则按 dc 排序
         extra_count = len(rules_bucket[i]) - len(rules_A_sorted)
         if extra_count > 0:
             dc_extra = dc_bucket[i][len(rules_A_sorted):]
@@ -301,7 +305,6 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=200):
 
         print(f"📄 分片 {i+1}: {len(final_rules)} 条规则 "
               f"(固定A {len(rules_A_sorted)} + 其他 {len(rules_extra_sorted)})")
-
 
 # ===============================
 # 更新 not_written_counter
