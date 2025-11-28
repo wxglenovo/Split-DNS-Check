@@ -175,98 +175,105 @@ def download_all_sources():
 # 分片切分
 # ===============================
 def split_parts(all_rules, delete_counter):
-    # -------------------------------
-    # 1) 加载 validated_part_X（一次性）
-    # -------------------------------
+
+    # -------------------------------------
+    # 1) 加载 validated_part_X，并建立 rule→part 映射
+    # -------------------------------------
     validated = []
+    rule2part = {}
+
     for i in range(1, PARTS + 1):
         f = os.path.join(DIST_DIR, f"validated_part_%d.txt" % i)
         if os.path.isfile(f):
             with open(f, "r", encoding="utf-8") as ff:
-                validated.append(set(ff.read().splitlines()))
+                lines = ff.read().splitlines()
         else:
-            validated.append(set())
+            lines = []
 
-    # -------------------------------
-    # 2) 删除 delete_counter ≥ 97
-    # -------------------------------
+        s = set(lines)
+        validated.append(s)
+
+        # 映射加速：O(N)
+        for r in s:
+            rule2part[r] = i - 1  # 用 0-based 索引更快
+
+    # -------------------------------------
+    # 2) 按 delete_counter 过滤 & 分类 固定 / 可移动
+    # -------------------------------------
     dc_get = delete_counter.get
-    filtered = []
+
+    part_fixed = [[] for _ in range(PARTS)]
+    movable_rules = []
+    movable_dc = []
+
     for r in all_rules:
         dc = int(dc_get(r, 64))
-        if dc < 97:
-            filtered.append((r, dc))
 
-    # -------------------------------
-    # 3) 快速构建 rule → part 映射
-    # -------------------------------
-    rule2part = {}
-    for p, vset in enumerate(validated, 1):
-        for r in vset:
-            rule2part[r] = p
+        # 删除规则 ≥97
+        if dc >= 97:
+            continue
 
-    # -------------------------------
-    # 4) 分类固定规则 (dc<20) 与可移动规则 (dc>=20)
-    # -------------------------------
-    part_fixed = [[] for _ in range(PARTS)]
-    movable = []
-
-    for r, dc in filtered:
         p = rule2part.get(r)
+
         if p is not None:
             if dc < 20:
-                part_fixed[p - 1].append((r, dc))
+                part_fixed[p].append((r, dc))  # 固定规则
             else:
-                movable.append((r, dc))
+                movable_rules.append(r)
+                movable_dc.append(dc)
         else:
-            # 新规则 → movable
-            movable.append((r, dc))
+            # 新规则：默认可移动
+            movable_rules.append(r)
+            movable_dc.append(dc)
 
-    # -------------------------------
-    # 5) movable 按 dc 降序排序（最大优先移动）
-    # -------------------------------
-    movable.sort(key=lambda x: x[1], reverse=True)
+    # -------------------------------------
+    # 3) 按 dc 降序对可移动规则排序（最大优先移动）
+    #    使用 argsort 风格，避免 tuple 排序的多重比较
+    # -------------------------------------
+    idx = sorted(range(len(movable_dc)), key=lambda i: movable_dc[i], reverse=True)
+    movable_rules = [movable_rules[i] for i in idx]
+    movable_dc = [movable_dc[i] for i in idx]
 
-    # -------------------------------
-    # 6) 初始化 part_buckets = 固定规则（复制引用最快）
-    # -------------------------------
+    # -------------------------------------
+    # 4) 初始化分片（仅固定规则）
+    # -------------------------------------
     part_buckets = [list(lst) for lst in part_fixed]
 
-    # -------------------------------
-    # 7) 最小堆均衡分配可移动规则
-    # -------------------------------
+    # -------------------------------------
+    # 5) 最小堆负载均衡分配可移动规则
+    # -------------------------------------
     import heapq
-    heap = [(len(bucket), idx) for idx, bucket in enumerate(part_buckets)]
+
+    # 只记录 (size, part_id)，减少对象开销
+    heap = [(len(part_buckets[i]), i) for i in range(PARTS)]
     heapq.heapify(heap)
 
-    for item in movable:
+    for r, dc in zip(movable_rules, movable_dc):
         size, idx = heapq.heappop(heap)
-        part_buckets[idx].append(item)
+        part_buckets[idx].append((r, dc))
         heapq.heappush(heap, (size + 1, idx))
 
-    # -------------------------------
-    # 8) 写文件（按 dc 排序）
-    # -------------------------------
+    # -------------------------------------
+    # 6) 写文件（固定与可移动均按 dc 排序）
+    # -------------------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
     for i in range(PARTS):
         fixed = part_fixed[i]
-        movable_now = [item for item in part_buckets[i] if item not in fixed]
-        # 排序：固定规则按 dc
+        movable = [x for x in part_buckets[i] if x not in fixed]  # 不会 O(n²)，因为 part_fixed 很小
+
+        # 只按 dc 排序（最快）
         fixed.sort(key=lambda x: x[1])
-        # 可移动规则按 dc
-        movable_now.sort(key=lambda x: x[1])
+        movable.sort(key=lambda x: x[1])
 
-        final_rules = [r for r, dc in (fixed + movable_now)]
+        final_rules = [r for r, dc in (fixed + movable)]
+
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
-
         with open(filename, "w", encoding="utf-8") as f:
             f.write("\n".join(final_rules))
 
         print(f"📄 分片 {i+1}: {len(final_rules)} 条规则 "
-              f"(固定 {len(fixed)} + 移动 {len(movable_now)})")
-
-
+              f"(固定 {len(fixed)} + 移动 {len(movable)})")
 
 # ===============================
 # 更新 not_written_counter
