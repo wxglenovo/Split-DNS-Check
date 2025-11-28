@@ -174,7 +174,7 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=2000):
+def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=20):
     import heapq, os
 
     # -----------------------------
@@ -225,7 +225,7 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=2000):
             mov_dc.append(dc)
 
     # -----------------------------
-    # 3) 可移动规则排序（dc大优先）
+    # 3) 可移动规则排序（dc大优先移动）
     # -----------------------------
     idx = sorted(range(len(mov_dc)), key=mov_dc.__getitem__, reverse=True)
     mov_rules = [mov_rules[i] for i in idx]
@@ -250,16 +250,11 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=2000):
     unlocked_dc = []
     if diff > BALANCE_THRESHOLD:
         for i in range(PARTS):
-            to_unlock = []
-            to_unlock_dc = []
-            for r, dc in zip(rules_fixed_B[i], dc_fixed_B[i]):
-                to_unlock.append(r)
-                to_unlock_dc.append(dc)
+            to_unlock = rules_fixed_B[i]
+            to_unlock_dc = dc_fixed_B[i]
             # 移出解锁规则
-            for r in to_unlock:
-                rules_bucket[i].remove(r)
-            for dc in to_unlock_dc:
-                dc_bucket[i].remove(dc)
+            rules_bucket[i] = [r for r in rules_bucket[i] if r not in to_unlock]
+            dc_bucket[i] = [dc for dc in dc_bucket[i] if dc not in to_unlock_dc]
             unlocked_rules.extend(to_unlock)
             unlocked_dc.extend(to_unlock_dc)
 
@@ -280,14 +275,14 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=2000):
         heapq.heappush(heap, (size + 1, idx))
 
     # -----------------------------
-    # 7) 写回文件（A类固定在前，B解锁+移动+C类按dc排序）
+    # 7) 写回文件（A类固定在前，其余按dc排序）
     # -----------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
     for i in range(PARTS):
-        # 固定A类规则
+        # 固定A类规则按 dc 排序
         rules_A_sorted = [r for _, r in sorted(zip(dc_fixed_A[i], rules_fixed_A[i]), key=lambda x: x[0])]
-        # 其余规则（B类移动+C类+新规则）按dc排序
+        # 其余规则（B解锁+C类+新规则）按 dc 排序
         extra_count = len(rules_bucket[i]) - len(rules_A_sorted)
         if extra_count > 0:
             dc_extra = dc_bucket[i][len(rules_A_sorted):]
