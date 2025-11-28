@@ -233,55 +233,75 @@ def split_parts(all_rules, delete_counter):
 def update_not_written_counter(part, valid_rules, all_rules_set):
     """
     更新 not_written_counter 并返回:
-    - removed_count: write_counter<=0 且不在 all_rules 的规则数量
+    - removed_count: 本次从 validated 中删除的规则总数（包含仅删除和写入 retry 的）
     - new_retry: 实际写入 retry_rules.txt 的新规则列表
+
+    规则：
+    ① write_counter <= 1 且不在 all_rules → 删除（不写 retry）
+    ② write_counter <= 0 → 删除并写入 retry_rules.txt
     """
     part_key = f"validated_part_{part}"
     not_written = load_bin(NOT_WRITTEN_FILE)
 
     part_counter = not_written.get(part_key, {})
 
-    to_retry = []
+    to_remove_no_retry = []   # write_counter<=1 且不在 all_rules
+    to_retry = []             # write_counter<=0（必须写入 retry）
     new_retry = []
 
-    # 处理 DNS 成功规则
+    # 1) DNS 成功规则 -> 重置 counter
     for r in valid_rules:
         part_counter[r] = WRITE_COUNTER_MAX
 
-    # 处理已有规则 write_counter -1
+    # 2) 对老规则 write_counter -=1
     for r in list(part_counter.keys()):
         if r not in valid_rules:
             part_counter[r] -= 1
-            if part_counter[r] <= 0 and r not in all_rules_set:
-                to_retry.append(r)
 
-    # 写入 retry_rules.txt
-    if to_retry:
-        if os.path.exists(RETRY_FILE):
-            with open(RETRY_FILE, "r", encoding="utf-8") as rf:
-                old_retry = set([r.strip() for r in rf if r.strip()])
-        else:
-            old_retry = set()
+            # 分类判断
+            if part_counter[r] <= 0:
+                to_retry.append(r)           # 必须写入 retry
+            elif part_counter[r] <= 1 and r not in all_rules_set:
+                to_remove_no_retry.append(r) # 只删除，不写 retry
 
-        new_retry = [r for r in to_retry if r not in old_retry]
+    # 3) 写入 retry_rules.txt（只写 to_retry）
+    if os.path.exists(RETRY_FILE):
+        with open(RETRY_FILE, "r", encoding="utf-8") as rf:
+            old_retry = set(r.strip() for r in rf if r.strip())
+    else:
+        old_retry = set()
 
+    new_retry = [r for r in to_retry if r not in old_retry]
+
+    if new_retry:
         with open(RETRY_FILE, "a", encoding="utf-8") as rf:
             for r in new_retry:
                 rf.write(r + "\n")
 
-        # 打印删除规则信息
-        for r in to_retry:
-            print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
+    # === 日志打印 ===
 
-    # 删除 write_counter <=0 且不在 all_rules 的规则
+    # 仅删除不写 retry 的
+    for r in to_remove_no_retry:
+        print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
+
+    # 写入 retry 的规则
+    for r in to_retry:
+        print(f"🔥 删除规则 {r}（write_counter<=0 → 写入 retry_rules.txt）")
+
+    # 4) 删除 from not_written
+    for r in to_remove_no_retry:
+        part_counter.pop(r, None)
+
     for r in to_retry:
         part_counter.pop(r, None)
 
+    # 保存
     not_written[part_key] = part_counter
     save_bin(NOT_WRITTEN_FILE, not_written)
 
-    removed_count = len(to_retry)
+    removed_count = len(to_remove_no_retry) + len(to_retry)
     return removed_count, new_retry
+
 
 # ===============================
 # 处理分片
@@ -330,25 +350,13 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # 更新 not_written_counter 并获取 removed_count, new_retry
+    # 更新 not_written_counter
     removed_count, new_retry = update_not_written_counter(part, valid_rules, all_rules_set)
-
-    # 写入 retry_rules.txt
-    if new_retry:
-        with open(RETRY_FILE, "a", encoding="utf-8") as rf:
-            for r in new_retry:
-                rf.write(r + "\n")
-        
-
-    # 打印删除规则信息
-    for r in new_retry:
-        print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
 
     # ===== 打印统计 =====
     part_key = f"validated_part_{part}"
     counter_data = load_bin(NOT_WRITTEN_FILE).get(part_key, {})
     final_rules = sorted(set(counter_data.keys()))
-    to_retry = [r for r, v in counter_data.items() if v <= 0]
 
     # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
@@ -367,22 +375,21 @@ def process_part(part, all_rules_set=None):
         if counts[i]:
             print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
 
-    print("\n📊 当前分片 delete_counter 规则统计:")       
+    print("\n📊 当前分片 delete_counter 规则统计:")
     for k in sorted(delete_counts):
         print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
 
-   
     print("--------------------------------------------------")
-    # 打印写入 retry_rules.txt 信息
-    # 统计不在 all_rules 的删除规则数量
+
+    # 🔥 本次写入 retry 的是真正 write_counter<=0 的规则
     removed_not_in_source = sum(1 for r in new_retry if r not in all_rules_set)
-    print(f"📉 本次删除的 {len(new_retry)} 条规则中，有 {removed_not_in_source} 条不在 all_rules（源规则已不存在）")
+    print(f"📉 本次写入 retry_rules.txt 的 {len(new_retry)} 条规则中，有 {removed_not_in_source} 条不在 all_rules（源规则已不存在）")
 
     if new_retry:
         print(f"🔥 {removed_count} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
 
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(new_retry)}")
-    print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
+    print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, 过滤 {len(rules_to_validate) - added_count}")
 
 # ===============================
 # 主入口
