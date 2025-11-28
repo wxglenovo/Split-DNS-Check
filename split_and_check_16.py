@@ -174,7 +174,7 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=20):
+def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=200):
     import heapq, os
 
     # -----------------------------
@@ -183,9 +183,10 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=20):
     validated = []
     rule2part = {}
     for i in range(1, PARTS + 1):
-        f = os.path.join(DIST_DIR, f"validated_part_%d.txt" % i)
-        if os.path.isfile(f):
-            lines = f.read().splitlines()
+        file_path = os.path.join(DIST_DIR, f"validated_part_{i}.txt")
+        if os.path.isfile(file_path):
+            with open(file_path, "r", encoding="utf-8") as ff:
+                lines = ff.read().splitlines()
         else:
             lines = []
         s = set(lines)
@@ -300,6 +301,7 @@ def split_parts(all_rules, delete_counter, BALANCE_THRESHOLD=20):
 
         print(f"📄 分片 {i+1}: {len(final_rules)} 条规则 "
               f"(固定A {len(rules_A_sorted)} + 其他 {len(rules_extra_sorted)})")
+
 
 # ===============================
 # 更新 not_written_counter
