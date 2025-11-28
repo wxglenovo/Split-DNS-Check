@@ -374,6 +374,10 @@ def process_part(part, all_rules_set=None):
    
     print("--------------------------------------------------")
     # 打印写入 retry_rules.txt 信息
+    # 统计不在 all_rules 的删除规则数量
+    removed_not_in_source = sum(1 for r in new_retry if r not in all_rules_set)
+    print(f"📉 本次删除的 {len(new_retry)} 条规则中，有 {removed_not_in_source} 条不在 all_rules（源规则已不存在）")
+
     if new_retry:
         print(f"🔥 {removed_count} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
 
