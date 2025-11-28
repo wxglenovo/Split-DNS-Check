@@ -175,44 +175,88 @@ def download_all_sources():
 # 分片切分
 # ===============================
 def split_parts(all_rules, delete_counter):
-    part_existing = {}
+    # ----------------------------------
+    # 1) 加载 validated_part_X，并拆成“固定”与“可移动”
+    # ----------------------------------
+    part_fixed = {i: [] for i in range(1, PARTS + 1)}     # dc < 20
+    part_movable = []                                      # dc ≥20 + 所有新规则
+
+    # 加载已有分片
+    validated = {}
     for i in range(1, PARTS + 1):
         f = os.path.join(DIST_DIR, f"validated_part_{i}.txt")
-        if os.path.exists(f):
+        if os.path.isfile(f):
             with open(f, "r", encoding="utf-8") as ff:
-                part_existing[i] = set(l.strip() for l in ff if l.strip())
+                validated[i] = set(l.strip() for l in ff if l.strip())
         else:
-            part_existing[i] = set()
+            validated[i] = set()
 
-    filtered_rules = [r for r in all_rules if int(delete_counter.get(r, 4)) < 97]
-    rule_to_part = {}
+    # 过滤 delete_counter≥97（不参与验证）
+    filtered_rules = [r for r in all_rules if int(delete_counter.get(r, 64)) < 97]
+
+    # 分类固定 / 可移动
     for r in filtered_rules:
+        dc = int(delete_counter.get(r, 64))
         assigned = False
-        for i in range(1, PARTS + 1):
-            if r in part_existing[i]:
-                rule_to_part[r] = i
+
+        # 找是否属于旧分片
+        for p in range(1, PARTS + 1):
+            if r in validated[p]:
+                if dc < 20:
+                    part_fixed[p].append((r, dc))      # 固定规则
+                else:
+                    part_movable.append((r, dc))       # 可移动
                 assigned = True
                 break
+
+        # 新规则 → 可移动
         if not assigned:
-            rule_to_part[r] = None
+            part_movable.append((r, dc))
 
-    part_buckets = {i: [] for i in range(1, PARTS + 1)}
-    for r, p in rule_to_part.items():
-        if p:
-            part_buckets[p].append((r, int(delete_counter.get(r, 4))))
-    new_rules = [(r, int(delete_counter.get(r, 4))) for r, p in rule_to_part.items() if p is None]
-    new_rules.sort(key=lambda x: x[1])
-    for r, cnt in new_rules:
-        target = min(part_buckets.items(), key=lambda x: len(x[1]))[0]
-        part_buckets[target].append((r, cnt))
+    # ----------------------------------
+    # 2) 分片初始状态：仅放固定规则
+    # ----------------------------------
+    part_buckets = {i: list(part_fixed[i]) for i in range(1, PARTS + 1)}
 
+    # ----------------------------------
+    # 3) 可移动规则按 delete_counter 降序移动（优先移走大的）
+    # ----------------------------------
+    part_movable.sort(key=lambda x: x[1], reverse=True)  # dc 大 → 优先移动
+
+    import heapq
+    # 最小堆按分片数量排序（用于负载均衡）
+    heap = [(len(part_buckets[i]), i) for i in range(1, PARTS + 1)]
+    heapq.heapify(heap)
+
+    for r, dc in part_movable:
+        size, part_id = heapq.heappop(heap)
+        part_buckets[part_id].append((r, dc))
+        heapq.heappush(heap, (size + 1, part_id))
+
+    # ----------------------------------
+    # 4) 写回文件：固定优先→再按 dc 排序
+    # ----------------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
+
     for i in range(1, PARTS + 1):
+        # 固定规则先写（但内部按 dc 排）
+        fixed_sorted = sorted(part_fixed[i], key=lambda x: x[1])
+
+        # 可移动规则也按 dc 排
+        movable_sorted = sorted(
+            [x for x in part_buckets[i] if x not in part_fixed[i]],
+            key=lambda x: x[1]
+        )
+
+        final_rules = [r for r, dc in (fixed_sorted + movable_sorted)]
         filename = os.path.join(TMP_DIR, f"part_{i:02d}.txt")
-        rules_only = [r for r, cnt in sorted(part_buckets[i], key=lambda x: x[0])]
+
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(rules_only))
-        print(f"📄 分片 {i}: {len(rules_only)} 条规则 → {filename}")
+            f.write("\n".join(final_rules))
+
+        print(f"📄 分片 {i}: {len(final_rules)} 条规则 → {filename} "
+              f"(固定 {len(fixed_sorted)} + 移动 {len(movable_sorted)})")
+
 
 # ===============================
 # 更新 not_written_counter
