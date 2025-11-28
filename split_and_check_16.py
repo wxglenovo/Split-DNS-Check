@@ -174,7 +174,7 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-from collections import deque, defaultdict
+from collections import deque
 
 def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=2000):
     import os
@@ -215,9 +215,9 @@ def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=200
         if dc_raw >= 97:
             continue
         group_dc = dc_raw // 16
-        if group_dc == 0:  # 固定A规则跳过
+        if group_dc == 0:
             continue
-        if group_dc == 1 and r in existing_rules:  # 固定B已存在跳过
+        if group_dc == 1 and r in existing_rules:
             continue
         if r not in existing_rules:
             movable_rules.append(r)
@@ -235,17 +235,19 @@ def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=200
     # 4) 初始化分片桶（deque 高速操作）
     # -----------------------------
     rules_bucket = [deque(fixed_A_rules_per_part[i] + fixed_B_rules_per_part[i]) for i in range(PARTS)]
-    dc_bucket = [defaultdict(int) for _ in range(PARTS)]
+    dc_bucket = [ [0]*7 for _ in range(PARTS)]  # group_dc 0~6
+
     for i in range(PARTS):
         for r in rules_bucket[i]:
-            dc_bucket[i][int(delete_counter.get(r,64))//16] += 1
+            dc = int(delete_counter.get(r,64))//16
+            dc_bucket[i][dc] += 1
 
     # -----------------------------
-    # 5) 固定A/B规则动态解锁（阈值控制）
+    # 5) 固定A/B规则动态解锁
     # -----------------------------
     total_rules = len(set(all_rules))
     target_per_part = total_rules // PARTS
-    extra = total_rules % PARTS  # 多余条数，前 extra 分片 +1
+    extra = total_rules % PARTS
 
     unlocked_rules = []
     unlocked_dc = []
@@ -255,26 +257,25 @@ def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=200
         excessA = len(fixed_A_rules_per_part[i]) - target_per_part
         if excessA > fixedA_thresh:
             to_unlock = min(excessA, len(fixed_A_rules_per_part[i]))
-            unlocked_rules.extend(fixed_A_rules_per_part[i][:to_unlock])
-            unlocked_dc.extend([0]*to_unlock)
-            rules_bucket[i] = deque(list(rules_bucket[i])[to_unlock:])
-            for r in fixed_A_rules_per_part[i][:to_unlock]:
+            for _ in range(to_unlock):
+                r = rules_bucket[i].popleft()
                 dc_bucket[i][0] -= 1
-
+                unlocked_rules.append(r)
+                unlocked_dc.append(0)
         # 固定B规则动态解锁
         excessB = len(fixed_B_rules_per_part[i]) - target_per_part
         if excessB > fixedB_thresh:
             to_unlock = min(excessB, len(fixed_B_rules_per_part[i]))
-            unlocked_rules.extend(fixed_B_rules_per_part[i][:to_unlock])
-            unlocked_dc.extend([1]*to_unlock)
-            rules_bucket[i] = deque(list(rules_bucket[i])[to_unlock:])
-            for r in fixed_B_rules_per_part[i][:to_unlock]:
+            for _ in range(to_unlock):
+                r = rules_bucket[i].popleft()
                 dc_bucket[i][1] -= 1
+                unlocked_rules.append(r)
+                unlocked_dc.append(1)
 
     # -----------------------------
     # 6) 批量均衡分配可移动规则 + 解锁规则
     # -----------------------------
-    all_mov_rules = [r for r in movable_rules + unlocked_rules if r not in set().union(*rules_bucket)]
+    all_mov_rules = [r for r in movable_rules + unlocked_rules if r not in existing_rules]
     all_mov_dc = [movable_dc_group[i] if i<len(movable_dc_group) else unlocked_dc[i-len(movable_dc_group)]
                   for i in range(len(all_mov_rules))]
 
@@ -283,10 +284,11 @@ def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=200
         min_idx = current_sizes.index(min(current_sizes))
         rules_bucket[min_idx].append(r)
         dc_bucket[min_idx][dc] += 1
+        existing_rules.add(r)
         current_sizes[min_idx] += 1
 
     # -----------------------------
-    # 7) 最终微调 ±1 条
+    # 7) 微调 ±1 条
     # -----------------------------
     final_target_sizes = [target_per_part + (1 if i<extra else 0) for i in range(PARTS)]
     while True:
@@ -294,7 +296,6 @@ def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=200
         min_idx = current_sizes.index(min(current_sizes))
         if current_sizes[max_idx] - current_sizes[min_idx] <= 1:
             break
-        # deque pop + append，快速交换
         r = rules_bucket[max_idx].pop()
         dc = int(delete_counter.get(r,64))//16
         rules_bucket[min_idx].append(r)
@@ -309,16 +310,16 @@ def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=200
     os.makedirs(TMP_DIR, exist_ok=True)
     for i in range(PARTS):
         final_rules = list(rules_bucket[i])
-        fixedA_count = len([r for r in final_rules if int(delete_counter.get(r,64))//16==0])
-        fixedB_count = len([r for r in final_rules if int(delete_counter.get(r,64))//16==1])
+        fixedA_count = sum(1 for r in final_rules if int(delete_counter.get(r,64))//16==0)
+        fixedB_count = sum(1 for r in final_rules if int(delete_counter.get(r,64))//16==1)
         moved_count = len(final_rules) - fixedA_count - fixedB_count
-        counter_str = ", ".join(f"g{k}:{v}" for k, v in sorted(dc_bucket[i].items()))
+        counter_str = ", ".join(f"g{k}:{v}" for k,v in enumerate(dc_bucket[i]) if v>0)
         print(f"📄 分片 {i+1}: {len(final_rules)} 条规则 "
               f"(固定A {fixedA_count} + 固定B {fixedB_count} + 移动 {moved_count}) "
               f"| group_dc 分布: {counter_str}")
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8") as f:
-            f.write("\n".join(final_rules))
+            f.writelines(r+"\n" for r in final_rules)
 
 
 # ===============================
