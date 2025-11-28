@@ -374,6 +374,9 @@ def update_not_written_counter(part, valid_rules, all_rules_set):
 # ===============================
 # 处理分片
 # ===============================
+import os
+from collections import Counter
+
 def process_part(part, all_rules_set=None):
     part = int(part)
     part_key = f"validated_part_{part}"
@@ -399,11 +402,13 @@ def process_part(part, all_rules_set=None):
     if os.path.exists(RETRY_FILE):
         with open(RETRY_FILE, "r", encoding="utf-8") as rf:
             retry_rules = [r.strip() for r in rf if r.strip()]
-        for r in reversed(retry_rules):
-            if r not in rules_to_validate:
-                rules_to_validate.insert(0, r)
-                to_retry_inserted += 1
-        open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
+        # 优化插入：一次性拼接
+        insert_rules = [r for r in retry_rules if r not in rules_to_validate]
+        rules_to_validate = insert_rules + rules_to_validate
+        to_retry_inserted = len(insert_rules)
+        # 清空 retry 文件
+        with open(RETRY_FILE, "w", encoding="utf-8") as rf:
+            pass
         if to_retry_inserted:
             print(f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片顶部")
 
@@ -416,16 +421,11 @@ def process_part(part, all_rules_set=None):
 
     # 更新 delete_counter
     delete_counter = load_bin(DELETE_COUNTER_FILE)
-    for r in valid_rules:
-        delete_counter[r] = 0
     for r in rules_to_validate:
-        if r not in valid_rules:
-            delete_counter[r] = int(delete_counter.get(r, 64)) + 1
+        delete_counter[r] = 0 if r in valid_rules else int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # ============================================================
     # 读取 DIST_DIR/validated_part_X.txt 已存在的老规则
-    # ============================================================
     if os.path.exists(validated_file):
         with open(validated_file, "r", encoding="utf-8") as vf:
             existing_rules = set(line.strip() for line in vf if line.strip())
@@ -436,25 +436,22 @@ def process_part(part, all_rules_set=None):
     counter = load_bin(NOT_WRITTEN_FILE)
     part_counter = counter.get(part_key, {})
 
-    # 使旧规则至少有 write_counter
+    # 保证旧规则至少有 write_counter
     for r in existing_rules:
         if r not in part_counter:
             part_counter[r] = WRITE_COUNTER_MAX
 
-    # 调用核心更新逻辑
+    # 核心更新逻辑
     removed_count, new_retry, removed_no_retry = update_not_written_counter(
         part, valid_rules, all_rules_set
     )
 
-    # 重新取更新后的 part_counter
+    # 重新读取更新后的 part_counter
     counter_data = load_bin(NOT_WRITTEN_FILE).get(part_key, {})
     final_rules = sorted(counter_data.keys())
 
-
-    # =============================
-    # 写回 DIST_DIR/validated_part_XX.txt  ←（修复关键点）
-    # =============================
-    with open(validated_file, "w", encoding="utf-8") as vf:
+    # 写回 validated_part_X.txt，保证 UTF-8 BOM + 换行
+    with open(validated_file, "w", encoding="utf-8-sig", newline="\n") as vf:
         vf.write("\n".join(final_rules))
     print(f"💾 validated_part_{part}.txt 已更新到: {validated_file}")
 
@@ -465,10 +462,7 @@ def process_part(part, all_rules_set=None):
             counts[v] += 1
 
     # delete_counter 统计
-    delete_counts = {}
-    for r in final_rules:
-        cnt = int(delete_counter.get(r, 0))
-        delete_counts[cnt] = delete_counts.get(cnt, 0) + 1
+    delete_counts = Counter(delete_counter[r] for r in final_rules)
 
     print("\n📊 当前分片 write_counter 规则统计:")
     for i in range(1, WRITE_COUNTER_MAX + 1):
@@ -485,6 +479,7 @@ def process_part(part, all_rules_set=None):
         print(f"🔥 本次写入 retry_rules.txt 的规则共有 {len(new_retry)} 条")
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 成功 {added_count}, 删除 {removed_count}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, 过滤 {len(rules_to_validate) - added_count}")
+
 
 
 # ===============================
