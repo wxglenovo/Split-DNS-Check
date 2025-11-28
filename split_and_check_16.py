@@ -92,9 +92,14 @@ def check_domain(rule):
 # 下载并合并规则源
 # ===============================
 def download_all_sources():
+    """
+    下载并合并规则源，返回合并后的 all_rules 列表（去重，保留原始字符串格式）。
+    同时按你的 delete_counter 规则更新并保存 delete_counter.bin，
+    并调用 split_parts 切分需要验证的规则到 TMP_DIR/part_XX.txt。
+    """
     if not os.path.exists(URLS_TXT):
         print("❌ urls.txt 不存在")
-        return False
+        return []
 
     print("📥 下载规则源...")
     all_rules = []
@@ -113,6 +118,12 @@ def download_all_sources():
             print(f"⚠ 下载失败 {url}: {e}")
 
     print(f"✅ 合并 {len(all_rules)} 条规则")
+    # 保持原有顺序但去重（用 dict 保序去重）
+    seen = {}
+    for r in all_rules:
+        if r not in seen:
+            seen[r] = True
+    all_rules = list(seen.keys())
     all_rules_set = set(all_rules)
 
     # 载入 delete_counter
@@ -184,8 +195,10 @@ def download_all_sources():
 
     # 切分进入验证的规则
     split_parts(list(rules_to_validate), updated_delete_counter)
-    return True
-    
+
+    # 返回内存中的合并规则列表，供 process_part 使用（不写 all_rules.txt）
+    return all_rules
+
 # ===============================
 # 分片 + 负载均衡
 # ===============================
@@ -285,18 +298,33 @@ def dns_validate(rules, part):
     return valid_rules
 
 # ===============================
-# 处理分片
+# 处理分片（现在接收可选的 all_rules）
 # ===============================
-def process_part(part):
+def process_part(part, all_rules=None):
+    """
+    part: 分片编号 1..PARTS
+    all_rules: 可选，download_all_sources 返回的合并规则列表（内存），若为 None 则内部调用 download_all_sources 获取
+    """
     part = int(part)
     part_file = os.path.join(TMP_DIR, f"part_{part:02d}.txt")
 
+    # 如果分片文件缺失，先下载并切片（download_all_sources 会生成分片）
     if not os.path.exists(part_file):
         print(f"⚠ 分片 {part} 缺失，重新拉取规则…")
-        download_all_sources()
+        all_rules = download_all_sources()
     if not os.path.exists(part_file):
         print("❌ 分片仍不存在，终止")
         return
+
+    # 如果调用时没有传入 all_rules，则尝试调用 download_all_sources 获取（不会生成文件，只返回合并列表）
+    if all_rules is None:
+        all_rules = download_all_sources()
+
+    # 确保 all_rules 为列表
+    if not isinstance(all_rules, (list, tuple, set)):
+        all_rules = []
+
+    all_rules_set = set(all_rules)
 
     lines = [l.strip() for l in open(part_file, "r", encoding="utf-8").read().splitlines() if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
@@ -312,6 +340,7 @@ def process_part(part):
             for r in reversed(retry_rules):
                 if r not in rules_to_validate:
                     rules_to_validate.insert(0, r)
+            # 这里我们仍选择清空 retry 文件（分片执行期间，retry 已被插入）
             open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
 
     valid_rules = set(dns_validate(rules_to_validate, part))
@@ -341,15 +370,6 @@ def process_part(part):
     part_key = f"validated_part_{part}"
     part_counter = counter.get(part_key, {})
     counter.setdefault(part_key, part_counter)
-
-    # ------- 修复: 读取 all_rules.txt，而不是使用不存在的 all_rules -------
-    all_rules_file = os.path.join(DIST_DIR, "all_rules.txt")
-    if os.path.exists(all_rules_file):
-        with open(all_rules_file, "r", encoding="utf-8") as f:
-            all_rules_set = set(l.strip() for l in f if l.strip())
-    else:
-        all_rules_set = set()
-    # ----------------------------------------------------------------------
 
     # DNS 成功 → write_counter 重置
     for r in valid_rules:
@@ -402,11 +422,14 @@ if __name__ == "__main__":
     parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
     args = parser.parse_args()
 
+    # 如果缺少分片或用户要求强制更新，先下载合并并生成分片（download_all_sources 返回合并后的规则列表）
+    all_rules = None
     if args.force_update or not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
-        download_all_sources()
+        all_rules = download_all_sources()
 
     if args.part:
-        process_part(args.part)
+        # 传入 all_rules（如果有），否则 process_part 内部会再次调用 download_all_sources 获取
+        process_part(args.part, all_rules=all_rules)
     else:
         print("提示: 使用 --part 指定要验证的分片（1~16）")
