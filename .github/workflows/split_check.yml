@@ -110,7 +110,7 @@ jobs:
       - name: ✅ 确保规则文件与分片存在
         run: |
           if [ -f "merged_rules.txt" ] && [ -f "tmp/part_01.txt" ]; then
-            echo "ℹ️ merged_rules.txt 和 tmp/part_01.txt 已存在"
+            echo "ℹ️ merged_rules.txt 和 tmp/part_X.txt 已存在"
           else
             python3 split_and_check_16.py --force-update
           fi
