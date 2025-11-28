@@ -295,7 +295,6 @@ def process_part(part, all_rules_set=None):
             if r not in rules_to_validate:
                 rules_to_validate.insert(0, r)
                 to_retry_inserted += 1
-        # 清空原 retry 文件
         open(RETRY_FILE, "w", encoding="utf-8").truncate(0)
         if to_retry_inserted:
             print(f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片顶部")
@@ -303,6 +302,7 @@ def process_part(part, all_rules_set=None):
     # DNS 验证
     valid_rules = set(dns_validate(rules_to_validate, part))
     added_count = len(valid_rules)
+
     if all_rules_set is None:
         all_rules_set = set(rules_to_validate)
 
@@ -315,9 +315,9 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # ============================
-    # 读取 DIST_DIR/validated_part_X.txt 已存在规则
-    # ============================
+    # ============================================================
+    # 读取 DIST_DIR/validated_part_X.txt 已存在的老规则
+    # ============================================================
     if os.path.exists(validated_file):
         with open(validated_file, "r", encoding="utf-8") as vf:
             existing_rules = set(line.strip() for line in vf if line.strip())
@@ -328,22 +328,27 @@ def process_part(part, all_rules_set=None):
     counter = load_bin(NOT_WRITTEN_FILE)
     part_counter = counter.get(part_key, {})
 
-    # 初始化老规则 write_counter
+    # 使旧规则至少有 write_counter
     for r in existing_rules:
         if r not in part_counter:
             part_counter[r] = WRITE_COUNTER_MAX
 
-    # 更新 not_written_counter
+    # 调用核心更新逻辑
     removed_count, new_retry, removed_no_retry = update_not_written_counter(
         part, valid_rules, all_rules_set
     )
 
-    # 写回 validated_part_X.txt（TMP_DIR）
+    # 重新取更新后的 part_counter
     counter_data = load_bin(NOT_WRITTEN_FILE).get(part_key, {})
     final_rules = sorted(counter_data.keys())
-    with open(part_file, "w", encoding="utf-8") as f:
-        f.write("\n".join(final_rules))
-    print(f"💾 分片 {part} 已更新到文件: {part_file}")
+
+
+    # =============================
+    # 写回 DIST_DIR/validated_part_XX.txt  ←（修复关键点）
+    # =============================
+    with open(validated_file, "w", encoding="utf-8") as vf:
+        vf.write("\n".join(final_rules))
+    print(f"💾 validated_part_{part}.txt 已更新到: {validated_file}")
 
     # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
