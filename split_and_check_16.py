@@ -333,6 +333,10 @@ def process_part(part, all_rules_set=None):
     final_rules = sorted(set(counter_data.keys()))
     to_retry = [r for r, v in counter_data.items() if v <= 0]
 
+    # 打印删除规则信息
+    for r in to_retry:
+        print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
+        
     # write_counter 统计
     counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
     for v in counter_data.values():
