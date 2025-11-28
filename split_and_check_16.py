@@ -235,6 +235,7 @@ def update_not_written_counter(part, valid_rules, all_rules_set):
     更新 not_written_counter 并返回:
     - removed_count: 本次从 validated 中删除的规则总数（包含仅删除和写入 retry 的）
     - new_retry: 实际写入 retry_rules.txt 的新规则列表
+    - removed_no_retry_count: 仅删除（❌）的规则数量
 
     规则：
     ① write_counter <= 1 且不在 all_rules → 删除（不写 retry）
@@ -300,8 +301,9 @@ def update_not_written_counter(part, valid_rules, all_rules_set):
     save_bin(NOT_WRITTEN_FILE, not_written)
 
     removed_count = len(to_remove_no_retry) + len(to_retry)
-    return removed_count, new_retry
+    removed_no_retry_count = len(to_remove_no_retry)
 
+    return removed_count, new_retry, removed_no_retry_count
 
 # ===============================
 # 处理分片
@@ -350,8 +352,10 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # 更新 not_written_counter
-    removed_count, new_retry = update_not_written_counter(part, valid_rules, all_rules_set)
+    # 更新 not_written_counter —— 现在返回 3 个值
+    removed_count, new_retry, removed_no_retry = update_not_written_counter(
+        part, valid_rules, all_rules_set
+    )
 
     # ===== 打印统计 =====
     part_key = f"validated_part_{part}"
@@ -381,14 +385,15 @@ def process_part(part, all_rules_set=None):
 
     print("--------------------------------------------------")
 
-    # 🔥 本次写入 retry 的是真正 write_counter<=0 的规则
-    removed_not_in_source = sum(1 for r in new_retry if r not in all_rules_set)
-    print(f"📉 本次写入 retry_rules.txt 的 {len(new_retry)} 条规则中，有 {removed_not_in_source} 条不在 all_rules（源规则已不存在）")
+    # 📉 正确统计 ❌ 删除规则数量（不写 retry 的）
+    print(f"📉 本次 ❌ 删除（write_counter<=1 且不在 all_rules）的规则共有 {removed_no_retry} 条")
 
+    # 🔥 写入 retry 的规则统计
     if new_retry:
-        print(f"🔥 {removed_count} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
+        print(f"🔥 本次写入 retry_rules.txt 的规则共有 {len(new_retry)} 条")
 
-    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(new_retry)}")
+    # 总结
+    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 成功 {added_count}, 删除 {removed_count}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, 过滤 {len(rules_to_validate) - added_count}")
 
 # ===============================
