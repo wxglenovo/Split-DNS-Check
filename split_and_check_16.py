@@ -301,6 +301,7 @@ def process_part(part, all_rules_set=None):
     print(f"⏱ 验证分片 {part}, 共 {len(lines)} 条规则")
 
     rules_to_validate = list(lines)
+
     # 插入 retry_rules
     to_retry_inserted = 0
     if os.path.exists(RETRY_FILE):
@@ -329,8 +330,19 @@ def process_part(part, all_rules_set=None):
             delete_counter[r] = int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # 更新 not_written_counter 并获取 removed_count、new_retry
+    # 更新 not_written_counter 并获取 removed_count, new_retry
     removed_count, new_retry = update_not_written_counter(part, valid_rules, all_rules_set)
+
+    # 写入 retry_rules.txt
+    if new_retry:
+        with open(RETRY_FILE, "a", encoding="utf-8") as rf:
+            for r in new_retry:
+                rf.write(r + "\n")
+        print(f"🔥 {removed_count} 条 write_counter<=0 的规则写入 retry_rules.txt（新增 {len(new_retry)} 条）")
+
+    # 打印删除规则信息
+    for r in new_retry:
+        print(f"❌ 删除规则 {r}（write_counter<=1 且不在 all_rules）")
 
     # ===== 打印统计 =====
     part_key = f"validated_part_{part}"
@@ -355,10 +367,11 @@ def process_part(part, all_rules_set=None):
         if counts[i]:
             print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
 
-    print("\n📊 当前分片 delete_counter 规则统计:")
+    print("\n📊 当前分片 delete_counter 规则统计:")       
     for k in sorted(delete_counts):
         print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
 
+   
     print("--------------------------------------------------")
     # 打印写入 retry_rules.txt 信息
     if new_retry:
