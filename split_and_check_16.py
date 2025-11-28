@@ -8,6 +8,8 @@ import argparse
 import dns.resolver
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
+from collections import Counter
+from collections import deque
 
 # ===============================
 # 配置区
@@ -174,8 +176,6 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-from collections import deque
-
 def split_parts(all_rules, delete_counter, fixedA_thresh=1000, fixedB_thresh=2000):
     import os
 
@@ -374,9 +374,6 @@ def update_not_written_counter(part, valid_rules, all_rules_set):
 # ===============================
 # 处理分片
 # ===============================
-import os
-from collections import Counter
-
 def process_part(part, all_rules_set=None):
     part = int(part)
     part_key = f"validated_part_{part}"
@@ -461,8 +458,8 @@ def process_part(part, all_rules_set=None):
         if 1 <= v <= WRITE_COUNTER_MAX:
             counts[v] += 1
 
-    # delete_counter 统计
-    delete_counts = Counter(delete_counter[r] for r in final_rules)
+    # delete_counter 统计，安全处理 KeyError
+    delete_counts = Counter(delete_counter.get(r, 0) for r in final_rules)
 
     print("\n📊 当前分片 write_counter 规则统计:")
     for i in range(1, WRITE_COUNTER_MAX + 1):
@@ -479,8 +476,6 @@ def process_part(part, all_rules_set=None):
         print(f"🔥 本次写入 retry_rules.txt 的规则共有 {len(new_retry)} 条")
     print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 成功 {added_count}, 删除 {removed_count}")
     print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, 过滤 {len(rules_to_validate) - added_count}")
-
-
 
 # ===============================
 # 主入口
