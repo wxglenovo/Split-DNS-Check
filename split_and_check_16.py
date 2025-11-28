@@ -341,7 +341,7 @@ def process_part(part):
     part_key = f"validated_part_{part}"
     part_counter = counter.get(part_key, {})
     counter.setdefault(part_key, part_counter)
-    all_rules_set = set(lines)
+    all_rules_set = set(all_rules)
 
     # DNS 成功 → write_counter 重置
     for r in valid_rules:
