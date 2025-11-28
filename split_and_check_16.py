@@ -158,20 +158,30 @@ def download_all_sources():
 
     save_bin(DELETE_COUNTER_FILE, updated_counter)
 
+    # ===== 输出信息 =====
     if reset_rules:
-        print(f"🔁 重置为80规则数: {len(reset_rules)}")
+        for rule in list(reset_rules)[:20]:
+            print(f"🔁 删除计数达到114，重置为 80：{rule}")
+        print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥114，已重置为 80")
+
     if removed_rules:
-        print(f"🚮 删除规则数: {len(removed_rules)}")
+        for rule in list(removed_rules)[:20]:
+            print(f"🚮 删除计数达到118，移除规则：{rule}")
+        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥118 且不在源文件，已移除")
+
     if skipped_rules:
-        print(f"⏩ 跳过验证规则数: {len(skipped_rules)}")
+        for rule in list(skipped_rules)[:20]:
+            print(f"⏭ 删除计数≥97，跳过验证：{rule}")
+        print(f"⏩ 共 {len(skipped_rules)} 条规则 delete_counter≥97 被跳过验证")
 
     print(
         f"📚 合并总规则 {len(all_rules)} 条，"
         f"⏩ 跳过 {len(skipped_rules)} 条（delete_counter≥97），"
         f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<97），"
-        f"🪓 切分为 {PARTS} 片"
+        f"🪓 即将切分为 {PARTS} 片"
     )
 
+    # 切分进入验证的规则
     split_parts(list(rules_to_validate), updated_counter)
     return all_rules
 
@@ -312,8 +322,29 @@ def process_part(part, all_rules_set=None):
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
     removed_count = update_not_written_counter(part, valid_rules, all_rules_set)
-    print(f"✅ 分片 {part} 更新完成: DNS验证成功 {added_count}, 移除 {removed_count}, 分片总 {len(lines)}")
+     # ===== 打印统计 =====
+    counts = {i: 0 for i in range(1, WRITE_COUNTER_MAX + 1)}
+    for v in part_counter.values():
+        if 1 <= v <= WRITE_COUNTER_MAX:
+            counts[v] += 1
+
+    delete_counts = {}
+    for r in final_rules:
+        cnt = int(delete_counter.get(r, 0))
+        delete_counts[cnt] = delete_counts.get(cnt, 0) + 1
+
+    print("\n📊 当前分片 write_counter 规则统计:")
+    for i in range(1, WRITE_COUNTER_MAX + 1):
+        if counts[i]:
+            print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
+
+    print("\n📊 当前分片 delete_counter 规则统计:")       
+    for k in sorted(delete_counts):
+        print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
+
     print("--------------------------------------------------")
+    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 验证成功 {added_count}, write_counter<=0 移除 {len(to_retry)}")
+    print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {len(to_retry)}, 过滤 {len(rules_to_validate) - added_count}")
 
 # ===============================
 # 主入口
