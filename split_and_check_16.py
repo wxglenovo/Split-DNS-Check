@@ -159,15 +159,33 @@ def download_all_sources():
             rules_to_validate.add(rule)
 
     save_bin(DELETE_COUNTER_FILE, updated_delete_counter)
+    # ===== 输出信息 =====
+    if reset_rules:
+        for rule in list(reset_rules)[:20]:
+            print(f"🔁 删除计数达到114，重置为 80：{rule}")
+        print(f"🔢 共 {len(reset_rules)} 条规则 delete_counter≥114，已重置为 80")
 
-    print(f"📚 合并总规则 {len(all_rules)} 条，"
-          f"⏩ 跳过 {len(skipped_rules)} 条（delete_counter≥97），"
-          f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<97）")
+    if removed_rules:
+        for rule in list(removed_rules)[:20]:
+            print(f"🚮 删除计数达到118，移除规则：{rule}")
+        print(f"🗑️ 共 {len(removed_rules)} 条规则 delete_counter≥118 且不在源文件，已移除")
 
-    # 切分
+    if skipped_rules:
+        for rule in list(skipped_rules)[:20]:
+            print(f"⏭ 删除计数≥97，跳过验证：{rule}")
+        print(f"⏩ 共 {len(skipped_rules)} 条规则 delete_counter≥97 被跳过验证")
+
+    print(
+        f"📚 合并总规则 {len(all_rules)} 条，"
+        f"⏩ 跳过 {len(skipped_rules)} 条（delete_counter≥97），"
+        f"🧮 需要验证 {len(rules_to_validate)} 条（delete_counter<97），"
+        f"🪓 即将切分为 {PARTS} 片"
+    )
+
+    # 切分进入验证的规则
     split_parts(list(rules_to_validate), updated_delete_counter)
-    return all_rules
-
+    return True
+  
 # ===============================
 # 分片切分
 # ===============================
