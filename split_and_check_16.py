@@ -194,125 +194,122 @@ def download_all_sources():
 # 分片切分
 # ===============================
 import os
-from collections import deque
-import heapq
 import multiprocessing as mp
+from collections import defaultdict, deque
 
-# Final level optimization for rule splitting
-def split_parts(rules_to_validate, delete_counter):
-    # -------------------------
-    # 预处理 delete_counter → group_dc
-    # -------------------------
+# 优化：分步并行化和内存优化
+def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
     def group_dc(dc):
         dc = int(dc)
         if dc >= 97:
-            return 3  # 忽略
+            return 3
         if dc <= 16:
-            return 0  # A
+            return 0
         if dc <= 64:
-            return 1  # B
+            return 1
         if dc <= 96:
-            return 2  # C
+            return 2
 
     # -------------------------
-    # 1. 预处理规则，提前计算每条规则的 group_dc，并存储
+    # 1. 预处理 delete_counter → group_dc
     # -------------------------
     rule_group_dc = {r: group_dc(delete_counter.get(r, 64)) for r in rules_to_validate}
 
     # -------------------------
-    # 2. 读取 validated_part_X，确定 A 的原分片
+    # 2. 分批处理规则，避免一次性加载所有数据
     # -------------------------
-    part_A = [[] for _ in range(PARTS)]
-    for i in range(PARTS):
-        path = os.path.join(DIST_DIR, f"validated_part_{i+1}.txt")
-        if os.path.isfile(path):
-            with open(path, "r", encoding="utf-8") as f:
-                for r in f.read().splitlines():
-                    if r in rules_to_validate and rule_group_dc[r] == 0:
-                        part_A[i].append(r)
+    def process_part(part_num, rules_to_process):
+        part_A = []
+        B_rules = []
+        C_rules = []
+        # 分类规则
+        for r in rules_to_process:
+            g = rule_group_dc.get(r, 64)
+            if g == 0:
+                part_A.append(r)
+            elif g == 1:
+                B_rules.append((delete_counter.get(r, 64), r))
+            elif g == 2:
+                C_rules.append(r)
+        return part_num, part_A, B_rules, C_rules
 
     # -------------------------
-    # 3. 分类待验证规则：B / C
+    # 3. 并行处理分片的规则分配
     # -------------------------
+    num_processes = PARTS  # 根据分片数量并行处理
+    chunk_size = len(rules_to_validate) // num_processes
+    chunks = [rules_to_validate[i:i + chunk_size] for i in range(0, len(rules_to_validate), chunk_size)]
+
+    # 启动多进程
+    with mp.Pool(processes=num_processes) as pool:
+        results = pool.starmap(process_part, [(i, chunk) for i, chunk in enumerate(chunks)])
+
+    # -------------------------
+    # 4. 合并结果
+    # -------------------------
+    buckets = [deque() for _ in range(PARTS)]
+    bucket_sizes = [0] * PARTS
+    A_counts = [0] * PARTS
     B_rules = []
     C_rules = []
-    for r in rules_to_validate:
-        g = rule_group_dc[r]
-        if g == 1:
-            B_rules.append((delete_counter.get(r, 64), r))
-        elif g == 2:
-            C_rules.append((delete_counter.get(r, 64), r))
+
+    for part_num, part_A, part_B, part_C in results:
+        buckets[part_num].extend(part_A)
+        bucket_sizes[part_num] = len(part_A)
+        A_counts[part_num] = len(part_A)
+        B_rules.extend(part_B)
+        C_rules.extend(part_C)
 
     # -------------------------
-    # 4. 初始化分片桶
+    # 5. 将 B 规则分配到 A 数量最少的分片
     # -------------------------
-    buckets = [deque(part_A[i]) for i in range(PARTS)]
-    bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
-    A_counts = [len(part_A[i]) for i in range(PARTS)]
-    A_max_total = max(A_counts)
-
-    # -------------------------
-    # 5. 优化 B 和 C 的分配：直接计算分配
-    # -------------------------
-    # 先按 A 数量最少的顺序，依次将 B 分配到分片
-    B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
+    B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 排序
     for _, r in B_rules:
-        # 选择 A 数量最少的分片
         min_idx = min(range(PARTS), key=lambda i: A_counts[i])
-        # 放入 B
         buckets[min_idx].append(r)
         bucket_sizes[min_idx] += 1
-        A_counts[min_idx] += 1  # 更新 A_counts
+        A_counts[min_idx] += 1
 
     # -------------------------
-    # 6. C 分配：按 A+B 总量最少分配
+    # 6. 将 C 规则分配到当前最少的分片
     # -------------------------
-    C_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
-    for _, r in C_rules:
-        # 选择当前总量最少的分片
+    C_rules.sort(key=lambda x: delete_counter.get(x, 64))  # 按 delete_counter 排序
+    for r in C_rules:
         min_idx = min(range(PARTS), key=lambda i: bucket_sizes[i])
         buckets[min_idx].append(r)
         bucket_sizes[min_idx] += 1
 
     # -------------------------
-    # 7. 微调 ±1：只在负载不均衡时才执行
+    # 7. 微调：保证每个分片数量接近
     # -------------------------
-    max_diff = max(bucket_sizes) - min(bucket_sizes)
-    if max_diff > 1:
-        # 微调阶段优化：减少不必要的微调操作
-        while True:
-            maxi = bucket_sizes.index(max(bucket_sizes))
-            mini = bucket_sizes.index(min(bucket_sizes))
-            diff = bucket_sizes[maxi] - bucket_sizes[mini]
-            if diff <= 1:
-                break
-            move_count = diff // 2
-            for _ in range(move_count):
-                rule = buckets[maxi].pop()
-                buckets[mini].append(rule)
-                bucket_sizes[maxi] -= 1
-                bucket_sizes[mini] += 1
+    while True:
+        maxi = bucket_sizes.index(max(bucket_sizes))
+        mini = bucket_sizes.index(min(bucket_sizes))
+        if bucket_sizes[maxi] - bucket_sizes[mini] <= 1:
+            break
+        rule = buckets[maxi].pop()
+        buckets[mini].append(rule)
+        bucket_sizes[maxi] -= 1
+        bucket_sizes[mini] += 1
 
     # -------------------------
-    # 8. 批量写入分片文件与日志
+    # 8. 写入文件和日志
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
-
-    # 使用多进程进行批量文件写入
+    
     def write_part(i, rules):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
             f.write("\n".join(rules) + "\n")
-        # 统计 group_dc 分布
         gcount = {0: 0, 1: 0, 2: 0, 3: 0}
         for r in rules:
             gcount[rule_group_dc[r]] += 1
         gtext = ", ".join([f"g{k}:{v}" for k, v in sorted(gcount.items()) if v > 0])
         print(f"📄 分片 {i+1}: {len(rules)} 条规则 | group_dc 分布: {gtext}")
 
-    # 多进程写文件
     with mp.Pool(processes=PARTS) as pool:
         pool.starmap(write_part, [(i, list(buckets[i])) for i in range(PARTS)])
+
 
 # ===============================
 # 更新 not_written_counter
