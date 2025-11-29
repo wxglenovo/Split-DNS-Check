@@ -11,6 +11,8 @@ import time
 import heapq
 import multiprocessing as mp
 from collections import Counter, deque
+from collections import defaultdict, deque
+
 
 # ===============================
 # 配置区
@@ -190,6 +192,26 @@ def download_all_sources():
 # ===============================
 # 分片切分优化
 # ===============================
+
+# 处理每个分片的规则
+def process_part(part_num, rules_to_process, rule_group_dc, delete_counter, PARTS=16):
+    part_A = []
+    B_rules = []
+    C_rules = []
+    
+    # 分类规则
+    for r in rules_to_process:
+        g = rule_group_dc.get(r, 64)
+        if g == 0:
+            part_A.append(r)
+        elif g == 1:
+            B_rules.append((delete_counter.get(r, 64), r))
+        elif g == 2:
+            C_rules.append(r)
+    
+    return part_num, part_A, B_rules, C_rules
+
+# 优化：分步并行化和内存优化
 def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
     def group_dc(dc):
         dc = int(dc)
@@ -203,39 +225,25 @@ def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
             return 2
 
     # -------------------------
-    # 预处理 delete_counter → group_dc
+    # 1. 预处理 delete_counter → group_dc
     # -------------------------
     rule_group_dc = {r: group_dc(delete_counter.get(r, 64)) for r in rules_to_validate}
 
     # -------------------------
-    # 分批处理规则
+    # 2. 分批处理规则，避免一次性加载所有数据
     # -------------------------
-    def process_part(part_num, rules_to_process):
-        part_A = []
-        B_rules = []
-        C_rules = []
-        for r in rules_to_process:
-            g = rule_group_dc.get(r, 64)
-            if g == 0:
-                part_A.append(r)
-            elif g == 1:
-                B_rules.append((delete_counter.get(r, 64), r))
-            elif g == 2:
-                C_rules.append(r)
-        return part_num, part_A, B_rules, C_rules
-
-    # -------------------------
-    # 启动多进程处理
-    # -------------------------
-    num_processes = PARTS
+    num_processes = PARTS  # 根据分片数量并行处理
     chunk_size = len(rules_to_validate) // num_processes
     chunks = [rules_to_validate[i:i + chunk_size] for i in range(0, len(rules_to_validate), chunk_size)]
 
+    # -------------------------
+    # 3. 并行处理分片的规则分配
+    # -------------------------
     with mp.Pool(processes=num_processes) as pool:
-        results = pool.starmap(process_part, [(i, chunk) for i, chunk in enumerate(chunks)])
+        results = pool.starmap(process_part, [(i, chunk, rule_group_dc, delete_counter) for i, chunk in enumerate(chunks)])
 
     # -------------------------
-    # 合并结果并分配 B 和 C 规则
+    # 4. 合并结果
     # -------------------------
     buckets = [deque() for _ in range(PARTS)]
     bucket_sizes = [0] * PARTS
@@ -250,22 +258,28 @@ def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
         B_rules.extend(part_B)
         C_rules.extend(part_C)
 
-    # 分配 B 规则到 A 数量最少的分片
-    B_rules.sort(key=lambda x: x[0])  
+    # -------------------------
+    # 5. 将 B 规则分配到 A 数量最少的分片
+    # -------------------------
+    B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 排序
     for _, r in B_rules:
         min_idx = min(range(PARTS), key=lambda i: A_counts[i])
         buckets[min_idx].append(r)
         bucket_sizes[min_idx] += 1
         A_counts[min_idx] += 1
 
-    # 分配 C 规则到当前最少的分片
-    C_rules.sort(key=lambda x: delete_counter.get(x, 64))  
+    # -------------------------
+    # 6. 将 C 规则分配到当前最少的分片
+    # -------------------------
+    C_rules.sort(key=lambda x: delete_counter.get(x, 64))  # 按 delete_counter 排序
     for r in C_rules:
         min_idx = min(range(PARTS), key=lambda i: bucket_sizes[i])
         buckets[min_idx].append(r)
         bucket_sizes[min_idx] += 1
 
-    # 微调：保证每个分片规则数量接近
+    # -------------------------
+    # 7. 微调：保证每个分片数量接近
+    # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
         mini = bucket_sizes.index(min(bucket_sizes))
@@ -276,7 +290,9 @@ def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
         bucket_sizes[maxi] -= 1
         bucket_sizes[mini] += 1
 
-    # 写入文件
+    # -------------------------
+    # 8. 写入文件和日志
+    # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
     
     def write_part(i, rules):
@@ -291,6 +307,7 @@ def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
 
     with mp.Pool(processes=PARTS) as pool:
         pool.starmap(write_part, [(i, list(buckets[i])) for i in range(PARTS)])
+
 
 # ===============================
 # 更新 not_written_counter
