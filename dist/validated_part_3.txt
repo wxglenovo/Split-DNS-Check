@@ -1,6 +1,8 @@
 ﻿*adxvip.com^
 -attr.appsflyersdk.com^
+-cookie-consent.$~script,domain=~django-cookie-consent.readthedocs.io
 -ulog.ksapisrv.com^
+/adx.$domain=~adx.uk.com|~adx.wowfi.com
 /assets/ads/*$~image,domain=~outlook.live.com
 /fans/*$domain=91porn.com|email.91dizhi.at.gmail.com.8h9.space
 /googleads.$~script,domain=~googleads.github.io
@@ -106,6 +108,7 @@ sobot.com
 |ad.anuntis.com^
 |ad.br.doubleclick.net^
 |ad.cl.doubleclick.net^
+|ad.cooks.com^
 |ad.depositfiles.com^
 |ad.digitallook.com^
 |ad.funpic.de^
@@ -150,6 +153,7 @@ sobot.com
 |adcontent.reedbusiness.com^
 |adcrops.net^
 |add.newmedia.cz^
+|adebooks.fr^
 |adexprts.com^
 |adfox.yandex.ru^
 |adfstat.yandex.ru^
@@ -216,6 +220,7 @@ sobot.com
 |ads.specificmedia.com^
 |ads.stardoll.com^
 |ads.tracfonewireless.com^
+|ads.v-lazer.com^
 |ads.videofen.com^
 |ads.xtargeting.com^
 |ads.youtube.com^
@@ -313,6 +318,7 @@ sobot.com
 |am-trc-events.taboola.com^
 |amazdideprod.112.2o7.net^
 |amazonshopbop.122.2o7.net^
+|ambien.4.p2l.info^
 |amistoconnect.net^
 |amobee-partners.tremorhub.com^
 |amocustex-app-vault.com^
@@ -429,6 +435,7 @@ sobot.com
 |auth.cityads.com^
 |autobytelcorppopup.112.2o7.net^
 |automoneygenerator.com^
+|av1.xdrig.com^
 |avaparse.ir^
 |avazunativeads.com^
 |avestim.ro^
@@ -475,6 +482,7 @@ sobot.com
 |beacon.clickequations.net^
 |beacon.gutefrage.net^
 |beacon.netflix.com^
+|beddroinse.info^
 |beffino.com^
 |bellglobemediapublishing.122.2o7.net^
 |bellsit.diagnostikoxbuenaventura.com^
@@ -761,6 +769,7 @@ sobot.com
 |d-track.send.microad.jp^
 |d11.zedo.com^
 |d1lxhc4jvstzrp.cloudfront.net^
+|d2.sina.com.cn^
 |d9.zedo.com^
 |da.denker.gq^
 |da.oipzyrzffum.ovh^
@@ -1257,6 +1266,7 @@ sobot.com
 |jelitto.pl^
 |jgen30.cjt1.net^
 |jgen36.cjt1.net^
+|jgen40.cjt1.net^
 |jlijten.nl^
 |jmanyi.click^
 |johnlewis.112.2o7.net^
@@ -1309,6 +1319,7 @@ sobot.com
 |kuikdelivery.com^
 |kvmcanada.com^
 |kvors.com^
+|la.5.p2l.info^
 |lab737.com^
 |lab88inc.112.2o7.net^
 |labashl.de^
@@ -1374,6 +1385,7 @@ sobot.com
 |ludo.ezyro.com^
 |ludvianixchainbotapp.com^
 |lufthanza.com^
+|luvyen.com^
 |luxariaelement-engine.com^
 |luxhairgrowth.com^
 |luxinft.com^
@@ -1393,6 +1405,7 @@ sobot.com
 |malcord-system.com^
 |mambon.pl^
 |manara-ai-software.com^
+|mantis.autoads.asia^
 |manualdrain.com^
 |mapcommand.com^
 |margin-felthorixsolution.com^
@@ -1468,6 +1481,7 @@ sobot.com
 |modelstall.donaldmcdougal.com^
 |moneuvre.fr^
 |monfesbit-app-tech.com^
+|moodoo.com.cn^
 |morjandhelso.top^
 |motd.pinion.gg^
 |motionspots.com^
@@ -1508,6 +1522,7 @@ sobot.com
 |naturainmente.com^
 |naturalnegumowewitaminy.pl^
 |navto-56pivarl.digital^
+|ne.5.p2l.info^
 |nebrixonvaltek110app.com^
 |nefispizza.net^
 |neo.go.sonobi.com^
@@ -1579,6 +1594,7 @@ sobot.com
 |obsidianquantrex-solution.com^
 |oemwx.insurancefiesta.com^
 |offerforge.com^
+|oh.5.p2l.info^
 |ojolink.fr^
 |okamzitynerix.com^
 |okulary-wieloogniskowe-pl.com^
@@ -1795,6 +1811,7 @@ sobot.com
 |r2.ritikajoshi.com^
 |racturrogy.com^
 |radiorage.com^
+|ragycue.com^
 |rainbow-terrace.com^
 |rajdysamochodowe.pl^
 |ralstonsyst.info^
@@ -1820,6 +1837,7 @@ sobot.com
 |registration.gimbal.com^
 |reichtumbitapp.com^
 |rejoynixy.top^
+|reklam.mynet.com^
 |remote-data.urbanairship.com^
 |rendivagptapp.com^
 |renewingfaces.com^
@@ -1877,6 +1895,7 @@ sobot.com
 |s.update.morgdog.springserve.com^
 |s.uuidksinc.net^
 |s2.bl-1.com^
+|s3.pfp.sina.net^
 |s79.research.de.com^
 |sa.aol.com.122.2o7.net^
 |sadobemetrics.dr.dk^
@@ -1908,6 +1927,7 @@ sobot.com
 |seasonale.1.p2l.info^
 |secretfiles.nocoshop.ru^
 |secure-sg.imrworldwide.com^
+|secure.marketengines.com^
 |selvioquantapp.com^
 |sensic.net^
 |seogaranti.com^
@@ -1922,6 +1942,7 @@ sobot.com
 |services.insurads.com^
 |serviceshelpers.com^
 |sexy-ch.com^
+|seyhangumrukleme.com^
 |sgin6-pdf.mdbgo.io^
 |shaddersagent-system.com^
 |shael.org^
@@ -1960,6 +1981,7 @@ sobot.com
 |skyriock.com^
 |slckg-lyoc5.ads.tremorhub.com^
 |slicktext.com^
+|slimak-pozyczki.pl^
 |slimxxxtubeidv.ddns.name^
 |slimxxxtubekgv.ddns.name^
 |slm.dantri.com.vn^
@@ -1988,6 +2010,7 @@ sobot.com
 |smser.net^
 |smutstone.com^
 |snagafinvex.com^
+|snaps.vidiemi.com^
 |sneakersowo.pl^
 |sniadaniowaklasa.pl^
 |snoweeanalytics.com^
@@ -2108,6 +2131,7 @@ sobot.com
 |swap-4000adipex.com^
 |swap200exalgosystem.com^
 |swap20sanorex.com^
+|sweetsnacksbd.xyz^
 |swiftlink-nexora.net^
 |switch-app.net^
 |sworkitads.herokuapp.com^
@@ -2504,6 +2528,7 @@ sobot.com
 |www.arenabinicilik.com^
 |www.arklighting.co^
 |www.armorcoun.massokineortho.com^
+|www.arriendohogar.cl^
 |www.asantehsil.com^
 |www.astroarge.com^
 |www.atakumdis.net^
@@ -2573,6 +2598,7 @@ sobot.com
 |www.classifieds1000.com^
 |www.cleansearch.net^
 |www.cleansite.us^
+|www.clickcash.com^
 |www.clickdensity.com^
 |www.clickmeter.com^
 |www.clickterra.net^
@@ -2663,6 +2689,7 @@ sobot.com
 |www.foaloft.com^
 |www.fomyapi.com^
 |www.forcetowerinvestors.com^
+|www.formessengers.com^
 |www.forum.ero-advertising.com^
 |www.framar.plus.com^
 |www.freecamdollars.com^
@@ -2733,6 +2760,7 @@ sobot.com
 |www.infinity-bitwave-app.net^
 |www.informcje1.is-best.net^
 |www.infra.by^
+|www.inkaemlak.com^
 |www.intel-chenix-400.com^
 |www.interface-e33s.onrender.com^
 |www.interia-ek.ru^
@@ -2741,6 +2769,7 @@ sobot.com
 |www.iovation.com^
 |www.istanbulgazetesi.net^
 |www.istanbulgumus.net^
+|www.iyzitrade.com^
 |www.jameshamilton.shop^
 |www.jaster.pl^
 |www.jietounews.com^
@@ -2750,17 +2779,22 @@ sobot.com
 |www.jordanbuty.pl^
 |www.jubapolls.com^
 |www.kapancisutmamulleri.net^
+|www.karazade.com^
 |www.karimman.ir^
+|www.kayseridolgubotoks.com^
 |www.kdf-podatki.pl^
 |www.kequa.shop^
 |www.keratos.world^
+|www.kervansaraytermalotel.com^
 |www.ketoactives.pl^
 |www.ketodietnd.com^
+|www.kiralikfotokopimakinesi.net^
 |www.kitchentablegang.org^
 |www.kjk-partner.com^
 |www.kommornik.pl^
 |www.kristapsraats.com^
 |www.ksckoiubte.com^
+|www.kumpirye.com^
 |www.kunsttruhe.com^
 |www.kupujemycopolskie.pl^
 |www.kuzijey.com^
@@ -2877,6 +2911,7 @@ sobot.com
 |www.pornmania.pl^
 |www.portaldruku.pl^
 |www.powiekszgo.c.pl^
+|www.praize19791.duckdns.org^
 |www.pressurespot.com^
 |www.prismchain.digital^
 |www.prissylilyco.com^
@@ -3023,6 +3058,7 @@ sobot.com
 |www.usunwirusa.pl^
 |www.uyumgo.com^
 |www.valtrixnexusai.org^
+|www.valuehost.co.uk^
 |www.vdsacez.com^
 |www.vebexoa.com^
 |www.ventanasyaluminios.com.mx^
@@ -3091,10 +3127,12 @@ sobot.com
 |www8.addfreestats.com^
 |www9.addfreestats.com^
 |www9.counter.bloke.com^
+|wy.5.p2l.info^
 |x.disq.us^
 |x.mochiads.com^
 |x3.xclicks.net^
 |xbt-lexiprosoftware.com^
+|xdssp.mediav.com^
 |xenovexprimeapp.com^
 |xenovexprimesolution.com^
 |xesivue9.com^
@@ -3190,14 +3228,17 @@ sobot.com
 ||0-132-pay.net.daraz.com^
 ||0-132-seller-shop.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-132-zt60ekgwjuswdj1y.0-01-lib-oa-1-cf23region.net.daraz.com^
+||0-132.net.daraz.com^
 ||0-132132.0-030.net.daraz.com^
 ||0-153.net.daraz.com^
 ||0-158-apiserver.net.daraz.com^
 ||0-158-billing.0-030.net.daraz.com^
 ||0-158-email.0-030.net.daraz.com^
+||0-158acc.0-030.net.daraz.com^
 ||0-158apidocs.0-058.net.daraz.com^
 ||0-158applications.0-030.net.daraz.com^
 ||0-2cnppsprimarypaywall.0-01-lib-oa-1-cf23region.net.daraz.com^
+||0-2customer-mail.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-2customer-search.net.daraz.com^
 ||0-2customer-tomcat.net.daraz.com^
 ||0-2customerredirect.net.daraz.com^
@@ -3212,11 +3253,15 @@ sobot.com
 ||0-astrologie-17ae20-sjc14-dr01.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-astrologie-18applicationcsr78.0-astrologie.net.daraz.com^
 ||0-astrologie-alt2.net.daraz.com^
+||0-astrologie-api1webw17sellerpackaging-procar22c-pay.net.daraz.com^
 ||0-astrologie-api712349v1.net.daraz.com^
+||0-astrologie-zong-staging-wlan-switch.0-030.net.daraz.com^
+||0-astrologie3assetscar29.0-030.net.daraz.com^
 ||0-astrologietest10-390auyn41w3wpnuy4.net.daraz.com^
 ||0-astrologieu01dbaf0840-990auyn11w0wpnuy4.0-030.net.daraz.com^
 ||0-csgcsg-mailes-ofvpn-api.hb-api.tt.omtrdc.net^
 ||0-devops.0-030.net.daraz.com^
+||0-ingress.net.daraz.com^
 ||0-login.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-www-sciencedirect-com-hcmprod-staff.0-030.net.daraz.com^
 ||0-www-sciencedirect-com-stageatid.0-030.net.daraz.com^
@@ -3255,6 +3300,7 @@ sobot.com
 ||00-bootst3arketingap.net.daraz.com^
 ||00-bootstcfap.net.daraz.com^
 ||00-bootstebswwwap.net.daraz.com^
+||00-bootstemeaap.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-bootstrap-01-car21-web-wwww10node-webapp-okta-r-ch-4.dcsportal.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-bootstrap-car21c-f8.net.daraz.com^
 ||00-bootstrap.00-bootstrap.net.daraz.com^
@@ -3320,6 +3366,7 @@ sobot.com
 ||01-car21-web-wwww0dev01.net.daraz.com^
 ||01-car21-web-wwww0nopendrell.net.daraz.com^
 ||01-car21-web-wwww0nostaging-opsacademye.net.daraz.com^
+||01-car21-web-wwww11noaserver-core-webapp.net.daraz.com^
 ||01-car21-web-wwww11node-webagategate.net.daraz.com^
 ||01-car21-web-wwww11node-webappmanagement-application-spring.net.daraz.com^
 ||01-car21-web-wwww11node-webapprestrict.net.daraz.com^
@@ -3327,11 +3374,13 @@ sobot.com
 ||01-car21-web-wwww11switch-webapp.net.daraz.com^
 ||01-carstage-spyder-pdp1-web-wwww0node.net.daraz.com^
 ||01-carut1-10-r-oa-1.net.daraz.com^
+||01-carvms1c-f8.net.daraz.com^
 ||01-carwww-test1-web-wwww0node.net.daraz.com^
 ||01-cdharwwwr21-web-wwww0node.net.daraz.com^
 ||01-clistsr21-web-wwww11node-weblistspp.net.daraz.com^
 ||01-dhcmsr21-web-wwww0node.net.daraz.com^
 ||01-dr01-administrators-csr40.net.daraz.com^
+||01-lib-msgx-space-1-admin8.net.daraz.com^
 ||01-lib-oa-1-admin8-zigzagstr.net.daraz.com^
 ||01-lib-oa-1-admin8api-static-stage.net.daraz.com^
 ||01-lib-oa-1-admin8ops-ns2.viviotech.net.daraz.com^
@@ -3382,8 +3431,10 @@ sobot.com
 ||08.185.87.75.liveadvert.com^
 ||08.185.87.76.liveadvert.com^
 ||0808008a10.buzz^
+||0808008a11.buzz^
 ||088156175055.skarzysko.vectranet.pl^
 ||0938roundcube.weebly.com^
+||09c941ce3b34d373.com^
 ||09h7htngbjtos6d-c.bonnelectureatous.fr^
 ||0c74-fb9d-12c1-051d.reporo.net^
 ||0ce5822eaf.3503c6c81a.com^
@@ -3445,6 +3496,7 @@ sobot.com
 ||10120.sfap-qa1.marketingcloudqaops.com^
 ||10152.sock-qa1.marketingcloudqaops.com^
 ||101aromat.ru^
+||101freehost.com^
 ||10205.connector-qa1.marketingcloudqaapis.com^
 ||10210.url.016272.com^
 ||10234.url.016272.com^
@@ -3477,6 +3529,7 @@ sobot.com
 ||1114xsj.com^
 ||11227.url.7wkw.com^
 ||11262.engine.mobileapptracking.com^
+||11352.url.7wkw.com^
 ||115198005-566712777661099381.preview.editmysite.com^
 ||11558.url.76.url.789msw.com^
 ||1168d5a.dcomhost.com^
@@ -3487,6 +3540,7 @@ sobot.com
 ||11zz.com^
 ||123.214.67.209.static.reverse.ltdomains.com^
 ||123.ywxww.net^
+||123321.info^
 ||1234407.fls.doubleclick.net^
 ||12345vip.cn^
 ||123564.com^
@@ -3559,6 +3613,7 @@ sobot.com
 ||14232.engine.mobileapptracking.com^
 ||143.sub-70-211-102.myvzw.com^
 ||144.sub-75-219-195.myvzw.com^
+||14434.url.7wkw.com^
 ||145.70.dialup.westcall.net^
 ||14507d356.webengage.co^
 ||145586.measurementapi.com^
@@ -3568,6 +3623,7 @@ sobot.com
 ||1500022744.vodplayer.wxamedia.com^
 ||1500hf.com^
 ||15032.url.7wkw.com^
+||15033.url.7wkw.com^
 ||151.6.87.194.dynamic.dol.ru^
 ||1511930.fls.doubleclick.net^
 ||15159.url.7wkw.com^
@@ -3577,6 +3633,7 @@ sobot.com
 ||155956.measurementapi.com^
 ||155chan.gr^
 ||156.chicago-01rh15-16rt.il.dial-access.att.net^
+||15616.royalwebhosting.net^
 ||156396.engine.mobileapptracking.com^
 ||15694.hittail.com^
 ||158.6.87.194.dynamic.dol.ru^
@@ -3684,6 +3741,7 @@ sobot.com
 ||1accessories.com^
 ||1ap.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||1b9cec84d7.e5a0add388.com^
+||1bf84e04e548b771.com^
 ||1buy.me^
 ||1bva.sg.fr^
 ||1c37f52d4c.0880559526.com^
@@ -3718,6 +3776,7 @@ sobot.com
 ||1ul8dvwz0a.s.ad6media.fr^
 ||1uu44.top^
 ||2.7mono.biz^
+||2.arpun.com^
 ||2.load5.biz^
 ||2.net.daraz.com^
 ||2.www.0ko5s9l5mn93n7pq.xyz^
@@ -3749,6 +3808,7 @@ sobot.com
 ||201-13-211-252.dial-up.telesp.net.br^
 ||201-13-51-70.dsl.telesp.net.br^
 ||201-42-173-76.dsl.telesp.net.br^
+||201-42-9-21.dsl.telesp.net.br^
 ||201-43-12-97.dsl.telesp.net.br^
 ||201-43-120-128.dsl.telesp.net.br^
 ||201-43-125-92.dsl.telesp.net.br^
@@ -3768,6 +3828,7 @@ sobot.com
 ||201-92-36-66.dsl.telesp.net.br^
 ||201-92-38-221.dsl.telesp.net.br^
 ||201-92-93-89.dsl.telesp.net.br^
+||201-93-239-191.dsl.telesp.net.br^
 ||201-93-244-202.dsl.telesp.net.br^
 ||201-95-120-251.dsl.telesp.net.br^
 ||201-95-149-148.dsl.telesp.net.br^
@@ -3811,6 +3872,7 @@ sobot.com
 ||212.183.231.191.dyn.user.ono.com^
 ||212.183.235.220.dyn.user.ono.com^
 ||212.21.230.27.dyn.user.ono.com^
+||212.77.132.185.rikt.ru^
 ||212.97.181.115.dyn.user.ono.com^
 ||213-238-118-97.adsl.inetia.pl^
 ||213.231.111.148.dyn.user.ono.com^
@@ -3885,6 +3947,7 @@ sobot.com
 ||2518june2024.com^
 ||255618891.keywordblocks.com^
 ||256.bitterstrawberry.com^
+||25b57fc01f2ad4ff.com^
 ||25f91d2fb8.61011fc558.com^
 ||25inifilie.web.app^
 ||26.238.232.72.static.reverse.ltdomains.com^
@@ -3980,6 +4043,7 @@ sobot.com
 ||31381114.com^
 ||31381888.com^
 ||31382444.com^
+||31383330.com^
 ||31383453.com^
 ||31383777.com^
 ||31384123.com^
@@ -4034,6 +4098,7 @@ sobot.com
 ||3356.tm.zedo.com^
 ||336633761.keywordblocks.com^
 ||3373600.fls.doubleclick.net^
+||3389.hk^
 ||3403100.fls.doubleclick.net^
 ||3404165.notify6.com^
 ||3404423.notifysrv.com^
@@ -4079,6 +4144,7 @@ sobot.com
 ||3658380.com^
 ||3658658.com^
 ||3658873.com^
+||365bet88.com^
 ||367403.artb.adtelligent.com^
 ||36c3feec.akstat.io^
 ||36e4f0e6.akstat.io^
@@ -4110,6 +4176,7 @@ sobot.com
 ||3961386.notify6.com^
 ||3965759.fls.doubleclick.net^
 ||39m.net^
+||39trade.com^
 ||3a178ba6.meta-centerb-2du.pages.dev^
 ||3a44086f9798babc.com^
 ||3am.info^
@@ -4198,11 +4265,13 @@ sobot.com
 ||4694592.notify6.com^
 ||47-zone.com^
 ||4700.content.swrve.com^
+||470475411.keywordblocks.com^
 ||4714700.fls.doubleclick.net^
 ||4734000.fls.doubleclick.net^
 ||474-jiy-540.mktoresp.com^
 ||47nbp.voluumtrk.com^
 ||48.red-88-7-112.staticip.rima-tde.net^
+||482av.com^
 ||483824431.keywordblocks.com^
 ||4842686.notify6.com^
 ||4856482.notify6.com^
@@ -4323,6 +4392,7 @@ sobot.com
 ||566-jgi-821.mktoresp.com^
 ||56763138.com^
 ||56c2f62a60b4c7130047fdde.tracker.adotmob.com^
+||56img.com^*/baidu-promotion.js
 ||56img.com^*/search-engine-promotion.js
 ||5707657565075555350-a-1802744773732722657-s-sites.googlegroups.com^
 ||5721572.notify6.com^
@@ -4338,6 +4408,7 @@ sobot.com
 ||58adc989.webengage.co^
 ||58add99b.webengage.co^
 ||58f07e49aba0170011444a64.tracker.adotmob.com^
+||58t.cc^
 ||59.sub-75-222-135.myvzw.com^
 ||592wg.cc^
 ||5avxd.voluumtrk.com^
@@ -4355,6 +4426,7 @@ sobot.com
 ||5f651e62.akstat.io^
 ||5f651e70.akstat.io^
 ||5gloqxhfpp239mc-p.unenoteunjour.fr^
+||5i-training.net^
 ||5stars.yeesshh.com^
 ||5ubei.com^
 ||5wapp.com^$third-party
@@ -4560,6 +4632,7 @@ sobot.com
 ||7dvd.ru^
 ||7f0ce1f9-5d4f-429a-aa58-b1e211a0ae60.nuid.imrworldwide.com^
 ||7gfs.com^
+||7gg.cc^
 ||7ix.ru^
 ||7jnw4jh4-46cfcce7eb996af3838b62ef96b4f9704e320366-am1.d.aa.online-metrix.net^
 ||7kjiiu.cn^
@@ -4622,6 +4695,7 @@ sobot.com
 ||82.198.49.145.dyn.user.ono.com^
 ||82.198.50.249.dyn.user.ono.com^
 ||82.red-81-42-132.staticip.rima-tde.net^
+||8213.url.7wkw.com^
 ||82859088.com^
 ||82sn9.voluumtrk.com^
 ||83.138.233.117.dyn.user.ono.com^
@@ -4722,6 +4796,7 @@ sobot.com
 ||8b7ab78d6c.721474ff09.com^
 ||8c5c63f8b7.com^
 ||8d7af84c.sibforms.com^
+||8e7d8970b7748220.space^
 ||8ff5310a39d4.com^
 ||8fga7.adx1.com^
 ||8foxibet.com^
@@ -4941,6 +5016,8 @@ sobot.com
 ||a075.casalemedia.com^
 ||a0de95822c.856d79ad49.com^
 ||a0mett6jrj.neliver.com^
+||a1.99933.cn^
+||a1.99966.cn^
 ||a1.adthink.com^
 ||a1.suntimes.com^
 ||a1000suns.com^
@@ -5196,6 +5273,7 @@ sobot.com
 ||a7yvfcxyq7.neliver.com^
 ||a8-kouten.kouten.work^
 ||a8-wpxshin.secure.wpx.ne.jp^
+||a8.ahcswiss.com^
 ||a8.chuo-estate.net^
 ||a8.copyki-pr.com^
 ||a8.cypris-online.jp^
@@ -5342,6 +5420,7 @@ sobot.com
 ||aazhiengineers.com^
 ||ab2-84-90-156-77.netvisao.pt^
 ||ab3fykq6u1.neliver.com^
+||abadilaju.com^
 ||abasupportnetwork.com^
 ||abba-lasvegas.com^
 ||abbaiepisi.pro^
@@ -5355,6 +5434,7 @@ sobot.com
 ||abc.rwpt.top^
 ||abc.tdaedu.com^
 ||abc766.com^
+||abcdef888999.com^
 ||abcdespanol.com^
 ||abcdw0jvfn.neliver.com^
 ||abchypnose.com^
@@ -5409,6 +5489,7 @@ sobot.com
 ||abs-cdn.org^
 ||absabmarketing.com^
 ||absbs.net^
+||abscete.info^
 ||absolutecarpetcleaningaustin.com^
 ||absolutesoftech.com^
 ||abstractgorilla.pro^
@@ -6393,6 +6474,7 @@ sobot.com
 ||ad235.paycount.com^
 ||ad236.hpg.com.br^
 ||ad243.hpg.com.br^
+||ad251.paycount.com^
 ||ad253.hpg.com.br^
 ||ad2net.de^
 ||ad3.paycount.com^
@@ -6471,6 +6553,7 @@ sobot.com
 ||adclickbyte.com^
 ||adcolo.com^
 ||adcopystudio.com^
+||add-extension.online^
 ||addays.net^
 ||addc198.neoplus.adsl.tpnet.pl^
 ||addclips.org^
@@ -6544,6 +6627,7 @@ sobot.com
 ||adm.phunuvagiadinh.vn^
 ||adm2.moseasia.com^
 ||admachina.com^$popup
+||admanager.netadclick.com^
 ||admatic.admicro.vn^
 ||admatic.com.tr^$third-party
 ||admatrix.jp^
@@ -6583,6 +6667,7 @@ sobot.com
 ||adobe.comex.galicia.ar^
 ||adobe.fondosfima.com.ar^
 ||adobeedge.pst-myservice.dva.gov.au^
+||adobeonlinereader.mypressonline.com^
 ||adobes.marugame-seimen.com^
 ||adobetechsupportphonenumber.blogspot.com^
 ||adocean-ee.hit.gemius.pl^
@@ -6607,6 +6692,7 @@ sobot.com
 ||adprtm53.goldkarte.at^
 ||adpushup.com^$third-party
 ||adqust.click^
+||adrelayer.com^
 ||adrelevance.com^
 ||adriana.com.mx^
 ||adrianapiva.com.br^
@@ -6681,6 +6767,7 @@ sobot.com
 ||ads.kabbmedia.com^
 ||ads.kir.jp^
 ||ads.lmmob.com^
+||ads.localhost.net.ar^
 ||ads.mediams.mb.softbank.jp^
 ||ads.medscape.com^
 ||ads.mopub.com^
@@ -6801,6 +6888,7 @@ sobot.com
 ||adservice.google.lv^
 ||adservice.google.pt^
 ||adservice.google.ua^
+||adservice.kugou.com^
 ||adservice.sigmob.cn^
 ||adserving.unibet.com^
 ||adsfit.offerstrack.net^
@@ -7011,6 +7099,7 @@ sobot.com
 ||aeuowqser6.neliver.com^
 ||aevenirox-ai.net^
 ||af-ad.co.uk^
+||af4a.adj.st^
 ||afatolk.no^
 ||aff.adsurve.com^
 ||aff.pujckajonatan.cz^
@@ -7166,6 +7255,7 @@ sobot.com
 ||ailzgt.cyberport.at^
 ||aim1.adsoftware.com^
 ||aim4media.com^
+||aimen.info^
 ||aimtravel.pl^
 ||ainex-edge.net^
 ||aingbudakcimohai.blogspot.com^
@@ -7323,6 +7413,7 @@ sobot.com
 ||alertandfind.org^
 ||alertas.gob.mx^
 ||alertes-mathez-conseil-formation.com^
+||alertscltd.com^
 ||alertsolutionspm.com^
 ||alesalogistics.com^
 ||alestatranslation.org^
@@ -7333,6 +7424,7 @@ sobot.com
 ||alexmarine-eg.com^
 ||alfaweb.fr^
 ||algarsl.com^
+||algarvetoastmastersclub.com^
 ||algicwaiwai.rest^
 ||algonetwork.com^
 ||alhiop.thehandsome.com^
@@ -7672,6 +7764,7 @@ sobot.com
 ||amoffers.hasoffers.com^
 ||amoretanioontradano37.com^
 ||amount-good.co.cc^
+||amourlove.org^
 ||ampe.ru^
 ||ampfirst.com^
 ||ampt.hr^
@@ -7754,8 +7847,10 @@ sobot.com
 ||analytics.degreed.com^
 ||analytics.digitalpfizer.com^
 ||analytics.doctoreto.com^
+||analytics.donglogs.com^
 ||analytics.driverscloud.com^
 ||analytics.droracle.ai^
+||analytics.e.sandalsmailings.com^
 ||analytics.electro-com.ru^
 ||analytics.elperiodicomediterraneo.com^
 ||analytics.emporium-allure.com^
@@ -7821,6 +7916,7 @@ sobot.com
 ||analytics.se.com^
 ||analytics.sentynela.com.br^
 ||analytics.sgnapps.com^
+||analytics.shephertz.com^
 ||analytics.solidbau.at^
 ||analytics.sonjj.com^
 ||analytics.sophia.org^
@@ -8293,6 +8389,7 @@ sobot.com
 ||app.recruit.caterermail.com^
 ||app.rededigitalchevrolet.com.br^
 ||app.rene.care^
+||app.resgatepremium.pro^
 ||app.roomsync.com^
 ||app.sellebrity.com.ssl.re.getclicky.com^
 ||app.showroomprive.com^
@@ -8385,6 +8482,7 @@ sobot.com
 ||appriverpasswordexp.web.app^
 ||approspunt.pro^
 ||approvedemail.actelion.com^
+||apps-ledger.io^
 ||apps-payment.servehttp.com^
 ||apps.cchtrustus.com^
 ||apps.ecomerc.com^
@@ -8423,6 +8521,7 @@ sobot.com
 ||aqczs.footlocker.co.nz^
 ||aqdwkq.hihometech.net^
 ||aquasphere.cz^
+||aquatechnic.co.in^
 ||aquaticacdp.com^
 ||aquaticowl.com^
 ||aqueousantsy.click^
@@ -8530,11 +8629,13 @@ sobot.com
 ||artdecoratornia.co.uk^
 ||artel-samokrut.ru^
 ||artelithic.com^
+||artemidakrsk.ru^
 ||arteplandi.com^
 ||arthoodie.com^
 ||articlegarlandferment.com^
 ||artievim.com^
 ||artinvestors.ourtoolbar.com^
+||artisan-digital.cn^
 ||artisbolte.pro^
 ||artisticnarratives.digital^
 ||artisticshow.digital^
@@ -8685,6 +8786,7 @@ sobot.com
 ||astrologervikrant.com^
 ||astrologysearcher.com^
 ||astutemarketing.net^
+||asuisp.cn^
 ||asukedrevenue.org^
 ||asusdurability.co.cc^
 ||asutahealth.net^
@@ -9029,6 +9131,7 @@ sobot.com
 ||b2bloldzbt.neliver.com^
 ||b2bmkt.lge.co.kr^
 ||b2bnam.page.com^
+||b2byj.com^
 ||b2wgolf.com^
 ||b3115ca9b3ace479c0287e4542fc8ab7.top^
 ||b33ac0d5057ac6b859bc94125599899f.com^
@@ -9138,6 +9241,7 @@ sobot.com
 ||bafybeiev5uo4qp6pjv3bndnsdlzrmmfszydfrbu74ho3z3wlykjhd4e2xq.ipfs.w3s.link^
 ||bafybeihgm6jhc53nutmotw52gywdjkeml6yrx4ecgmfo4gkf5pqrpr6mw4.ipfs.dweb.link^
 ||bag-promo.shop^
+||bagfulchiefmeant.com^
 ||bagglam.top^
 ||baggu.ru^
 ||baglicaasm.com^
@@ -9180,6 +9284,7 @@ sobot.com
 ||ballgownwedding.com^
 ||balling-wall.co.cc^
 ||balmuda.d1.sc.omtrdc.net^
+||baltanlaboratories.org^
 ||balticom-142-69-114.balticom.lv^
 ||balticwaterfront.org^
 ||balukanc.ru^
@@ -9335,6 +9440,7 @@ sobot.com
 ||bbs.hi-888.com^
 ||bbs.ydzyz.cn^
 ||bbs2.appmifile.com^
+||bbtools.cn^
 ||bbtpl.finney-co.com^
 ||bbuildersget.com^
 ||bbvave.demdex.net^
@@ -9561,6 +9667,7 @@ sobot.com
 ||bestproxy.xyz^
 ||bestproxyserver.org^
 ||bestqualityedtreatment.com^
+||bestsaleoutlets.shop^
 ||bestsexyblog.com^
 ||bestsmartfind.com^
 ||bestunfollow.com^
@@ -9673,6 +9780,7 @@ sobot.com
 ||bigfellatackle.com.au^
 ||biggestproxy.com^
 ||bigmoon.info^
+||bigreal.org^$third-party
 ||bigrourg.net^
 ||bigtitshack.com^
 ||bigtracker.com^$third-party
@@ -9821,7 +9929,9 @@ sobot.com
 ||bitzix-nexusapp.com^
 ||bitzixnexus-tech.com^
 ||biurowy.eu^
+||bixb.exchange^
 ||bixocpapp.com^
+||biyskiykotelnyuzavod.ru^
 ||biz-concerts.com^
 ||bizspring.net^
 ||bizx.info^
@@ -10022,8 +10132,10 @@ sobot.com
 ||boldspark.top^
 ||boldstrmwer.xyz^
 ||bolgetripl.com^
+||bolizarsospos.com^
 ||bolloevcenter.ru^
 ||bollyshare.net.daraz.com^
+||bologuron.club^
 ||bolsaempleo.cesma.es^
 ||bolsanacion.net^
 ||bombaytouch.ca^
@@ -10282,6 +10394,7 @@ sobot.com
 ||brzinfo.com.br^
 ||bs-pro-origin-pull.kwai.net.iberostar.com^
 ||bs-wlb-uswest.dvgtm.akadns.net^
+||bs.ckbmtm.com^
 ||bs.serving-sys.com.10015.9024.302br.net^
 ||bs.serving-sys.com.1857.9021.302br.net^
 ||bs.serving-sys.com.1865.9021.302br.net^
@@ -10442,6 +10555,7 @@ sobot.com
 ||buko.nosu.yi.org^
 ||bukusukses.com^$popup
 ||buldanacambridge.in^
+||bulentozgurkuafor.com^
 ||buleor.com^$third-party
 ||bulk-click.startappservice.com^
 ||bullet777.com^
@@ -10485,6 +10599,8 @@ sobot.com
 ||businessmark-events.ro^
 ||businessofficedesk.sbs^
 ||businessupdater.com^
+||busituzi.com^
+||buspirone.1.p2l.info^
 ||bussinesproxy.co.cc^
 ||bustlefungus.com^
 ||bustymilfsqce.dnset.com^
@@ -10496,6 +10612,7 @@ sobot.com
 ||butterfly-wings.co.cc^
 ||butterfly.coverworld.com.au^
 ||butterflydoor.com^
+||butterflyfamilywellness.com^
 ||buuajs.duckdns.org^
 ||buy-adipex.aca.ru^
 ||buy-cialis.splinder.com^
@@ -10566,6 +10683,7 @@ sobot.com
 ||byspot.com^
 ||byteshop.co.za^
 ||bytomsale.shop^
+||byzc.com^
 ||bz8.org^
 ||bzq-179-66-17.cust.bezeqint.net^
 ||bzq-79-176-196-31.red.bezeqint.net^
@@ -10698,6 +10816,7 @@ sobot.com
 ||c10.statcounter.com^
 ||c11.statcounter.com^
 ||c130htacneoa.bodycontouringme.com^
+||c1776db3db06d7c2.com^
 ||c2.thecounter.de^
 ||c2379.dotomi.com^
 ||c24.statcounter.com^
@@ -10757,6 +10876,7 @@ sobot.com
 ||caesarone.com^
 ||cafealianca.com.br^
 ||cafecairo.de^
+||cafedonutsmn.com^
 ||cafeenattente.org^
 ||cafemedia-d.openx.net^
 ||caffe-barista.com^
@@ -10894,6 +11014,7 @@ sobot.com
 ||car-service.cl^
 ||car.gamereview.co^
 ||car.prettyweak.com^
+||car.qcmrjx.com^
 ||carammba.de^
 ||carboncontribution.com^
 ||carbonotdr.com^
@@ -10909,6 +11030,7 @@ sobot.com
 ||cardworksplus.com^
 ||careeducation.com^
 ||careerealism.evergage.com^
+||careerw.cn^
 ||carefast.co.id^
 ||carehomecalicut.org^
 ||carelive.in^
@@ -10982,6 +11104,7 @@ sobot.com
 ||casinoprofi.com^
 ||casm.on-rev.com^
 ||casperadam.duckdns.org^
+||castelocustomhomes.com^
 ||castlehillhoa.org^
 ||castlekeepcavaliers.com^
 ||castllypay.com^
@@ -11060,6 +11183,7 @@ sobot.com
 ||cco.lu^
 ||ccone.com^
 ||cctv.pt^
+||ccv.su^
 ||cd-ladsp-com.s3.amazonaws.com^
 ||cd037385e0.b67f1b04e9.com^
 ||cd23.info^
@@ -11122,6 +11246,7 @@ sobot.com
 ||cdn.gravitec.net^
 ||cdn.ichlnk.com^
 ||cdn.indicative.com^
+||cdn.infomobi.me^
 ||cdn.jampp.com^
 ||cdn.kfjhd.com^
 ||cdn.ktbch.cloud^
@@ -11475,6 +11600,7 @@ sobot.com
 ||chuckwebster.com^
 ||chudencojp.112.2o7.net^
 ||chudobiser.narod.ru^
+||chunhong.w203.west263.cn^
 ||chunkycactus.com^
 ||chunmiaosh.com^
 ||chuyenphatnhanhsbay.com^
@@ -11652,6 +11778,7 @@ sobot.com
 ||click.e.chenmed.com^
 ||click.e.clubmama.com.ph^
 ||click.e.kaspick.com^
+||click.e.lwcc.com^
 ||click.e.proplants.com^
 ||click.email-emdmillipore.com^
 ||click.email-holtcat.com^
@@ -11705,6 +11832,7 @@ sobot.com
 ||click.ivy.com^
 ||click.lmbcustomersupport.com^
 ||click.m.hands.net^
+||click.m30.mileonedlr.com^
 ||click.ma.alba.co.jp^
 ||click.mail-wildlands.nl^
 ||click.mail.bridgestone-emia.com^
@@ -11797,6 +11925,7 @@ sobot.com
 ||clicks.about.com^
 ||clicks.kfc.co.uk^
 ||clicks.life^
+||clicks.mg.managedstaffing.com^
 ||clicks.net^
 ||clicks.piie.com^
 ||clicks.rmb.adhese.com^
@@ -11971,6 +12100,7 @@ sobot.com
 ||cname-aa.staffservice-engineering.jp^
 ||cname-de-stsdk.vivoglobal.com^
 ||cname.kyusai.co.jp^
+||cnbofa.com^
 ||cncsuper.com^
 ||cnd.videoplaza.tv^
 ||cndoubleegret.com^
@@ -12002,6 +12132,7 @@ sobot.com
 ||coatesrentalhomes.com^
 ||cobaltbloomcapital.com^
 ||coberturadental.cl^
+||cobradvh.beget.tech^
 ||cobrand.ria.com^
 ||cobrowse.liveperson.net^
 ||coccinelleanozze.it^
@@ -12015,6 +12146,7 @@ sobot.com
 ||code.adsales.snidigital.com^
 ||code.poptm.com^
 ||code3.adtlgc.com^
+||code4us.com^
 ||codevaders.com^
 ||coding-buddy.com^
 ||codingforhippies.com^
@@ -12108,6 +12240,7 @@ sobot.com
 ||collectorsdigital.com^
 ||college.marketingcube.com.au^
 ||college3prxy.co.cc^
+||collegeoftherapistsandclinicians.mycollegetoolbar.com^
 ||collemind.cfd^
 ||colonelsurvival.com^
 ||colorfoto.digidip.net^
@@ -12204,6 +12337,7 @@ sobot.com
 ||condenast-b.sailthru.com^
 ||condora.fr^
 ||conesoftdobrasil.com^
+||conf.xdrig.com^
 ||confidencegames.com^
 ||config.ad-brix.com^
 ||config.baofeng.net^
@@ -12261,6 +12395,7 @@ sobot.com
 ||console.ad.logic.viasat.io^
 ||console.cincinnatimagazine.com^
 ||console.triplelift.com^
+||console.wedroid.net^
 ||consolerepairs.org.uk^
 ||consolidata.ai^
 ||constnymph.com^
@@ -12269,6 +12404,7 @@ sobot.com
 ||consultantchow.com^
 ||consultantsgroupllc.com^
 ||consultastrologerinpunjab.blogspot.com^
+||consultoriavm.com.br^
 ||consumersurveyperks.com^
 ||consurv.com.my^
 ||conta.cc^
@@ -12543,6 +12679,7 @@ sobot.com
 ||cpu.baidu.com^$third-party
 ||cqaipi.cristaiscadoro.com^
 ||cqeygukvif.neliver.com^
+||cqfetslghduhyhgxk.in^
 ||cqioixyp2z2u6f-pages-dev.translate.goog^
 ||cqpgn.com^
 ||cqpmvc.prima.fr^
@@ -12553,9 +12690,11 @@ sobot.com
 ||cr3ative.com^
 ||crabbiesfruits.com^
 ||crackedpcs.com^
+||crackhouse.com^
 ||crackkeygengame.com^
 ||crackpotwebsites.com^
 ||cracks-gratuit2013.blogspot.com^
+||crackwatch.org^
 ||crackwinz.com^
 ||crackznhackz.blogspot.com^
 ||cracxpro.com^
@@ -12853,6 +12992,7 @@ sobot.com
 ||cybersteps.org^
 ||cybersupport.net^
 ||cybilling.com^
+||cybpy.cn^
 ||cyc-gl.com^
 ||cycling.unbounce.com^
 ||cycuratedhi.com^
@@ -12862,6 +13002,7 @@ sobot.com
 ||cyntax.com^
 ||cypanel.com^
 ||cyralis-negociacao.net^
+||cysis.cl^
 ||cz-fitness007.m-shop.me^
 ||cz-grafficon.m-shop.me^
 ||cz714119.tw1.ru^
@@ -13032,6 +13173,7 @@ sobot.com
 ||dagama.itkm.ru^
 ||dahaiyiuyku.net^
 ||dail01.wanmeilr.com^
+||dailiqing.net^
 ||daily.dailytrendsbd.com^
 ||dailyblogzz.com^
 ||dailyconsumeralert.com^
@@ -13355,6 +13497,7 @@ sobot.com
 ||datayi.cn^$third-party
 ||date-till-late.us^
 ||dater-radar.com^
+||datggvoyages.comduoliprudential.com.watchdogdns.duckdns.org^
 ||dating-masters-haven.com^
 ||dating.ezstatic.com^
 ||dating.friendsearch.com^
@@ -13464,6 +13607,7 @@ sobot.com
 ||decorinfo.ru^
 ||decorlumi.com^
 ||decoroustitle.com^
+||decoteks.com.tr^
 ||decox.de^
 ||decuyperantohny.blogspot.com^
 ||decvsm.xlmoto.se^
@@ -13485,6 +13629,7 @@ sobot.com
 ||defender-pro.7eer.net^
 ||deficits.us^
 ||defidappsrestore.web.app^
+||definehost.com^
 ||deftbettong.pro^
 ||degese.com^
 ||degreeblime.shop^
@@ -13601,6 +13746,7 @@ sobot.com
 ||designlogic.ca^
 ||designsgrid.com^
 ||designtitc.com^
+||desistarz.com^
 ||desites.ws^
 ||desitunezradio.myradiotoolbar.com^
 ||desiupload.in^
@@ -13705,6 +13851,7 @@ sobot.com
 ||dhlcg.wiki^
 ||dhldelivery-world.com^
 ||dhllite.com^
+||dhluh.com^
 ||dhozconsulting.com^
 ||dhzw7msh3e.neliver.com^
 ||diadromes-tomakos.blogspot.com^
@@ -13994,6 +14141,7 @@ sobot.com
 ||doctruyencotich.vn^
 ||document-filereview.myportfolio.com^
 ||document.magixcreative.io^
+||doddyfire.linkpc.net^
 ||dodescaden.com^
 ||dofibgeulx.neliver.com^
 ||dogcded.bet^
@@ -14023,6 +14171,7 @@ sobot.com
 ||dolekaraokeoversleep.com^
 ||dollarrentcar.com^
 ||dolularhenewrev.org^
+||dom-na-vode.ru^
 ||dom.uneinternet.com.br^
 ||domain2008.com^
 ||domaindns.biz^
@@ -14033,10 +14182,12 @@ sobot.com
 ||domints.za.pl^
 ||domipush.com^
 ||dommarzen.com^
+||domnicpeter.in.net^
 ||dompar-16valixo.digital^
 ||domro-23vexina.digital^
 ||domtel131.domtel.ptc.pl^
 ||domusline.org^
+||donate.breadforthecity.org^
 ||dongpef.com^
 ||dongsonvina.com^
 ||donguri-bake.co.jp^
@@ -14621,6 +14772,7 @@ sobot.com
 ||eey.net^
 ||ef99t7rzik.neliver.com^
 ||efarming.de^
+||efbthmoiuykmkjkjgt.com^
 ||effdental.com.br^
 ||effectivecpmrate.com^
 ||effectivedisplayformat.com^
@@ -14928,6 +15080,7 @@ sobot.com
 ||email.delivery.myshottenkirkfordgranbury.com^
 ||email.delivery.rockcountyhonda.com^
 ||email.dimo.coop.py^
+||email.discover.sinclair.edu^
 ||email.dm.e-food.gr^
 ||email.dnord.com^
 ||email.do-not-reply.warnerswheels.com^
@@ -14964,6 +15117,7 @@ sobot.com
 ||email.email.rennique.com^
 ||email.email.shopthehood.store^
 ||email.email.softmeer.com^
+||email.email.talentbranded.com^
 ||email.email.taraoconnell.com^
 ||email.email.twinsathome.com^
 ||email.email.usdieselparts.com^
@@ -15194,6 +15348,7 @@ sobot.com
 ||email.wtw-capital.com^
 ||email.www.epagos.com.ar^
 ||email.xamatech-support.com^
+||email.yourstrulyhospitality.com^
 ||email.zest.co^
 ||emailaccountupdate6.s3.us-east.cloud-object-storage.appdomain.cloud^
 ||emailalert-107928.weeblysite.com^
@@ -15217,6 +15372,7 @@ sobot.com
 ||emc-china.122.2o7.net^
 ||emc-greece.122.2o7.net^
 ||emcglbd.com^
+||emdintegration.com^
 ||emdlqs.longtallsally.com^
 ||emea.dcv.ms^
 ||emeindustria.ind.br^
@@ -15413,6 +15569,7 @@ sobot.com
 ||eratak.today^
 ||erate.co.il^
 ||erclothing.com^
+||erdemhirdavat.com.tr^
 ||ereandhthrew.org^
 ||erebeefetid.com^
 ||erectile.byethost33.com^
@@ -15434,6 +15591,7 @@ sobot.com
 ||eroadvertising.org^
 ||eroticbabe.dk^
 ||erotilink.com^
+||erpsoft.pk^
 ||err.agava.ru^
 ||err.up.vivoglobal.com^
 ||error.email^
@@ -15544,6 +15702,7 @@ sobot.com
 ||etnlz.bayamjewelry.com^
 ||etr407.net^
 ||etracker.alex-gross.com^
+||etstemizlik.com^
 ||ettrumeau.info^
 ||etxeonenak.com^
 ||eu-ec.walkme.com^
@@ -15566,6 +15725,7 @@ sobot.com
 ||eurobizsafe.digital^
 ||eurocontrol-int.net^
 ||euroinvest20.ru^
+||euroizgradnja.ba^
 ||euromac.es^
 ||euromarmara.com^
 ||euronewsgroup.demdex.net^
@@ -15639,6 +15799,7 @@ sobot.com
 ||evr14.neoplus.adsl.tpnet.pl^
 ||evro.ch^
 ||evropost.ru^
+||evt.cookappsgames.com^
 ||evuforex.co.cc^
 ||evupmg.olehenriksen.com^
 ||evw37.neoplus.adsl.tpnet.pl^
@@ -15664,6 +15825,7 @@ sobot.com
 ||examsurf.co.cc^
 ||excel-file-repair.com^
 ||excelgoodies.com^
+||excelify.com^
 ||exceptingpealstipulate.com^
 ||excfitzz.top^
 ||exch-us-west.quantserve.com^
@@ -15721,6 +15883,7 @@ sobot.com
 ||extorr.com^
 ||extra-easy-income.com^
 ||extra-tender.co.cc^
+||extractionalofthumiliation.com^
 ||extrados.us^
 ||extraip.com^
 ||extraittrolls.cfd^
@@ -15778,6 +15941,7 @@ sobot.com
 ||f444378b-7f06-4101-9ac1-6857cf1af8b7.express.conves.io^
 ||f44b-e0a5-6674-4c4f.reporo.net^
 ||f482-4846-5001-2295.reporo.net^
+||f4a54b0c2d9d66fe.com^
 ||f4cboook-lognla-facbook-es-5dh4fiucqc.filesusr.com^
 ||f4cboook-lognla-facbook-es-ekkhwsiwgz.filesusr.com^
 ||f4cboook-lognla-facbook-es-gzxyc0ywzo.filesusr.com^
@@ -15828,12 +15992,14 @@ sobot.com
 ||facepunchcom.skimlinks.com^
 ||facetheme.com^
 ||facialwaxmaxfaxlax3.com^
+||factureimpayeefibre.urest.org^
 ||fad-1104.nyc1.targetnet.com^
 ||fad-1111.nyc1.targetnet.com^
 ||fadway.com^
 ||faecher.lernnetz.de^
 ||faerchcoaching.dk^
 ||fafxuylrwwnxg.online^
+||failure-account.com^
 ||faintestlogic.com^
 ||fairfax.demdex.net^
 ||fairfish.net^
@@ -15996,6 +16162,7 @@ sobot.com
 ||fclouddown.co^
 ||fctms.demo-charitablegift.com^
 ||fculcz.joann.com^
+||fdcgl.org^
 ||fddia.gekub.yi.org^
 ||fdp01.webtrekk.net^
 ||fdpod.com^
@@ -16006,6 +16173,7 @@ sobot.com
 ||feadrope.net^
 ||feapsandalucia.org^
 ||fearactaza.com^
+||febads.shop^
 ||federalacerbitylid.com^
 ||federallawyerapp.com^
 ||federatedanalytics.amazon.com^
@@ -16148,6 +16316,7 @@ sobot.com
 ||filicitess.info^
 ||filipinomagazine.blogspot.com^
 ||filipinostuds.com^
+||filmcrewtransport.co.ke^
 ||filmgratuit.my^
 ||filmnewspaper.com^
 ||filmowo.co^
@@ -16241,6 +16410,7 @@ sobot.com
 ||firegifts.pl^
 ||firelandshabitat.org^
 ||firelove.ru^
+||firetruckky.com^
 ||firma-anbart.ink^
 ||firme-cuentix.net^
 ||firoxy.com^
@@ -16384,6 +16554,7 @@ sobot.com
 ||fnw.us^
 ||foameoverf.com^
 ||focacceria.online^
+||focusdate.com^
 ||focusworks.com^
 ||foerschl.gmxhome.de^
 ||foezip.com^
@@ -16527,6 +16698,7 @@ sobot.com
 ||fpovng0ux5sz6tp6pb1odkwfdwmkr1509498621.nuid.imrworldwide.com^
 ||fprnt.com^
 ||fpt.absabank.co.ke^
+||fpthaiduong.vn^
 ||fpukmwpb.top^
 ||fpum.com^
 ||fqayoymigvmbw.website^
@@ -16619,6 +16791,7 @@ sobot.com
 ||free-hd-divx.com^
 ||free-sex.com^
 ||free-whatsapp.com^
+||free.centralog.com^
 ||free.createdocsonline.com^
 ||free.emailfanatic.com^
 ||free.everydaylookup.com^
@@ -16673,6 +16846,7 @@ sobot.com
 ||freerutor.com^
 ||freesmile.org^
 ||freestar-io.videoplayerhub.com^
+||freestat.ws^
 ||freesteamwalletcodes.com^
 ||freetechsupportweb.wordpress.com^
 ||freetellafriend.com^$third-party
@@ -16693,11 +16867,13 @@ sobot.com
 ||freshbend.click^
 ||freshcomputer.ru^
 ||freshcracks.com^
+||freshhackz.wapka.mobi^
 ||freshinfohub1611.ru^
 ||freshlyhuman.com^
 ||freshscope.top^
 ||freshtrendnews1611.ru^
 ||frestour.com^
+||frfroo.de^
 ||friday89.com^
 ||fridge.consumable.com^
 ||friedensschlag.de^
@@ -16849,6 +17025,7 @@ sobot.com
 ||fyxoltrix-app.com^
 ||fzconstructorainmobiliaria.com^
 ||fzfzmmijhsmpd.online^
+||fzgrpqktmq.com^
 ||fzip.thanhnien.vn^
 ||fzyecosystem.com^
 ||g-api-us.ekatox.com^
@@ -16877,6 +17054,7 @@ sobot.com
 ||gadsme.com^
 ||gadyshh.weebly.com^
 ||gaee.hit.gemius.pl^
+||gafbqvx.com^
 ||gaiaidea.com^
 ||gain-generatorpro.com^
 ||gainario.com^
@@ -16970,6 +17148,7 @@ sobot.com
 ||gator383.hostgator.com^
 ||gator4177.hostgator.com^
 ||gauff.co.ug^
+||gay09.duckdns.org^
 ||gayal.maxmasnick.com^
 ||gayatricollege.com^
 ||gaymaturexxx.com^
@@ -17108,6 +17287,7 @@ sobot.com
 ||get.emma-app.com^
 ||get.ethsupport.net^
 ||get.instalocum.com^
+||get.lull.com^
 ||get.mistplay.com^
 ||get.oldschoolgames.org^
 ||get.prismapp.com^
@@ -17315,6 +17495,7 @@ sobot.com
 ||glyshalimu.com^
 ||gmailcustomerservicesnumber.blogspot.com^
 ||gmailhelplineau.hatenablog.com^
+||gmailhelplinenumbers.page.tl^
 ||gmailhelppassword.wordpress.com^
 ||gmailsupportnumberau.weebly.com^
 ||gmailtechhelpsupports.blogspot.com^
@@ -17465,6 +17646,7 @@ sobot.com
 ||go.japanmedicalcompany.co.jp^
 ||go.jawfp.org^
 ||go.jel-robot.co.jp^
+||go.jetswap.hs5.ru^
 ||go.jobtv.jp^
 ||go.jotelulu.com^
 ||go.justarrivd.com^
@@ -17664,6 +17846,7 @@ sobot.com
 ||goldlightningreview.com^
 ||goldmanforex.co.cc^
 ||goldpeakbitrow.net^
+||goldprx.hj.cx^
 ||golfingnation.com^
 ||golfmajor.eu^
 ||goliathstoneindustries.com^
@@ -17872,6 +18055,7 @@ sobot.com
 ||grfx.mp3.com^
 ||gridehornyidentifier.com^
 ||gridproxy.com^
+||grillabooks.com^
 ||grischka-schulungen.de^
 ||grizzledprogress.com^
 ||grkrh.express.com^
@@ -17973,6 +18157,7 @@ sobot.com
 ||gtm.grupogsg.com.br^
 ||gtm.guiacompletojapao.com.br^
 ||gtm.guiafinancas.com.br^
+||gtm.haniyanest.com^
 ||gtm.hashtagtreinamentos.com^
 ||gtm.headspaportugal.com^
 ||gtm.hetoarq.com.br^
@@ -18043,6 +18228,7 @@ sobot.com
 ||guardaffil.com^
 ||guardian-d.openx.net^
 ||guardianmedical.com.au^
+||guardiao1.duckdns.org^
 ||guardiasdemexico.org.mx^
 ||guatemalavisible.net^
 ||guccioutlet.net^
@@ -18132,6 +18318,7 @@ sobot.com
 ||habita.formstack.com^
 ||habitatbcgtp.org^
 ||habrock.myradiotoolbar.com^
+||hacdop.com^
 ||hacietorea.news^
 ||hack-and-cheats.com^
 ||hack-any-facebook-account-free.blogspot.com^
@@ -18185,6 +18372,7 @@ sobot.com
 ||handsomeindustry.com^
 ||handspringde.112.2o7.net^
 ||handya1festnetz.weebly.com^
+||handyhousellc.com^
 ||handymanclick.com^
 ||hangoverknock.com^
 ||haniftomok.fumblingvacation.pro^
@@ -18271,6 +18459,8 @@ sobot.com
 ||hcdnpe.iareduceri.ro^
 ||hcgrecipes.sc-specialhost.com^
 ||hci.co1.qualtrics.com^
+||hcit.vn^
+||hck.or.ke^
 ||hcuuy.de^
 ||hcuvb.ordolife.com^
 ||hd-stream.net^
@@ -18302,6 +18492,7 @@ sobot.com
 ||healthnharmony.org^
 ||healthwellthrive.com^
 ||healthworkerequipment.com^
+||healthyprovenow.com^
 ||healthyresultsflorida.com^
 ||hearob.klix.ba^
 ||heartbeats.prd.data.s.joyn.de^
@@ -18414,6 +18605,7 @@ sobot.com
 ||hgtc.actonsoftware.com^
 ||hgvtruckstops.com^
 ||hh18-dating.com^
+||hhdzcl.com^
 ||hhj3.cn^
 ||hhlinks.com^
 ||hhowyijfffxry.online^
@@ -18437,6 +18629,7 @@ sobot.com
 ||hideme101.info^
 ||hidemyadd.net^
 ||hidemyass.2u-2.com^
+||hidemyass.hj.cx^
 ||hidemyback.com^
 ||hidemycomp.com^
 ||hidemyip.nl^
@@ -18539,6 +18732,7 @@ sobot.com
 ||hogei.info^
 ||hogfundrelixapp.com^
 ||hoggishtoraja.shop^
+||hola739.duckdns.org^
 ||holforex.co.cc^
 ||holidaysweetsandtreats.com^
 ||holiganbet10185.lease^
@@ -18703,6 +18897,7 @@ sobot.com
 ||hoyaga.xyz^
 ||hp-support-numbers.blogspot.com^
 ||hparksendgrid.branch.rocks^
+||hpcomputer.vn^
 ||hpglobal.112.2o7.net^
 ||hphqsearch.112.2o7.net^
 ||hpk42r7a.de^
@@ -18761,13 +18956,20 @@ sobot.com
 ||https.secure.bank-of-america.login.sign.clnsxtcsql.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.jupdpelxdy.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.adnailtkmv.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.baaqemtwtr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.czhzprezxq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ddunpbedza.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.dncjxukvab.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.dxypnnzqwb.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.edzartcpln.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ekszimygnh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.etrlcbyhzk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.froteosssx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gdzkncnuay.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.govyiekfbj.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ipegtieqja.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.iyhyyrvfvh.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.kjzosnbpjj.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.kzcgmsapmi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.lfylrxclhg.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.lmenitqnux.underpains.duckdns.org^
@@ -18776,13 +18978,16 @@ sobot.com
 ||https.secure.bankofamerica.login.sign.rbodiuqmko.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.rlbdcqnewp.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sfkngjkrsx.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.swrrjyantf.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.tjgqzawchi.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.tlqbndygon.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ujrwsxqxqe.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.vjbmtsvakg.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.vjlaghgbty.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wrivzfgnwk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xamqvfzgij.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xmfmcstqqw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.xtybrwtvre.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xwtusydytx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ylxztckdhy.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zweqdblgrh.underpains.duckdns.org^
@@ -18832,10 +19037,12 @@ sobot.com
 ||huntervalleyweddingplanner.com.au^
 ||huobamdesk.top^
 ||huobbi.webflow.io^
+||huoche.com.cn^
 ||hurricaneproxy.com^
 ||hurtfulmagazine.pro^
 ||husariabygg.se^
 ||hushmail.firebaseapp.com^
+||hustlemine.duckdns.org^
 ||hutoknepper.de^
 ||huvanyy.com^
 ||huve.elysianhonors.com^
@@ -18850,6 +19057,7 @@ sobot.com
 ||hw6.com^
 ||hwayou.com.tw^
 ||hwcias.medpets.be^
+||hx-textiles.cn^
 ||hxahv.com^
 ||hxiqqe.evaneos.it^
 ||hyaas.com^
@@ -18872,7 +19080,9 @@ sobot.com
 ||hysdknb.com^
 ||hytcsh.cn^
 ||hyundai.support^
+||hyunmoon.nfile.net^
 ||hyynfl.info^
+||hzdhr.cn^
 ||hzs2.cnzz.com^
 ||hzxfbs.spartoo.si^
 ||hzzvfturvtdvt.store^
@@ -18967,6 +19177,7 @@ sobot.com
 ||icvihl.cachecoeurlingerie.com^
 ||icyte.com^
 ||id.api.glance.inmobi.com^
+||id.google.co.ck^
 ||id.google.co.ke^
 ||id.google.co.za^
 ||id.google.com.au^
@@ -19048,6 +19259,7 @@ sobot.com
 ||ifs.lazada.sg^
 ||iftikharchaudhry.50webs.com^
 ||igichdejib.digital^
+||igig87.cn^
 ||igld-80-230-40-50.inter.net.il^
 ||igld-84-229-42-70.inter.net.il^
 ||igmarauders.isotx.com^
@@ -19209,11 +19421,13 @@ sobot.com
 ||img006.com^
 ||img01.coofinder.com^
 ||img1.360buyimg.com^$app=com.hunantv.imgo.activity
+||img16.diyifanwen.com^
 ||img2.autoimg.cn^
 ||imgad0.3conline.com^
 ||imgg.mgid.com^
 ||imginfo.insource.co.jp^
 ||imglnkb.com^$third-party
+||imgtg.com^*.gif
 ||imgwallet.com^
 ||imgx.jampp.com^
 ||imlb2c.com^
@@ -19254,6 +19468,7 @@ sobot.com
 ||immediate-pro-lasix.com^
 ||immediate-pro-prolia.pro^
 ||immediate-profit-ai.com^
+||immediate-prolasix.com^
 ||immediate-pumpapp.net^
 ||immediate-revolution-360.net^
 ||immediate-smarter.net^
@@ -19502,6 +19717,7 @@ sobot.com
 ||info.halo.com^
 ||info.hudsonalpha.org^
 ||info.ic3dprinters.com^
+||info.iciba.com^
 ||info.idplate.com^
 ||info.ifa-berlin.com^
 ||info.igloosoftware.com^
@@ -19901,6 +20117,7 @@ sobot.com
 ||ip176-0-172-82.dyndsl.versatel.nl^
 ||ip24-126-59-81.dyndsl.versatel.nl^
 ||ip2location.com^$third-party
+||ip4proxy.cn^
 ||ip68-231-173-205.tc.ph.cox.net^
 ||ipaccess.info^
 ||ipaddr.site^
@@ -20038,6 +20255,7 @@ sobot.com
 ||itv.112.2o7.net^
 ||itvalleynews.com^
 ||itworms.com^
+||itxinrou.com^
 ||iugulrinch.pro^
 ||iuwiim.steigenberger.com^
 ||iuyggvhq.icu^
@@ -20200,15 +20418,18 @@ sobot.com
 ||jfntsb.com^
 ||jfraction.al^
 ||jg.itxinshikong.com^
+||jgen27.cjt1.net^
 ||jgen36.cjt1.net^
 ||jgen48.cjt1.net^
 ||jgen8.cjt1.net^
 ||jgjake2.com^
 ||jglinks.cn^
 ||jhbjkqqykibyt.buzz^
+||jhdnntmkom.com^
 ||jherem.com^
 ||jhgfds.ariesbusinessvaluationadvisor.com^
 ||jhojz.killstar.com^
+||jhon32op.beget.tech^
 ||jhrewn.venezia.pl^
 ||jhs.adx1.com^
 ||jhudoras-curse.ourtoolbar.com^
@@ -20227,6 +20448,7 @@ sobot.com
 ||jili9.io^
 ||jimclarktrail.com^
 ||jimco.co.id^
+||jimesh.cjt1.net^
 ||jimikasports.com^
 ||jimmychooboots.top^
 ||jinair.nsc.jinair.com^
@@ -20265,6 +20487,7 @@ sobot.com
 ||jmambiental.com.br^
 ||jmchairrestorationcenter.com^
 ||jmdongnan.com^
+||jmediabuyad.cjt1.net^
 ||jmesmd.com^
 ||jmgyhz.com^
 ||jmkdlk11.com^
@@ -20389,6 +20612,7 @@ sobot.com
 ||jsdajp.click^
 ||jsiygcyzrhg.club^
 ||jsjty.sprinklerrepairsfortworth.com^
+||jslxdj.cn^
 ||jsmpus.com^
 ||jsnectrese.firebaseapp.com^
 ||json.dcinside.com^
@@ -20402,6 +20626,7 @@ sobot.com
 ||jtconcierge.mc^
 ||jtcqp.zjoxa.com^
 ||jtegqwmjfxu.site^
+||jthedelfin.cjt1.net^
 ||jtyutq.chaussures.fr^
 ||ju.mmstat.com^
 ||jualbelipaypal.com^
@@ -20693,6 +20918,7 @@ sobot.com
 ||kikuz.crowdcow.com^
 ||kil.longkoupeanut.cn^
 ||killthegym.com^
+||killuarules.duckdns.org^
 ||kimbarden.com^
 ||kimberlikohlmann.blogspot.com^
 ||kimtaeyeonchina.com^
@@ -20882,6 +21108,7 @@ sobot.com
 ||kt-tech.cn^
 ||ktjz.top^
 ||ktosdelaetskrintotpidor.com^
+||ktunnel.net^
 ||ku42hjr2e.com^$document
 ||kuaifr.camicado.com.br^
 ||kuaishang.cn^
@@ -21042,6 +21269,7 @@ sobot.com
 ||langschiff.actonservice.com^
 ||languagexperience.it^
 ||languishcharmingwidely.com^
+||lank.ru^
 ||lankasugar.lk^
 ||lanshiwan.cn^
 ||lansys.hk^
@@ -21095,6 +21323,7 @@ sobot.com
 ||lazlcqnrpivd2gw-c.adktrack11.xyz^
 ||lazytheory.pro^
 ||lb.kyc-holdings.com^
+||lbb.su^
 ||lbbc.org.uk^
 ||lbghuif.web.app^
 ||lbkn4a.webwave.dev^
@@ -21157,6 +21386,7 @@ sobot.com
 ||led-xg.cn^
 ||ledermaninc.com^
 ||ledesseo.com^
+||ledgeer-live.net^
 ||ledgentiroska.club^
 ||ledger-diy.pro^
 ||ledger-hardware--wallet.pages.dev^
@@ -21353,6 +21583,7 @@ sobot.com
 ||lindervonix-app.com^
 ||linenstylish.com^
 ||linesmagazinelaos.com^
+||linfangyuan.com^
 ||linfoimbiz.pro^
 ||lingercatchpyramid.com^
 ||linggomaudiovariasicibinong.com^
@@ -21445,6 +21676,7 @@ sobot.com
 ||link.seaflux.tech^
 ||link.seekdaily.live^
 ||link.shelby.townsquarenewsletters.com^
+||link.shoptranthienly.vn^
 ||link.siouxfalls.townsquarenewsletters.com^
 ||link.skillacademy.org^
 ||link.smit.fit^
@@ -21606,6 +21838,7 @@ sobot.com
 ||llqjd.cliniquereseauforcesante.com^
 ||llteig.framesdirect.com^
 ||lltnfhzysxuin.website^
+||lm-steel.com^
 ||lmaceira.com^
 ||lmadvertising.engine.adglare.net^
 ||lmcgx.voluumtrk.com^
@@ -21856,6 +22089,7 @@ sobot.com
 ||logservice1.dbankcloud.cn^
 ||logtail.com^
 ||logz.ikimfm.my^
+||logzh.dantocmiennui.vn^
 ||lohotronschik.info^
 ||lojsuarokgyxv.space^
 ||lokatapipeline-pro.com^
@@ -21866,6 +22100,7 @@ sobot.com
 ||lollipoppreschool.com^
 ||lollitop.com^
 ||lolsefti.com^
+||lolzzmortex.duckdns.org^
 ||lomanegragroup.com^
 ||lomanoblues.com^
 ||lomantex-app.net^
@@ -21952,6 +22187,7 @@ sobot.com
 ||lp.dataart.com^
 ||lp.demo1.demoamericas275.adobe.com^
 ||lp.email-lightroom.cjm.adobe.com^
+||lp.ezdownloadpro.info^
 ||lp.hol8.demoamericas275.adobe.com^
 ||lp.lostparcelclaim.com^
 ||lp.netwrix.com^
@@ -22035,6 +22271,7 @@ sobot.com
 ||lunovixspark-1.com^
 ||luprix-app.net^
 ||lups1.site^
+||lupussa.co.za^
 ||luque.info^
 ||luqyvp.pandorashop.gr^
 ||luster.com^
@@ -22149,6 +22386,7 @@ sobot.com
 ||m.yfano.com^
 ||m1.81312.com^
 ||m1.torrenti.al^
+||m1.vodjk.com^
 ||m1.zedo.com^
 ||m2.da.mgtv.com^
 ||m2.nsimg.net^
@@ -22160,6 +22398,7 @@ sobot.com
 ||m88my.com^
 ||m90-130-227-190.cust.tele2.se^
 ||m90-130-230-135.cust.tele2.se^
+||ma.haken.net^
 ||ma.kagafei.com^
 ||ma.njkk.co.jp^
 ||ma.spartan.contentdef.com^
@@ -22245,6 +22484,7 @@ sobot.com
 ||mail.bonnier-subscriptions.com^$subdocument
 ||mail.bychloe.com^
 ||mail.codacss.com.br^
+||mail.comut.net^
 ||mail.correctcraftboats.com^
 ||mail.dentstar.cm^
 ||mail.dolce-gusto.com.mx^
@@ -22252,6 +22492,7 @@ sobot.com
 ||mail.extremewebservices.com^
 ||mail.gruppoagostini.com^
 ||mail.h-t.co.jp^
+||mail.kamata.co.jp^
 ||mail.khemikal.com^
 ||mail.mmac.us^
 ||mail.naciel.jp^
@@ -22662,6 +22903,7 @@ sobot.com
 ||mb38.com^
 ||mb9eo-7w62j.ads.tremorhub.com^
 ||mbcommunication.com.pk^
+||mbcqjsuqsd.com^
 ||mbe.demdex.net^
 ||mblfj2p0kv3xrqo-p.adktrack34.xyz^
 ||mboxedge34.tt.omtrdc.net^
@@ -22701,6 +22943,7 @@ sobot.com
 ||mdausa.com^
 ||mdcgeneralcontractor.com^
 ||mdevstat.qqlive.qq.com^
+||mdffun.cn^
 ||mdi.ipinyou.com^
 ||mdstats.info^
 ||mdusneoid.rest^
@@ -22832,6 +23075,7 @@ sobot.com
 ||membership.one^
 ||membrenligne.godaddysites.com^
 ||memecounter.com^
+||memeoffices.xyz^
 ||memoriesofalifetime.com.au^
 ||memost.ru^
 ||memostucco.com^
@@ -22945,6 +23189,7 @@ sobot.com
 ||metrics.cleveland.com^
 ||metrics.clubmarriott.in^
 ||metrics.codesports.com.au^
+||metrics.cp.com^
 ||metrics.csmonitor.com^
 ||metrics.cycleworld.com^
 ||metrics.der.com^
@@ -23101,6 +23346,7 @@ sobot.com
 ||michaelriser.co.uk^
 ||michal-luczak.com^
 ||michanic.ru^
+||michelegiebing.nl^
 ||michelemadden.com^
 ||michelin.d1.sc.omtrdc.net^
 ||michellabs.com^
@@ -23145,6 +23391,7 @@ sobot.com
 ||microsoftvirtuallabs.com^
 ||microsoftware.moonfruit.com^
 ||microsoftwga.112.2o7.net^
+||microsotf.cn^
 ||microware.actonservice.com^
 ||middleeastexecutive.com^
 ||middynocake.rest^
@@ -23160,6 +23407,7 @@ sobot.com
 ||migotoshears-jp.com^
 ||migroscx.qualtrics.com^
 ||miguelangeltrabado.com^
+||mijn.overheid.nl.berichtenbox.l1hpng8wye4qgykb9xwmxf8bb71wnkkjdryxhvfo3ykxjfyakq4g.beltalihs.edu.bd^
 ||mijted.co1.qualtrics.com^
 ||mikassa.com^
 ||mikastudio.com^
@@ -23188,6 +23436,7 @@ sobot.com
 ||mindtradeaiapp.com^
 ||minecraftgen.com^
 ||minecrafthosting.biz^
+||minecraftmod.ru^
 ||minelearnto.gq^
 ||mingcwl.com^
 ||minhatv.6te.net^
@@ -23200,6 +23449,7 @@ sobot.com
 ||minishop.in^
 ||minisim.net^
 ||ministerofedu.weebly.com^
+||miniurl.nu^
 ||minnacrd.ru^
 ||minningsutu.com^
 ||mintanics.com^
@@ -23257,6 +23507,7 @@ sobot.com
 ||mjjjr.voluumtrk.com^
 ||mjoqcdsvptsulwr-c.adktrack34.xyz^
 ||mjqzfrdpoe.black^
+||mjsoft.co^
 ||mjt.lacoste.com^
 ||mk.appwebel.com^
 ||mk.ifs.co.jp^
@@ -24064,6 +24315,7 @@ sobot.com
 ||mpegfans.com^
 ||mpesstopshto.openapp.link^
 ||mpjtif.viabovag.nl^
+||mplbredmxr.info^
 ||mppglobal.com^
 ||mprc.lt^
 ||mprmoldes.com^
@@ -24159,6 +24411,7 @@ sobot.com
 ||muermoabject.shop^
 ||mugapi.lazzarionline.com^
 ||mugkk.toynk.com^
+||muhgo.duckdns.org^
 ||mujersimunecano.blogspot.com^
 ||mujikot.com^
 ||mukunth.com^
@@ -24697,6 +24950,7 @@ sobot.com
 ||nexwpie.xyz^
 ||nfjqgexfjogexvbilgitypxuorwwi1504895770.nuid.imrworldwide.com^
 ||nfmovies.com^$replace=/adsTime = 15/adsTime = 1/
+||nftofficer.xyz^
 ||nftqpw.com^
 ||nfxsd.bookonline.com.cn^
 ||ngena.co.za^
@@ -24728,6 +24982,7 @@ sobot.com
 ||nicbecksplumbing.com^
 ||nicck.com^
 ||nickajack.co.cc^
+||nickdns17.duckdns.org^
 ||nickdns56.duckdns.org^
 ||nickeys.ourtoolbar.com^
 ||nickhel.com^
@@ -25348,6 +25603,7 @@ sobot.com
 ||olx.pl-ogloszenia-frimowe-93891.com^
 ||olx.pl-ogloszenie-20595.cfd^
 ||olx.pl-smart0973469113.cfd^
+||olx.pl-smart6357485.cfd^
 ||olx.rozne-43948548.rest^
 ||olympicexpo.ru^
 ||olympospathtorevival.com^
@@ -25428,6 +25684,7 @@ sobot.com
 ||onedrivewqq.a13599834098.workers.dev^
 ||onefake.com^
 ||onegadget.ru^
+||onegroupbd.com^
 ||onelink.me^
 ||onemanandhisdogtours.com^
 ||onemed.com.pl^
@@ -26183,6 +26440,8 @@ sobot.com
 ||pc-flhxn-whatsapp.com.cn^
 ||pc-fvrdx-whatsapp.com.cn^
 ||pc-fzdxl-whatsapp.com.cn^
+||pc-icgqk-whatsapp.com.cn^
+||pc-mkuqy-whatsapp.com.cn^
 ||pc-ptnjv-whatsapp.com.cn^
 ||pc-rzblf-whatsapp.com.cn^
 ||pc-site.xyz^
@@ -26270,6 +26529,7 @@ sobot.com
 ||penalancho.pro^
 ||penascotoday.com^
 ||penberthyassoc.com.au^
+||pendidikan.kedirikota.go.id^
 ||pendoric.biz^
 ||penghy.top^
 ||peninsulasandandsoil.com.au^
@@ -26367,6 +26627,7 @@ sobot.com
 ||ph-ad10.focalink.com^
 ||ph-ad15.focalink.com^
 ||ph-ad17.focalink.com^
+||ph24h.com^
 ||phanbilliprint.co.za^
 ||phando.com^
 ||phanmemnet.com^
@@ -26557,6 +26818,7 @@ sobot.com
 ||pl-online-zakupy24.shop^
 ||pl-paczki.shop^
 ||pl-poland-cl.com^
+||pl-pst.info^
 ||pl.adx1.com^
 ||pl.blablacar.pro^
 ||pl.morden-ngw.com^
@@ -26674,6 +26936,7 @@ sobot.com
 ||podaripodarok.ru^
 ||podcorn.com^$third-party
 ||podentafranka.info^
+||poderxtremo.duckdns.org^
 ||podpea.co.uk^
 ||podpischikivk.ru^
 ||podrozniczeslady.club^
@@ -26686,11 +26949,13 @@ sobot.com
 ||pointedmanahe.com^
 ||pointix.com^
 ||poised.co.in^
+||poisk.su^
 ||poiuytrkj.weebly.com^
 ||pokapoka.ru^
 ||poke.hhslbz.cn^
 ||pokecoinshack.com^
 ||pokoj.zakopane.pl^
+||pokrutim.ru^
 ||polandscope.xyz^
 ||polaranalytics.com^$third-party
 ||polarbearny.com^
@@ -26998,6 +27263,8 @@ sobot.com
 ||privada-7c22d2.ingress-comporellon.easywp.com^
 ||private-site.co.cc^
 ||privatproxy-endpoint.com^
+||privilegedmansfieldvaguely.com^
+||privilegedmansfieldvaguely.com^$popup
 ||privilegejf.com^
 ||privily.us^
 ||priyankaa.com^
@@ -27100,6 +27367,7 @@ sobot.com
 ||project.com.pl^
 ||project01-2cc6f.web.app^
 ||projectw.skimlinks.com^
+||projectzomboid.ru^
 ||projine.com^
 ||projoinelyx.com^
 ||projoinix.com^
@@ -27290,6 +27558,7 @@ sobot.com
 ||ptirtika.com^
 ||ptnproxy.co.cc^
 ||ptp123.com^
+||ptpe.edc.uoc.gr^
 ||ptr5.adreactor.com^
 ||ptrfc.com^$third-party
 ||pttyteuarfsqa.site^
@@ -27578,6 +27847,7 @@ sobot.com
 ||qchoh.lg.com^
 ||qcjgyhgwtzlzv.space^
 ||qckjmp.com^
+||qdhyy.cn^
 ||qdklk.cn^
 ||qdnxys.cotswoldco.com^
 ||qeicbuekdqyna.website^
@@ -27636,6 +27906,7 @@ sobot.com
 ||qorvantrex-app.com^
 ||qp97se4uxsi1qbd5llp1.viomil.ro^
 ||qpb*.sohu.com^
+||qpb.sohu.com^
 ||qpbtocrhhjnz.one^
 ||qpielh.kfhi.or.kr^
 ||qpuajvzdhsmrk.space^
@@ -28237,6 +28508,7 @@ sobot.com
 ||report-tech-web.com^
 ||report.kg.qq.com^
 ||report.opinteks.com^
+||report.zedo.com^
 ||reportbada.co.kr^
 ||reportimage.adtech.fr^
 ||reportsk.web.sdo.com^
@@ -28542,6 +28814,7 @@ sobot.com
 ||rojasgown.com^
 ||rok-tuwima.pl^
 ||roktb.adx1.com^
+||roland007.duckdns.org^
 ||rolandshine.com^
 ||rolasolar.com.au^
 ||rolexcellini.biz^
@@ -28837,6 +29110,7 @@ sobot.com
 ||s.zzcdn.me^
 ||s01.flagcounter.com^
 ||s08tileagd.go.ro^
+||s1.hnhbyxdq.com^
 ||s1.qiqutt.cn^
 ||s10.cnzz.com^
 ||s100004.shoppingappsg.com^
@@ -28985,6 +29259,7 @@ sobot.com
 ||sanalytics.bakerfurniture.com^
 ||sanalytics.cartoonnetwork.jp^
 ||sanalytics.cartoonnetwork.ro^
+||sanalytics.cnnchile.com^
 ||sanalytics.combatefreestyle.com^
 ||sanalytics.metro.fr^
 ||sanalytics.metro.rs^
@@ -29007,6 +29282,7 @@ sobot.com
 ||sanl.footlocker.kr^
 ||sanl.footlocker.pl^
 ||sanozaa.com^
+||sanpacsinergi.co.id^
 ||sanpaolocompany.com^
 ||sanpro.co.nz^
 ||santanabasculas.com^
@@ -29134,6 +29410,7 @@ sobot.com
 ||schultzremodelinginc.com^
 ||schweizerpaket.firebaseapp.com^
 ||sciacarrot.pro^
+||science.schoolspecialtynews.com^
 ||sciencetalks.org^
 ||scientiamobile.com^
 ||scientificwebs.com^
@@ -29170,6 +29447,7 @@ sobot.com
 ||script.crsspxl.com^
 ||script.dotmetrics.net^
 ||script.marquiz.ru^
+||script.novanet.vn^
 ||script.trackword.net^
 ||scriptdigitalproxy.co.cc^
 ||scripts.affiliatefuture.com^
@@ -29332,6 +29610,7 @@ sobot.com
 ||securitykit.net^
 ||securitystronghold.com^
 ||securitywebservices.com^
+||securysearcher.com^
 ||sedajuliaca.com^
 ||sedativebitty.com^
 ||seeawhale.com^$third-party
@@ -29455,6 +29734,7 @@ sobot.com
 ||server.haramainspecial.com^
 ||server.kilometroeco.com^
 ||server.lifeprosalud.com^
+||server.lotusbloem.com^
 ||server.luborgatto.com.br^
 ||server.lusacessorios.com.br^
 ||server.makeupbox.xerobd.com^
@@ -29547,6 +29827,7 @@ sobot.com
 ||sevenhider.co.cc^
 ||sevenkingdoms.net^
 ||sevenoneintermedia.112.2o7.net^
+||sex-and-flirt.com^
 ||sex.com.pl^
 ||sexadvertentiesite.nl^
 ||sexdates-heute.com^
@@ -29564,6 +29845,7 @@ sobot.com
 ||sexylittlefeet.com^
 ||sexzavod.com^
 ||seyhangumrukleme.com^
+||seyhanotomotiv.com^
 ||sezspb.ru^
 ||sf-disturb.blogspot.com^
 ||sfbixfd.cn^
@@ -29760,6 +30042,7 @@ sobot.com
 ||shop.camacartigrafiche.com^
 ||shop.hb.adx1.com^
 ||shop.hotluska.com^
+||shop.much3g.com^
 ||shop.nuance.com^
 ||shop.plugandcharge.be^
 ||shopbekyff.com^
@@ -29852,6 +30135,7 @@ sobot.com
 ||sigstr.act-on.com^
 ||sigue.de^
 ||siili.net^
+||sikenfehmi.duckdns.org^
 ||sikhgeek.com^
 ||siklushidupsejahtera.co.id^
 ||sikncs.com^
@@ -29931,6 +30215,7 @@ sobot.com
 ||siteopttimizer.click^
 ||sites.postnord.fi^
 ||sitetunnel.com^
+||sitned.com^
 ||sitrichatty.com^
 ||sivasosb.org.tr^
 ||sivil3d.fi^
@@ -30027,6 +30312,7 @@ sobot.com
 ||sluttoons.com^
 ||slvruzx2.ac-page.com^
 ||sm-palmer536-my-cheetah-website.site.builderall.net^
+||sm.clinicadental-dentista.es^
 ||sm.floristeria-flores.es^
 ||sm.mudanzas-guardamueble.es^
 ||sm.psicologia-psicologo.es^
@@ -30047,6 +30333,7 @@ sobot.com
 ||smartb.tubeadvertising.eu^
 ||smartbitboostapp.pro^
 ||smartcandle.ie^
+||smartcoating.net^
 ||smartcvguru.com^
 ||smartdevicemedia.com^
 ||smartdrivelogic.biz^
@@ -30101,6 +30388,7 @@ sobot.com
 ||smetrics.bmscustomerconnect.com^
 ||smetrics.bnpparibas.com^
 ||smetrics.boom1019.com^
+||smetrics.boostmobile.com^
 ||smetrics.brookdale.com^
 ||smetrics.caesars.com^
 ||smetrics.callistavacations.com^
@@ -30268,6 +30556,7 @@ sobot.com
 ||smetrics.waseda-ac.co.jp^
 ||smetrics.watsonfantasyfootball.com^
 ||smetrics.webnova.abbottnutrition.com^
+||smetrics.westelm.co.uk^
 ||smetrics.westmarine.com^
 ||smetrics.williamhill.com^
 ||smetrics.workingadvantage.com^
@@ -30849,6 +31138,7 @@ sobot.com
 ||sst.depilarte.co^
 ||sst.gryps.ch^
 ||sst.hengelsportfauna.nl^
+||sst.jagalajuga.com^
 ||sst.led-nordic.se^
 ||sst.logon365.xyz^
 ||sst.markenbaumarkt24.de^
@@ -30972,6 +31262,7 @@ sobot.com
 ||stape.bobbie.materiaispronto.com^
 ||stape.bonalivio.com^
 ||stape.bouxavenue.com^
+||stape.cacseguranca.com.br^
 ||stape.charth.com.br^
 ||stape.clubedosanfitrioes.com.br^
 ||stape.cocriadordeluz.com.br^
@@ -31081,6 +31372,7 @@ sobot.com
 ||static.critic.media^
 ||static.cue7ven.com^
 ||static.datafastguru.info^
+||static.dollopsdigital.com^
 ||static.flat-ads.com.rgslb.net^
 ||static.foresee.com^
 ||static.gaomaer.cn^
@@ -31207,6 +31499,7 @@ sobot.com
 ||stealth-browser.biz.tm^
 ||stealthbrowse.com^
 ||steam-wallet-cards.com^
+||steamcommunityforum.com^
 ||steamcomnunity.com^
 ||steamcomnunlity.com^
 ||steamedimsums.co.cc^
@@ -31290,6 +31583,7 @@ sobot.com
 ||store.ultimate-tech-products.myshopify.com^
 ||store25848025.company.site^
 ||storecomplexion.com^
+||storeofporntube.com^
 ||storesurprise.com^
 ||storie.info^
 ||stormyknight.co.cc^
@@ -31336,6 +31630,7 @@ sobot.com
 ||streamyourvid.com^$popup
 ||streetcompany.net^
 ||streetsafety.net^
+||strengthskingdom.com^
 ||streyneinside.shop^
 ||strideovertakelargest.com^
 ||stridercevenol.cfd^
@@ -32007,6 +32302,7 @@ sobot.com
 ||teamnevergiveup.lovestoblog.com^
 ||teamp-sup.weebly.com^
 ||teamproxylist24.us.com^
+||teams-microsoft.icu^
 ||teamsnap.evyy.net^
 ||teamsupport.evergage.com^
 ||teamworkbab.github.io^
@@ -32170,6 +32466,7 @@ sobot.com
 ||telegqctyl.xin^
 ||telegqjls.blue^
 ||telegqvsz.blue^
+||telegram-me.site^
 ||telegram.fish^
 ||telegram012.biz^
 ||telegraphfamouscucumbers.com^
@@ -32400,6 +32697,7 @@ sobot.com
 ||thensmekf.webnode.com^
 ||theoceannetwork.inttra.com^
 ||theofficeworksinc.com^
+||theofilus.co.za^
 ||theonecdn.com^
 ||theorbitgroup.com^
 ||theparrothouse.com^
@@ -32778,6 +33076,7 @@ sobot.com
 ||tr-ssl.rr.com^
 ||tr-v1.presage.io^
 ||tr.acd-comexpert.fr^
+||tr.actu.imaprotect.eu^
 ||tr.actu.infopro-digital-media.fr^
 ||tr.ad-stir.com^
 ||tr.asp002q.espmp-aufr.net^
@@ -32801,6 +33100,7 @@ sobot.com
 ||tr.comunicacao.younited-credit.com^
 ||tr.courriel.ouestnormandie.cci.fr^
 ||tr.devize-companeo.ro^
+||tr.em.cdiscount-pro.com^
 ||tr.email.renaultbank.fr^
 ||tr.email.videofutur.fr^
 ||tr.emailing.agencereference.com^
@@ -33343,6 +33643,7 @@ sobot.com
 ||ttyihp.ochkov.net^
 ||ttzb.cc^
 ||tu-braunschweigemail.weebly.com^
+||tuangou.pro^
 ||tuba.strp.chat^
 ||tube10.com^
 ||tube8vidsvmr.ddns.name^
@@ -33412,6 +33713,7 @@ sobot.com
 ||tutor.ng^
 ||tutoyedheck.shop^
 ||tuvanhiv.com^
+||tuyasaweb.0hi.me^
 ||tuyulz-blogspot.googlecode.com^
 ||tv-newtabsearch.com^
 ||tv-shoot.com^
@@ -33438,6 +33740,7 @@ sobot.com
 ||twinpeakshockey.com^
 ||twinpinenetwork.com^
 ||twinrdsrv.com^
+||twittet.com^
 ||twiz.wizaly.fr^
 ||two-ply-dev.gw.localytics.com^
 ||two.city^
@@ -33496,6 +33799,7 @@ sobot.com
 ||ua.xhlive.cam^
 ||ua3cdn.admixer.net^
 ||uac.mk.co.kr^
+||uadexchange.com^
 ||uae-dubai-coinplatform.com^
 ||uaiqp.top^
 ||uakwpwqcuwndz.web.app^
@@ -33718,6 +34022,7 @@ sobot.com
 ||universalspotify.com^
 ||univision-d.openx.net^
 ||uniway.cn.com^
+||uniworldgroup.asia^
 ||unix-ip-address.co.cc^
 ||unixfuture.com^
 ||unlawful-judgment.com^
@@ -33744,6 +34049,7 @@ sobot.com
 ||untitled-themovie.com^
 ||untriedpoetry.com^
 ||untrue-use.com^
+||untruecharacterizepeople.com^
 ||unvkoj.xyz^
 ||unwitting-milk.com^
 ||unwovencoving.top^
@@ -33849,6 +34155,7 @@ sobot.com
 ||usedeverywhere-d.openx.net^
 ||usefulness.info^
 ||useitbetter.com^
+||usejj.makepolo.cn^
 ||uselayer.com^
 ||usenet.raidrush.org^
 ||userchecker.info^
@@ -34057,6 +34364,7 @@ sobot.com
 ||vbjnd.postable.com^
 ||vcake.com.mx^
 ||vcamp.vn^
+||vcc-library.uk^
 ||vcigar.com^
 ||vcl-brain.snssdk.com^
 ||vcommission.com^$popup
@@ -34096,6 +34404,7 @@ sobot.com
 ||veltrio-lucroapp.com^
 ||veltrionexpro-app.com^
 ||veltrixfin-ai.com^
+||velum.biz^
 ||velvet.iad.appboy.com^
 ||velvetdock.com^
 ||velvetspin88.site^
@@ -34139,6 +34448,7 @@ sobot.com
 ||verifikasiakun4571.wixsite.com^
 ||verifikasifacebook76.wixsite.com^
 ||verifikasifb1888.wixsite.com^
+||verifiqm.beget.tech^
 ||verify-customer.com^
 ||verify.5832432.shop^
 ||verify.philippineairlines.com^
@@ -34207,6 +34517,7 @@ sobot.com
 ||vgjvj.diamondstuds.com^
 ||vgontlakte.webservis.ru^
 ||vh1com.112.2o7.net^
+||vhec.jhjhyn.cn^
 ||vhgui.duckdns.org^
 ||vhk.kefifi.yi.org^
 ||vhmp2.voluumtrk.com^
@@ -34530,6 +34841,7 @@ sobot.com
 ||view.e.travelocity.com^
 ||view.e.vrtp.com.au^
 ||view.e2.cimaglobal.com^
+||view.em-sel.sel.sony.com^
 ||view.em.www.cloudflare.com^
 ||view.email-1800contacts.com^
 ||view.email-bicestervillage.com^
@@ -34715,6 +35027,7 @@ sobot.com
 ||viragsuber.pro^
 ||viral-cdn.ru^
 ||viraljoint.com^
+||viralnugget.com^$third-party
 ||viralture.com^
 ||vircom.cz^
 ||virdao.com^
@@ -34769,6 +35082,7 @@ sobot.com
 ||vizvia.com^
 ||vjegroup.com^
 ||vjkzs.feralfungi.com^
+||vjyilamfybalwiseh.in^
 ||vkcool.hop.ru^
 ||vkcoom2018.beget.tech^
 ||vkehcvahibhix.space^
@@ -35015,6 +35329,7 @@ sobot.com
 ||watchvideoplayer.com^$popup
 ||water-boom.duckdns.org^
 ||watercourse.net^
+||waterwreckstillwater.us^
 ||waudeesestew.com^
 ||waudist.tynt.com^
 ||waveglobalnews.com^
@@ -35242,6 +35557,7 @@ sobot.com
 ||werlin-38mexur.digital^
 ||weryfikacjadanych.com^
 ||weselnyplaner.com^
+||wesiedu.com^
 ||wesmerebitmark.com^
 ||west001.com^
 ||westads.simpli.fi^
@@ -35257,6 +35573,7 @@ sobot.com
 ||wetcpl.com^
 ||wetplace.com^
 ||wetrackgames.com^
+||wetransfiles.duckdns.org^
 ||wetshaveclub.7eer.net^
 ||wewewecodesadwewesadwe.weebly.com^
 ||wez-bon.24.eu^
@@ -35331,6 +35648,7 @@ sobot.com
 ||wiki.localytics.com^
 ||wiki123pro.co.cc^
 ||wikia-ads.wikia.com^
+||wikiforosh.ir^
 ||wild77.org^
 ||wildcard46.go-mpulse.net.edgekey.net^
 ||wilddbgh.qpon^
@@ -35544,6 +35862,7 @@ sobot.com
 ||wrightproductions.com^
 ||wrightsvcs.com^
 ||writefor.unbounce.com^
+||writemypaper.com.au^
 ||writemypaper247.com^
 ||writemypapers4me.com^
 ||writingabooknow.com^
@@ -35596,6 +35915,7 @@ sobot.com
 ||wwatmd.chainethermale.fr^
 ||wwclicknews.club^
 ||wwebdesign.nl^
+||wwideco.com^
 ||wwjtdjj.cn^
 ||wwnc.xyz^
 ||wwp-cartasi-titoari-portale-sicreuzza-2017-ci.dynamic-dns.net^
@@ -35628,6 +35948,7 @@ sobot.com
 ||www.10438.url.016272.com^
 ||www.10568.url.016272.com^
 ||www.10670.url.7wkw.com^
+||www.11176.url.7wkw.com^
 ||www.1121xsj.com^
 ||www.11246.url.7wkw.com^
 ||www.11271.url.7wkw.com^
@@ -35672,6 +35993,7 @@ sobot.com
 ||www.24x7.support^
 ||www.25thcenturytech.com^
 ||www.27538.xc.05cg.com^
+||www.28355-365.com^
 ||www.2acheterairmaxenligne.com^
 ||www.2dybh.voluumtrk.com^
 ||www.2e6cce8d37e55a52fdbd-99308430c4fad7ba45f55e863183e59a.r58.cf1.rackcdn.com^
@@ -35705,6 +36027,7 @@ sobot.com
 ||www.38pol.ru^
 ||www.3infoweb.com^
 ||www.3www.ze4cheats.com^
+||www.400pj.com^
 ||www.424400.net^
 ||www.49709796.xyz^
 ||www.4chan-tube.on.nimp.org^
@@ -35735,6 +36058,7 @@ sobot.com
 ||www.77686.com^
 ||www.7cct.com^
 ||www.7cmgs.voluumtrk.com^
+||www.7mono.biz^
 ||www.7nsnawett5mncyyw.onion.ws^
 ||www.7xmastery.com^
 ||www.800supportnumber.com^
@@ -35811,6 +36135,7 @@ sobot.com
 ||www.aceliftaway.com^
 ||www.acer-helpline-number.blogspot.com^
 ||www.aceroprojects.com^
+||www.acerttadm.com.br^
 ||www.acesso-bb-mobile.tk^
 ||www.acevn.net^
 ||www.acewriters.org^
@@ -36057,6 +36382,7 @@ sobot.com
 ||www.ams-pt.com^
 ||www.amtech.ae^
 ||www.amythas.com^
+||www.anahowa.duckdns.org^
 ||www.analtube.stoporn.net^
 ||www.analytics.icons8.com^
 ||www.anandaircoolers.com^
@@ -36072,6 +36398,7 @@ sobot.com
 ||www.androsoftik.at.ua^
 ||www.andysfahrschule.de^
 ||www.angeldemon.com^
+||www.angeljob.com^
 ||www.angelsinthehome.com^
 ||www.angelsoverseas.org^
 ||www.anggit.rumahweb.org^
@@ -36119,9 +36446,11 @@ sobot.com
 ||www.aolemailcustomersupportdesktop.blogspot.com^
 ||www.aolgoldsupport.com^
 ||www.aothungiasi.vn^
+||www.aoukj.com^
 ||www.apabioenergetica.org^
 ||www.apartcar.com.ar^
 ||www.apcngassociation.com^
+||www.aperfecthost.biz^
 ||www.apexgroupconsulting.com^
 ||www.apgeologos.pt^
 ||www.api.metrike.com^
@@ -36193,6 +36522,8 @@ sobot.com
 ||www.ariacad.persiangig.com^
 ||www.arid5glop.com^
 ||www.arimmo.ch^
+||www.arinfosoft.com^
+||www.arkanddove.com^
 ||www.armenia-news.ru^
 ||www.armono.com^
 ||www.armstrongsystems.bizland.com^
@@ -36270,6 +36601,7 @@ sobot.com
 ||www.audiovideospecialties.com^
 ||www.audiovoxestudio.com^
 ||www.augustabusinessinteriors.com^
+||www.aukcie.sk^
 ||www.auktion-info.com^
 ||www.aulolloy.com^
 ||www.aurasaglik.com^
@@ -36298,6 +36630,7 @@ sobot.com
 ||www.autoteile-cologne.de^
 ||www.autotreader.com^
 ||www.autozcjm.com^
+||www.ava-co.ir^
 ||www.avahuer.com^
 ||www.avandia.notlong.com^
 ||www.avantlink.com^
@@ -36306,6 +36639,8 @@ sobot.com
 ||www.avatarcash.com^
 ||www.avatraffic.com^
 ||www.avazutracking.net^
+||www.avcnuts.com^
+||www.avconsultancy.in^
 ||www.avemeadows.com^
 ||www.avidsontre.com^
 ||www.avioexpress.ba^
@@ -36322,6 +36657,7 @@ sobot.com
 ||www.axiomauto.ru^
 ||www.axiotas.ro^
 ||www.ayazshabutdinov.ru^
+||www.aycasogutma.com^
 ||www.aypir.com^
 ||www.ayselweb.com^
 ||www.ayudatusalud.com^
@@ -36624,6 +36960,7 @@ sobot.com
 ||www.btxrwj.com^
 ||www.budapest.support^
 ||www.budcesena.com^
+||www.buddyplay.net^
 ||www.budpripraven.cz^
 ||www.bugsliker.net^
 ||www.builderscoach.co.nz^
@@ -36646,6 +36983,7 @@ sobot.com
 ||www.buy-accounts.com^
 ||www.buycheapadvertising.com^
 ||www.buyfakepassport.cc^
+||www.buyingkindles.com^
 ||www.buyinstagramfollowerscheaply.wordpress.com^
 ||www.buylevitracheap.com^
 ||www.buyrealiglikes.com^
@@ -36656,6 +36994,7 @@ sobot.com
 ||www.bycxfchvk.info^
 ||www.bytesnwords.com^
 ||www.byyiwei.com^
+||www.bzhan.cc^
 ||www.c-aces.com^
 ||www.c-o.space^
 ||www.c.najwahaifamelema100.com^
@@ -36800,6 +37139,7 @@ sobot.com
 ||www.certmanserv.com^
 ||www.cesaco.com^
 ||www.cesanta.com^
+||www.cesartech.com^
 ||www.cexabani.tripod.com^
 ||www.ceyy.net^
 ||www.cezsociales.com.ar^
@@ -36963,6 +37303,7 @@ sobot.com
 ||www.compass-publishing.blogspot.com^
 ||www.competeinc.com^
 ||www.completedimensions.com^
+||www.completemember.net^
 ||www.completesolution.us^
 ||www.compraenlineaperu.com^
 ||www.compsec.co.nz^
@@ -37028,6 +37369,7 @@ sobot.com
 ||www.courseuniv.com^
 ||www.covid-polska.dfirma.pl^
 ||www.coxandkingslimited.com^
+||www.coxwinemerchants.com.au^
 ||www.coyotos.com^
 ||www.cp30265.tmweb.ru^
 ||www.cpalist.com^
@@ -37106,8 +37448,10 @@ sobot.com
 ||www.cybpy.cn^
 ||www.cypherpunk.tech^
 ||www.cypressdrivingschool.com^
+||www.cyric.eu^
 ||www.cysljx.com^
 ||www.cyzic.com^
+||www.czbyt.cn^
 ||www.czmj.com^
 ||www.d.techmartbd.com^
 ||www.daddyo.com^
@@ -37176,6 +37520,7 @@ sobot.com
 ||www.decominus.com^
 ||www.decorativedecals.com^
 ||www.decorvise.com^
+||www.decoteks.com.tr^
 ||www.defense-support.gmbh^
 ||www.definehost.com^
 ||www.deflorationvirgins.com^
@@ -37279,12 +37624,15 @@ sobot.com
 ||www.directrecipes.com^
 ||www.direitoacidadania.com.br^
 ||www.disbakterioza.net^
+||www.discoed848.bestofpanorama.ws^
 ||www.discontinuedplumbing.com^
 ||www.discountautoglassbakersfieldca.com^
 ||www.discountvacs.com^
 ||www.diskmailverify.weebly.com^
+||www.diskrecovery.ws^
 ||www.diskuszucht-vn.de^
 ||www.disneycoloringbook.com^
+||www.disneyworldresorts.com^
 ||www.districlinicos.com^
 ||www.disze.com^
 ||www.divinaarmonie.ro^
@@ -37353,6 +37701,7 @@ sobot.com
 ||www.dreamqueens.com^
 ||www.dreamsigns.com.au^
 ||www.drew-foundation.org^
+||www.drewmaughan.com^
 ||www.drink.ti13.cba.pl^
 ||www.drinkup.com.br^
 ||www.driverscanon.com^
@@ -37396,6 +37745,7 @@ sobot.com
 ||www.e-igr.com^
 ||www.e-junkie.com^
 ||www.e-rentier.ru.okbit.ru^
+||www.e96615s6.beget.tech^
 ||www.eagleeyepaint.com^
 ||www.earthenme.com^
 ||www.earthlifebalance.com^
@@ -37592,6 +37942,7 @@ sobot.com
 ||www.eunagi.com^
 ||www.eurobandusedtires.com^
 ||www.eurobeautygroup.com^
+||www.eurocom.com.kz^
 ||www.euroschooltravel.com^
 ||www.eurosiam.com^
 ||www.eurosport1hd.blogspot.com^
@@ -37663,6 +38014,7 @@ sobot.com
 ||www.fakty24.dkonto.pl^
 ||www.faktypolska17.b-cdn.net^
 ||www.falcaobatidos.com.br^
+||www.falconsafe.com.sg^
 ||www.falconsound.org^
 ||www.falsepassports.cc^
 ||www.familyparent.com^
@@ -37677,6 +38029,7 @@ sobot.com
 ||www.farminstead.com^
 ||www.farozyapidenetim.com^
 ||www.fasanarocontabil.com.br^
+||www.fase.world^
 ||www.fashionhunter.net^
 ||www.fashionworldhunt.blogspot.com^
 ||www.fast-rp.kl.com.ua^
@@ -37713,6 +38066,7 @@ sobot.com
 ||www.ferracur.com.ar^
 ||www.ferrazzilimo.com^
 ||www.feshop-store.su^
+||www.fetish-daily.com^
 ||www.fetishhotel.com^
 ||www.feuerflirt.net^
 ||www.fff.com^
@@ -37776,6 +38130,7 @@ sobot.com
 ||www.flamixclicker.weebly.com^
 ||www.flapperswing.com^
 ||www.flashcasino.com^
+||www.flautopartes.com^
 ||www.fleischmanphoto.com^
 ||www.fleshpromo.com^
 ||www.fletcherscigarbar.com^
@@ -37790,6 +38145,7 @@ sobot.com
 ||www.fluodesign.gr^
 ||www.fluor.be^
 ||www.fluorysports.com^
+||www.flvplayerx.info^
 ||www.flyingcoloursfostercare.co.uk^
 ||www.flyinghigh.ch^
 ||www.fmure.com^
@@ -37812,6 +38168,7 @@ sobot.com
 ||www.foritalynews.it^
 ||www.form-filing.com^
 ||www.formulaonegym.co.uk^
+||www.formyfriends.ru^
 ||www.forrotec.net^
 ||www.fortify.support^
 ||www.fortnitekey.zzz.com.ua^
@@ -37860,6 +38217,7 @@ sobot.com
 ||www.frtyi.com^
 ||www.fruitserum.com^
 ||www.fruityblue.com^
+||www.fsmilad.ir^
 ||www.fstd.com.tw^
 ||www.ftk-toys.ru^
 ||www.ftlian.top^
@@ -37964,6 +38322,7 @@ sobot.com
 ||www.getsearchnow2.com^
 ||www.getspotify.net^
 ||www.getsupportjobs.com^
+||www.gettheflow.pl^
 ||www.getthestory.net^
 ||www.getunlocked.com^
 ||www.getvashikaran.blogspot.ru^
@@ -38282,6 +38641,7 @@ sobot.com
 ||www.horizontalloyalty.com^
 ||www.hornytinder.com^
 ||www.horskyhotel-eva.sk^
+||www.hospedajesumachuasi.com^
 ||www.host1681251.hostland.pro^
 ||www.host1727451.hostland.pro^
 ||www.hostingbypierre.com^
@@ -38327,6 +38687,7 @@ sobot.com
 ||www.htl.ru^
 ||www.htlvn.com^
 ||www.https.secure.bank-of-america.login.sign.eqmfvtmiya.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.fbkxrdsxrn.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.hxtglxazsk.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.kitygajcoy.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.kyewhddiav.underpains.duckdns.org^
@@ -38336,7 +38697,9 @@ sobot.com
 ||www.https.secure.bankofamerica.login.sign.bbtlaqwfwd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.budffosyyd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.bzypsvygvr.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ddunpbedza.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ddvfqzeqbv.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.dydymnkfqa.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.eoywnfygpe.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.etebfpwmtk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ezvjejqkiu.underpains.duckdns.org^
@@ -38348,18 +38711,26 @@ sobot.com
 ||www.https.secure.bankofamerica.login.sign.jvvtuawtco.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.kfdksmdiub.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.mqlulmltnd.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.muxmnomrlc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.njeoecoiny.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.nmicwrszox.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nuwburgxmc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.pozbkftnzw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.prkiancihr.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.psqiuyylzu.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.pwijtnmksi.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.qqhcawmnhl.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ryialprndb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.srgrrhttzg.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.svhvfopjev.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.sxrchsaick.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.tlqbndygon.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.toyupnstex.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.tzeujvsupb.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.usblaqmyre.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.uuzdtdarsn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.uwixtobsjz.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.uxioqwsrkv.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.vbqrgfvngc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.vhlqttmvww.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.whmofsrguw.underpains.duckdns.org^
@@ -38367,6 +38738,7 @@ sobot.com
 ||www.https.secure.bankofamerica.login.sign.wtfqmvdwsw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xabxlgldha.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xebtggkrsv.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.xfwmjwzifz.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xgumyfyiog.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ytjdudftxn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.zbpavjwsko.underpains.duckdns.org^
@@ -38443,6 +38815,7 @@ sobot.com
 ||www.iiforgotapple.com^
 ||www.iirs.ac.in^
 ||www.ikatantkj-5.blogspot.com^
+||www.ikenna.duckdns.org^
 ||www.iketrading.com^
 ||www.ilgid.ru^
 ||www.ilift-benelux.com^
@@ -38468,6 +38841,7 @@ sobot.com
 ||www.imzabilgisayar.com.tr^
 ||www.in-exdesign.co.uk^
 ||www.in-med.pl^
+||www.inboxverify.com^
 ||www.incofer.com.br^
 ||www.indevagroup.cn^
 ||www.indexed.duckdns.org^
@@ -38478,6 +38852,7 @@ sobot.com
 ||www.industriasmarza.com^
 ||www.industrymesh.com^
 ||www.ineedcomputersupport.com^
+||www.inf.ufes.br^
 ||www.infinite-ads.com^
 ||www.infinitydjs.com^
 ||www.infinityhc.com.br^
@@ -38688,6 +39063,7 @@ sobot.com
 ||www.johnendevermak.blogspot.com^
 ||www.joinus.logicalatdemo.co.in^
 ||www.jokokrimpen.nl^
+||www.joomla-update.org^
 ||www.joomlaessential.com^
 ||www.jordanembassy.org.au^
 ||www.jordanembassy.ro^
@@ -38790,6 +39166,7 @@ sobot.com
 ||www.kemei0769.com^
 ||www.kenhphim3s.blogspot.com^
 ||www.kenkapacking.com^
+||www.kenyatouristguide.com^
 ||www.keosiuchauthanhlan.com.vn^
 ||www.kerosky.com^
 ||www.kevinponce.com^
@@ -38918,6 +39295,7 @@ sobot.com
 ||www.lcd-studio.com^
 ||www.lcmerida.com.mx^
 ||www.lctn.org^
+||www.lcynet.com^
 ||www.lcysapugi.com^
 ||www.le-bo.com^
 ||www.leadersinternational.org^
@@ -39147,6 +39525,7 @@ sobot.com
 ||www.mailalerter.com^
 ||www.mailphonesupport.blogspot.com^
 ||www.mailserveruncgeducation.y0.pl^
+||www.mainepta.org^
 ||www.mainpp.gov.my^
 ||www.mainstaysolutionz.com^
 ||www.maiwarebytes.com^
@@ -39237,6 +39616,7 @@ sobot.com
 ||www.mckinneyplumbingpro.com^
 ||www.mcrypto.ru^
 ||www.mddermatics.com^
+||www.mdemuywiscdyfkbpo.com^
 ||www.me6.acortado.com^
 ||www.meatfree.ru^
 ||www.mebel-m.com.ua^
@@ -39258,6 +39638,7 @@ sobot.com
 ||www.medworks.pk^
 ||www.medycznapolska.pl^
 ||www.mega-code.com^
+||www.mega-dating25.com^
 ||www.megabitesguideservice.com^
 ||www.megachief.com^
 ||www.megaforce.co.il^
@@ -39352,6 +39733,7 @@ sobot.com
 ||www.miniexport.com^
 ||www.ministryofsupport.com^
 ||www.minocki.republika.pl^
+||www.mirmat.pl^
 ||www.missaost.com.br^
 ||www.mississippirelay.com^
 ||www.mistermike.net^
@@ -39489,6 +39871,7 @@ sobot.com
 ||www.mutluyasamsanati.blogspot.com^
 ||www.muzhputm.myutilitydomain.com^
 ||www.mvav.com^
+||www.mvsf.ch^
 ||www.mvt.c0m.at^
 ||www.mwbot.com^
 ||www.mxbpointcodes.com^
@@ -39565,6 +39948,7 @@ sobot.com
 ||www.nbzip.ru^
 ||www.ncld.gov.lk^
 ||www.ndsa.org.hk^
+||www.neatappletech.readysetselfie.com^
 ||www.neatregistry.com^
 ||www.nebula-ent.com^
 ||www.neck6bake.com^
@@ -39620,6 +40004,7 @@ sobot.com
 ||www.nextlevelwindows.com^
 ||www.nfbio.com^
 ||www.nffedorov.ru^
+||www.nhaxe.com^
 ||www.nhidcl.com^
 ||www.niallphelanarchitects.com^
 ||www.nibleycity.com^
@@ -39775,6 +40160,7 @@ sobot.com
 ||www.optimalstormwater.com.au^
 ||www.optimizertool.com^
 ||www.optimum-hits.com^
+||www.options-1300.com^
 ||www.optionstipsandtricks.com^
 ||www.optisense.co.uk^
 ||www.organoborons.com^
@@ -39984,6 +40370,7 @@ sobot.com
 ||www.pingwin.aldotour.pl^
 ||www.pinhalnova.pt^
 ||www.pinketg.com^
+||www.piorawycieraczek.com.pl^
 ||www.pipeco.com.my^
 ||www.pirataalone.blogspot.com^
 ||www.pirs.pro^
@@ -40063,6 +40450,7 @@ sobot.com
 ||www.poslovni-oglasi.com^
 ||www.postepay-verifica-online-fcs.ddns.info^
 ||www.postepayonline-verifica-dei-dati.4pu.com^
+||www.postergaleria.chh.pl^
 ||www.potelsarl.com^
 ||www.power-essays.com^
 ||www.powerall.co.za^
@@ -40357,6 +40745,7 @@ sobot.com
 ||www.richfighter.com^
 ||www.riddenstorm.net^
 ||www.riet.in^
+||www.rightnote.co.uk^
 ||www.rigid.co.id^
 ||www.riman.lv^
 ||www.rimccoaching.com^
@@ -40534,6 +40923,7 @@ sobot.com
 ||www.seap.co^
 ||www.seapointpartners.com^
 ||www.seaporn.org^
+||www.search-results.mobi^
 ||www.search.hyourfreeonlineformspop.com^
 ||www.search2.alivesearch.com^
 ||www.search4.alivesearch.com^
@@ -40619,6 +41009,7 @@ sobot.com
 ||www.sexkontakti-ba.com^
 ||www.sexlist.com^
 ||www.sexmoney.com^
+||www.sextracker.com^
 ||www.sexxxasia.com^
 ||www.sexyasianfucked.blogspot.com^
 ||www.sexycamteens.com^
@@ -40642,6 +41033,7 @@ sobot.com
 ||www.shanghaiyucheng.com^
 ||www.shangxiasha.com^
 ||www.shanko2.zyr.su^
+||www.shapewhisk.com^
 ||www.shar-ed.ca^
 ||www.sharesend.com^
 ||www.sharifpost.com^
@@ -40694,6 +41086,7 @@ sobot.com
 ||www.sindhuratna.com^
 ||www.sindicarga.com^
 ||www.singularity.wtf^
+||www.sinhlyyeu.com^
 ||www.siovv.voluumtrk.com^
 ||www.sipdoorphone.com^
 ||www.sirangbrick.com^
@@ -40729,6 +41122,7 @@ sobot.com
 ||www.smartaibot.com^
 ||www.smartartdigital.com^
 ||www.smartassisthub.com^
+||www.smartconnect.duckdns.org^
 ||www.smartdefender.net^
 ||www.smartechoutdoors.com^
 ||www.smarterautofinancing.com^
@@ -40940,7 +41334,9 @@ sobot.com
 ||www.suci-puri.staff.unja.ac.id^
 ||www.sud-concept.net^
 ||www.suddenplot.com^
+||www.sudiptasekhar.com^
 ||www.sudlogistic.com^
+||www.suijk.nl^
 ||www.suited45trk.com^
 ||www.sukaugreenview.net^
 ||www.sukces.pl^
@@ -41150,6 +41546,7 @@ sobot.com
 ||www.thecompletedhome.com^
 ||www.thecoolnerdsquad.com^
 ||www.thecrestsalem.com^
+||www.thecryptogenius.com^
 ||www.thedollhousexoxo.com.au^
 ||www.thefirstrowapp.com^
 ||www.thefoolonthehill.net^
@@ -41358,6 +41755,7 @@ sobot.com
 ||www.txeducatorawards.org^
 ||www.txprepsoftball.com^
 ||www.tycfsb.com^
+||www.tyev2.cn^
 ||www.tyfd7.cn^
 ||www.tyjrjx.com^
 ||www.tywitter.com^
@@ -41395,6 +41793,7 @@ sobot.com
 ||www.ungerrose.com^
 ||www.uniceba.edu.mx^
 ||www.unicler.mx^
+||www.unifarmex.net^
 ||www.uniquefinds.nl^
 ||www.uniquevisaservices.co.uk^
 ||www.uniquewritingsolution.bigcartel.com^
@@ -41420,6 +41819,7 @@ sobot.com
 ||www.upgrad.ru^
 ||www.upit.com.tw^
 ||www.uplift-health.com^
+||www.upload.ee^
 ||www.upoznavanje.net^
 ||www.upsbs.com^
 ||www.uralgrafit.net^
@@ -41441,6 +41841,7 @@ sobot.com
 ||www.username.support^
 ||www.users.ero-advertising.com^
 ||www.users.freenetname.co.uk^
+||www.usfreeads.com^
 ||www.usinadeideias.net^
 ||www.usweatherinsurance.com^
 ||www.utap.org.tn^
@@ -41455,6 +41856,7 @@ sobot.com
 ||www.vakantiewoningverhuur.be^
 ||www.vakaz.ru^
 ||www.valerii.org^
+||www.valleexpress.com.br^
 ||www.valortho.com^
 ||www.valteragrupa.com^
 ||www.valueclickmedia.com^
@@ -41622,6 +42024,7 @@ sobot.com
 ||www.wastedonjesus.com^
 ||www.watch-oscar-online.com^
 ||www.watchdogdns.duckdns.org^
+||www.watchgolflive.com^
 ||www.watchonline.fullseriesworld.com^
 ||www.watchseriesfree.to^
 ||www.watchstartrekintodarknessonline6.blogspot.com^
@@ -41662,6 +42065,7 @@ sobot.com
 ||www.weblogic.ddns.mobi^
 ||www.weblogic1709.zzux.com^
 ||www.weblos.info^
+||www.webmail.ngulesh.info^
 ||www.webminerpool.com^
 ||www.webpictool.com^
 ||www.webproj.com.br^
@@ -41742,6 +42146,7 @@ sobot.com
 ||www.wiremodeling.com^
 ||www.wirtuozseksu.pl^
 ||www.wisedownloads.com^
+||www.wiskiriski12.duckdns.org^
 ||www.witchlab.com^
 ||www.wizteen.com^
 ||www.wkmg.co.kr^
@@ -41883,6 +42288,7 @@ sobot.com
 ||www.yeppeo-x.blogspot.com^
 ||www.yesmyboss.com^
 ||www.yeswecan.duckdns.org^
+||www.yeukydrant.com^
 ||www.yeyajisd.com^
 ||www.yijiatongcheye.com^
 ||www.yiluee.com^
@@ -41925,6 +42331,7 @@ sobot.com
 ||www.yuvplayer.com^
 ||www.yuyuansafety.com^
 ||www.yx-door.com^
+||www.yzkedq.com^
 ||www.za10groszy.pl^
 ||www.zaatsidee.nl^
 ||www.zagorjegrenaprej.si^
@@ -41955,6 +42362,7 @@ sobot.com
 ||www.zevuzido.tripod.com^
 ||www.zfrdxjz.com^
 ||www.zghlgm.com^
+||www.zh-imtoken.org.cn^
 ||www.zhangqiufangchanwang.com^
 ||www.zhenweiyuan168.com^
 ||www.zhihuishidai.com^
@@ -42113,6 +42521,7 @@ sobot.com
 ||wx3.sinaimg.cn^$domain=rmdown.com
 ||wxbsc.hzgjp.com^
 ||wxbv.com^
+||wxlike.com^
 ||wxlqsz.com^
 ||wxpow.com^
 ||wxrgjdkxhegjn.online^
@@ -42248,6 +42657,7 @@ sobot.com
 ||xlds.de^
 ||xlgqy.com^
 ||xloidglor.xyz^
+||xlq668.com^
 ||xlx1.com^
 ||xly9f8m1za.neliver.com^
 ||xmarazency.com^
@@ -42314,6 +42724,7 @@ sobot.com
 ||xmrmngqivbgpx.site^
 ||xmseaside.com^
 ||xmwiyb.maje.ru^
+||xn--2qu92fhtxsxexqab.xn--fiqs8s^
 ||xn--72c6a5a8bvfyb.com^
 ||xn--72ca4bhl4azh7acm7u.com^
 ||xn--albilet-b9a.pl-oferta5459209.top^
@@ -42361,6 +42772,7 @@ sobot.com
 ||xt918.com^
 ||xtendadvert.com^
 ||xtqnus.surfstitch.com^
+||xtrapost.work.gd^
 ||xtraserp.com^
 ||xtrasize.com^
 ||xtwjx.cn^
@@ -42431,6 +42843,7 @@ sobot.com
 ||yamasakistudios.com^
 ||yamato-elc.com^
 ||yami-gautam-hot.blogspot.com^
+||yandex-market-onlaine.cfd^
 ||yanepok.com^
 ||yanglangkk.cn^
 ||yankeeflagpoles.com^
@@ -42471,6 +42884,7 @@ sobot.com
 ||yervox-82pinal.digital^
 ||yesfuknow.com^
 ||yesmyboss.com^
+||yesomctp.hjnes.com^
 ||yessearches.com^
 ||yesware.evergage.com^
 ||yetiadventure.com^
@@ -42493,6 +42907,7 @@ sobot.com
 ||yicha.cn^
 ||yield-budget.com^
 ||yield-earnings.com^
+||yield-silver.com^
 ||yield-trade.com^
 ||yield-wages.com^
 ||yieldlove.com^
@@ -42503,6 +42918,7 @@ sobot.com
 ||yjk.co^
 ||yjpgxf.svsound.com^
 ||yjssmzlyh.com^
+||yk-b.co.jp^
 ||ykad-data.youku.com^
 ||ykmi.or.id^
 ||ykowel.muscat.pl^
@@ -42511,6 +42927,7 @@ sobot.com
 ||ylcajkhefghaf.online^
 ||yldbt.com^
 ||ylx-3.com^
+||ylyvqslkvglamfre.com^
 ||ylzb.com^
 ||ymcoyw.lumica.kr^
 ||ymqlrkznenfcd.world^
@@ -42520,6 +42937,7 @@ sobot.com
 ||yndsupport.com^
 ||ynpabx.com^
 ||ynrwd.voluumtrk.com^
+||ynvtepiimtshs.store^
 ||ynxhsy.com^
 ||ynzhby.com^
 ||yogadineribbon.com^
@@ -42550,6 +42968,7 @@ sobot.com
 ||yourfreexboxone.com^
 ||yourgamesector.blogspot.com^
 ||yourprotection-suggestion.com^$document
+||yoursecurity-suggestion.com^
 ||yoursecurity-suggestion.com^$document
 ||yoursneaky.com^
 ||yourtemplatefinder.com^
@@ -42558,6 +42977,7 @@ sobot.com
 ||yourwebsitecoach.com^
 ||yourwishfromme.net^
 ||yousendit.touchcommerce.com^
+||youthrev.viralgalleries.me^
 ||youtibe.com^
 ||youtube.112.2o7.net^
 ||youtube.cosearch.musicfrost.com^
@@ -42566,11 +42986,13 @@ sobot.com
 ||youtubeview.com^
 ||youwontstop.us^
 ||youzigift.com^
+||yp-tefulong.com^
 ||yp.liftjoinant.com^
 ||yp0loy5lcl.com^
 ||ypdzb.cn^
 ||ypfgoochland.info^
 ||yq1zsocgi7z2xcs-p.adktrack34.xyz^
+||yrfitmobjkskj.space^
 ||yrorsq.kirara-support.jp^
 ||ys6ot.cn^
 ||ysan.org^
@@ -42617,6 +43039,7 @@ sobot.com
 ||yyw114.cn^
 ||yyxpearkrincp.site^
 ||yyyyyyaaaaaahhhhhhoooooo.weebly.com^
+||yyzkf.com^
 ||yzftqx.cn^
 ||z-lib.ai^
 ||z-lib.is^
@@ -42642,6 +43065,8 @@ sobot.com
 ||za6ekgmgtx.neliver.com^
 ||zabkaakasyno.play-store.one^
 ||zabkakasyno.store-apps.click^
+||zafesha.com^
+||zafinexoaiapp.com^
 ||zag.122.2o7.net^
 ||zagbit.com^
 ||zahid-trec.com^
@@ -42666,8 +43091,10 @@ sobot.com
 ||zanox-affiliate.mobi^
 ||zanpai.me^
 ||zanzibarflyingdress.com^
+||zap356736-8.plesk05.zap-webspace.com^
 ||zapitano.com^
 ||zapomer.online^
+||zarabiaj-dzis.pl^
 ||zaramidia.com.br^
 ||zarasresort.com^
 ||zarrmarketing.co.uk^
@@ -42684,6 +43111,7 @@ sobot.com
 ||zb6nws2yra.neliver.com^
 ||zbldxf.icu^
 ||zbo2h.com^
+||zbrfde.ozmall.co.jp^
 ||zbuforex.co.cc^
 ||zbwyt.com^
 ||zbz8prspcf.neliver.com^
@@ -42709,6 +43137,7 @@ sobot.com
 ||zeckfbzh8j.rev.cl^
 ||zedo.sync.go.sonobi.com^
 ||zeetiptooglais.com^
+||zeffert.com^
 ||zeig.me^
 ||zeilbeck-metallbau.de^
 ||zekakasa-ai.org^
@@ -42720,10 +43149,12 @@ sobot.com
 ||zemfa.com^
 ||zemno.ru^
 ||zemtravexapp.com^
+||zen-sosi.net^
 ||zenatisecurity.com^
 ||zenedge.actonservice.com^
 ||zenek-caly-film.kazeo.com^
 ||zenenet.com^
+||zenfablerisesoftware-com.cryptofinancetrack.com^
 ||zenisvomo.com^
 ||zenith-ekvitizer.com^
 ||zenith-reports.com^
@@ -42736,12 +43167,15 @@ sobot.com
 ||zentrixaiengine.com^
 ||zenvalis.site^
 ||zephyrospro.info^
+||zephyrusofsantafe.com^
 ||zerafet.com^
+||zerodotzero.eu^
 ||zesep.com^$third-party
 ||zeushoki.com^
 ||zeviro-capiture-proair.com^
 ||zevrix-spark-ai.net^
 ||zexiron-blink-ai.net^
+||zextworks.co.jp^
 ||zeynepharikalardiyarinda-stage-stage-bollyshare.net.daraz.com^
 ||zf9aypjz8q.neliver.com^
 ||zfgan.com^
@@ -42752,6 +43186,7 @@ sobot.com
 ||zggmsw.haloshop.kr^
 ||zgisp.net^
 ||zgwnhyrrol.neliver.com^
+||zgzxs.weathercn.com^
 ||zh.sexfortokens.com^
 ||zh.stripchat.webcam^
 ||zh.zeroredirect1.com^
@@ -42778,6 +43213,7 @@ sobot.com
 ||ziggiesmusic.com^
 ||ziggo-nl-klantenservice.funfitnessconcepts.com^
 ||zigguratt.com^
+||zigmasurf.co.cc^
 ||zigucunjzr.neliver.com^
 ||zigzagstr.dns.administrators.net.daraz.com^
 ||zigzagstr.net.daraz.com^
@@ -42787,6 +43223,7 @@ sobot.com
 ||zimbifarcies.com^
 ||zimbra-225.weebly.com^
 ||zimbra.adacts.com^
+||zinnmbra.weebly.com^
 ||zionsbancorp.demdex.net^
 ||zioraimpact.net^
 ||zioraravex-software.com^
@@ -42794,13 +43231,17 @@ sobot.com
 ||zip.support^
 ||zippingcare.com^
 ||zipsurf.co.cc^
+||zirdough.net^$popup
 ||zirelanto.club^
 ||zitetige.com^
 ||zitupaa.com^
+||ziyemy.shop^
 ||zjgxxsl.com^
 ||zjjxp.online^
+||zjqbxcdwwtvtt.site^
 ||zjqf1chycq.neliver.com^
 ||zk10.zeroredirect1.com^
+||zkczzltlhp6y.com^
 ||zkdkvnzsdxge.info^
 ||zkw.gekub.yi.org^
 ||zkw7ymkhaa6pkedcaplzl9utiiyaf1505345140.nuid.imrworldwide.com^
@@ -42811,15 +43252,18 @@ sobot.com
 ||zll855.gicp.net^
 ||zlolhl.mediametrics.ru^
 ||zlp6s.pw^
+||zlteinfgo0.neliver.com^
 ||zlx.com.br^
 ||zlxwsxcnkyeij.site^
 ||zlzg2iycwb.neliver.com^
 ||zmail-iitm-ac-in.weebly.com^
 ||zmaticlink.com^
+||zmdesf.cn^
 ||zmdqjykwv9.neliver.com^
 ||zmdtodmdjj.neliver.com^
 ||zmgtevnj4j.neliver.com^
 ||zmvcbfmrdgner.club^
+||zn0gnl3th3zkiyzsb-aadigital.siteintercept.qualtrics.com^
 ||zncx.com^
 ||zndsssp.dangbei.net^
 ||znhs5m4wdk.neliver.com^
@@ -42844,27 +43288,34 @@ sobot.com
 ||zonulaemanidae.click^
 ||zonupiza.com^$popup
 ||zonuwa-dadepu.digital^
+||zooj.cn^
 ||zoom-with-julian.com^
 ||zoom.go2cloud.org^
 ||zoom.org.pk^
 ||zoominfo.actonservice.com^
+||zoominglife.com^
 ||zoosm.ru^
+||zooxr.com^
 ||zophim.me^
 ||zopqks.kavehome.com^
 ||zoqisye.com^
 ||zor.meegmfio.in^
 ||zordaustewhoh.com^$popup
 ||zorvalnexisplatform.com^
+||zovic.ca^
+||zowuliu.com^
 ||zoygroup.com^
 ||zozc5sagrk.neliver.com^
 ||zozybio.com^
 ||zp0573.cn^
+||zp1.duckdns.org^
 ||zpafiska.pl^
 ||zpairql.cn^
 ||zparty.net^
 ||zpmbra.weebly.com^
 ||zpmbz.coach.com^
 ||zprb.ru^
+||zpv6hynuhk.neliver.com^
 ||zpwllfsjphpig.online^
 ||zpyi22u0wo.neliver.com^
 ||zq.lansedir.com^
@@ -42881,13 +43332,17 @@ sobot.com
 ||zrvfsobt6w.neliver.com^
 ||zs14.cnzz.com^
 ||zs5ofphbya.neliver.com^
+||zs9.cnzz.com^
 ||zsge.tt.omtrdc.net^
+||zsmbra.weebly.com^
 ||zt.sexygirlspics.live^
 ||zt.xham.live^
 ||ztbbpz.betten.de^
 ||ztds.online^
 ||ztdxxwodwyfaz.site^
 ||ztevents.zaloapp.com^
+||zthti.solidandstriped.com^
+||ztkei1ezgy.neliver.com^
 ||ztoch.cozyearth.com^
 ||ztrwc3dgpz.neliver.com^
 ||ztumuvofzbfe.com^
@@ -42907,12 +43362,17 @@ sobot.com
 ||zurigoelba.it^
 ||zursq.everlane.com^
 ||zv1qjwilaw.neliver.com^
+||zv8mlajc6b.neliver.com^
+||zvdhfeelw.firebaseapp.com^
+||zvdhfeelw.web.app^
 ||zvetokr2hr8pcng09.com^
 ||zvietnakello.weebly.com^
 ||zvmbra.weebly.com^
 ||zw7vapte4b.neliver.com^
+||zwatgf.megaknihy.cz^
 ||zwgege.cn^
 ||zwrj999.cn^
+||zwrot-podatku.dedyn.io^
 ||zx6.ru^
 ||zxcv00-po123.firebaseapp.com^
 ||zxcxzvcbrretgrwe.blob.core.windows.net^
@@ -42920,17 +43380,24 @@ sobot.com
 ||zxttvkshqbded.space^
 ||zxw51.com^
 ||zy7x.top^
+||zyclarapumpcost85330.soup.io^
 ||zyjhgdtzunkx.myfunnelish.com^
 ||zykranvault-ai-platform.com^
+||zyl2p41bnp.neliver.com^
 ||zyliant-1000.com^
 ||zynqrexx.com^
 ||zyntrax-vault.net^
+||zyoskv38.top^
 ||zypharunstratasystem.com^
 ||zyphere-rateur-app.com^
 ||zyphoraai-app.com^
 ||zyphre-rateur.com^
+||zyptorixapp-solution.com^
 ||zyrtec.3.p2l.info^
 ||zys.cl^
+||zyshpvvjw7.neliver.com^
+||zyskavia-app.com^
+||zyvexorriseai.com^
 ||zz123.com^
 ||zzarzlfyun.neliver.com^
 ||zzbgjjc.com^
@@ -42943,6 +43410,9 @@ sobot.com
 ||zzpa3e62zt91c04r.adminiiptrator.net.daraz.com^
 ||zzpa3e62zt91c04r.n.net.daraz.com^
 ||zzpa3e62zt91c04r.vortex-administrator.net.daraz.com^
+||zzsdtzb.com^
+||zzxxjs.net^
 ||zzyanhushi.com^
 ﻿-ulog.ksapisrv.com^
 ﻿@@||adobe.com.ssl.d1.sc.omtrdc.net^$xmlhttprequest,domain=www.adobe.com
+﻿@@||teams.live.com^$generichide
