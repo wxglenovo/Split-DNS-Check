@@ -257,12 +257,16 @@ def split_parts(rules_to_validate, delete_counter):
     B_index = 0
     B_len = len(B_rules)
 
+    # 让 B 优先分配给 A 规则最少的分片
     for i in range(PARTS):
         need = A_max - A_counts[i]
         while need > 0 and B_index < B_len:
             _, r = B_rules[B_index]
-            buckets[i].append(r)
-            bucket_sizes[i] += 1
+            # 找到 A 最少的分片并将 B 规则添加进去
+            min_A_index = A_counts.index(min(A_counts))  
+            buckets[min_A_index].append(r)
+            bucket_sizes[min_A_index] += 1
+            A_counts[min_A_index] += 1
             B_index += 1
             need -= 1
 
