@@ -193,6 +193,12 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
+import os
+from collections import deque
+import heapq
+import multiprocessing as mp
+
+# Final level optimization for rule splitting
 def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     # 预处理 delete_counter → group_dc
@@ -200,13 +206,13 @@ def split_parts(rules_to_validate, delete_counter):
     def group_dc(dc):
         dc = int(dc)
         if dc >= 97:
-            return 3      # 忽略
+            return 3  # 忽略
         if dc <= 16:
-            return 0      # A
+            return 0  # A
         if dc <= 64:
-            return 1      # B
+            return 1  # B
         if dc <= 96:
-            return 2      # C
+            return 2  # C
 
     # -------------------------
     # 1. 预处理规则，提前计算每条规则的 group_dc，并存储
@@ -307,8 +313,6 @@ def split_parts(rules_to_validate, delete_counter):
     # 多进程写文件
     with mp.Pool(processes=PARTS) as pool:
         pool.starmap(write_part, [(i, list(buckets[i])) for i in range(PARTS)])
-
-
 
 # ===============================
 # 更新 not_written_counter
