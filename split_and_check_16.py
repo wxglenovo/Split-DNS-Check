@@ -191,7 +191,7 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(all_rules, delete_counter):
+def split_parts(rules_to_validate, delete_counter):
     import os
     from collections import deque
 
@@ -232,7 +232,7 @@ def split_parts(all_rules, delete_counter):
     B_rules = []
     C_rules = []
 
-    for r in all_rules:
+    for r in rules_to_validate:
         g = group_dc(delete_counter.get(r, 64))
         if g == 0:
             A_rules.add(r)
@@ -340,6 +340,7 @@ def split_parts(all_rules, delete_counter):
             f"(固定A {fixed_A} + 移动B {move_B} + 移动C {move_C}) | "
             f"group_dc 分布: {gtext}"
         )
+
 
 # ===============================
 # 更新 not_written_counter
