@@ -191,51 +191,155 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(all_rules, delete_counter):   
+def split_parts(all_rules, delete_counter):
+    import os
+    from collections import deque
+
+    # -------------------------
+    # 预处理 delete_counter → group_dc
+    # -------------------------
+    def group_dc(dc):
+        dc = int(dc)
+        if dc >= 97:
+            return 3      # 忽略
+        if dc <= 16:
+            return 0      # A
+        if dc <= 64:
+            return 1      # B
+        if dc <= 96:
+            return 2      # C
+
+    # -------------------------
+    # 1. 读取 validated_part_X，确定 A 的原分片
+    # -------------------------
+    part_A = [[] for _ in range(PARTS)]  # 固定A
+    part_orig_map = {}                   # rule → 原分片编号（0-based）
+
+    for i in range(PARTS):
+        path = os.path.join(DIST_DIR, f"validated_part_{i+1}.txt")
+        if os.path.isfile(path):
+            with open(path, "r", encoding="utf-8") as f:
+                for r in f.read().splitlines():
+                    g = group_dc(delete_counter.get(r, 64))
+                    if g == 0:
+                        part_A[i].append(r)
+                        part_orig_map[r] = i
+
+    # -------------------------
+    # 2. 分类所有规则：A / B / C
+    # -------------------------
+    A_rules = set()
+    B_rules = []
+    C_rules = []
+
+    for r in all_rules:
+        g = group_dc(delete_counter.get(r, 64))
+        if g == 0:
+            A_rules.add(r)
+        elif g == 1:
+            B_rules.append((int(delete_counter.get(r, 64)), r))
+        elif g == 2:
+            C_rules.append(r)
+        # g==3 忽略 >=97
+
+    # -------------------------
+    # 3. 初始化分片桶
+    # -------------------------
+    buckets = [deque(part_A[i]) for i in range(PARTS)]
+    bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
+    A_counts = [len(part_A[i]) for i in range(PARTS)]
+    A_max = max(A_counts)
+
+    # -------------------------
+    # 4. 用 B 补齐 A 不足的分片
+    # -------------------------
+    B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
+    B_index = 0
+    B_len = len(B_rules)
+
+    for i in range(PARTS):
+        need = A_max - A_counts[i]
+        while need > 0 and B_index < B_len:
+            _, r = B_rules[B_index]
+            buckets[i].append(r)
+            bucket_sizes[i] += 1
+            B_index += 1
+            need -= 1
+
+    # 剩余 B
+    B_remaining = [r for _, r in B_rules[B_index:]]
+
+    # -------------------------
+    # 5. 剩余 B 均衡分配（最少优先）
+    # -------------------------
+    for r in B_remaining:
+        idx = bucket_sizes.index(min(bucket_sizes))
+        buckets[idx].append(r)
+        bucket_sizes[idx] += 1
+
+    # -------------------------
+    # 6. 使用 C 做最终负载均衡
+    # -------------------------
+    for r in C_rules:
+        idx = bucket_sizes.index(min(bucket_sizes))
+        buckets[idx].append(r)
+        bucket_sizes[idx] += 1
+
+    # -------------------------
+    # 7. 微调 ±1
+    # -------------------------
+    while True:
+        maxi = bucket_sizes.index(max(bucket_sizes))
+        mini = bucket_sizes.index(min(bucket_sizes))
+        if bucket_sizes[maxi] - bucket_sizes[mini] <= 1:
+            break
+        rule = buckets[maxi].pop()
+        buckets[mini].append(rule)
+        bucket_sizes[maxi] -= 1
+        bucket_sizes[mini] += 1
+
+    # -------------------------
+    # 8. 输出 part_X 文件与日志
+    # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
-    # 分类规则
-    A_rules, B_rules, C_rules = [], [], []
-    for r in all_rules:
-        dc = int(delete_counter.get(r, 64))
-        if dc >= 97:
-            continue
-        elif dc <= 16:
-            A_rules.append(r)
-        elif dc <= 64:
-            B_rules.append((dc, r))
-        else:
-            C_rules.append(r)
+    for i in range(PARTS):
+        rules = list(buckets[i])
 
-    # 排序 B 小到大
-    B_rules.sort(key=lambda x: x[0])
-    B_rules = [r for _, r in B_rules]
-
-    # 平均分片
-    part_rules = [[] for _ in range(PARTS)]
-    for idx, r in enumerate(A_rules):
-        part_rules[idx % PARTS].append(r)
-    for idx, r in enumerate(B_rules):
-        part_rules[idx % PARTS].append(r)
-    for idx, r in enumerate(C_rules):
-        part_rules[idx % PARTS].append(r)
-
-    # 写文件和输出日志
-    for i, rules in enumerate(part_rules):
-        gcount = {0:0, 1:0, 2:0, 3:0}
+        # 统计 group_dc 分布
+        gcount = {0:0, 1:0, 2:0, 3:0}  # g0:A, g1:B, g2:C, g3:忽略
         for r in rules:
             dc = int(delete_counter.get(r, 64))
             if dc <= 16:
-                gcount[0] += 1
+                g = 0
             elif dc <= 64:
-                gcount[1] += 1
+                g = 1
+            elif dc <= 96:
+                g = 2
             else:
-                gcount[2] += 1
+                g = 3
+            gcount[g] += 1
+
+        # 数量统计
+        fixed_A = gcount[0]
+        move_B = gcount[1]
+        move_C = gcount[2]
+
+        # 写文件（UTF-8 BOM）
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
-            f.write("\n".join(rules))
+            for r in rules:
+                f.write(r + "\n")
+
+        # group_dc 输出
         gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v>0])
-        print(f"📄 分片 {i+1}: {len(rules)} 条规则 (固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | group_dc 分布: {gtext}")
+
+        # 日志输出
+        print(
+            f"📄 分片 {i+1}: {len(rules)} 条规则 "
+            f"(固定A {fixed_A} + 移动B {move_B} + 移动C {move_C}) | "
+            f"group_dc 分布: {gtext}"
+        )
 
 # ===============================
 # 更新 not_written_counter
