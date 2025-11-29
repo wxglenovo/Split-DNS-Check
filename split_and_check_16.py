@@ -192,15 +192,8 @@ def download_all_sources():
 # 分片切分
 # ===============================
 def split_parts(all_rules, delete_counter):
-
-    # -------------------------
-    # 只处理 delete_counter<97 的规则
-    # -------------------------
-    rules_to_split = [r for r in all_rules if int(delete_counter.get(r, 64)) < 97]
-    if not rules_to_split:
-        print("⚠ 没有规则需要验证，跳过切分")
-        return
-    all_rules = rules_to_split
+    import os
+    from collections import deque
 
     # -------------------------
     # 预处理 delete_counter → group_dc
@@ -217,7 +210,7 @@ def split_parts(all_rules, delete_counter):
             return 2      # C
 
     # -------------------------
-    # 1. 读取 validated_part_X，确定 A 的原分片
+    # 1. 读取 validated_part_X，确定 A 的原分片（只保留 delete_counter<97）
     # -------------------------
     part_A = [[] for _ in range(PARTS)]
     part_orig_map = {}
@@ -226,23 +219,29 @@ def split_parts(all_rules, delete_counter):
         if os.path.isfile(path):
             with open(path, "r", encoding="utf-8") as f:
                 for r in f.read().splitlines():
+                    if int(delete_counter.get(r, 64)) >= 97:
+                        continue  # 忽略不验证规则
                     g = group_dc(delete_counter.get(r, 64))
                     if g == 0:
                         part_A[i].append(r)
                         part_orig_map[r] = i
 
     # -------------------------
-    # 2. 分类所有规则：A / B / C
+    # 2. 分类所有规则：A / B / C（只考虑 delete_counter<97）
     # -------------------------
     A_rules = set()
     B_rules = []
     C_rules = []
+
     for r in all_rules:
-        g = group_dc(delete_counter.get(r, 64))
+        dc_val = int(delete_counter.get(r, 64))
+        if dc_val >= 97:
+            continue  # 忽略不验证规则
+        g = group_dc(dc_val)
         if g == 0:
             A_rules.add(r)
         elif g == 1:
-            B_rules.append((int(delete_counter.get(r, 64)), r))
+            B_rules.append((dc_val, r))
         elif g == 2:
             C_rules.append(r)
 
@@ -252,14 +251,15 @@ def split_parts(all_rules, delete_counter):
     buckets = [deque(part_A[i]) for i in range(PARTS)]
     bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
     A_counts = [len(part_A[i]) for i in range(PARTS)]
-    A_max = max(A_counts)
+    A_max = max(A_counts) if A_counts else 0
 
     # -------------------------
     # 4. 用 B 补齐 A 不足的分片
     # -------------------------
-    B_rules.sort(key=lambda x: x[0])
+    B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
     B_index = 0
     B_len = len(B_rules)
+
     for i in range(PARTS):
         need = A_max - A_counts[i]
         while need > 0 and B_index < B_len:
@@ -268,18 +268,16 @@ def split_parts(all_rules, delete_counter):
             bucket_sizes[i] += 1
             B_index += 1
             need -= 1
-    B_remaining = [r for _, r in B_rules[B_index:]]
 
-    # -------------------------
-    # 5. 剩余 B 均衡分配
-    # -------------------------
+    # 剩余 B 均衡分配
+    B_remaining = [r for _, r in B_rules[B_index:]]
     for r in B_remaining:
         idx = bucket_sizes.index(min(bucket_sizes))
         buckets[idx].append(r)
         bucket_sizes[idx] += 1
 
     # -------------------------
-    # 6. 使用 C 做最终负载均衡
+    # 5. 使用 C 做最终负载均衡
     # -------------------------
     for r in C_rules:
         idx = bucket_sizes.index(min(bucket_sizes))
@@ -287,7 +285,7 @@ def split_parts(all_rules, delete_counter):
         bucket_sizes[idx] += 1
 
     # -------------------------
-    # 7. 微调 ±1
+    # 6. 微调 ±1
     # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
@@ -300,22 +298,26 @@ def split_parts(all_rules, delete_counter):
         bucket_sizes[mini] += 1
 
     # -------------------------
-    # 8. 输出 part_X 文件与日志
+    # 7. 输出 part_X 文件与日志
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
+
     for i in range(PARTS):
         rules = list(buckets[i])
 
-        # group_dc 分布
-        gcount = {0:0, 1:0, 2:0}
+        # group_dc 分布统计
+        gcount = {0:0, 1:0, 2:0, 3:0}
         for r in rules:
-            dc = int(delete_counter.get(r, 64))
-            if dc <= 16:
-                gcount[0] += 1
-            elif dc <= 64:
-                gcount[1] += 1
-            elif dc <= 96:
-                gcount[2] += 1
+            dc_val = int(delete_counter.get(r, 64))
+            if dc_val >= 97:
+                g = 3
+            elif dc_val <= 16:
+                g = 0
+            elif dc_val <= 64:
+                g = 1
+            else:
+                g = 2
+            gcount[g] += 1
 
         fixed_A = gcount[0]
         move_B = gcount[1]
@@ -327,9 +329,13 @@ def split_parts(all_rules, delete_counter):
             for r in rules:
                 f.write(r + "\n")
 
+        # 日志输出
         gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v>0])
-        print(f"📄 分片 {i+1}: {len(rules)} 条规则 "
-              f"(固定A {fixed_A} + 移动B {move_B} + 移动C {move_C}) | group_dc 分布: {gtext}")
+        print(
+            f"📄 分片 {i+1}: {len(rules)} 条规则 "
+            f"(固定A {fixed_A} + 移动B {move_B} + 移动C {move_C}) | "
+            f"group_dc 分布: {gtext}"
+        )
 
 
 # ===============================
