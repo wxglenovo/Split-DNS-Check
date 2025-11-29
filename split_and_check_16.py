@@ -8,9 +8,10 @@ import argparse
 import dns.resolver
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
+import heapq
+import multiprocessing as mp
 from collections import Counter
 from collections import deque
-import heapq
 
 
 # ===============================
@@ -245,39 +246,30 @@ def split_parts(rules_to_validate, delete_counter):
     A_max_total = max(A_counts)
 
     # -------------------------
-    # 5. 使用批量更新的堆优化：优先选 A 最少的分片
+    # 5. 优化 B 和 C 的分配：直接计算分配
     # -------------------------
-    min_heap = [(A_counts[i], i) for i in range(PARTS)]  # (A_count, partition_id)
-    heapq.heapify(min_heap)  # 初始化堆
-
-    # -------------------------
-    # 6. 补充 B：优先选择 A 最少的分片
-    # -------------------------
+    # 先按 A 数量最少的顺序，依次将 B 分配到分片
     B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
     for _, r in B_rules:
-        # 批量更新堆，避免重复的弹出和插入
-        _, idx = heapq.heappop(min_heap)
-
+        # 选择 A 数量最少的分片
+        min_idx = min(range(PARTS), key=lambda i: A_counts[i])
         # 放入 B
-        buckets[idx].append(r)
-        bucket_sizes[idx] += 1
-        A_counts[idx] += 1  # 更新 A_counts
-
-        # 将更新后的分片重新放回堆
-        heapq.heappush(min_heap, (A_counts[idx], idx))
+        buckets[min_idx].append(r)
+        bucket_sizes[min_idx] += 1
+        A_counts[min_idx] += 1  # 更新 A_counts
 
     # -------------------------
-    # 7. 补充 C：按 delete_counter 小→大，优先 A+B 总量少分片
+    # 6. C 分配：按 A+B 总量最少分配
     # -------------------------
     C_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
     for _, r in C_rules:
-        # 使用 batch 分配策略，直接放入负载最少的分片
-        idx = bucket_sizes.index(min(bucket_sizes))
-        buckets[idx].append(r)
-        bucket_sizes[idx] += 1
+        # 选择当前总量最少的分片
+        min_idx = min(range(PARTS), key=lambda i: bucket_sizes[i])
+        buckets[min_idx].append(r)
+        bucket_sizes[min_idx] += 1
 
     # -------------------------
-    # 8. 微调 ±1：只在负载不均衡时才执行
+    # 7. 微调 ±1：只在负载不均衡时才执行
     # -------------------------
     max_diff = max(bucket_sizes) - min(bucket_sizes)
     if max_diff > 1:
@@ -296,33 +288,27 @@ def split_parts(rules_to_validate, delete_counter):
                 bucket_sizes[mini] += 1
 
     # -------------------------
-    # 9. 输出 part_X 文件与日志
+    # 8. 批量写入分片文件与日志
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
-    # 批量写文件
-    output_data = []
-    for i in range(PARTS):
-        rules = list(buckets[i])
-
-        gcount = {0:0, 1:0, 2:0, 3:0}
-        for r in rules:
-            gcount[rule_group_dc[r]] += 1
-
+    # 使用多进程进行批量文件写入
+    def write_part(i, rules):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
-        output_data.append((filename, rules, gcount))
-
-    # 批量写入文件和日志输出
-    for filename, rules, gcount in output_data:
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
             f.write("\n".join(rules) + "\n")
-
+        # 统计 group_dc 分布
+        gcount = {0: 0, 1: 0, 2: 0, 3: 0}
+        for r in rules:
+            gcount[rule_group_dc[r]] += 1
         gtext = ", ".join([f"g{k}:{v}" for k, v in sorted(gcount.items()) if v > 0])
-        print(
-            f"📄 分片 {output_data.index((filename, rules, gcount)) + 1}: {len(rules)} 条规则 "
-            f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
-            f"group_dc 分布: {gtext}"
-        )
+        print(f"📄 分片 {i+1}: {len(rules)} 条规则 | group_dc 分布: {gtext}")
+
+    # 多进程写文件
+    with mp.Pool(processes=PARTS) as pool:
+        pool.starmap(write_part, [(i, list(buckets[i])) for i in range(PARTS)])
+
+
 
 # ===============================
 # 更新 not_written_counter
