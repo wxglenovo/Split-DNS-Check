@@ -192,6 +192,9 @@ def download_all_sources():
 # ===============================
 # 分片切分优化
 # ===============================
+import os
+import multiprocessing as mp
+from collections import defaultdict, deque
 
 # 处理每个分片的规则
 def process_part(part_num, rules_to_process, rule_group_dc, delete_counter, PARTS=16):
@@ -240,6 +243,7 @@ def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
     # 3. 并行处理分片的规则分配
     # -------------------------
     with mp.Pool(processes=num_processes) as pool:
+        # Ensure proper unpacking of arguments for each call
         results = pool.starmap(process_part, [(i, chunk, rule_group_dc, delete_counter) for i, chunk in enumerate(chunks)])
 
     # -------------------------
@@ -307,6 +311,7 @@ def split_parts_parallel(rules_to_validate, delete_counter, PARTS=16):
 
     with mp.Pool(processes=PARTS) as pool:
         pool.starmap(write_part, [(i, list(buckets[i])) for i in range(PARTS)])
+
 
 
 # ===============================
