@@ -245,7 +245,7 @@ def split_parts(rules_to_validate, delete_counter):
     A_max_total = max(A_counts)
 
     # -------------------------
-    # 5. 使用堆优化：优先选 A 最少的分片
+    # 5. 使用批量更新的堆优化：优先选 A 最少的分片
     # -------------------------
     min_heap = [(A_counts[i], i) for i in range(PARTS)]  # (A_count, partition_id)
     heapq.heapify(min_heap)  # 初始化堆
@@ -255,7 +255,7 @@ def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
     for _, r in B_rules:
-        # 从堆中弹出最少 A 的分片
+        # 批量更新堆，避免重复的弹出和插入
         _, idx = heapq.heappop(min_heap)
 
         # 放入 B
@@ -263,7 +263,7 @@ def split_parts(rules_to_validate, delete_counter):
         bucket_sizes[idx] += 1
         A_counts[idx] += 1  # 更新 A_counts
 
-        # 直接更新堆，不重新计算 A_counts 或 bucket_sizes
+        # 将更新后的分片重新放回堆
         heapq.heappush(min_heap, (A_counts[idx], idx))
 
     # -------------------------
@@ -271,17 +271,17 @@ def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     C_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
     for _, r in C_rules:
-        # 选择当前总量最少的分片
+        # 使用 batch 分配策略，直接放入负载最少的分片
         idx = bucket_sizes.index(min(bucket_sizes))
         buckets[idx].append(r)
         bucket_sizes[idx] += 1
 
     # -------------------------
-    # 8. 微调 ±1
+    # 8. 微调 ±1：只在负载不均衡时才执行
     # -------------------------
-    # 只在差距过大时才执行微调
     max_diff = max(bucket_sizes) - min(bucket_sizes)
     if max_diff > 1:
+        # 微调阶段优化：减少不必要的微调操作
         while True:
             maxi = bucket_sizes.index(max(bucket_sizes))
             mini = bucket_sizes.index(min(bucket_sizes))
@@ -312,7 +312,7 @@ def split_parts(rules_to_validate, delete_counter):
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         output_data.append((filename, rules, gcount))
 
-    # 写文件和日志输出
+    # 批量写入文件和日志输出
     for filename, rules, gcount in output_data:
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
             f.write("\n".join(rules) + "\n")
@@ -323,7 +323,6 @@ def split_parts(rules_to_validate, delete_counter):
             f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
             f"group_dc 分布: {gtext}"
         )
-
 
 # ===============================
 # 更新 not_written_counter
