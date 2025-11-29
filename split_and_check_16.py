@@ -192,7 +192,6 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-
 def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     # 预处理 delete_counter → group_dc
@@ -212,7 +211,7 @@ def split_parts(rules_to_validate, delete_counter):
     # 1. 预处理规则，提前计算每条规则的 group_dc，并存储
     # -------------------------
     rule_group_dc = {r: group_dc(delete_counter.get(r, 64)) for r in rules_to_validate}
-    
+
     # -------------------------
     # 2. 读取 validated_part_X，确定 A 的原分片
     # -------------------------
@@ -249,7 +248,7 @@ def split_parts(rules_to_validate, delete_counter):
     # 5. 使用堆优化：优先选 A 最少的分片
     # -------------------------
     min_heap = [(A_counts[i], i) for i in range(PARTS)]  # (A_count, partition_id)
-    heapq.heapify(min_heap)  # 将分片数量最少的分片放入堆中
+    heapq.heapify(min_heap)  # 初始化堆
 
     # -------------------------
     # 6. 补充 B：优先选择 A 最少的分片
@@ -264,7 +263,7 @@ def split_parts(rules_to_validate, delete_counter):
         bucket_sizes[idx] += 1
         A_counts[idx] += 1  # 更新 A_counts
 
-        # 更新堆：重新插入新的 A 最少分片
+        # 直接更新堆，不重新计算 A_counts 或 bucket_sizes
         heapq.heappush(min_heap, (A_counts[idx], idx))
 
     # -------------------------
@@ -280,24 +279,29 @@ def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     # 8. 微调 ±1
     # -------------------------
-    while True:
-        maxi = bucket_sizes.index(max(bucket_sizes))
-        mini = bucket_sizes.index(min(bucket_sizes))
-        diff = bucket_sizes[maxi] - bucket_sizes[mini]
-        if diff <= 1:
-            break
-        move_count = diff // 2
-        for _ in range(move_count):
-            rule = buckets[maxi].pop()
-            buckets[mini].append(rule)
-            bucket_sizes[maxi] -= 1
-            bucket_sizes[mini] += 1
+    # 只在差距过大时才执行微调
+    max_diff = max(bucket_sizes) - min(bucket_sizes)
+    if max_diff > 1:
+        while True:
+            maxi = bucket_sizes.index(max(bucket_sizes))
+            mini = bucket_sizes.index(min(bucket_sizes))
+            diff = bucket_sizes[maxi] - bucket_sizes[mini]
+            if diff <= 1:
+                break
+            move_count = diff // 2
+            for _ in range(move_count):
+                rule = buckets[maxi].pop()
+                buckets[mini].append(rule)
+                bucket_sizes[maxi] -= 1
+                bucket_sizes[mini] += 1
 
     # -------------------------
     # 9. 输出 part_X 文件与日志
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
+    # 批量写文件
+    output_data = []
     for i in range(PARTS):
         rules = list(buckets[i])
 
@@ -306,13 +310,16 @@ def split_parts(rules_to_validate, delete_counter):
             gcount[rule_group_dc[r]] += 1
 
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
-        with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
-            for r in rules:
-                f.write(r + "\n")
+        output_data.append((filename, rules, gcount))
 
-        gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v > 0])
+    # 写文件和日志输出
+    for filename, rules, gcount in output_data:
+        with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
+            f.write("\n".join(rules) + "\n")
+
+        gtext = ", ".join([f"g{k}:{v}" for k, v in sorted(gcount.items()) if v > 0])
         print(
-            f"📄 分片 {i+1}: {len(rules)} 条规则 "
+            f"📄 分片 {output_data.index((filename, rules, gcount)) + 1}: {len(rules)} 条规则 "
             f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
             f"group_dc 分布: {gtext}"
         )
