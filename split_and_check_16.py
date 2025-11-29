@@ -219,8 +219,7 @@ def split_parts(all_rules, delete_counter):
         if os.path.isfile(path):
             with open(path, "r", encoding="utf-8") as f:
                 for r in f.read().splitlines():
-                    g = group_dc(delete_counter.get(r, 64))
-                    if g == 0:
+                    if group_dc(delete_counter.get(r, 64)) == 0:
                         part_A[i].append(r)
                         part_orig_map[r] = i
 
@@ -252,7 +251,7 @@ def split_parts(all_rules, delete_counter):
     # -------------------------
     # 4. 用 B 补齐 A 不足的分片
     # -------------------------
-    B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
+    B_rules.sort(key=lambda x: x[0])
     B_index = 0
     B_len = len(B_rules)
 
@@ -265,11 +264,10 @@ def split_parts(all_rules, delete_counter):
             B_index += 1
             need -= 1
 
-    # 剩余 B
     B_remaining = [r for _, r in B_rules[B_index:]]
 
     # -------------------------
-    # 5. 剩余 B 均衡分配（最少优先）
+    # 5. 剩余 B 均衡分配
     # -------------------------
     for r in B_remaining:
         idx = bucket_sizes.index(min(bucket_sizes))
@@ -302,43 +300,37 @@ def split_parts(all_rules, delete_counter):
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
+    total_rules_count = 0
+
     for i in range(PARTS):
         rules = list(buckets[i])
+        total_rules_count += len(rules)
 
-        # 统计 group_dc 分布
-        gcount = {0:0, 1:0, 2:0, 3:0}  # g0:A, g1:B, g2:C, g3:忽略
+        # group_dc 统计（忽略 ≥97）
+        gcount = {0:0, 1:0, 2:0}
         for r in rules:
             dc = int(delete_counter.get(r, 64))
-            if dc <= 16:
-                g = 0
+            if dc >= 97:
+                continue
+            elif dc <= 16:
+                gcount[0] += 1
             elif dc <= 64:
-                g = 1
-            elif dc <= 96:
-                g = 2
+                gcount[1] += 1
             else:
-                g = 3
-            gcount[g] += 1
+                gcount[2] += 1
 
-        # 数量统计
-        fixed_A = gcount[0]
-        move_B = gcount[1]
-        move_C = gcount[2]
-
-        # 写文件（UTF-8 BOM）
+        # 写文件
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
             for r in rules:
                 f.write(r + "\n")
 
-        # group_dc 输出
         gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v>0])
 
-        # 日志输出
-        print(
-            f"📄 分片 {i+1}: {len(rules)} 条规则 "
-            f"(固定A {fixed_A} + 移动B {move_B} + 移动C {move_C}) | "
-            f"group_dc 分布: {gtext}"
-        )
+        print(f"📄 分片 {i+1}: {len(rules)} 条规则 "
+              f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
+              f"group_dc 分布: {gtext}")
+
 
 # ===============================
 # 更新 not_written_counter
