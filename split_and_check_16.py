@@ -10,6 +10,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 from collections import Counter
 from collections import deque
+import heapq
 
 
 # ===============================
@@ -191,10 +192,8 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(rules_to_validate, delete_counter):
-    import os
-    from collections import deque
 
+def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     # 预处理 delete_counter → group_dc
     # -------------------------
@@ -210,7 +209,12 @@ def split_parts(rules_to_validate, delete_counter):
             return 2      # C
 
     # -------------------------
-    # 1. 读取 validated_part_X，确定 A 的原分片
+    # 1. 预处理规则，提前计算每条规则的 group_dc，并存储
+    # -------------------------
+    rule_group_dc = {r: group_dc(delete_counter.get(r, 64)) for r in rules_to_validate}
+    
+    # -------------------------
+    # 2. 读取 validated_part_X，确定 A 的原分片
     # -------------------------
     part_A = [[] for _ in range(PARTS)]
     for i in range(PARTS):
@@ -218,58 +222,63 @@ def split_parts(rules_to_validate, delete_counter):
         if os.path.isfile(path):
             with open(path, "r", encoding="utf-8") as f:
                 for r in f.read().splitlines():
-                    if r in rules_to_validate and group_dc(delete_counter.get(r, 64)) == 0:
+                    if r in rules_to_validate and rule_group_dc[r] == 0:
                         part_A[i].append(r)
 
     # -------------------------
-    # 2. 分类待验证规则：B / C
+    # 3. 分类待验证规则：B / C
     # -------------------------
     B_rules = []
     C_rules = []
-
     for r in rules_to_validate:
-        g = group_dc(delete_counter.get(r, 64))
+        g = rule_group_dc[r]
         if g == 1:
-            B_rules.append((int(delete_counter.get(r, 64)), r))
+            B_rules.append((delete_counter.get(r, 64), r))
         elif g == 2:
-            C_rules.append((int(delete_counter.get(r, 64)), r))
-        # g==0 已在 part_A，g==3 忽略
+            C_rules.append((delete_counter.get(r, 64), r))
 
     # -------------------------
-    # 3. 初始化分片桶
+    # 4. 初始化分片桶
     # -------------------------
     buckets = [deque(part_A[i]) for i in range(PARTS)]
     bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
     A_counts = [len(part_A[i]) for i in range(PARTS)]
-    A_max_total = max(A_counts)  # 最大 A 数量，用作 A+B 上限
+    A_max_total = max(A_counts)
 
     # -------------------------
-    # 4. 补充 B：严格优先 A 最少的分片
+    # 5. 使用堆优化：优先选 A 最少的分片
     # -------------------------
-    B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
+    min_heap = [(A_counts[i], i) for i in range(PARTS)]  # (A_count, partition_id)
+    heapq.heapify(min_heap)  # 将分片数量最少的分片放入堆中
+
+    # -------------------------
+    # 6. 补充 B：优先选择 A 最少的分片
+    # -------------------------
+    B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
     for _, r in B_rules:
-        # 动态选择当前 A 最少分片
-        idx = min(range(PARTS), key=lambda i: A_counts[i])
-        
+        # 从堆中弹出最少 A 的分片
+        _, idx = heapq.heappop(min_heap)
+
         # 放入 B
         buckets[idx].append(r)
         bucket_sizes[idx] += 1
-        
-        # 不增加 A_counts，因为 B 不算 A
-        # 下一条 B 仍然会重新计算 A 最少的分片
-        A_counts[idx] += 1  # 更新 A_counts，避免 A 数量过多分片的再次分配
+        A_counts[idx] += 1  # 更新 A_counts
+
+        # 更新堆：重新插入新的 A 最少分片
+        heapq.heappush(min_heap, (A_counts[idx], idx))
 
     # -------------------------
-    # 5. 补充 C：按 delete_counter 小→大，优先 A+B 总量少分片
+    # 7. 补充 C：按 delete_counter 小→大，优先 A+B 总量少分片
     # -------------------------
-    C_rules.sort(key=lambda x: x[0])
+    C_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大排序
     for _, r in C_rules:
-        idx = bucket_sizes.index(min(bucket_sizes))  # 当前总量最少的分片
+        # 选择当前总量最少的分片
+        idx = bucket_sizes.index(min(bucket_sizes))
         buckets[idx].append(r)
         bucket_sizes[idx] += 1
 
     # -------------------------
-    # 6. 微调 ±1
+    # 8. 微调 ±1
     # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
@@ -285,7 +294,7 @@ def split_parts(rules_to_validate, delete_counter):
             bucket_sizes[mini] += 1
 
     # -------------------------
-    # 7. 输出 part_X 文件与日志
+    # 9. 输出 part_X 文件与日志
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
@@ -294,14 +303,14 @@ def split_parts(rules_to_validate, delete_counter):
 
         gcount = {0:0, 1:0, 2:0, 3:0}
         for r in rules:
-            gcount[group_dc(delete_counter.get(r, 64))] += 1
+            gcount[rule_group_dc[r]] += 1
 
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
             for r in rules:
                 f.write(r + "\n")
 
-        gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v>0])
+        gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v > 0])
         print(
             f"📄 分片 {i+1}: {len(rules)} 条规则 "
             f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
