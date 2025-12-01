@@ -438,7 +438,7 @@ def process_part(part, all_rules_set=None):
 
             if to_retry_inserted:
                 print(
-                    f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片 {part}{total_rules} 条顶部 共计{len(rules_to_validate)} 条 "                 
+                    f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片 {part}顶部{total_rules}条  共计{len(rules_to_validate)} 条 "                 
                 )
 
     # DNS 验证
