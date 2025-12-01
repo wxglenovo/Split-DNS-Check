@@ -485,14 +485,15 @@ def process_part(part, all_rules_set=None):
     # delete_counter 统计，安全处理 KeyError
     delete_counts = Counter(delete_counter.get(r, 0) for r in final_rules)
 
-    print("\n📊 当前分片 write_counter 规则统计:")
-    for i in range(1, WRITE_COUNTER_MAX + 1):
-        if counts[i]:
-            print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
 
     print("\n📊 当前分片 delete_counter 规则统计:")
     for k in sorted(delete_counts):
         print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
+  
+    print("\n📊 当前分片 write_counter 规则统计:")
+    for i in range(1, WRITE_COUNTER_MAX + 1):
+        if counts[i]:
+            print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")      
 
     print("--------------------------------------------------")
     print(f"📉 本次 ❌ 删除（write_counter<=1 且不在 all_rules）的规则共有 {removed_no_retry} 条")
