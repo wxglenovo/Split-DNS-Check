@@ -431,7 +431,7 @@ def process_part(part, all_rules_set=None):
         with open(RETRY_FILE, "w", encoding="utf-8") as rf:
             pass
         if to_retry_inserted:
-            print(f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片顶部")
+            print(f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片{len(rules_to_validate)}顶部 共{total_rules} 条 ")
 
     # DNS 验证
     valid_rules = set(dns_validate(rules_to_validate, part))
