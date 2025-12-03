@@ -191,7 +191,7 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(rules_to_validate, delete_counter):
+def split_parts(rules_to_validate, delete_counter, current_part=0):
     import os
     from collections import deque
 
@@ -240,7 +240,6 @@ def split_parts(rules_to_validate, delete_counter):
             B_rules.append((int(delete_counter.get(r, 64)), r))
         elif g == 2:
             C_rules.append(r)
-        # g==3 忽略 >=97
 
     # -------------------------
     # 3. 初始化分片桶
@@ -255,11 +254,10 @@ def split_parts(rules_to_validate, delete_counter):
     # -------------------------
     B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
     B_index = 0
-    B_len = len(B_rules)
 
     for i in range(PARTS):
         need = A_max - A_counts[i]
-        while need > 0 and B_index < B_len:
+        while need > 0 and B_index < len(B_rules):
             _, r = B_rules[B_index]
             min_A_index = A_counts.index(min(A_counts))
             buckets[min_A_index].append(r)
@@ -276,23 +274,22 @@ def split_parts(rules_to_validate, delete_counter):
         bucket_sizes[idx] += 1
 
     # -------------------------
-    # 6. 使用 C 做最终负载均衡（delete_counter 大优先第一个分片）
+    # 5. 使用 C 做最终负载均衡（delete_counter 大的优先当前分片）
     # -------------------------
     C_rules.sort(key=lambda r: int(delete_counter.get(r, 64)), reverse=True)
 
     for r in C_rules:
-        target_idx = 0
-        # 如果第一个分片容量小于最大值，则优先放到第一个分片
-        if bucket_sizes[target_idx] < max(bucket_sizes):
-            buckets[target_idx].append(r)
-            bucket_sizes[target_idx] += 1
+        # 优先放入当前分片
+        if bucket_sizes[current_part] < max(bucket_sizes):
+            buckets[current_part].append(r)
+            bucket_sizes[current_part] += 1
         else:
             idx = bucket_sizes.index(min(bucket_sizes))
             buckets[idx].append(r)
             bucket_sizes[idx] += 1
 
     # -------------------------
-    # 7. 微调 ±1
+    # 6. 微调 ±1
     # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
@@ -305,7 +302,7 @@ def split_parts(rules_to_validate, delete_counter):
         bucket_sizes[mini] += 1
 
     # -------------------------
-    # 8. 输出 part_X 文件与日志
+    # 7. 输出 part_X 文件与日志
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
