@@ -196,24 +196,23 @@ def split_parts(rules_to_validate, delete_counter, part_num):
     from collections import deque
 
     # -------------------------
-    # 预处理 delete_counter → group_dc
+    # delete_counter → 分组
     # -------------------------
     def group_dc(dc):
         dc = int(dc)
         if dc >= 97:
-            return 3      # 忽略
+            return 3      # 忽略，不参与验证
         if dc <= 16:
-            return 0      # A
+            return 0      # A: 固定
         if dc <= 64:
-            return 1      # B
+            return 1      # B: 移动低DC
         if dc <= 96:
-            return 2      # C
+            return 2      # C: 移动高DC
 
     # -------------------------
-    # 1. 读取 validated_part_X，确定 A 的原分片
+    # 读取 validated_part_X，取得 A_rules 原分片分布
     # -------------------------
     part_A = [[] for _ in range(PARTS)]
-    part_orig_map = {}
 
     for i in range(PARTS):
         path = os.path.join(DIST_DIR, f"validated_part_{i+1}.txt")
@@ -223,10 +222,9 @@ def split_parts(rules_to_validate, delete_counter, part_num):
                     g = group_dc(delete_counter.get(r, 64))
                     if g == 0:
                         part_A[i].append(r)
-                        part_orig_map[r] = i
 
     # -------------------------
-    # 2. 分类所有规则：A / B / C
+    # 分类所有规则
     # -------------------------
     A_rules = set()
     B_rules = []
@@ -240,10 +238,9 @@ def split_parts(rules_to_validate, delete_counter, part_num):
             B_rules.append((int(delete_counter.get(r, 64)), r))
         elif g == 2:
             C_rules.append(r)
-        # g==3 忽略 >=97
 
     # -------------------------
-    # 3. 初始化分片桶
+    # 初始化分片桶
     # -------------------------
     buckets = [deque(part_A[i]) for i in range(PARTS)]
     bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
@@ -251,9 +248,9 @@ def split_parts(rules_to_validate, delete_counter, part_num):
     A_max = max(A_counts)
 
     # -------------------------
-    # 4. 用 B 补齐 A 不足的分片
+    # B 规则先补齐 A 较少的分片
     # -------------------------
-    B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
+    B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大
     B_index = 0
     B_len = len(B_rules)
 
@@ -261,44 +258,37 @@ def split_parts(rules_to_validate, delete_counter, part_num):
         need = A_max - A_counts[i]
         while need > 0 and B_index < B_len:
             _, r = B_rules[B_index]
-
-            min_A_index = A_counts.index(min(A_counts))
-            buckets[min_A_index].append(r)
-            bucket_sizes[min_A_index] += 1
-            A_counts[min_A_index] += 1
+            idx = A_counts.index(min(A_counts))
+            buckets[idx].append(r)
+            bucket_sizes[idx] += 1
+            A_counts[idx] += 1
             B_index += 1
             need -= 1
 
-    B_remaining = [r for _, r in B_rules[B_index:]]
-
-    # -------------------------
-    # 5. 剩余 B 均衡分配（最少优先）
-    # -------------------------
-    for r in B_remaining:
+    # 剩余 B 均衡分配
+    for _, r in B_rules[B_index:]:
         idx = bucket_sizes.index(min(bucket_sizes))
         buckets[idx].append(r)
         bucket_sizes[idx] += 1
 
     # --------------------------------------------------------
-    # 6. ⭐ 你的要求：C_rules 按 delete_counter 大 → 小排序
-    #    并优先分配到当前分片 part_num
+    # ⭐ 重点：C_rules delete_counter 大 → 小
+    #    先优先分配到当前分片 part_num
     # --------------------------------------------------------
-    C_rules_sorted = sorted(
-        C_rules, key=lambda r: delete_counter.get(r, 0), reverse=True
-    )
+    current_idx = part_num - 1
 
-    current_idx = part_num - 1  # 当前分片的 index
+    C_rules_sorted = sorted(C_rules, key=lambda r: delete_counter.get(r, 0), reverse=True)
 
-    # 先把 C_rules 中 delete_counter 大的规则塞进当前分片
+    # C 规则全部优先塞入当前分片顶部
     for r in C_rules_sorted:
-        buckets[current_idx].appendleft(r)  # 放顶部
+        buckets[current_idx].appendleft(r)
         bucket_sizes[current_idx] += 1
 
-    # 其余逻辑保持不变：把 C_rules 再按负载均衡分配（不影响已插入部分）
-    C_remaining = []  # 由于全部已插入当前分片，此处留空（保持原逻辑不变）
+    # 保留框架一致性（无剩余）
+    C_remaining = []
 
     # -------------------------
-    # 7. 微调 ±1
+    # 微调 ±1（保持原逻辑）
     # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
@@ -311,7 +301,7 @@ def split_parts(rules_to_validate, delete_counter, part_num):
         bucket_sizes[mini] += 1
 
     # -------------------------
-    # 8. 输出 part_X 文件与日志
+    # 输出分片文件
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
@@ -330,21 +320,14 @@ def split_parts(rules_to_validate, delete_counter, part_num):
             else:
                 gcount[3] += 1
 
-        fixed_A = gcount[0]
-        move_B  = gcount[1]
-        move_C  = gcount[2]
-
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
-            for r in rules:
-                f.write(r + "\n")
-
-        gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v>0])
+            f.write("\n".join(rules))
 
         print(
             f"📄 分片 {i+1}: {len(rules)} 条规则 "
-            f"(固定A {fixed_A} + 移动B {move_B} + 移动C {move_C}) | "
-            f"group_dc 分布: {gtext}"
+            f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
+            f"group_dc 分布: g0:{gcount[0]}, g1:{gcount[1]}, g2:{gcount[2]}, g3:{gcount[3]}"
         )
 
 # ===============================
