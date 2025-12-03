@@ -11,6 +11,7 @@ import time
 from collections import Counter
 from collections import deque
 
+
 # ===============================
 # 配置区
 # ===============================
@@ -190,96 +191,117 @@ def download_all_sources():
 # ===============================
 # 分片切分
 # ===============================
-def split_parts(rules_to_validate, delete_counter):
+def split_parts(rules_to_validate, delete_counter, part_num):
+    import os
+    from collections import deque
 
     # -------------------------
-    # 预处理 delete_counter → group_dc
+    # delete_counter → 分组
     # -------------------------
     def group_dc(dc):
         dc = int(dc)
         if dc >= 97:
-            return 3      # 忽略
+            return 3      # 忽略，不参与验证
         if dc <= 16:
-            return 0      # A
+            return 0      # A: 固定
         if dc <= 64:
-            return 1      # B
+            return 1      # B: 移动低DC
         if dc <= 96:
-            return 2      # C
+            return 2      # C: 移动高DC
 
     # -------------------------
-    # 1. 读取 validated_part_X，确定 A 的原分片
+    # 读取 validated_part_X，取得 A_rules 原分片分布
     # -------------------------
     part_A = [[] for _ in range(PARTS)]
+
     for i in range(PARTS):
         path = os.path.join(DIST_DIR, f"validated_part_{i+1}.txt")
         if os.path.isfile(path):
             with open(path, "r", encoding="utf-8") as f:
                 for r in f.read().splitlines():
-                    if r in rules_to_validate and group_dc(delete_counter.get(r, 64)) == 0:
+                    g = group_dc(delete_counter.get(r, 64))
+                    if g == 0:
                         part_A[i].append(r)
 
     # -------------------------
-    # 2. 分类待验证规则：B / C
+    # 分类所有规则
     # -------------------------
+    A_rules = set()
     B_rules = []
     C_rules = []
 
     for r in rules_to_validate:
         g = group_dc(delete_counter.get(r, 64))
-        if g == 1:
+        if g == 0:
+            A_rules.add(r)
+        elif g == 1:
             B_rules.append((int(delete_counter.get(r, 64)), r))
         elif g == 2:
-            C_rules.append((int(delete_counter.get(r, 64)), r))
-        # g==0 已在 part_A，g==3 忽略
+            C_rules.append(r)
 
     # -------------------------
-    # 3. 初始化分片桶
+    # 初始化分片桶
     # -------------------------
     buckets = [deque(part_A[i]) for i in range(PARTS)]
     bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
     A_counts = [len(part_A[i]) for i in range(PARTS)]
-    A_max_total = max(A_counts)  # 最大 A 数量，用作 A+B 上限
+    A_max = max(A_counts)
 
     # -------------------------
-    # 4. 补充 B：按 delete_counter 小→大，优先 A 少的分片
+    # B 规则先补齐 A 较少的分片
     # -------------------------
-    B_rules.sort(key=lambda x: x[0])
-    for _, r in B_rules:
-        idx = A_counts.index(min(A_counts))  # 当前 A 最少分片
-        if len(buckets[idx]) < A_max_total:
-            buckets[idx].append(r)
-            bucket_sizes[idx] += 1
-        else:
-            buckets[idx].append(r)
-            bucket_sizes[idx] += 1
+    B_rules.sort(key=lambda x: x[0])  # 按 delete_counter 小→大
+    B_index = 0
+    B_len = len(B_rules)
 
-    # -------------------------
-    # 5. 补充 C：按 delete_counter 小→大，优先总量少的分片
-    # -------------------------
-    C_rules.sort(key=lambda x: x[0])
-    for _, r in C_rules:
-        idx = bucket_sizes.index(min(bucket_sizes))  # 当前总量最少分片
+    for i in range(PARTS):
+        need = A_max - A_counts[i]
+        while need > 0 and B_index < B_len:
+            _, r = B_rules[B_index]
+            idx = A_counts.index(min(A_counts))
+            buckets[idx].append(r)
+            bucket_sizes[idx] += 1
+            A_counts[idx] += 1
+            B_index += 1
+            need -= 1
+
+    # 剩余 B 均衡分配
+    for _, r in B_rules[B_index:]:
+        idx = bucket_sizes.index(min(bucket_sizes))
         buckets[idx].append(r)
         bucket_sizes[idx] += 1
 
+    # --------------------------------------------------------
+    # ⭐ 重点：C_rules delete_counter 大 → 小
+    #    先优先分配到当前分片 part_num
+    # --------------------------------------------------------
+    current_idx = part_num - 1
+
+    C_rules_sorted = sorted(C_rules, key=lambda r: delete_counter.get(r, 0), reverse=True)
+
+    # C 规则全部优先塞入当前分片顶部
+    for r in C_rules_sorted:
+        buckets[current_idx].appendleft(r)
+        bucket_sizes[current_idx] += 1
+
+    # 保留框架一致性（无剩余）
+    C_remaining = []
+
     # -------------------------
-    # 6. 微调 ±1
+    # 微调 ±1（保持原逻辑）
     # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
         mini = bucket_sizes.index(min(bucket_sizes))
-        diff = bucket_sizes[maxi] - bucket_sizes[mini]
-        if diff <= 1:
+        if bucket_sizes[maxi] - bucket_sizes[mini] <= 1:
             break
-        move_count = diff // 2
-        for _ in range(move_count):
-            rule = buckets[maxi].pop()
-            buckets[mini].append(rule)
-            bucket_sizes[maxi] -= 1
-            bucket_sizes[mini] += 1
+        rule = buckets[maxi].pop()
+        buckets[mini].append(rule)
+        bucket_sizes[maxi] -= 1
+        bucket_sizes[mini] += 1
 
     # -------------------------
-    # 7. 输出 part_X 文件与日志
+    # 输出分片文件
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
 
@@ -288,20 +310,25 @@ def split_parts(rules_to_validate, delete_counter):
 
         gcount = {0:0, 1:0, 2:0, 3:0}
         for r in rules:
-            gcount[group_dc(delete_counter.get(r, 64))] += 1
+            dc = int(delete_counter.get(r, 64))
+            if dc <= 16:
+                gcount[0] += 1
+            elif dc <= 64:
+                gcount[1] += 1
+            elif dc <= 96:
+                gcount[2] += 1
+            else:
+                gcount[3] += 1
 
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
-            for r in rules:
-                f.write(r + "\n")
+            f.write("\n".join(rules))
 
-        gtext = ", ".join([f"g{k}:{v}" for k,v in sorted(gcount.items()) if v>0])
         print(
             f"📄 分片 {i+1}: {len(rules)} 条规则 "
             f"(固定A {gcount[0]} + 移动B {gcount[1]} + 移动C {gcount[2]}) | "
-            f"group_dc 分布: {gtext}"
+            f"group_dc 分布: g0:{gcount[0]}, g1:{gcount[1]}, g2:{gcount[2]}, g3:{gcount[3]}"
         )
-
 
 # ===============================
 # 更新 not_written_counter
@@ -375,22 +402,45 @@ def process_part(part, all_rules_set=None):
         rules_to_validate = [l.strip() for l in f if l.strip()]
     print(f"⏱ 验证分片 {part}, 共 {len(rules_to_validate)} 条规则")
 
+    total_rules = len(rules_to_validate)
+
     # 插入 retry_rules
     to_retry_inserted = 0
     if os.path.exists(RETRY_FILE):
         with open(RETRY_FILE, "r", encoding="utf-8") as rf:
             retry_rules = [r.strip() for r in rf if r.strip()]
-        # 优化插入：一次性拼接
-        insert_rules = [r for r in retry_rules if r not in rules_to_validate]
-        rules_to_validate = insert_rules + rules_to_validate
-        to_retry_inserted = len(insert_rules)
-        # 清空 retry 文件
-        with open(RETRY_FILE, "w", encoding="utf-8") as rf:
-            pass
-        if to_retry_inserted:
-            print(f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片顶部")
 
+        if retry_rules:
+            curr_set = set(rules_to_validate)
+            insert_rules = [r for r in retry_rules if r not in curr_set]
+
+            if insert_rules:
+                rules_to_validate = insert_rules + rules_to_validate
+                to_retry_inserted = len(insert_rules)
+
+            # 清空 retry 文件
+            open(RETRY_FILE, "w", encoding="utf-8").close()
+
+            if to_retry_inserted:
+                print(
+                    f"🔁 将 {to_retry_inserted} 条 retry_rules 插入分片 {part} 顶部 "
+                    f"原 {total_rules} 条 → 现 {len(rules_to_validate)} 条"
+                )
+
+    # ---------------------------------------------------------
+    # ⭐ 新增：重切分片（包含你的 C_rules 优先本分片逻辑）
+    # ---------------------------------------------------------
+    delete_counter = load_bin(DELETE_COUNTER_FILE)
+    split_parts(rules_to_validate, delete_counter, part)
+
+    # split_parts() 已生成 TMP_DIR/part_XX.txt
+    # 重新读取切割后的分片规则
+    with open(part_file, "r", encoding="utf-8") as f:
+        rules_to_validate = [l.strip() for l in f if l.strip()]
+
+    # ---------------------------------------------------------
     # DNS 验证
+    # ---------------------------------------------------------
     valid_rules = set(dns_validate(rules_to_validate, part))
     added_count = len(valid_rules)
 
@@ -403,7 +453,7 @@ def process_part(part, all_rules_set=None):
         delete_counter[r] = 0 if r in valid_rules else int(delete_counter.get(r, 64)) + 1
     save_bin(DELETE_COUNTER_FILE, delete_counter)
 
-    # 读取 DIST_DIR/validated_part_X.txt 已存在的老规则
+    # 读取 old validated rules
     if os.path.exists(validated_file):
         with open(validated_file, "r", encoding="utf-8") as vf:
             existing_rules = set(line.strip() for line in vf if line.strip())
@@ -414,21 +464,22 @@ def process_part(part, all_rules_set=None):
     counter = load_bin(NOT_WRITTEN_FILE)
     part_counter = counter.get(part_key, {})
 
-    # 保证旧规则至少有 write_counter
     for r in existing_rules:
         if r not in part_counter:
             part_counter[r] = WRITE_COUNTER_MAX
 
-    # 核心更新逻辑
+    counter[part_key] = part_counter
+    save_bin(NOT_WRITTEN_FILE, counter)
+
     removed_count, new_retry, removed_no_retry = update_not_written_counter(
         part, valid_rules, all_rules_set
     )
 
-    # 重新读取更新后的 part_counter
+    # 重新加载结果
     counter_data = load_bin(NOT_WRITTEN_FILE).get(part_key, {})
     final_rules = sorted(counter_data.keys())
 
-    # 写回 validated_part_X.txt，保证 UTF-8 BOM + 换行
+    # 写回 validated_part_X
     with open(validated_file, "w", encoding="utf-8-sig", newline="\n") as vf:
         vf.write("\n".join(final_rules))
     print(f"💾 validated_part_{part}.txt 已更新到: {validated_file}")
@@ -439,24 +490,27 @@ def process_part(part, all_rules_set=None):
         if 1 <= v <= WRITE_COUNTER_MAX:
             counts[v] += 1
 
-    # delete_counter 统计，安全处理 KeyError
+    # delete_counter 统计
     delete_counts = Counter(delete_counter.get(r, 0) for r in final_rules)
-
-    print("\n📊 当前分片 write_counter 规则统计:")
-    for i in range(1, WRITE_COUNTER_MAX + 1):
-        if counts[i]:
-            print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX} 的规则条数: {counts[i]}")
 
     print("\n📊 当前分片 delete_counter 规则统计:")
     for k in sorted(delete_counts):
         print(f"    ⚠ delete_counter={k} 的规则条数: {delete_counts[k]}")
 
+    print("\n📊 当前分片 write_counter 规则统计:")
+    for i in range(1, WRITE_COUNTER_MAX + 1):
+        if counts[i]:
+            print(f"    ⚠ write_counter {i}/{WRITE_COUNTER_MAX}: {counts[i]}")
+
     print("--------------------------------------------------")
-    print(f"📉 本次 ❌ 删除（write_counter<=1 且不在 all_rules）的规则共有 {removed_no_retry} 条")
+    print(f"📉 删除（write_counter<=1 且不在 all_rules）规则 {removed_no_retry} 条")
     if new_retry:
-        print(f"🔥 本次写入 retry_rules.txt 的规则共有 {len(new_retry)} 条")
-    print(f"✅ 分片 {part} 更新完成: 总 {len(final_rules)}, DNS 成功 {added_count}, 删除 {removed_count}")
-    print(f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, 过滤 {len(rules_to_validate) - added_count}")
+        print(f"🔥 写入 retry_rules.txt {len(new_retry)} 条")
+    print(f"✅ 分片 {part} 完成: 总 {len(final_rules)}, DNS 成功 {added_count}, 删除 {removed_count}")
+    print(
+        f"COMMIT_STATS: 总 {len(final_rules)}, 新增 {added_count}, 删除 {removed_count}, "
+        f"过滤 {len(rules_to_validate) - added_count}"
+    )
 
 # ===============================
 # 主入口
