@@ -434,6 +434,7 @@ def process_part(part, all_rules_set=None):
         f"过滤 {len(rules_to_validate) - added_count}"
     )
 
+
 # ===============================
 # 主入口
 # ===============================
@@ -443,12 +444,15 @@ if __name__ == "__main__":
     parser.add_argument("--force-update", action="store_true", help="强制重新下载规则源并切片")
     args = parser.parse_args()
 
+    # 如果需要强制更新或缺少分片/规则文件，先拉取
     if args.force_update or not os.path.exists(MASTER_RULE) or not os.path.exists(os.path.join(TMP_DIR, "part_01.txt")):
         print("⚠ 缺少规则或分片，自动拉取")
         download_all_sources()
 
     if args.part:
+        # 验证单个分片
         process_part(args.part)
     else:
-        for part in range(1, PARTS+1):
+        # 验证全部分片
+        for part in range(1, PARTS + 1):
             process_part(part)
