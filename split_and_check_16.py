@@ -226,10 +226,10 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
         # g==3 忽略 >=97
 
     # -------------------------
-    # 读取 validated_part_X，确定 A 的原分片（保证同一条 A 只归属一个原分片）
+    # 读取 validated_part_X，确定 A 的原分片
     # -------------------------
     part_A = [[] for _ in range(PARTS)]
-    part_orig_map = {}  # 记录 A 规则被分配到哪个原分片（只保留第一个出现位置）
+    part_orig_map = {}
     for i in range(PARTS):
         path = os.path.join(DIST_DIR, f"validated_part_{i+1}.txt")
         if os.path.isfile(path):
@@ -238,38 +238,31 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
                     if not r:
                         continue
                     if group_dc(delete_counter.get(r, 64)) == 0:
-                        # 如果已经被标记到其它分片，跳过（避免重复）
                         if r in part_orig_map:
                             continue
                         part_A[i].append(r)
                         part_orig_map[r] = i
 
-    # 注意：有可能存在 A_rules 中但未出现在任何 validated_part_X 的 A（视为未固定，
-    # 这里不把它们自动加入 part_A；若需要可以把它们分配到最小分片）
-
     # -------------------------
-    # 初始化分片桶（每个桶的规则保证唯一）
+    # 初始化 buckets
     # -------------------------
-    buckets = [deque(dict.fromkeys(part_A[i])) for i in range(PARTS)]  # 保持顺序且去重
+    buckets = [deque(dict.fromkeys(part_A[i])) for i in range(PARTS)]
     bucket_sizes = [len(buckets[i]) for i in range(PARTS)]
     A_counts = [len(part_A[i]) for i in range(PARTS)]
     A_max = max(A_counts) if A_counts else 0
 
-    # 记录已经被分配的规则，防止重复分配（尤其防止 A 在多个桶中出现）
     assigned = set()
     for i in range(PARTS):
         assigned.update(buckets[i])
 
     # -------------------------
-    # B 补齐 A 不足（优先把 delete_counter 小的 B 分配到最少 A 的分片）
+    # B 补齐
     # -------------------------
-    B_rules.sort(key=lambda x: x[0])  # delete_counter 小 → 大
+    B_rules.sort(key=lambda x: x[0])
     B_index = 0
-    # 先按需要补齐到 A_max
     for _ in range(PARTS):
         if B_index >= len(B_rules):
             break
-        # 找当前最少 A 的分片索引（基于 A_counts）
         min_a_idx = A_counts.index(min(A_counts))
         need = A_max - A_counts[min_a_idx]
         while need > 0 and B_index < len(B_rules):
@@ -283,7 +276,6 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
             A_counts[min_a_idx] += 1
             need -= 1
 
-    # 剩余 B 均衡分配到最小负载分片
     for _, r in B_rules[B_index:]:
         if r in assigned:
             continue
@@ -293,13 +285,12 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
         bucket_sizes[idx] += 1
 
     # -------------------------
-    # C_rules 按 delete_counter 值大优先分配到当前验证分片（并避免重复）
+    # C_rules 分配
     # -------------------------
     C_rules.sort(key=lambda r: int(delete_counter.get(r, 64)), reverse=True)
     for r in C_rules:
         if r in assigned:
             continue
-        # 优先分配到 current_part（只有当 current_part 负载不是严格更高时）
         if bucket_sizes[current_part] <= max(bucket_sizes):
             buckets[current_part].append(r)
             bucket_sizes[current_part] += 1
@@ -311,48 +302,55 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
             assigned.add(r)
 
     # -------------------------
-    # 微调 ±1（移动元素保持不重复性，因为使用 assigned 集合）
+    # 微调
     # -------------------------
     while True:
         maxi = bucket_sizes.index(max(bucket_sizes))
         mini = bucket_sizes.index(min(bucket_sizes))
         if bucket_sizes[maxi] - bucket_sizes[mini] <= 1:
             break
-        # 从 maxi 弹出直到找到允许转移的规则（确保不会把原本属于某分片的固定 A 转走？）
-        # 这里默认允许移动任意非固定的规则；如果要禁止移动固定 A，可在弹出前检查：
-        # 若弹出的规则为固定 A（存在于 part_orig_map 且映射为 maxi），则跳过它。
+
         moved = None
-        # 尝试从队尾移动非固定 A 或非原属该分片的规则
         for _ in range(len(buckets[maxi])):
             cand = buckets[maxi].pop()
-            # 如果 cand 是固定 A 且其原分片就是 maxi，则放回并继续找
             if cand in part_orig_map and part_orig_map[cand] == maxi:
-                # 把它放到队首以保留顺序（避免无限循环）
                 buckets[maxi].appendleft(cand)
                 continue
-            # 否则，将其作为可移动项
             moved = cand
             break
         if moved is None:
-            # 无法找到可移动项（可能都是该分片的固定 A），直接退出微调
             break
         buckets[mini].append(moved)
         bucket_sizes[maxi] -= 1
         bucket_sizes[mini] += 1
 
+    # ==========================================
+    # ⭐⭐ 新增：A 类规则跨分片强校验 ⭐⭐
+    # ==========================================
+    A_seen = {}  # r → first_part
+    for idx, b in enumerate(buckets):
+        for r in b:
+            if group_dc(delete_counter.get(r, 64)) == 0:  # A 类
+                if r in A_seen and A_seen[r] != idx:
+                    raise Exception(
+                        f"❌ A 类规则重复出现在多个分片：{r}\n"
+                        f"   分片 {A_seen[r]+1} 和 分片 {idx+1}"
+                    )
+                A_seen[r] = idx
+    # ==========================================
+
     # -------------------------
-    # 输出 part_X 文件 + 日志（写入前再次去重以保证文件内无重复）
+    # 输出 part 文件
     # -------------------------
     os.makedirs(TMP_DIR, exist_ok=True)
     for i in range(PARTS):
-        # 去重并保持顺序
         seen = set()
         rules = []
         for r in buckets[i]:
             if r not in seen:
                 rules.append(r)
                 seen.add(r)
-        # 统计分组分布
+
         gcount = {0: 0, 1: 0, 2: 0, 3: 0}
         for r in rules:
             dc = int(delete_counter.get(r, 64))
@@ -365,11 +363,13 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
             else:
                 g = 3
             gcount[g] += 1
-        fixed_A, move_B, move_C = gcount[0], gcount[1], gcount[2]
+
         filename = os.path.join(TMP_DIR, f"part_{i+1:02d}.txt")
         with open(filename, "w", encoding="utf-8-sig", newline="\n") as f:
             for r in rules:
                 f.write(r + "\n")
+
+        fixed_A, move_B, move_C = gcount[0], gcount[1], gcount[2]
         gtext = ", ".join([f"g{k}:{v}" for k, v in sorted(gcount.items()) if v > 0])
         print(
             f"📄 分片 {i+1}: {len(rules)} 条规则 "
@@ -377,7 +377,6 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
             f"group_dc 分布: {gtext}"
         )
 
-    # 返回 values 以便外部检查（可选）
     return [list(b) for b in buckets]
 
 
