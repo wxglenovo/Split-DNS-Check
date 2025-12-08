@@ -1,8 +1,10 @@
 ﻿*adxvip.com^
 -adrevenue.appsflyersdk.com^
+-telemetry.officeapps.live.com.mcas.ms^
 /criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
 /fans/*$domain=91porn.com|email.91dizhi.at.gmail.com.8h9.space
 @@/adbar/*$domain=outlook.live.com
+@@||adobe.com.ssl.d1.sc.omtrdc.net^$xmlhttprequest,domain=www.adobe.com
 @@||ads.kbmax.com^$domain=adspipe.com
 @@||app.adjust.com^|
 @@||c.mipcdn.com^$domain=77dushu.com|biqugecom.com|prpcoin.com|zhetian.org
@@ -19,12 +21,15 @@
 @@||g.doubleclick.net/gampad/ads?*.crunchyroll.com$xmlhttprequest,domain=imasdk.googleapis.com
 @@||g.doubleclick.net/gampad/ads?*RakutenShowtime$xmlhttprequest,domain=imasdk.googleapis.com
 @@||go.adjust.com^|
+@@||ltzn.9377.com^
 @@||netatmo.commander1.com^|
 @@||teams.live.com^$generichide
 @@||testsafebrowsing.appspot.com^
 dlsdk.appsflyersdk.com^
 miaozhen.com
 show.ssports.com
+static.g.iqiyi.com
+|006.free-counter.co.uk^
 |007.free-counter.co.uk^
 |0101011.com^
 |1.114central.com^
@@ -251,6 +256,7 @@ show.ssports.com
 |adsdk.yandex.ru^
 |adserve.podaddies.com^
 |adserver-1277986481.ap-northeast-1.elb.amazonaws.com^
+|adserver.4clicks.org^
 |adserver.adremedy.com^
 |adserver.bondage.com^
 |adserver.chickclick.com^
@@ -268,6 +274,7 @@ show.ssports.com
 |adsqqclick.qq.com^
 |adsspaces.ero-advertising.com^
 |adstacks.in^
+|adstat.4u.pl^
 |adsupply.com^
 |adsys.adk2x.com^
 |adt.xdrig.com^
@@ -1081,6 +1088,7 @@ show.ssports.com
 |geoip.securitetotale.com^
 |gercep69.com^
 |get-answers-fast.com^
+|get.mycounter.ua^
 |get.optad360.io^
 |get.whitesmoke.com^
 |getmaxhealthhub.com^
@@ -1100,6 +1108,7 @@ show.ssports.com
 |glybeauty.com^
 |gmgmacmortgage.112.2o7.net^
 |gmgmcard.112.2o7.net^
+|go-clicks.de^
 |go.padsdelivery.com^
 |goatstamina.pl^
 |goboadvertising.autodealertech.co^
@@ -1420,6 +1429,7 @@ show.ssports.com
 |lga-bh.contextweb.com^
 |lhv.cloudp0nd.ru^
 |lib4.libstat.com^
+|lifeimpressions.net^
 |lilibita.com^
 |limetitaniumcloud.top^
 |limkon.com^
@@ -1669,6 +1679,7 @@ show.ssports.com
 |o17uc167wf.com^
 |oa.openxcdn.net^
 |oascentral.gigex.com^
+|oascentral.itbusiness.ca^
 |observe-tcp.mtgglobals.com^
 |obuwiezs.pl^
 |ochnik-pl.woodies-ie.shop^
@@ -1721,6 +1732,7 @@ show.ssports.com
 |osb-ussvc.samsungqbe.com^
 |oskahakedis.com^
 |otf.msn.com^
+|otpercpiheno.hu^
 |otrimz.shop^
 |outerinfo.com^
 |outmolder.com^
@@ -1971,6 +1983,7 @@ show.ssports.com
 |robovoxis.com^
 |rocketnshallow.findtreeseeds.com^
 |rockflow-ai-solution.com^
+|rojadirectatv.fr^
 |rootcclose.sino-oilgasinvesting.com^
 |route31.org^
 |roxunledgersoftware.com^
@@ -2188,6 +2201,7 @@ show.ssports.com
 |srv.buysellads.com^
 |ss1.zedo.com^
 |ssl-s.idio.co^
+|st-n.ads5-adnow.com^
 |st.adsplay.net^
 |st.anthill.vn^
 |stable.icecyber.org^
@@ -2399,6 +2413,7 @@ show.ssports.com
 |tracking.onfluencer.net^
 |tracking.playzing.g6.zing.vn^
 |tracking.thinkabt.com^
+|tracking.tvet-vietnam.org^
 |tracking.ukwm.co.uk^
 |trackingbr.zingplay.com^
 |trackingvn.zingplay.com^
@@ -2627,6 +2642,7 @@ show.ssports.com
 |ww400.smartadserver.com^
 |wwa.hitbox.com^
 |wwnc.xyz^
+|www.000free.us^
 |www.00go.com^
 |www.121phonesex.co.uk^
 |www.121uu6.top^
@@ -2818,6 +2834,7 @@ show.ssports.com
 |www.denimmes.com^
 |www.devon38.plus.com^
 |www.dianalidstone.net^
+|www.dicarlotrack.com^
 |www.differenttorbit.click^
 |www.dijitalyelken.com^
 |www.dipinner.meyersj.com^
@@ -3154,6 +3171,8 @@ show.ssports.com
 |www.poundman.sidekliq.com^
 |www.poznaj-singielki.pl^
 |www.ppmsims.com^
+|www.praize19791.duckdns.org^
+|www.premiumproductsonline.com^
 |www.prismioi.com^
 |www.prizesforyou.com^
 |www.pro-partners.nl^
@@ -3332,6 +3351,7 @@ show.ssports.com
 |www.ulkerlerinsaat.net^
 |www.umutrotbalans.com^
 |www.upsellit.com^
+|www.usadserver.com^
 |www.uu1864.top^
 |www.uxiges03.com^
 |www.validateaccess.surge.sh^
@@ -3503,6 +3523,7 @@ show.ssports.com
 ||0-004day.net.daraz.com^
 ||0-006-zigzagstrmarket.net.daraz.com^
 ||0-007.net.daraz.com^
+||0-00d10110000motieas-990auyn11w0wpnuy4.net.daraz.com^
 ||0-00d10140000motieas-989auyn11w0wpnuy4.net.daraz.com^
 ||0-00d10140000motieas-992auyn11w0wpnuy4.net.daraz.com^
 ||0-00d10140100motieas-990auyn11w0wpnuy4.net.daraz.com^
@@ -3518,6 +3539,7 @@ show.ssports.com
 ||0-00proplus3xncf85region.net.daraz.com^
 ||0-00proplus3xncf86region.net.daraz.com^
 ||0-01-car20-10-r-oa-1.net.daraz.com^
+||0-01-car21-10-r-oa-1.0-030.net.daraz.com^
 ||0-01-car21-web-wwww11node-webapp-okta.net.daraz.com^
 ||0-01-car21-web-wwww13stage-webapp.net.daraz.com^
 ||0-01-car21c-f8.net.daraz.com^
@@ -3541,9 +3563,11 @@ show.ssports.com
 ||0-0arymn.0-030.net.daraz.com^
 ||0-0psdadj1szljo593-990auyn11w0wpnuy4.net.daraz.com^
 ||0-129.net.daraz.com^
+||0-130.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-130.net.daraz.com^
 ||0-131.0-030.net.daraz.com^
 ||0-132-1.0-030.net.daraz.com^
+||0-132-admins.0-030.net.daraz.com^
 ||0-132-chef.0-030.net.daraz.com^
 ||0-132-gateway.net.daraz.com^
 ||0-132-latin.0-01-lib-oa-1-cf23region.net.daraz.com^
@@ -3633,6 +3657,7 @@ show.ssports.com
 ||0-astrologie-stagingstaging.net.daraz.com^
 ||0-astrologie-zlmtw562wm4z86s3.dcsportal.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-astrologie3assetscar29.0-030.net.daraz.com^
+||0-astrologietest10-092auyn11w0wpnuy4.0-030.net.daraz.com^
 ||0-astrologieu01dbaf0840-990auyn11w0wpnuy4.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-car01-web-wwww0node-okta-00d300000000t9beaueapacvision.net.daraz.com^
 ||0-car21-10-r-oa-1.0-01-lib-oa-1-cf23region.net.daraz.com^
@@ -3695,12 +3720,14 @@ show.ssports.com
 ||00-bootstphpp.0-030.net.daraz.com^
 ||00-bootstpre-prodap.net.daraz.com^
 ||00-bootstraghcpi-r-oa-2.0-030.net.daraz.com^
+||00-bootstrap-00.dcsportal.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-bootstrap-01-car21-web-wwww10node-webapp-okta-chefb.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-bootstrap-01-car21-web-wwww10node-webapp-okta-partnerr-ht-5.0-030.net.daraz.com^
 ||00-bootstrap-bitbucket.net.daraz.com^
 ||00-bootstrap.connectedtwtelecom.azure.net.daraz.com^
 ||00-bootstrap.guest.net.daraz.com^
 ||00-bootstrapeurope.net.daraz.com^
+||00-bootstrappre.net.daraz.com^
 ||00-car21c.net.daraz.com^
 ||00-prep.net.daraz.com^
 ||00-uat-procurement.net.daraz.com^
@@ -3722,6 +3749,7 @@ show.ssports.com
 ||006-stage-topup.net.daraz.com^
 ||006-zi3arketingza3arketingstr.net.daraz.com^
 ||006-zigzagprodr.net.daraz.com^
+||006-zigzagsstart.net.daraz.com^
 ||006-zigzagstatlas.net.daraz.com^
 ||006-zigzagstelb.net.daraz.com^
 ||006-zigzagstr-dcloud.net.daraz.com^
@@ -3729,6 +3757,7 @@ show.ssports.com
 ||006-zigzagstr-ns.net.daraz.com^
 ||006-zigzagunixtr.net.daraz.com^
 ||006.emailvision.panel.net.daraz.com^
+||006.free-counter.co.uk^
 ||007.free-counter.co.uk^
 ||00d4o000001nalzeag.net.daraz.com^
 ||00d4p000001dpyzuam.net.daraz.com^
@@ -3741,6 +3770,7 @@ show.ssports.com
 ||00d70000000motieas1.net.daraz.com^
 ||00d70000000motieasbejav.assets.net.daraz.com^
 ||00d70000000motieaschef.net.daraz.com^
+||00d70000000motieavps1.net.daraz.com^
 ||00go.com^
 ||00pavailableoplus3xn.net.daraz.com^
 ||00propldrzliverepository3xn.net.daraz.com^
@@ -3857,6 +3887,7 @@ show.ssports.com
 ||01-lib-oazure-1-azuredministrazuretors-csr40.net.daraz.com^
 ||01-lib-partner-cdn-1-cf23region.net.daraz.com^
 ||01-lib-workstation-1-admin8.net.daraz.com^
+||01-lioapi-oa-1-administrators-csr40.net.daraz.com^
 ||01-lpre-lazada-sg-2b-oa-1-admpre-lazada-sg-2n8.net.daraz.com^
 ||01-lrj82pb-oa-1-admrj82pnrj82pstrators-csr40.net.daraz.com^
 ||01-mx-a-oa-1-admin8.net.daraz.com^
@@ -4032,6 +4063,7 @@ show.ssports.com
 ||10169.url.016272.com^
 ||101flag.ru^
 ||101freehost.com^
+||101ok.com^
 ||10207.sock-qa1.marketingcloudqaops.com^
 ||10242.url.016272.com^
 ||10257.url.016272.com^
@@ -4280,6 +4312,7 @@ show.ssports.com
 ||18d1-ab35-15a3-74ca.reporo.net^
 ||18ramp.com^
 ||18xtube.com^
+||19.ptp22.com^
 ||19.red-88-22-101.staticip.rima-tde.net^
 ||190-10-179-94.pool.ukrtel.net^
 ||190-197-205-201.wireless.movistar.net.ar^
@@ -4442,6 +4475,7 @@ show.ssports.com
 ||201-42-53-189.dsl.telesp.net.br^
 ||201-43-111-124.dsl.telesp.net.br^
 ||201-43-12-14.dsl.telesp.net.br^
+||201-43-122-250.dsl.telesp.net.br^
 ||201-43-122-93.dsl.telesp.net.br^
 ||201-43-167-233.dsl.telesp.net.br^
 ||201-43-168-233.dsl.telesp.net.br^
@@ -4457,6 +4491,7 @@ show.ssports.com
 ||201-43-60-52.dsl.telesp.net.br^
 ||201-43-67-12.dsl.telesp.net.br^
 ||201-43-71-7.dsl.telesp.net.br^
+||201-43-93-194.dsl.telesp.net.br^
 ||201-43-94-164.dsl.telesp.net.br^
 ||201-68-1-152.dsl.telesp.net.br^
 ||201-68-1-71.dsl.telesp.net.br^
@@ -4502,6 +4537,7 @@ show.ssports.com
 ||201-95-16-6.dsl.telesp.net.br^
 ||201-95-17-159.dsl.telesp.net.br^
 ||201-95-221-148.dsl.telesp.net.br^
+||201-95-224-154.dsl.telesp.net.br^
 ||201-95-38-156.dsl.telesp.net.br^
 ||201-95-45-168.dsl.telesp.net.br^
 ||201-95-5-198.dsl.telesp.net.br^
@@ -4644,6 +4680,7 @@ show.ssports.com
 ||24y0c8hek.com^
 ||25.danielsmoving.com^
 ||2500hpfrac.com^
+||25057.hittail.com^
 ||25101.mydown.xaskm.com^
 ||2517d.s.fwmrm.net^
 ||25288202.adoric-om.com^
@@ -4886,6 +4923,7 @@ show.ssports.com
 ||3arketing-id.net.daraz.com^
 ||3b2c5ab7cae5c68ec32072db2349dbe3.site^
 ||3ca.ru^
+||3cc57b77a706cc1d.com^
 ||3ce8ffddf698b002e13e5d53a16725bc.com^
 ||3d11-2d06-9461-2244.reporo.net^
 ||3d15b3b1308e464c.com^
@@ -5082,6 +5120,7 @@ show.ssports.com
 ||4yucp5run8xsbj2ltcrkdh79muqmz1513529900.nuid.imrworldwide.com^
 ||5.6mono.biz^
 ||5.load05.biz^
+||5.mono6.biz^
 ||5.net17.biz^
 ||5.news11.biz^
 ||5.www.45564736.xyz^
@@ -5323,6 +5362,7 @@ show.ssports.com
 ||6f6934efb4.481516ca1d.com^
 ||6f7c2d39ec11.top^
 ||6hxgkmv.com^
+||6imnqf4cj5im8gpqwyk.cfd^
 ||6ip.us^
 ||6l5.net^
 ||6nergie.ca^
@@ -5842,6 +5882,7 @@ show.ssports.com
 ||9e0u.cn^
 ||9e70a4353b1c2bf0.com^
 ||9e7dffa3955314e3.com^
+||9e93090225242836176eb72cf42be682.com^
 ||9ef7524e6042157f.com^
 ||9fba-6aff-fef0-8faa.reporo.net^
 ||9fdmasaxsssaqrk.com^
@@ -6137,6 +6178,7 @@ show.ssports.com
 ||a8.elife.clinic^
 ||a8.emestore.me^
 ||a8.erasutamo.onlinestaff.jp^
+||a8.freeengineer.btcagent.jp^
 ||a8.hokkaido-nb.jp^
 ||a8.i-netservice.net^
 ||a8.ippin-do.com^
@@ -6187,6 +6229,7 @@ show.ssports.com
 ||a8clk.hikarinobe.com^
 ||a8clk.ias.il24.net^
 ||a8clk.joppy.jp^
+||a8clk.kihada.jp^
 ||a8clk.mynavi-cr.jp^
 ||a8clk.order-box.net^
 ||a8clk.recycle-net.jp^
@@ -6215,6 +6258,7 @@ show.ssports.com
 ||a8cv.crowdlinks.jp^
 ||a8cv.doctor-agent.com^
 ||a8cv.downjacket.pro^
+||a8cv.ecodepa.jp^
 ||a8cv.factoringzero.jp^
 ||a8cv.freelance-start.com^
 ||a8cv.hal-tanteisya.com^
@@ -6312,6 +6356,7 @@ show.ssports.com
 ||abaforniture.it^
 ||abbeyoaksslopitch.com^
 ||abbjf4ks0t.neliver.com^
+||abblameter.cfd^
 ||abblm.com^
 ||abbotsfordautotech.com^
 ||abbradelon.pro^
@@ -6359,6 +6404,7 @@ show.ssports.com
 ||aboriginesprimary.com^
 ||about.megaxus.com^
 ||aboutads.info^
+||abouthomesdecorating.com^
 ||aboutprofileproxy.co.cc^
 ||aboutwebservices.com^
 ||aboveandbeyondchildcare.com^
@@ -6406,6 +6452,7 @@ show.ssports.com
 ||acc.go2cloud.org^
 ||accclickthinkingccafrica.112.2o7.net^
 ||accede-info.webcindario.com^
+||accelerated-surf.co.cc^
 ||accelya.actonsoftware.com^
 ||accenttv.ro^
 ||acceptancecancelundoubtedly.com^
@@ -6578,6 +6625,7 @@ show.ssports.com
 ||ad.amtk-media.com.37881.9302.302br.net^
 ||ad.animehub.ac^
 ||ad.api.yyapi.net^
+||ad.arklm.com^
 ||ad.blamads.com^
 ||ad.c.ximalaya.com^
 ||ad.cgv.co.kr^
@@ -7191,9 +7239,11 @@ show.ssports.com
 ||ad.lgsmartad.com^
 ||ad.linkshare.ne.jp^
 ||ad.mediamixer.co.kr^
+||ad.mediastorm.hu^
 ||ad.mg^
 ||ad.musicmatch.com^
 ||ad.nvivo.tv^
+||ad.obuy.tw^
 ||ad.onliner.by^
 ||ad.paycount.com^
 ||ad.propellerads.com^
@@ -7249,6 +7299,7 @@ show.ssports.com
 ||ad19digital.checkm8.com^
 ||ad2.nmm.de^
 ||ad2.sina.com.cn^
+||ad2.tr.mediainter.net^
 ||ad2000.org^
 ||ad201.paycount.com^
 ||ad207.paycount.com^
@@ -7324,6 +7375,7 @@ show.ssports.com
 ||adbanner.adxcore.com^
 ||adbest.com^
 ||adbetnet.com^
+||adbid.pl^
 ||adbilly.com^
 ||adbinks.offerstrack.net^
 ||adblock-360.com^
@@ -7440,6 +7492,7 @@ show.ssports.com
 ||admida-reklam.rtb.adx1.com^
 ||admin-ad.firebaseapp.com^
 ||admin.adsession.com^
+||admin.adsplay.net^
 ||admin.digitalacre.com^
 ||admin.infomobi.me^
 ||admin.multa.net^
@@ -7535,6 +7588,7 @@ show.ssports.com
 ||ads.akairan.com^
 ||ads.allvatar.com^
 ||ads.amazon.com^
+||ads.amgdgt.com^
 ||ads.asav.ro^
 ||ads.atomex.net^
 ||ads.auctionads.com^
@@ -7577,6 +7631,7 @@ show.ssports.com
 ||ads.luno.net^
 ||ads.lycos.fr^
 ||ads.mobilefuse.com^
+||ads.movielush.com^
 ||ads.networkplay.in^
 ||ads.networksolutions.com^
 ||ads.nordcurrent.com^
@@ -7670,6 +7725,7 @@ show.ssports.com
 ||adserver.adtechus.com.14361.9066.302br.net^
 ||adserver.adtechus.com.22719.9068.302br.net^
 ||adserver.associationheadquarters.com^
+||adserver.barrapunto.com^
 ||adserver.bdoce.cl^
 ||adserver.bing.com^
 ||adserver.cherryfind.co.uk^
@@ -7786,6 +7842,7 @@ show.ssports.com
 ||adtooapp.com^
 ||adtorque.in^
 ||adtrack.appcpi.net^
+||adtrack.kireibiz.jp^
 ||adtraffic.pl^
 ||adtrafico.g2afse.com^
 ||adtsecure.co.cc^
@@ -7804,6 +7861,7 @@ show.ssports.com
 ||adultproxy.net^
 ||adulttheater2.a0001.net^
 ||aduqocschh.neliver.com^
+||adv.adgates.com^
 ||adv.donejty.pl^
 ||adv.mobsmart.net^
 ||adv.netinfo.bg^
@@ -7922,6 +7980,7 @@ show.ssports.com
 ||aeoze.sewhungryhippie.com^
 ||aeppic.reisartikelen.nl^
 ||aereluxeron.com^
+||aerforex.co.cc^
 ||aeriale.com^
 ||aerialservices.co.uk^
 ||aerokazachok.ru^
@@ -7974,6 +8033,7 @@ show.ssports.com
 ||affiligay.net^
 ||affilimate.io^
 ||affination.info^
+||affordableghostwriting.com^
 ||affordablelifeandhealthcare.com^
 ||afgr11.com^
 ||afico-ye.com^
@@ -8448,6 +8508,7 @@ show.ssports.com
 ||allin1panel.com^
 ||allinlupes.pro^
 ||allisonduckworthyoga.com^
+||allmygiveaway.com^
 ||allnews1212.ru^
 ||allocate-rainbow.com^
 ||allocationcaller.com^
@@ -8635,6 +8696,7 @@ show.ssports.com
 ||ams7.ib.adnxs.com^
 ||amsi.co.za^
 ||amsilekosss.boxmode.io^
+||amstellodging.com^
 ||amsterdam.moseasia.com^
 ||amt3.com^
 ||amulna.click^
@@ -8863,6 +8925,7 @@ show.ssports.com
 ||ancientwarlords.net^
 ||ancorr-my.sharepoint.com^
 ||ancqie.finanztrends.info^
+||and-wonder.co.cc^
 ||and.org.do^
 ||and1.tw^
 ||andall.servicesql.info^
@@ -9010,6 +9073,7 @@ show.ssports.com
 ||aocn.org.in^
 ||aocular.com^
 ||aod4.societegenerale.fr^
+||aoertong.com^
 ||aoeyo7enab.neliver.com^
 ||aolcamember.122.2o7.net^
 ||aolcustomersupportnumber.com^
@@ -9138,6 +9202,7 @@ show.ssports.com
 ||api.pushnami.com^
 ||api.qttunion.com^
 ||api.rayanepinto.com^
+||api.rbroupabranca.com.br^
 ||api.realmentor.net^
 ||api.rees46.com^
 ||api.reper.com.br^
@@ -9190,6 +9255,7 @@ show.ssports.com
 ||apk-support.site^
 ||apk-support.tech^
 ||apkcake.com^
+||apkdownloadforwindows.com^
 ||aplicacao.seduc.pi.gov.br^
 ||apll.org^
 ||aplusd.biz^
@@ -9377,6 +9443,7 @@ show.ssports.com
 ||applink.dev.tarjetabumeran.com^
 ||applink.joyrun.com^
 ||applink.pleizi.com^
+||applink.tanamduit.com^
 ||applink.whizzl.com^
 ||applk.cn^
 ||applog-perf.uc.cn^
@@ -9484,6 +9551,8 @@ show.ssports.com
 ||ardfmoqdkw.neliver.com^
 ||ardillantas.com^
 ||ardirdisor.pro^
+||ardw.com^
+||areaplaycbr4d.com^
 ||arenafilez.blogspot.fr^
 ||arendaufa02.ru^
 ||aressardegna.weebly.com^
@@ -9586,6 +9655,7 @@ show.ssports.com
 ||arvig.actonservice.com^
 ||aryakepenk.com^
 ||aryan-07-solanki.github.io^
+||as-anything.co.cc^
 ||as.cdn5.onthe.io^
 ||as.cw.impact-ad.jp^
 ||as.mirapodo.de^
@@ -9718,6 +9788,7 @@ show.ssports.com
 ||astrologiya.mirtesen.ru^
 ||astromyrion-system.com^
 ||asttnpg95l.neliver.com^
+||asuasuasuasu.co.cc^
 ||asus01.webtrekk.net^
 ||asusdurability.co.cc^
 ||asutacosmetic.com^
@@ -9760,6 +9831,7 @@ show.ssports.com
 ||atlasconstruction808.com^
 ||atlassian.evergage.com^
 ||atlegalsolicitors.com^
+||atlga.com^
 ||atmalinks.com^
 ||atmc-webmaill.weeblysite.com^
 ||atmospheres.tv^
@@ -9954,6 +10026,7 @@ show.ssports.com
 ||awarecatching.com^
 ||awarialaptopa.pl^
 ||awbrwrywkwqwj.top^
+||awebsitesdirectory.com^
 ||awesomecowudexido.live^
 ||awesomegrace.org^
 ||awesomeredirector.com^
@@ -10308,6 +10381,7 @@ show.ssports.com
 ||barely18barbie.com^
 ||barerootacres.com^
 ||barkaseries.com^
+||barmodern.rest^
 ||barometercorrodingunease.com^$popup
 ||baronads.go2affise.com^
 ||barra.iol.pt^
@@ -10331,6 +10405,7 @@ show.ssports.com
 ||baseflix.pl^
 ||bash-test.ru^
 ||basilic.io^$third-party
+||basirebbe264.panoramabase.ws^
 ||basit.work^
 ||baskabirbodrum.com^
 ||baskakoytarim.com^
@@ -10464,6 +10539,7 @@ show.ssports.com
 ||bea4c.v.fwmrm.net^
 ||beachcleanings.com^
 ||beachcombermagazine.com^
+||beachedbitted.help^
 ||beachhutspa.com^
 ||beacon.glueletter.com^
 ||beacon.sina.com.cn^
@@ -10508,6 +10584,7 @@ show.ssports.com
 ||beforeysmooth.shop^
 ||begengaron.com^
 ||begin-ttrezor-io-start.typedream.app^
+||behbehbeh.co.cc^
 ||behlenjoiner.com^
 ||behold-ministries.org^
 ||behtarinseo.ir^
@@ -10663,6 +10740,7 @@ show.ssports.com
 ||beta.smi2.net^
 ||betaapi.autoads.asia^
 ||betaburst.com^
+||betacdn.autoads.asia^
 ||betbob116.com^
 ||betecubeen.com^
 ||betex01.247media.com^
@@ -10703,6 +10781,7 @@ show.ssports.com
 ||bgyarmatplebania.hu^
 ||bh.contextweb.com^
 ||bhagvatipalace.com^
+||bharat-dynotrade.net^
 ||bharatdynotrade.com^
 ||bhg5oomrjy.neliver.com^
 ||bhlwebsupport.com^
@@ -10872,6 +10951,7 @@ show.ssports.com
 ||bitcoinpro360-ai.com^
 ||bitcoinscircuit.com^
 ||bitcoinsystem.app^
+||bitcointoolmining.com^
 ||bitcore.io^
 ||bitcoremining.com^
 ||bitcoresurge.app^
@@ -10952,6 +11032,7 @@ show.ssports.com
 ||bkjhqkohal.com^
 ||bknqpb.dobredomy.pl^
 ||bkpoef.jules.com^
+||bksps.co.in^
 ||bkt-prod.sbishinseibank.co.jp^
 ||bl4n3.zadns.co.za^
 ||bl58bqhrkh.neliver.com^
@@ -11089,6 +11170,7 @@ show.ssports.com
 ||bmwofnorthamericallc.tt.omtrdc.net^
 ||bmzine.com^
 ||bn.asgadmp.cc^
+||bn.orthodoxy.ru^
 ||bn1.cc^
 ||bnbeth.net^
 ||bnc.oustme.com^
@@ -11213,6 +11295,7 @@ show.ssports.com
 ||boutiquebleuvert.fr^
 ||bowedcounty.com^
 ||boweineng.cn^
+||boxerproperties.org^
 ||boxhillpaper.com^
 ||boyfriendvashikaran.com^
 ||bozdag.com.tr^
@@ -11289,6 +11372,7 @@ show.ssports.com
 ||brentberryarchitect.com^
 ||bresmforex.co.cc^
 ||bretatib.web.app^
+||brewstpreedit.help^
 ||brf--portalb2b.sandbox.my.site.com^
 ||brhwsg.makingnew.co.kr^
 ||bridesstars.com^
@@ -11304,6 +11388,7 @@ show.ssports.com
 ||brightenbooks.com^
 ||brighterzx.info^
 ||brightnet.co.uk^
+||brightproxy.co.cc^
 ||brightsidetattoo.com^
 ||brighttopicstoday.com^
 ||brilarex-app.com^
@@ -11311,6 +11396,7 @@ show.ssports.com
 ||brilliancetradebit.com^
 ||brintexpro20app.com^
 ||brionyamanist.com^
+||brisbug.asn.au^
 ||bristol-stone.co.cc^
 ||bristolpixel.com^
 ||britainhands.com^
@@ -11602,6 +11688,7 @@ show.ssports.com
 ||buywing.com^
 ||buyyoutubeviews.cheap^
 ||buzzbrokers.com^
+||buzzimports.com.au^
 ||buzzzy8hive.info^
 ||bvhxiysrndwbg.site^
 ||bvkuwv.muumuu-domain.com^
@@ -11648,6 +11735,7 @@ show.ssports.com
 ||bytessence.com^
 ||bytevoramax3platform.com^
 ||bytexrovo.com^
+||byuforex.co.cc^
 ||byuu3fjime.neliver.com^
 ||byyt9o5qcm.neliver.com^
 ||bza.co^
@@ -11925,6 +12013,7 @@ show.ssports.com
 ||camisamdani.com^
 ||cammi.it^
 ||camocaunioned.help^
+||camosurf.co.cc^
 ||campadidur.pro^
 ||campaign-remp.444.hu^
 ||campaign.etteplan.com^
@@ -12106,6 +12195,7 @@ show.ssports.com
 ||cash4diabeticsupplies.com^
 ||casha.xyz^
 ||cashadsllc.go2cloud.org^
+||cashexhub.net^
 ||cashfile.org^
 ||cashflowinc.com^
 ||cashflowmarketing.com^
@@ -12169,6 +12259,7 @@ show.ssports.com
 ||cauloconsp.pro^
 ||cauradaada.web.app^
 ||cauteantic.pro^
+||cavepics.com^
 ||cavoudimer.pro^
 ||cavrontelyx-soft.com^
 ||cawajanga.biz^
@@ -12203,6 +12294,7 @@ show.ssports.com
 ||cchdb.com^
 ||cclm.co.zw^
 ||ccmeng.com^$third-party
+||ccnshks.in^
 ||ccollins.com.au^
 ||ccpa-script.psg.nexstardigital.net^
 ||ccrdms.butopea.com^
@@ -12424,6 +12516,7 @@ show.ssports.com
 ||cfa5dd43addb62f7.com^
 ||cfaxq.mystreetscape.com^
 ||cfc5f7f5f2af1774.com^
+||cfceu.duckdns.org^
 ||cfg.adxcel-ec2.com^
 ||cfgmetro.com^
 ||cfhy.xyz^
@@ -12664,6 +12757,7 @@ show.ssports.com
 ||cinfoways.co.in^
 ||cinvetica.com^
 ||cio.share.ntv.io^
+||cioonly.com^
 ||cipstar.com^
 ||circlepause.my^
 ||circoscans.pro^
@@ -12710,6 +12804,7 @@ show.ssports.com
 ||ck-cdn.com^$third-party
 ||cketmaster.com^
 ||ckmap.mediav.com^
+||ckuforex.co.cc^
 ||cl-uc.weebly.com^
 ||cl.inhaabit.com^
 ||cl.messages.hannaford.com^
@@ -12769,6 +12864,7 @@ show.ssports.com
 ||clenaghans.com^
 ||clerks.doccheck.com^
 ||clever-solutions.pt^
+||cleverweb.com^
 ||cli.hashfish.net^
 ||clichkizhv.firebaseapp.com^
 ||click-csf.capitalone.com^
@@ -12903,6 +12999,7 @@ show.ssports.com
 ||clickgate07.biz^
 ||clickgate09.biz^
 ||clickice.com^
+||clicking-shot.co.cc^
 ||clickip.cn^
 ||clicklink.jp^
 ||clickmintads.site^$document
@@ -12934,6 +13031,7 @@ show.ssports.com
 ||clickshift.com^$third-party
 ||clicksite.com^
 ||clicksor.com^
+||clicktag.de^
 ||clickthrutraffic.com^
 ||clicktrack.pubmatic.com^
 ||clickwhitecode.com^
@@ -12962,6 +13060,7 @@ show.ssports.com
 ||clinixmis.org^
 ||clipcar.org^
 ||clipkadeh.ir^
+||clips.prack.net^
 ||clipsdart.click^
 ||clipsfestival.com^
 ||clipvibe-zone.com^
@@ -12971,6 +13070,7 @@ show.ssports.com
 ||clixgalore.com^$third-party
 ||clk.boulanger.fr^
 ||clk.optaim.com^
+||clkstat.qihoo.com^
 ||clmknhuyt.firebaseapp.com^
 ||clo6cgwrsf.neliver.com^
 ||cloaknetwork.com^
@@ -13028,6 +13128,7 @@ show.ssports.com
 ||cloudaccess.info^
 ||cloudfpre-productionontcapre-production31.net.daraz.com^
 ||cloudghost.net^
+||cloudlocalservice.duckdns.org^
 ||cloudmentor.shop^
 ||cloudmobile360.com^
 ||cloudnow.info^
@@ -13155,6 +13256,7 @@ show.ssports.com
 ||coinguardianspro.com^
 ||coinplex-app-com-genx.bestmarketingoffer.com^
 ||coinpricealerts.com^
+||coinsnow.co.cc^
 ||coinspire-engine.com^
 ||coinxo.com^
 ||coinzzz.pro^
@@ -13279,6 +13381,7 @@ show.ssports.com
 ||company.com.ph^
 ||compartitionpsm.info^
 ||compassestate.com^
+||compatiblescom.duckdns.org^
 ||compdoctorcp.blogspot.com^
 ||compeabbam.pro^
 ||completesuccession.com^
@@ -13487,6 +13590,7 @@ show.ssports.com
 ||cookies.jll.co.uk^
 ||cookies.jll.com.ar^
 ||cookies.ster.nl^
+||cookies641570.duckdns.org^
 ||cookiesregister.deltacommerce.com^
 ||cookietagmanager.net^
 ||cookietractor.com^
@@ -13671,12 +13775,14 @@ show.ssports.com
 ||cpe-58-175-17-220.vic.bigpond.net.au^
 ||cpe-leica-geosystems.org^
 ||cphdb.kutfromthekloth.com^
+||cphost07.qhoster.net^
 ||cplumb.com^
 ||cpm.admanmedia.com^
 ||cpm.andbeyond.media^
 ||cpm.pressize.com^
 ||cpm.videowalldirect.com^
 ||cpmailnote00.boxmode.io^
+||cpmktg.com^$third-party
 ||cpnlocal.go.th^
 ||cpreec.org^
 ||cpro.baidustatic.com^
@@ -13710,6 +13816,7 @@ show.ssports.com
 ||crackhouse.com^
 ||cracking.org^
 ||crackintopc.com^
+||crackkeygengame.com^
 ||crackmykey.com^
 ||cracknews.com^
 ||crackproductkey.com^
@@ -14071,6 +14178,7 @@ show.ssports.com
 ||cyberstyle.ru^
 ||cyberuveqate.live^
 ||cycberme29903.weebly.com^
+||cycle.oupeng.com^
 ||cycleridge.com^
 ||cyclo-challenge.fr^
 ||cyclobenzaprine.1.p2l.info^
@@ -14097,6 +14205,7 @@ show.ssports.com
 ||d-click.uhmailsrvc3.com^
 ||d-collect.jennifersoft.com^
 ||d-l-t.com^
+||d-men.net^
 ||d-safetravelsapp.progressive.com^
 ||d.8181zx.com^
 ||d.adsplay.net^
@@ -14269,6 +14378,7 @@ show.ssports.com
 ||dance-alarm.de^
 ||dandan.clan.rip^
 ||dandyglow.com^
+||dangnhapdexem20.duckdns.org^
 ||dangrancha.com.cn^
 ||danhda.store^
 ||daniels-mode.de^
@@ -14290,6 +14400,7 @@ show.ssports.com
 ||dare2bedazzled.com^
 ||darimnastroenie.ru^
 ||darjustice.com^
+||dark-comet-rat.duckdns.org^
 ||darkcarder.com^
 ||darkdc39.duckdns.org^
 ||darkercoincidentsword.com^
@@ -14441,6 +14552,7 @@ show.ssports.com
 ||data.boletin.super99.com^
 ||data.business.nordea.se^
 ||data.communicatie.nn.nl^
+||data.connect.riteaid.com^
 ||data.craftsamericana.com^
 ||data.customermail.bioplanet.be^
 ||data.cx.onlyyouhotels.com^
@@ -14596,6 +14708,8 @@ show.ssports.com
 ||de-earthtv2.videoplaza.tv^
 ||de-prox.co.cc^
 ||de-uim.a.videoplaza.tv^
+||de.as.cp61.ott.cibntv.net^
+||de.as.pptv.com^
 ||de.demdex.net^
 ||de.hosting.adjug.com^
 ||de.redflushcasino.eu^
@@ -14721,6 +14835,7 @@ show.ssports.com
 ||demonrimpa.pro^
 ||demopowerindo.com^
 ||demos.exoclick.com^
+||denarobookend.cyou^
 ||denewpolstle.web.app^
 ||dengebilisim.com^
 ||denri-84lopan.digital^
@@ -15047,6 +15162,7 @@ show.ssports.com
 ||disneylandparis.com.102.112.2o7.net^
 ||disordermcr.com^
 ||dispenser-rtb.sape.ru^
+||dispforex.co.cc^
 ||display.xad.com^
 ||displayincloud.adk2x.com^
 ||displayoptoffers.com^
@@ -15151,6 +15267,7 @@ show.ssports.com
 ||dna.uol.com.br^
 ||dnhrxt.kintetsu-re.co.jp^
 ||dnltkp.lampeetlumiere.fr^
+||dnmultiglobal.duckdns.org^
 ||dns-info.dyndns.pro^
 ||dns.chuzushijian.cn^
 ||dns1.stabletransit.com^
@@ -15257,6 +15374,7 @@ show.ssports.com
 ||dorisfitz.com^
 ||dormiqo.cfd^
 ||dormitorioselegantes.blogspot.com^
+||dornovametoda.sk^
 ||dorotheemunyaneza.com^
 ||dosawes.com^
 ||dosc.info^
@@ -15312,6 +15430,7 @@ show.ssports.com
 ||download.domplayer.com^
 ||download.downloadboutique.com^
 ||download.driversupport.com^
+||download.famouswhy.com^
 ||download.freelocalweather.com^
 ||download.instantradioplay.com^
 ||download.mediaplayercodecpack.com^
@@ -15350,6 +15469,7 @@ show.ssports.com
 ||downlodfiles.com^
 ||downmacos.com^
 ||downmobile.kugou.com^
+||downndirtyhats.com^
 ||downparadise.com^
 ||downsrf.eastday.com^
 ||downtawn.duckdns.org^
@@ -15461,6 +15581,7 @@ show.ssports.com
 ||dryerventexpress.com^
 ||dryzi.net^
 ||ds-cocoa.com^
+||ds-email.mercedes.wa.edu.au^
 ||ds-email.meriden.nsw.edu.au^
 ||ds.haaretz.co.il^
 ||ds.inq.com^
@@ -15480,6 +15601,7 @@ show.ssports.com
 ||dshowcase.mobi^
 ||dsib8s4jla.neliver.com^
 ||dsijwxwfytisljhsx.net^
+||dskum.co.kr^
 ||dsl4e5c06dc.pool.t-online.hu^
 ||dsl4e5c4c94.pool.t-online.hu^
 ||dsl4e5cf066.pool.t-online.hu^
@@ -15507,6 +15629,7 @@ show.ssports.com
 ||dt00.net^
 ||dt07.net^
 ||dt07.net^$third-party
+||dtadnetwork.com^
 ||dtc.delidatax.com^
 ||dtesv.fpro.com^
 ||dthiv.ardentfitness.com^
@@ -15607,6 +15730,7 @@ show.ssports.com
 ||dytt.com^*yb.js
 ||dytuj6zs26.com^
 ||dyzgw.com.cn^
+||dz47.linkpc.net^
 ||dzdgfp673c1p0.cloudfront.net^
 ||dzdravportal.garant.ru^
 ||dzgg.com^
@@ -15661,6 +15785,7 @@ show.ssports.com
 ||e2.cdn.qnsr.com^
 ||e36b2jbmcv.neliver.com^
 ||e3b36d8f06.69de27b955.com^
+||e3kok4ekzalzapsf.onion.ws^
 ||e40.xyz^
 ||e410f82db5.52588314e4.com^
 ||e44177b6b805.cdn4.forter.com^
@@ -15713,6 +15838,7 @@ show.ssports.com
 ||easctmguafe.global^
 ||eastads.simpli.fi^
 ||eastarmcivil.com.au^
+||eastern.com.au^
 ||easterncollege.so^
 ||eastglass.com^
 ||eastmidas.com^
@@ -15865,9 +15991,11 @@ show.ssports.com
 ||education-cz.ru^
 ||educationinterface.com^
 ||educatoral.com^
+||educontinua.unisabana.edu.co^
 ||edufarm.com.sg^
 ||edugm.bigfrogsupply.com^
 ||edunayok.org^
+||edutech.com.vn^
 ||edv-trenker.at^
 ||ee-106660.weeblysite.com^
 ||ee-account-security.web.app^
@@ -15953,6 +16081,7 @@ show.ssports.com
 ||eixst.ru^
 ||ejaxbjcsdmjwm.site^
 ||ejidosampled.shop^
+||ejnpulri.com^
 ||ejuiashsateampl.info^$popup
 ||ejvoice.com^
 ||ekat64.ru^
@@ -16043,6 +16172,7 @@ show.ssports.com
 ||elqtrk.morningstar.ch^
 ||elqtrk.morningstar.nl^
 ||elqtrk.tw.morningstar.com^
+||els.mywebtattoo.com^
 ||elsaiddarwish.com^
 ||elsitiorepuestos.com.ar^
 ||elssots.com^
@@ -16142,6 +16272,7 @@ show.ssports.com
 ||email.caffeinbits.com^
 ||email.campaign.melonbusiness.co.za^
 ||email.campuslab.com.br^
+||email.canbyfinancial.com^
 ||email.capturet.com^
 ||email.capyear.co^
 ||email.caratetreviglio.bcc.it^
@@ -16165,6 +16296,7 @@ show.ssports.com
 ||email.cherryinsurance.net^
 ||email.churchsoundcheck.com^
 ||email.ci-web.com^
+||email.civdprod.pengadaan.com^
 ||email.clearscore.com.au^
 ||email.clever-sparen.ergo.de^
 ||email.clives.co.nz^
@@ -16441,11 +16573,13 @@ show.ssports.com
 ||email.noreplaymail.com.br^
 ||email.noreply.rippedupnutrition.com^
 ||email.noreply.villadelmare.co.za^
+||email.notifications.convergeict.com^
 ||email.notifications.shopee.ph^
 ||email.notify.escapecollective.com^
 ||email.office.weareone.world^
 ||email.okhai.org^
 ||email.online.uj.ac.za^
+||email.or.convergeict.com^
 ||email.osmail.babacasino-mail.com^
 ||email.page.selectpath.com^
 ||email.pasins.com^
@@ -16521,6 +16655,7 @@ show.ssports.com
 ||email.zoorix.com^
 ||email.zullee.com^
 ||emailaddressmanager.com^
+||emailb-last.shop^
 ||emailbntest.branchcustom.xyz^
 ||emailcio.biz.me^
 ||emaildownload.org^
@@ -16638,10 +16773,12 @@ show.ssports.com
 ||enquete-uphf.web.app^
 ||enrichmentservices.fccinteractive.com^
 ||enriquepuertas.com^
+||enriqueza.com^
 ||enrtx.com^$popup
 ||ens.toggenburgertagblatt.ch^
 ||ensighten.heishop.mx^
 ||ensource.co.uk^
+||enterdomains.co.cc^
 ||enterprise-productivity-v2.s3.us-east-2.amazonaws.com^
 ||enterprise.coremetrics.com^
 ||entertainment.real.com^
@@ -16651,6 +16788,7 @@ show.ssports.com
 ||entratanag.pro^
 ||entrav.ru^
 ||entravision.com^$third-party
+||entravision.deliveryengine.adswizz.com^
 ||entreesmoothstir.com^
 ||entrepreneurssupport.com^
 ||envagassociates.com^
@@ -16723,6 +16861,7 @@ show.ssports.com
 ||equiplinknet.com^
 ||equipodesoportedeunaledu.weebly.com^
 ||equitronica.com^
+||equitymaybird.cyou^
 ||er.dlhygj.com^
 ||era-kamnya.ru^
 ||eragrafika.com^
@@ -16899,6 +17038,7 @@ show.ssports.com
 ||eurasiacl--kr.com^
 ||eurm.recs.richrelevance.com^
 ||euro-evolution.com^
+||euro.think-easy.eu^
 ||euroexpressecouriers.nl^
 ||euroinvest20.com^
 ||europan.pl^
@@ -16912,6 +17052,7 @@ show.ssports.com
 ||eurosystemapp.com^
 ||eurosystemplatform.com^
 ||eurotechwindows.net^
+||euroteensluts.com^
 ||eurotrendwest.122.2o7.net^
 ||eurroexport.com^
 ||euskolink.com^
@@ -16932,6 +17073,7 @@ show.ssports.com
 ||evenmonvexis.com^
 ||evenpatroller.com^
 ||event-api.contactatonce.co.uk^
+||event-pro.com.ua^
 ||event-server-prod.unacademy.com^
 ||event-tracking-services.global.commerce-connector.com^
 ||event.ava.me^
@@ -17043,6 +17185,7 @@ show.ssports.com
 ||exodus-compliance.com^
 ||exodus-ten-five-sigma-dfasf-98457-343564-goa.vercel.app^
 ||exodus-wallets.boxmode.io^
+||exoode.com^
 ||exoticwoodsltd.com^
 ||expand-yzarex-app.net^
 ||expandnext.com^
@@ -17189,6 +17332,7 @@ show.ssports.com
 ||fail.adr.ec^
 ||failure-account.com^
 ||fair-tax.sk^
+||fair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||fairdealprocess.com^
 ||fairdoberman.pro^
 ||faireagle.com^
@@ -17207,7 +17351,9 @@ show.ssports.com
 ||fakeapeclub.com^
 ||fakedotcreative.com^
 ||fakers.co.jp^
+||faktowace.is-best.net^
 ||fakty-miejskie.x9.eu^
+||fakty32a.is-best.net^
 ||fakty33a.is-best.net^
 ||faktypolska15.b-cdn.net^
 ||faktypolska5.b-cdn.net^
@@ -17328,6 +17474,7 @@ show.ssports.com
 ||fbear.com^
 ||fbfbdddc21226710.com^
 ||fbfredericksburgcom.112.2o7.net^
+||fbihsluzbazazajednickeposlove.gov.ba^
 ||fbl.com.pk^
 ||fbloc.seangroathouse.com^
 ||fbma.in^
@@ -17450,6 +17597,7 @@ show.ssports.com
 ||ferromas.com^
 ||fertilidadpma.com^
 ||feszloptika.hu^
+||feuduprid.com^
 ||fevralya-23.narod.ru^
 ||fevrooko.mi-website.es^
 ||few-politics.com^
@@ -17474,6 +17622,7 @@ show.ssports.com
 ||fgopr.top^
 ||fgosob.unhcr.it^
 ||fgqyxgbqfxyot.website^
+||fgspro.com^
 ||fguforex.co.cc^
 ||fh259by01r25.com^
 ||fhatfee.ero-advertising.com^
@@ -17486,6 +17635,7 @@ show.ssports.com
 ||fianca-noxis.pro^
 ||fiberhaber.blogspot.com^
 ||fiberprox.me^
+||fiberproxz.co.cc^
 ||fibfrc.thecara.co.kr^
 ||fibhost-66-13-66.fibernet.hu^
 ||fibhost-66-150-120.fibernet.hu^
@@ -17540,6 +17690,7 @@ show.ssports.com
 ||filipesantos.com.br^
 ||filipinotodate.com^
 ||film-vod-online.blogspot.com^
+||filmcrewtransport.co.ke^
 ||filmersi.pl^
 ||filmowekadry.club^
 ||filmowo24.pl^
@@ -17822,6 +17973,7 @@ show.ssports.com
 ||foisttappa.pro^
 ||fokkerneedly.qpon^
 ||fokusgwenchana.com^
+||fokuszgeodezia.hu^
 ||folderzip.com^
 ||foldingcutleryhelium.com^
 ||foliographic.com^
@@ -17875,6 +18027,7 @@ show.ssports.com
 ||forexdrainbroker.com^
 ||forexers.co.cc^
 ||forexeubullish.co.cc^
+||forexfatcow.co.cc^
 ||forexfive.co.cc^
 ||forexfortradeinus.co.cc^
 ||forexfreemargin.co.cc^
@@ -18001,6 +18154,7 @@ show.ssports.com
 ||fra497.ib.adnxs.com^
 ||fra78.ib.adnxs.com^
 ||fra96.ib.adnxs.com^
+||fractaldreams.com^
 ||fragarena.my1.ru^
 ||frageultim.pro^
 ||fraistfast.click^
@@ -18293,6 +18447,7 @@ show.ssports.com
 ||g.kendalltoyota.com^
 ||g.live.com^
 ||g.newtimes.com^
+||g.s.360.cn^
 ||g.staging.pathsha.re^
 ||g.zedo.com^
 ||g00dw3ath3rg00dt1me.top^
@@ -18323,6 +18478,7 @@ show.ssports.com
 ||gahkj.zomasleep.com^
 ||gahuci.com^
 ||gaia.hardenctf.fr^
+||gaiai.claims^
 ||gail.hit.gemius.pl^
 ||gailey-law.com^
 ||gainfcu.info^
@@ -18378,6 +18534,7 @@ show.ssports.com
 ||gammaweb.ir^
 ||gandmotivatin.info^
 ||gandmotivatin.info^$popup
+||ganggebanchang.cn^
 ||ganjasins.duckdns.org^
 ||gantich.com^
 ||gantoo.com^
@@ -18748,6 +18905,7 @@ show.ssports.com
 ||gm-link.com^
 ||gm.touchclarity.com^
 ||gmae.com.br^
+||gmagana.org^
 ||gmaii.com^
 ||gmailcustomerhelpdesk.blogspot.com^
 ||gmailcustomersupportsservice.blogspot.com^
@@ -18955,6 +19113,7 @@ show.ssports.com
 ||go.rworks.jp^
 ||go.scalar-labs.com^
 ||go.scmagazine.com^
+||go.securityguardsqueensland.com.au^
 ||go.seegeneus.com^
 ||go.sesloc.org^
 ||go.sessionkeeper.ai^
@@ -19031,6 +19190,7 @@ show.ssports.com
 ||go2heres.com^
 ||go2rph.com^$popup
 ||go2s.co^
+||go6btl8wlxjg5vf.cfd^
 ||go777site.com^
 ||goaheadmakemymagicbutton.online^
 ||goalithic.xyz^
@@ -19067,6 +19227,7 @@ show.ssports.com
 ||goldielocks.info^
 ||goldledgerixsolution.com^
 ||goldlichtnexor.com^
+||goldline.ph^
 ||goldmere-paynex.net^
 ||goldsgymalipore.com^
 ||goldssoccer.com^
@@ -19084,6 +19245,7 @@ show.ssports.com
 ||gomain.pro^
 ||gomatradeix.ru^
 ||gomezhomeservicesca.com^
+||gomxuanhoa.com^
 ||gondolagnome.com^
 ||gongxifc.com^
 ||gononda.com^
@@ -19104,6 +19266,7 @@ show.ssports.com
 ||goodyear.122.2o7.net^
 ||googe.com^
 ||googie-login.com^
+||googlanalytics.ws^
 ||google-chrom.com^
 ||google-hacks.softonic.fr^
 ||google-meet-app.world^
@@ -19319,6 +19482,7 @@ show.ssports.com
 ||growthrx.in^$third-party
 ||grquadonaxobq.site^
 ||gruffcrimp.com^
+||grunase.com.br^
 ||grupo-ormeno.com.pe^
 ||grupo-produbanc0.wuaze.com^
 ||grupobsf.cl^
@@ -19445,6 +19609,7 @@ show.ssports.com
 ||gtm.tigofitness.com^
 ||gtm.traiokw.com^
 ||gtm.urbistudios.com.br^
+||gtm.useelizah.com.br^
 ||gtm.uticket.com.br^
 ||gtm.vistoriadoronline.com.br^
 ||gtm.vitally.com.pe^
@@ -19488,6 +19653,7 @@ show.ssports.com
 ||guide-desktop-en-us-ledgzr.pages.dev^
 ||guide-ledger-desktop-live.typedream.app^
 ||guidegogo.net^
+||guidelineservices.com.qa^
 ||guidopavimenti.it^
 ||guihangdimy.net^
 ||guitarraspantoja.es^
@@ -19576,6 +19742,7 @@ show.ssports.com
 ||hacker.ag^
 ||hackeradminhacker.duckdns.org^
 ||hackerfacebook.com^
+||hackersclub.up.to^
 ||hackerxml.blogspot.com^
 ||hackextreme.com^
 ||hackfacebookaccount.com^
@@ -19697,6 +19864,7 @@ show.ssports.com
 ||hasgoodtools.com^
 ||hashcoin.io^
 ||hasqg.swarm.com^
+||hastedbeatas.cfd^
 ||hasteinternaladulatory.com^
 ||hatayeserbilisim.com^
 ||hateful-pride.pro^
@@ -19728,6 +19896,7 @@ show.ssports.com
 ||hb.voot.com^
 ||hbb.afl.rakuten.co.jp^
 ||hbcconstruction.co.za^
+||hbchm.co.kr^
 ||hbclwq.com^
 ||hbfire.com^
 ||hbguzhenyuan.com^
@@ -19741,6 +19910,7 @@ show.ssports.com
 ||hbtnew.weebly.com^
 ||hbxmdf.icu^
 ||hc119.com^
+||hcad.shop^
 ||hcanorthtexas.hrm.healthgrades.com^
 ||hciot.net^
 ||hclcompany.com^
@@ -19784,6 +19954,7 @@ show.ssports.com
 ||healthslive.net^
 ||healthwiseonline.com.au^
 ||healthydirections.touchcommerce.com^
+||healthymagnets.com^
 ||healthyourlife.sc-specialhost.com^
 ||healthysurvey.co1.qualtrics.com^
 ||hearfra.shop^
@@ -20203,6 +20374,7 @@ show.ssports.com
 ||hosttoday.org^
 ||hotblocker.com^
 ||hotblognetwork.com^
+||hotel-ana.ro^
 ||hotelage.link^
 ||hotelbidebide.com^
 ||hotelbrisasdelpacifico.com.ec^
@@ -20249,6 +20421,7 @@ show.ssports.com
 ||hover.evyy.net^
 ||hoverfly.winchdesign.cn^
 ||howardclark.com^
+||howareyouqq.com^
 ||howtogosocial.com^
 ||howtolisten.kr^
 ||hpcallcenterusa.blogspot.com^
@@ -20294,6 +20467,7 @@ show.ssports.com
 ||hstus.tradedoubler.com^
 ||ht.5leadershiplanguages.com^
 ||ht.sulang.com^
+||hta.duckdns.org^
 ||htajztellrgmu.space^
 ||htechfamily.com^
 ||htgre4.ariesbizval.com^
@@ -20322,10 +20496,12 @@ show.ssports.com
 ||https.secure.bank-of-america.login.sign.gwvllygsqr.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.jqvgmjqfuk.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.jykljgjhpg.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.kgizajiwcz.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.klogksvcwn.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.mnoguhjtos.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.naggebkgjb.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.nqlaznqxyq.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.nuwkcbppyz.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.otegafbqua.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.qzpvneownu.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.rudigpgrpl.underpains.duckdns.org^
@@ -20337,18 +20513,22 @@ show.ssports.com
 ||https.secure.bank-of-america.login.sign.wfbbvowdmk.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.zmuhnsdooi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.adnailtkmv.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.aecztdbuwj.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.aoksgeizma.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.arwprhofwj.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.baaqemtwtr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.begieoqsdz.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.bfwkbxcpwu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.bqcambeamk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.buydnylimb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.bwusjutfux.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.bxqrfzaree.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cbdeqzuvxq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ccnjcsludq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cfraujrzkp.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ciugwyyrxh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cjwspguvgg.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.cpekcjymzu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cqyoahaufg.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cuokghumvz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cvrbunojmu.underpains.duckdns.org^
@@ -20357,20 +20537,26 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.djznfdnknd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.dqejncshjd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.dsmtuikpvy.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.dtfjvbfhjb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.durilrefwy.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.dxrbdqpvif.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ecutrxnoos.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.edmrmodegf.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.efcissnacf.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.eghlpyrxda.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.erxshoyueb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.exvqezynap.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ezynzujgmz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.fggkituejh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.flvjsfzhdw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.fouinvfruq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.froteosssx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.fsmnrzuvlb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.funxhewlib.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.fynvlytvqc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gdzkncnuay.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ggdwtdtppf.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.gghpkzzcie.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gimiiwswyk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gjltbrwchm.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gnnxbxspso.underpains.duckdns.org^
@@ -20383,16 +20569,21 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.idfitilnqx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.igtqbwazqk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ijufbzgwvw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ilfxrvzivn.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.inmdrefpgf.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.iokgoflrjb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.iredswtqqj.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.iynenkwhfo.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jdurzmaolz.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.jlxeewjswy.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jqpamveypw.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jqulhyzbrs.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jrcyvqxrmc.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.jsdxthjdkk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jvuftehkhn.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jvvtuawtco.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jzwcuxsjps.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.khsgsbedmz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.kjzosnbpjj.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.klkqddqumi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.kvhtgnizsi.underpains.duckdns.org^
@@ -20405,8 +20596,11 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.mauoycxfmi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.mdrzrlcczh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.mhvvbukopg.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.mjkymcutdi.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.mmcoqtjezo.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.mpvctszrwy.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.muxiyjlcts.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ndtqayekzm.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.nexsjkgjfd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.njdosqlswc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.nmcwmghhpw.underpains.duckdns.org^
@@ -20414,10 +20608,12 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.nqlkjinqwn.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.nvpuqjevio.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.nzqteyfier.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.odbcqzhsfe.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.oeubdgywaf.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ohivcyefru.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.oicduumolq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.oitxeirxxh.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.otozaeyoqu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ovsssogkmd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.oxgfvztnoc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ozcawxjyri.underpains.duckdns.org^
@@ -20426,6 +20622,7 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.pgpssmbycl.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pkkuwwsrlr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pozbkftnzw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.psqiuyylzu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pzfgtucapk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.qaauyxjpeb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.qadaqqclyw.underpains.duckdns.org^
@@ -20443,9 +20640,11 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.sijckrisjk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sjtdktpamw.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.swrrjyantf.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.sxdenjxeuh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.thmnfkcqnm.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.tizlyzmtqx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.tlprozavym.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.tlqbndygon.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.toyupnstex.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uuzdtdarsn.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.vbqrgfvngc.underpains.duckdns.org^
@@ -20461,6 +20660,7 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.wmsblcbkaj.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wmuomiohrv.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wnvnciajzp.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.woflwyfnpu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wqobxxwwlc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wsstaeehfh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wsxvxtdtrv.underpains.duckdns.org^
@@ -20478,6 +20678,7 @@ show.ssports.com
 ||https.secure.bankofamerica.login.sign.zhbybtppqr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zmeylcszuf.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zmojfzyydc.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.zrnavmvutb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zznfaoamlr.underpains.duckdns.org^
 ||https443.net^
 ||httpsofxmail.godaddysites.com^
@@ -20516,6 +20717,7 @@ show.ssports.com
 ||humanearth.net^
 ||humanpresence.app^
 ||humanrescueleague.org^
+||humas.unila.ac.id^
 ||humongoustemporary.com^
 ||humorcillet.blogspot.com^
 ||humpasylum.com^
@@ -20676,6 +20878,7 @@ show.ssports.com
 ||icd-fibres.com^
 ||icd.support^
 ||icdirect.com^
+||icebns.com^
 ||iceburg.info^
 ||iceglamk.billiga-arbetsklader.se^
 ||icelia.com^
@@ -20769,6 +20972,7 @@ show.ssports.com
 ||if-player.ex.co^
 ||ifa.maxpornlive.com^
 ||ifacelog.iqiyi.com^
+||ifadey.com^
 ||ifcingenieria.cl^
 ||ifdlcsfuafvst.store^
 ||ifengimg.com^*300x600
@@ -20905,6 +21109,7 @@ show.ssports.com
 ||images-pw.secureserver.net^
 ||images-static.vrvm.com^
 ||images.china.cn^*first/$subdocument
+||images.cloud.secure-24.com^
 ||images.connect.veritivcorp.com^
 ||images.connect2.globalservices.bt.com^
 ||images.contact.princess.com^
@@ -20957,6 +21162,7 @@ show.ssports.com
 ||imeitrackeronline.com^
 ||img-bss.csdn.net^
 ||img-discord.lol^
+||img.12584.cn^
 ||img.1rx.io^
 ||img.cambaddies.com^
 ||img.consumer.risk.lexisnexis.com^
@@ -20979,6 +21185,7 @@ show.ssports.com
 ||img122.picfoco.com^
 ||img133.picfoco.com^
 ||img18.com^
+||img2.g.pptv.com^
 ||img3.g.pptv.com^
 ||img4.uscellular.com^
 ||img5-ak.cpcdn.com^
@@ -21371,6 +21578,7 @@ show.ssports.com
 ||infod.myportfolio.com^
 ||infoefocusiric.github.io^
 ||infoglobe.live^
+||infomyoffice.ru^
 ||infonlin.2cnt.net^
 ||inforeef.ourtoolbar.com^
 ||informa-carcartonas-si-gtw-pagees-indexx-jsp-20171-titolarih7.dynamic-dns.net^
@@ -21474,10 +21682,12 @@ show.ssports.com
 ||inspi-dsp.com^
 ||inspiracjeedukacyjne9.click^
 ||inspiratie.talisman.nl^
+||inspirationmedical.in^
 ||inspirationmodels.com^
 ||inspiremyfire.com^
 ||inspiresleep.sharepoint.com^
 ||inspiretech.ae^
+||insta-life.ru^
 ||instagram-clone-topaz-two.vercel.app^
 ||instagram-insta.com^
 ||instagram.co.bw^
@@ -21541,6 +21751,7 @@ show.ssports.com
 ||instavoice.weebly.com^
 ||insticator.com^
 ||institut-corps-a-ligne.fr^
+||institutip3.com^
 ||instrukciiskachatdenver.weebly.com^
 ||instrument-micro.ru^
 ||instyle.share.ntv.io^
@@ -21609,6 +21820,7 @@ show.ssports.com
 ||intrawesttremblant.112.2o7.net^
 ||intrepidemu.pro^
 ||intropalma.pro^
+||intubfisia.pro^
 ||intuitionenergy.com^
 ||invellia.digital^
 ||inventive-support-629300.framer.app^
@@ -21743,6 +21955,7 @@ show.ssports.com
 ||ironsky.angelfire.com^
 ||ironsrc.com^
 ||ironumove.shop^
+||irpexprodd.cyou^
 ||irritablesunrise.com^
 ||iruqe.haverhill.com^
 ||irzeward.info^
@@ -22039,6 +22252,7 @@ show.ssports.com
 ||jhncmokruwmhd.website^
 ||jhondi33.duckdns.org^
 ||jhqieljrzibnr.store^
+||ji864mkfxqcxeiqc2.cfd^
 ||jiahewine.cn^
 ||jianxinshanghai.com^
 ||jiaoben.ganji.cn^
@@ -22078,6 +22292,7 @@ show.ssports.com
 ||jizzads.com^
 ||jizzcatcher.com^
 ||jj-seo.cn^
+||jjc11.com^
 ||jjimtya.top^
 ||jk.com.sg^
 ||jk.yeawindows.com^
@@ -22133,7 +22348,9 @@ show.ssports.com
 ||joemullany.com^
 ||joepursch.com^
 ||joerandazzotestserver.com^
+||joeun.com^
 ||joewhizz.duckdns.org^
+||johannesson.at^
 ||johnantivirus.livejournal.com^
 ||johnboydbooks.com^
 ||johnnelsonauto.co.uk^
@@ -22166,6 +22383,7 @@ show.ssports.com
 ||joshvillbrandt.com^
 ||josie.comeque.com^
 ||jouj-equar.one^
+||jouleco.in^
 ||journalhoite.info^
 ||journeyhex.shop^
 ||journeyinparenting.com^
@@ -22329,6 +22547,7 @@ show.ssports.com
 ||jzthw.cn^
 ||jzxouwszeyhrq.online^
 ||k-gov.cn^
+||k-k.co.il^
 ||k-state.qualtrics.com^
 ||k-vet.ru^
 ||k-warganegaraan.blogspot.com^
@@ -22454,6 +22673,7 @@ show.ssports.com
 ||kdcorp.com.vn^
 ||kddi.122.2o7.net^
 ||kdfs.org^
+||kdisk.co.kr^
 ||kdpxgr.travellink.no^
 ||kdrecord.com^
 ||kds.ero-advertising.com^
@@ -22480,6 +22700,7 @@ show.ssports.com
 ||kelonstra.club^
 ||kemalyapi.com^
 ||kemurahan.com^
+||kenapers.jouwpagina.be^
 ||kendalmc.org^
 ||kendrel-yieldharbor.com^
 ||kendrelyieldharborcanada.com^
@@ -22629,6 +22850,7 @@ show.ssports.com
 ||kkujkajkeiobts.com^
 ||kl.saharabank.ly^
 ||klatreklubnordsjaelland.dk^
+||kledingonline.nl^
 ||kleiderkreisel.digidip.net^
 ||kleinanzeigen.demarkt-de3.blog^
 ||klempokv.cz^
@@ -22684,6 +22906,7 @@ show.ssports.com
 ||kochava.com^
 ||koche.ru^
 ||kodyumyslu.pl^
+||koeforex.co.cc^
 ||koelner-schmuck.de^
 ||koeriersverzekering.com^
 ||kofiup.pl^
@@ -22717,6 +22940,7 @@ show.ssports.com
 ||kopipesz.blogspot.com^
 ||kora-show.live^
 ||koreadrama-series.blogspot.com^
+||koreahrd.org^
 ||korina.ro^
 ||korlunixtrader.com^
 ||kornilobuzanov.narod.ru^
@@ -22933,6 +23157,7 @@ show.ssports.com
 ||lanzier.cn^
 ||laotie.w990.west263.cn^
 ||laowu168.com^
+||laparomag.ru^
 ||lapassion.se^
 ||lapeduzis.org^
 ||laphagrito.com^
@@ -23092,6 +23317,7 @@ show.ssports.com
 ||lending-for-europe.eu^
 ||lendkey.evyy.net^
 ||lenovo.inq.com^
+||lenovoshops.co.cc^
 ||lenovotechbuddiesonline.blogspot.com^
 ||lenscrafters.btttag.com^
 ||lentanovostei.mirtesen.ru^
@@ -23138,6 +23364,7 @@ show.ssports.com
 ||lexikros-app.com^
 ||lexozfldkklgvc.com^
 ||lfercl.tcb-beauty.net^
+||lg.honeybeetown.com^
 ||lg.logging.admicro.vn^
 ||lg.luckyforworlds.com^
 ||lg.oneguy4u.sa.com^
@@ -23207,6 +23434,7 @@ show.ssports.com
 ||like.likewut.net^
 ||like4like.org^
 ||likebaiduthikhoanhkhacgiadinh.weebly.com^
+||likebehind.co.cc^
 ||likecontrol.com^
 ||likesking.fr^
 ||likrion.ho.ua^
@@ -23357,6 +23585,8 @@ show.ssports.com
 ||link4link.com^
 ||linkbio.co^
 ||linkbio.net^
+||linkdentaldev.insights.md^
+||linkecarte.pro^
 ||linkelevator.com^
 ||linker.ba^
 ||linkexchange.com^
@@ -23436,6 +23666,7 @@ show.ssports.com
 ||littlefatlamb.com.au^
 ||littleindiadentist.com.sg^
 ||littlemontessorian.com^
+||littlepeopleparties.com^
 ||liu.nu^
 ||liuhemei.com.cn^
 ||liumingzhen.myftp.org^
@@ -23656,6 +23887,7 @@ show.ssports.com
 ||local-media.ambient-platform.com^
 ||local-update.com^
 ||localdatedreams.com^
+||localdomain.ws^
 ||localhost.in.getclicky.com^
 ||localprivatenetwork.com^
 ||localswingerspersonals.com^
@@ -23786,6 +24018,7 @@ show.ssports.com
 ||lohjinawistore.blogspot.com^
 ||lohotronschik.info^
 ||lojabuscadelivery.shop^
+||lojaonline.eurobar.pt^
 ||lojavinicolathera.site^
 ||lokatatradexa.com^
 ||lokersmkbwi.com^
@@ -24127,6 +24360,7 @@ show.ssports.com
 ||ma.kyloepartners.com^
 ||ma.smart-checkout.net^
 ||ma.toyobo.co.jp^
+||maad.maru.jp^
 ||maayaulagam-4u.myavlive.com^
 ||mabet.eu^
 ||mabila.ua^
@@ -24169,6 +24403,7 @@ show.ssports.com
 ||magcustoms.co^
 ||magento.adx1.com^
 ||magento.d1.sc.omtrdc.net^
+||magento.xml.auxml.com^
 ||magic-mirror.ca^
 ||magicalfind-a.akamaihd.net^
 ||magiceden.com^
@@ -24253,6 +24488,7 @@ show.ssports.com
 ||maitherocha.com.br^
 ||maizeimpala.pro^
 ||majesticwaterscape.com^
+||mak915800.ru^
 ||make-clean.ru^
 ||make-cute-faces.blogspot.com^
 ||make-feel.co.cc^
@@ -24285,6 +24521,7 @@ show.ssports.com
 ||malloyandmalloy.com^
 ||malluking.tk^
 ||mallwarebytes.com^
+||mally.tim.com.pl^
 ||malodentallondon.com^
 ||malupieng.com.br^
 ||malutisdahospital.org.ls^
@@ -24344,6 +24581,7 @@ show.ssports.com
 ||maragatafm.com^
 ||marcellinoagatha.blogspot.com^
 ||marcelowmonteiro.com.br^
+||march262020.com^
 ||marchadvertisingnetwork10.com^
 ||marchienergia.it^
 ||marcrecepcoes.com.br^
@@ -24519,6 +24757,7 @@ show.ssports.com
 ||martallonch.com^
 ||martelstoved.help^
 ||martenchenon.se^
+||martingpaction.qpon^
 ||maruchan.cl^
 ||marvelcasino.games^
 ||marwawater.com^
@@ -24632,6 +24871,7 @@ show.ssports.com
 ||maxthon.duckdns.org^
 ||maxtraffic.com^
 ||mayadeepgroup.com^
+||maymaychihai.com^
 ||mayxanhsupport.com^
 ||mbd1.com^
 ||mbio.info^
@@ -24716,6 +24956,7 @@ show.ssports.com
 ||media.mobpartner.mobi^
 ||media.net^$object,script,third-party,xmlhttprequest
 ||media.netpositive.hu^
+||media.ontarionorth.com^
 ||media.polariswealth.net^
 ||media.proadscdn.com^
 ||media.rabbit.click^
@@ -24865,6 +25106,7 @@ show.ssports.com
 ||meteorsolutions.com^
 ||meterotica.com^
 ||methobirbo.com^
+||metinsmaze.qpon^
 ||metlifeglobal.tt.omtrdc.net^
 ||metmseklogien.webflow.io^
 ||metodocanicas.com^
@@ -24925,6 +25167,7 @@ show.ssports.com
 ||metrics.honda.com^
 ||metrics.hostech.co.uk^
 ||metrics.hoy.es^
+||metrics.insight.com^
 ||metrics.invictastores.com^
 ||metrics.ionos.de^
 ||metrics.jacksonsart.com^
@@ -25136,6 +25379,7 @@ show.ssports.com
 ||millertoken.github.io^
 ||million.francite.com^
 ||milliondollarideasforathousanddollars.com^
+||millionways.duckdns.org^
 ||millzjsoctrinwi80gm.duckdns.org^
 ||milwaukeemarble.com^
 ||mimasparci.pro^
@@ -25709,6 +25953,7 @@ show.ssports.com
 ||mmcomposite.dk^
 ||mmf.enu.kz^
 ||mmg.aty.sohu.com^
+||mmgads.com^
 ||mmi-agency.com^
 ||mmkkiivv.com^
 ||mmobsz.edenviaggi.it^
@@ -25878,6 +26123,7 @@ show.ssports.com
 ||monarchycurrencyinjury.com^
 ||monatraders.in^
 ||monclerinosterreich.me^
+||moncoindejardin.ca^
 ||mondial.relaysign.in^
 ||monetag.com^
 ||monetano.com^$third-party
@@ -25935,6 +26181,7 @@ show.ssports.com
 ||mori.ink^
 ||moriapousada.com.br^
 ||morlegazpi.com^
+||mormyregrackle.help^
 ||morpheus.com.tr^
 ||morphus.com^
 ||mortgagechain.co.uk^
@@ -26064,6 +26311,7 @@ show.ssports.com
 ||mssdk-sg.tiktokv.com^
 ||mssdk16-normal.capcutapi.com^
 ||mstauctioneers.co.uk^
+||mstone-ufa.ru^
 ||mstudija.lt^
 ||msudenver.qualtrics.com^
 ||msupdate.net^
@@ -26103,6 +26351,7 @@ show.ssports.com
 ||muenchen-dating.com^
 ||muffled-hope.pro^
 ||muhabbet.org^
+||muhgo.duckdns.org^
 ||muhlachdexus.ru^
 ||muisse.com^
 ||muissin.corbina.net^
@@ -26243,6 +26492,7 @@ show.ssports.com
 ||mydoctor.myasset.com^
 ||mydoctorpado.com^
 ||myehterwallet.com^
+||myemailtracking.com^
 ||myemailtracking.com^$popup
 ||myessaypro.com^
 ||myetherwaller.com^
@@ -26277,6 +26527,7 @@ show.ssports.com
 ||mynextkitchen.com^
 ||mynutraresearch.com^$popup
 ||myomnistar.com^
+||myonememinaway.cfd^
 ||myotpusk.mirtesen.ru^
 ||myphamjapan.com^
 ||mypopadpro.com^$popup
@@ -26420,6 +26671,7 @@ show.ssports.com
 ||nationalitypovertyconverted.com^
 ||nationejobs.com^
 ||naturaldist.com^
+||naturalialavando.es^
 ||naturalnazywnosc.pl^
 ||naturalsoap.com.au^
 ||nature.org.102.112.2o7.net^
@@ -26510,6 +26762,7 @@ show.ssports.com
 ||neoftheownouncillo.info^
 ||neohbeginnings.com^
 ||neonqub-app.net^
+||neotruck.net^
 ||neower.com^
 ||neoworx.net^
 ||nepeanfinearts.com^
@@ -26635,6 +26888,7 @@ show.ssports.com
 ||newpartnerlover.com^
 ||news-jupiter.com^
 ||news-pafusa.com^
+||news.cxxtv.com^
 ||news.djcoregon.com^
 ||news.forddirectdealers.com^
 ||news.libn.com^
@@ -27028,6 +27282,7 @@ show.ssports.com
 ||nuboma.com^
 ||nude-tiktok.top^
 ||nudeblackwomenphotos.com^
+||nuevesito0504.duckdns.org^
 ||nuevochance1.duckdns.org^
 ||nufast.co.cc^
 ||nuffnang.com.cn^$third-party
@@ -27116,6 +27371,7 @@ show.ssports.com
 ||oascentral.stackmag.com^
 ||oase.support^
 ||oasis-lab.sk^
+||oasis1982.com^
 ||oasismarketing.oasisadvantage.com^
 ||oavb.com^
 ||oawmbakyzabtk.mocha.app^
@@ -27151,6 +27407,7 @@ show.ssports.com
 ||oci.cl^
 ||oci.dyn.com^
 ||ociasb.adtiming.com^
+||ocmtancmi2c4t.xyz^
 ||ocry.com^
 ||octaprofitcap.com^
 ||octoin.com^
@@ -27425,6 +27682,7 @@ show.ssports.com
 ||one.ru^
 ||one.ygto.com^
 ||one88.fun^
+||onedrive.liveviewuserauthaspx209hr28jh.srv156794.hoster-test.ru^
 ||onedriveclucprodbn20008.blob.core.windows.net^
 ||onedriveclucprodbn20018.blob.core.windows.net^
 ||onedriveclucprodbn20025.blob.core.windows.net^
@@ -27849,6 +28107,7 @@ show.ssports.com
 ||pages.blog.trivago.com^
 ||pages.bsigroup.com^
 ||pages.college.citizensbank.com^
+||pages.comunicaciones.ficohsa.com.ni^
 ||pages.e.affirm.ca^
 ||pages.e.massmutual.com^
 ||pages.em-sel.sel.sony.com^
@@ -27977,6 +28236,7 @@ show.ssports.com
 ||panthoravellomindra.cyou^
 ||pantynow.com^
 ||paoailpcwnnhd.life^
+||paoduenti.duckdns.org^
 ||papajohnpizza.com^
 ||papanegro.cl^
 ||papari.net^
@@ -28090,6 +28350,7 @@ show.ssports.com
 ||patodns2018.duckdns.org^
 ||patronimproveyourselves.com^$popup
 ||pattyponderstuffy.com^
+||paul.falcogames.com^
 ||pauldonas.com^
 ||paulhastings-okta.com^
 ||paulinch.co.uk^
@@ -28106,6 +28367,7 @@ show.ssports.com
 ||pay-dun.co.cc^
 ||pay.season.net.daraz.com^
 ||payagophl.today^
+||paybill.com.cn^
 ||payclick.it^
 ||paydaybcb.com^
 ||paydayloanrgh.com^
@@ -28125,6 +28387,7 @@ show.ssports.com
 ||paypal-virifiication.herokuapp.com^
 ||paypal.com-cgi-bin-webscrcmd-login-submitdispatch-8254d60a2.hit.to^
 ||paypal.com.auto-redirect.myapps.web-account.recovery-email.security.wholeimport.com^
+||paypal.com.support21.duckdns.org^
 ||paypal6.webcindario.com^
 ||paypalcasinobonuses.co.uk^
 ||paypalcenter.com^
@@ -28132,6 +28395,7 @@ show.ssports.com
 ||paypalgifft-card.gitlab.io^
 ||paypalplusmx.herokuapp.com^
 ||paypalsupportg.webcindario.com^
+||payrisk-tmx.didiglobal.com^
 ||payroll.mywire.org^
 ||payrymaya.com^
 ||payutech.pro^
@@ -28382,6 +28646,7 @@ show.ssports.com
 ||phoenixshare.com^
 ||phonecallapi.micloud.xiaomi.net^
 ||phonemesh.org^
+||phones4you.be^
 ||phongthuyviet.com.vn^
 ||phonsmidgen.qpon^
 ||photo-ads.co.uk^
@@ -28499,6 +28764,7 @@ show.ssports.com
 ||pixel-pop.nl^
 ||pixel.4pcdn.de^
 ||pixel.4players.de^
+||pixel.autoads.asia^
 ||pixel.crosspixel.net^
 ||pixel.globo.com^
 ||pixel.hangikredi.com^
@@ -28752,6 +29018,7 @@ show.ssports.com
 ||pmsgrj.weebly.com^
 ||pmsports.de^
 ||pmweb.com.br^
+||pn-majalengka.go.id^
 ||pn1927.coutts.com^
 ||pn4tb.rdtk.io^
 ||pncnationalbank.tt.omtrdc.net^
@@ -28834,6 +29101,7 @@ show.ssports.com
 ||pomagamy.xip.pl^
 ||pomnik.rzeszow.net^
 ||pomoc.chiccams.com^
+||pompeiicokes.qpon^
 ||pomprecognition.com^
 ||pond5x.fr0gtime.ru^
 ||pondstunnel.co.cc^
@@ -28912,6 +29180,7 @@ show.ssports.com
 ||position.dftoutiao.com^
 ||positiveoutcomes.ie^
 ||possessdolejest.com^
+||possessor-golden.co.cc^
 ||possibilities.net.pk^
 ||possumcottage.com^
 ||post.update.adsrvr.org^
@@ -28982,6 +29251,7 @@ show.ssports.com
 ||pproxy.com^
 ||pptqdarussalamkra.com^
 ||ppv-live.com^
+||ppvabs.pplive.com^
 ||ppwhs20.camsplanetlive.com^
 ||ppyibei.com^
 ||pq.typablehoist.qpon^
@@ -29251,6 +29521,7 @@ show.ssports.com
 ||proqei.xyz^
 ||proresupdate.com^
 ||prosciuttiamo.it^
+||prosishcoining.cfd^
 ||prosistech.net^
 ||prosperity-load-page-8794545.web.app^
 ||prosthodontist.co.za^
@@ -29408,6 +29679,7 @@ show.ssports.com
 ||psssaraki.openapp.link^
 ||pst-oil.com^
 ||psychicreading.today^
+||psycholog-online.org^
 ||psychritin.umlaudepas.com^
 ||pszsri.com^
 ||pt-banten.go.id^
@@ -29625,6 +29897,7 @@ show.ssports.com
 ||pured.eu^
 ||purehavens.com^
 ||puremotifservicefr.firebaseapp.com^
+||purerat32.duckdns.org^
 ||pureresults.go2cloud.org^
 ||purething.pl^
 ||purevideo.com^*/pvshim.gif?
@@ -29658,6 +29931,7 @@ show.ssports.com
 ||pvdbkr.com^
 ||pvf.in^
 ||pvnapp.zol.com.cn^
+||pvniketan.in^
 ||pvpok.com^
 ||pvprojekt.pl^
 ||pvqdzllmgjlk.in^
@@ -29793,6 +30067,7 @@ show.ssports.com
 ||qqmhg.drinkag1.com^
 ||qqperfect.com^
 ||qrapp-dce00.firebaseapp.com^
+||qrfladd.cn^
 ||qrgzm.topnutritionandfitness.com^
 ||qrlpo.davines.com^
 ||qrm.kjukenhi.in^
@@ -29891,6 +30166,7 @@ show.ssports.com
 ||quotetitan.com^
 ||quppy.com^
 ||qurm.xyz^
+||qusar.duckdns.org^
 ||quwex.com^
 ||quxhhrl3ncy4j5cvusni.maherstcottage.com.au^
 ||quyaoya.com^$third-party
@@ -29916,6 +30192,7 @@ show.ssports.com
 ||qzgs99.cn^
 ||qzjxcy.com^
 ||qzmqo7ndiytywhi-p.adkoffer.fr^
+||qznj1mrqk4vwxzpx9jqy62p.rest^
 ||qzwktr.nazology.net^
 ||r-watch.gpatpa.com^
 ||r.chip.de^
@@ -30036,6 +30313,7 @@ show.ssports.com
 ||raylsrewards.com^
 ||raymondelectronics.com^
 ||raypotosno.ru^
+||razegimbal.help^
 ||razor.arnes.si^
 ||razor.sf.net^
 ||rba.axis.bank.in^
@@ -30099,6 +30377,7 @@ show.ssports.com
 ||realtorraeanne.com^
 ||realtracker.com^$third-party
 ||reariimime.com^
+||rearisemump.cyou^
 ||reasoningfashionbrood.com^
 ||rebecca24.hookupdating33.com^
 ||rebogear.co.uk^
@@ -30140,6 +30419,7 @@ show.ssports.com
 ||redggjhvgh.firebaseapp.com^
 ||redheronllc.com^
 ||redhouserh.com^
+||redi-uhd-1.duckdns.org^
 ||redir.hightid.xyz^
 ||redirect-analytics.toast.com^
 ||redirect.advconversion.com^
@@ -30236,9 +30516,11 @@ show.ssports.com
 ||rejennaration.org^
 ||reklamaster.com^
 ||reklamcsere.hu^
+||reklamstore.cubecdn.net^
 ||rel-s.com^
 ||rel-s.com^$document
 ||relaax.co.cc^
+||relaismoto.com^
 ||relatedgrouptest.com^
 ||relationship.com^
 ||relationshipspotted.com^
@@ -30253,6 +30535,7 @@ show.ssports.com
 ||rem0925.duckdns.org^
 ||remaxnd.com^
 ||remaxplus.co.il^
+||remcosf2025.duckdns.org^
 ||remdefrem.duckdns.org^
 ||remede-1dc91.web.app^
 ||remindalka.info^
@@ -30489,6 +30772,7 @@ show.ssports.com
 ||riemprackw.pro^
 ||riet.in^
 ||rifaraofficial.com^
+||righi.linkpc.net^
 ||rightaction.net^
 ||rightone.ie^
 ||rightpiece.pro^
@@ -30625,6 +30909,7 @@ show.ssports.com
 ||roleski.pl^
 ||rolexgold.co.cc^
 ||rolexlove.co.cc^
+||rolexmenwatchescopy.cn^
 ||rolexuk.net^
 ||rolexvip.shop^
 ||rollc.com.qa^
@@ -31109,6 +31394,7 @@ show.ssports.com
 ||sandc-group.com^
 ||sandeeptripathi.com^
 ||sandiego4d.net^
+||sandiegoparatodos.duckdns.org^
 ||sandiegoperformanceacademy.com^
 ||sandokan66.no-ip.info^
 ||sandoval501.org^
@@ -31404,6 +31690,7 @@ show.ssports.com
 ||secure.liod1ours.com^
 ||secure.loki8lave.com^
 ||secure.mass1soma.com^
+||secure.mobile.contentabc.com^
 ||secure.n-document.biz^
 ||secure.norm0care.com^
 ||secure.seat6worn.com^
@@ -31499,6 +31786,7 @@ show.ssports.com
 ||sellthatshitnow.com^
 ||sellyourcell.in^
 ||sellyourgroup.com^
+||selmaadultschool.com^
 ||selmordita.club^
 ||semanticidentity.com^
 ||semgu.kz^
@@ -31702,6 +31990,7 @@ show.ssports.com
 ||sewin.net^
 ||sex-coach.com^
 ||sex-contact.com^
+||sexapil.fr.st^
 ||sexe-total.fr.st^
 ||sexemulator.com^$popup
 ||sexgratos.biz^
@@ -31729,6 +32018,7 @@ show.ssports.com
 ||sfiafarms.com^
 ||sfngya.centrecom.com.au^
 ||sfr.inq.com^
+||sfrmail.iceiy.com^
 ||sfsy-sevastopol.ru^
 ||sg-open-set-api.shenshiads.com^
 ||sg123.net^
@@ -31787,6 +32077,7 @@ show.ssports.com
 ||sh2grsc5.myutilitysite.com^
 ||shacklesburst.tumblr.com^
 ||shadetreejoe.com^
+||shagarat.com^
 ||shahabuddinandbros.com^
 ||shahu66.com^
 ||shakti-shop.ru^
@@ -31884,6 +32175,7 @@ show.ssports.com
 ||shofukai.web.fc2.com^
 ||shop-dev.chiccams.com^
 ||shop-sis.com^
+||shop.am-display.hb.adx1.com^
 ||shop.am-native.hb.adx1.com^
 ||shop.cocosebas.nl^
 ||shop.jv-imports.at^
@@ -31891,6 +32183,7 @@ show.ssports.com
 ||shop.sky-tech.com.tw^
 ||shop265.com^
 ||shop3z.blogspot.com^
+||shopaccvip.vn^
 ||shopbacgau.com^
 ||shopbaite.ru^
 ||shopclues.moengage.com^
@@ -32105,6 +32398,7 @@ show.ssports.com
 ||skillaccess.info^
 ||skillblip.com^
 ||skin-care.1.p2l.info^
+||skincare.faiyazshop.com^
 ||skinjars.com^
 ||skinshub.net^
 ||skinworld.com.ph^
@@ -32171,6 +32465,7 @@ show.ssports.com
 ||slimxxxtubewis.ddns.name^
 ||slimxxxtubeyge.ddns.name^
 ||slimxxxtubeyza.ddns.name^
+||slimy.duckdns.org^
 ||sloaneandhyde.com^
 ||slobendorsement.com^
 ||sloeri.com^
@@ -32403,6 +32698,7 @@ show.ssports.com
 ||smetrics.papagoparkcenter.com^
 ||smetrics.paxlovid.com^
 ||smetrics.pbteen.ca^
+||smetrics.pembridge.com^
 ||smetrics.pensionstallet.dk^
 ||smetrics.pfizer.nl^
 ||smetrics.phesgo.com^
@@ -32532,6 +32828,7 @@ show.ssports.com
 ||sms.notice.metrobyt-mobile.com^
 ||sms.rtcdpsummitlab.test.ajo.adobe.com^
 ||sms.uphabit.com^
+||smsmirleft.com^
 ||smsphoneorangeboxmail.ukit.me^
 ||smtp-apple.com^
 ||smtp2.h24.news^
@@ -32579,6 +32876,7 @@ show.ssports.com
 ||so.blue.ch^
 ||so.com^*baike/ads?
 ||sobamen.com^
+||sobraltec.com^
 ||sobrenaturalbr.net^
 ||socavempel.com^
 ||soccerinferno.com^
@@ -32601,6 +32899,7 @@ show.ssports.com
 ||socialtrack.net^
 ||socialvibe.com^$third-party
 ||socketio.taplytics.com^
+||sockets.duckdns.org^
 ||soclifez.xyz^
 ||socscp.sakura.ne.jp^
 ||sodiumonline.com^
@@ -32619,6 +32918,7 @@ show.ssports.com
 ||softstart.kugou.com^
 ||softstat.kugou.com^
 ||softstone.digital^
+||softtorrent.ru^
 ||softtube.cn^
 ||softwaredefinedcdn.com^
 ||softwaredefinedcdn.org^
@@ -32753,6 +33053,7 @@ show.ssports.com
 ||sousefulhead.com^$popup
 ||southernco.demdex.net^
 ||southewest.com^
+||southmoon.net^
 ||southmoonunder.evyy.net^
 ||southpole.xyz^
 ||southreach.net^
@@ -33082,6 +33383,7 @@ show.ssports.com
 ||sslcdn.adstudiomobile.com^
 ||ssllinks.duckdns.org^
 ||ssmxdtzbskhto.space^
+||ssniper.duckdns.org^
 ||sso-ledgr-livelog-tool.pages.dev^
 ||sso-login.com^
 ||ssobiglobenejp.weebly.com^
@@ -33132,6 +33434,7 @@ show.ssports.com
 ||sst.roardigitalmarketing.co.uk^
 ||sst.snocks.com^
 ||sst.thevseat.com^
+||sst.trendykart.live^
 ||sstat.gilt.com^
 ||sstats.hostplus.com.au^
 ||sstats.iata.org^
@@ -33148,6 +33451,7 @@ show.ssports.com
 ||ssts.pigandolive.co.uk^
 ||st-au.ants.vn^
 ||st-leo.com^
+||st-n.ads1-adnow.com^
 ||st-reklama.ru^
 ||st.acstnst.com^
 ||st.adxxx.com^
@@ -33166,6 +33470,7 @@ show.ssports.com
 ||stablinkcapital.com^
 ||staboxit.narod.ru^
 ||stachadwokat.pl^
+||stacjazgierz.pl^
 ||stack-exchange-dynamic-ads.herokuapp.com^
 ||stackhive.shop^
 ||stage-legacy-stagingpt.net.daraz.com^
@@ -33230,6 +33535,7 @@ show.ssports.com
 ||stape.dmove.com.br^
 ||stape.doutorherniaconsultas.com.br^
 ||stape.editorarotas.com.br^
+||stape.embaleme.com.br^
 ||stape.emcompre.com.br^
 ||stape.exame.com^
 ||stape.gasolinespeedshop.com.br^
@@ -33342,6 +33648,7 @@ show.ssports.com
 ||static.massmediaent.in^
 ||static.mediacpc.com^
 ||static.mediav.com^
+||static.netadclick.com^
 ||static.outbrain.com^
 ||static.outpush.net^
 ||static.paddlewaver.com^
@@ -33621,6 +33928,7 @@ show.ssports.com
 ||ststradingltd.com^
 ||stt.bupa.com.au^
 ||sttimothyschurch.org^
+||student.thesamany.tom.ru^
 ||students.benchmarksixsigma.com^
 ||studio.easy-cicle.pt^
 ||studiocustomers.com^$popup
@@ -33683,12 +33991,15 @@ show.ssports.com
 ||sukiatry.com^
 ||sukuul.com^
 ||sultanmetal.com^
+||sulumanco.duckdns.org^
 ||sumangex-app.pro^
 ||sumbar.kpu.go.id^
 ||sumit.se^
 ||sumitracomputers.com^
 ||sumitrans.co^
+||summa.com.hk^
 ||summeexege.pro^
+||summersanders.net^
 ||sumsunmotor.com^
 ||sunandsand.minnesotacowboy.com^
 ||sunbeltfireinc-my.sharepoint.com^
@@ -33698,6 +34009,7 @@ show.ssports.com
 ||sunerowe.co.za^
 ||sunflagsteel.com^
 ||sunglassesexpensive.com^
+||sunil.duckdns.org^
 ||suning.cn^$domain=qianggou5.com
 ||sunjay77-bit.github.io^
 ||sunketrubatos.rest^
@@ -33851,6 +34163,7 @@ show.ssports.com
 ||sw88.espnplayer.com^
 ||swa.bol.com^
 ||swa.snsbank.nl^
+||swagg.duckdns.org^
 ||swaggger2walk.info^
 ||swagsupr.zzz.com.ua^
 ||swap-10x-asixer.net^
@@ -34009,6 +34322,7 @@ show.ssports.com
 ||szudc.ru^
 ||t-ads.adap.tv^
 ||t-s.avastin-hcp.com^
+||t-shirtfactorysd.com^
 ||t-ulog.sg.kwaipros.com^
 ||t.antalis-verpackungen.de^
 ||t.antalis.de^
@@ -34254,6 +34568,7 @@ show.ssports.com
 ||tdbhgfghfcvhctb.w3spaces.com^
 ||tdc.d3.sc.omtrdc.net^
 ||tdefiban.web.app^
+||tdfhyfgtj.duckdns.org^
 ||tdfxapp.ru^
 ||tdhserg.cn^
 ||tdhyjfxltpj.pw^
@@ -34609,6 +34924,7 @@ show.ssports.com
 ||the-bitcointraderapp.com^
 ||the-bitsoft360-apps.com^
 ||the-brokerverdict.top^
+||the-ctrl-alt-del.com^
 ||the-lost-art.com^
 ||the-newsspy.org^
 ||the-petro-momentum-app.com^
@@ -35489,6 +35805,7 @@ show.ssports.com
 ||translatelavatory.com^
 ||transportationthou.com^
 ||transtrema.pro^
+||trantowconsulting.com^
 ||tranvui2425.blogspot.com^
 ||trasnaffol.pro^
 ||trasp3.xsrv.jp^
@@ -35588,6 +35905,7 @@ show.ssports.com
 ||triviasloots.com^
 ||trixford-fund.net^
 ||trixme.com^
+||trk-pcweb.api.zaloapp.com^
 ||trk.a-dsp.com^
 ||trk.aeroenginesusa.com^
 ||trk.affapp.io^
@@ -35675,6 +35993,7 @@ show.ssports.com
 ||trustedstreetviewpro.com^
 ||trustid.actonservice.com^
 ||trusting-produce.com^
+||trustlink.ru^
 ||trustseal.e-rasaneh.ir^
 ||trustweb.vercel.app^
 ||truthfinder-solution.com^
@@ -35968,6 +36287,7 @@ show.ssports.com
 ||ulglo.dienaturalsmedizin.de^
 ||ulishome.de^
 ||ulkfvwizkfbml.site^
+||ullaskyways.cyou^
 ||ulovo.ru^
 ||ultimate-brandy.com^
 ||ultimateunblock.com^
@@ -36091,6 +36411,7 @@ show.ssports.com
 ||unixbw.matchesfashion.com^
 ||unlamhanku.pro^
 ||unleash.livepix.gg^
+||unlimx.duckdns.org^
 ||unlitui.com^
 ||unlockdienthoai.zyrosite.com^
 ||unlocker.com^
@@ -36161,6 +36482,7 @@ show.ssports.com
 ||upnetver.nspace.pl^
 ||uporzu.prestashop.com^
 ||upoznavanje.net^
+||uppers.duckdns.org^
 ||upromise.com^
 ||uprsa.org^
 ||upsales.org^
@@ -36224,6 +36546,7 @@ show.ssports.com
 ||usa-proxy.org^
 ||usacanada.co.cc^
 ||usage.appmachine.com^
+||usahelplinenumbers.com^
 ||usaloe.com^
 ||usanews.viralgalleries.me^
 ||usapplepro.com^
@@ -36504,6 +36827,7 @@ show.ssports.com
 ||venradelosthimarix.cyou^
 ||vente-privee.com^
 ||ventilatii-industriale.ro^
+||ventlogos.com.br^
 ||venuesearch.in^
 ||veqvek.ctvnews.ca^
 ||veralispro-app.net^
@@ -37131,6 +37455,7 @@ show.ssports.com
 ||vkaaah.easypanel.host^
 ||vkinngworld.xhamsterlive.info^
 ||vkontakted.hop.ru^
+||vkorg.webservis.ru^
 ||vkp.su^
 ||vkprservice.com^
 ||vkrbl.faithgateway.com^
@@ -37290,6 +37615,7 @@ show.ssports.com
 ||vz01.boyfriend.show^
 ||vzadache.ru^
 ||vzarabotke.ru^
+||w-a.info^
 ||w-api.baomoi.com^
 ||w.m.taobao.com^
 ||w.nativery.com^
@@ -37481,6 +37807,7 @@ show.ssports.com
 ||webcodez.com^
 ||webconnect.net^
 ||webconomy01.webtrekk.net^
+||webcontr.in-akustik.de^
 ||webcontr.parax.de^
 ||webcontr.sienagarden.de^
 ||webcontr.verpoorten-shop.de^
@@ -37524,6 +37851,7 @@ show.ssports.com
 ||weboyal.com^
 ||webpagetest.net^
 ||webpinp.com^
+||webproxy.ich-war-hier.de^
 ||webpush.jp^$third-party
 ||webradiantreport.com^
 ||webroot-safe.com^
@@ -37549,6 +37877,7 @@ show.ssports.com
 ||websitehome.co.uk^
 ||websiteopener.com^
 ||websiteproxy.com^
+||websites4contractors.net^
 ||websitessupport.com.au^
 ||websmnsoru.ulcraft.com^
 ||websnail.gb.net^
@@ -38037,6 +38366,7 @@ show.ssports.com
 ||www.0ba.com^
 ||www.0tzg4irsuabvucpvw937.maherstcottage.com.au^
 ||www.1001moviescinema.blogspot.com^
+||www.100dollardoughnut.com^
 ||www.100freeteenseries.com^
 ||www.101lottery.com^
 ||www.101sexmovies.com^
@@ -38194,7 +38524,9 @@ show.ssports.com
 ||www.591yj.cn^
 ||www.5fthire.com^
 ||www.5i-training.net^
+||www.5ips.net^
 ||www.6-kontakt.com^
+||www.602sqdn.rtaf.mi.th^
 ||www.6080aa.com^
 ||www.643av.com^
 ||www.65909.com^
@@ -38246,6 +38578,7 @@ show.ssports.com
 ||www.abatcbdng.com^
 ||www.abcintl.fr^
 ||www.abcsubmit.com^
+||www.abdobaik.duckdns.org^
 ||www.abgreece.ru^
 ||www.abkoo.nl^
 ||www.ableprintingco.com^
@@ -38521,6 +38854,7 @@ show.ssports.com
 ||www.amazon-lantern.com^
 ||www.amazon-pal.com^
 ||www.amazon-rescue.com^
+||www.amazon-sell.com^
 ||www.amazon-ssl.com^
 ||www.amazongiftcardgenerator.org^
 ||www.amazongiveawayalerts.com^
@@ -38573,6 +38907,7 @@ show.ssports.com
 ||www.annelizeheyns.co.za^
 ||www.anners.ero-advertising.com^
 ||www.annieshardware.com^
+||www.annmcclean.co.uk^
 ||www.anntivir.de^
 ||www.annuitybroker.ca^
 ||www.anojan.com^
@@ -38604,6 +38939,7 @@ show.ssports.com
 ||www.aolphonesupport.wordpress.com^
 ||www.aolsupportusa.blogspot.com^
 ||www.aoukj.com^
+||www.ap-souz.com.ua^
 ||www.aparthotelmontreal.com^
 ||www.apedtg.org^
 ||www.apekola.tcp4.me^
@@ -38659,6 +38995,7 @@ show.ssports.com
 ||www.appsproplus.fr^
 ||www.aprendiendoencasa.com^
 ||www.apsoluta.com^
+||www.apssamba.co.in^
 ||www.apsupport.net^
 ||www.aptgetgxqs3secda.onion.ly^
 ||www.aptotechnologies.co.uk^
@@ -38925,6 +39262,7 @@ show.ssports.com
 ||www.bemao.com^
 ||www.bendemeertouristpark.com.au^
 ||www.benekengineering.com^
+||www.beneli.be^
 ||www.benjaminstrahs.com^
 ||www.benshaw.co.za^
 ||www.berbagi4pp.blogspot.com^
@@ -38945,6 +39283,7 @@ show.ssports.com
 ||www.besthotelsin.net^
 ||www.bestlikes.ru^
 ||www.bestmarkets.shop^
+||www.bestpenssales.com^
 ||www.bestsailcharters.com^
 ||www.bestsearchonweb.com^
 ||www.bestvod.pl^
@@ -39005,6 +39344,7 @@ show.ssports.com
 ||www.bitdefenderantivirusphonenumber.blogspot.com^
 ||www.bitlocker.net^
 ||www.bittech.co^
+||www.bitupont.hu^
 ||www.bizenergysavings.com^
 ||www.bizkart.com^
 ||www.bizzclick.com^
@@ -39160,6 +39500,7 @@ show.ssports.com
 ||www.buyfollowersbysms.com^
 ||www.buyindiaproperty.com^
 ||www.buyinstagramfollowers.co^
+||www.buysell-technologies.tech^
 ||www.buytraf.ru^
 ||www.buzzmuse.com^
 ||www.buzzoid.org^
@@ -39185,6 +39526,7 @@ show.ssports.com
 ||www.camed.duckdns.org^
 ||www.camereilcantico.it^
 ||www.camion.idps.co.uk^
+||www.camperakarting.com^
 ||www.camteen.com^
 ||www.can-style.ru^
 ||www.canadagooseluxury.freevar.com^
@@ -39339,6 +39681,7 @@ show.ssports.com
 ||www.chrysalis.org.au^
 ||www.chs.gr^
 ||www.chsn.edu.bd^
+||www.chucksboy.duckdns.org^
 ||www.chukwd.duckdns.org^
 ||www.churchofvirus.org^
 ||www.chuutmrio.weebly.com^
@@ -39437,11 +39780,13 @@ show.ssports.com
 ||www.communication4u.de^
 ||www.communitynext.com^
 ||www.company-innovative.com^
+||www.compatiblescom.duckdns.org^
 ||www.comprafactores.com^
 ||www.comprarhoje.com^
 ||www.compu-help.com^
 ||www.computer-hulp.com^
 ||www.computer-user.com^
+||www.computerocasion.es^
 ||www.computersupportcentre.com^
 ||www.computersupportforme.com^
 ||www.computhai.com^
@@ -39479,6 +39824,7 @@ show.ssports.com
 ||www.cooempresas3.duckdns.org^
 ||www.coolingtowers.in^
 ||www.coolmovies.asia^
+||www.coopcoyutla.org.mx^
 ||www.copyingsystem.com^
 ||www.coralprintpack.com^
 ||www.corbelsep.com^
@@ -39523,6 +39869,7 @@ show.ssports.com
 ||www.crediblehire.com^
 ||www.creekviewdentalgroup.com^
 ||www.creestahl.org^
+||www.crepohacker.duckdns.org^
 ||www.cricfree.stream^
 ||www.cridosantos.com.br^
 ||www.criticalchat.com^
@@ -39593,6 +39940,7 @@ show.ssports.com
 ||www.czypdf.com^
 ||www.czyzbg.com^
 ||www.d-riskalert.com^
+||www.d-warehouse.tw^
 ||www.d2o.cn^
 ||www.d55468e6bf8b.yolasite.com^
 ||www.dabscarrental.com^
@@ -39629,6 +39977,7 @@ show.ssports.com
 ||www.datarecoverybengaluru.com^
 ||www.date-herenow6.com^
 ||www.datethatgirls.com^
+||www.datinglife23.com^
 ||www.davejohnsonproductions.com^
 ||www.davidcandy.website.pl^
 ||www.dawgpoundinc.com^
@@ -39658,6 +40007,7 @@ show.ssports.com
 ||www.decoparque.com^
 ||www.decowelder.by^
 ||www.dedicatedfire.com.au^
+||www.deephome.net^
 ||www.deepshow.net^
 ||www.deepslow.net^
 ||www.deepwater.eu^
@@ -39842,6 +40192,7 @@ show.ssports.com
 ||www.duckdns6.duckdns.org^
 ||www.duetravel.com^
 ||www.duffeyconst.com^
+||www.duinearme.com^
 ||www.dulynoted.co.uk^
 ||www.dumedia.ru^
 ||www.dumpsseller.com^
@@ -39903,6 +40254,7 @@ show.ssports.com
 ||www.efficiency-textcube.blogspot.com^
 ||www.efg-ober-ramstadt.de^
 ||www.egan.com.my^
+||www.egiasac.com^
 ||www.egonbute.duckdns.org^
 ||www.ehbolandgraaf.nl^
 ||www.eherpro.tumblr.com^
@@ -39950,6 +40302,7 @@ show.ssports.com
 ||www.embajadadechile.org^
 ||www.embaline.com^
 ||www.embedor.com^
+||www.embreara.com.br^
 ||www.emer.org^
 ||www.emeralduae.com^
 ||www.emilyhotel.gr^
@@ -39993,6 +40346,7 @@ show.ssports.com
 ||www.eriishii.com^
 ||www.ermekanik.com^
 ||www.ernest-press.co.uk^
+||www.erpsoft.pk^
 ||www.error.email^
 ||www.errorrecords.com^
 ||www.errortell-movie.com^
@@ -40057,6 +40411,7 @@ show.ssports.com
 ||www.euro-finanz-service.de^
 ||www.euro-kwiat.pl^
 ||www.eurofurniturestore.shop^
+||www.europadns01.duckdns.org^
 ||www.europeantransfer.com^
 ||www.eurosport2hd.blogspot.com^
 ||www.eurroexport.com^
@@ -40075,6 +40430,7 @@ show.ssports.com
 ||www.everydayhomecarellc.com^
 ||www.everyscape.com^
 ||www.evi-med.com.pl^
+||www.evonyonline.com^
 ||www.evro-sad.ru^
 ||www.exago.in^
 ||www.exagonch.com^
@@ -40249,6 +40605,7 @@ show.ssports.com
 ||www.first5minutes.com.au^
 ||www.firstalertsecuritysvs.net^
 ||www.firstbookmark.com^
+||www.firstdobrasil.com.br^
 ||www.fisiobianchini.com.br^
 ||www.fitflopsandal.webstarts.com^
 ||www.fix-my-mac.ru^
@@ -40266,6 +40623,7 @@ show.ssports.com
 ||www.flashgamelicense.com^
 ||www.flashplayer.begin.pro^
 ||www.flashpointfire.co.uk^
+||www.flautopartes.com^
 ||www.fleshlight.com^
 ||www.flexiblephysio.com^
 ||www.flirtmax.net^
@@ -40387,6 +40745,7 @@ show.ssports.com
 ||www.gacetajudicial.com.do^
 ||www.gadeassociates.co.ke^
 ||www.gadiva.com.au^
+||www.gaev.com.ar^
 ||www.gagreport.com^
 ||www.gakk.no^
 ||www.galesalsur.com.ar^
@@ -40852,8 +41211,12 @@ show.ssports.com
 ||www.https.secure.bank-of-america.login.sign.fpvmyrshpy.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.hbnsdnziwz.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.hjmwnbdonr.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.igyzgsqsql.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.jbngyixdzn.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.jdjnwtzzso.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.jyjhcqaypr.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.jykljgjhpg.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.klogksvcwn.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.kyewhddiav.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.kyjrhnaknw.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.kyluingauq.underpains.duckdns.org^
@@ -40863,6 +41226,7 @@ show.ssports.com
 ||www.https.secure.bank-of-america.login.sign.pvkhjorgxp.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.qzpvneownu.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.seqsshgwkv.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.sliuqgmmey.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.tlimerhbga.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.uznxemgqjw.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.vjdbhbbbxw.underpains.duckdns.org^
@@ -40870,15 +41234,18 @@ show.ssports.com
 ||www.https.secure.bank-of-america.login.sign.wxzmtljlbh.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.xbsyioqsan.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.xisrcxiybn.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.yqrlplbugd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.acsflpcijj.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.aidmkgfeyt.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.aoksgeizma.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.bbtlaqwfwd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.bcosyrpbjl.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.begieoqsdz.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.bfwkbxcpwu.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.bgscocrrws.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.bqcambeamk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.buydnylimb.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.bwusjutfux.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.cbdeqzuvxq.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ccitjhcxpp.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ccnutqhvgt.underpains.duckdns.org^
@@ -40887,6 +41254,8 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.csfrdvdpvm.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ctdpeotioh.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ddunpbedza.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ddvfqzeqbv.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.dxrbdqpvif.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.edmrmodegf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.edzartcpln.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ekmqlxzfml.underpains.duckdns.org^
@@ -40900,9 +41269,11 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.fynvlytvqc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gaeqtsokmf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gdzkncnuay.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ggdwtdtppf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gimiiwswyk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gojuvdljll.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gsssgoggnv.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.hnaudksiho.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.hrrsvayxbu.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.iabvehccxu.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.igenenothu.underpains.duckdns.org^
@@ -40917,6 +41288,7 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.jlwuemgwfw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jobkshkpcg.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jpizyxgclr.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.jqpamveypw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jsdajzewrz.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jsdxthjdkk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.kbaynnqexp.underpains.duckdns.org^
@@ -40927,6 +41299,7 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.kwatpmprcb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.leewugldml.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.lfylrxclhg.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.lolumzbmid.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.mauoycxfmi.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.mqlulmltnd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.mzjvgxygof.underpains.duckdns.org^
@@ -40937,9 +41310,12 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.npmnpimima.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nqlkjinqwn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nrakyioxkw.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.nrsdetpdid.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nuiftfhgea.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.nuwburgxmc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.odkhpuywed.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.oeubdgywaf.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.oicduumolq.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.oklgkoryhw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.okyfjxxtoe.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ouswqmnfjb.underpains.duckdns.org^
@@ -40963,8 +41339,10 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.sjtdktpamw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.sldsklpqts.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.sqgveizwby.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.sswpgrlbxs.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.swrrjyantf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.sxdenjxeuh.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.sxrchsaick.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.szvjckuqtl.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.tdsfdpigyn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.tgcsierqpv.underpains.duckdns.org^
@@ -40972,6 +41350,7 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.tlqbndygon.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ttwodwmrvb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.tyiyhsyuet.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.tzeujvsupb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.uaernccsho.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ucvghpyufp.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ucwretwlkz.underpains.duckdns.org^
@@ -40990,10 +41369,12 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.vrxcjirryf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.whfbvumvlw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.whmofsrguw.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.wmsblcbkaj.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.wnvnciajzp.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.woflwyfnpu.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.wqobxxwwlc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.wrqvhanjss.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.wvqzetkgam.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xabxlgldha.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xamqvfzgij.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xebtggkrsv.underpains.duckdns.org^
@@ -41003,6 +41384,7 @@ show.ssports.com
 ||www.https.secure.bankofamerica.login.sign.ywxicsqytm.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.yxqcurmzao.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.yyxrtvewsc.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.zjvehervoz.underpains.duckdns.org^
 ||www.hu.rarecams.com^
 ||www.huarcaya.com.pe^
 ||www.huas.net^
@@ -41104,6 +41486,7 @@ show.ssports.com
 ||www.illusivemedia.com^
 ||www.illyance.com^
 ||www.ilmetal.com^
+||www.ilovehits.com^
 ||www.iloveyourglasses.com^
 ||www.ilyanekra.narod.ru^
 ||www.imagesdownloader.com^
@@ -41190,6 +41573,7 @@ show.ssports.com
 ||www.integraga.com^
 ||www.integratedoilandgas.com^
 ||www.intellisuggest.com^
+||www.intendiagroup.com^
 ||www.interactinc.duckdns.org^
 ||www.intercoop.it^
 ||www.interiordream.pl^
@@ -41224,6 +41608,7 @@ show.ssports.com
 ||www.ipwhrtmla.epac.to^
 ||www.iquest-consultants.com^
 ||www.iquiqueonline.cl^
+||www.iranpuyesh.ir^
 ||www.iranykhodro.ir^
 ||www.ireh.kr^
 ||www.irfan-likerz.fav.cc^
@@ -41390,6 +41775,7 @@ show.ssports.com
 ||www.juhger.com^
 ||www.juicewebhosting.com^
 ||www.jukeboxalive.com^
+||www.julianphotostudio.net^
 ||www.julio2018.duckdns.org^
 ||www.junbenda.com.cn^
 ||www.juncal.cl^
@@ -41407,6 +41793,7 @@ show.ssports.com
 ||www.jxliulang.com.cn^
 ||www.jylyswkj.com^
 ||www.k-k.co.il^
+||www.kaashifchoudhury.com^
 ||www.kabbyshome.square7.ch^
 ||www.kacperpajor.pl^
 ||www.kadooglu.com^
@@ -41519,6 +41906,7 @@ show.ssports.com
 ||www.kocaogluplastik.com^
 ||www.kodaly.hu^
 ||www.koitshirts.com^
+||www.kokkrabuang.go.th^
 ||www.kokosik.com^
 ||www.kokstweewielers.nl^
 ||www.kolorfacebooka24.blogspot.com^
@@ -41624,6 +42012,7 @@ show.ssports.com
 ||www.lenderssupportonline.com^
 ||www.lenegoce.com^
 ||www.lente.ph^
+||www.leobeth.info^
 ||www.leocamerini.com^
 ||www.leolasfargue.tonsite.biz^
 ||www.lericettedifrancy74.com^
@@ -41752,6 +42141,7 @@ show.ssports.com
 ||www.louterfoto.nl^
 ||www.love104.com^
 ||www.loveintercastmarriage.blogspot.ru^
+||www.lovelyplanet.ph^
 ||www.lovemarriageorwazifa.wordpress.com^
 ||www.lovemarriagespecialistpandit.wordpress.com^
 ||www.loveproblemsolutionspecialist.blogspot.com^
@@ -41875,6 +42265,7 @@ show.ssports.com
 ||www.mamalilly.dk^
 ||www.mamay.ru^
 ||www.mamuciadolina.pl^
+||www.manakamanatours.com^
 ||www.mandiralahiri.com^
 ||www.manglammilk.com^
 ||www.manicomio.org^
@@ -41920,6 +42311,7 @@ show.ssports.com
 ||www.mawaridegroup.com^
 ||www.maxdealer.com^
 ||www.maxeye.in^
+||www.mbcc.edu.jm^
 ||www.mbmauto.net^
 ||www.mc-sermis.ru^
 ||www.mcafeehelpnumbercouk.wordpress.com^
@@ -41965,6 +42357,7 @@ show.ssports.com
 ||www.melowoodworking.com^
 ||www.melter.com.mx^
 ||www.memedicine.com^
+||www.menaxe.duckdns.org^
 ||www.mendozagolf.com^
 ||www.menuboards.com.au^
 ||www.mepex.in^
@@ -42001,6 +42394,7 @@ show.ssports.com
 ||www.microsoftemailsupport.com^
 ||www.microsoftofficekeygen.wordpress.com^
 ||www.microsoftofficesupport.org^
+||www.microsoftonline-us.com^
 ||www.microsoftoutlook.ddns.info^
 ||www.microsoftpro.dns-report.com^
 ||www.microsoftprosupport.com^
@@ -42065,6 +42459,7 @@ show.ssports.com
 ||www.mlntracker.com^
 ||www.mmdfcfmltkexxwhpy.in^
 ||www.mmile.com^
+||www.mms07.com^
 ||www.mmtcdn.com^
 ||www.mnsdev.net^
 ||www.mobbahotel.fr^
@@ -42152,6 +42547,7 @@ show.ssports.com
 ||www.ms4096.synology.me^
 ||www.msales.com^
 ||www.msbill.info^
+||www.mselectric.tn^
 ||www.msguardio.com^
 ||www.msh-me.com^
 ||www.msmnet.de^
@@ -42160,6 +42556,7 @@ show.ssports.com
 ||www.mtaylordrywall.com^
 ||www.mtmade.de^
 ||www.mtscadcam.com^
+||www.mtt369.com^
 ||www.mugomeza.co.zw^
 ||www.multi-decor.pl^
 ||www.multiplefinance.co.uk^
@@ -42258,6 +42655,7 @@ show.ssports.com
 ||www.natureswaycafe.com^
 ||www.naturopoli.it^
 ||www.naukriupdates.com^
+||www.nautidiesel.cl^
 ||www.nautiluscopypatek.top^
 ||www.navatim.com^
 ||www.naventics.net^
@@ -42362,6 +42760,7 @@ show.ssports.com
 ||www.noblebank.in^
 ||www.noda-pc-support.com^
 ||www.nodepositcasinobonuses.net^
+||www.nofam.duckdns.org^
 ||www.nohastyleicon.com^
 ||www.noi.nu^
 ||www.nolaelectric.com^
@@ -42556,6 +42955,7 @@ show.ssports.com
 ||www.pacificimports.ca^
 ||www.pacificinvestmentsltd.com^
 ||www.pacificlogistics.net^
+||www.packaging-lpi.com^
 ||www.paconsults.com^
 ||www.padlock.link^
 ||www.padv.co.il^
@@ -42796,6 +43196,7 @@ show.ssports.com
 ||www.postergaleria.chh.pl^
 ||www.posthypis.narod.ru^
 ||www.postigo.com.br^
+||www.postnze.duckdns.org^
 ||www.postproperties.co.zw^
 ||www.posttwit.info^
 ||www.postventa-vodafone.duckdns.org^
@@ -42809,6 +43210,7 @@ show.ssports.com
 ||www.powerfulappz.com^
 ||www.powerfulvashikaranspecialist.com^
 ||www.powermediatabsearch.com^
+||www.powertone.duckdns.org^
 ||www.pozarni-revize.eu^
 ||www.pozitiv.ba^
 ||www.ppireclaimcompany.co.uk^
@@ -42896,6 +43298,7 @@ show.ssports.com
 ||www.protec2security.net^
 ||www.protecguvenlik.com.tr^
 ||www.protectie-electromagnetica.ro^
+||www.protection.sketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||www.protzmanlaw.com^
 ||www.proud.duckdns.org^
 ||www.proverica.com^
@@ -42968,6 +43371,7 @@ show.ssports.com
 ||www.quimicacarioca.com^
 ||www.quinnsparby.com^
 ||www.quizgroove.com^
+||www.qusi007.duckdns.org^
 ||www.qwddz.zzz.com.ua^
 ||www.qwjs.com^
 ||www.qyfwc.com^
@@ -42999,6 +43403,7 @@ show.ssports.com
 ||www.railtelcmpfoproject.com^
 ||www.rainbelize.com^
 ||www.rajdysamochodowe.pl^
+||www.rak.co.ke^
 ||www.rallylab.pl^
 ||www.ralphlaurenoutlet.nom.co^
 ||www.ramshero.com^
@@ -43018,6 +43423,7 @@ show.ssports.com
 ||www.ravensteel.com^
 ||www.raydoan.com^
 ||www.rayongfda.org^
+||www.rayriager.duckdns.org^
 ||www.razbigboy.duckdns.org^
 ||www.rbgym.com^
 ||www.rbrss.com^
@@ -43323,6 +43729,7 @@ show.ssports.com
 ||www.schemml.de^
 ||www.schneider-pirna.de^
 ||www.schoenburg.com^
+||www.school1.kor.kubannet.ru^
 ||www.schroeters.net^
 ||www.scifireservice.com^
 ||www.scilijas.com.ba^
@@ -43386,6 +43793,7 @@ show.ssports.com
 ||www.sellmyapples.com^
 ||www.sellsilverny.com^
 ||www.sembang.com^
+||www.semeandosaude.com.br^
 ||www.sensejasd.duckdns.org^
 ||www.sensetalk.net^
 ||www.sensisupport.com^
@@ -43483,6 +43891,7 @@ show.ssports.com
 ||www.showroom.orientalsketaepper.dk^
 ||www.showyourdeal.com^
 ||www.shoxde.com.de^
+||www.shridurgadevelopers.com^
 ||www.shriramnursingcollege.com^
 ||www.shugarts-lawn-garden.com^
 ||www.shughesphotography.com^
@@ -43541,6 +43950,7 @@ show.ssports.com
 ||www.sjz10zh.com^
 ||www.sjzonline.com^
 ||www.skg-service.com^
+||www.skincarehi.com^
 ||www.sklep-colway.pl^
 ||www.sklep.biotechnologie.pl^
 ||www.skotniczny.com.pl^
@@ -43577,6 +43987,7 @@ show.ssports.com
 ||www.smartsho.ir^
 ||www.smartsi.org^
 ||www.smartsupport.online^
+||www.smartsytes.com^
 ||www.smdr.narod.ru^
 ||www.smeare.com^
 ||www.smeetproperty.com^
@@ -43617,6 +44028,7 @@ show.ssports.com
 ||www.softclick.com.br^
 ||www.softer.info^
 ||www.softfile.3g.qq.com^
+||www.softfreeway.com^
 ||www.softtaxi.com.ua^
 ||www.softtube.cn^
 ||www.sogecoenergy.com^
@@ -43734,6 +44146,7 @@ show.ssports.com
 ||www.steamwalletgenrator.blogspot.in^
 ||www.stedelijk-interieur.com^
 ||www.steinhauser.hu^
+||www.stelazsietterem.hu^
 ||www.stellamarishospital.com^
 ||www.stephenspainting.com^
 ||www.stgnc.com^
@@ -43781,6 +44194,7 @@ show.ssports.com
 ||www.suchydesign.com^
 ||www.sucka.duckdns.org^
 ||www.sudicosd.com^
+||www.sudiptasekhar.com^
 ||www.suggestiontool.org^
 ||www.suicidepreventionportagecounty.org^
 ||www.suiqing.com^
@@ -43810,6 +44224,7 @@ show.ssports.com
 ||www.support-aol.com^
 ||www.support-group.info^
 ||www.support-it.tech^
+||www.support-orderhelp.com^
 ||www.support-router.com^
 ||www.support.international^
 ||www.support32.com^
@@ -43959,6 +44374,7 @@ show.ssports.com
 ||www.tekanova.com^
 ||www.tekka.it^
 ||www.telectronica.com.uy^
+||www.telenets.org^
 ||www.telusplanet.net^
 ||www.temporarydemocracies.com^
 ||www.ten-4.ch^
@@ -44017,6 +44433,7 @@ show.ssports.com
 ||www.thejewelrypouchstore.com^
 ||www.thejf9.000a.de^
 ||www.thejunglejournal.com^
+||www.thek9professional.com^
 ||www.thekingoftrades.co.uk^
 ||www.thekurtainkompany.co.uk^
 ||www.thelandrygroup.com^
@@ -44140,6 +44557,7 @@ show.ssports.com
 ||www.totrakto.com^
 ||www.tourismauthority.go.ke^
 ||www.towersbuild.sa.com^
+||www.towns.duckdns.org^
 ||www.townwatches.com^
 ||www.toxlim.com^
 ||www.toysfortheneedyandaid.org^
@@ -44160,6 +44578,7 @@ show.ssports.com
 ||www.trafa1.duckdns.org^
 ||www.traff1.com^
 ||www.traffic-update.com^
+||www.traffic4u.com^
 ||www.traffictraders.com^
 ||www.traidnt.net^
 ||www.trainer.today^
@@ -44175,6 +44594,7 @@ show.ssports.com
 ||www.traveldesignsbynyla.com^
 ||www.traverzetravel.com^
 ||www.travisfaulk.com^
+||www.travnicki.ba^
 ||www.trd888.com^
 ||www.treeloot.com^
 ||www.trendmicrotechsupportcanada.wordpress.com^
@@ -44214,6 +44634,7 @@ show.ssports.com
 ||www.tukarpaypal.com^
 ||www.tulsan.com.tr^
 ||www.tulsawebconnect.com^
+||www.tunngle-pc.ru^
 ||www.tunxi.com^
 ||www.tur.infocdu.ru^
 ||www.turipark.com^
@@ -44365,6 +44786,7 @@ show.ssports.com
 ||www.validcc.ws^
 ||www.validcheats.com^
 ||www.vallebienesraices.com^
+||www.valleexpress.com.br^
 ||www.valorenatura.com^
 ||www.valuebasedconsulting.com^
 ||www.valuehost.co.uk^
@@ -44456,6 +44878,7 @@ show.ssports.com
 ||www.violetta.brands.brandcollections.ru^
 ||www.vioni.ir^
 ||www.vipcomhost.com.br^
+||www.vipersindoing.duckdns.org^
 ||www.viral782.com^
 ||www.virtual-office.com.au^
 ||www.virusdetecting.com^
@@ -44485,8 +44908,10 @@ show.ssports.com
 ||www.vjsoft.net^
 ||www.vk-support.com^
 ||www.vk0ntakle1.webservis.ru^
+||www.vkcool.hop.ru^
 ||www.vkerorr.narod.ru^
 ||www.vkhit.bos.ru^
+||www.vkinspection.hop.ru^
 ||www.vkkv.hop.ru^
 ||www.vkont.bos.ru^
 ||www.vlc-download.com^
@@ -44621,6 +45046,7 @@ show.ssports.com
 ||www.whatsappporn.com^
 ||www.whatsappsenderpro.com^
 ||www.whatsappsmessages.com^
+||www.whatsapptips.com^
 ||www.wheatstate.us^
 ||www.wheelslane.com^
 ||www.wheretobuyat.sitew.fr^
@@ -44643,6 +45069,7 @@ show.ssports.com
 ||www.willowgroveschool.com^
 ||www.wimpsparanormal.com^
 ||www.winautoupdate.acmetoy.com^
+||www.winchouf.com^
 ||www.windefender.com^
 ||www.windfarmdevelopments.co.nz^
 ||www.windmillpointebrewing.com^
@@ -44668,6 +45095,7 @@ show.ssports.com
 ||www.winklevoss.org^
 ||www.wintuneuppro.com^
 ||www.winzipinstallprotector.com^
+||www.wisatabaharilamongan.com^
 ||www.wiscon-cn.com^
 ||www.wisecommunity.it^
 ||www.wisefellas.com^
@@ -45049,6 +45477,7 @@ show.ssports.com
 ||wxcfyy.com^
 ||wxgemeng.com^
 ||wxjflab.com^
+||wxlike.com^
 ||wxnxau.air-r.jp^
 ||wxshangjinhe.com^
 ||wxshyjsj.com^
@@ -45135,6 +45564,7 @@ show.ssports.com
 ||xhstfdnhkcgec.online^
 ||xhtgfx.deutschesee.de^
 ||xianbaoqu.com^
+||xianghua.org^
 ||xianxhwy.com^
 ||xiaoma-10021647.file.myqcloud.com^
 ||xiaozhen.com^
@@ -45439,6 +45869,7 @@ show.ssports.com
 ||yesadvertising.com^
 ||yescenter.com.ua^
 ||yesilmektep.com^
+||yesomctp.hjnes.com^
 ||yesproxy.com^
 ||yess.pl^
 ||yesup.com^
@@ -45823,6 +46254,7 @@ show.ssports.com
 ||zes4hbgwwe.neliver.com^
 ||zestyhorizon.com^
 ||zetainteractive.evergage.com^
+||zetalube.co.kr^
 ||zetyazilim.com^
 ||zeusclicks.com^
 ||zevents.com^
