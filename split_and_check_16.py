@@ -202,9 +202,9 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
         dc = int(dc)
         if dc >= 97:
             return 3  # 忽略
-        if dc <= 16:
+        if dc <= 32:
             return 0  # A
-        if dc <= 64:
+        if dc <= 79:
             return 1  # B
         if dc <= 96:
             return 2  # C
