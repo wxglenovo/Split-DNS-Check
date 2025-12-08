@@ -354,9 +354,9 @@ def split_parts(rules_to_validate, delete_counter, current_part=0):
         gcount = {0: 0, 1: 0, 2: 0, 3: 0}
         for r in rules:
             dc = int(delete_counter.get(r, 64))
-            if dc <= 16:
+            if dc <= 32:
                 g = 0
-            elif dc <= 64:
+            elif dc <= 79:
                 g = 1
             elif dc <= 96:
                 g = 2
