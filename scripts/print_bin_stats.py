@@ -71,6 +71,6 @@ flatten_counts(nw)
 print("\n📊 not_written_counter 读取统计:")
 if nw_counts:
     for k in sorted(nw_counts):
-        print(f"    ⚠ write_counter {k}/4 的规则条数: {nw_counts[k]}")
+        print(f"    ⚠ write_counter {k}/3 的规则条数: {nw_counts[k]}")
 else:
     print("    ℹ️ 当前没有 write_counter 记录")
