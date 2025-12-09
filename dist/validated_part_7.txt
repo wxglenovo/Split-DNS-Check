@@ -2,6 +2,7 @@
 /criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
 /googleads.$~script,domain=~googleads.github.io
 @@/adsystem/*$domain=adcenter.dhgate.com
+@@|app.crazyegg.com^|
 @@||ads.vk.com^$popup
 @@||app.adjust.com^
 @@||app.conceptboard.com^*/SocialIcons.js$xmlhttprequest
@@ -22,7 +23,6 @@ ipinyou.com
 |10xpergola.com^
 |121media.com^
 |121phonesex.co.uk^
-|123-vendasvoos25.lovestoblog.com^
 |1234068.shop^
 |1234090.shop^
 |189889.weebly.com^
@@ -50,6 +50,7 @@ ipinyou.com
 |4fn0.com^
 |4j.sl0bozh5treak.ru^
 |4o.p0larday.ru^
+|51ginkgo.com^
 |550a.com^
 |5h.rivershad0w.ru^
 |6093eccf-6734-4877-ac8b-83d6d0e27b46.edge.permutive.app^
@@ -105,8 +106,10 @@ ipinyou.com
 |acridtwist.com^
 |actiondesk.com^
 |actionflash.com^
+|ad-space.net^
 |ad.adc-serv.net^
 |ad.admitad.com^
+|ad.aspm.jp^
 |ad.beritasatumedia.com^
 |ad.br.doubleclick.net^
 |ad.cl.doubleclick.net^
@@ -522,7 +525,6 @@ ipinyou.com
 |bonintnewsktarcom.112.2o7.net^
 |booking.secrue-externet.com^
 |booking.updatenovember-id6375.com^
-|borsahedef.com^
 |bosecom.112.2o7.net^
 |botifiles.com^
 |boytpyhulo.digital^
@@ -626,7 +628,6 @@ ipinyou.com
 |cdn.adtradr.com^
 |cdn.advertserve.com^
 |cdn.augur.io^
-|cdn.autoads.asia^
 |cdn.bidmatrixdsp.com^
 |cdn.contineljs.com^
 |cdn.discoveryad.castoola.tv^
@@ -766,7 +767,6 @@ ipinyou.com
 |coxcommunications.sc.omtrdc.net^
 |cpc188.day^
 |cpc490.com^
-|cpm.novanet.vn^
 |cpoutlet-pl4.shop^
 |cpx.to^
 |crain.d1.sc.omtrdc.net^
@@ -798,7 +798,6 @@ ipinyou.com
 |currencyspage2025.cfd^
 |customerevents.netflix.com^
 |cutedolls.top^
-|cyppolice.com^
 |cz4.clickzzs.nl^
 |d-cache.microadinc.com^
 |d-markets.net^
@@ -812,7 +811,6 @@ ipinyou.com
 |darmowyfilmrfm44.ek1.pl^
 |dasowea.com^
 |data.gosquared.com^
-|data.mistat.intl.xiaomi.com^
 |data.yhydl.com^
 |datapush.shop^
 |datastormx.com^
@@ -865,14 +863,16 @@ ipinyou.com
 |dn.adzerver.com^
 |dobrykredyt.co.pl^
 |doffi.clubetrovare.com^
-|donglogs.com^
 |dope-snow.sa.com^
 |dorothye.com^
 |dosamigoscreativos.com^
 |doski.by^
 |dotomi.com^
 |dovalenstra.cyou^
+|down.feiyang163.com^
 |down.qqfarmer.com.cn^
+|down2.feiyang163.com^
+|down3.feiyang163.com^
 |download.haozip.com^
 |download.kaobeitu.com^
 |download.wildcard.applovin.com.edgekey.net^
@@ -916,11 +916,11 @@ ipinyou.com
 |ebony.streamate.com^
 |ebrufasteners.com^
 |ecioc.co7nrev0ke.ru^
+|eclass47.duckdns.org^
 |edelcoreviasystem.com^
 |edelgainspire.com^
 |edestekstil.com^
 |eduardorodrigues.adv.br^
-|edunetflix.com^
 |egeszsegespont.hu^
 |ehg-bizjournals.hitbox.com^
 |ehg-dig.hitbox.com^
@@ -993,7 +993,6 @@ ipinyou.com
 |f2.novanet.vn^
 |f24.adventori.com^
 |f96.f1recliff.ru^
-|faktowyua.is-best.net^
 |fakty37a.is-best.net^
 |falencenthoravix.cyou^
 |fam-ad.com^
@@ -1094,7 +1093,6 @@ ipinyou.com
 |fuxb.dicti0nvica1.ru^
 |fxmasterbotapp.com^
 |fynloborrow-app-com.cryptofinancetrack.com^
-|g.s.360.cn^
 |g1xd.mediav.com^
 |ga-beacon.appspot.com^
 |gad.shinobi.jp^
@@ -1106,7 +1104,6 @@ ipinyou.com
 |gamemine.com^
 |gammazinora-engine.com^
 |gananciaairfluxsoft.com^
-|gantekacademy.com^
 |garciaestelles.com^
 |gas-i800folex.com^
 |gateway.answerscloud.com^
@@ -1308,7 +1305,6 @@ ipinyou.com
 |in7o.pi1er5pat.ru^
 |inckaydertop.info^
 |inclk.com^
-|indo.autoads.asia^
 |indyscribe.com^
 |inferna.iad-03.braze.com^
 |info.adacado.com^
@@ -1334,7 +1330,6 @@ ipinyou.com
 |int.akisinn.site^
 |intal-ai-traderapp.com^
 |intel-erymaxpro.com^
-|intercoolermarket.com^
 |internewsweb.com^
 |intljs.rmtag.com^
 |inversionesdelta.net^
@@ -1376,7 +1371,6 @@ ipinyou.com
 |jgen16.cjt1.net^
 |jgen33.cjt1.net^
 |jgen41.cjt1.net^
-|jgoyk.cjt1.net^
 |jkcontrols.co.uk^
 |jnova.cjt1.net^
 |jolentara.biz^
@@ -1394,6 +1388,7 @@ ipinyou.com
 |js.passaro-de-fogo.biz^
 |jsbuild.top^
 |jsflowx.click^
+|jumcna.cjt1.net^
 |jump.ogtrk.net^
 |jundoralexima.icu^
 |jutrobedzie.is-best.net^
@@ -1430,6 +1425,7 @@ ipinyou.com
 |klubbvip3371.com^
 |klyvornpro.digital^
 |kok.eroterest.net^
+|kolenostan.com^
 |koltrageona.pro^
 |komatae.live^
 |komolot.gitlab.io^
@@ -1462,7 +1458,6 @@ ipinyou.com
 |l6dp.top^
 |labashl.de^
 |lactifresh.pl^
-|landingpage.novanet.vn^
 |landingpagelagi.vn^
 |landnob.com^
 |landolakescomprod.112.2o7.net^
@@ -1525,6 +1520,7 @@ ipinyou.com
 |logs.ironsrc.mobi^
 |londerafex.pro^
 |lovelydrum.com^
+|lp.sharelive.net^
 |lp845.filmo.agency^
 |lsniacyfinthora-app.net^
 |lt.retargeter.com^
@@ -1564,7 +1560,6 @@ ipinyou.com
 |masikini.com^
 |matchmyip.com^
 |material.mediav.com^
-|matomo.bantheme.xyz^
 |mautic.jagodo.vn^
 |mb.moatads.com^
 |mb.taboola.com^
@@ -1587,7 +1582,6 @@ ipinyou.com
 |mediumsrich.festivalshirts.com^
 |medshop.pl^
 |meetrics.net^
-|megasena1.duckdns.org^
 |meghanagiftshop.com^
 |megloriata.info^
 |metaveloraengine.com^
@@ -1612,19 +1606,18 @@ ipinyou.com
 |metrics.ted.com^
 |metrics.victoriassecret.com^
 |mgwspa.112.2o7.net^
-|miadabeauty.net^
 |micrographerzx.com^
 |microsoftsto.112.2o7.net^
 |midsen.112.2o7.net^
 |milosnerozmowy.pl^
 |min.tripeje.technology^
 |minrkhub.com^
-|mirturaninsaat.com^
 |mist.chri5t1anget.ru^
 |mk.ca-conv.amoad.com^
 |mkjjq.com^
 |mklik.gazeta.pl^
 |mlbhouston.112.2o7.net^
+|mm26.com^
 |mn.5.p2l.info^
 |moatads.com^
 |mobile-android.lfstmedia.com^
@@ -1637,6 +1630,7 @@ ipinyou.com
 |monetgate.com^
 |monetizepros.com^
 |monteravix-tech.com^
+|morgdm.ru^
 |morjandhelso.top^
 |moviegate1.net^
 |moviesearchcenter.com^
@@ -1771,7 +1765,6 @@ ipinyou.com
 |omero.agorapuclse.com^
 |omni.csc.com^
 |omnibergflax.pro^
-|omt.honda.com^
 |onaszuka.pl^
 |onetnewspl.com^
 |onlinecash.com^
@@ -1856,7 +1849,6 @@ ipinyou.com
 |pitbull-video.ujm.pl^
 |pixel-a.basis.net^
 |pixel-us-west.rubiconproject.com^
-|pixel.autoads.asia^
 |pixel.servebom.com^
 |pixelnear.shoofdocs.com^
 |pixumai.com^
@@ -1968,7 +1960,6 @@ ipinyou.com
 |ql.tc^
 |qualexsuitcase.com^
 |quangcao.24h.com.vn^
-|quangcao.fff.com.vn^
 |quanta-bumex9000.com^
 |quantadex-air-1000.com^
 |quantalyra.net^
@@ -2119,7 +2110,6 @@ ipinyou.com
 |schumacher.adtech.fr^
 |scripps.demdex.net^
 |scripts.affiliatefuture.com^
-|scripts.donglogs.com^
 |scripts.mediavine.com^
 |scrooge.nbc11.com^
 |sda.seesaa.jp^
@@ -2183,7 +2173,6 @@ ipinyou.com
 |silverpath45hypercloud.sbs^
 |simaltera.help^
 |simbhaolisugars.in^
-|simpleksi.com^
 |sin1.ipromote.com^
 |singular.net^
 |siriuscontenttest.112.2o7.net^
@@ -2296,7 +2285,6 @@ ipinyou.com
 |static.klaviyo.com^
 |static.leadpages.net^
 |static.mvot.vn^
-|static.novanet.vn^
 |static.plugrush.com^
 |static.polarcdn.com^
 |static.rqmob.com^
@@ -2330,6 +2318,7 @@ ipinyou.com
 |strongfitobody.com^
 |studdyy6book.info^
 |sulilo.elysianhonors.com^
+|sunhe.jinr.ru^
 |super-konkursy.com^
 |superfastcdn.com^
 |support.waltdisney.service.rooteddelivery.com^
@@ -2445,6 +2434,7 @@ ipinyou.com
 |track.msadcenter.ajfy.com^
 |track.msadcenter.emee.com^
 |track.nationalgunrights.org^
+|track.unear.net^
 |track.vivid.com^
 |tracker-api.my.com^
 |tracker.financialcontent.com^
@@ -2513,6 +2503,7 @@ ipinyou.com
 |tv.livejasmin.com^
 |tvmds.tvpassport.com^
 |twistty2tie.info^
+|twitter.cm^
 |twoja-historia.24.eu^
 |tx.re5erzap0l.net^
 |tyyefonoj.live^
@@ -2543,7 +2534,6 @@ ipinyou.com
 |uy054eprsdoz.appspot.com^
 |v1.nedstatbasic.net^
 |v20.cnnd.vn^
-|v3.toolbar.soso.com^
 |v4r9z-fjydq.ads.tremorhub.com^
 |v5.chinoc.net^
 |va6-bid.adsrvr.org^
@@ -2560,7 +2550,6 @@ ipinyou.com
 |vast.ssp.optimatic.com^
 |vavotel.com^
 |vc-login.com^
-|vcc-library.uk^
 |vdhu.com^
 |vebexoa.convertri.com^
 |vegafinevox.com^
@@ -2616,6 +2605,7 @@ ipinyou.com
 |vixgenai-app.net^
 |vizanalytx.xyz^
 |vizdatamax.xyz^
+|vizyonuniversitesi.com.tr^
 |vliohlite.info^
 |vod-kino.pl^
 |vod-tv.pl^
@@ -2685,6 +2675,7 @@ ipinyou.com
 |whenapokocij.live^
 |whynotwin11.com^
 |widgets.outbrain.com^
+|wikiforosh.ir^
 |wildcard.evidon.com.edgekey.net^
 |wind.c1earwind.ru^
 |windowsphishingalert158.s3.amazonaws.com^
@@ -2807,10 +2798,10 @@ ipinyou.com
 |www.bastbrinow.com^
 |www.batisehirbeautycenter.com^
 |www.bde3d.com^
+|www.beesoft.id.vn^
 |www.bekiciverbe.digital^
 |www.bellsit.diagnostikoxbuenaventura.com^
 |www.benefz.cfd^
-|www.benimicingonder.com^
 |www.benzkartel.duckdns.org^
 |www.benzona-prime-app.com^
 |www.bestbottlesxb.shop^
@@ -2918,10 +2909,8 @@ ipinyou.com
 |www.dijilopedi.com^
 |www.directmaxhealthinsure.com^
 |www.dirproperties.com^
-|www.divays.com^
 |www.dizelenjektorservisi.com^
 |www.doc0exp9283743.b-cdn.net^
-|www.dofphotos.com^
 |www.dollarloancenter.net^
 |www.doubleclick.net^
 |www.drowle.com^
@@ -2941,7 +2930,6 @@ ipinyou.com
 |www.eforsa.pl^
 |www.elabstest.com^
 |www.eml24.com^
-|www.emrahcaliskan.com^
 |www.equinoxisdriveaiupdates.org^
 |www.erodates.pl^
 |www.es.ero-advertising.com^
@@ -2965,6 +2953,7 @@ ipinyou.com
 |www.fileconvertpro.co^
 |www.financial.org^
 |www.findincountry.com^
+|www.finmaxfx.com^
 |www.firebanner.com^
 |www.firegifts.pl^
 |www.flatfae.ero-advertising.com^
@@ -3180,6 +3169,7 @@ ipinyou.com
 |www.officeweb-docinvoice-support-invoice-onlineser.mdbgo.io^
 |www.ogrod24.slgo.pl^
 |www.ohchat.net^
+|www.ojang.pe.kr^
 |www.okhan.net^
 |www.okrodi.vercel.app^
 |www.onboa3d.com^
@@ -3359,7 +3349,6 @@ ipinyou.com
 |www.tearcor.chirphost.com^
 |www.technovastream.com^
 |www.tedowex.com^
-|www.teiagrom.shop^
 |www.telecel.org^
 |www.telecelnetwork.com^
 |www.the-bitcore-profit.com^
@@ -3413,6 +3402,7 @@ ipinyou.com
 |www.updatezenith.com^
 |www.uralmetalloprokat.ru^
 |www.urucconsultancy.com^
+|www.usadserver.com^
 |www.usefomo.com^
 |www.user.app-six-group.online^
 |www.v9banners.com^
@@ -3508,6 +3498,7 @@ ipinyou.com
 |x5.xclicks.net^
 |x85.deepw0rd.ru^
 |xakiywg.com^
+|xdrig.com^
 |xhealth.112.2o7.net^
 |xihobee.top^
 |xisalihopy.digital^
@@ -3574,6 +3565,7 @@ ipinyou.com
 ||0-0-0-birkart-clws-ifs-globalmn.jbhunt.tt.omtrdc.net^
 ||0-00-bootstgatewayap.net.daraz.com^
 ||0-00-bootstgistemailvisionap.net.daraz.com^
+||0-000d4o000001nalzeag.net.daraz.com^
 ||0-006.0-030.net.daraz.com^
 ||0-00d09840000motieas-990auyn11w0wpnuy4.net.daraz.com^
 ||0-00d10130000motieas-990auyn11w0wpnuy4.net.daraz.com^
@@ -3584,8 +3576,11 @@ ipinyou.com
 ||0-00d360000100t6beau.net.daraz.com^
 ||0-00d39700000mwvsea001-car21-web-wwww14node-webapp-okta.net.daraz.com^
 ||0-00d40000000mwvsea001-car21-web-wwww14node-webapp-okta.0-030.net.daraz.com^
+||0-00d40000000mwvsea001-car23-web-wwww14node-webapp-okta.net.daraz.com^
 ||0-01-car24-10-r-oa-1.net.daraz.com^
+||0-01d30000000z4uceak.net.daraz.com^
 ||0-02-121-134-132-223-api1webw17sellerpackaging-profile-pay.0-030.net.daraz.com^
+||0-02-121-134-132-226-api1webw17sellerpackaging-profile-pay.net.daraz.com^
 ||0-02-124-134-131-225-api1webw17sellerpackaging-profile-pay.net.daraz.com^
 ||0-02d1n0000017glquam.net.daraz.com^
 ||0-03-betaing.net.daraz.com^
@@ -3596,7 +3591,6 @@ ipinyou.com
 ||0-132-careers.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-132-pantheon.0-030.net.daraz.com^
 ||0-132-testing.0-01-lib-oa-1-cf23region.net.daraz.com^
-||0-132-www.net.daraz.com^
 ||0-132-yqdagh24h1ta0h72.net.daraz.com^
 ||0-132-zlmtw562wm4z86s3.net.daraz.com^
 ||0-132.0-030.net.daraz.com^
@@ -3607,6 +3601,7 @@ ipinyou.com
 ||0-134.net.daraz.com^
 ||0-158-help.net.daraz.com^
 ||0-158-mail.net.daraz.com^
+||0-158-redirector.0-030.net.daraz.com^
 ||0-158account.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-158control.0-030.net.daraz.com^
 ||0-2cnppsprimaryjenkins.0-030.net.daraz.com^
@@ -3614,24 +3609,30 @@ ipinyou.com
 ||0-2customer-assets.0-030.net.daraz.com^
 ||0-2customer-stage.0-0.net.daraz.com^
 ||0-2customer0-2customer6-zigzagstrmarket.0-01-lib-oa-1-cf23region.net.daraz.com^
+||0-2localhost.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-2nask-us.angaraltd.tt.omtrdc.net^
 ||0-2nask-us.sharecare.tt.omtrdc.net^
+||0-2nstagemnsteaven2.0-132.net.daraz.com^
 ||0-2nstgmn.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-2psageng-corp.0-030.net.daraz.com^
 ||0-2psagenginvoice.0-030.net.daraz.com^
 ||0-2psagengoauth2.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-2shop.0-030.net.daraz.com^
+||0-3-7-1.dcsportal.0-01-lib-oa-1-cf23region.net.daraz.com^
+||0-6-26.0-01-lib-oa-1-cf23region.net.daraz.com^
+||0-administrators-csr4001-0-admin8.0-030.net.daraz.com^
 ||0-administrators-csr4001-0-admin8.dcsportal.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||0-astrolog2096e.net.daraz.com^
+||0-astrologie-17ae20-sjc15-dr01.net.daraz.com^
 ||0-astrologie-18applicationcsr78.0-astrologie.net.daraz.com^
 ||0-astrologie-19testbed-r-ht-61.0-030.net.daraz.com^
 ||0-astrologie-alt2.net.daraz.com^
 ||0-astrologie-api712349v1.net.daraz.com^
 ||0-astrologietest10-390auyn41w3wpnuy4.net.daraz.com^
-||0-astrologietest90wwwapi1-dev1-6-chef.0-030.net.daraz.com^
 ||0-cdburner-express-okta-idpcdburner.cuna.tt.omtrdc.net^
 ||0-lib-oa-1-administrators-csr4001-lib-oa-1-admin8.0-030.net.daraz.com^
 ||0-php.0-030.net.daraz.com^
+||0-www-sciencedirect-com-staging-teluguking.0-030.net.daraz.com^
 ||0.load01.biz^
 ||0.load02.biz^
 ||0.mono4.biz^
@@ -3652,6 +3653,7 @@ ipinyou.com
 ||0.www.uselesslyswiftprovided.com^
 ||00-0s54geexezp7q9u06ing-oa-2-admin8.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-121-133-133-220.0-030.net.daraz.com^
+||00-boomediatrap.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-boomysqltrap.0-030.net.daraz.com^
 ||00-boopre-retailtrap.0-030.net.daraz.com^
 ||00-bootapi1rap.0-030.net.daraz.com^
@@ -3664,13 +3666,15 @@ ipinyou.com
 ||00-bootstchap.0-030.net.daraz.com^
 ||00-bootstcorpcar10ap.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-bootstextranetap.0-01-lib-oa-1-cf23region.net.daraz.com^
-||00-bootstguap.0-01-lib-oa-1-cf23region.net.daraz.com^
 ||00-bootstkatmoviehdap.0-030.net.daraz.com^
 ||00-bootstoperationsap.0-030.net.daraz.com^
+||00-bootstphpp.0-030.net.daraz.com^
 ||00-bootstradns1.0-030.net.daraz.com^
 ||00-bootstrap-01-car18-web-wwww10node-webapp-okta-ctllib-ln-2.0-030.net.daraz.com^
+||00-bootstrap-administrator.net.daraz.com^
 ||00-bootstrap.iopaccount.net.daraz.com^
 ||00-bootstraprj82p.net.daraz.com^
+||00-bootstraredmine.net.daraz.com^
 ||00-bootstreamtrap.net.daraz.com^
 ||00-bootstsqlp.net.daraz.com^
 ||00-sjc12-dr01.net.daraz.com^
@@ -3684,11 +3688,12 @@ ipinyou.com
 ||005.free-counters.co.uk^
 ||006-01-lib-oa-1-administrators-csr40.net.daraz.com^
 ||006-zigzagmarketingpushr.net.daraz.com^
-||006-zigzags00.net.daraz.com^
 ||006-zigzagsl.net.daraz.com^
 ||006-zigzagstr-ns.net.daraz.com^
 ||006-zigzagstr.01-lib-oa-1-admin8.net.daraz.com^
+||006-zigzagstrfabio.net.daraz.com^
 ||006-zigzagstrpush.net.daraz.com^
+||007.free-counter.co.uk^
 ||0070tv.com^
 ||00744bb7cdfbcefa.com^
 ||008.free-counters.co.uk^
@@ -3701,6 +3706,7 @@ ipinyou.com
 ||00d70000000motieas-pre-pull-alt2-drzlive.net.daraz.com^
 ||00d70000000motieas.imap.net.daraz.com^
 ||00d70000000motieas.interno.net.daraz.com^
+||00d70000000motieas.stagetubidy.net.daraz.com^
 ||00d70000000motiemarketingpushs.net.daraz.com^
 ||00d70000000motieturs.net.daraz.com^
 ||00f5f5200efee950.com^
@@ -3737,12 +3743,14 @@ ipinyou.com
 ||01-car21-web-wwww11backend-webapp.net.daraz.com^
 ||01-car21-web-wwww11job-webapp.net.daraz.com^
 ||01-car21-web-wwww11node-connectedtwtelecom.net.daraz.com^
+||01-car21-web-wwww11node-webatrack.net.daraz.com^
 ||01-car21-web-wwww11noqlikview-webapp.net.daraz.com^
 ||01-car21c-f8.meta01.net.daraz.com^
 ||01-car21c-f8frontpage-partner.net.daraz.com^
 ||01-carntp1-web-wwww11node-webapp.net.daraz.com^
 ||01-carsite1c-f8.net.daraz.com^
 ||01-casmtp21-web-wwww0node.net.daraz.com^
+||01-ear21-web-wwww0node.net.daraz.com^
 ||01-lib-oa-1-admin8api-static-stage.net.daraz.com^
 ||01-lib-oa-1-admin8ops-ns2.viviotech.net.daraz.com^
 ||01-lib-oa-1-administrators-csr40.accept.net.daraz.com^
@@ -3782,6 +3790,7 @@ ipinyou.com
 ||041e63970a9d796c.com^
 ||0431eb9596900236.com^
 ||0446.org^
+||0472js.com^
 ||048-acr-930.mktoresp.com^
 ||04810a341326928c.com^
 ||04883215d6a8674d.com^
@@ -3854,9 +3863,9 @@ ipinyou.com
 ||0t5pq-37tiq.ads.tremorhub.com^
 ||0t5pq-e6w16.ads.tremorhub.com^
 ||0web2.sound.ag^
-||0wx.org^
 ||1-844-234-9752.blogspot.com^
 ||1-proxy.orgfree.com^
+||1-se.com^
 ||1.5000yan.com^
 ||1.almaz13.z8.ru^
 ||1.googlenews.xorg.pl^
@@ -3914,6 +3923,7 @@ ipinyou.com
 ||10115.ftp-qa1.marketingcloudqaops.com^
 ||1011xsj.com^
 ||10175.editor-qa1.marketingcloudqaapis.com^
+||101ok.com^
 ||101sweets.com^
 ||102.6.87.194.dynamic.dol.ru^
 ||1022k.blogspot.com^
@@ -3941,6 +3951,7 @@ ipinyou.com
 ||10476.sfap-qa1.marketingcloudqaops.com^
 ||10587291.adoric-om.com^
 ||106.81.233.72.static.reverse.ltdomains.com^
+||10600.url.7wkw.com^
 ||10659.connector-qa1.marketingcloudqaapis.com^
 ||10700.url.7wkw.com^
 ||10777.url.7wkw.com^
@@ -3961,7 +3972,6 @@ ipinyou.com
 ||11176.url.7wkw.com^
 ||111987.com^
 ||11225.url.7wkw.com^
-||11227.url.7wkw.com^
 ||11230.url.7wkw.com^
 ||11235813.webzdarma.cz^
 ||11250.url.016272.com^
@@ -3969,8 +3979,8 @@ ipinyou.com
 ||11269.url.7wkw.com^
 ||113.sub-75-196-211.myvzw.com^
 ||11315.url.7wkw.com^
-||11336.url.7wkw.com^
 ||11346.url.7wkw.com^
+||11352.url.7wkw.com^
 ||114-142-217-20.dsl.teleguam.net^
 ||11430.engine.mobileapptracking.com^
 ||1155.info^
@@ -4000,7 +4010,6 @@ ipinyou.com
 ||123.ywxww.net^
 ||123hulu.me^
 ||123intuit.com^
-||123juzi.net^
 ||123packaging.com^
 ||123pago-00-bootstrapvc.doc00-bootstrap.net.daraz.com^
 ||123pago-aka.doclogin.net.daraz.com^
@@ -4039,10 +4048,10 @@ ipinyou.com
 ||13131313.co.cc^
 ||132.net-31.172.myavlive.com^
 ||132132.0-030.net.daraz.com^
+||13264.url.7wkw.com^
 ||133.6.87.194.dynamic.dol.ru^
 ||133610.webhosting47.1blu.de^
 ||1339402.collect.igodigital.com^
-||13437.url.7wkw.com^
 ||13453765871837679316.googlegroups.com^
 ||13579.url.7wkw.com^
 ||1359940.fls.doubleclick.net^
@@ -4065,6 +4074,7 @@ ipinyou.com
 ||145.net-31.172.chiccams.com^
 ||14507c905.webengage.co^
 ||14525.url.7wkw.com^
+||14625.url.7wkw.com^
 ||1462a1d5faa6f029.com^
 ||14bpm-sousa.omg.adult^
 ||14cpoff22.de^
@@ -4073,7 +4083,6 @@ ipinyou.com
 ||15.ptp22.com^
 ||150.sub-75-218-203.myvzw.com^
 ||1500hf.com^
-||15033.url.7wkw.com^
 ||151.172.36.72.static.reverse.ltdomains.com^
 ||151.50.233.72.static.reverse.ltdomains.com^
 ||151.ru^
@@ -4118,7 +4127,6 @@ ipinyou.com
 ||174-224-114-217.fttb.ur.ru^
 ||174126.measurementapi.com^
 ||174674.engine.mobileapptracking.com^
-||1762959614275-warm-authority.surge.sh^
 ||176658.measurementapi.com^
 ||176758.measurementapi.com^
 ||177612.engine.mobileapptracking.com^
@@ -4150,6 +4158,7 @@ ipinyou.com
 ||189-46-240-188.dsl.telesp.net.br^
 ||189-46-49-253.dsl.telesp.net.br^
 ||189-47-30-206.dsl.telesp.net.br^
+||189-69-171-30.dial-up.telesp.net.br^
 ||189229.measurementapi.com^
 ||189634.engine.mobileapptracking.com^
 ||189862.engine.mobileapptracking.com^
@@ -4241,6 +4250,7 @@ ipinyou.com
 ||2.marchetta.be^
 ||2.mono4.biz^
 ||2.mono6.biz^
+||2.news07.biz^
 ||2.www.57473094.xyz^
 ||2.www.74759411.xyz^
 ||2.www.95597529.xyz^
@@ -4256,7 +4266,6 @@ ipinyou.com
 ||200-206-233-41.dsl.telesp.net.br^
 ||200-207-170-95.dial-up.telesp.net.br^
 ||200-207-175-244.dial-up.telesp.net.br^
-||200-207-58-115.dsl.telesp.net.br^
 ||200-207-62-237.dsl.telesp.net.br^
 ||200-232-131-59.dsl.telesp.net.br^
 ||200.76.244.187.dsl.dyn.telnor.net^
@@ -4267,8 +4276,8 @@ ipinyou.com
 ||201-1-101-56.dsl.telesp.net.br^
 ||201-1-22-48.dsl.telesp.net.br^
 ||201-1-23-154.dsl.telesp.net.br^
+||201-1-59-223.dsl.telesp.net.br^
 ||201-1-59-94.dsl.telesp.net.br^
-||201-1-62-2.dsl.telesp.net.br^
 ||201-1-68-162.dsl.telesp.net.br^
 ||201-1-94-211.dsl.telesp.net.br^
 ||201-26-155-107.dial-up.telesp.net.br^
@@ -4281,8 +4290,8 @@ ipinyou.com
 ||201-42-172-148.dsl.telesp.net.br^
 ||201-42-173-124.dsl.telesp.net.br^
 ||201-42-173-41.dsl.telesp.net.br^
-||201-42-175-138.dsl.telesp.net.br^
 ||201-42-197-38.dsl.telesp.net.br^
+||201-43-120-128.dsl.telesp.net.br^
 ||201-43-162-16.dsl.telesp.net.br^
 ||201-43-167-45.dsl.telesp.net.br^
 ||201-43-180-13.dsl.telesp.net.br^
@@ -4304,22 +4313,23 @@ ipinyou.com
 ||201-68-69-20.dsl.telesp.net.br^
 ||201-68-7-212.dsl.telesp.net.br^
 ||201-83.thezone.bg^
-||201-92-104-130.dsl.telesp.net.br^
 ||201-92-124-143.dsl.telesp.net.br^
 ||201-92-135-173.dsl.telesp.net.br^
 ||201-92-204-111.dsl.telesp.net.br^
 ||201-92-36-66.dsl.telesp.net.br^
+||201-92-37-16.dsl.telesp.net.br^
 ||201-92-41-4.dsl.telesp.net.br^
 ||201-93-166-37.dsl.telesp.net.br^
 ||201-93-239-191.dsl.telesp.net.br^
 ||201-95-120-251.dsl.telesp.net.br^
 ||201-95-147-1.dsl.telesp.net.br^
 ||201-95-150-128.dsl.telesp.net.br^
+||201-95-224-154.dsl.telesp.net.br^
 ||201-95-38-163.dsl.telesp.net.br^
 ||201-95-45-168.dsl.telesp.net.br^
 ||201-95-5-198.dsl.telesp.net.br^
+||201-95-66-169.dsl.telesp.net.br^
 ||2012.tm.zedo.com^
-||2012.ws^
 ||201205igp.gameloft.com^
 ||20122.engine.mobileapptracking.com^
 ||20164.engine.mobileapptracking.com^
@@ -4410,6 +4420,7 @@ ipinyou.com
 ||221.112.232.72.static.reverse.ltdomains.com^
 ||221737361.keywordblocks.com^
 ||2219fdc0d5e9d271.com^
+||222627.com^
 ||223.6.87.194.dynamic.dol.ru^
 ||2246uu.top^
 ||2248.info^
@@ -4426,6 +4437,7 @@ ipinyou.com
 ||231.sub-70-195-233.myvzw.com^
 ||231786172.keywordblocks.com^
 ||2318.engine.mobileapptracking.com^
+||23270963c4d4.com^
 ||233.red-83-63-229.staticip.rima-tde.net^
 ||23315.hittail.com^
 ||23332.engine.mobileapptracking.com^
@@ -4459,6 +4471,7 @@ ipinyou.com
 ||247support.co^
 ||2495de22062d1cba.com^
 ||249999.xyz^*.gif
+||24bitdeposit.com^
 ||24counter.com^$third-party
 ||24gadget.ru^
 ||24newsno.top^
@@ -4579,6 +4592,7 @@ ipinyou.com
 ||312-sax-488.mktoresp.com^
 ||31381230.com^
 ||31381333.com^
+||31383123.com^
 ||31384000.com^
 ||31385556.com^
 ||31386123.com^
@@ -4725,6 +4739,7 @@ ipinyou.com
 ||3dac795f99c0.top^
 ||3dm.3dimensional.com^
 ||3dsemulation.com^
+||3dsuppli.com^
 ||3e44a82c.adsl.enternet.hu^
 ||3e6b8df5.rev.stofanet.dk^
 ||3e6b929f.rev.stofanet.dk^
@@ -4762,6 +4777,7 @@ ipinyou.com
 ||400-dky-698.mktoresp.com^
 ||40017.cn^
 ||402.zandvoort.americansunday.nl^
+||402d4dc54db4f49d75269ce540b6a2c6.top^
 ||4030.tbuy.biz^
 ||405176.ecrtb.adtelligent.com^
 ||405176.eurtb.adtelligent.com^
@@ -4871,6 +4887,7 @@ ipinyou.com
 ||485bd96db9.7d9d50ada1.com^
 ||4873200.fls.doubleclick.net^
 ||487a26891a.1ed8ae4970.com^
+||4885e2e6f7.com^
 ||4896576.notify6.com^
 ||496-dau-231.mktoresp.com^
 ||4979130.fls.doubleclick.net^
@@ -4886,6 +4903,7 @@ ipinyou.com
 ||4dad720668.44216f3fdf.com^
 ||4e60ed9359061bdf.com^
 ||4f2sm1y1ss.com^
+||4f3f7a2316.023e6510cc.com^
 ||4freeproxy.com^
 ||4hc.de^
 ||4helsingborgse.atspace.co.uk^
@@ -4954,6 +4972,7 @@ ipinyou.com
 ||51edm.net^
 ||51lvyu.com^
 ||51network.com^$third-party
+||51noble.com^
 ||51sm.vip^
 ||520soso.com^
 ||521-ghl-511.mktoresp.com^
@@ -5077,7 +5096,6 @@ ipinyou.com
 ||61110003.adoric-om.com^
 ||61311-62178.ws3.pph-server.de^
 ||614f9b38bfe5d71a.com^
-||61677.com^
 ||6183.eu-content.swrve.com^
 ||62-90-166-231.barak.net.il^
 ||62.101.168.129.static.user.ono.com^
@@ -5158,6 +5176,7 @@ ipinyou.com
 ||6v9-xk2cqwizuv3zrgm0.net.daraz.com^
 ||7-electrical.co.uk^
 ||7.6mono.biz^
+||7.7mono.biz^
 ||7.84.208.203.cable.dyn.mql.ncable.com.au^
 ||7.mono6.biz^
 ||7.sub-75-237-111.myvzw.com^
@@ -5214,6 +5233,7 @@ ipinyou.com
 ||77-253-116-137.adsl.inetia.pl^
 ||77-253-123-137.adsl.inetia.pl^
 ||77-253-174-49.adsl.inetia.pl^
+||77-253-254-75.adsl.inetia.pl^
 ||77-253-83-104.adsl.inetia.pl^
 ||77-253-83-122.adsl.inetia.pl^
 ||77-253-96-75.adsl.inetia.pl^
@@ -5237,6 +5257,7 @@ ipinyou.com
 ||77-57-199-160.dclient.hispeed.ch^
 ||77.221.137.62.addr.datapoint.ru^
 ||772773a.com^
+||77455.com^
 ||777-partner.net^$third-party
 ||777-partners.com^
 ||777-partners.net^
@@ -5290,6 +5311,7 @@ ipinyou.com
 ||7jnw4jh4-3d42b76fc5eca097583bf21f22da715c1eeff8ec-am1.d.aa.online-metrix.net^
 ||7jnw4jh4-859932529f4c6cfabea66721d10d13c933740762-am1.d.aa.online-metrix.net^
 ||7kjiiu.cn^
+||7mfsdfasdmkgmrk.com^
 ||7moor.com^
 ||7nkbwdf1uq.ru^
 ||7seasrestaurant.com^
@@ -5337,7 +5359,6 @@ ipinyou.com
 ||8174730.fls.doubleclick.net^
 ||81773.com^
 ||818-cgg-111.mktoresp.com^
-||8184.cc^
 ||81fde04cc8fe3c2e.com^
 ||82-131-144-213.pool.invitel.hu^
 ||82-79-104-124.cable-modem.hdsnet.hu^
@@ -5365,6 +5386,7 @@ ipinyou.com
 ||825fe2c544d6a50f.com^
 ||827a59bf4d182fd5.com^
 ||827c1.v.fwmrm.net^
+||82859088.com^
 ||82sn9.voluumtrk.com^
 ||83.138.220.53.dyn.user.ono.com^
 ||83.138.232.56.dyn.user.ono.com^
@@ -5375,7 +5397,6 @@ ipinyou.com
 ||830145431.keywordblocks.com^
 ||8309b4c5f6.602e6a55fb.com^
 ||83133aa4fa78cd03.com^
-||8315.cn^
 ||8364-live-92358xyz8088wbzy.fit^
 ||83bc288a25359f91.com^
 ||83fafea2884f4611.com^
@@ -5441,6 +5462,7 @@ ipinyou.com
 ||85.24.122.253.generic-hostname.arrownet.dk^
 ||85.24.122.86.generic-hostname.arrownet.dk^
 ||85.24.124.224.generic-hostname.arrownet.dk^
+||850601.com^
 ||85103.hittail.com^
 ||852f450c727967c5.com^
 ||8562.engine.mobileapptracking.com^
@@ -5461,7 +5483,6 @@ ipinyou.com
 ||87-229-19-248.saghysat.hu^
 ||87-98-185-114.kimsufi.com^
 ||87.116.209.161.brzesko209.tnp.pl^
-||87.68.35.211.cable.012.net.il^
 ||87.97.10.17.pool.invitel.hu^
 ||87.97.100.41.pool.invitel.hu^
 ||87.97.107.198.pool.invitel.hu^
@@ -5639,7 +5660,6 @@ ipinyou.com
 ||975115152.click^
 ||97773138.com^
 ||97nb.net^
-||97sm.org^
 ||98.57.232.72.static.reverse.ltdomains.com^
 ||9800.com^
 ||9823df.com^
@@ -5670,7 +5690,6 @@ ipinyou.com
 ||9edca3538d7b34c3.com^
 ||9f18620eee84015f.com^
 ||9f2427f86f976fa4.com^
-||9f4ec5ab13670703.com^
 ||9ghwyvdk-4cc376c60ea00da446b0d7263dc42fcb3a63e2a5-am1.d.aa.online-metrix.net^
 ||9ghwyvdk-a523a2bc751fd435985d882421a152c3a7456ae3-am1.d.aa.online-metrix.net^
 ||9hfx5u2q8wzmn0h-p.adktrack30.xyz^
@@ -5717,10 +5736,12 @@ ipinyou.com
 ||a.hrient.xyz^
 ||a.hupot.site^
 ||a.ipoque.com^
+||a.jing55.com^
 ||a.jramb.site^
 ||a.ladipage.com^
 ||a.ma3ion.com^
 ||a.moitepari.bg^
+||a.muloqot.uz^
 ||a.mx.lordsandlabradors.happycustomer.io^
 ||a.netquote.com^
 ||a.ns.admins.emailvision.net.daraz.com^
@@ -5758,13 +5779,13 @@ ipinyou.com
 ||a075.casalemedia.com^
 ||a077.casalemedia.com^
 ||a080.casalemedia.com^
+||a08387be3d.com^
 ||a0b11.com^
 ||a0c77.com^
 ||a0de95822c.856d79ad49.com^
 ||a0dminss.weebly.com^
 ||a0e2667ddc1c.top^
 ||a0fw5a3jd5.neliver.com^
-||a1.289.com^
 ||a1.99933.cn^
 ||a1.suntimes.com^
 ||a103.casalemedia.com^
@@ -7430,7 +7451,6 @@ ipinyou.com
 ||admob.dk^
 ||admobclick.com^
 ||adnet-media.net^
-||adnetwork.free-h.fr^
 ||adnews.maddog2000.de^
 ||adnexusx.com^
 ||adnigma.com^
@@ -7504,7 +7524,6 @@ ipinyou.com
 ||ads.bluesq.com^
 ||ads.buljobs.bg^
 ||ads.cdnetworks.link^
-||ads.clicksor.cn^
 ||ads.cogocast.net^
 ||ads.cyop.org^
 ||ads.data.pplive.com^
@@ -7738,6 +7757,7 @@ ipinyou.com
 ||adsl196-100-221-217-196.adsl196-15.iam.net.ma^
 ||adsl196-122-101-217-196.adsl196-12.iam.net.ma^
 ||adsl196-206-228-217-196.adsl196-16.iam.net.ma^
+||adsl196-218-23-217-196.adsl196-9.iam.net.ma^
 ||adsl196-234-100-217-196.adsl196-12.iam.net.ma^
 ||adsl196-58-66-217-196.adsl196-11.iam.net.ma^
 ||adslinkup.com^
@@ -7810,6 +7830,7 @@ ipinyou.com
 ||advant-connection.life^
 ||advantage.digitalsunray.com^
 ||advantech.support^
+||advariant.com^
 ||adventist-pic.org^
 ||adventureanddiscoverer.com^
 ||adver.com.br^
@@ -7851,6 +7872,7 @@ ipinyou.com
 ||adwaredetector.com^
 ||adwebsolutions.info^
 ||adwild.go2affise.com^
+||adwolf.ru^
 ||adwords.com^
 ||adworkmedia.com^
 ||adx-ads-ru.heytapmobile.com^
@@ -7860,6 +7882,7 @@ ipinyou.com
 ||adx.maplehaze.cn^
 ||adx.phunuadong.vn^
 ||adx.srv-monitoring.com^
+||adx.xiaodutv.com^
 ||adxdwt5qg6.neliver.com^
 ||adxmaster.g2afse.com^
 ||adxpremium.com^
@@ -8019,6 +8042,7 @@ ipinyou.com
 ||agonyshark.com^
 ||agrandarlo.net^
 ||agreeableoccasion.com^
+||agrforex.co.cc^
 ||agricolaindustrial.com^
 ||agritech-solutions.com^
 ||agro.net.ru^
@@ -8039,7 +8063,6 @@ ipinyou.com
 ||ahhhh.pe.kr^
 ||ahhkc.com^
 ||ahkha.com^
-||ahlasgruop.com^
 ||ahm.g2afse.com^
 ||ahm9fq9eft.neliver.com^
 ||ahmaqn.akiii.co.kr^
@@ -8130,6 +8153,7 @@ ipinyou.com
 ||akademikz.ru^
 ||akadigital.vn^
 ||akadzon.com^
+||akainuforex.co.cc^
 ||akamai.mathtag.com^
 ||akamaicontainer.com^
 ||akariyer.com^
@@ -8310,6 +8334,7 @@ ipinyou.com
 ||alhy99.icu^
 ||alicdn.com^$domain=1024li.com|11papapa.com|1avlang.com|2334n.com|51dll.com|52kpop.com|5xx44.com|5xx77.com|63ef.com|69t41.com|7mav2.com|99a21.com|99a25.com|acglover.me|aotu101.com|camelliadali.com|ccxx99.com|haicao32.com|jb51.net|jitapu.com|junying.com|lady3.xyz|lookpian.com|ppx116.com|qqtenglong.com|qyl00.com|qyl222.com|runoob.com|sodu.cc|spqi.xyz|supfree.net|thztv.cc|thzx.cc|tv4.cc|viidii.info|wenkuxiazai.com|xin99r3.com|xin99r4.com|xingzhiyin44.com|yeyemo6.com|yuese46.com|yzz12.com|zhuankezhijia.com
 ||alicethemusical.ca^
+||alien34.duckdns.org^
 ||alienrigri.pro^
 ||aliexpress.admitad.com^
 ||aliexpress.scot^
@@ -8322,6 +8347,7 @@ ipinyou.com
 ||alimustpayme5musd.ddns.net^
 ||alinefootwear.com^
 ||alisurmeli.com^
+||alitbeach.com^
 ||alitui.weibo.com^
 ||aliwz.com^
 ||alixfleury.com^
@@ -8477,6 +8503,7 @@ ipinyou.com
 ||allfixbr.com.br^
 ||alliancepowersolutions.tupimob.com^
 ||allied-titanium.com^
+||allieforex.co.cc^
 ||allin.us^
 ||allitservices.com.au^
 ||alljackpotscasino.com^
@@ -8660,12 +8687,14 @@ ipinyou.com
 ||ampswap.com^
 ||ampythonanywhere.pythonanywhere.com^
 ||amqkuedsdsube.site^
+||amradmin.5173.com^
 ||amritsartourpackages.com^
 ||ams-1.go.sonobi.com^
 ||ams-ads-cornerstone-creatives-eu.s3-eu-west-1.amazonaws.com^
 ||ams-pt.com^
 ||ams02-login.dotomi.com^
 ||ams10.ib.adnxs.com^
+||amset.ro^
 ||amss82.com^
 ||amsterdamsexxx.com^
 ||amtusa.vn^
@@ -8786,6 +8815,7 @@ ipinyou.com
 ||analytics.kurtgeiger.us^
 ||analytics.laineywilson.com^
 ||analytics.laregione.ch^
+||analytics.learningapps.org^
 ||analytics.lemoolah.com^
 ||analytics.livefootballtickets.com^
 ||analytics.localstack.cloud^
@@ -8929,6 +8959,7 @@ ipinyou.com
 ||andrey-ad.narod.ru^
 ||andreyharitonov.ru^
 ||android.ddns.net^
+||androiddebt.co.cc^
 ||androidjet.com^
 ||androidtvwatsonfe-pa.googleapis.com^
 ||androidweblog.com^
@@ -8979,6 +9010,7 @@ ipinyou.com
 ||anlytics.co^
 ||anmelden1.weebly.com^
 ||anmeldung.promatis.ch^
+||anmon.ru^
 ||annaevers.com^
 ||annakinsdesigns.com^
 ||annaslinens.ojrq.net^
@@ -9018,7 +9050,6 @@ ipinyou.com
 ||anti-viruss.com^
 ||antiadblocksystems.com^$popup
 ||antiagingbiocream.com^
-||antiandroid007.wapka.mobi^
 ||anticipating-blocked.co.cc^
 ||anticosm.com^
 ||anticspill.com^
@@ -9171,6 +9202,7 @@ ipinyou.com
 ||api.freebasics.com^
 ||api.glooum.com^
 ||api.icmobile.singlewire.com^
+||api.infomobi.me^
 ||api.intellimize.co^
 ||api.irmaosnails.com^
 ||api.jorgerendafotos.com^
@@ -9210,7 +9242,6 @@ ipinyou.com
 ||api.tapone.jp^
 ||api.thememove.com^
 ||api.trabalhista.rctadvogados.com.br^
-||api.union.vip.com^
 ||api.visualsuper.com.br^
 ||api.vogastrategie.com^
 ||api.webconnect.co^
@@ -9233,6 +9264,8 @@ ipinyou.com
 ||apis.jesuscopy.com.br^
 ||apiworx.com^
 ||apiwz.midukanshu.com^
+||apk-391k.shxyhuojia.cn^
+||apk-support.tech^
 ||apkdo.com^
 ||apknia.blogspot.com^
 ||aplasted.com^
@@ -9421,7 +9454,6 @@ ipinyou.com
 ||apsecprotec.at.ua^
 ||apseek.com^
 ||apsislead.com^$third-party
-||apssamba.co.in^
 ||aptcviajar.com^
 ||aptoide-mmp.aptoide.com^
 ||aptotechnologies.co.uk^
@@ -9477,6 +9509,7 @@ ipinyou.com
 ||archive-text.pages.dev^
 ||archive.trkmillet.ru^
 ||archived.learn.eloqua.extrahop.com^
+||archzana.com^
 ||arcor-partner.de^
 ||arcticvaltrix.net^
 ||ardathproxy.co.cc^
@@ -9547,10 +9580,10 @@ ipinyou.com
 ||artemavtocentr.ru^
 ||arteplandi.com^
 ||arterybasin.com^
+||arteshbod.co.cc^
 ||arthoodie.com^
 ||arthrom.com^
 ||articareer.pro^
-||article.netor.net^
 ||articlestarfeed.com^
 ||artievim.com^
 ||artik.network^
@@ -9562,7 +9595,6 @@ ipinyou.com
 ||artisticsmiley.com^
 ||artistsoftimesoft.com^
 ||artistssmiley.com^
-||artmatters.info^
 ||artnarrate.com^
 ||artndesign2.cafe24.com^
 ||artnotionx.com^
@@ -9705,6 +9737,7 @@ ipinyou.com
 ||at-tnotce2.pory.app^
 ||at.electrorimalmartil.com^
 ||at.stormykromer.com^
+||at2.doubanio.com^
 ||at55747f.godaddysites.com^
 ||atafterpiquing.cfd^
 ||ataiyalteise.cyou^
@@ -9732,6 +9765,7 @@ ipinyou.com
 ||atlanticmedia-d.openx.net^
 ||atlas-endpoint.data.n8s.jp^
 ||atlas.etahub.com^
+||atlascorp.ir^
 ||atlascoso365-my.sharepoint.com^
 ||atlasfintrix.net^
 ||atlasidea.com^
@@ -9868,6 +9902,7 @@ ipinyou.com
 ||autoconexion.com^
 ||autocontr.ru^
 ||autodefentsa.info^
+||autodiscover.ad.corp.appnexus.com^
 ||autofashionfactory.com^
 ||autoidea.info^
 ||autoincanfoisontex.firebaseapp.com^
@@ -10080,10 +10115,12 @@ ipinyou.com
 ||b3dcd48863704e22.com^
 ||b444707fdc.4ae2e793d9.com^
 ||b44625y1.bget.ru^
+||b4dbeab6dcf7dcfd1e408dc3ccf5dce5.top^
 ||b4gf.top^
 ||b4m.info^
 ||b4nkrura1lc.webcindario.com^
 ||b4scmzonzt.neliver.com^
+||b4tu.com^
 ||b50c1772be.80494f40b6.com^
 ||b52775e998.42d9c0e6fb.com^
 ||b58ncoa1c07f.com^
@@ -10130,6 +10167,7 @@ ipinyou.com
 ||backcount.ry.pxf.io^
 ||backend-ssp.adstudio.cloud^
 ||backhills.com^
+||backjoy.com.cn^
 ||backlinksrssfeed.lovingforever.pro^
 ||backocuntry.pxf.io^
 ||backofficellc.com^
@@ -10240,6 +10278,7 @@ ipinyou.com
 ||ballparkjerseys.com^
 ||ballparkproductions.com^
 ||balook.com^
+||balsabg.com^
 ||balsamhill.cc^
 ||balticom-149-24.balticom.lv^
 ||bamboooption.com^
@@ -10260,8 +10299,6 @@ ipinyou.com
 ||banglareviews.com^
 ||bangtinder.com^
 ||banhtrungthubrodard.com^
-||bank0106.duckdns.org^
-||bankdata.temanggungkab.go.id^
 ||bankgarantia.ru^
 ||banking-alerts.com^
 ||bankofamerica.com.idkey13za1313.courserasme.be^
@@ -10361,6 +10398,7 @@ ipinyou.com
 ||basildonmarket.com^
 ||basilisk.laosima.com^
 ||basis-full-day.co.cc^
+||basit.work^
 ||baskale.bel.tr^
 ||batarthays.com^
 ||bateqyzsystem.com^
@@ -10380,7 +10418,6 @@ ipinyou.com
 ||bavdxafbegkvr.space^
 ||bavea.denisealbright.com^
 ||baxshop.btttag.com^
-||bayanabiyeci.com^
 ||bayberry.us^
 ||baydarsanmakine.com^
 ||bayer0401.webtrekk.net^
@@ -10412,6 +10449,7 @@ ipinyou.com
 ||bbserver.ir^
 ||bbsincboston.com^
 ||bbsqedbaza.neliver.com^
+||bbtools.cn^
 ||bbvaball.blogspot.com^
 ||bc0.cn^
 ||bc241061.catv.pool.telekom.hu^
@@ -10461,6 +10499,7 @@ ipinyou.com
 ||bdh-login.webcindario.com^
 ||bdiraioc8l.neliver.com^
 ||bdlm.120askimages.com^
+||bdlmggcs1.familydoctor.com.cn^
 ||bdokkq.themodernback.com^
 ||bdrgroup.co.in^
 ||bds.snssdk.com^
@@ -10609,6 +10648,7 @@ ipinyou.com
 ||bessttie.com^
 ||best-buy-geek-squad.org^
 ||best-cargo.ru^
+||best-condo.co.cc^
 ||best-experience-cool.com^
 ||best-feasible.co.cc^
 ||best-offers-for-you.ws^
@@ -10622,6 +10662,7 @@ ipinyou.com
 ||bestcollegeforyou.com^
 ||bestcontentsoftware.top^
 ||bestcreating.com^
+||bestcreditremortgage.co.cc^
 ||bestdeals.ws^
 ||bestdisplayformats.com^
 ||bestesgrous.web.app^
@@ -10638,6 +10679,7 @@ ipinyou.com
 ||bestoffer.club^
 ||bestoutletonlines.shop^
 ||bestpricerealestate.com.au^
+||bestserverproxy.co.cc^
 ||bestsmartfind.com^
 ||bestsotogranderealestate.com^
 ||bestsupport.site^
@@ -10803,6 +10845,7 @@ ipinyou.com
 ||biq0ludtcd.neliver.com^
 ||bir365.com^
 ||birch.skyblend.ru^
+||birdsflyfast.com^
 ||birhc.c1earpeak.ru^
 ||birkaetiket.com.tr^
 ||birkin30.com^
@@ -10909,7 +10952,6 @@ ipinyou.com
 ||biz.accs-c.co.jp^
 ||biz.pioneer.jp^
 ||bizahmet.net^
-||bizcn.com^
 ||bizilocator.com^
 ||bizlooker.appsflyer.com^
 ||bizo.com^$third-party
@@ -10942,6 +10984,7 @@ ipinyou.com
 ||bl6-52-146.dsl.telepac.pt^
 ||bl7-100-253.dsl.telepac.pt^
 ||bl7-65-92.dsl.telepac.pt^
+||black-bypass.co.cc^
 ||blackabdo.company.site^
 ||blackberry.chitchat.org.uk^
 ||blackboxadvisorsllc.com^
@@ -11014,6 +11057,7 @@ ipinyou.com
 ||blockfeed.digital^
 ||blockfilter.info^
 ||blockstop.info^
+||blocksurfer.co.cc^
 ||blog-a-day.com^
 ||blog-blog.ru^
 ||blog-boutsdumonde.fr^
@@ -11060,6 +11104,7 @@ ipinyou.com
 ||bls.naturcolor.com^
 ||blue-rain.com.cn^
 ||blue.ktla.com^
+||bluealert.co.cc^
 ||blueberryware.net^
 ||blueconic.net^$third-party
 ||bluedartin.icu^
@@ -11088,6 +11133,7 @@ ipinyou.com
 ||bmoney-frn.net^
 ||bmrfhnnhozbff.site^
 ||bms-devops-ns2.viviotech.net.daraz.com^
+||bmt66.com^
 ||bmvip.alimama.cn^
 ||bmw-softing.com^
 ||bmwag.tt.omtrdc.net^
@@ -11159,7 +11205,6 @@ ipinyou.com
 ||bolsadetrabajo-fcaei.uaem.mx^
 ||boltrixvenark.com^
 ||bombaystyles.com^
-||bombcoll.platelicense.com^
 ||bompana.com^
 ||bompie.com.ar^
 ||bomtech.net^
@@ -11194,7 +11239,6 @@ ipinyou.com
 ||boppinget.info^
 ||border5.com^
 ||borders.112.2o7.net^
-||borderscapital.co.zm^
 ||borg-cube.com^
 ||borkborkbork.info^
 ||bornama.com.tw^
@@ -11206,6 +11250,7 @@ ipinyou.com
 ||borrowanidea.com^
 ||borshtselemis.top^
 ||borucadowse.cyou^
+||bosaga.kz^
 ||bosanim.com^
 ||boscoandzoe.com^
 ||boskedinam.pro^
@@ -11332,6 +11377,7 @@ ipinyou.com
 ||breastfeed.us^
 ||breezy5wind.info^
 ||bregasnews.com^
+||brejogrande.se.gov.br^
 ||brellas.co.za^
 ||brenov-07talmi.biz^
 ||bretatia.firebaseapp.com^
@@ -11346,7 +11392,6 @@ ipinyou.com
 ||bricksandmortar.be^
 ||brickwoodproperties.com^
 ||brickworkrestoration.com.au^
-||brideofmessiah.com^
 ||bridgecr4.tailebaby.com^
 ||bridgenet.info^
 ||bridgetowncorporation.com^
@@ -11394,9 +11439,11 @@ ipinyou.com
 ||brokeneye.com^
 ||brokerbusiness.biz^
 ||brokerdental.es^
+||brokerhide.co.cc^
 ||brokerinsight-360.top^
 ||brokerreviewadvantage.top^
 ||brokerreviewplatinum.top^
+||brokersurf.fibersurf.co.cc^
 ||brominer.com^
 ||bronsinvexa.com^
 ||bronxa.com^
@@ -11431,6 +11478,7 @@ ipinyou.com
 ||brudnyromans.com^
 ||bruker-marketing.actonsoftware.com^
 ||brulpha.com^
+||brulyforex.co.cc^
 ||bruno.taweb.net.br^
 ||brushfeeling.com^
 ||brushrealmworks.com^
@@ -11584,6 +11632,7 @@ ipinyou.com
 ||btvsvu.empasa.de^
 ||btxinvest.com^
 ||btyppou.weebly.com^
+||bu2.duba.com^
 ||bubb7e.g0ldfish.ru^
 ||bubble-1760476712536.staticrun.app^
 ||bubobo.com^
@@ -11624,10 +11673,12 @@ ipinyou.com
 ||bun1.dayi.org.cn^
 ||bundesliganow.co.cc^
 ||bundvestia-app.com^
+||bunkersecurity.cl^
 ||buo.cc^
 ||bupfzxjuhl.neliver.com^
 ||burakplastik.net^
 ||burbex.com^
+||burbrik.co.cc^
 ||burggraefler.it^
 ||burgstardies.rest^
 ||burialhotter.com^
@@ -11668,7 +11719,6 @@ ipinyou.com
 ||buvkkecibaf.com^
 ||buy-microsoft365.com^
 ||buy-sell-technologies.info^
-||buy-sell-technologies.net^
 ||buy-snap-followers.com^
 ||buy404s.com^$popup
 ||buyaggressive.com^
@@ -11715,11 +11765,9 @@ ipinyou.com
 ||by98.com^
 ||byedate.com^
 ||byggenkelt.com^
-||byitaliandesigners.com^
 ||bypass-effect.co.cc^
 ||bypass.4clever.com^
 ||bypass.informs.com^
-||bypass.meks.net^
 ||bypassblocks.com^
 ||bypassdeltaforexsite.co.cc^
 ||bypassdeltaforexsites.co.cc^
@@ -11729,6 +11777,7 @@ ipinyou.com
 ||bypassmehere.ws^
 ||bypassmore.com^
 ||bypassproxy.com^
+||bypassrestrictions.com^
 ||bypasstmsforexbrokers.co.cc^
 ||byrq-coin.net^
 ||bysaxuo.com^
@@ -11738,6 +11787,7 @@ ipinyou.com
 ||byteshop.co.za^
 ||bytevora-max-30.com^
 ||bywvlzdddv.neliver.com^
+||byxon.com^
 ||byzc.com^
 ||bz-24.fin.ovh^
 ||bzdsklou.web.app^
@@ -11843,6 +11893,7 @@ ipinyou.com
 ||c-98-237-135-85.hsd1.wa.comcast.net^
 ||c-98-246-109-96.hsd1.or.comcast.net^
 ||c-98-249-171-20.hsd1.fl.comcast.net^
+||c-98-251-90-24.hsd1.ga.comcast.net^
 ||c-98-254-123-221.hsd1.fl.comcast.net^
 ||c-98-254-44-206.hsd1.fl.comcast.net^
 ||c-98-254-99-169.hsd1.fl.comcast.net^
@@ -12111,7 +12162,6 @@ ipinyou.com
 ||capi.timegiftbd.com^
 ||capi.vatconsbd.com^
 ||capi.watchphantom.xyz^
-||capig.minneapolisstpaulhomes.com^
 ||capig.shutherdown.ca^
 ||capital.paste.ca^
 ||capitalfund.click^
@@ -12124,9 +12174,9 @@ ipinyou.com
 ||capstonecapstone.com^
 ||capstonegrowthapp.net^
 ||capstratconsulting.org^
-||capsulhome.com^
 ||captainsgroup.com.bd^
 ||captchabotswaves.com^
+||captiolone.com^
 ||captorsunricht.cyou^
 ||capture.trackjs.com^$third-party
 ||capturly.com^$third-party
@@ -12146,6 +12196,7 @@ ipinyou.com
 ||cardlytics.com^
 ||cardmessenger.com.sapo.pt^
 ||cardprodubanco.webcindario.com^
+||cardproxy.co.cc^
 ||cards-css.iqiyi.com^
 ||cardtricksite.com^
 ||cardverify0625-booking.com^
@@ -12174,6 +12225,7 @@ ipinyou.com
 ||carryglanced.com^
 ||cars-taxonomy.mywebartist.eu^
 ||cart.adx1.com^
+||cart.am-display.hb.adx1.com^
 ||cartanny.com^
 ||cartaobndes-resgatepontos.atspace.tv^
 ||cartaseavisos.100free.com^
@@ -12189,7 +12241,6 @@ ipinyou.com
 ||casa-vostra.com^
 ||casaanantatravelers.com^
 ||casadanubio.com.uy^
-||casafamiglialaterrazza.com^
 ||casalcornoeputa1.blogspot.com^
 ||casaquintero.com^
 ||casearch.musicfrost.com^
@@ -12289,6 +12340,7 @@ ipinyou.com
 ||cbbasimevi.com^
 ||cbbce1de6b5705e9.com^
 ||cbcdn.bankofscotland.co.uk^
+||cbcnews.com^
 ||cbe679c19fa71e7f.com^
 ||cben1.net^
 ||cbhaljsz3h.neliver.com^
@@ -12428,6 +12480,7 @@ ipinyou.com
 ||cdn.tremorhub.com^
 ||cdn.umh.ua^
 ||cdn.vlyby.com^
+||cdn.vscreenshot.com^
 ||cdn.wearedevs.net^
 ||cdn.yiwanzhushou.com^
 ||cdn0.puata.info^
@@ -12438,7 +12491,6 @@ ipinyou.com
 ||cdn1.traffichaus.com^
 ||cdn2.ads.contentabc.com^
 ||cdn2.bildirt.com^
-||cdn2.cache.vn^
 ||cdn3.doubleverify.com^
 ||cdn5.tribalfusion.com^
 ||cdn7v2.crispadvertising.com^
@@ -12464,6 +12516,7 @@ ipinyou.com
 ||cdzjqz.gratis.com.tr^
 ||ce-mebsa.fsm.undip.ac.id^
 ||ce-res.org^
+||ce401611a27f1c94fb053f4c4a764f17.com^
 ||ceakvbhesrlgd.site^
 ||ceandtheremade.com^
 ||cebjiankb2.web.app^
@@ -12495,6 +12548,7 @@ ipinyou.com
 ||celestbitdex-software.com^
 ||celexa.3.p2l.info^
 ||celiacalle.com^
+||celib.firstlight.cn^
 ||celikaymutfak.com^
 ||celinnaya.kz^
 ||cellbux.com^
@@ -12533,7 +12587,6 @@ ipinyou.com
 ||centredestechnologies.demdex.net^
 ||centrefinrivo-engine.com^
 ||centrepge.clan.su^
-||centrocarnirigamonti.it^
 ||centrocasalbenga.com^
 ||centroetoile.eu^
 ||centroidtech.com^
@@ -12606,6 +12659,7 @@ ipinyou.com
 ||cgtqjj.shopdoona.com^
 ||cgtwccqrpbota.global^
 ||cgu99.neoplus.adsl.tpnet.pl^
+||cguforex.co.cc^
 ||cgwom0d502.neliver.com^
 ||ch-goldbach.videoplaza.tv^
 ||ch.certified-toolbar.com^
@@ -12643,6 +12697,7 @@ ipinyou.com
 ||chapelhillquest.com^
 ||chapissoccer.com^
 ||chaplevideo.com^
+||characterfarm.com^
 ||chardhamdodham.com^
 ||charity-suite-uk1.web.app^
 ||charlotteapplianceservices.com^
@@ -12703,6 +12758,7 @@ ipinyou.com
 ||chemlite.com.my^
 ||chemlogicmaxx.com^
 ||chemspunge.co.za^
+||chepi.net^
 ||cherhotels.com^
 ||cherishyourpets.co.uk^
 ||chertnomisma.cfd^
@@ -12721,6 +12777,7 @@ ipinyou.com
 ||chikoff.com^
 ||chikpazrmdyuh.website^
 ||childrenskaratewisbech.com^
+||chilloutplanet.com^
 ||china-hcyh.com^
 ||chinalawlist.com^
 ||chinamaco.com^
@@ -12771,6 +12828,7 @@ ipinyou.com
 ||chriskouassicokson.com^
 ||christcollege.edu^
 ||christianlouboutin2017.top^
+||christianlouboutinboots.cn^
 ||christiantop1000.com^$third-party
 ||christinasmith.com.au^
 ||christjagdalpur.com^
@@ -12783,6 +12841,7 @@ ipinyou.com
 ||chromehound.myforumtoolbar.com^
 ||chroniclebriefhub.pro^
 ||chuang-yi.com.cn^
+||chunfuxie.cn^
 ||chunkycooky.com^
 ||churchat.com.au^
 ||churn.lajoujea.sa.com^
@@ -12998,7 +13057,6 @@ ipinyou.com
 ||click.email.bcidaho.com^
 ||click.email.buildertrend.com^
 ||click.email.cccarmila.com^
-||click.email.chervo.com^
 ||click.email.cignahk.com^
 ||click.email.cineworld.com^
 ||click.email.coffeeparts.com.au^
@@ -13146,7 +13204,9 @@ ipinyou.com
 ||clickxchange.com^
 ||clickzs.com^
 ||client-office365-tas.msedge.net^
+||client.88tours.com^
 ||client.zspeed-cdn.com^
+||cliente.rte.com.br^
 ||clientlog.midomi.com^
 ||clientreport.random-logic.com^
 ||clients.adcolony.com^
@@ -13267,6 +13327,7 @@ ipinyou.com
 ||cloudinvestapp.com^
 ||cloudjumbo.com^
 ||cloudlift.net^
+||cloudlocalservice.duckdns.org^
 ||cloudregistration.hk^
 ||cloudshielders.com^
 ||cloudtrack-camp.com^
@@ -13338,6 +13399,7 @@ ipinyou.com
 ||cndoubleegret.com^
 ||cnet-edu.com^
 ||cnetaustralia.122.2o7.net^
+||cnhack.cn^
 ||cnhnotificou.co^
 ||cnhregisterherald.122.2o7.net^
 ||cnhualing.com^
@@ -13352,6 +13414,7 @@ ipinyou.com
 ||cnt.alawar.com^
 ||cnt.drtuber.com^
 ||cnt2.pocitadlo.cz^
+||cnuforex.co.cc^
 ||cnxef.voluumtrk.com^
 ||co-domaincfg.vivoglobal.com^
 ||co-operative-banking.com^
@@ -13359,9 +13422,11 @@ ipinyou.com
 ||co.5.p2l.info^
 ||co.akisinn.info^
 ||coach-factoryoutlets.us.com^
+||coachmanrv.com^
 ||coagedephetic.help^
 ||coalfiresolutions.com^
 ||coalvomer.com^
+||coasterpipe.co.cc^
 ||coatecindia.com^
 ||coatsanguine.com^
 ||coaxialnet.co.cc^
@@ -13506,7 +13571,6 @@ ipinyou.com
 ||commiriabb.com^
 ||commit-b96c830db0f50cc4.appwrite.network^
 ||commondata.oss-cn-hangzhou.aliyuncs.com^
-||comms.adss.com^
 ||comms.hello.global.ntt^
 ||communication.cairox.be^
 ||communication.gattefosse.com^
@@ -13517,7 +13581,6 @@ ipinyou.com
 ||community.adlandpro.com^
 ||community.algolia.com^
 ||community.draganddropobjects.net.daraz.com^
-||community.foodforsoul.it^
 ||communitychildren-my.sharepoint.com^
 ||communitypartnersjc.org^
 ||companie-basilisk.ch^
@@ -13528,6 +13591,7 @@ ipinyou.com
 ||competc.ca^
 ||complacciu.pro^
 ||completesolution.us^
+||compongtime.co.cc^
 ||compramos.info^
 ||comprarescalera.com^
 ||comprenderaragon.unizar.es^
@@ -13570,6 +13634,7 @@ ipinyou.com
 ||conditioncrush.com^
 ||condles-temark.com^$popup
 ||condora.fr^
+||conesoftdobrasil.com^
 ||conexus.ca.102.112.2o7.net^
 ||conf.hpplay.cn^
 ||confabdolisie.cyou^
@@ -13639,7 +13704,6 @@ ipinyou.com
 ||consorsfinanzgermany.tt.omtrdc.net^
 ||conspec.us^
 ||constructioninc.zzz.com.ua^
-||construtoradenafarros.pt^
 ||consultatioplus.com.ar^
 ||consultingro.com^
 ||consumentenbond.tt.omtrdc.net^
@@ -13694,6 +13758,7 @@ ipinyou.com
 ||contrserve.club^
 ||contus.sbs^
 ||conv.youdao.com^
+||convac123.duckdns.org^
 ||convenance-resolution-idm.firebaseapp.com^
 ||conversionfly.com^$third-party
 ||convertdocsonline.com^
@@ -13709,7 +13774,6 @@ ipinyou.com
 ||cookcalphalonprod.d1.sc.omtrdc.net^
 ||cookie-accept.com^$third-party
 ||cookie.amerigas.com^
-||cookie.support^
 ||cookieconsent.kornferry.com^
 ||cookielawblog.wordpress.com^
 ||cookiematch-us-west-2.prod.justpremium.com^
@@ -13728,6 +13792,7 @@ ipinyou.com
 ||coolcadelectronics.com^
 ||coolerads.com^$third-party
 ||coolfreepage.com^
+||coolingtowers.in^
 ||coolmechkenya.co.ke^
 ||coolor.ru^
 ||coolrecordedit.com^
@@ -13750,7 +13815,6 @@ ipinyou.com
 ||copifhxull.neliver.com^
 ||copririgge.pro^
 ||copryssio-software.com^
-||copyingsystem.com^
 ||copyrght.godaddysites.com^
 ||copyrolexmenwatches.cn^
 ||corbisimages.7eer.net^
@@ -13810,6 +13874,7 @@ ipinyou.com
 ||counter-gratis.com^
 ||counter.1i.kz^
 ||counter.24log.com^
+||counter.hdvb.info^
 ||counter.hitbox.com^
 ||counter.hitslink.com^
 ||counter.hyipexplorer.com^
@@ -13923,6 +13988,7 @@ ipinyou.com
 ||crackslink.com^
 ||cracksoon.com^
 ||crackssite.com^
+||crackwatch.org^
 ||crackzplanet.com^
 ||craegvin.com^
 ||craftsvilla.stripchat.org^
@@ -14061,6 +14127,7 @@ ipinyou.com
 ||cryptoklutzapp.net^
 ||cryptomir.ru^
 ||cryptonewstoday.co^
+||cryptonoter.com^
 ||cryptopornhub.com^
 ||cryptorevolutionapp.net^
 ||cryptosecure.uk^
@@ -14091,7 +14158,6 @@ ipinyou.com
 ||csdind.com^
 ||csdpn.hurraheroes.mx^
 ||cse-engineer.com^
-||cse.avlyun.sec.miui.com^
 ||csgo.zapbase.com^
 ||csgoshow.com^
 ||cshrewards.net^
@@ -14177,7 +14243,6 @@ ipinyou.com
 ||cumulrudim.pro^
 ||cumulus.deliveryengine.adswizz.com^
 ||cunningbinturong.pro^
-||cuocolo.it^
 ||cuordicrai.it^
 ||cuoss.com^
 ||cupidshare.co.cc^
@@ -14272,6 +14337,7 @@ ipinyou.com
 ||cyccomputer.pe^
 ||cycle100percent.com^
 ||cyclemix.net^
+||cycleridge.com^
 ||cycsfe.com^
 ||cycuratedhi.com^
 ||cycy.mqego.com^
@@ -14414,6 +14480,7 @@ ipinyou.com
 ||d5oyiceeae.neliver.com^
 ||d5xsfddfzb99g.cloudfront.net^
 ||d5yoctgpv4cpx.cloudfront.net^
+||d6.adsplay.net^
 ||d6.ispeak.cn^
 ||d61e19fc185243b9.com^
 ||d653f6a835.2fdc8c9d1a.com^
@@ -14446,6 +14513,7 @@ ipinyou.com
 ||da1wdzqynj.neliver.com^
 ||da64a767a2.9862271b2d.com^
 ||da656buijq2gw.cloudfront.net^
+||dabaoku.com^
 ||dabinismus.de^
 ||dabolts.info^
 ||daboovip.xyz^
@@ -14455,7 +14523,7 @@ ipinyou.com
 ||daccroi.com^
 ||dachadu.cn^
 ||dacsancolinh.com^
-||dadcpmet.vip^
+||dadashop.no^
 ||dadde.cn^
 ||daddyonsol.com^
 ||daddyyo.ddns.net^
@@ -14491,6 +14559,7 @@ ipinyou.com
 ||daleelerah.info^$popup
 ||dalian-tofa.com^
 ||daliborfojt.cz^
+||dallasproxy.co.cc^
 ||dalnaz.alechrzest.pl^
 ||dalton-daviesheinee.blogspot.com^
 ||dalystone.ie^
@@ -14507,6 +14576,7 @@ ipinyou.com
 ||danilomorales.com^
 ||danto.co.in^
 ||danzig.vtrbandaancha.net^
+||daoact.org^
 ||daoomsal.de^
 ||dapengguanjiage.com^
 ||dapf.ru^
@@ -14970,6 +15040,7 @@ ipinyou.com
 ||delivery.momentummedia.com.au^
 ||deliveryyakipenedos.shop^
 ||dellsupportusa.wordpress.com^
+||dellsurf.co.cc^
 ||delltechsupportphonenumber.com^
 ||delmarvacations.com^
 ||delprox.com^
@@ -14990,9 +15061,11 @@ ipinyou.com
 ||demeiguoji.com^
 ||demeter-int-ecom-collect.trendyol.com^
 ||demineur.hugames.fr^
+||demo.com.hk^
 ||demo.fishtime.com.ua^
 ||demo.signgo.com^
 ||demo2.cloudwp.dev^
+||demoads.com^
 ||democraticflushedcasks.com^
 ||demoncentr.pro^
 ||demonincreasevacancy.com^
@@ -15042,7 +15115,6 @@ ipinyou.com
 ||design.sharethrough.com^
 ||designbyfire.com^
 ||designbyus.online^
-||designcss.org^
 ||designwarez.racyspace.com^
 ||desing.co^
 ||desipearl.com^
@@ -15087,7 +15159,6 @@ ipinyou.com
 ||devcartps-ns2.vivicarttech.net.daraz.com^
 ||developer-bob.com^
 ||developing.nut.cc^
-||development-alternatives.com^
 ||development.katipoaudio.com^
 ||develoweb.net^
 ||devenv-chd-www.partner.net.daraz.com^
@@ -15180,6 +15251,7 @@ ipinyou.com
 ||diamondpearl.co.cc^
 ||diamondservices.easystockhosting.com^
 ||diana-penty-hot.blogspot.com^
+||diana-trest.ru^
 ||dianalidstone.net^
 ||diandra.ourtoolbar.com^
 ||dianxin.com^
@@ -15208,6 +15280,7 @@ ipinyou.com
 ||difference101.com^
 ||diffipotho.pro^
 ||diffusion-tracker.com^
+||dig.qbao.com^
 ||digianalytics.airtel.in^
 ||digicall-ems.xyz^
 ||digidip.net^
@@ -15324,6 +15397,7 @@ ipinyou.com
 ||disocsoffo.pro^
 ||disparkhypural.cfd^
 ||dispatcher-bsy.c360dn.com^
+||dispenser-rtb.sape.ru^
 ||dispeunmin.pro^
 ||dispifiori.pro^
 ||dispiunoxi.pro^
@@ -15381,6 +15455,7 @@ ipinyou.com
 ||dko.vente-unique.nl^
 ||dkpp-p-144-134-117-135.prem.tmns.net.au^
 ||dkpp-p-144-134-117-254.prem.tmns.net.au^
+||dkrxls.uzaktangelir.com^
 ||dks357.aiq.ru^
 ||dl.appzona.org^
 ||dl.babsft.com^
@@ -15465,7 +15540,6 @@ ipinyou.com
 ||doctorgurmet.com^
 ||document-download-902123.firebaseapp.com^
 ||documenten-identifiez-vous.firebaseapp.com^
-||documentverify.com^
 ||documentworkspace.io^
 ||dodescaden.com^
 ||dodoctors.com^
@@ -15510,6 +15584,7 @@ ipinyou.com
 ||domappcheckomeg29.firebaseapp.com^
 ||domappcheckomeg6.firebaseapp.com^
 ||domappcheckomeg8.firebaseapp.com^
+||domarxy.com^
 ||domertb.com^
 ||domints.za.pl^
 ||domob.cn^
@@ -15620,6 +15695,7 @@ ipinyou.com
 ||downloadsfreesoftwares.com^
 ||downloadspring.com^
 ||downloadvz.com^
+||downsoft.b0.upaiyun.com^
 ||downupfiles.com^
 ||doxiesdownunder.com^
 ||doyoto.com^
@@ -15808,7 +15884,6 @@ ipinyou.com
 ||dt.doubleclick.net.12022.9038.302br.net^
 ||dt.extrakarte.com^
 ||dt.scanscout.com^
-||dtcc.edu.vn^
 ||dtch.brunel.nl^
 ||dtcwin103.dattaweb.com^
 ||dtent.povvverz.one^
@@ -15818,7 +15893,6 @@ ipinyou.com
 ||dtm-dre.platform.dbankcloud.cn^
 ||dtm.dotomi.com^
 ||dtm1.eim.ae.fulfillmentireland.ie^
-||dtnaximya.360doc.cn^
 ||dtoday.com^
 ||dtootmvwy.top^
 ||dtrading.de^
@@ -15884,7 +15958,6 @@ ipinyou.com
 ||dvnfo.com^$third-party
 ||dvorxpy7sf.neliver.com^
 ||dvqldhfeowiyh.online^
-||dvsend.china.com^
 ||dvssql.hiwellkorea.co.kr^
 ||dvtezr.click^
 ||dvymkekwkkgdi.space^
@@ -15934,6 +16007,7 @@ ipinyou.com
 ||dyscrrigui.pro^
 ||dysuze6ljcmcr.cloudfront.net^
 ||dyyhtools.com^
+||dyzgw.com.cn^
 ||dz2fz0bgyq9tn.cloudfront.net^
 ||dzalseegco.neliver.com^
 ||dzch7pxutznj2xbhxtjuxp4hwj6eg1516681425.nuid.imrworldwide.com^
@@ -15967,6 +16041,7 @@ ipinyou.com
 ||e-visaindiaonline.com^
 ||e-xemplar.com^
 ||e.ahad.net.cn^
+||e.chayon.co.kr^
 ||e.cj59c.cn^
 ||e.dayspring.com^
 ||e.deimm.com^
@@ -16049,7 +16124,6 @@ ipinyou.com
 ||earthyinteger.com^
 ||eas8.emediate.eu^
 ||eascenders.com^
-||easilyask.com^
 ||eastafricajungle.com^
 ||eastendtandoori.com^
 ||easteregghunt.ca^
@@ -16197,6 +16271,7 @@ ipinyou.com
 ||edmunds.112.2o7.net^
 ||edo5.com^
 ||edp1.adriver.ru^
+||edskes.com.site-id.nl^
 ||edu-office.cn^
 ||edu.jiukang.org^
 ||educarpetas.com^
@@ -16489,6 +16564,7 @@ ipinyou.com
 ||email.blackbeats.fm^
 ||email.blocksonline.co.uk^
 ||email.boatrax.com^
+||email.bomabora.co.ke^
 ||email.bostonpartnersllc.com^
 ||email.braddyinsurance.com^
 ||email.brenke.fris-and-fruitig.com^
@@ -16508,6 +16584,7 @@ ipinyou.com
 ||email.cascadiajs.com^
 ||email.cashback.guper.co^
 ||email.cc.sundancepoolandspa.com^
+||email.cedapsrl.com^
 ||email.centrevillebank.com^
 ||email.cfsllc.com^
 ||email.check-in.senator-hotels.com^
@@ -16518,6 +16595,7 @@ ipinyou.com
 ||email.ciconnectmyleads.com^
 ||email.clearimaging.ca^
 ||email.clinicasantamaria.cl^
+||email.clouds.mn^
 ||email.clthompsoninsurance.com^
 ||email.clubedalutashop.com^
 ||email.cmequiz.cine-med.com^
@@ -16806,6 +16884,7 @@ ipinyou.com
 ||email.mena.ipsosisay.com^
 ||email.mercor.manatal.com^
 ||email.methaenergia.com.br^
+||email.mg.admiralbet.me^
 ||email.mg.buycamtrix.com^
 ||email.mg.coconstruct.com^
 ||email.mg.dracik.sk^
@@ -16857,6 +16936,7 @@ ipinyou.com
 ||email.ovoko.fr^
 ||email.pabanker.com^
 ||email.pablocaro.es^
+||email.paleotrack.com^
 ||email.panconnect.housing-insight.co.uk^
 ||email.papersapp.com^
 ||email.partner.rhapsodyofrealities.org^
@@ -17049,7 +17129,6 @@ ipinyou.com
 ||enews.walmart.com^
 ||enfindieubenira.firebaseapp.com^
 ||enfintrouver.com^
-||enforcer2048.com^
 ||eng-coinbasepro-learn.daftpage.com^
 ||eng.pastricanac.com^
 ||engage.3m.co.cr^
@@ -17212,6 +17291,7 @@ ipinyou.com
 ||erkmenler.com^
 ||ernestobent.com^
 ||eroadvertising.org^
+||eroartis.com^
 ||erome.in^
 ||erosex.unblog.fr^
 ||erotext.info^
@@ -17253,7 +17333,6 @@ ipinyou.com
 ||escritorioacessoriasr.sbs^
 ||esdm.sulselprov.go.id^
 ||eservicebits.com^
-||eset-antivirus.narod.ru^
 ||esg-turk.com^
 ||esgwgsnrbevnb.website^
 ||eskaton.it^
@@ -17286,6 +17365,7 @@ ipinyou.com
 ||essaysmaster.com^
 ||essayssos.com^
 ||essent.tt.omtrdc.net^
+||essentec.cn^
 ||essentialcurrentheadlines.com^
 ||essex.eu.qualtrics.com^
 ||essexmarinallc.com^
@@ -17307,8 +17387,8 @@ ipinyou.com
 ||etaidataseverlease.weebly.com^
 ||etaniumhosting.com^
 ||etc-kwt.com^
+||etcnbusiness.com^
 ||etecco.com.my^
-||etgkbu.unieuro.it^
 ||eth-olux-17x.com^
 ||eth-olux-tech.com^
 ||ethcormaxpro.com^
@@ -17332,6 +17412,7 @@ ipinyou.com
 ||etiksecimler.com^
 ||etlixykg.com^
 ||etndi.charleskeith.com^
+||etobylovjanvare.ru^
 ||etone.org^
 ||etracker.de^$third-party
 ||etrgc.wincrestorthodontics.com^
@@ -17372,6 +17453,7 @@ ipinyou.com
 ||europe.cp.wd.microsoft.com^
 ||europe.smartscreen-prod.microsoft.com^
 ||europeansleepcenter.fr^
+||euroteensluts.com^
 ||euroxup.net^
 ||eus.rubiconproject.com.edgekey.net^
 ||ev-entertainment.nl^
@@ -17491,6 +17573,7 @@ ipinyou.com
 ||excellentanalyissignal.com^
 ||excentraelumelu.com^
 ||exch-us-west.quantserve.com^
+||exchange.node.wien^
 ||exchangeclicksonline.com^
 ||exclu-rainb.blogspot.com^
 ||exclusive-offer.net^
@@ -17503,10 +17586,12 @@ ipinyou.com
 ||exhaledayspa.com.au^
 ||exin.com.bd^
 ||exit.megago.com^
+||exit.zoodollars.com^
 ||exitdirect.com^
 ||exj.nut.cc^
 ||exkavator82.ru^
 ||exofrwe.com^
+||exoode.com^
 ||exoticpheasant.pro^
 ||exowentas-handelshacks.com^
 ||expage.com^
@@ -17539,6 +17624,7 @@ ipinyou.com
 ||ext.getsuperappbox.com^
 ||ext.goguardian.com^
 ||ext.sofinco.fr^
+||extension.duckdns.org^
 ||external.stealthedeal.com^
 ||extmaps-api.yandex.net^
 ||extra-easy-income.com^
@@ -17586,6 +17672,7 @@ ipinyou.com
 ||f109028.upc-f.chello.nl^
 ||f11.adventori.com^
 ||f1savannahcats.com^
+||f2.novanet.vn^
 ||f22.adventori.com^
 ||f2m-o.tlnk.io^
 ||f36c3d2245c734f7.com^
@@ -17701,6 +17788,7 @@ ipinyou.com
 ||faokwl.sklepogrodniczy.pl^
 ||fapcat.com^$third-party
 ||faphouse.com^$subdocument,third-party
+||fapi.ametistaaliancas.com.br^
 ||faqorigin.co.cc^
 ||faradaymuhendislik.com^
 ||faraon888.com^
@@ -17722,6 +17810,7 @@ ipinyou.com
 ||fast-counter.net^
 ||fast-secret.co.cc^
 ||fast-thinking.co.uk^$third-party
+||fast-unlock.co.cc^
 ||fast.a.klaviyo.com^
 ||fast.accesstrade.com.vn^
 ||fast.avalara.demdex.net^
@@ -17755,6 +17844,7 @@ ipinyou.com
 ||fastcollege.co.cc^
 ||fastessayswriting.com^
 ||fastestxsecured.co.cc^
+||fastforschool.co.cc^
 ||fastfreeproxy.com^
 ||fastincognitomode.com^
 ||fastmania.net^
@@ -17795,7 +17885,9 @@ ipinyou.com
 ||fbgamescheats.net^
 ||fbi-park.de^
 ||fbl.com.sg^
+||fbmjc.39yst.com^
 ||fbox.vn^
+||fc.3dmgame.com^
 ||fc.gaizong.cn^
 ||fc48-e39c-4259-2c53.reporo.net^
 ||fchgd.arula.com^
@@ -17834,7 +17926,6 @@ ipinyou.com
 ||feedback.foretagsuniversitetet.se^
 ||feedback.lecos.gmbh^
 ||feedback.utskick.skelleftea.se^
-||feedcup.com^
 ||feedinsiderglobalbrief.pro^
 ||feedoftheworld1911.ru^
 ||feeds.global-intermedia.com^
@@ -18181,6 +18272,7 @@ ipinyou.com
 ||fls-fe.amazon.com^
 ||fls.de.doubleclick.net^
 ||flu-teknoloji.com^
+||fluforex.co.cc^
 ||fluidbagfulwag.com^
 ||flukemetermanamericasprod.122.2o7.net^
 ||flukenetworksjapanprod.122.2o7.net^
@@ -18311,11 +18403,13 @@ ipinyou.com
 ||fortunevortex.net^
 ||fortunix-ai.com^
 ||fortunixai.net^
+||forum.icsa-life.ru^
 ||forumdason.myforumtoolbar.com^
 ||forums-realcp.tk.hostinghood.com^
 ||forumzarabiamy.pl^
 ||forwardfishermanbidding.com^
 ||forwardrb.bid^
+||forzaconsultants.co.ke^
 ||foscam-bg.com^
 ||fosslatvia.digital^
 ||foteczkipl24.mypressonline.com^
@@ -18431,11 +18525,12 @@ ipinyou.com
 ||freddy.cl^
 ||free-5285816.webadorsite.com^
 ||free-counter.co.uk^$third-party
-||free-counters.co.uk^
 ||free-download-hotspot.blogspot.co.uk^
+||free-highlight.co.cc^
 ||free-job-alerts.com^
 ||free-key.net^
 ||free-moto.cz^
+||free-mp4-to-mp3-converter.com^
 ||free.dailyimageboard.com^
 ||free.fibersurf.co.cc^
 ||free.freeradiocast.com^
@@ -18482,6 +18577,7 @@ ipinyou.com
 ||freepornhub.info^
 ||freeprivacypolicy.com^
 ||freeprivacypolicy.com^$third-party
+||freeprivate-proxy.co.cc^
 ||freeproxies.ca^
 ||freeproxy2013.online.cm^
 ||freeproxyserver.ws^
@@ -18493,6 +18589,7 @@ ipinyou.com
 ||freeroms.com^
 ||freesoftwaresandcracksdownload.blogspot.com^
 ||freespeedsurfing.50g.com^
+||freesurf-factor.co.cc^
 ||freesurf-proxy.co.cc^
 ||freetakipci.com^
 ||freetaxdepot.com^
@@ -18500,6 +18597,7 @@ ipinyou.com
 ||freetestproxy.co.cc^
 ||freetickets.co.cc^
 ||freetv.ucoz.com^
+||freeukvpn.com^
 ||freevisitorcounters.com^
 ||freevisitorcounters.com^$third-party
 ||freevisits.com^
@@ -18555,6 +18653,8 @@ ipinyou.com
 ||fruttikaa.com^
 ||fryx.ch^
 ||fsdafrica.org^
+||fsdgjk.duckdns.org^
+||fsdywa.info^
 ||fserver.gclub888.com^
 ||fsmozsiqsdapq.store^
 ||fsref.ourtoolbar.com^
@@ -18568,12 +18668,14 @@ ipinyou.com
 ||ftp.chadaodian.com^
 ||ftp.kairoslearning.com^
 ||ftp.motelxodo.com.br^
+||ftp.pcm.se^
 ||ftrack.ru^
 ||ftrfnx.icu^
 ||ftvcash.com^
 ||ftyuughgjhkjk.weeblysite.com^
 ||fublue.com^
 ||fuckbookdating.com^$third-party
+||fudman.duckdns.org^
 ||fuersprachen.mirtesen.ru^
 ||fuerteonline.com^
 ||fufstxtytywhx.website^
@@ -18684,6 +18786,7 @@ ipinyou.com
 ||g-ec4.images-amazon.com^$domain=www.17qingsong.com
 ||g-i2.com^
 ||g.163.com^
+||g.hw6.com^
 ||g.yccdn.com^
 ||g00gle.sytes.net^
 ||g07.info^
@@ -18696,6 +18799,7 @@ ipinyou.com
 ||g1nz36.webwave.dev^
 ||g2.gumgum.com^
 ||g2288.com^
+||g3i9prnb.myutilitydomain.com^
 ||g50e.com^
 ||g5h9a6s5.at.ua^
 ||g6ogilo198nda9lbke8uy03aikprf1509504202.nuid.imrworldwide.com^
@@ -18712,7 +18816,6 @@ ipinyou.com
 ||gabbypanda.pro^
 ||gabelou.com^
 ||gabrio.it^
-||gabwoo.ct0.net^
 ||gaccwr.dutramaquinas.com.br^
 ||gadiva.com.au^
 ||gadoww.com.sapo.pt^
@@ -18732,7 +18835,6 @@ ipinyou.com
 ||gak.webtoons.com^
 ||gakaoxulxuheu.store^
 ||gakrub.naturespath.com^
-||galacticbets.fr^
 ||galapagosforyou.com^
 ||galaxynet462orbitshift.sbs^
 ||galaxyranger.co.cc^
@@ -18821,7 +18923,9 @@ ipinyou.com
 ||gaton.eu^
 ||gator.co.uk^
 ||gaupustzardom.shop^
+||gavakou.gr^
 ||gayadnetwork.com^
+||gayfuckingpictures.com^
 ||gaypornboys.blogspot.com^
 ||gaystryst.com^
 ||gazanew.com^
@@ -18961,6 +19065,7 @@ ipinyou.com
 ||getclicky.com^$third-party
 ||getemailsupport.com^
 ||getforex.net^
+||getforexacccount.co.cc^
 ||getfreebl.com^$third-party
 ||geticar.us^
 ||getinfo.fullsaildc3.com^
@@ -19116,7 +19221,6 @@ ipinyou.com
 ||gli9.inseec-bs.com^
 ||glide-solutions.com^
 ||glimorath.wiki^
-||glis.org.ph^
 ||global-c--u-vri-fica-tion.weebly.com^
 ||global-flowsystem.com^
 ||global.ncsoft.to^
@@ -19269,6 +19373,7 @@ ipinyou.com
 ||go.eternit.ee^
 ||go.etic.co.jp^
 ||go.eu.uponor.com^
+||go.evolucaogrc.com^
 ||go.ezodn.com^
 ||go.filipinocupid.date^
 ||go.first-finance.fr^
@@ -19355,6 +19460,7 @@ ipinyou.com
 ||go.marubeni-sys.com^
 ||go.masterclass.com^
 ||go.matchbookdata.com^
+||go.matsuiwhisky.com^
 ||go.maxkorzh.eu^
 ||go.mbci.com^
 ||go.mercedesbenzsouthorlando.com^
@@ -19394,6 +19500,7 @@ ipinyou.com
 ||go.phoenixaustralia.org^
 ||go.phoneappli.net^
 ||go.platinumassoc.com^
+||go.ppmsystems.com^
 ||go.precor.com^
 ||go.principle-c.com^
 ||go.ps.experian.com^
@@ -19540,7 +19647,6 @@ ipinyou.com
 ||goldfish.untitledspreadsheet.com^
 ||goldi-stadsjeugd.sportsconcerttickets.com^
 ||goldmaniac.com^
-||goldprx.hj.cx^
 ||goldrop.net^
 ||goldshare.net^
 ||goldtrade.digital^
@@ -19625,9 +19731,11 @@ ipinyou.com
 ||goveeta-eg.weebly.com^
 ||goveraforo.com^
 ||govereign.com^
+||governa.com.br^
 ||govi.mn^
 ||govjobalerts.com^
 ||goyalsoftech.com^
+||gp2.ro^
 ||gpac-llc.com^
 ||gpaper108.112.2o7.net^
 ||gpaper153.112.2o7.net^
@@ -19772,10 +19880,10 @@ ipinyou.com
 ||growfund.digital^
 ||growingio.cn^
 ||grown-inpp-code.com^
+||grownsoft.net^
 ||growthmindseteducator.com^
 ||growxrowth.click^
 ||growzyloopsystem.net^
-||grp-nestle-waters.fr^
 ||grptrker.com^
 ||grs.dbankcloud.com^
 ||grs.hicloud.com^
@@ -19789,6 +19897,7 @@ ipinyou.com
 ||grupohidra.com^
 ||grupomontenegro.com.ar^
 ||grupot2.pt^
+||gruvvin.com^
 ||gruzovik36.ru^
 ||grvv5zhyl3wyls0-p.adkoffer.fr^
 ||grxokm.kirstein.de^
@@ -19827,6 +19936,7 @@ ipinyou.com
 ||gtm.beewego.com.br^
 ||gtm.belenergy.com.br^
 ||gtm.bellalotus.com.br^
+||gtm.benestore.it^
 ||gtm.briosaojudas.com.br^
 ||gtm.bunicio.ro^
 ||gtm.cadtraining.com.my^
@@ -19898,7 +20008,6 @@ ipinyou.com
 ||gtm.oasisfeng.com^
 ||gtm.opticait.com.br^
 ||gtm.osmarcolla.com.br^
-||gtm.owlsports.com.br^
 ||gtm.perfectlybasics.nl^
 ||gtm.praticaeminventarios.com.br^
 ||gtm.profishop.de^
@@ -19928,9 +20037,7 @@ ipinyou.com
 ||gtmserver.artemorumbi.com.br^
 ||gtmserver.euro.adv.br^
 ||gtmserver.mf8consulting.com.br^
-||gtmserver.orthonet.com.co^
 ||gtmserverside.eluniversal.com.mx^
-||gtmstapeio.colorepedrarias.com^
 ||gtop.ro^
 ||gtop100.com^
 ||gtopstats.com^
@@ -19955,6 +20062,7 @@ ipinyou.com
 ||guiasaudebeleza.com^
 ||guide.real.com^
 ||guidemark.eewardmoving.com^
+||guilin-ly.com^*.gif
 ||guiserviplus.com.ve^
 ||gukin.as^
 ||gulfstarslb.com^
@@ -19985,6 +20093,7 @@ ipinyou.com
 ||gvits.co.uk^
 ||gvqe2end4zbrwyl-p.clead.xyz^
 ||gvs.nosu.yi.org^
+||gvz.qzz.io^
 ||gw.tushyraw.com^
 ||gwebspace.de^
 ||gwichin.org^
@@ -20048,6 +20157,7 @@ ipinyou.com
 ||hackdragoncity.net^
 ||hackearfacebook.tv^
 ||hacker.com.hk^
+||hackeradminhacker.duckdns.org^
 ||hackerjam.com^
 ||hackgenerations.com^
 ||hackingalert.blogspot.com^
@@ -20117,6 +20227,7 @@ ipinyou.com
 ||hangisorun.com^
 ||hangmyads.go2cloud.org^
 ||hanipisang.blogspot.com^
+||hanna-racunala.hr^
 ||hannagermund.com^
 ||hanningsacchetto.com^
 ||hannuo.com^
@@ -20131,7 +20242,6 @@ ipinyou.com
 ||hapinuiha.co.cc^
 ||happiest-faces.com^
 ||happydayfarmnj.com^
-||happyhealthtr.com^
 ||happysatoshi.com^
 ||harbiyeacikhava.com^
 ||harborvaltrix.net^
@@ -20212,7 +20322,6 @@ ipinyou.com
 ||hdggrhgzgptxg.site^
 ||hdhh65.wixsite.com^
 ||hdm-riyadh.com^
-||hdmax.top^
 ||hdmb.altervista.org^
 ||hdn.adx1.com^
 ||hdxdhu.zumnorde.de^
@@ -20253,6 +20362,7 @@ ipinyou.com
 ||heatechinsulation.com^
 ||heatherabels.com^
 ||heatherdolland.com^
+||heatsol.com.sg^
 ||heavenlybullfrog.pro^
 ||heavyfigure.link^
 ||hebe.one.cz^
@@ -20327,7 +20437,6 @@ ipinyou.com
 ||heraldentertainment.com^
 ||herb5x.mintpeak.ru^
 ||herbalife-app.quantummetric.com^
-||herbhouse.net^
 ||herbyszlacheckie.pl^
 ||heredeshatt.click^
 ||heresanothernicemess.com^$popup
@@ -20347,7 +20456,6 @@ ipinyou.com
 ||heropoulos.gr^
 ||herostoryx.com^
 ||herostoryz.com^
-||herrent.com^
 ||hervaxelondramithesquorina.rest^
 ||hervormdegemeentegrootammers.nl^
 ||herynore.com^
@@ -20360,6 +20468,7 @@ ipinyou.com
 ||hexainvest-ai.com^
 ||hexasoft.com.my^
 ||hexatrade.net^
+||hexian123.com^
 ||hexincop.click^
 ||heygetbarter.com^
 ||heyvian.com^
@@ -20377,6 +20486,7 @@ ipinyou.com
 ||hg2895.com^
 ||hg2927.com^
 ||hg3343.com^
+||hg3349.com^
 ||hg7529.com^
 ||hgbn.rocks^
 ||hghcom.evyy.net^
@@ -20406,7 +20516,6 @@ ipinyou.com
 ||hidebux.com^
 ||hideitnow.com^
 ||hideme.eu^
-||hidemyass.hj.cx^
 ||hidenseek.org^
 ||hideonline.net^
 ||hidethe.info^
@@ -20427,6 +20536,7 @@ ipinyou.com
 ||highmountaintaxi.com^
 ||highprofitnetwork.com^
 ||highratecpm.com^
+||highreplicawatches.cn^
 ||highsmammon.top^
 ||highspeedcouriers.com^
 ||hightopicstop.com^
@@ -20456,13 +20566,13 @@ ipinyou.com
 ||hitmeforex.co.cc^
 ||hitmodel.net^
 ||hits.puls.lv^
-||hitsem.com^
 ||hitspy.com^
 ||hitupfitness.com^
 ||hiuvmc.tohk5ja.cc^
 ||hive-d.openx.net^
 ||hiwinall.com^
 ||hiwxuvuponqw.in^
+||hjdec124d1.top^
 ||hjdrlkhcnkesl.site^
 ||hjkremagicbbtegh.weebly.com^
 ||hjprq.larroude.com^
@@ -20496,8 +20606,8 @@ ipinyou.com
 ||hmtoday.com^
 ||hmtoday.com^$third-party
 ||hmtpj.splitflask.com^
+||hnfxhx.xyz^
 ||hnruisheng.cn^
-||hnsykly.cn^
 ||hnuk.net^
 ||hnwlyy.com.cn^
 ||hnxxt.net^
@@ -20530,7 +20640,6 @@ ipinyou.com
 ||home.retraictedvit.com^
 ||home.zonnet.nl^
 ||homeaddress.xyz^
-||homedecormania.site^
 ||homegym.com.au^
 ||homelike.us^
 ||homelybee.com^
@@ -20542,6 +20651,7 @@ ipinyou.com
 ||homeservices.cybersecure.co.za^
 ||homesick.us^
 ||homeslick.com^
+||homesplus.nf.net^
 ||hometex.ca^
 ||hometownholly.com^
 ||homewares.org^
@@ -20737,6 +20847,7 @@ ipinyou.com
 ||hskj88.cn^
 ||hsw-gmbh.com^
 ||ht-http.trailers.bz.contentdef.com^
+||ht.trailers.brazzerstv.contentabc.com^
 ||htm8.hepsiburada.com^
 ||html.696157.com^
 ||html.sunday8.com^
@@ -20759,12 +20870,15 @@ ipinyou.com
 ||https.secure.bank-of-america.login.sign.clnsxtcsql.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.gwvllygsqr.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.igyzgsqsql.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.jdjnwtzzso.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.jyjhcqaypr.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.jykljgjhpg.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.kyjrhnaknw.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.lzmumieozo.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.nqlaznqxyq.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.pvkhjorgxp.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.seqsshgwkv.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.tbujzpqcra.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.ugvwnqcfox.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.vjdbhbbbxw.underpains.duckdns.org^
 ||https.secure.bank-of-america.login.sign.vonbosqgpd.underpains.duckdns.org^
@@ -20775,32 +20889,45 @@ ipinyou.com
 ||https.secure.bank-of-america.login.sign.zmuhnsdooi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.adnailtkmv.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.agkqvsgikn.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.aoksgeizma.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.aunhfltyhw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.avzquptpox.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.bbtlaqwfwd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.bcosyrpbjl.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.bgscocrrws.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.bnepcsqypx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.bobrnmckzc.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.cvrbunojmu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.dhxgltojoh.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.drhvfmnyok.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.duqwwqjaxc.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.dwutgimaai.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.dxrbdqpvif.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ecutrxnoos.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.epobqexdva.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.evnwmqxsyk.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ezynzujgmz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.fepyhqnckw.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ftvlhdrviy.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.hjtfdubalh.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.hkpdjtbnth.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.igtqbwazqk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ihdxmicsck.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jixwvjhpbc.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.jofdtlnddd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jqulhyzbrs.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jrcyvqxrmc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jvvtuawtco.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.jzuwcbixgy.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.khsgsbedmz.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.khvwedhrjk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.lbikhskweh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ljprvnomzc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.mavxteziqk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ncefndgvva.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.njeoecoiny.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.nmicwrszox.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.nmrniainev.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.nrsdetpdid.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ntzcvqwsda.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.odkhpuywed.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.oicduumolq.underpains.duckdns.org^
@@ -20808,35 +20935,51 @@ ipinyou.com
 ||https.secure.bankofamerica.login.sign.oyefufqxay.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pagdenrqdh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pgduymjiuu.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.pjnmtfsiii.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.prkiancihr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pwijtnmksi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.qdaortpaoi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.rcmahbmtcs.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.rjxoluvkjo.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.rsrgkzdbqs.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.rtvjaysugy.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ruiqvqelab.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sbsjpefvkd.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.sderviejwn.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sebzlbtwkl.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.skfkwawxis.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.skuuzkakxk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sqgveizwby.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.srgrrhttzg.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.stbbdmecwd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.stetueonsw.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.styoiodnfu.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.svhvfopjev.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.szvjckuqtl.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.ttwodwmrvb.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uajfppwlch.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ucwretwlkz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uecylbsfda.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.uwixtobsjz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uxioqwsrkv.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uxmiurxowr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uzvodflexm.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.vgpggqmpnm.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.whmofsrguw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.wqobxxwwlc.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wrivzfgnwk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.wrqvhanjss.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xinjjmharw.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xmfmcstqqw.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.xrcdnwdovg.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xvlykartum.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xyyguhlmnx.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.yxqcurmzao.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.yzovjxluyi.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.zetbbhvoqq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zizxzncbii.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zodzsahrlm.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.zweqdblgrh.underpains.duckdns.org^
 ||httpspornhub.com^
 ||htwgroup.biz^
 ||hu.stripchat.global^
@@ -20849,6 +20992,7 @@ ipinyou.com
 ||hub.vizury.com^
 ||hubbble.com^
 ||hubert.iad-03.braze.com^
+||hubiaohui.com^
 ||hublogic.com^
 ||hubmetrics.samsclub.com^
 ||hubrus.com^$third-party
@@ -20859,6 +21003,7 @@ ipinyou.com
 ||huchats.com^
 ||hudsonmartialarts.com.au^
 ||hudsonorg-my-sharepoint.com^
+||huffermyna.cfd^
 ||hugecoati.pro^
 ||hugforex.co.cc^
 ||huguenotsociety.org^
@@ -20956,7 +21101,6 @@ ipinyou.com
 ||i.tct-rom.com^
 ||i.umeng.com^
 ||i.verticalresponse.com^
-||i.zhuoyaju.com^
 ||i003.casalemedia.com^
 ||i065.casalemedia.com^
 ||i1-js-14-3-01-13960-152038880-i.init.cedexis-radar.net^
@@ -21010,7 +21154,6 @@ ipinyou.com
 ||iccclub.com^
 ||iccio.it^
 ||icdwebs.com^
-||ice-n-speedway.narod.ru^
 ||icebreakerfrance.fr^
 ||icecreamwali.com^
 ||icejuk.com^
@@ -21049,12 +21192,14 @@ ipinyou.com
 ||id.google.ad^
 ||id.google.bs^
 ||id.google.bt^
+||id.google.co.ck^
 ||id.google.co.uk^
 ||id.google.com.bn^
 ||id.google.com.gi^
 ||id.google.com.gt^
 ||id.google.com.lb^
 ||id.google.com.mm^
+||id.google.com.ni^
 ||id.google.com.qa^
 ||id.google.iq^
 ||id.google.jo^
@@ -21214,6 +21359,7 @@ ipinyou.com
 ||ilpmcvbmizqfo.site^
 ||ilpostoplus.openapp.link^
 ||ilyaoipntdyol.space^
+||ilyushinmoiqi.narod.ru^
 ||im.02f4a500.e9c8ce8.ads.a4cdn.contentabc.com^
 ||im.5648c600.a135629.ads.a4cdn.contentabc.com^
 ||im.5b790f00.1a10a42.ads.a4cdn.contentabc.com^
@@ -21678,6 +21824,7 @@ ipinyou.com
 ||info.ironcad.com^
 ||info.ivf-spain.com^
 ||info.jfahern.com^
+||info.kanayaresorts.com^
 ||info.karaden.jp^
 ||info.kesco.co.jp^
 ||info.kratoscomms.com^
@@ -21759,6 +21906,7 @@ ipinyou.com
 ||informcje3.is-best.net^
 ||informeddailyflash.pro^
 ||informedpulseupdate.pro^
+||informje4.is-best.net^
 ||informz.net^
 ||infornotto.pro^
 ||infos.anz-originator.com.au^
@@ -22004,6 +22152,7 @@ ipinyou.com
 ||internetquickaccess.com^
 ||internetradioreviews.com^
 ||internetrepublik01.webtrekk.net^
+||internetsucess.com^
 ||internettraffic.click^
 ||interposedflickhip.com^
 ||interracialadultfriendfinder.com^
@@ -22108,6 +22257,7 @@ ipinyou.com
 ||iphone.tube^
 ||ipidcasinet.rest^
 ||ipko.space^
+||ipm.atm.cp31.ott.cibntv.net^
 ||ipm.atm.youku.com^
 ||ipmatrix.info^
 ||ipool.by^
@@ -22253,6 +22403,7 @@ ipinyou.com
 ||iu45.mardiripping.digital^
 ||iukdm.iheartdogs.com^
 ||iukinseyinstitute.co1.qualtrics.com^
+||iuou.myadobe.cn^
 ||iuwiim.steigenberger.com^
 ||ivan-ivanovivanchenk.narod2.ru^
 ||ivankapresent.com^
@@ -22266,6 +22417,7 @@ ipinyou.com
 ||ivpnoffers.com^$popup
 ||ivs.da5y.ru^
 ||ivtum.yoll.net^
+||ivw.arcor.de^
 ||ivykamei.com^
 ||ivykiosk.com^
 ||iwabuildfrj.com^
@@ -22281,6 +22433,8 @@ ipinyou.com
 ||ixquyrywdfsjg.site^
 ||iy14s.doctorlights.com^
 ||iyi.net^
+||iykemann.duckdns.org^
+||iyrivw.info^
 ||iyyxtyxdeypk.com^
 ||izanizan619.duckdns.org^
 ||izar.iad-03.braze.com^
@@ -22307,6 +22461,7 @@ ipinyou.com
 ||ja.tklivechat.com^
 ||ja.xham.live^
 ||jaam.me^
+||jab88.com^
 ||jabe.kz^
 ||jabkids.com^
 ||jackal.jakerunzer.com^
@@ -22326,6 +22481,7 @@ ipinyou.com
 ||jads.co^
 ||jagdishchanderarora.com^
 ||jailbaits.top^
+||jailbreaked.net^
 ||jaipurcitydailyphoto.blogspot.com^
 ||jaipurphotography.com^
 ||jak-fluxrow.net^
@@ -22346,13 +22502,16 @@ ipinyou.com
 ||janeensart.com^
 ||janis.cjt1.net^
 ||jansen-heesch.nl^
+||jaoka.duckdns.org^
 ||japanbros.com^
 ||japanese.taboola.com^
 ||japheth.com.cn^
+||japontarzi.duckdns.org^
 ||jargonaut.cjt1.net^
 ||jargonthugconfessed.com^
 ||jargveurtocja.world^
 ||jasanportdex-tech.com^
+||jaskirankaur.com^
 ||jasny-bitnex-platform.com^
 ||jasnyevotradex.net^
 ||jaso007-asrkjhas-sdfgkhjk.pages.dev^
@@ -22380,6 +22539,7 @@ ipinyou.com
 ||jazzycloset.com^
 ||jazzzy4band.info^
 ||jb-sounddesign.de^
+||jbalviens.club^
 ||jbaventures.cjt1.net^
 ||jbcam.cz^
 ||jbcapsforum.tk^
@@ -22406,6 +22566,7 @@ ipinyou.com
 ||jeanettesvendsen.ca^
 ||jeanharris.com^
 ||jebzg.yolasite.com^
+||jecromaha.info^
 ||jedi.org^
 ||jediff.com^
 ||jeepzcarhire.com.au^
@@ -22444,7 +22605,6 @@ ipinyou.com
 ||jetxaviation.com^
 ||jeu.video^*/partners.js
 ||jewelrycollectorapp.com^
-||jfarts.com^
 ||jfhjh.voluumtrk.com^
 ||jfjsp.com^
 ||jfnnrjfjrfjr.com^
@@ -22453,9 +22613,10 @@ ipinyou.com
 ||jg0c.sfr.fr^
 ||jgb.meegmfio.in^
 ||jgen15.cjt1.net^
+||jgen4.cjt1.net^
+||jgen48.cjt1.net^
 ||jgjake2.com^
 ||jgrokster.cjt1.net^
-||jh3pin.com^
 ||jhandiecohut.com^
 ||jhansonlaw.com^
 ||jhbp2.sa010.com^
@@ -22523,11 +22684,13 @@ ipinyou.com
 ||jmeni-bitrow.net^
 ||jmenibitrow-software.com^
 ||jmfpb.barefaced.com^
+||jmjry.duckdns.org^
 ||jmlazarte.com.ar^
 ||jmosa.pistolpete.com^
 ||jmrrtidwhdd.yi.org^
 ||jnecc.jadedldn.com^
 ||jnkqnf.cifraclub.com.br^
+||jntssjj.com^
 ||jnunn.alppouch.com^
 ||jnvwjvpquelgr.website^
 ||jnyjsd.bookonline.com.cn^
@@ -22623,7 +22786,6 @@ ipinyou.com
 ||jrn.meegmfio.in^
 ||jrpfekf.angelfire.com^
 ||jrpkizae.com^
-||js.69lm.com.cn^
 ||js.bronto.com^
 ||js.ero-advertising.com^
 ||js.gov.cfd^
@@ -22631,6 +22793,7 @@ ipinyou.com
 ||js.logentries.com^
 ||js.manga1000.top^
 ||js.smartredirect.de^
+||js.soduso.cc^
 ||js.spacenine.biz^
 ||js.spotx.tv^
 ||js.wpshsdk.com^
@@ -22638,10 +22801,11 @@ ipinyou.com
 ||js11.clickzzs.nl^
 ||js2.ad-score.com^
 ||jsbcfy.com^
+||jsblom.com^
 ||jsc.idealmedia.io^
-||jsccsh.cn^
 ||jscdndel.com^
 ||jscount.com^
+||jsdanhe.com^
 ||jsfastener.cn^
 ||jsfiddle.usesfathom.com^
 ||jsigepdyv4abfcs-p.adktrack30.xyz^
@@ -22752,7 +22916,6 @@ ipinyou.com
 ||k.rising.com.cn^
 ||k0bar4h3vwyx1en-p.linkomo.fr^
 ||k1.wanwenwan.cn^
-||k20nyubuypoku1t3oya.duckdns.org^
 ||k2ckndz4r8bq6to-p.adkclicker.fr^
 ||k2o2ls46.xyz^
 ||k61snsnyjh697mophgt77lrcwptdp1508205331.nuid.imrworldwide.com^
@@ -22820,6 +22983,7 @@ ipinyou.com
 ||karabaglarbel.weebly.com^
 ||karafutem.com^
 ||karalipia.com^
+||karbadina.com^
 ||karelstumpf.de^
 ||karew.ws^
 ||kargo.com^$third-party
@@ -22883,6 +23047,7 @@ ipinyou.com
 ||kd1fv.voluumtrk.com^
 ||kdapucwnebjeu.site^
 ||kdjjkg.rajapack.pl^
+||kdmyatytentionia.com^
 ||kdqytm.vipre.com^
 ||kececioglukompresor.com.tr^
 ||kecro.com^
@@ -22911,7 +23076,6 @@ ipinyou.com
 ||kelvadoraqua.com^
 ||kelvinchan.org^
 ||kelvinmartinez.com^
-||kemei0769.com^
 ||kencew-unix.blogspot.com^
 ||kencolease.com^
 ||kendosbromal.top^
@@ -22936,10 +23100,12 @@ ipinyou.com
 ||key7hp.keyhope.ru^
 ||keycloak.default.console.ws.adacts.com^
 ||keycom-dolmetschen.com^
+||keydot.net^$third-party
 ||keygelu.co.cc^
 ||keyguru.blogspot.com^
 ||keymaker.go.sonobi.com^
 ||keymetric.net^
+||keynotedeviceanywhere.com^
 ||keynotegroup.actonservice.com^
 ||keyoffice.support^
 ||keyskills.co.nz^
@@ -23002,6 +23168,7 @@ ipinyou.com
 ||kilikyahavayollari.com^
 ||killnratdem.byethost3.com^
 ||killtarget.biz^
+||killuarules.duckdns.org^
 ||kimberlydanger.com^
 ||kimcar.com.au^
 ||kimetaria.help^
@@ -23089,7 +23256,6 @@ ipinyou.com
 ||kmabogados.com^
 ||kmbjerbaafdn.global^
 ||kmikh.kassaria.com^
-||kmr.service.kugou.com^
 ||kmrtby.com^
 ||kmspi.co^
 ||kmtzh.zyns.com^
@@ -23142,7 +23308,6 @@ ipinyou.com
 ||kondmatex-app.net^
 ||kongaskreations.com.au^
 ||kongkrailas.go.th^
-||konichigram.customerdemourl.com^
 ||konqor.pt^
 ||kont7.cc^
 ||kontopruefung-paypal.com.de^
@@ -23165,6 +23330,7 @@ ipinyou.com
 ||kosomk.com^
 ||kostaseaiapp.com^
 ||kotlyarov-34.ru^
+||kouclo.com^
 ||koun-wa.com^
 ||kouts.foundingfamilylines.com^
 ||kouziva.com^
@@ -23181,7 +23347,6 @@ ipinyou.com
 ||kqye.kefifi.yi.org^
 ||kqyemarketplace.com^
 ||kqyyds.redkassa.ru^
-||kqzevkhhxw.info^
 ||kraftor.com^
 ||krainainspiracji.my^
 ||kraitnaa.com^
@@ -23196,7 +23361,6 @@ ipinyou.com
 ||kredikartsparkass234.firebaseapp.com^
 ||kreistagnzc.info^
 ||krfxvi.iconbydesign.com.au^
-||kriator2.com^
 ||krikeinlcuhin.webflow.io^
 ||krill.far.site^
 ||krimpe.net^
@@ -23243,6 +23407,7 @@ ipinyou.com
 ||ku42hjr2e.com^$document
 ||ku6.com^
 ||ku63.com^
+||kuaidifeng.cn^
 ||kuakuawenjian.oss-cn-hangzhou.aliyuncs.com^
 ||kuangfenxian.com^
 ||kucoin-auth.web.app^
@@ -23291,7 +23456,6 @@ ipinyou.com
 ||kxabecbd.shop^
 ||kxmebjwzwynks.space^
 ||kxmrwu.ibarakinews.jp^
-||kxtmstjs.org^
 ||kxtqgp.mistermenuiserie.com^
 ||ky595images.com^
 ||kyb-amazon.com^
@@ -23375,6 +23539,7 @@ ipinyou.com
 ||laguna-utes.com^
 ||lahka-f50cf.firebaseapp.com^
 ||lahorewholesalemarket.com^
+||laijakka.duckdns.org^
 ||lajamoneriadelaquinta.com^
 ||lajoyatxacrepair.com^
 ||lakalal.com^
@@ -23652,6 +23817,7 @@ ipinyou.com
 ||liakouras.com^
 ||liannejean.com^
 ||lib.cy.co.kr^
+||liba.haotv8.com^
 ||libaa.com^
 ||liberpolato.pro^
 ||libertamarket.com^
@@ -23695,7 +23861,6 @@ ipinyou.com
 ||lightmyfire.co.cc^
 ||lightningproxy.co.cc^
 ||lightstep.medium.systems^*/reports
-||lightweb.group^
 ||ligninenchant.com^
 ||lihi.cc^
 ||lihqutwoiumpd.top^
@@ -24069,6 +24234,7 @@ ipinyou.com
 ||load.api.net5gfibraoptica.com.br^
 ||load.api.salariosemfronteiras.com.br^
 ||load.asset.vasozyte.com^
+||load.c.erthkottbutik.se^
 ||load.control.vendere.asgoodasnew.it^
 ||load.d.gemrockauctions.com^
 ||load.d.thekitchenstore.net^
@@ -24158,6 +24324,7 @@ ipinyou.com
 ||load.sst.colemanfurniture.com^
 ||load.sst.dartshopper.it^
 ||load.sst.jyothinookula.com^
+||load.sst.keramikos.nl^
 ||load.sst.koelner-philharmonie.de^
 ||load.sst.mob.co.uk^
 ||load.sst.mynametags.be^
@@ -24175,7 +24342,6 @@ ipinyou.com
 ||load.stape.motorsporttravel.dk^
 ||load.stape.neoforce.com.br^
 ||load.stape.speaktor.com^
-||load.stape.tettu.com.br^
 ||load.sub.oil-stores.gr^
 ||load.sumo.com^
 ||load.t.doradobet.com^
@@ -24185,8 +24351,8 @@ ipinyou.com
 ||load.tracking.prestiter.it^
 ||load.trk.365dagensuccesvol.nl^
 ||load.tt.theorietoppers.nl^
-||load.wedroid.net^
 ||load01.biz^
+||load02.biz^
 ||load16.biz^
 ||loader.motor-talk.de^
 ||loading-page-now.web.app^
@@ -24198,6 +24364,7 @@ ipinyou.com
 ||lobster.unionpeer.com^
 ||loc.rediff.com^
 ||local-business.support^
+||local.ucoz.hu^
 ||localbusinessguides.com^
 ||localdates19.com^
 ||localmantra.com^
@@ -24273,7 +24440,6 @@ ipinyou.com
 ||logic.rafeion.com^
 ||logicalsupport.biz^
 ||logicaresearch18.click^
-||logiccode.net^
 ||logicdivision.com^
 ||logicimitrex40.com^
 ||logickeflex-optapp.com^
@@ -24342,6 +24508,7 @@ ipinyou.com
 ||lomantex-app.com^
 ||lomantex-app.net^
 ||lomoner.com^
+||lomotex.com^
 ||lomrav-88pinet.biz^
 ||lomtalay.com^
 ||lonani.ne^
@@ -24467,6 +24634,8 @@ ipinyou.com
 ||ltpd.pinkydurham.com^
 ||ltz7d9384oj7waqxstq.peou.de^
 ||ltzpth.sephora.fr^
+||luanzin.duckdns.org^
+||lubiego.is-best.net^
 ||luc.meegmfio.in^
 ||lucciinser.pro^
 ||lucead.com^
@@ -24506,7 +24675,6 @@ ipinyou.com
 ||lupapizzeria.com^
 ||luparomagg.pro^
 ||lupexismax-app.net^
-||lupussa.co.za^
 ||luthariquenos.com^
 ||luukku.com^
 ||luutf.longtermdenials.com^
@@ -24591,7 +24759,6 @@ ipinyou.com
 ||m.emgwq.com^
 ||m.exactag.com^
 ||m.ezjoygame.com^
-||m.facebook.com-re-2463801762.activecoaching.hu^
 ||m.fbieq.com^
 ||m.fouas.com^
 ||m.getspeedbrowserp.com^
@@ -24630,7 +24797,6 @@ ipinyou.com
 ||m5xy0v.cn^
 ||m6.net^
 ||m62rtkpf.de^
-||m67-212.igss.net^
 ||m7d.info^
 ||m83-185-82-124.cust.tele2.se^
 ||m83-185-92-139.cust.tele2.se^
@@ -24660,6 +24826,7 @@ ipinyou.com
 ||macfire.com.au^
 ||machogalago.pro^
 ||macotool.com^
+||macronet.cz^
 ||macrotek.com^
 ||macsimum.no^
 ||macu.it^
@@ -24689,6 +24856,7 @@ ipinyou.com
 ||magiclaundry.qwestoffice.net^
 ||magicpixel.io^$third-party
 ||magicpro.org^
+||magicsearch.ws^
 ||magictrack1.com^
 ||magistr-by.narod.ru^
 ||maglxmaail.weebly.com^
@@ -24714,6 +24882,7 @@ ipinyou.com
 ||mail-count.matsui.co.jp^
 ||mail-premium-updatess.weebly.com^
 ||mail-security-check8877856556.web.app^
+||mail.03707.com^
 ||mail.alphaing.com.ar^
 ||mail.bangla.net^
 ||mail.carpasdangiola.com^
@@ -24727,7 +24896,6 @@ ipinyou.com
 ||mail.parentprojectmd.org^
 ||mail.poker.cm^
 ||mail.raja-uchino.com^
-||mail.rentech.com.my^
 ||mail.shaferglazer.com^
 ||mail.sharepoint.cn.com^
 ||mail.stellarcard.io^
@@ -24781,7 +24949,6 @@ ipinyou.com
 ||makhmalbaf.com^
 ||makiconsulting.net^
 ||making-over.co.cc^
-||making.nut.cc^
 ||making.party^$document
 ||makingnude.com^
 ||makingtime4you.com^
@@ -24822,7 +24989,6 @@ ipinyou.com
 ||mamoapps.com^
 ||mamont-tk.ru^
 ||manage.admozartexchange.com^
-||manage.czhuanxin.com^
 ||manage.ire.kochava.com^
 ||manage.parafx.com^
 ||manage.sidunchem.com^
@@ -24836,6 +25002,7 @@ ipinyou.com
 ||managewebappseucreaccondfhuerdfgsdfsdh.loki2.biz.id^
 ||mananats.beget.tech^
 ||manatee.dk^
+||manaton.us^
 ||manbs.com^
 ||mancinocommercial.com^
 ||mandiralahiri.com^
@@ -24899,7 +25066,6 @@ ipinyou.com
 ||market.bellelily.com^
 ||market123.williamsmedia.co^
 ||marketamerica.demdex.net^
-||marketbot.net^
 ||marketconnectionsinc.actonsoftware.com^
 ||marketing-automation.amadeus.com^
 ||marketing-guerilla.de^
@@ -25082,6 +25248,7 @@ ipinyou.com
 ||master-don.ru^
 ||masterchris221.ddns.net^
 ||mastercodeproxy.co.cc^
+||masterempresas.com.br^
 ||masterfire.nl^
 ||masterjobintl.com^
 ||masterofpublichealth.co.cc^
@@ -25144,15 +25311,18 @@ ipinyou.com
 ||mattressusa.122.2o7.net^
 ||matura.co.cc^
 ||mature2porn.blogspot.gr^
+||maturehardcore.galleryprogram.com^
 ||maturepornmovs.com^
 ||maturescam.com^
 ||mauricedimino.com^
 ||mautic.teky.edu.vn^
 ||maven-aviation.com^
+||maviapartments.com^
 ||maviegeradyo.com^
 ||mavitec.es^
 ||mavtravel.ro^
 ||max-tradesoftware.com^
+||max-wx.com^
 ||max1234.com^
 ||maxdebrid.com^
 ||maxi-ad.de^
@@ -25189,12 +25359,12 @@ ipinyou.com
 ||mbignell.com^
 ||mbkldae.web.app^
 ||mbox6.offermatica.com^
-||mboxedge34.tt.omtrdc.net^
 ||mbsnet.at^
 ||mbusa-server-side-tagging-ydw2gpju5q-ue.a.run.app^
 ||mbvcxcghj.weebly.com^
 ||mbvndisplay.site^
 ||mc.exacttarget.com^
+||mc.tvzhe.com^
 ||mcafee.7eer.net^
 ||mcafeecomactivate.us^
 ||mcafeesupportphonenumbers.blogspot.com^
@@ -25340,6 +25510,7 @@ ipinyou.com
 ||megazone.com.ua^
 ||megsmclean.com^
 ||mehditop.ourtoolbar.com^
+||meibu.com^
 ||meijer.com.102.122.2o7.net^
 ||mein.elsitier.de-webformular.com^
 ||meine-sicherheitshinweis.web.app^
@@ -25706,6 +25877,7 @@ ipinyou.com
 ||midnighttraditionally.com^
 ||midwifemoist.com^
 ||mieletgourmandises.fr^
+||mientaynet.com^
 ||mientrung.click^
 ||mietradio.myradiotoolbar.com^
 ||migcradnebxmy.website^
@@ -25745,7 +25917,6 @@ ipinyou.com
 ||minecraft.crazs.ru^
 ||minecraftmod.ru^
 ||minevol.com^
-||mingledpayoff.com^
 ||minhajwelfare.org^
 ||minhasfotosjpg.no.sapo.pt^
 ||miniapp.qiluyidian.mobi^
@@ -26372,6 +26543,7 @@ ipinyou.com
 ||mlydqgkftpeda.firebaseapp.com^
 ||mm.chitika.net^
 ||mm.hostinglawn.com^
+||mm.nwell.net^
 ||mmarkhigh.actonservice.com^
 ||mmassociates.ca^
 ||mmcd.kefifi.yi.org^
@@ -26406,12 +26578,14 @@ ipinyou.com
 ||mobilemusicservice.de^
 ||mobilenewbie.blogspot.com^
 ||mobileraffles.com^
+||mobiletech-asia.com^
 ||mobilitybill.com^
 ||mobilwood.com^
 ||mobioffers.ru^
 ||mobisage.cn^
 ||mobiyo.offerstrack.net^
 ||mobrand.net^
+||mobrkbb.com^
 ||mobstac.com^
 ||mobsuite.site^
 ||mobsuitem.com^$popup
@@ -26569,7 +26743,6 @@ ipinyou.com
 ||motorhome-windows-uk.com^
 ||motorval.112.2o7.net^
 ||motu.p4p.sina.com.cn^
-||mountain.zhidao.baidu.com^
 ||mountainbridge.net^
 ||mountainfreeze.co.cc^
 ||mountedblueberrytall.com^
@@ -26700,7 +26873,6 @@ ipinyou.com
 ||mu.zilovaro.store^
 ||muahack.com^
 ||muajg.davidsbridal.com^
-||mucunhuwai.com^
 ||mudancaslonghini.com.br^
 ||muddddy1road.info^
 ||muddledmemory.com^
@@ -26751,6 +26923,7 @@ ipinyou.com
 ||music.httpdns.c.163.com^
 ||music.myhitapps2.online^
 ||musicalpix.com^
+||musicbody.net^
 ||musiccounter.ru^$third-party
 ||musicdd.com^
 ||musicnote.info^
@@ -26770,6 +26943,7 @@ ipinyou.com
 ||muzica-evenimente.ro^
 ||muzzumilruheel.com^
 ||mvconf.cloud.360safe.com^
+||mvconf.f.360.cn^
 ||mvmasters02.com^
 ||mweb-passwordnotices.weebly.com^
 ||mwolk.com^
@@ -26817,6 +26991,7 @@ ipinyou.com
 ||mybbc-analytics.files.bbci.co.uk.edgekey.net^
 ||mybillingpurchases.servebeer.com^
 ||mybip.go2cloud.org^
+||mybtccoin.com^
 ||mybtvoicemailmessage-107422.weeblysite.com^
 ||mybuzzsearch.com^
 ||myclubkit.com^
@@ -26861,7 +27036,6 @@ ipinyou.com
 ||mymovies01.webtrekk.net^
 ||mymt.jp^
 ||myo2.com.au^
-||myonline-accountant.com^
 ||myowndanbabab.blogspot.com^
 ||myowvxxsjkwvp.space^
 ||mypageofficemailcheck.myportfolio.com^
@@ -26872,7 +27046,6 @@ ipinyou.com
 ||myprovider.org.uk^
 ||myquickappz.com^
 ||myragon.ru^
-||myramen.com^
 ||myrecycler.com^
 ||myro.shop^
 ||myrobotinsurance.com^
@@ -26953,7 +27126,6 @@ ipinyou.com
 ||nagal.eu^
 ||nagios.smi2.net^
 ||nahalfestival.ir^
-||nahhybvzd7x.top^
 ||naira-trader-ai.com^
 ||naiwoalooca.net^
 ||najgx.gekub.yi.org^
@@ -26984,6 +27156,7 @@ ipinyou.com
 ||napgameonline.com^
 ||napkimcuongx10.com^
 ||napquatet.com^
+||napredakjajce.ba^
 ||naptimerecords.com^
 ||napzcqpkzl.info^
 ||narashnogt.narod.ru^
@@ -27101,6 +27274,7 @@ ipinyou.com
 ||neibottling.com^
 ||neighboringassignment.pro^
 ||neisercandala.blogspot.com^
+||neishengwai.wang^
 ||nekretninejovanovic.com^
 ||nelezob.com^
 ||nellforgery.com^
@@ -27269,6 +27443,7 @@ ipinyou.com
 ||nexbit-floria-engine.com^
 ||nexenbit.net^
 ||nexentury.com^
+||nexerciser.org^
 ||nexextgazeta.info^
 ||nexi-login-aggiornamento-utente-online-app6.otzo.com^
 ||nexic0m.weebly.com^
@@ -27316,6 +27491,7 @@ ipinyou.com
 ||ngsinspiringtga.info^
 ||ngyusa.com^
 ||nh88trk.com^
+||nhabienhoa.vn^
 ||nhanquanrofreene.weebly.com^
 ||nhardd.click^
 ||nhjsw.cn^
@@ -27335,8 +27511,10 @@ ipinyou.com
 ||nicenylonfetish.com^
 ||niceoverseas.com.np^
 ||nicheshopping.net^
+||nickdns17.duckdns.org^
 ||nickdns19.duckdns.org^
 ||nickdns22.duckdns.org^
+||nickdns56.duckdns.org^
 ||nickstark.com^
 ||nickvero.3x.ro^
 ||nicolasbaldoma.com^
@@ -27393,12 +27571,12 @@ ipinyou.com
 ||njdijiani.com^
 ||njeklik1.blogspot.com^
 ||njhlvz.icu^
+||njisbetter.duckdns.org^
 ||njmelectrical.com.au^
 ||njnhzh.icu^
 ||njpazaxulnj.duckdns.org^
 ||njpilt.icu^
 ||njrmovies2.blogspot.com^
-||njyork.localbox.org^
 ||nk2.com.br^
 ||nkac.pl^
 ||nkarb5009.wixstudio.com^
@@ -27501,6 +27679,7 @@ ipinyou.com
 ||northbeam.io^$third-party
 ||northcollege.info^
 ||northernlightscollege.d1.sc.omtrdc.net^
+||northernnavajonationfair.org^
 ||northfacehoodie.top^
 ||northnetworks.go2cloud.org^
 ||northverbe.pro^
@@ -27631,6 +27810,7 @@ ipinyou.com
 ||ns2.xxx-server.biz^
 ||ns2cqs.name.com^
 ||ns3.cl.bellsouth.chd.net.daraz.com^
+||ns3.datapipe.net^
 ||ns3.iad.cimedia.net^
 ||ns3.mobilecl.bellsouthmta.net.daraz.com^
 ||ns3.mobileeuropewestl.bellsouth.net.daraz.com^
@@ -27718,8 +27898,8 @@ ipinyou.com
 ||ny.meegmfio.in^
 ||nyandcompany.com.ssl.sc.omtrdc.net^
 ||nycc.az1.qualtrics.com^
-||nyceov.life.ru^
 ||nydy.stampedconcretedallas.net^
+||nyjentr.duckdns.org^
 ||nym1-ib.adnxs.com^
 ||nym1-mobile.adnxs.com^
 ||nypl.demdex.net^
@@ -27748,7 +27928,9 @@ ipinyou.com
 ||o6oxvugdl.com^
 ||oa.kjukenhi.in^
 ||oafishobservation.com^
+||oahu.shakaguide.com^
 ||oaljdplnjxxec.fun^
+||oamentyga.duckdns.org^
 ||oap.meegmfio.in^
 ||oascentral.appssavvy.com.31838.9155.302br.net^
 ||oascentral.thephoenix.com^
@@ -27873,6 +28055,7 @@ ipinyou.com
 ||ogi8msjar977kcn0jhfjouufdos371513523831.nuid.imrworldwide.com^
 ||ogladajfilmy.pl^
 ||oglalavoodoo.world^$popup
+||ogle.ca^
 ||ogloszenie-416533.shop^
 ||ogloszenie-943271.rest^
 ||ogloszenie-f8zq3rdyumw1lf26vjn9hs.org^
@@ -27924,6 +28107,7 @@ ipinyou.com
 ||ol7mpyv9avinq4litdv0.maherstcottage.com.au^
 ||olam-hamizug.co.il^
 ||olaroka.fashion^
+||old.agroonline.uz^
 ||old.bullydog.com^
 ||oldenburgertransport.com^
 ||oldproxy.com^
@@ -28047,6 +28231,7 @@ ipinyou.com
 ||ompol.vitrazza.com^
 ||oms.660citynews.com^
 ||oms.avira.com^
+||oms.marketwatch.com^
 ||oms.nhllive.com^
 ||oms.omnitv.ca^
 ||oms.rogersmedia.com^
@@ -28071,6 +28256,7 @@ ipinyou.com
 ||onedmp.com^
 ||onedollarstats.com^$third-party
 ||onedrive-outlook.com^
+||onedrive.liveviewuserauthaspx209hr28jh.srv155695.hoster-test.ru^
 ||onedrive.sharepoint.cn.com^
 ||onedriveclubproddm20041.blob.core.windows.net^
 ||onedriveclucprodbn20006.blob.core.windows.net^
@@ -28688,6 +28874,7 @@ ipinyou.com
 ||panther.codyhatfield.me^
 ||panura.narod.ru^
 ||paodequeijovodina.com.br^
+||paperspanda.com^
 ||paphzz.icu^
 ||papieska2.republika.pl^
 ||papillor-pl.doctordays.com^
@@ -28775,6 +28962,7 @@ ipinyou.com
 ||partneri.tradicne-feng-shui.sk^
 ||partneri.zburnik.cz^
 ||partners.etoro.com^$third-party
+||partners.nationalmortgageprofessional.com^
 ||partners.priceline.com^
 ||partners.privatehomeclips.com^
 ||partners.yobt.tv^
@@ -28784,6 +28972,7 @@ ipinyou.com
 ||partybusorlandoflorida.com^
 ||partyluder.com^
 ||partypianos.com^
+||partypoker.com^$third-party
 ||partyproxy.com^
 ||partyslut.com^
 ||paruxe.echoofflanding.com^
@@ -28890,8 +29079,10 @@ ipinyou.com
 ||pc-ntljj-whatsapp.com.cn^
 ||pc-rzblf-whatsapp.com.cn^
 ||pc-vfjhn-whatsapp.com.cn^
+||pc-vpvdv-whatsapp.com.cn^
 ||pc-xvvlp-whatsapp.com.cn^
 ||pc-zjtnr-whatsapp.com.cn^
+||pc-zxppb-whatsapp.com.cn^
 ||pc1.da.mgtv.com^
 ||pc768.com^
 ||pcantivirusprotection.angelfire.com^
@@ -28982,6 +29173,7 @@ ipinyou.com
 ||penisextendersblog.com^
 ||pensacolahomeinspections.com^
 ||pensionalert.com^
+||pensiuneastudio.ro^
 ||pensterpotions.com^
 ||penstersibling.cyou^
 ||pentekykloi.gr^
@@ -29134,7 +29326,6 @@ ipinyou.com
 ||phpvuln.kit.net^
 ||phqnzz.skatedeluxe.ch^
 ||phreedom.org^
-||phresh.cc^
 ||phsea.net^
 ||phsmobile.actonservice.com^
 ||phucuongtool.com^
@@ -29272,7 +29463,6 @@ ipinyou.com
 ||pixel2533.everesttech.net^
 ||pixel2565.everesttech.net^
 ||pixelhivezur.ru^
-||pixelkitap.com^
 ||pixelsparadise.com^
 ||pixelstream.org^
 ||pixelv2.wehaacdn.com^
@@ -29355,7 +29545,6 @@ ipinyou.com
 ||place-should.co.cc^
 ||placefork.omregency.com^
 ||placehold.it^
-||placenetworks.com^
 ||plainplace.com^
 ||plainstyle.co.uk^
 ||plan3.cl^
@@ -29531,6 +29720,7 @@ ipinyou.com
 ||popayan.cl^
 ||popblocker.com^
 ||popglob.com^
+||popgraphics.cl^
 ||poplarwindowsmasculine.com^
 ||popmansion.com^
 ||popmonetizer.net^
@@ -29583,7 +29773,7 @@ ipinyou.com
 ||portatrekos.com.br^
 ||portel-e-on-id.ygto.com^
 ||portraitquest.com^
-||portritech.com^
+||porziobursatil.com^
 ||posgradoune.edu.py^
 ||poshhateful.com^
 ||positivereinforcementdogtraining.com^
@@ -29936,7 +30126,6 @@ ipinyou.com
 ||promoresults.com.au^
 ||promos.libertyoffice.com^
 ||promos.zinli.com^
-||promostats.ru^
 ||promote.melangeandco.com^
 ||promotion-quicker.jftechsoft.com^
 ||promotionalthermometer.com^
@@ -30035,6 +30224,7 @@ ipinyou.com
 ||proxy.americaneaglegoods.com^
 ||proxy.artistsreproductions.com^
 ||proxy.batmobi.net^
+||proxy.bcahome.com^
 ||proxy.cnd.org^
 ||proxy.dkcondos.com^
 ||proxy.festivalbdbeja.net^
@@ -30106,7 +30296,6 @@ ipinyou.com
 ||prpnedir.com^
 ||prprocess.com^
 ||prrrr000x.blogfa.com^
-||prsfire.com^
 ||prtg44.smartadserver.com^
 ||prtord.com^$popup
 ||prtrackings.com^
@@ -30411,6 +30600,7 @@ ipinyou.com
 ||putlockertv.com^
 ||puzzle-recomd.zenkube.com^
 ||puzzleweb.ru^
+||pv.zdnet.com.cn^
 ||pvnrr.voluumtrk.com^
 ||pvpromotions.com^
 ||pvstat.html5.qq.com^
@@ -30434,6 +30624,7 @@ ipinyou.com
 ||py4.info^
 ||pyapl.esy.es^
 ||pycie.com^
+||pycx1tef.magalional.dpdns.org^
 ||pylqeypkcxzka.site^
 ||pylwex.com^
 ||pypiii-offic-punm.codeanyapp.com^
@@ -30502,7 +30693,6 @@ ipinyou.com
 ||qhsuo.missjessies.com^
 ||qianyaowu.com^
 ||qihpwojcazrje.website^
-||qihuo8.com^
 ||qinagt.dietbyebye.com^
 ||qiqu.uc.cn^
 ||qist.me^
@@ -30519,8 +30709,10 @@ ipinyou.com
 ||qkuogxqm.com^
 ||qkxsrj.evaneos.fr^
 ||qlcustomersupport.com^
+||qlfs010.com^
 ||qloved.cn^
 ||qloy.com^
+||qmco.ir^
 ||qmemxsreczhet.space^
 ||qmiiln.tower.jp^
 ||qmmoq.propanedepot.com^
@@ -30565,6 +30757,7 @@ ipinyou.com
 ||qtqv3cy43w.com^
 ||qu-o-ta-tion.droppages.com^
 ||qu96.com^
+||qua2025.duckdns.org^
 ||quackedchevage.top^
 ||quad.yadro.ru^
 ||quadsquad.co.kr^
@@ -30742,7 +30935,6 @@ ipinyou.com
 ||ragjohn.com^
 ||ragpq.stashtea.com^
 ||rahbaka.duckdns.org^
-||rahejavistaspune.com^
 ||rahmat-know.blogspot.com^
 ||rail1520.com^
 ||railwayreason.com^
@@ -30776,6 +30968,7 @@ ipinyou.com
 ||ranking-counter.de^$third-party
 ||ranking-toolz.de^
 ||ranking.younetmedia.com^
+||rankingpartner.com^$third-party
 ||ranks.com^
 ||ransomware-poolezoor.blogspot.com^
 ||rapanstrug.pro^
@@ -30876,6 +31069,7 @@ ipinyou.com
 ||real-homio-ai-soft.com^
 ||real-knowledge.co.cc^
 ||real-madrid-ista.lovingforever.pro^
+||real.dvanadva.ru^
 ||real.qualtrics.com^
 ||realcomm.actonservice.com^
 ||realfollow.com^
@@ -30922,6 +31116,7 @@ ipinyou.com
 ||recs.cxense.com^
 ||rectdskbg1.firebaseapp.com^
 ||rectdskbg1.web.app^
+||recurstwiscar.cfd^
 ||redalertrt.com^
 ||redbats.co.in^
 ||redbox.tt.omtrdc.net^
@@ -30998,6 +31193,7 @@ ipinyou.com
 ||refundify.info^
 ||refundverify.com^
 ||refzmztesliql.website^
+||reg.vn^
 ||regainwpattfcu.weebly.com^
 ||regalb2bsolutions.com^
 ||regallust.com^
@@ -31060,6 +31256,7 @@ ipinyou.com
 ||relliun.cn^
 ||reload-page-1000545454565.firebaseapp.com^
 ||reltrd.peteralexander.com.au^
+||rem0925.duckdns.org^
 ||remailtarget.com^
 ||remanetdioxime.shop^
 ||remarkablesurge.curtainsandbeddingstorehub.com^
@@ -31073,6 +31270,7 @@ ipinyou.com
 ||remotes.no-ip.biz^
 ||remotesupport.click^
 ||remotesupport.link^
+||remotiapp.com^
 ||removalmalware.servecounterstrike.com^
 ||removeallvirus.com^
 ||removearrest.com^
@@ -31081,7 +31279,6 @@ ipinyou.com
 ||renameproxy.co.cc^
 ||renanzinho2411.ddns.net^
 ||renataaspra.superchatlive.com^
-||renbridal.vn^
 ||renchtalwest.de^
 ||rendex-ai-app.com^
 ||rendivagptsystem.org^
@@ -31248,11 +31445,9 @@ ipinyou.com
 ||rewo-promo.shop^
 ||rexalfin-engine.com^
 ||rexburghousing.com^
-||reyata.com^
 ||reyden-x.com^
 ||rezonarex-app-solution.com^
 ||rfarm.net^
-||rfc2136.georgiareo.org^
 ||rfr0798655768.firebaseapp.com^
 ||rfxcel.actonservice.com^
 ||rg.mirtesen.ru^
@@ -31298,7 +31493,6 @@ ipinyou.com
 ||richequine.com^
 ||richwebmaster.com^
 ||rickjames.net^
-||rickzandvoort.nl^
 ||rico-monerix.net^
 ||ricogainetra.com^
 ||ricorpsico.pro^
@@ -31360,7 +31554,6 @@ ipinyou.com
 ||rivapp-log.firebaseapp.com^
 ||riven3.online^
 ||riventrustapp.com^
-||river.zhidao.baidu.com^
 ||riverhillswi.com^
 ||riverhit.com^$popup
 ||riverlandsfreerange.com.au^
@@ -31412,6 +31605,7 @@ ipinyou.com
 ||roba.nu^
 ||robelink.digital^
 ||robenitron.com^
+||robert-millan.de^
 ||robertovidanova.com.br^
 ||robertsguide.com^
 ||robinhuudilogin.gitbook.io^
@@ -31426,7 +31620,6 @@ ipinyou.com
 ||robo200alora-ai.com^
 ||robo81mentax.com^
 ||robocat.me^
-||robotchile.com^
 ||roboticsacademy.gr^
 ||robuxnow.net^
 ||roccawear.com^
@@ -31483,7 +31676,6 @@ ipinyou.com
 ||root-arhive.at.ua^
 ||rootbrand.divsce.com^
 ||rooton.in^
-||rootthemes.com^
 ||roseandcrownharpley.co.uk^
 ||roseaucs.com^
 ||roshan-astrologer.blogspot.com^
@@ -31678,6 +31870,7 @@ ipinyou.com
 ||rumt-zh.com^
 ||runanduseooo1.weebly.com^
 ||runconverge.com^$third-party
+||runetki.com^
 ||runetki.com^$third-party
 ||runixasena.live^
 ||runningdestructioncleanliness.com^
@@ -31734,6 +31927,7 @@ ipinyou.com
 ||s-logperf.vnexpress.net^
 ||s-man.support^
 ||s-pl.ru^
+||s.51shijuan.com^
 ||s.59pi.com^
 ||s.adroll.com^
 ||s.amazon-adsystem.com^
@@ -31750,7 +31944,6 @@ ipinyou.com
 ||s.flamboroughreview.com^
 ||s.g.l.inmobicdn.net^
 ||s.hhyggy.com^
-||s.holder.com.ua^
 ||s.insideottawavalley.com^
 ||s.jlminte.com^
 ||s.mgwcn.com^
@@ -31777,6 +31970,7 @@ ipinyou.com
 ||s1063389.ha0004.t.mydomain.zone^
 ||s17a.biz^
 ||s19.cnzz.com^
+||s2.hiapk.com^
 ||s2.imgmaster.net^
 ||s2.socialannex.com^
 ||s2025kys.info^
@@ -31930,6 +32124,7 @@ ipinyou.com
 ||samcryer.com^
 ||same.urmenu.ir^
 ||samemag.neutralmeditation.com^
+||samenart.com^
 ||samesticks.com^
 ||sametvilleresort.com^
 ||samhwaeng.com^
@@ -31969,7 +32164,6 @@ ipinyou.com
 ||sandylands.lancs.sch.uk^
 ||sanefautoroutes-clients.com^
 ||sangulotti.pro^
-||sanitize.nl^
 ||sanjiuv.com^
 ||sanjuantennisclub.com^
 ||sanl.footlocker.de^
@@ -32385,7 +32579,7 @@ ipinyou.com
 ||selvacorebit.com^
 ||selvin.5hark.net^
 ||sematext.com^
-||semerkandhotel.com^
+||semeandosaude.com.br^
 ||semgu.kz^
 ||semilavorati-per-dolci.it^
 ||seminario2014.acsoja.org.ar^
@@ -32421,6 +32615,7 @@ ipinyou.com
 ||seo.arxua.com^
 ||seo.marketo.com^
 ||seolytics01.webtrekk.net^
+||seoradar.ro^
 ||seosazi.ir^
 ||seosprint.net^
 ||seosubmissionlist.com^
@@ -32428,6 +32623,7 @@ ipinyou.com
 ||separateds.co.cc^
 ||sepimportaciones.com.uy^
 ||septgooseberry.cfd^
+||septodont.com.hr^
 ||serapca.com^
 ||serbamahir.com^
 ||sereanstanza.com^$popup
@@ -32715,6 +32911,7 @@ ipinyou.com
 ||sgtm.solutions2share.com^
 ||sgtm.summitthc.com^
 ||sgtm.sw.siemens.com^
+||sgtm.thetimes.co.uk^
 ||sgtm.traeger.com^
 ||sgtm.tristanstyle.com^
 ||sgtm.uk.luminox.com^
@@ -32738,7 +32935,6 @@ ipinyou.com
 ||shambala.mirtesen.ru^
 ||shameful-leader.com^
 ||shamimtanguin.com^
-||shanfeng99.com^
 ||shanfilms.com^
 ||shanghaiichiban.com^
 ||shangmei-test.oss-cn-beijing.aliyuncs.com^
@@ -32786,6 +32982,7 @@ ipinyou.com
 ||shazaonline.com^
 ||sheasstyle.com^
 ||sheepshankbvs.info^
+||sheetmusicarchive.com^
 ||shelbypublishing.actonservice.com^
 ||shellfutureinvestment-platform.com^
 ||shelterchildrenshome.org^
@@ -32794,6 +32991,7 @@ ipinyou.com
 ||shen.zgfszs.com^
 ||shenaaz.com^
 ||shenandoahnationalpark.com^
+||shenandoahvalleyapartments.com^
 ||shenanyibiao.002.sh.cn^
 ||shendadental.com^
 ||shengjieshiye.com^
@@ -32801,7 +32999,6 @@ ipinyou.com
 ||sheny.hyoo.co^
 ||shesclothing.com^
 ||shfoxs.vector-park.jp^
-||shhbndr.com^
 ||shi9ftt.info^
 ||shibagongfang.com^
 ||shiboyuan.com^
@@ -32859,7 +33056,6 @@ ipinyou.com
 ||shopcardvnmb.byethost7.com^
 ||shopdayroi.com^
 ||shopdung.com^
-||shopee.vntheme.com^
 ||shoplienquanuytin.com^
 ||shopmonthtravel.com^
 ||shoppy.gg^
@@ -32968,7 +33164,6 @@ ipinyou.com
 ||sindimvet.org.br^
 ||sinefekt.net^
 ||sinelmeca.com.ve^
-||sineplus.com.tr^
 ||sinfb.adsrvr.org^
 ||singaporedividendnews.com^
 ||singfableflux.pro^
@@ -32987,6 +33182,7 @@ ipinyou.com
 ||sipo.com^
 ||sippansy.com^
 ||siqjzh.incenza.com^
+||siqwqjza.m.yikanxiaoshuo.net^
 ||sirangbrick.com^
 ||sirec.in^
 ||sirfur.info^
@@ -33042,6 +33238,7 @@ ipinyou.com
 ||sjrtp4-cdn.marketo.com^
 ||sjrtp7-cdn.marketo.com^
 ||sjtestvip.marketo.com^
+||sjz10zh.com^
 ||sjzfhx.com^
 ||sk-gmtdmp.mookie1.com^
 ||sk.adocean.pl^
@@ -33120,6 +33317,7 @@ ipinyou.com
 ||slimxxxtubejvh.ddns.name^
 ||slimxxxtubeqfo.ddns.name^
 ||slimxxxtubexvq.ddns.name^
+||slimy.duckdns.org^
 ||slipstream.skyscanner.net^
 ||sloan3d.com^
 ||sloatfeud.qpon^
@@ -33144,6 +33342,7 @@ ipinyou.com
 ||sm.clinicadental-dentista.es^
 ||sm.domob.cn^
 ||sm.gestoria-contable.es^
+||sm.pastelerias-pastel.es^
 ||smaikheftily.cyou^
 ||smalidrags.pro^
 ||smallseotools.com^$third-party
@@ -33231,6 +33430,7 @@ ipinyou.com
 ||smetrics.boehringer-ingelheim.ie^
 ||smetrics.bravenhealth.com^
 ||smetrics.brewersfayre.co.uk^
+||smetrics.broadlinespoton.de^
 ||smetrics.brocade.com^
 ||smetrics.brumate.jp^
 ||smetrics.casinoonline.nl^
@@ -33401,6 +33601,7 @@ ipinyou.com
 ||smetrics.softcrylic.com^
 ||smetrics.solidigm.com^
 ||smetrics.solidigmtechnology.kr^
+||smetrics.sony.com.ni^
 ||smetrics.speedwaymotors.com^
 ||smetrics.sportsmansguide.com^
 ||smetrics.stressless.com^
@@ -33505,6 +33706,7 @@ ipinyou.com
 ||sneakme.net^
 ||sneakyresponsibility.pro^
 ||snejankagd.com^
+||sniff.visistat.com^
 ||sniffer.nitro-test-extern.otto.boreus.de^
 ||snillocsgaragegym.com^
 ||snipe.mizzuu.co^
@@ -33625,7 +33827,6 @@ ipinyou.com
 ||som.lesaintgeran.oneandonlyresorts.com^
 ||soma-ap-southeast-1.smaato.net^
 ||sombersquirrel.com^
-||somerdursun.com^
 ||somersettransportltd.co.uk^
 ||somethinglurking.duckdns.org^
 ||somethingright.co.cc^
@@ -33721,6 +33922,7 @@ ipinyou.com
 ||spacecoastcopy.com^
 ||spacesarchitects-ka.com^
 ||spainequity.com^
+||spaines.pw^
 ||spaintimenews.com^
 ||spamhaus.zoom.us^
 ||spankbot.net^
@@ -33880,6 +34082,7 @@ ipinyou.com
 ||spywareremove.com^
 ||spywarestop.com^
 ||spywarexp.co.cc^
+||sq59.cn^
 ||sqapyecbhvkdw.store^
 ||sqm-stock.digital^
 ||sqm.woniu.com^
@@ -33898,7 +34101,6 @@ ipinyou.com
 ||srglobal.actonservice.com^
 ||srglobalgroup.com^
 ||srgssr01.wt-eu02.net^
-||srgyapimuhendislik.com^
 ||sribargavanknits.com^
 ||srijancounselling.com^
 ||sriramakrishna.org^
@@ -34135,6 +34337,7 @@ ipinyou.com
 ||st-lb.sc-jpl.com^
 ||st.blogads.com^
 ||st.board.se^
+||st.devcodin.com^
 ||st.fileclip.cloud^
 ||st.justmovedubai.com^
 ||st.sageanalyst.net^
@@ -34206,11 +34409,13 @@ ipinyou.com
 ||stape.fulltbet.bet.br^
 ||stape.imperiojalecos.com.br^
 ||stape.inglescomrodrigo.com.br^
+||stape.kalan.com.br^
 ||stape.lauxbrinquedos.com.br^
 ||stape.lojadoriamirandaplus.com.br^
 ||stape.lotosport.com.br^
 ||stape.lp.assegura.com.br^
 ||stape.lp.lucasfelix.com^
+||stape.lulipaper.com.br^
 ||stape.movepark.co^
 ||stape.onabet.com^
 ||stape.pacific.edu^
@@ -34242,6 +34447,7 @@ ipinyou.com
 ||staronvexa-app.com^
 ||starpass.extafiles.com^
 ||starsafety.net^
+||starsgod.com^
 ||start-live11.mirtesen.ru^
 ||start.ptl.org^
 ||start.spark-thinking.com^
@@ -34336,7 +34542,7 @@ ipinyou.com
 ||static.mediataggus.com^
 ||static.mediaz.asia^
 ||static.mncametheya.org^
-||static.novanet.vn^
+||static.netadclick.com^
 ||static.opda.com^
 ||static.parsely.com^$domain=spiegel.de
 ||static.pixelpluses.com^
@@ -34522,6 +34728,7 @@ ipinyou.com
 ||stigi.co.cc^
 ||stiker.kl.com.ua^
 ||stilanzeigen.net^
+||stilvestimentar.ro^
 ||stimulprofit.com^
 ||stiroa.com^
 ||stitchnationyarn.com^
@@ -34638,6 +34845,7 @@ ipinyou.com
 ||strtgic.com^
 ||struq.com^
 ||strusgrego.pro^
+||strutitinca.ro^
 ||stt.tyro.com^
 ||sttac6k.info^
 ||student-cs.weebly.com^
@@ -34663,7 +34871,6 @@ ipinyou.com
 ||stw.dl-protect.link^
 ||styleglossy.shop^
 ||stylish-knife.com^
-||stylishwomans.com^
 ||styptpotho.pro^
 ||su.bdstatic.com^
 ||su1s3d.com^
@@ -34718,8 +34925,8 @@ ipinyou.com
 ||sukjdmsazsmuw.space^
 ||sulawan.com^
 ||sultan.nexoralux.com^
-||sultanmold.com^
 ||sultenworks.com^
+||sulumanco.duckdns.org^
 ||sulvtmap.xyz^
 ||sulyok-t.hu^
 ||sumatra.ai^$third-party
@@ -34832,7 +35039,6 @@ ipinyou.com
 ||suraj4security.com^
 ||surela-tradex-app.com^
 ||sureness.com^
-||sureyyaperde.com^
 ||surf.3vt.info^
 ||surf.f-games.org^
 ||surfaflac.co.cc^
@@ -34891,7 +35097,6 @@ ipinyou.com
 ||suspectlensemphasis.com^
 ||suspectplainrevulsion.com^
 ||sustainability.ricoh.co.za^
-||sutlucedondurma.com^
 ||suttonsurveyors.com.au^
 ||sv-va.liveclicker.net^
 ||sv.hotzcam.com^
@@ -34937,6 +35142,7 @@ ipinyou.com
 ||sweepafrica.com^
 ||sweet-lines-of-books.blogspot.com^
 ||sweetmasteringstudio.com^
+||sweetme.duckdns.org^
 ||sweetmoonmonth.com^
 ||swellalert.com^
 ||swetrix-api.vuetifyjs.com^
@@ -34991,6 +35197,7 @@ ipinyou.com
 ||swxun.com^
 ||sx1ls.voluumtrk.com^
 ||sxcdn1.herokuapp.com^
+||sxdanke.cn^
 ||sxipo.net^
 ||sxjfhh.coloradoan.com^
 ||sxjfhh.desmoinesregister.com^
@@ -35160,7 +35367,6 @@ ipinyou.com
 ||tagdelivery.mayoclinic.org.pc-mc.greylabeldelivery.com^
 ||tagespiegel.demdex.net^
 ||tagging.bourbon-sleeckx.com^
-||tagging.systemyzawieszen.pl^
 ||tagila.adk2x.com^
 ||tagman.britishairways.com^
 ||tagman.thomsonlakes.co.uk^
@@ -35221,7 +35427,6 @@ ipinyou.com
 ||talentforge.live^
 ||talentmedic.com^
 ||talentvillage.co.uk^
-||taleskampus.com^
 ||talhaenterprise.com.pk^
 ||talhome.com^
 ||tali.iad-03.braze.com^
@@ -35241,7 +35446,6 @@ ipinyou.com
 ||tammacorp.com^
 ||tamucehd.qualtrics.com^
 ||tan.pridnestrovie.com^
-||tancorcebu.com^
 ||tangerine-security.com^
 ||tangibletuna.pro^
 ||tanglewoodmotorcarfestival.maainc.com^
@@ -35395,6 +35599,7 @@ ipinyou.com
 ||tech909.g2afse.com^
 ||techaddom8132.com^
 ||techcroptech.com^
+||techdigest.skimlinks.com^
 ||techflex.com.pl^
 ||techguru.support^
 ||techlinepk.com^
@@ -35620,6 +35825,7 @@ ipinyou.com
 ||tempforyou.co.cc^
 ||templat65sldh.myfreesites.net^
 ||tempogeiso.site^
+||temporarydemocracies.com^
 ||temptradex-dfx.net^
 ||ten-4.ch^
 ||tena.ca.102.112.2o7.net^
@@ -35632,6 +35838,7 @@ ipinyou.com
 ||teneturconsequuntur.top^
 ||tengfeidn.com^
 ||tenmax.azurewebsites.net^
+||tenmonkey.com^
 ||tenonteam.store^
 ||tenpass.com^
 ||tenserrelents.com^
@@ -35653,6 +35860,7 @@ ipinyou.com
 ||terrifictc.net^
 ||terrumvinoteca.com^
 ||tervonexapro.net^
+||teryh.duckdns.org^
 ||tesai.org.py^
 ||tesla-coin-app.com^
 ||tesla-coin-app.net^
@@ -35690,7 +35898,6 @@ ipinyou.com
 ||tetd.douglas.ee^
 ||teteaffiche.stephanebillon.com^
 ||tetherai.net^
-||tetherlir.com^
 ||tetracebu.com^
 ||tetraoxygen.com^
 ||tex.trafex.net^
@@ -35712,7 +35919,6 @@ ipinyou.com
 ||tgm-services.com^
 ||tgp.com^
 ||tgp1.brazzersnetwork.com^$popup
-||tgrgru.com^
 ||tgsdiw.dedoles.de^
 ||tgsf1.shop^
 ||tgtag.io^
@@ -35781,7 +35987,6 @@ ipinyou.com
 ||theevermore.com.au^
 ||theexcitingsweetflirt.com^
 ||thefamouscurrybazaar.co.uk^
-||thefinancebooks.com^
 ||thefreeproxy.com^
 ||theftssavine.qpon^
 ||thegadgetcare.com^
@@ -35862,6 +36067,7 @@ ipinyou.com
 ||theyeahdavee.blogspot.com^
 ||theyellownewtab.com^$popup
 ||theyeyilou.top^
+||thietbimangcisco.com^
 ||thietkelogogoldidea.blogspot.com^
 ||think-rougo2008.com^
 ||think.onthe.io^
@@ -35891,6 +36097,7 @@ ipinyou.com
 ||throw-away.com^
 ||throwriann.pro^
 ||thrynithalis.com^
+||tht122.duckdns.org^
 ||thucchay.admicro.vn^
 ||thunderbit.io^
 ||thundersavior.com^
@@ -35956,9 +36163,11 @@ ipinyou.com
 ||tintersloggish.com^
 ||tintucnhanh.online^
 ||tiny-tools.com^
+||tiny18.net^
 ||tinyadz.com^
 ||tinydm.com^
 ||tinyprox.com^
+||tip.ub.ac.id^
 ||tipplermartian.cyou^
 ||tipsaboutmoney.com^
 ||tiptopboatdetail.com^
@@ -36144,6 +36353,7 @@ ipinyou.com
 ||topdatingshub.com^
 ||topdigitalservice.com^
 ||topfbcheats.com^
+||topfibre.com^
 ||topfreelikes.com^
 ||topglobalranking.weebly.com^
 ||topiaryrakely.help^
@@ -36188,7 +36398,6 @@ ipinyou.com
 ||totalmusic.mn^
 ||totalsigorta.com^
 ||totalsystemcare.com^
-||totaltasittanima.com^
 ||totheisody.pro^
 ||totkeinhindi.com^
 ||tourism.cowboystatedaily.com^
@@ -36211,7 +36420,6 @@ ipinyou.com
 ||tpke.hu^
 ||tpl1.realtracker.com^
 ||tpms.net.pl^
-||tpomembrane.com^
 ||tpu.2cnt.net^
 ||tpubwzwrhdcst.store^
 ||tpufck.orologio.it^
@@ -36239,6 +36447,7 @@ ipinyou.com
 ||tr.clickstay.com^
 ||tr.cnaf.espmp-nifr.net^
 ||tr.colsex.com^
+||tr.com-parc.sfr.fr^
 ||tr.communication.lamaisondesstartups.com^
 ||tr.contrats.cofinoga.fr^
 ||tr.ds.kakao.com^
@@ -36352,6 +36561,7 @@ ipinyou.com
 ||track.fyber.com^
 ||track.go.concur.com^
 ||track.grandegirls.com^
+||track.icheck.com.vn^
 ||track.ie-grandslamgaming.com^
 ||track.info.dermatologyadvisor.com^
 ||track.info.empr.com^
@@ -36362,6 +36572,7 @@ ipinyou.com
 ||track.list-finder.jp^
 ||track.mialltrack2.com^
 ||track.minus1lifestyle.com^
+||track.msadcenter.cxtv.com^
 ||track.mtraq121om2.com^
 ||track.mtraq141uae.com^
 ||track.muaystore.hr^
@@ -36491,7 +36702,6 @@ ipinyou.com
 ||tracking.threepiece.us^
 ||tracking.tidningenangermanland.se^
 ||tracking.trovaprezzi.it^
-||tracking.tvet-vietnam.org^
 ||tracking.ukwm.co.uk^
 ||tracking.umms.org^
 ||tracking.unrealengine.com^
@@ -36647,7 +36857,6 @@ ipinyou.com
 ||transvaluers.com^
 ||trapacontr.pro^
 ||trapasol.com^
-||travefinity.com^
 ||travel.netster.com^
 ||traveloriental.com^
 ||travelprogeny.com^
@@ -36696,6 +36905,7 @@ ipinyou.com
 ||trevorcameron.com^
 ||trevoxan.net^
 ||trezer-iq-start.pages.dev^
+||trezorappdesks.press^
 ||trezordevicesupport.com^
 ||trezorsafe.io^
 ||trezorsuteapp.com^
@@ -36897,6 +37107,7 @@ ipinyou.com
 ||tubeshor.my^
 ||tubline.com.br^
 ||tudatosanelok.com^
+||tudosobreseguros.org.br^
 ||tugill.com^
 ||tui.gtimg.com^
 ||tuiquanqiu.cn^
@@ -36906,6 +37117,7 @@ ipinyou.com
 ||tule-nexor.net^
 ||tulpyllbaseball.com^
 ||tune-up.site^
+||tuneuppro.com^
 ||tunion-api.m.taobao.com^
 ||tunnel.villasupreme.com^
 ||tunnelchip.co.cc^
@@ -36938,7 +37150,6 @@ ipinyou.com
 ||turismoruralmoratalla.es^
 ||turkey-pornhub.com^
 ||turkeyahalamry.com^
-||turkiyegonulluleri.com^
 ||turkizegoety.shop^
 ||turne.mistytrai1.ru^
 ||turnersports.112.2o7.net^
@@ -36952,6 +37163,7 @@ ipinyou.com
 ||tutelsolut.com^
 ||tutmenkopis.cfd^
 ||tutores.dogcascao.com.br^
+||tutorialhunk.com^
 ||tutorsglobe.com^
 ||tuvenoheai-system.com^
 ||tuvevx.agent-sana.com^
@@ -36963,7 +37175,6 @@ ipinyou.com
 ||tvine.site^
 ||tvn.adocean.pl^
 ||tvnwpj.utensileriaonline.it^
-||tvp-polska.dfirma.pl^
 ||tvpgapl.hit.gemius.pl^
 ||tvpsport.blogspot.com^
 ||tvsport.njoyapps.com^
@@ -37015,6 +37226,7 @@ ipinyou.com
 ||tycoondigital-ai-system.com^
 ||tyeddsa.duckdns.org^
 ||tyhure.shuttersdallastx.net^
+||tyjrjx.com^
 ||tyo-v4.pops.fastly-insights.com^
 ||typekit.net^
 ||typeknot.blog^
@@ -37110,6 +37322,7 @@ ipinyou.com
 ||uggslippers.cn^
 ||ugo3skfivtbpyn0-c.linkomo.fr^
 ||ugoderix.com^
+||ugolinigioielli.it^
 ||ugreshka14.ru^
 ||ugtgtrrvbt.w3spaces.com^
 ||uhabo.com^
@@ -37182,6 +37395,7 @@ ipinyou.com
 ||unblck.com^
 ||unblock-powered.co.cc^
 ||unblock-sites.info^
+||unblock.asia^
 ||unblock.freeoda.com^
 ||unblock.graniteapp.com^
 ||unblock123.com^
@@ -37282,6 +37496,7 @@ ipinyou.com
 ||unlockedsurf.com^
 ||unlockphone.me^
 ||unlocksign-in.co.za^
+||unlusheyespot.cyou^
 ||unm.emol.com^
 ||unmedconna.com^
 ||unmuflerci.pro^
@@ -37304,7 +37519,6 @@ ipinyou.com
 ||unwavering247coupons.info^
 ||unwelcometry.pro^
 ||unyzea.aboutyou.sk^
-||uoalhuda.edu.iq^
 ||uomomo.tmweb.ru^
 ||up.fall.lt^
 ||up1.superadbox.com^
@@ -37316,7 +37530,6 @@ ipinyou.com
 ||updatassesion.weebly.com^
 ||update-fiche-relay.info^
 ||update-megaeth.com^
-||updatedrelease.com^
 ||updateluiss.weebly.com^
 ||updatenewsalways.com^
 ||updatenewsnetwork.live^
@@ -37331,7 +37544,6 @@ ipinyou.com
 ||upgradeneeded.com^
 ||upgradetelkomaccount.weebly.com^
 ||uphurlautem.world^
-||uphzxdv.cn^
 ||upjia.spankbanglive.com^
 ||upjvoid.bluedotsafety.com^
 ||upliftsearch.com^
@@ -37376,7 +37588,6 @@ ipinyou.com
 ||urlplay.com^
 ||urlz.fr^
 ||urogynecology.in^
-||urologyinturkiye.com^
 ||uroxacasuper.digital^
 ||urozhayna-gryadka.narod.ru^
 ||urs.microsoft.com^
@@ -37484,6 +37695,7 @@ ipinyou.com
 ||utteredadisappointe.org^
 ||uttyler.az1.qualtrics.com^
 ||utubepwhml.com^
+||uu02.com^
 ||uu094.top^
 ||uubzxk.bebe-mall.jp^
 ||uukulv.webwave.dev^
@@ -37523,6 +37735,7 @@ ipinyou.com
 ||v1-undex.top^
 ||v2-interaction.integration.net.daraz.com^
 ||v2-keele-nnw-leis-mc-leis.net.daraz.com^
+||v2.buydiamond.hk^
 ||v2.panel.clickadu.com^
 ||v5kt.com^
 ||v7.cdn.onthe.io^
@@ -37656,6 +37869,7 @@ ipinyou.com
 ||veltrio-lucro.net^
 ||veltrixfin-ai.com^
 ||veltrixfin.ru^
+||velum.biz^
 ||veluma.top^
 ||vemexim.com^
 ||vendexo.com^
@@ -37680,9 +37894,7 @@ ipinyou.com
 ||verdict.abc.go.com^
 ||verdienen-sie500-soft.com^
 ||verdienensie500.com^
-||verduravita.com^
 ||verfddonecnbm.firebaseapp.com^
-||vergicezasi.com^
 ||veridianmatrixai.ru^
 ||veridianmatrixaiapp.net^
 ||verificationgloryrenaissance.com^
@@ -37716,7 +37928,6 @@ ipinyou.com
 ||vermontteddybear.com.102.112.2o7.net^
 ||vernadicke.pro^
 ||verniallon.pro^
-||vernyomasgondok.hu^
 ||verocapital.uno^
 ||veroprtafa34sada.start.page^
 ||versionslaughter.com^
@@ -37730,6 +37941,7 @@ ipinyou.com
 ||vestacash.net^
 ||vesuvinaqueity.top^
 ||vet-us-east-1.track.smaato.net^
+||vetchsoda.org^
 ||veterancommentary.com^
 ||veterans-cms.pvbproperties.com.ph^
 ||veterantruckingjobs.com^
@@ -37805,7 +38017,6 @@ ipinyou.com
 ||vie-zen.com^
 ||viento.pro^
 ||vietcombank-ibank.weebly.com^
-||vietjetair.net.vn^
 ||vietmanh36.blogspot.com^
 ||vietnaminvestmentsupport.com^
 ||view.actus.laplateforme.com^
@@ -38075,6 +38286,7 @@ ipinyou.com
 ||view.email-reverie.com^
 ||view.email-uwcentralcarolinas.org^
 ||view.email.airwick.co.uk^
+||view.email.artofskincare.com^
 ||view.email.blackanddecker.com.au^
 ||view.email.bloomberg.com^
 ||view.email.bylinebank.com^
@@ -38214,6 +38426,7 @@ ipinyou.com
 ||vimalbearings.com^
 ||vimori.com^
 ||vimscbe.ac.in^
+||vimxpd.calcadoslaroche.com.br^
 ||vincentsitaliancuisine.com^
 ||vincero-watches.pxf.io^
 ||vinci-infos.com^
@@ -38350,6 +38563,7 @@ ipinyou.com
 ||vkfzlcidxisdw.store^
 ||vkkv.hop.ru^
 ||vklljvmqyvjj.top^
+||vkontakte-84.byethost6.com^
 ||vkontakte.webservis.ru^
 ||vksales.com^
 ||vkscdg.solocruceros.com^
@@ -38421,7 +38635,6 @@ ipinyou.com
 ||vondratexapp.com^
 ||vonvdn.garden.ne.jp^
 ||vori-frontoffice.com^
-||vornadofrance.fr^
 ||vornyxiumdrive.net^
 ||vortex-bitriver-tech.com^
 ||vortex-echoai.com^
@@ -38573,6 +38786,7 @@ ipinyou.com
 ||wallet-login.com^
 ||wallet-wero-france-eu.vercel.app^
 ||walletmoney.net^
+||wallingfordschools.okph.com^
 ||wallmirrors.in^
 ||wallpaper-service-sg.allawnos.com^
 ||wallpaper.cdn.pandora.xiaomi.com^
@@ -38582,6 +38796,8 @@ ipinyou.com
 ||walmartdealalerts.com^
 ||walmartmx.evergage.com^
 ||wamcash.com^$third-party
+||wan.360.cn^
+||wan.rising.cn^
 ||wanbu.com.cn^
 ||wanpaku-nagoya.com^
 ||want-some-push.com^
@@ -38692,7 +38908,6 @@ ipinyou.com
 ||web-safe-trezor.pages.dev^
 ||web-whatsapp.ru^
 ||web-zim-log.weebly.com^
-||web.care.baptist-health.org^
 ||web.cdn.openinstall.io^
 ||web.data.pplive.com^
 ||web.delighted.com^
@@ -38781,6 +38996,7 @@ ipinyou.com
 ||webpush.reachyield.com^
 ||webqr.com^
 ||webr.emv2.com^
+||webreveal.com^
 ||webroot.112.2o7.net^
 ||webrootcustomerservicesite.wordpress.com^
 ||webrootgeeksquad.net^
@@ -38794,6 +39010,7 @@ ipinyou.com
 ||websearch.searchesplace.info^
 ||websearch.searchfix.info^
 ||websearch.searchsunmy.info^
+||websearch.wisesearch.info^
 ||webseeds.com^
 ||websense.hb.omtrdc.net^
 ||webserenestories.com^
@@ -38874,7 +39091,6 @@ ipinyou.com
 ||werzy.com^
 ||wesll.com^
 ||wesmallproclaim.com^
-||wessamalatrash.com^
 ||west-eu-0156743.medirect.com.mt^
 ||west.ads.simpli.fi^
 ||westads.simpli.fi^
@@ -38887,6 +39103,8 @@ ipinyou.com
 ||westmerpaycore-software.com^
 ||westwood-care.com^
 ||wethu.net^
+||wetjetcutting.com.au^
+||wetransfiles.duckdns.org^
 ||wetsurf.co.cc^
 ||wewewecodesadwewesadwe.weebly.com^
 ||wez-bon.24.eu^
@@ -38897,6 +39115,7 @@ ipinyou.com
 ||wfs04.wapka.mobi^
 ||wghoubdaxpsik.site^
 ||wglxvkpybhnxhfv.com^
+||wgwuhauaqcrx.com^
 ||wh3.crusoe.net^
 ||whatsaappp.com^
 ||whatsapp-htae.ink^
@@ -38929,8 +39148,8 @@ ipinyou.com
 ||whoalinseed.shop^
 ||wholesale.proximus.be^
 ||whollyindependentlylooking.com^
+||whorim.duckdns.org^
 ||whouseem.com^
-||whtasappa.com^
 ||whvxstats.com^
 ||wiadomo.com^
 ||wiadomosci-24today.net^
@@ -38969,6 +39188,7 @@ ipinyou.com
 ||wildflowerhairsalon.com^
 ||wildginger.com^
 ||wildlifelink.com.au^
+||wildlifer.duckdns.org^
 ||wildlifesanctuary291d.info^
 ||wildlogic.com^
 ||wildspeak.com^
@@ -39064,7 +39284,6 @@ ipinyou.com
 ||wjvusw.shop^
 ||wkctj.baidu.com^
 ||wkjyczte.shop^
-||wkmedlipplearningprod.112.2o7.net^
 ||wksrx.cn^
 ||wkyiwsiryjrke.space^
 ||wladika.at^
@@ -39253,7 +39472,6 @@ ipinyou.com
 ||www.008.free-counter.co.uk^
 ||www.01233138.com^
 ||www.0202.com.tw^
-||www.0769ds.cn^
 ||www.0s.or3ws5dumvzc4y3pnu.slopty.ru^
 ||www.1-2-dance.de^
 ||www.1-tech.brussels^
@@ -39266,11 +39484,11 @@ ipinyou.com
 ||www.10843.url.016272.com^
 ||www.11153138.com^
 ||www.11170.url.016272.com^
+||www.11179.url.7wkw.com^
 ||www.111mi.com^
 ||www.1121xsj.com^
 ||www.11225.url.7wkw.com^
 ||www.11603.url.xaskm.com^
-||www.1171xsj.com^
 ||www.123-tracker.com^
 ||www.123count.com^
 ||www.123counter.superstats.com^
@@ -39281,16 +39499,17 @@ ipinyou.com
 ||www.1311xsj.com^
 ||www.13437.url.7wkw.com^
 ||www.1344.info^
+||www.13461.url.7wkw.com^
 ||www.13522.url.7wkw.com^
 ||www.13579.url.7wkw.com^
-||www.136136.net^
-||www.14032.url.7wkw.com^
 ||www.14097.url.xaskm.com^
 ||www.147av.com^
 ||www.15038.url.xaskm.com^
+||www.15039.url.7wkw.com^
 ||www.15058.url.xaskm.com^
 ||www.150teengalleries.com^
 ||www.1511xsj.com^
+||www.1515er.duckdns.org^
 ||www.15cen.redirectvoluum.com^
 ||www.15minutemanifestation-tr.com^
 ||www.163126netease.alarabiasa.com^
@@ -39298,12 +39517,12 @@ ipinyou.com
 ||www.16minutesaday.com^
 ||www.178stu.com^
 ||www.17ebook.com^
+||www.18888r.com^
 ||www.192-168-1-1-help.com^
 ||www.1eyesex.com^
 ||www.20-20.com^
 ||www.2014-canadagooseoutlet.blogspot.com^
 ||www.2014secimleriturkiye.blogspot.com^
-||www.20268.url.7wkw.com^
 ||www.20oktobarsivac.net^
 ||www.21eventi.com^
 ||www.234movies.com^
@@ -39341,6 +39560,7 @@ ipinyou.com
 ||www.31383331.com^
 ||www.31383455.com^
 ||www.31384123.com^
+||www.31384222.com^
 ||www.31384440.com^
 ||www.31384446.com^
 ||www.31385234.com^
@@ -39354,7 +39574,6 @@ ipinyou.com
 ||www.31387778.com^
 ||www.31387893.com^
 ||www.31387896.com^
-||www.31388886.com^
 ||www.31389000.com^
 ||www.3227697.notify6.com^
 ||www.328364365.com^
@@ -39398,6 +39617,7 @@ ipinyou.com
 ||www.56530006.com^
 ||www.592piaoyi.com^
 ||www.59cn.cn^
+||www.5ips.net^
 ||www.5miner.com^
 ||www.5philo.com^
 ||www.5thblock.com^
@@ -39410,7 +39630,9 @@ ipinyou.com
 ||www.807518.com^
 ||www.809.amazon.big-billion-day.in^
 ||www.80bpm.net^
+||www.82859088.com^
 ||www.855ai.com^
+||www.88commerce.com^
 ||www.88fz.top^
 ||www.8webs.com^
 ||www.8x02.com^
@@ -39430,8 +39652,8 @@ ipinyou.com
 ||www.a0300934.xsph.ru^
 ||www.a4dable.co.za^
 ||www.a7laflam.blogspot.com^
+||www.aaftin.com^
 ||www.aantivir.de^
-||www.aaremint.com^
 ||www.aaronrodrigo.com^
 ||www.aaroucainteriores.com^
 ||www.aavis.com^
@@ -39490,7 +39712,6 @@ ipinyou.com
 ||www.adams1518.com^
 ||www.adap.tv^
 ||www.adaraguatins.org.br^
-||www.adatecnologia.com.br^
 ||www.adblade.com^
 ||www.adbrite.com^
 ||www.addgigs.com^
@@ -39556,6 +39777,7 @@ ipinyou.com
 ||www.afamafaial.org^
 ||www.afbompastor.pt^
 ||www.affairfantasy.com^
+||www.affiliateshowcase.com^
 ||www.affiliatetracking.com^
 ||www.affinitycorp.biz^
 ||www.affordablelifeandhealthcare.com^
@@ -39630,6 +39852,7 @@ ipinyou.com
 ||www.alkmaarculinairplaza.nl^
 ||www.all-best.pro^
 ||www.all-infowow.ru^
+||www.all-player.pl^
 ||www.all4mums.ru^
 ||www.allamain.duckdns.org^
 ||www.allcampers.de^
@@ -39672,6 +39895,7 @@ ipinyou.com
 ||www.alsul.com^
 ||www.altitudeshoes.com^
 ||www.altopp.com.br^
+||www.altosenlaciudad.com^
 ||www.aluga-design.de^
 ||www.alvafreight.com^
 ||www.alvarcor.com^
@@ -39690,7 +39914,6 @@ ipinyou.com
 ||www.amazonkindlehelp.blogspot.com^
 ||www.amazonprint.ro^
 ||www.amazonsuspensionapple.com^
-||www.ambrella.in^
 ||www.ambrosecourt.com^
 ||www.amcs.net.au^
 ||www.amcsafety.co.uk^
@@ -39719,7 +39942,6 @@ ipinyou.com
 ||www.analmatureorgies.net^
 ||www.anarttik.com^
 ||www.anathor.com^
-||www.anchorministries.com^
 ||www.andbeyond.media^
 ||www.andremessika.com^
 ||www.andrey-256.narod.ru^
@@ -39737,11 +39959,13 @@ ipinyou.com
 ||www.anjdesign.ca^
 ||www.ankarafestival.com^
 ||www.ankaramehteri.com^
+||www.ankaratemizlik.web.tr^
 ||www.anm.mx^
 ||www.annavovk.ru^
 ||www.annencadre.fr^
 ||www.annevillard.fr^
 ||www.annualconsumersurvey.com^
+||www.anonyklax.duckdns.org^
 ||www.anonymoxmyanmar.blogspot.com^
 ||www.ansinsoko.com^
 ||www.answerstoprayer.org^
@@ -39756,7 +39980,6 @@ ipinyou.com
 ||www.antivirusguides.com^
 ||www.antivirusshops.com^
 ||www.antivirusspyware.com^
-||www.antivirussuite.com^
 ||www.antivirussuppornumber.blogspot.com^
 ||www.antivirussupport-number.com^
 ||www.antivirussupportnumbersite.wordpress.com^
@@ -39767,18 +39990,18 @@ ipinyou.com
 ||www.anvilifestyle.com^
 ||www.anwv.it^
 ||www.any.gs^
-||www.anygift.com.cn^
 ||www.anymec.com^
 ||www.anypbvojndegpnm.com^
 ||www.anzotherm.hu^
 ||www.aofflife.com^
-||www.aoxwindows.com^
 ||www.ap8898.com^
+||www.apache202.duckdns.org^
 ||www.apaenh.com.br^
 ||www.apcngassociation.com^
 ||www.apenologia.pt^
 ||www.apex6.com^
 ||www.apextop.cc^
+||www.apextravel.com.br^
 ||www.api-spotify.net^
 ||www.apioi.com^
 ||www.apkfull2016.blogspot.com^
@@ -39833,12 +40056,12 @@ ipinyou.com
 ||www.apwvx.adsbtrack.com^
 ||www.aqualuna.jp^
 ||www.aquastor.ru^
+||www.arabmoney.duckdns.org^
 ||www.arachnoid.net.au^
 ||www.arai-waste.com^
 ||www.aramon.se^
 ||www.arbolonline.org^
 ||www.arc-sec.net^
-||www.arcent.com.tr^
 ||www.arch-tech.net^
 ||www.architectureetenvironnement.ma^
 ||www.arcsin.se^
@@ -39854,10 +40077,10 @@ ipinyou.com
 ||www.aricaonline.cl^
 ||www.aricigroup.com^
 ||www.aristapalembang.com^
-||www.aristodiyeti.com.tr^
 ||www.ariwadubstore.com^
 ||www.arizonabyways.com^
 ||www.arlab21.com^
+||www.armanoizoamani.duckdns.org^
 ||www.arnaudnicolas.fr^
 ||www.arranger.net.pl^
 ||www.arriflesupply.com^
@@ -39918,6 +40141,7 @@ ipinyou.com
 ||www.attorneyone.com^
 ||www.atxdoorcf.com^
 ||www.atyrauspidcentre.kz^
+||www.auctionwhiz.com^
 ||www.audio-pa-service.de^
 ||www.audioads.de^
 ||www.audiosistemascr.com^
@@ -39931,7 +40155,6 @@ ipinyou.com
 ||www.ausf18.org.au^
 ||www.australiaadventures.com^
 ||www.australiansafetypartners.com.au^
-||www.australiansupported.com^
 ||www.austroflamm.by^
 ||www.author-help.uk^
 ||www.autizmus.n1.hu^
@@ -39949,7 +40172,6 @@ ipinyou.com
 ||www.avangard30.ru^
 ||www.avantinvest.com^
 ||www.avarthrel.org^
-||www.avasttech.com^
 ||www.avatarcash.com^
 ||www.avenue030.com^
 ||www.averyandgreig.com^
@@ -39971,6 +40193,7 @@ ipinyou.com
 ||www.axacrypto.com^
 ||www.axelarigato.com.tw^
 ||www.axens-archi.com^
+||www.axiomauto.ru^
 ||www.axiotas.ro^
 ||www.axodefrance.net^
 ||www.axodefrance.org^
@@ -39978,6 +40201,7 @@ ipinyou.com
 ||www.ayot.ir^
 ||www.ayselweb.com^
 ||www.azhubao.com^
+||www.azin-forge.ir^
 ||www.azmodelsearch.com^
 ||www.b-mus.blogspot.com^
 ||www.b.hubhubhub.name^
@@ -39985,6 +40209,7 @@ ipinyou.com
 ||www.b30b.com^
 ||www.b3host.com^
 ||www.baat-cheet.com^
+||www.baathman9191.duckdns.org^
 ||www.babads.com^
 ||www.babeaddicts.com^
 ||www.babelon.com^
@@ -40013,6 +40238,7 @@ ipinyou.com
 ||www.banct2atantaydo.blogspot.com^
 ||www.bandfromtinder.com^
 ||www.bandoobe.com^
+||www.bangedgirls.com^
 ||www.banhtv.org^
 ||www.bank.barclays.co.uk.id3432534641f6a850a564167e47e1fdd0fdacef8342d42f0ad67769616399.vipporno.info^
 ||www.banner-rotation.com^
@@ -40053,6 +40279,7 @@ ipinyou.com
 ||www.bedavasubliminalmuzikler.blogspot.com^
 ||www.bedroomtrends.com.au^
 ||www.beeonline.cz^
+||www.begen.co^
 ||www.beggalas.com^
 ||www.beihilfekrankenversicherung.org^
 ||www.bekker.kz^
@@ -40084,6 +40311,7 @@ ipinyou.com
 ||www.bestchoiceplumbingincga.com^
 ||www.bestdealwindows.net^
 ||www.besthelpline.com^
+||www.besthitsnow.com^
 ||www.bestofpanorama.ws^
 ||www.bestpcsupport.com^
 ||www.bestsearchpage.com^
@@ -40107,6 +40335,7 @@ ipinyou.com
 ||www.bharatmrida.com^
 ||www.bhghotels.com.au^
 ||www.bhgsac.com^
+||www.bianca-maria.ro^
 ||www.biblechapel.net^
 ||www.bibliofarma.com^
 ||www.biesbetiop.com^
@@ -40190,6 +40419,7 @@ ipinyou.com
 ||www.blockchainmarketalerts.com^
 ||www.blog.dreamphoto.pl^
 ||www.blog.energybidder.com^
+||www.blog.expensesharing.com^
 ||www.blog.location-et-vacances.com^
 ||www.blog.tibetcul.internetdocss.com^
 ||www.blogbbw.net^
@@ -40217,7 +40447,6 @@ ipinyou.com
 ||www.bonusmonthly.blogspot.com^
 ||www.bonzibuddy.tk^
 ||www.boobscafe.com^
-||www.bookskys.com^
 ||www.booktnails.com^
 ||www.bookyouroffice.com^
 ||www.boomessays.com^
@@ -40317,10 +40546,9 @@ ipinyou.com
 ||www.buszujacwcodziennosci.com^
 ||www.butlersbrand.com^
 ||www.buttons.nl^
+||www.buuajs.duckdns.org^
 ||www.buy-accs.ru^
 ||www.buy-custom-essay.weebly.com^
-||www.buy-sell-technologies.info^
-||www.buy-sell-technologies.tech^
 ||www.buyandenjoy.pk^
 ||www.buycryptocurrency.biz^
 ||www.buyfastlike.com^
@@ -40383,6 +40611,7 @@ ipinyou.com
 ||www.canopywise.com^
 ||www.canozal.com^
 ||www.cantrill.net^
+||www.caodangyduoccantho.com^
 ||www.caolano.com^
 ||www.capachomoreno.com^
 ||www.capital-pros.com^
@@ -40503,7 +40732,6 @@ ipinyou.com
 ||www.chargedefense.com^
 ||www.chargeforward.net^
 ||www.chargemaster.net^
-||www.charles20020.duckdns.org^
 ||www.charlieboles.net^
 ||www.charmal.com^
 ||www.charmappleid.com^
@@ -40558,12 +40786,12 @@ ipinyou.com
 ||www.chuanzhangg1.oss-cn-shanghai.aliyuncs.com^
 ||www.chubb-nis.gb.net^
 ||www.chudobiser.narod.ru^
-||www.chuyenphatnhanhsbay.com^
 ||www.ci72190.tmweb.ru^
 ||www.cimipopoli.it^
 ||www.cincinnatizoo.com^
 ||www.ciobi.ca^
 ||www.cir6.com^
+||www.cirad.or.id^
 ||www.cishop.co.kr^
 ||www.citizenssupportingnewsom.org^
 ||www.citycom.com.br^
@@ -40574,11 +40802,11 @@ ipinyou.com
 ||www.cizgifilm-evi.blogspot.com^
 ||www.cjellis.com^
 ||www.cjlconsults.com^
+||www.claireritter.cmail-oln040092069015.outbound.protection.sketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||www.clarencetips.com^
 ||www.claries.com^
 ||www.claritygrowthsolutions.com^
 ||www.clashofclan-hack.com^
-||www.classicink.biz^
 ||www.classiclouisvuittons.com^
 ||www.classicwedding.net^
 ||www.classwatch.pro^
@@ -40807,7 +41035,6 @@ ipinyou.com
 ||www.ctbenefit.com^
 ||www.ctboiler.com^
 ||www.cuantosexo.com^
-||www.cuartomenguante.org^
 ||www.cubantechnologycave.co.za^
 ||www.cuerosecoi.cl^
 ||www.cufe.cc^
@@ -40826,7 +41053,6 @@ ipinyou.com
 ||www.customer-support-number.com^
 ||www.customercare-email.com^
 ||www.customercaresupport.online^
-||www.customeroutlook.com^
 ||www.customertarget.com^
 ||www.customs.ly^
 ||www.cuzcopainting.com^
@@ -40846,6 +41072,8 @@ ipinyou.com
 ||www.cz-ct.cn^
 ||www.czajkowski.cba.pl^
 ||www.czmj.com^
+||www.czypdf.com^
+||www.d3co4r.duckdns.org^
 ||www.d5uhax3e.myutilitydomain.com^
 ||www.daciapolovnidelovi.com^
 ||www.daddylikesthemyoung.com^
@@ -40867,7 +41095,6 @@ ipinyou.com
 ||www.danielpetrisor.ro^
 ||www.danlinkfreighters.com^
 ||www.dannegru.com^
-||www.dantecar.com^
 ||www.danylevych.com^
 ||www.danza.art.pl^
 ||www.daokers.org^
@@ -40985,6 +41212,7 @@ ipinyou.com
 ||www.df.com.tr^
 ||www.df9jw.homepage.t-online.de^
 ||www.dfhdsfhhfdhdf5s6h5.blogspot.com.tr^
+||www.dftw.duckdns.org^
 ||www.dgbairui.com^
 ||www.dgbrother.com.cn^
 ||www.dgjinchijixie168.com^
@@ -41066,6 +41294,7 @@ ipinyou.com
 ||www.domainecantevigne.com^
 ||www.domosfederalismo.com^
 ||www.domproekt56.ru^
+||www.dong-aeng.co.kr^
 ||www.doninfo.ru^
 ||www.donlinobrujopactado.com^
 ||www.dontworrychickencurry.com^
@@ -41121,7 +41350,6 @@ ipinyou.com
 ||www.dspgarments.com^
 ||www.dstv-cape.co.za^
 ||www.duaistikharaforlovemarriage.wordpress.com^
-||www.duanguavietnam.com^
 ||www.dubaicreekstriders.com^
 ||www.dubbadawg.com^
 ||www.ducknet.co.uk^
@@ -41134,16 +41362,13 @@ ipinyou.com
 ||www.duners.com^
 ||www.dusallegro-pl.shop^
 ||www.dustintwiggs.com^
-||www.dutyfreecosmetics.com^
 ||www.dvcworld.com^
 ||www.dwellearth.com^
 ||www.dwilawyernearme.com^
 ||www.dynamicrocksupport.com^
-||www.dyzgw.com.cn^
 ||www.dzhc.com^
 ||www.dziennik-polski.x9.eu^
 ||www.dzion.com^
-||www.e-code.xyz^
 ||www.e-ddos.appspot.com^
 ||www.e-hpaces.ero-advertising.com^
 ||www.e-mailadress.com^
@@ -41285,7 +41510,6 @@ ipinyou.com
 ||www.epdahaa.fr^
 ||www.ephac.com^
 ||www.epicbot.com^
-||www.epicbytes.com^
 ||www.episodiako.blogspot.com^
 ||www.epmedia.it^
 ||www.epsonsupports.com^
@@ -41327,7 +41551,6 @@ ipinyou.com
 ||www.essayscouncil.com^
 ||www.essaysource.com^
 ||www.essaywriting-servicereviews.com^
-||www.essentialoutdoor.com^
 ||www.essexgardeningservices.co.uk^
 ||www.essperu.com^
 ||www.esstu.ru^
@@ -41335,7 +41558,6 @@ ipinyou.com
 ||www.estanciasargentinas.tur.ar^
 ||www.estelacasanova.com^
 ||www.estudiofeldman.com.ar^
-||www.estudiorivas.com.py^
 ||www.esun01.com.tw^
 ||www.eth-airdrop.com^
 ||www.eth-give-away.webz.cz^
@@ -41359,7 +41581,6 @@ ipinyou.com
 ||www.europeansleepcenter.fr^
 ||www.evan46gmpreshjra.duckdns.org^
 ||www.evangelizacion.com.ar^
-||www.evaxinh.edu.vn^
 ||www.evcpa.com^
 ||www.evencel.ro^
 ||www.evenyumbroadlywitharmoire.com^
@@ -41443,7 +41664,6 @@ ipinyou.com
 ||www.familyfence.net^
 ||www.fanatecwheel.com^
 ||www.fangmwww.watchdogdns.duckdns.orgwatchdogdns.duckdns.org^
-||www.fannal.com^
 ||www.fansdf.superweb.ws^
 ||www.fantastechs.com^
 ||www.fantasyhost.com.bd^
@@ -41468,13 +41688,16 @@ ipinyou.com
 ||www.fatima57.hookupdating33.com^
 ||www.fb-de.at.ua^
 ||www.fbk-stepankovice.wz.cz^
+||www.fdcgl.org^
 ||www.fdfamen.com^
+||www.fdns.duckdns.org^
 ||www.fedfox.com^
 ||www.feed.engage.im^
 ||www.feedback.notifysrv.com^
 ||www.feelgoodpainclinic.com^
 ||www.feelingconduite.com^
 ||www.feigele.com^
+||www.feiyang163.com^
 ||www.felicia90tee.blogspot.com^
 ||www.femdomfetish.blogspot.com^
 ||www.fenglingshiye.com^
@@ -41516,7 +41739,6 @@ ipinyou.com
 ||www.filpafederation.gr^
 ||www.finallyfreeof.gb.net^
 ||www.finaltouchpc.com^
-||www.financial.duckdns.org^
 ||www.financialmarketsworld.com^
 ||www.find-help.info^
 ||www.findafuk.com^
@@ -41568,7 +41790,6 @@ ipinyou.com
 ||www.fogpotlas.hu^
 ||www.fokusfelag.is^
 ||www.followercentral.com^
-||www.followersbooster.com^
 ||www.followersite.com^
 ||www.followig.com^
 ||www.food-health-book.blogspot.com^
@@ -41637,7 +41858,6 @@ ipinyou.com
 ||www.freeshoppingtool.com^
 ||www.freetechsupportweb.wordpress.com^
 ||www.freetrojanbotnet.com^
-||www.freewha.com^
 ||www.frein.org^
 ||www.freshbrushstand.com^
 ||www.frestour.com^
@@ -41679,6 +41899,7 @@ ipinyou.com
 ||www.futureperfectpublishing.com^
 ||www.futurerobotics.in^
 ||www.fuvigo.com^
+||www.fuzzysideup.co^
 ||www.fy8c.com^
 ||www.fysiotherapiemaasdijk.nl^
 ||www.fyxm.net^
@@ -41815,7 +42036,6 @@ ipinyou.com
 ||www.glessyturismo.com.br^
 ||www.glinti.com^
 ||www.glitterbomb.com^
-||www.global-asia.uz^
 ||www.global-engineering.com.mx^
 ||www.globalautoliners.com^
 ||www.globalbabies.net^
@@ -41982,7 +42202,6 @@ ipinyou.com
 ||www.hailthepilot.com^
 ||www.halenetworks.com^
 ||www.halfpricebook.co.kr^
-||www.haliltugtepe.com^
 ||www.halocom.co.za^
 ||www.hamiltontenantssolidarity.ca^
 ||www.hamsatours.com^
@@ -42002,9 +42221,9 @@ ipinyou.com
 ||www.happylivinginteriors.com^
 ||www.happymen.ru^
 ||www.hargatoyota.net^
+||www.hariomart.com^
 ||www.haris.ba^
 ||www.harshwhispers.com^
-||www.hatatest.cn^
 ||www.hatcyemen.org^
 ||www.haushalter.de^
 ||www.haveyshoots.com^
@@ -42080,7 +42299,6 @@ ipinyou.com
 ||www.hidebux.com^
 ||www.higashiazabuamamoto.com^
 ||www.highlandgroup.co^
-||www.hillschurch.com.au^
 ||www.hillsound.net^
 ||www.hilltoppremiere.com^
 ||www.himalayandeuraliresort.com^
@@ -42164,12 +42382,12 @@ ipinyou.com
 ||www.howtomakeamanmissyou.blogspot.com^
 ||www.hpackagefinder1.app^
 ||www.hpclandmark105.vn^
-||www.hpcomputer.vn^
 ||www.hpprintercustomerservice.blogspot.com^
 ||www.hpsupporthelpline.com^
 ||www.hpsupports.tumblr.com^
 ||www.hr-evolution.ro^
 ||www.hr00.ru^
+||www.hrfrontierdrilling.duckdns.org^
 ||www.hrsp.edu.ph^
 ||www.hsmwebapp.com^
 ||www.hsselite.com^
@@ -42177,35 +42395,46 @@ ipinyou.com
 ||www.html5zombo.com^
 ||www.http-site.narod.ru^
 ||www.https.secure.bank-of-america.login.sign.btbnuabqua.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.dhlcoqriys.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.hxtglxazsk.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.igyzgsqsql.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.jdjnwtzzso.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.lesvalsbvj.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.liqypctrfr.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.mnoguhjtos.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.naggebkgjb.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.nctvyiafpd.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.nmyveuqvya.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.oeuwfyfcls.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.ohqqytaksj.underpains.duckdns.org^
-||www.https.secure.bank-of-america.login.sign.phakgzhmdq.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.otegafbqua.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.sliuqgmmey.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.svhxzpeuan.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.wfbbvowdmk.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.xpvmgzobnw.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.yufncibfvy.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.adnailtkmv.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.agkqvsgikn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.aurbamklie.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.bcosyrpbjl.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.bgscocrrws.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.blqhqatamt.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.caiczvzzgc.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.cesjjxudod.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.clzjoioafn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.cuuzimiagt.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ddduvxjudp.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.dhxgltojoh.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.dwutgimaai.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.edmrmodegf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.edzartcpln.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.eghlpyrxda.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ekszimygnh.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.emdaotircv.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.evnwmqxsyk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.flvjsfzhdw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.fngrtmptwk.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.fouinvfruq.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.fpvigtmevs.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.fynvlytvqc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gjltbrwchm.underpains.duckdns.org^
@@ -42217,37 +42446,56 @@ ipinyou.com
 ||www.https.secure.bankofamerica.login.sign.hllgszuxam.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.hmusxhyadh.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.hnzpoazcvh.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.hqnbtbgjfj.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.igtqbwazqk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ihdxmicsck.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ipmmdnlmck.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.iredswtqqj.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ixobiaakdt.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.jkutxrpuyk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jqulhyzbrs.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jzuwcbixgy.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.kbaynnqexp.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.kemkwtdjot.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.kwatpmprcb.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.mavxteziqk.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.mdrzrlcczh.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.mmcoqtjezo.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.muxmnomrlc.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.mzjvgxygof.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.nmcwmghhpw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nmicwrszox.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.npmnpimima.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nwbnblbfyt.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.oeubdgywaf.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ohivcyefru.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ouswqmnfjb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.oxgfvztnoc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ozihmqrugr.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.pozbkftnzw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.qaauyxjpeb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.qadaqqclyw.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.qqhcawmnhl.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.qwfaczonhb.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.rbodiuqmko.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.ryskkclwlb.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.rztsixztxx.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.stbbdmecwd.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.stfzxilqsa.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.svsaxwnsxg.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.swrrjyantf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.sxrchsaick.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.thmnfkcqnm.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.tlprozavym.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.tyiyhsyuet.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.vcgymoidqs.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.vuliptavey.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.wmuomiohrv.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.wrivzfgnwk.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.wtfqmvdwsw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.wyghtqfolv.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xdrzelulwk.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.xgumyfyiog.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xiwmrxyske.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xwtusydytx.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.yavdrqtsog.underpains.duckdns.org^
@@ -42256,7 +42504,6 @@ ipinyou.com
 ||www.https.secure.bankofamerica.login.sign.zbpavjwsko.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.zmbymulibz.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.zmojfzyydc.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.zodzsahrlm.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.zysmrauptc.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.zznfaoamlr.underpains.duckdns.org^
 ||www.hudsonfishing.com^
@@ -42286,7 +42533,6 @@ ipinyou.com
 ||www.i-skirt.com^
 ||www.i-spotify.com^
 ||www.i.matheranalytics.com^
-||www.iah.pl^
 ||www.iangreen.com.mx^
 ||www.iatm.az^
 ||www.ibaiter.com^
@@ -42332,7 +42578,6 @@ ipinyou.com
 ||www.igrovieavtomati.org^
 ||www.igturbo.com^
 ||www.igwomen.com^
-||www.ih1182144.myihor.ru^
 ||www.ihavedryskin.com^
 ||www.ihl.co.nz^
 ||www.ihouxyds.yi.org^
@@ -42359,13 +42604,11 @@ ipinyou.com
 ||www.imglnkd.com^
 ||www.immobiliarebravi.com^
 ||www.immokredit.de^
-||www.immonitor.com^
 ||www.imolodec.do.am^
 ||www.imperiodosentendidos.blogspot.com^
 ||www.importamex.com^
 ||www.importfish.ru^
 ||www.imsfastpak.us2.list-manage2.com^
-||www.imsolutions.id^
 ||www.imtnagpur.ac.in^
 ||www.in-medias-res.it^
 ||www.in-post.net^
@@ -42384,6 +42627,7 @@ ipinyou.com
 ||www.indiatoturkey.com^
 ||www.indiemusicbuzz.com^
 ||www.indivill.com^
+||www.indomatrixgroup.com^
 ||www.indycdandvinyl.net^
 ||www.inetlog.ru^
 ||www.inf.ufes.br^
@@ -42392,10 +42636,12 @@ ipinyou.com
 ||www.infocatalyst.gb.net^
 ||www.infochem.it^
 ||www.infoclaimeth.ucoz.org^
+||www.infofarm.com.pl^
 ||www.infogojekbdg.blogspot.com^
 ||www.infoniac.com^
 ||www.informatyczne.pl^
 ||www.informedalerts.com^
+||www.infoseguro.duckdns.org^
 ||www.infovas.com.tr^
 ||www.infowindows.com^
 ||www.inicom.dk^
@@ -42433,6 +42679,7 @@ ipinyou.com
 ||www.instapro2.org.pk^
 ||www.instastory.pl^
 ||www.instinct365intelligent.com^
+||www.institutohipocrates.com^
 ||www.insumex.com.mx^
 ||www.insurecoleman.com^
 ||www.intecpe.com^
@@ -42504,7 +42751,6 @@ ipinyou.com
 ||www.istanbulfotografmerkezi.com^
 ||www.istreampinoy.blogspot.com^
 ||www.isupport365.com^
-||www.it-supporting.com^
 ||www.it.utc.ac.th^
 ||www.it1337.ru^
 ||www.itabunapalacehotel.com.br^
@@ -42591,6 +42837,8 @@ ipinyou.com
 ||www.jesusandcoffee.com^
 ||www.jewelsinfotech.com^
 ||www.jez.si^
+||www.ji163.com^
+||www.jianshechina.com^
 ||www.jiaosuba.cn^
 ||www.jiaxinsheji.com^
 ||www.jigzone.com^
@@ -42616,6 +42864,7 @@ ipinyou.com
 ||www.jocelynjohnson.com^
 ||www.jody0sora.com^
 ||www.joecreek.com^
+||www.joewhizz.duckdns.org^
 ||www.joincbburnet.com^
 ||www.jokeforum.com^
 ||www.joker500.mywire.org^
@@ -42637,7 +42886,7 @@ ipinyou.com
 ||www.jrmfeemokpkb.in^
 ||www.jsapi.me^
 ||www.jsbcfy.com^
-||www.jsfastener.cn^
+||www.jsccsh.cn^
 ||www.jshkjg.com^
 ||www.jsiid.com.cn^
 ||www.jsmcnet.com^
@@ -42665,10 +42914,12 @@ ipinyou.com
 ||www.justchanel.com^
 ||www.justritemarketing.com^
 ||www.jxn.bz^
+||www.jya.com.au^
 ||www.jyghxq.com^
 ||www.jyitui.com^
 ||www.jyothysreedhar.com^
 ||www.jyskeuronline.com^
+||www.jytfk.com^
 ||www.jzdoall.com^
 ||www.k-websol.com^
 ||www.k2content.com^
@@ -42764,7 +43015,6 @@ ipinyou.com
 ||www.kitendi.com^
 ||www.kiter.by^
 ||www.kitsegifts.com.br^
-||www.kiwee.com^
 ||www.kiwi6.com^
 ||www.kjf47.weebly.com^
 ||www.kk27.net^
@@ -42792,7 +43042,6 @@ ipinyou.com
 ||www.koliasolicitors.co.uk^
 ||www.kollory-fejsa.blogspot.com^
 ||www.kometa-stat.ru^
-||www.kominfo.okukab.go.id^
 ||www.komsuciftlikcharles.blogspot.com^
 ||www.komunikacije.viamedia.ba^
 ||www.konsy.1x.de^
@@ -42844,6 +43093,7 @@ ipinyou.com
 ||www.ladiesroomlive.com^
 ||www.lafacunda.cl^
 ||www.lagnasarai.com^
+||www.lagrangedailynews.com^
 ||www.lahlopa.com^
 ||www.laiyuntea.com^
 ||www.lakins.duckdns.org^
@@ -42866,6 +43116,7 @@ ipinyou.com
 ||www.laptopyinfo.pl^
 ||www.larinconada.com.bo^
 ||www.lartsev.com^
+||www.laryover2018.duckdns.org^
 ||www.lasante.org^
 ||www.lasfuentesteam.com^
 ||www.laskarmagazines.blogspot.com^
@@ -42909,6 +43160,7 @@ ipinyou.com
 ||www.lemedicament.fr^
 ||www.lencoltermicosonobom.com.br^
 ||www.lene-lasse.dk^
+||www.lenovo12.duckdns.org^
 ||www.lenovoscanner.duckdns.org^
 ||www.lenwaymachine.com^
 ||www.lesantivirus.net^
@@ -42942,7 +43194,6 @@ ipinyou.com
 ||www.lifeshot.net^
 ||www.lifesourceonline.org^
 ||www.lighthousevisuals.com.my^
-||www.lightweb.group^
 ||www.likebtn.com^
 ||www.limblengthening.com.au^
 ||www.limnoplankton786.bestofpanorama.ws^
@@ -43007,6 +43258,7 @@ ipinyou.com
 ||www.logistic.tw^
 ||www.logixoft.com^
 ||www.logmedo.com^
+||www.logoretail.org^
 ||www.logow.com^
 ||www.logystyca.com^
 ||www.lojastunica.com^
@@ -43055,7 +43307,6 @@ ipinyou.com
 ||www.lunes.duckdns.org^
 ||www.luno-help-desk-update.weebly.com^
 ||www.lupapizzeria.com^
-||www.lupussa.co.za^
 ||www.lux-bn.com.ua^
 ||www.luxngex.blogspot.com^
 ||www.lvshuifu.com^
@@ -43090,6 +43341,7 @@ ipinyou.com
 ||www.madcash.ru^
 ||www.madebyais.com^
 ||www.madeinla.fr^
+||www.madmulla.duckdns.org^
 ||www.madonnaarts.com^
 ||www.madridtouren.com^
 ||www.madrugadaolanches.com.br^
@@ -43099,12 +43351,14 @@ ipinyou.com
 ||www.magicgroupinc.com^
 ||www.magicjacktechnicalsupportnumber.blogspot.com^
 ||www.magiwebsa.com^
+||www.magnat.me^
 ||www.magnit.live^
 ||www.magnivacsbeach.com^
 ||www.magnumbd.com^
 ||www.magofuchoko.com^
 ||www.mahakalijyotishkendra.in^
 ||www.mahler.com.br^
+||www.mail-oln040092069015.outbound.protection.sketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||www.mail-support.info^
 ||www.mail.qq.com.keshersavta.co.il^
 ||www.mail.rentech.com.my^
@@ -43164,6 +43418,7 @@ ipinyou.com
 ||www.markhotel.es^
 ||www.maroskft.hu^
 ||www.marriotcourtyard.com^
+||www.marshallconsulting.ieescolbounces.duoliprudential.com.watchdogdns.duckdns.org^
 ||www.martellandsons.com^
 ||www.marvelsystem.com^
 ||www.marvinhamlisch.us^
@@ -43177,7 +43432,6 @@ ipinyou.com
 ||www.mastermanicure.ru^
 ||www.masterplanbuilders.in^
 ||www.masteryuga.ru^
-||www.mataramkarya.com^
 ||www.materialessalazar.com^
 ||www.materialspace.net^
 ||www.math-engineering.co.za^
@@ -43262,6 +43516,7 @@ ipinyou.com
 ||www.mensrolex.top^
 ||www.menswiss.cn^
 ||www.mercadop1.duckdns.org^
+||www.merittrading.com.ph^
 ||www.meservice.info^
 ||www.mesopotamia.com.br^
 ||www.messein.fr^
@@ -43316,6 +43571,7 @@ ipinyou.com
 ||www.might.c0.pl^
 ||www.mihaivoinea.com^
 ||www.mihsvzm.net^
+||www.mijn.overheid.nl.berichtenbox.l1hpng8wye4qgykb9xwmxf8bb71wnkkjdryxhvfo3ykxjfyakq4g.beltalihs.edu.bd^
 ||www.mikeferfolia.com^
 ||www.mikepratt.tv^
 ||www.mikrodent.com^
@@ -43392,6 +43648,7 @@ ipinyou.com
 ||www.modwraps.com^
 ||www.mofficeuk.wordpress.com^
 ||www.mogultours.com^
+||www.moh.gov.zm^
 ||www.moietoi.com^
 ||www.moitruonghoangthinh.com^
 ||www.mokkisuihku.fi^
@@ -43435,6 +43692,7 @@ ipinyou.com
 ||www.movie.getseekappz1.com^
 ||www.moviekitten.com^
 ||www.moviepost.com^
+||www.moview.mywire.org^
 ||www.moviezie.com^
 ||www.mp3esmovies.com^
 ||www.mpcaonline.com^
@@ -43464,6 +43722,7 @@ ipinyou.com
 ||www.muluz.es^
 ||www.mumtazpackages.com.pk^
 ||www.munchen.support^
+||www.mundial2.duckdns.org^
 ||www.munisanborja.gob.pe^
 ||www.muriloandrade.com^
 ||www.murl.kz^
@@ -43479,6 +43738,7 @@ ipinyou.com
 ||www.muslimmaulanamustakali.blogspot.com^
 ||www.mustardseeddental.com^
 ||www.muthukaniindustries.com^
+||www.mv360.net^
 ||www.mvav.com^
 ||www.mvband.net^
 ||www.mvusgjavl.info^
@@ -43576,6 +43836,7 @@ ipinyou.com
 ||www.nbapt.com^
 ||www.nbcsearch.com^
 ||www.ncbwsacramento.org^
+||www.ncik.com^
 ||www.ncp.su^
 ||www.nebomed.de^
 ||www.nebulizeronline.com^
@@ -43609,12 +43870,13 @@ ipinyou.com
 ||www.new.allfn.com^
 ||www.new.livejasmin.com^
 ||www.newcasinouk.com^
+||www.newchartting.duckdns.org^
 ||www.newconnect.duckdns.org^
 ||www.newerbit.com^
 ||www.newhampshiregambling.com^
+||www.newisajrat.duckdns.org^
 ||www.newlifes.duckdns.org^
 ||www.newlifez.duckdns.org^
-||www.newlink.site^
 ||www.newlogin-anticyber-gmail.wapka.mobi^
 ||www.newoutletonlinemall.com^
 ||www.newsdropbox.com^
@@ -43623,7 +43885,6 @@ ipinyou.com
 ||www.nexeh.com^
 ||www.nextlevelcareers.net^
 ||www.nexusdental.com.mx^
-||www.nghiadan.com^
 ||www.nguyencons.com^
 ||www.niccro.com^
 ||www.nicechristmastrees.net^
@@ -43693,6 +43954,7 @@ ipinyou.com
 ||www.nos.etudfrance.com^
 ||www.notaiodabramo.it^
 ||www.notifysrv.com^
+||www.notsus.duckdns.org^
 ||www.noureendesign.com^
 ||www.novatrau.com.ar^
 ||www.novavita.cl^
@@ -43705,7 +43967,6 @@ ipinyou.com
 ||www.nsacar.com^
 ||www.nseasonalservices.com^
 ||www.ntlxsp.com^
-||www.ntpl.co.in^
 ||www.ntsolusi.co.id^
 ||www.ntz.ru^
 ||www.nuancecrusaders.com^
@@ -43727,6 +43988,7 @@ ipinyou.com
 ||www.o365support4you.com^
 ||www.o4r.org^
 ||www.oaco3zlwgct6jdjt.onion.ws^
+||www.oamentyga.duckdns.org^
 ||www.oamysfapwa.info^
 ||www.obfuscatorjavascript.com^
 ||www.occe.com^
@@ -43761,7 +44023,6 @@ ipinyou.com
 ||www.ohelloguyzzqq.com^
 ||www.oilneering.com^
 ||www.oirom.ru^
-||www.oise-numerique.fr^
 ||www.oix.net^
 ||www.okedge.com^
 ||www.okhan.net^
@@ -43773,6 +44034,7 @@ ipinyou.com
 ||www.olx.pl.platnosci.info^
 ||www.olxpl.moneta.world^
 ||www.olympusenterprise.com^
+||www.omegaconstellation.xyz^
 ||www.omegawatcheslove.top^
 ||www.omlinux.com^
 ||www.omniata.com^
@@ -43806,6 +44068,7 @@ ipinyou.com
 ||www.onuopai.duckdns.org^
 ||www.onurinanli.com^
 ||www.onyeka1.duckdns.org^
+||www.oogle.ca^
 ||www.oomaenterprises.com.au^
 ||www.op-com.hu^
 ||www.opal.webserwer.pl^
@@ -43834,6 +44097,7 @@ ipinyou.com
 ||www.originatex.com^
 ||www.orizzonte.fi^
 ||www.oroverde.pe^
+||www.ortusbeauty.com^
 ||www.osamaalnahrawy.com^
 ||www.oscar-isaac.com^
 ||www.oscaroservice.com^
@@ -43999,7 +44263,6 @@ ipinyou.com
 ||www.photo4b.com^
 ||www.photoink.net^
 ||www.phrantceena.com^
-||www.phucuongtool.com^
 ||www.phukienzin.com^
 ||www.pica.banjalucke-ljepotice.ru^
 ||www.pichinchabanc0.webcindario.com^
@@ -44037,7 +44300,6 @@ ipinyou.com
 ||www.planetareceptov.ru^
 ||www.planetcctvtoraja.com^
 ||www.planhigher.com^
-||www.planmyvoyage.com^
 ||www.planners.com.au^
 ||www.planning-locatie-collectie.com^
 ||www.plantbasedresearch.org^
@@ -44050,6 +44312,7 @@ ipinyou.com
 ||www.plengeh.wen.ru^
 ||www.pletomak.mypi.co^
 ||www.plo.ddns.info^
+||www.plogs77.duckdns.org^
 ||www.plokij1.com^
 ||www.plugnbuy.com^
 ||www.plus-support.com^
@@ -44061,12 +44324,12 @@ ipinyou.com
 ||www.pmsway.com^
 ||www.pn-rantau.go.id^
 ||www.pneumotronic.com.br^
+||www.pocketchfangmwww.watchdogdns.duckdns.orgwatchdogdns.duckdns.org^
 ||www.pocztasecurityadminnit.moonfruit.com^
 ||www.pocztasecurityadminunit.moonfruit.com^
 ||www.podologuesaintpierre.fr^
 ||www.poemsandpolaroids.com^
 ||www.pointbdance.com^
-||www.pointofviewllc.com^
 ||www.pokerlistings.com^
 ||www.poledance.cl^
 ||www.polesandtracks.co.uk^
@@ -44079,6 +44342,7 @@ ipinyou.com
 ||www.polskifilm.com.pl^
 ||www.pontodafarda.com.br^
 ||www.poojanamkeen.com^
+||www.pool-tula.ru^
 ||www.poolsafetyangel.com.au^
 ||www.popads.net^
 ||www.popdown.de^
@@ -44106,6 +44370,8 @@ ipinyou.com
 ||www.portrenfrewbeachhouse.com^
 ||www.postech-kingston.com^
 ||www.postergaleria.chh.pl^
+||www.postnze.duckdns.org^
+||www.postventa-vodafone.duckdns.org^
 ||www.potencialvistorias.com.br^
 ||www.potomac.net^
 ||www.power-bank.in^
@@ -44240,6 +44506,9 @@ ipinyou.com
 ||www.qiqs.ru^
 ||www.qlcfmt.xt.pl^
 ||www.qluqzqqt.pieforme.com^
+||www.qpsoftware.cn^
+||www.qq99.com^
+||www.qsjyy.com^
 ||www.qsng.cn^
 ||www.qtmao.com^
 ||www.qualitysls.com^
@@ -44288,6 +44557,7 @@ ipinyou.com
 ||www.randazzoalbergaria.com.br^
 ||www.random-logic.com^
 ||www.rankboss.com^
+||www.rapidlibrary.com^
 ||www.rasio-solusindo.com^
 ||www.rathibearings.com^
 ||www.rawmedia.ro^
@@ -44311,9 +44581,9 @@ ipinyou.com
 ||www.realsupportcenter.com^
 ||www.realtfsolutions.com^
 ||www.recommendedpreview.com^
-||www.redefinesupport.com^
 ||www.redeshopping.net^
 ||www.redevenim.ro^
+||www.redger.duckdns.org^
 ||www.redperifericaaqp.gob.pe^
 ||www.redsrealm.com^
 ||www.redsuncommunications.com^
@@ -44359,6 +44629,7 @@ ipinyou.com
 ||www.resortreality.com^
 ||www.resources.myprivacyworld.com^
 ||www.respn.com^
+||www.responsbly.spunktek.com^
 ||www.restaze.com^
 ||www.restontaxis.com^
 ||www.resultr.com^
@@ -44616,6 +44887,7 @@ ipinyou.com
 ||www.scottschu.com^
 ||www.scoutsomerville.com^
 ||www.script.crazyegg.com^
+||www.scuolaesteticanuovaera.com^
 ||www.scureapp.freeasphost.net^
 ||www.scypwx.com^
 ||www.sdapianoacademy.com^
@@ -44630,7 +44902,6 @@ ipinyou.com
 ||www.searcgh.certified-toolbar.com^
 ||www.search.com^
 ||www.searchapps.me^
-||www.searchavto.ru^
 ||www.searchdwebs.info^
 ||www.searches.com^
 ||www.searchesinteractive.com^
@@ -44652,7 +44923,6 @@ ipinyou.com
 ||www.secure174.servconfig.com^
 ||www.securedinfo.net^
 ||www.securedreviewandupdatingparolllasremind.ontrapages.com^
-||www.securitybulletin.com^
 ||www.securitysearch.net^
 ||www.seda.sk^
 ||www.sedark.com^
@@ -44675,6 +44945,7 @@ ipinyou.com
 ||www.selmersax.de^
 ||www.semeandosaude.com.br^
 ||www.senate.group^
+||www.seniorpeoplemeet.youxi80.com^
 ||www.sennalogistics.co.za^
 ||www.senseoflife.in^
 ||www.senseworld.net^
@@ -44794,12 +45065,12 @@ ipinyou.com
 ||www.simple-revenue.com^
 ||www.simplehealth.net^
 ||www.simplehealthreviews.com^
+||www.simplevalley.net^
 ||www.simplylotto.co.uk^
 ||www.sinemoz.blogspot.com^
 ||www.sinewbi.blogspot.com^
 ||www.singingconnections.com^
 ||www.sintcatharinagildestrijp.nl^
-||www.sircano.cn^
 ||www.sirentheshortfilm.com^
 ||www.sirocco.in^
 ||www.sirremojr.blogspot.com^
@@ -44810,6 +45081,7 @@ ipinyou.com
 ||www.sitepalace.com^
 ||www.sitwww.watchdogdns.duckdns.org^
 ||www.siwik.pl^
+||www.six7uk.duckdns.org^
 ||www.sixteencandlesband.com^
 ||www.sjzjiuyan.com^
 ||www.sjzonline.com^
@@ -45015,6 +45287,7 @@ ipinyou.com
 ||www.steck-servicios.com^
 ||www.steelimage.ca^
 ||www.steelimpex.net^
+||www.steinhauser.hu^
 ||www.steloflute.tistory.com^
 ||www.stephenhadeenphotography.com^
 ||www.stevenjeff.com^
@@ -45072,10 +45345,8 @@ ipinyou.com
 ||www.subscribers.pro^
 ||www.successatlas.com^
 ||www.successionfirst.co.nz^
-||www.suckthis7.com^
 ||www.sudlogistic.com^
 ||www.suited45trk.com^
-||www.suivresanature.net^
 ||www.sullicrom.com^
 ||www.sullivanscatering.com^
 ||www.sumaraco.com.br^
@@ -45135,12 +45406,14 @@ ipinyou.com
 ||www.supportwin.com^
 ||www.supreme-essay.com^
 ||www.supreonlin.temp.swtest.ru^
+||www.suqianpc.com^
 ||www.surfacemounttechnology.com^
 ||www.surfingpenguin.co.uk^
 ||www.surl.me^
 ||www.sus.kl.com.ua^
 ||www.suspiciousalert.com^
 ||www.suttonsp.com.br^
+||www.suzhouhuishou.cn^
 ||www.sv-og-traunreut.de^
 ||www.svai-perm.ru^
 ||www.svc.zzz.com.ua^
@@ -45148,6 +45421,7 @@ ipinyou.com
 ||www.svobdoska.ru^
 ||www.svreview.com^
 ||www.swanify.com^
+||www.sweedoffice-kc.duckdns.org^
 ||www.sweedoffice-olamide.duckdns.org^
 ||www.sweetbrenda.com^
 ||www.sweethomebar.ru^
@@ -45270,6 +45544,7 @@ ipinyou.com
 ||www.tephens.com^
 ||www.tequechevere.com^
 ||www.terrasport.lt^
+||www.terrazasdelareina.cl^
 ||www.tesisinformatica.es^
 ||www.teslagifts.tumblr.com^
 ||www.teslalubricants.com^
@@ -45329,6 +45604,7 @@ ipinyou.com
 ||www.thenff.com^
 ||www.theoselevators.com^
 ||www.thepassabledesigner.com^
+||www.thepirateby.org^
 ||www.thepounder.com^
 ||www.therapyworkscincy.com^
 ||www.theredzone.com^
@@ -45351,6 +45627,7 @@ ipinyou.com
 ||www.tial.com.watchdogdns.duckdns.org^
 ||www.tibet.internetdocss.com^
 ||www.tibetanbead.com^
+||www.tickerland.com^
 ||www.ticket-alert.com^
 ||www.tierragroupinternational.com^
 ||www.tiffanyandc.cn^
@@ -45373,7 +45650,6 @@ ipinyou.com
 ||www.tispa.or.tz^
 ||www.titanads1.com^
 ||www.titanads4.com^
-||www.titanio13kv.com^
 ||www.titusvilleriverfrontproperty.com^
 ||www.tixeo.eu^
 ||www.tjakgl.com^
@@ -45383,6 +45659,7 @@ ipinyou.com
 ||www.tnsglobal.com^
 ||www.toaster.ph^
 ||www.tobacco-online-duty-free.com^
+||www.todoaqui.duckdns.org^
 ||www.tofa.brands.brandcollections.ru^
 ||www.toflyaviacao.com.br^
 ||www.toithichdoc.blogspot.com^
@@ -45433,6 +45710,7 @@ ipinyou.com
 ||www.tradeclear.net^
 ||www.tradeintelligent7.com^
 ||www.trading-info.com^
+||www.traffic4u.com^
 ||www.trafficbounce.net^
 ||www.trafficreach.xyz^
 ||www.trafficshop.com^
@@ -45459,6 +45737,7 @@ ipinyou.com
 ||www.trinitytheological.com^
 ||www.triozon.net^
 ||www.triplee.ru^
+||www.triround.com^
 ||www.trishjohnson.com.au^
 ||www.triviet.news^
 ||www.trkur1.com^
@@ -45532,7 +45811,7 @@ ipinyou.com
 ||www.ubuhlecares.org.za^
 ||www.ucbeu.com^
 ||www.ucdownloads.com^
-||www.uchomeinspections.net^
+||www.uddingstonhockeyclub.co.uk^
 ||www.uggs--outlet.net^
 ||www.ugtech.net^
 ||www.uk-tv-guide.com^
@@ -45584,6 +45863,7 @@ ipinyou.com
 ||www.urbanaque.com.br^
 ||www.urdutehzeb.com^
 ||www.uresplyel.narod.ru^
+||www.uruguay.duckdns.org^
 ||www.us.roche-applied-science.com^
 ||www.usaenterprise.com^
 ||www.usd.quebec-bin.com^
@@ -45594,6 +45874,7 @@ ipinyou.com
 ||www.utyfybrxihloroukd.in^
 ||www.uucyc.ru^
 ||www.uvflutech.com^
+||www.uvts.rs^
 ||www.uytyioplmj.s3-website-us-west-2.amazonaws.com^
 ||www.v61.com^
 ||www.v8bikes.com^
@@ -45608,7 +45889,6 @@ ipinyou.com
 ||www.valuehost.co.uk^
 ||www.valuesponsor.com^
 ||www.vanasthaligyanpeeth.com^
-||www.vancouverislandaccommodations.com^
 ||www.vanellisrestaurants.com^
 ||www.vanilla1forums.gb.net^
 ||www.vanskeys.com^
@@ -45626,10 +45906,8 @@ ipinyou.com
 ||www.vefaharasi.com^
 ||www.vehicleprovide.com^
 ||www.veitchestates.co.uk^
-||www.vejapolska.com^
 ||www.vektor-dom.ru^
 ||www.velozenterprise.com^
-||www.vemexim.com^
 ||www.venets.gluschenkoizdat.ru^
 ||www.venro.ru^
 ||www.ventamania.com^
@@ -45685,7 +45963,6 @@ ipinyou.com
 ||www.vilastiles.com^
 ||www.villa-in-provence.com^
 ||www.villorg.hu^
-||www.vilmafilm.hu^
 ||www.vimaxsuplementos.edublogs.org^
 ||www.vinchezmoi.com^
 ||www.vincopharmang.com^
@@ -45801,11 +46078,11 @@ ipinyou.com
 ||www.wazifaforlove2016.wordpress.com^
 ||www.wciclubs.org^
 ||www.wcomhost.com^
+||www.wcuikh.duckdns.org^
 ||www.wealthhere.com^
 ||www.wealths.ddns.net^
 ||www.web-secure.site^
 ||www.web-track.be^
-||www.web.smakristen1sltg.sch.id^
 ||www.webanalytics.europa.eu^
 ||www.webbora.com^
 ||www.webcompra.com.br^
@@ -45897,6 +46174,7 @@ ipinyou.com
 ||www.williams-fitness.com^
 ||www.winadiscount.com^
 ||www.winathon.net^
+||www.winbalance.com^
 ||www.winchouf.com^
 ||www.wincoair.com^
 ||www.windows-ten.net^
@@ -45976,15 +46254,18 @@ ipinyou.com
 ||www.wxlike.com^
 ||www.wxpow.com^
 ||www.wxsdbj.cn^
+||www.wxshyjsj.com^
+||www.wxwc.cn^
+||www.wxxinren.com^
 ||www.wxzawl.com^
 ||www.wydarzenia24.you2.pl^
+||www.wyeis.duckdns.org^
 ||www.wykmall.com^
 ||www.wypadki24.e-kei.pl^
 ||www.x-up.ws^
 ||www.x0c.com^
 ||www.x187x.com^
 ||www.xabx2019.livejournal.com^
-||www.xatangfc.com^
 ||www.xbet-promo-code.com^
 ||www.xboxlivegoldcodes.com^
 ||www.xczjd.shop^
@@ -45999,9 +46280,9 @@ ipinyou.com
 ||www.xiloau.blogspot.com^
 ||www.xjpakmdcfuqe.nl^
 ||www.xlol.biz^
+||www.xlq668.com^
 ||www.xmjinting.com^
 ||www.xmkfood.com^
-||www.xmusick.com^
 ||www.xn--72ca4bhl4azh7acm7u.com^
 ||www.xn--c3c1azabee2eb0exfsa5ftc.com^
 ||www.xn--historische-salzhuser-m2b.de^
@@ -46068,7 +46349,6 @@ ipinyou.com
 ||www.yeyvibe.com^
 ||www.ygdsyy.com^
 ||www.yibeil.com^
-||www.yige.com.cn^
 ||www.yigitlernalburiye.com.tr^
 ||www.yingxiaolong.com^
 ||www.ynapsi.com^
@@ -46099,7 +46379,6 @@ ipinyou.com
 ||www.yoyostudy.com.au^
 ||www.ypschool.cn^
 ||www.ys-gps.com^
-||www.yssw5.cn^
 ||www.yuanjie.me^
 ||www.yubogy.com^
 ||www.yume.com^
@@ -46114,6 +46393,7 @@ ipinyou.com
 ||www.zaaton.com.au^
 ||www.zabawkowo.fun^
 ||www.zachetvsem.ru^
+||www.zahidjee.com.pk^
 ||www.zairarosas.com^
 ||www.zajonc.de^
 ||www.zalandshoe.shop^
@@ -46129,6 +46409,7 @@ ipinyou.com
 ||www.zckupila.republika.pl^
 ||www.zdz-plock.com.pl^
 ||www.zealsale.com.np^
+||www.zeasypayascomsketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||www.zebra-jp.com^
 ||www.zebratechnologies.net^
 ||www.zebrogs.com^
@@ -46298,7 +46579,6 @@ ipinyou.com
 ||wwxhajudjgwjklckvzgs12.firebaseapp.com^
 ||wwxhajudjgwjklckvzgs8.web.app^
 ||wx-xizheng.com^
-||wx.winneroad.cn^
 ||wxbv.com^
 ||wxfzkd.com^
 ||wxgmca.orthofeet.com^
@@ -46351,6 +46631,8 @@ ipinyou.com
 ||xapads.adk2x.com^
 ||xarvintos.cfd^
 ||xarvo-0nilex.digital^
+||xatangfc.com^
+||xazada.duckdns.org^
 ||xblock.info^
 ||xbmady.daimaru-matsuzakaya.jp^
 ||xbmiicdidpymj.vip^
@@ -46360,7 +46642,6 @@ ipinyou.com
 ||xbt-90-lexi-pro.com^
 ||xbt-bumex.com^
 ||xbud.ru^
-||xcdesignmedia.com^
 ||xcfw2ef9v7wddw7fvdvfo82wd.weebly.com^
 ||xch-global.media.net^
 ||xchhxn.kitchenaid.com.br^
@@ -46374,6 +46655,7 @@ ipinyou.com
 ||xdesign-p.com^
 ||xdkwsh.farmacialoreto.it^
 ||xdrdtnutzxlu.cpcbroker.com^
+||xdssp.mediav.com^
 ||xdyitg.globalindustrial.ca^
 ||xe9c7uzikm9s3pxdn1wf.maherstcottage.com.au^
 ||xebec.info^
@@ -46608,7 +46890,6 @@ ipinyou.com
 ||xxxmoviesforsale.com^
 ||xxxsalsa.com^
 ||xxxsexpussy.com^
-||xxxx88xxxx.com^
 ||xxzzwpsxx.wpdevcloud.com^
 ||xyberisapexappai.net^
 ||xyess.com^
@@ -46725,6 +47006,7 @@ ipinyou.com
 ||ygersioepxuxo.online^
 ||yggkzs.cn^
 ||ygtfrdjxwcf6shgxfs0kcjhm1b-j6uwysgcfjxokhbnvfgehj.teemill.com^
+||ygykta.nut.cc^
 ||yhjccj.cn^
 ||yhjgjk.wemakeup.it^
 ||yibeksngkvrju.space^
@@ -46738,6 +47020,7 @@ ipinyou.com
 ||yieldbuild.com^
 ||yingyankantu.com^
 ||yiqifa.com^$third-party,domain=~www.liuzhuni.com|~meidebi.com
+||yitaopt.com^
 ||yitvrtfy.mantianxingmall.cn^
 ||yiwu88.com^
 ||yixui.com^
@@ -46805,7 +47088,6 @@ ipinyou.com
 ||youtibe.com^
 ||youtube.2cnt.net^
 ||youtubemarketingmasterclass.com^
-||youtubeproxy.ws^
 ||youtubeunlocker.com^
 ||youtubeyv.com^
 ||youtuge.com^
@@ -46815,7 +47097,6 @@ ipinyou.com
 ||yp-tefulong.com^
 ||yp.amin0mer3ges.ru^
 ||yp0loy5lcl.com^
-||ypcdn.dangbei.net^
 ||ypfgoochland.info^
 ||ypfyem.patatam.com^
 ||ypu.edu.tw^
@@ -46826,6 +47107,7 @@ ipinyou.com
 ||yrorsq.kirara-support.jp^
 ||yrpappetxz02kfpmmupg.maherstcottage.com.au^
 ||yryxcn.e-ohaka.com^
+||ys630.com^$third-party
 ||ys9mw1u.cn^
 ||ysaaks.mobiauto.com.br^
 ||ysance.com^
@@ -46879,6 +47161,7 @@ ipinyou.com
 ||yyqlpi.danmusikk.no^
 ||yytxgghgvtwfp.icu^
 ||yyvyppiidpbc.online^
+||yyys.shop^
 ||yyyyyyaaaaaahhhhhhoooooo.weebly.com^
 ||yyzkf.com^
 ||yz0fi.voluumtrk.com^
@@ -46914,6 +47197,7 @@ ipinyou.com
 ||zagamers.com^
 ||zahodi-ka.ru^*/schet.cgi?
 ||zainab814.github.io^
+||zaixianweiyuanchuang.cn^
 ||zajonc.de^
 ||zakomapoosnhhs.firebaseapp.com^
 ||zakopanedomki.com.pl^
@@ -46934,7 +47218,6 @@ ipinyou.com
 ||zap387849-2.plesk06.zap-webspace.com^
 ||zap391602-1.plesk05.zap-webspace.com^
 ||zapimune.com^
-||zarengida.com^
 ||zarlon-5venato.digital^
 ||zarobkiknawck.com^
 ||zarpop.com^
@@ -46968,6 +47251,7 @@ ipinyou.com
 ||zdsdt.tusolwellness.com^
 ||zdv.life^
 ||zealforex.co.cc^
+||zeasypayascomsketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||zebestof.com^
 ||zebiaemoister.firebaseapp.com^
 ||zecca9.appspot.com^
@@ -46991,7 +47275,6 @@ ipinyou.com
 ||zenith-flowdexsolution.com^
 ||zenithesismavenplatform.com^
 ||zenmine.pro^
-||zenno-poster.ru^
 ||zenonflow-platform.com^
 ||zerathium-vortex-5-9.com^
 ||zerknij-tv.pl^
@@ -47032,6 +47315,7 @@ ipinyou.com
 ||zhongxinlm.com^$third-party
 ||zhtw.admob.com^
 ||zhuangxiu567.com^
+||zhuojie0754.com^
 ||ziamarqueehire.co.uk^
 ||zibmb.ragofabrication.com^
 ||zicom.com^
@@ -47041,6 +47325,7 @@ ipinyou.com
 ||zigguratt.com^
 ||zigoh.com^
 ||zigzagdrive.com^
+||zihang.net^
 ||ziig.com.cn^
 ||zikalau.blogspot.com^
 ||ziliao.yunkaodian.com^
@@ -47068,6 +47353,7 @@ ipinyou.com
 ||zixun8.com^
 ||zjctzj.com^
 ||zjdb2b.wang^
+||zjhnyz.com^
 ||zjjxp.online^
 ||zjlinkwell.cn^
 ||zk.wotarustore.top^
@@ -47135,6 +47421,7 @@ ipinyou.com
 ||zoxxoo.com^
 ||zoz.6x.to^
 ||zozybio.com^
+||zp1.duckdns.org^
 ||zp100.com^
 ||zpatfnmuzqfez.website^
 ||zpguxkvsnjobx.website^
@@ -47225,8 +47512,8 @@ ipinyou.com
 ||zzqingying.com^
 ||zzshzg.cn^
 ﻿-pia.appsflyersdk.com^
+﻿/googleads.$~script,domain=~googleads.github.io
 ﻿@@|app.crazyegg.com^|
-﻿@@||adobe.com.ssl.d1.sc.omtrdc.net^$xmlhttprequest,domain=www.adobe.com
 ﻿@@||ads.vk.com^$popup
 ﻿@@||cn.bing.com^
 ﻿﻿-attr.appsflyersdk.com^
