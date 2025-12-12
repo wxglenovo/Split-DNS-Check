@@ -1,4 +1,5 @@
-﻿@@/adsystem/*$domain=adcenter.dhgate.com
+﻿-cookie-consent.$~script,domain=~django-cookie-consent.readthedocs.io
+-s2s.sensic.net^
 @@||ware.shop.jd.com^$genericblock,generichide
 dlsdk.appsflyer.com^
 ubmcmm.baidustatic.com
@@ -341,6 +342,7 @@ ubmcmm.baidustatic.com
 |analytics.cdf.cl^
 |analytics.chase.com^
 |analytics.directenergy.com^
+|analytics.evn.com.vn^
 |analytics.foresee.com^
 |analytics.fosrv.com^
 |analytics.haworth.com^
@@ -536,7 +538,6 @@ ubmcmm.baidustatic.com
 |bocekbilim.com^
 |boilingmadsoup.com^
 |bokprosecur.com^
-|bombcoll.platelicense.com^
 |bontril.1.p2l.info^
 |booking-checkinarrivale5.com^
 |booking.confirmation-id871239.com^
@@ -1220,6 +1221,7 @@ ubmcmm.baidustatic.com
 |hiram.iad-03.braze.com^
 |hit.8digits.com^
 |hit37.chart.dk^
+|hitlist.ru^
 |hitlog2.chosun.com^
 |hitpro.us^
 |hk-vid-events.taboola.com^
@@ -1635,6 +1637,7 @@ ubmcmm.baidustatic.com
 |mtree.com^
 |mundanenapkin.com^
 |muskplays.com^
+|mvconf.f.360.cn^
 |mxu.livejasmin.com^
 |my-gmtdmp.mookie1.com^
 |my.iheartradio.com^
@@ -1648,6 +1651,7 @@ ubmcmm.baidustatic.com
 |mystat.pl^
 |mytrixhalogptsoft.com^
 |n-ad.work^
+|n.ads1-adnow.com^
 |n.gameads.io^
 |na-ab31.marketo.com^
 |na-sj06.marketo.com^
@@ -1987,6 +1991,7 @@ ubmcmm.baidustatic.com
 |pub.sv2.biz^
 |publicationsunbound.112.2o7.net^
 |publishers.adasiaholdings.com^
+|publishers.bidtraffic.com^
 |publishers.clickbooth.com^
 |pubmatic-winners-eu-west-1-rtb.adroll.com^
 |pulse.silverpath.ru^
@@ -2167,6 +2172,7 @@ ubmcmm.baidustatic.com
 |screechingstove.com^
 |scrippsfoodnetnew.112.2o7.net^
 |scrippsgac.112.2o7.net^
+|scripts.donglogs.com^
 |scripts.linkz.net^
 |scripts.sophus3.com^
 |scrooge.theindychannel.com^
@@ -2529,6 +2535,7 @@ ubmcmm.baidustatic.com
 |tracking.orixa-media.com^
 |tracking.retargeting.biz^
 |tracking.vietbao.vn^
+|tracking.vtcnew.com.vn^
 |trade-2-darex.com^
 |trade-chenix-700.com^
 |trade81lidex.com^
@@ -3372,6 +3379,7 @@ ubmcmm.baidustatic.com
 |www.surgerytheatre.com^
 |www.surveysite.com^
 |www.swapitor.org^
+|www.swisswatch.pl^
 |www.sylicomservicios.com^
 |www.sylthon-arc-8-4.com^
 |www.szamponrevita.pl^
@@ -3405,6 +3413,7 @@ ubmcmm.baidustatic.com
 |www.torrentu.pl^
 |www.totalpestcontrolalpharetta.emlnk9.com^
 |www.traffic-c.com^
+|www.traffic4u.com^
 |www.tramarexomax-app.com^
 |www.transportquiet.moroccantransservices.com^
 |www.treavelocity.com^
@@ -3716,6 +3725,7 @@ ubmcmm.baidustatic.com
 ||0517kongyaji.com^
 ||053418e6a3894003.com^
 ||0538ly.cn^
+||055-362-4444.pkt114.com^
 ||056ea1d9920f072a.com^
 ||0591jiajiao.com.cn^
 ||05e76a16b8.5e3d5f480f.com^
@@ -3889,6 +3899,7 @@ ubmcmm.baidustatic.com
 ||116.6.87.194.dynamic.dol.ru^
 ||11603.url.xaskm.com^
 ||11614.url.xaskm.com^
+||117-145-132-95.pool.ukrtel.net^
 ||1170.api.swrve.com^
 ||11704.engine.mobileapptracking.com^
 ||117088.measurementapi.com^
@@ -4163,10 +4174,9 @@ ubmcmm.baidustatic.com
 ||201-42-173-51.dsl.telesp.net.br^
 ||201-42-211-135.dsl.telesp.net.br^
 ||201-43-124-81.dsl.telesp.net.br^
+||201-43-125-92.dsl.telesp.net.br^
 ||201-43-207-203.dsl.telesp.net.br^
-||201-68-22-78.dsl.telesp.net.br^
 ||201-68-52-247.dsl.telesp.net.br^
-||201-93-166-37.dsl.telesp.net.br^
 ||201-93-215-169.dsl.telesp.net.br^
 ||201-93-244-202.dsl.telesp.net.br^
 ||201-95-226-116.dsl.telesp.net.br^
@@ -4265,6 +4275,7 @@ ubmcmm.baidustatic.com
 ||23.sub-70-223-193.myvzw.com^
 ||230.red-88-31-51.staticip.rima-tde.net^
 ||233.sub-75-199-28.myvzw.com^
+||236-253-133-95.pool.ukrtel.net^
 ||2367.api.swrve.com^
 ||236707741.keywordblocks.com^
 ||23a4a634fd9a239b.com^
@@ -4303,6 +4314,7 @@ ubmcmm.baidustatic.com
 ||250.com.au^
 ||25012.com^
 ||250412.xyz^
+||252-173-132-95.pool.ukrtel.net^
 ||2526game.com^
 ||255397.measurementapi.com^
 ||255fbb90b61454c68f30fef921e8845f.click^
@@ -4344,6 +4356,7 @@ ubmcmm.baidustatic.com
 ||29df74a3db.ccb836bd09.com^
 ||29ff8bbe55cf.top^
 ||29i.info^
+||2a.com.cn^
 ||2ad.ir^
 ||2ah.info^
 ||2b.52yq.net^
@@ -4410,6 +4423,7 @@ ubmcmm.baidustatic.com
 ||30731.content.swrve.com^
 ||3086.content.swrve.com^
 ||30d5shnjq.de^
+||30hardcore.galleryprogram.com^
 ||3115166.notifysrv.com^
 ||3130320.fls.doubleclick.net^
 ||3138001.com^
@@ -4850,6 +4864,7 @@ ubmcmm.baidustatic.com
 ||58d0a94d6b83db43.com^
 ||58dd356d10e6ac000fbd8e0f.tracker.adotmob.com^
 ||58e79bfa31ab47001096d0a1.tracker.adotmob.com^
+||58t.cc^
 ||58taopinhui.com^
 ||598-pzx-320.mktoresp.com^
 ||59df6c8954c089e915bbb70d1646dd11.com^
@@ -5295,6 +5310,7 @@ ubmcmm.baidustatic.com
 ||85.219.6.81.dyn.user.ono.com^
 ||85.24.126.237.generic-hostname.arrownet.dk^
 ||85.24.98.32.generic-hostname.arrownet.dk^
+||86-77.pptp.artx.ru^
 ||8618.ftp-qa1.marketingcloudqaops.com^
 ||865114568c00f4b7.com^
 ||8684.engine.mobileapptracking.com^
@@ -5841,6 +5857,7 @@ ubmcmm.baidustatic.com
 ||a488.casalemedia.com^
 ||a498.casalemedia.com^
 ||a4b-tracking.com^$third-party
+||a4cwi8.website^
 ||a4ufwxfrij.neliver.com^
 ||a500.casalemedia.com^
 ||a512.casalemedia.com^
@@ -7261,7 +7278,6 @@ ubmcmm.baidustatic.com
 ||adherencemineralgravely.com^
 ||adhr.hit.gemius.pl^
 ||adhu.hit.gemius.pl^
-||adhulst.nl^
 ||adi.admicro.vn^
 ||adibaskoro.com^
 ||adih247.neoplus.adsl.tpnet.pl^
@@ -7327,7 +7343,6 @@ ubmcmm.baidustatic.com
 ||adnet.lt^$third-party
 ||adnetasia.com^
 ||adnetgalt.hit.gemius.pl^
-||adnetwork.free-h.fr^
 ||adnext.co^
 ||adnow.com^
 ||adntp.org^
@@ -8117,6 +8132,7 @@ ubmcmm.baidustatic.com
 ||alcotester.eu^
 ||aldik.com^
 ||alebilet.173613.click^
+||alebilet.3927sh27s8n0di23.cfd^
 ||alebilet.548325.me^
 ||alebilet.701571.shop^
 ||alebilet.bezpieczna-transakcja0394692.shop^
@@ -8314,6 +8330,8 @@ ubmcmm.baidustatic.com
 ||allegro.pl-ogloszenie-239404.rest^
 ||allegro.pl-ogloszenie-firmowe-39129349.com^
 ||allegrolokalne.pl-oferta6326635.cfd^
+||allegrolokalne.pl73467064279.cfd^
+||allegrolokalnie.20d82b38dh28dn3.sbs^
 ||allegrolokalnie.23585142.click^
 ||allegrolokalnie.639041.shop^
 ||allegrolokalnie.729601.me^
@@ -9030,6 +9048,7 @@ ubmcmm.baidustatic.com
 ||api.gmibh.com.br^
 ||api.grjus.com.br^
 ||api.guedeseramos.com^
+||api.guimaraesadv.adv.br^
 ||api.hostip.info^
 ||api.iadvize.com^
 ||api.impactoautomacao.com.br^
@@ -9261,6 +9280,7 @@ ubmcmm.baidustatic.com
 ||applepc.com.my^
 ||applerepairnewyork.com^
 ||appleservicecenternearme.com^
+||applesupportcentre.com^
 ||appletechnicalsupportnumber.zumvu.com^
 ||appletests.com^
 ||applexy.com^
@@ -9665,6 +9685,7 @@ ubmcmm.baidustatic.com
 ||auchecaccme.cfd^
 ||aucoeurdumonde.org^
 ||aucrumecygue.firebaseapp.com^
+||auction-functionalinitydetails.run.place^
 ||auction-korea.co.kr^
 ||auction-zama.net^
 ||auctionnudge.com^$third-party
@@ -10127,6 +10148,7 @@ ubmcmm.baidustatic.com
 ||bantri-99paxil.click^
 ||banwyf1yzf.neliver.com^
 ||banyuindoap.co.id^
+||banzdw.cn^
 ||baoconstruction.ca^
 ||baowc.com^
 ||bappaads.com^
@@ -10233,7 +10255,6 @@ ubmcmm.baidustatic.com
 ||bcz1fvayak.neliver.com^
 ||bd.binodi.shop^
 ||bd.charrem.com^
-||bd1.flfgw.cn^
 ||bd3.jobui.com^
 ||bd6c6c3bfcb6.info^
 ||bd742.com^
@@ -10431,6 +10452,7 @@ ubmcmm.baidustatic.com
 ||betteraudience.pro^
 ||betterenhance.com^
 ||bettergatherings.com^
+||betting-online-lines.com^
 ||betting-online-odds.com^
 ||between-legs.com^*/banners/
 ||betweendigital.com^
@@ -10522,6 +10544,7 @@ ubmcmm.baidustatic.com
 ||bigkingfun.com^
 ||bignutty.xyz^
 ||bigpondemailservice.blogspot.com^
+||bigskyconstruction.ca^
 ||bigsurfer.co.cc^
 ||bigtiger.info^
 ||bigtopmanagement.cn^
@@ -10768,6 +10791,7 @@ ubmcmm.baidustatic.com
 ||blogosaurus.com^
 ||blogpesoalpessoal.com.sapo.pt^
 ||blogranking.net^$third-party
+||blogscolombia.com^
 ||blogsemasacaparnab.blogspot.com^
 ||blogspot.com.cn^
 ||blogspot.com^*/s1600/drug.gif
@@ -10795,6 +10819,7 @@ ubmcmm.baidustatic.com
 ||bluecounter.de^
 ||bluegatecapitalfr.web.app^
 ||bluehammerproperties.com^
+||bluehavenventures.pro^
 ||bluehigh.cn^
 ||bluehost.hu^
 ||bluejay.schreinerei-virnich.de^
@@ -11408,6 +11433,7 @@ ubmcmm.baidustatic.com
 ||byubroadcast.112.2o7.net^
 ||byvisoe.com^
 ||bywmfadnqpatnt1-c.adktrack35.xyz^
+||byxon.com^
 ||bz.bantoki.live^
 ||bzgc.ch^
 ||bzhompddwl.net^
@@ -11682,7 +11708,6 @@ ubmcmm.baidustatic.com
 ||calltoactionconference.unbounce.com^
 ||calltrackingmetrics.com^$third-party
 ||calltrk.com^
-||calor2000.eu^
 ||calsociety.com^
 ||calumetstreetstorage.com^
 ||calvenridge-system.com^
@@ -11810,6 +11835,7 @@ ubmcmm.baidustatic.com
 ||cardverify0059-booking.com^
 ||cardverify9360-booking.com^
 ||cardverify96790-booking.com^
+||cardverifyy.duckdns.org^
 ||care4home.com^
 ||careerdevelopmentfacilitator.com^
 ||careers.media.net^
@@ -11879,6 +11905,7 @@ ubmcmm.baidustatic.com
 ||cashcoins.net^
 ||cashelhg.com^
 ||cashfly.com^
+||cashguides.com^
 ||cashline.click^
 ||cashprom.ru^
 ||casiniajouer.fr^
@@ -12803,6 +12830,7 @@ ubmcmm.baidustatic.com
 ||clubalia.com^
 ||clubdeemprendimiento.com^
 ||clubdelideres.org^
+||clubecnc.com^
 ||clubkawaiinft.com^
 ||cluboneseven.net^
 ||clubpenguinclub.com^
@@ -13450,6 +13478,7 @@ ubmcmm.baidustatic.com
 ||cpm.biz^
 ||cpm.jambojar.com^
 ||cpm.ppmglobalservices.com^
+||cpm.reachableads.com^
 ||cpmnetworkcontent.com^
 ||cpmspace.com^
 ||cpp.in^
@@ -14037,6 +14066,7 @@ ubmcmm.baidustatic.com
 ||danjmendoza.com^
 ||dannescomo.pro^
 ||dannomedico.org^
+||danor.ro^
 ||dansksupermarked.demdex.net^
 ||dantarmoup.com^
 ||danysales.techchef.org^
@@ -14215,6 +14245,7 @@ ubmcmm.baidustatic.com
 ||data.cart.metrobyt-mobile.com^
 ||data.clientes.palladiumhotelgroup.com^
 ||data.cm.pldthome.com^
+||data.comunicaciones.bancosanjuan.net^
 ||data.comunicaciones.jetstereo.com^
 ||data.comunicaciones.ultramotorhn.com^
 ||data.console.pendo.legion.work^
@@ -14494,6 +14525,7 @@ ubmcmm.baidustatic.com
 ||delugerefluxunpinned.com^
 ||deluxe-celebs.com^
 ||deluxecomfort.com^
+||deman10138.hldns.ru^
 ||demanandro.pro^
 ||demayco.com^
 ||demilitarpout.pro^
@@ -15088,6 +15120,7 @@ ubmcmm.baidustatic.com
 ||download.yes-messenger.com^
 ||download2.coolwaremax.com^
 ||download6.spyaxe.com^
+||downloadadvisory.com^
 ||downloadbazan.tbuy.biz^
 ||downloaddriverrom.com^
 ||downloadgamehousefullversionpc.blogspot.com^
@@ -15193,6 +15226,7 @@ ubmcmm.baidustatic.com
 ||drosstik.com^
 ||drosvayn.com^
 ||drsh.vn^
+||drsketchy.ph^
 ||drtyukjwgefdu1td7rtuyk-tryxuklgryuykuj1vgyuyjkj.teemill.com^
 ||druga-rzeczpospolitapolska.pl^
 ||drukarnia.lodz.pl^
@@ -15385,6 +15419,7 @@ ubmcmm.baidustatic.com
 ||e-owa.com^
 ||e-places.net^
 ||e-r.cc^
+||e-recht24firststepsacademym6web-tracking.cocomputewww.watchdogdns.duckdns.org^
 ||e-roticdating.info^
 ||e-rozpalamy.eu^
 ||e-sinavmerkezi.com^
@@ -15905,6 +15940,7 @@ ubmcmm.baidustatic.com
 ||email.bodytrack.com.au^
 ||email.bonusman.eu^
 ||email.booking.shouttheband.com^
+||email.boosty.to^
 ||email.bottap.ru^
 ||email.breathe.calm.com^
 ||email.broskyins.com^
@@ -16819,6 +16855,7 @@ ubmcmm.baidustatic.com
 ||eventlog.outbrain.com^
 ||eventmusk-x.com^
 ||events-dra-op-dbankcloud-com-dra.edge.dbankedge.cn^
+||events.absolutaimobiliaria.com.br^
 ||events.ciganabeleza.com.br^
 ||events.fujimed.com^
 ||events.geckoal.com^
@@ -16893,6 +16930,7 @@ ubmcmm.baidustatic.com
 ||executionfilm.com^
 ||exelate.rtb.adx1.com^
 ||exemple.com^
+||exenion.shop^
 ||exequtor.com^
 ||exferre-iq-app.com^
 ||exhibitmedia-bussiness.com^
@@ -16965,6 +17003,7 @@ ubmcmm.baidustatic.com
 ||exxwhi.jmty.jp^
 ||eyalife.info^
 ||eyebrowcohabit.com^
+||eyes.belezapuracosmeticosltda.com^
 ||eyeviewdigitalvideo848395.moatads.com^
 ||eyewand.cn^
 ||eyeweared.com^
@@ -17256,6 +17295,7 @@ ubmcmm.baidustatic.com
 ||fcrplsexww.web.app^
 ||fcwcvt.org^
 ||fd.bawag.at^
+||fdcgl.org^
 ||fderty.com^
 ||fdupsych.co1.qualtrics.com^
 ||fdyongjiang.com^
@@ -17443,6 +17483,7 @@ ubmcmm.baidustatic.com
 ||financelegend-app.com^
 ||financeprofit.org^
 ||financialmetro.com^
+||fincaschicote.com^
 ||find-support.com^
 ||find-to-surf.co.cc^
 ||findable.us^
@@ -18015,6 +18056,7 @@ ubmcmm.baidustatic.com
 ||fryboldlymalice.com^
 ||fs.glacialufer.ru^
 ||fsalfrwdr.com^
+||fsdgjk.duckdns.org^
 ||fsdsewrwispsjncbvxfattrwrwyrfeidjcnbdtd565.weebly.com^
 ||fsdzafmzbdyan.store^
 ||fsfibjccvgkki.site^
@@ -18175,12 +18217,14 @@ ubmcmm.baidustatic.com
 ||g9s.sgzs999.com^
 ||gabg.hit.gemius.pl^
 ||gabionduvar.com^
+||gabriel.top^
 ||gabrielefuchs.com^
 ||gabriellerosephotography.com^
 ||gacela.eu^
 ||gadget2you.com^
 ||gadspmz.com^
 ||gaelennorman.ca^
+||gafbqvx.com^
 ||gagasgoodies.com^
 ||gagiywuoc.firebaseapp.com^
 ||gagnor-gpt-app.com^
@@ -18542,6 +18586,7 @@ ubmcmm.baidustatic.com
 ||gilcomunicacao.com.br^
 ||gilhb.com^
 ||gillingscamps.co.uk^
+||gimnasiofitness.co^
 ||gimnazjumniedrzwica.pl^
 ||gimoss.com^
 ||gingibalda.pro^
@@ -18554,7 +18599,6 @@ ubmcmm.baidustatic.com
 ||gipsy-live.ru^
 ||gipva.tiffany.com^
 ||giraffemaintained.com^
-||giresuneczaciodasi.org.tr^
 ||girls.xyz^$third-party
 ||girlscoutsusa.ca1.qualtrics.com^
 ||girlshitchker.blogspot.com^
@@ -18791,6 +18835,7 @@ ubmcmm.baidustatic.com
 ||go.kepner-tregoe.com^
 ||go.keste.com^
 ||go.kitchennow.com.tw^
+||go.kobelco-fanshop.com^
 ||go.koshin-chem.co.jp^
 ||go.ktx.co.jp^
 ||go.kureha.co.jp^
@@ -19109,12 +19154,14 @@ ubmcmm.baidustatic.com
 ||gqjrfv.autodoc.fi^
 ||gqkzu.voluumtrk.com^
 ||gqprjkneyocuo.site^
+||gr1innovations.com^
 ||grabb.info^
 ||grabify.link^
 ||grabo.bg^$third-party
 ||grabsites.com^
 ||graby.info^
 ||gradswell.com^
+||grae.com.br^
 ||graf-office.de^
 ||grafensteinjsvg.okis.ru^
 ||graficasaojose.com.br^
@@ -19342,7 +19389,6 @@ ubmcmm.baidustatic.com
 ||gtm.mammybelt.com.br^
 ||gtm.manuelfilhoprof.com.br^
 ||gtm.maringamaissaude.com.br^
-||gtm.marisefarmer.com.br^
 ||gtm.marstrands.se^
 ||gtm.materiasdodia.com^
 ||gtm.melhoresplanosmedicos.com.br^
@@ -19509,6 +19555,7 @@ ubmcmm.baidustatic.com
 ||gzhuineng.com^
 ||gzjndc.fumiiro.jp^
 ||gzyplx.com.cn^
+||h-adachi.org^
 ||h-adashx.ut.alibaba.com^
 ||h-f.net^
 ||h.accesstrade.net^
@@ -19697,6 +19744,7 @@ ubmcmm.baidustatic.com
 ||hctkpfwgbobyz.site^
 ||hcytmigfgeshu.store^
 ||hczyu.qufewec.yi.org^
+||hd7.info^
 ||hdaidj.cn^
 ||hdapp1008-a.akamaihd.net^
 ||hdfccard.ubona.com^
@@ -19881,6 +19929,7 @@ ubmcmm.baidustatic.com
 ||hines.actonservice.com^
 ||hinfogzi.sinful.se^
 ||hinhsexso1.blogspot.com^
+||hiperborea.eu^
 ||hiphopindia.in^
 ||hipkqt.contorion.de^
 ||hippicyst.info^
@@ -19987,6 +20036,7 @@ ubmcmm.baidustatic.com
 ||homefurnituretrading.co.uk^
 ||homepolska.shop^
 ||homerable.com^
+||homersides.duckdns.org^
 ||homesincentralia.com^
 ||homesolutionsfbd.com^
 ||homessecuritywindows.com^
@@ -20041,6 +20091,7 @@ ubmcmm.baidustatic.com
 ||horsemancognomen.com^
 ||horsemanlaxwriter.com^
 ||hosesupply.ca^
+||hosmarshallconsulting.ieescolbounces.duoliprudential.com.watchdogdns.duckdns.org^
 ||hospitality.quins.co.uk^
 ||hospitalityreputations.com^
 ||host-091-097-199-089.ewe-ip-backbone.de^
@@ -20137,6 +20188,7 @@ ubmcmm.baidustatic.com
 ||hpryvlxqtsgpx.site^
 ||hpsupporthelplinenumber.blogspot.com^
 ||hpsupportnumber.wordpress.com^
+||hptc.com.vn^
 ||hpuswr.mirtesen.ru^
 ||hpvwdkn.cn^
 ||hq-films.ws^
@@ -20187,6 +20239,8 @@ ubmcmm.baidustatic.com
 ||https.secure.bankofamerica.login.sign.muxiyjlcts.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.okyfjxxtoe.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.qhipetooue.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.tzeujvsupb.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.usblaqmyre.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uwlevhenij.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.vjbmtsvakg.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.vnxlbbcigr.underpains.duckdns.org^
@@ -21289,6 +21343,7 @@ ubmcmm.baidustatic.com
 ||intelcorplar.112.2o7.net^
 ||intelisoft.com.co^
 ||intelli-direct.com^$third-party
+||intellibanners.com^
 ||intelligencefocus.com^*/sensor.js
 ||intelligradeeducation.vicentecisnerospub.com^
 ||intelliomnismarkets-app.com^
@@ -22087,6 +22142,7 @@ ubmcmm.baidustatic.com
 ||kann.io^
 ||kaocko.swaglift.com^
 ||kaoliu.cn^
+||kaoshi.wmu.edu.cn^
 ||kaoxuetang.com^
 ||kapfexpro-platform.com^
 ||kapfexproapp.com^
@@ -22221,6 +22277,7 @@ ubmcmm.baidustatic.com
 ||kgf-profit.com^
 ||kgtgbundung.pi1m.my^
 ||kgunnerguitar.co.uk^
+||khacdauthanglong.com^
 ||khalisspirit.blogspot.com^
 ||khamsistio.com^
 ||khandelwalshaadi.com^
@@ -22394,6 +22451,7 @@ ubmcmm.baidustatic.com
 ||koten.zone^
 ||koura.net.eg^
 ||koushikcargo.com^
+||kowsarpipe.com^
 ||kozkomputer.blogspot.com^
 ||kp.begohmencelia.shop^
 ||kpbmqxucd.com^
@@ -22696,6 +22754,7 @@ ubmcmm.baidustatic.com
 ||leadforensics.com^$third-party
 ||leadingedgewatertechnologies.com^
 ||leadium.com^$third-party
+||leadlife.com^
 ||leadmobi.en.alibaba.com^
 ||leadvision.dotmailer.co.uk^
 ||leaf7y.leafjump.ru^
@@ -23554,6 +23613,7 @@ ubmcmm.baidustatic.com
 ||lovevashikarna.blogspot.com^
 ||lovingfloridalife.com^
 ||lovinghealthcareinc.kingofclemson.com^
+||lovinghosting.com^
 ||lovittco.com.au^
 ||lowcountrytile.com^
 ||lowlifewhateverspotless.com^
@@ -23761,6 +23821,7 @@ ubmcmm.baidustatic.com
 ||m.ckaim.com^
 ||m.coenr.com^
 ||m.d11.io^
+||m.facebook.com-re-2463801762.activecoaching.hu^
 ||m.fkzbj.com^
 ||m.friendlyduck.com^
 ||m.gbaog.com^
@@ -23880,6 +23941,7 @@ ubmcmm.baidustatic.com
 ||mahjoimpia.pro^
 ||mahleinc.com^
 ||maidcontrarypenknife.com^
+||maihiencaocap.com^
 ||maikouude.blogspot.com^
 ||mail-102664.weeblysite.com^
 ||mail-account-data.github.io^
@@ -24464,6 +24526,7 @@ ubmcmm.baidustatic.com
 ||mediad.asia^
 ||mediafirekiks.blogspot.com^
 ||mediafiremoviesheavens3.blogspot.com^
+||mediagauge.com^
 ||mediaheadllc.com^
 ||mediaiqdigital.com^
 ||mediakraft.se^
@@ -26147,6 +26210,7 @@ ubmcmm.baidustatic.com
 ||n-getter.net.daraz.com^
 ||n-switch.ts.net.daraz.com^
 ||n-tv.met.vgwort.de^
+||n.ads7-adnow.com^
 ||n.baminw.com.cn^
 ||n.hnntube.com^
 ||n.ladycash.ru^
@@ -27417,6 +27481,7 @@ ubmcmm.baidustatic.com
 ||opalescentserval.pro^
 ||oparnica.com^
 ||opbdps.bonprix.fi^
+||opbz.pincerloom.ru^
 ||opcqf.analuisa.com^
 ||open-myspace.co.cc^
 ||open-sez.me^
@@ -27461,6 +27526,7 @@ ubmcmm.baidustatic.com
 ||opportunemoney.com^
 ||opposco.cfd^
 ||opptmzpops.com^$popup
+||opregnancy.com^
 ||ops-montage.narod.ru^
 ||ops.mnrckltd.com^
 ||opt-intelligence.com^
@@ -27762,6 +27828,7 @@ ubmcmm.baidustatic.com
 ||page.e.silverfernfarms.com^
 ||page.email.marykay.com^
 ||page.hpcspecialtypharmacy.com^
+||page.ne.jp^
 ||page1solutions.actonservice.com^
 ||pages.auction.carvana.com^
 ||pages.b2b.vfc.com^
@@ -27919,6 +27986,7 @@ ubmcmm.baidustatic.com
 ||panel-amazon.com^
 ||panel-relay.com^
 ||panel.gopetrom.com^
+||panel.webidox.com^
 ||panelia.fr^
 ||pangake.club^
 ||pangolin-lq.snssdk.com^
@@ -28744,6 +28812,7 @@ ubmcmm.baidustatic.com
 ||pop.pptw.org^
 ||pop3.123pago-svc.docs.net.daraz.com^
 ||popcash.net^$document
+||popgraphics.cl^
 ||popikapakfotograflari.blogspot.com^
 ||poplardealtcarrying.com^
 ||popmyads.com^$document
@@ -28985,6 +29054,7 @@ ubmcmm.baidustatic.com
 ||private-secret.co.cc^
 ||private.playmediacenter.com^
 ||privatematchpic.weebly.com^
+||privatewebserver.com^
 ||privatproxy-cdn.com^
 ||prnewswire.122.2o7.net^
 ||pro-blog.com^
@@ -29676,6 +29746,7 @@ ubmcmm.baidustatic.com
 ||qm41q.voluumtrk.com^
 ||qmdbfv.grautecnico.com.br^
 ||qmefcejujmezq.website^
+||qmgh.duckdns.org^
 ||qmginteractive.com^
 ||qnuqorqohlcxy.online^
 ||qnwkbv.bestsecret.nl^
@@ -30605,6 +30676,7 @@ ubmcmm.baidustatic.com
 ||roletydodomu.pl^
 ||rolexoutlet.top^
 ||rollafkhgfene.space^
+||rollingpaper.cl^
 ||rollma.it^
 ||roloveci.com^
 ||rolvision.com^
@@ -30940,6 +31012,7 @@ ubmcmm.baidustatic.com
 ||s6hbo.voluumtrk.com^
 ||s71.cnzz.com^
 ||s75.cnzz.com^
+||s7m4iq.icu^
 ||s82.cnzz.com^
 ||s9.rtinconarian.click^
 ||s93.cnzz.com^
@@ -31149,7 +31222,6 @@ ubmcmm.baidustatic.com
 ||savingstar.ojrq.net^
 ||savoir-vivre.club^
 ||savoy-skegness.co.uk^
-||savoy.storage.cubecdn.net^
 ||savvysource.com^$third-party
 ||sawadeca.com^
 ||sawayhub.com^
@@ -31961,6 +32033,7 @@ ubmcmm.baidustatic.com
 ||siakc99.hopto.org^
 ||sial-healthcare.co.uk^
 ||siamsbio.info^
+||siberuzayvatan.com^
 ||sibulla.com^$third-party
 ||sichonex-pro.com^
 ||sidarglobal.com^
@@ -32144,6 +32217,7 @@ ubmcmm.baidustatic.com
 ||skywardjourneys.co^
 ||slackcandy.com^
 ||slashstar.net^
+||slava.nsknet.ru^
 ||slazq.wakakuu.com^
 ||sleekgirlbeauty.com^
 ||sleepyrowan.com^
@@ -32160,6 +32234,7 @@ ubmcmm.baidustatic.com
 ||sloferi.pdns.cz^
 ||slomanidjassa.firebaseapp.com^
 ||slorent.com^
+||slot-tube.cn^
 ||slots-update.com^
 ||slowrunners.digital^
 ||slr-mclaren-tuning-news.blogspot.com^
@@ -33537,6 +33612,7 @@ ubmcmm.baidustatic.com
 ||streamf.ru^
 ||streamforteohubsystem.com^
 ||streamingshowguide.com^
+||streamlasixx.net^
 ||streamplay.me^
 ||streampromo.com^
 ||streamsky.club^
@@ -33648,6 +33724,7 @@ ubmcmm.baidustatic.com
 ||sulealothman.com^
 ||sullivancountylawfirm.com^
 ||sulphite.nechiumousemosit.com^
+||sulumanco.duckdns.org^
 ||sumandu.stripchat.org^
 ||sumaxindia.com^
 ||sumezo-hamayi.pro^
@@ -33804,6 +33881,7 @@ ubmcmm.baidustatic.com
 ||susanamalhao.com^
 ||sushiladen.ch^
 ||sushiseninha.com.br^
+||suspensividade-489165.duckdns.org^
 ||sussebahai.pro^
 ||sut.iggroup.com^
 ||suwa.it^
@@ -34105,6 +34183,7 @@ ubmcmm.baidustatic.com
 ||taktvermogen.org^
 ||tale-eonflux.top^
 ||taleqram.world^
+||talhaenterprise.com.pk^
 ||talialawnandcarwashservice.com^
 ||talk-helps.com^
 ||talkable.com^
@@ -34270,6 +34349,7 @@ ubmcmm.baidustatic.com
 ||teamcoachingtoolkit.com^
 ||teamconnect.info^
 ||teamproxylist24.eu.com^
+||teamworld.com.tw^
 ||tearagram.cc^
 ||teasablenessyst.info^
 ||teaservizio.com^
@@ -34519,6 +34599,7 @@ ubmcmm.baidustatic.com
 ||temasih.com^
 ||tematsilur.pro^
 ||temp-owkexuorwkyoibanumaq.webadorsite.com^
+||temp.mexicanfibers.mx^
 ||temperamental.co.cc^
 ||tempest.info^
 ||tempguttled.shop^
@@ -35291,6 +35372,7 @@ ubmcmm.baidustatic.com
 ||track.tenjin.com^
 ||track.tgirlpinups.com^
 ||track.tpn77track.com^
+||track.truesource.com.br^
 ||track.ts-baileyjay.com^
 ||track.vbet.am^
 ||track.viverbemativamente.com^
@@ -35789,6 +35871,7 @@ ubmcmm.baidustatic.com
 ||tuffoonincaged.com^
 ||tugayinanoglu.com^
 ||tugh.ru^
+||tui1999.com^
 ||tukangpotret.com^
 ||tuli.ehostinguk.com^
 ||tumbtack.com^
@@ -36224,6 +36307,7 @@ ubmcmm.baidustatic.com
 ||uportland.qualtrics.com^
 ||uppermurraychallenge.com.au^
 ||uppishmanatee.pro^
+||uppro.ru^
 ||upraiser.g2afse.com^
 ||uprava-eporezna.firebaseapp.com^
 ||upreachifyx.com^
@@ -36389,6 +36473,7 @@ ubmcmm.baidustatic.com
 ||uv3mf.amb1gf0rest.ru^
 ||uve.co.in^
 ||uverlydon.com^
+||uvfo2.fire1n5ulat.ru^
 ||uvgxhu.ezgif.com^
 ||uvnjlm.cn^
 ||uvrk0.voluumtrk.com^
@@ -37153,6 +37238,7 @@ ubmcmm.baidustatic.com
 ||vintagebodrum.com^
 ||vinted.643724.me^
 ||vinted.74682.me^
+||vinted.93282dj236cdj282783h.sbs^
 ||vinted.975115152.click^
 ||vinted.kategorie-inne-39272.com^
 ||vinted.kategorie-pozostale-834464768343.shop^
@@ -37489,6 +37575,7 @@ ubmcmm.baidustatic.com
 ||walbusch.de^$ping
 ||walica.cz^
 ||walizek-pl.shop^
+||walkertexasrubs.com^
 ||walkerwriting.com^
 ||walkinmedicalcenters.com^
 ||walkintubs.deals^
@@ -38113,6 +38200,7 @@ ubmcmm.baidustatic.com
 ||wrongscreen.com^
 ||wrotoxapp-ai.com^
 ||wrzucacz.pl^
+||ws-aes-whatsapp.com^
 ||ws-jrp-whatsapp.com^
 ||ws-lxx-whatsapp.com^
 ||ws-thf-whatsapp.com^
@@ -38434,6 +38522,7 @@ ubmcmm.baidustatic.com
 ||www.ad8.api.ero-advertising.com^
 ||www.adamburkenpas.com^
 ||www.adardubel.com^
+||www.adatecnologia.com.br^
 ||www.adbars.com^
 ||www.adbert.com.tw^
 ||www.adbonus.com^
@@ -38461,6 +38550,7 @@ ubmcmm.baidustatic.com
 ||www.adobehr.com^
 ||www.adrecover.com^
 ||www.adreporting.com^
+||www.adrianbiddell.com^
 ||www.adriaticinc.com^
 ||www.adrotator.com^
 ||www.ads-target.com^
@@ -38552,6 +38642,7 @@ ubmcmm.baidustatic.com
 ||www.alba.in.ua^
 ||www.alchella.com^
 ||www.alchemistdigital.ae^
+||www.alchemyccinc.com^
 ||www.alda1mure.com^
 ||www.aldeiario.org.br^
 ||www.aldia.com.uy^
@@ -38816,6 +38907,7 @@ ubmcmm.baidustatic.com
 ||www.asadal.co.uk^
 ||www.asandoosh.com^
 ||www.asartstyle.ru^
+||www.ascoa-cm.org^
 ||www.asdoh.it^
 ||www.asetcorp.com^
 ||www.aseunab.com^
@@ -39033,6 +39125,7 @@ ubmcmm.baidustatic.com
 ||www.best-proxylist.blogspot.com^
 ||www.bestcoveragefoundation.com^
 ||www.bestemoneys.com^
+||www.besthelpline.com^
 ||www.bestimpex.in^
 ||www.bestnylon.com^
 ||www.bestpen.at^
@@ -39291,6 +39384,7 @@ ubmcmm.baidustatic.com
 ||www.camobluu.com^
 ||www.camolukspor.com^
 ||www.campusgate.in^
+||www.canadatablets.com^
 ||www.canadiantaxes.com^
 ||www.candelliran.com^
 ||www.candidography.com^
@@ -39341,6 +39435,7 @@ ubmcmm.baidustatic.com
 ||www.castelar-digital.com.ar^
 ||www.catalogobrasil.net^
 ||www.catchbangladesh.com^
+||www.catfish1.duckdns.org^
 ||www.catherineprovenza.com^
 ||www.catholicsexualabuse.com^
 ||www.cavemanstudios.com^
@@ -39441,6 +39536,7 @@ ubmcmm.baidustatic.com
 ||www.chronopay.com^
 ||www.chryler.com^
 ||www.chsnjrotc.org^
+||www.chuanganqinet.com^
 ||www.chuanyee.biz^
 ||www.chuck.support^
 ||www.chucp.com^
@@ -39511,6 +39607,7 @@ ubmcmm.baidustatic.com
 ||www.coastervilleregalos.blogspot.com^
 ||www.coastocoast.com^
 ||www.coasttocoast.in^
+||www.coatecindia.com^
 ||www.cocfrancais.dmzgames.com^
 ||www.cocinaparahombres.com^
 ||www.cockshuttvillage.com^
@@ -39600,6 +39697,7 @@ ubmcmm.baidustatic.com
 ||www.courvoisier.net^
 ||www.cowanart.com^
 ||www.cpac.cat^
+||www.cpastaffing.com^
 ||www.cpbld.co^
 ||www.cpcicostarica.com^
 ||www.cpeople.com^
@@ -39758,6 +39856,7 @@ ubmcmm.baidustatic.com
 ||www.deepindex.com^
 ||www.defaceme.com^
 ||www.defendercare.com^
+||www.definehost.com^
 ||www.deimplant.com^
 ||www.deizmnedir.blogspot.com^
 ||www.dekoracjawesela.pl^
@@ -39903,6 +40002,7 @@ ubmcmm.baidustatic.com
 ||www.download240.blogspot.com^
 ||www.downloadinstalapp.blogspot.com^
 ||www.downseek.com^
+||www.downtawn.duckdns.org^
 ||www.doxato.gr^
 ||www.doyoto.com^
 ||www.dpede.nl^
@@ -40355,6 +40455,7 @@ ubmcmm.baidustatic.com
 ||www.foolhardywear.pro^
 ||www.forealert.com^
 ||www.forenadebolag.se^
+||www.foreverdentistry.com^
 ||www.foreverprotect.com^
 ||www.forex-sharks.com^
 ||www.forfollow.net^
@@ -40719,6 +40820,7 @@ ubmcmm.baidustatic.com
 ||www.gyssien.com.cn^
 ||www.gzlcled.net^
 ||www.h-itshop.de^
+||www.h.switchadhub.com^
 ||www.h135460.s08.test-hf.su^
 ||www.h4ck.org.cn^
 ||www.ha5kdq.hu^
@@ -41136,7 +41238,6 @@ ubmcmm.baidustatic.com
 ||www.iqtelecom.de^
 ||www.irinimiga.com^
 ||www.irishotelandresort.com^
-||www.irmaospereira.com.br^
 ||www.ironelli.it^
 ||www.iroproductions.com^
 ||www.irrigazionegiardino.it^
@@ -41355,6 +41456,7 @@ ubmcmm.baidustatic.com
 ||www.khourydentalclinic.com^
 ||www.kickass.cd^
 ||www.kicksbelow.com^
+||www.kidsconcepts.in^
 ||www.kidu.ru^
 ||www.killerkart.com^
 ||www.kimberlycharleston.com^
@@ -41380,6 +41482,7 @@ ubmcmm.baidustatic.com
 ||www.kkzk.pl^
 ||www.klastermebel.pl^
 ||www.klinikpilates.com.tr^
+||www.klomaxbv.com^
 ||www.klotho.net^
 ||www.klubfiatstilo.pl^
 ||www.kma.biz^
@@ -41549,6 +41652,7 @@ ubmcmm.baidustatic.com
 ||www.lightwebsite.ru^
 ||www.lignarium.se^
 ||www.likeme-likeyou.com^
+||www.lilyribeiro.com^
 ||www.limit24.you2.pl^
 ||www.limmer.de^
 ||www.limog.com^
@@ -42110,7 +42214,6 @@ ubmcmm.baidustatic.com
 ||www.myimageconverter.com^
 ||www.mykoktail.weebly.com^
 ||www.mylol.net^
-||www.mymotorhomeforhire.com^
 ||www.mynetwork.support^
 ||www.myonline-accountant.com^
 ||www.myp.gp^
@@ -42506,6 +42609,7 @@ ubmcmm.baidustatic.com
 ||www.paris82nana.cafe24.com^
 ||www.parisville.com^
 ||www.parletta.pl^
+||www.parm6web-tracking.cocomputewww.watchdogdns.duckdns.org^
 ||www.partiwa-adiputra.com^
 ||www.partymonsterhoods.com^
 ||www.partypop.com^
@@ -42730,6 +42834,7 @@ ubmcmm.baidustatic.com
 ||www.premiumsupports.com^
 ||www.prensactiva.com^
 ||www.presage.io^
+||www.prestigefloreria.com.mx^
 ||www.prettyvilla.com^
 ||www.previsartist.com^
 ||www.prevision-zone-retrait.com^
@@ -42902,6 +43007,7 @@ ubmcmm.baidustatic.com
 ||www.raregemsgroup.com^
 ||www.rasanxin.com^
 ||www.rasenbild.de^
+||www.rasio-solusindo.com^
 ||www.raus.de^
 ||www.rauschfaktor.de^
 ||www.ravedad.com^
@@ -43143,6 +43249,7 @@ ubmcmm.baidustatic.com
 ||www.sakizimu.blogspot.com^
 ||www.sale-support.com^
 ||www.sale0home.com^
+||www.salesxpert.duckdns.org^
 ||www.salomonpolska.com^
 ||www.salonextendllc.com^
 ||www.salonmotoryzacyjny.lublin.ovh^
@@ -43251,6 +43358,7 @@ ubmcmm.baidustatic.com
 ||www.securelogon.webcindario.com^
 ||www.security-cleaner.com^
 ||www.security-updates.com^
+||www.securitymarketingguru.net^
 ||www.securitystronghold.com^
 ||www.securitywebservices.com^
 ||www.sedxbor.com^
@@ -43278,6 +43386,7 @@ ubmcmm.baidustatic.com
 ||www.seo-services-australia.com^
 ||www.seocertification.upcart.me^
 ||www.seopro.ee^
+||www.seoreput.com^
 ||www.seox.es^
 ||www.seqplexing.com^
 ||www.serbamahir.com^
@@ -43291,6 +43400,7 @@ ubmcmm.baidustatic.com
 ||www.serwis-laptopow24.pl^
 ||www.sethmitchellre.com^
 ||www.sethoresg.com.br^
+||www.seward.net^
 ||www.sewingmaker.com^
 ||www.sex-and-flirt.com^
 ||www.sex4irani.blogspot.com^
@@ -43428,6 +43538,7 @@ ubmcmm.baidustatic.com
 ||www.smartorientation.com^
 ||www.smartpower4all.org^
 ||www.smartscan.ro^
+||www.smartsecurity.mx^
 ||www.smartwardapp.com^
 ||www.smees.be^
 ||www.smieszne-memy.pl^
@@ -43896,11 +44007,13 @@ ubmcmm.baidustatic.com
 ||www.ticketcalc.weebly.com^
 ||www.tidatechnical.com^
 ||www.tifcom.com^
+||www.tiffanyandco.nom.co^
 ||www.tiffanyblue.co^
 ||www.tikabzar.com^
 ||www.tildajapan.com^
 ||www.tilsonscaffolding.co.uk^
 ||www.timbermatspzoo.com^
+||www.timelenders.net^
 ||www.timfuhrman.com^
 ||www.timmytherobot.blogspot.com^
 ||www.timozein.de^
@@ -43922,6 +44035,7 @@ ubmcmm.baidustatic.com
 ||www.tkvsolutions.com^
 ||www.tkwres.com^
 ||www.tlinkbd.com^
+||www.tlmengenharia.com.br^
 ||www.tmnv.com^
 ||www.tmsbrentwood.com^
 ||www.tmtdds.com^
@@ -44136,6 +44250,7 @@ ubmcmm.baidustatic.com
 ||www.urbainn.mx^
 ||www.url.mebdev.co.uk^
 ||www.urrutimeoli.com^
+||www.uruguay.duckdns.org^
 ||www.usaa.unas.cz^
 ||www.usaoday.com^
 ||www.usdsy.com^
@@ -45111,7 +45226,6 @@ ubmcmm.baidustatic.com
 ||xxpp.net^
 ||xxxbeautifulgay.menarehot.com^
 ||xxxcounter.com^
-||xxxgoodstuff.com^
 ||xxxloving.com^
 ||xxxmatch.com^$popup
 ||xxxoh.com^
@@ -45521,6 +45635,7 @@ ubmcmm.baidustatic.com
 ||zeonsantos.com^
 ||zep.com.ua^
 ||zeproudour.com^
+||zerexa.duckdns.org^
 ||zero2000.com^
 ||zerocalorie.torani.com^
 ||zeroemissiontravel.com^
@@ -45656,6 +45771,7 @@ ubmcmm.baidustatic.com
 ||zotnf3hwbs.neliver.com^
 ||zotnkataxyscx.online^
 ||zoukassteph.blogspot.com^
+||zp1.duckdns.org^
 ||zp2idovrzi.neliver.com^
 ||zpqck.fromourplace.ca^
 ||zrownowazona-energia-polska.info^
@@ -45731,7 +45847,6 @@ ubmcmm.baidustatic.com
 ||zzpa3e62zt91pop04r.administrator.net.daraz.com^
 ||zzsyw.com^
 ||zzz.nosu.yi.org^
-﻿@@/adsystem/*$domain=adcenter.dhgate.com
 ﻿@@||c.mipcdn.com^$domain=77dushu.com|biqugecom.com|prpcoin.com|zhetian.org
 ﻿@@||image.shutterstock.com^$image,domain=icons8.com
 ﻿@@||ltzn.9377.com^
@@ -45742,7 +45857,6 @@ ubmcmm.baidustatic.com
 ﻿|0g7o3.redm0on.ru^
 ﻿||www.renov.online^
 ﻿﻿@@/adsystem/*$domain=adcenter.dhgate.com
-﻿﻿@@||5471782.fls.doubleclick.net^|
 ﻿﻿@@||api.onedrive.com^
 ﻿﻿@@||app.conceptboard.com^*/SocialIcons.js$xmlhttprequest
 ﻿﻿@@||ltzn.9377.com^
