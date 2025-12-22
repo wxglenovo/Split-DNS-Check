@@ -1,9 +1,9 @@
-﻿-attr.appsflyersdk.com^
-/assets/ads/*$~image,domain=~outlook.live.com
+﻿/assets/ads/*$~image,domain=~outlook.live.com
 /criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
 /exoclick.$~script,~xmlhttprequest,domain=~exoclick.bamboohr.co.uk|~exoclick.kayako.com
 ://r.reklam*.com^
 @@-ds.metric.gstatic.com^|
+@@/adbar/*$domain=outlook.live.com
 @@|app.crazyegg.com^|
 @@||g1.dfcfw.com^
 @@||image.shutterstock.com^$image,domain=icons8.com
@@ -255,6 +255,7 @@ stgowan.com
 |adserver.adultfriendfinder.com^
 |adserver.airmiles.ca^
 |adserver.alt.com^
+|adserver.bizland-inc.net^
 |adserver.co.il^
 |adserver.digitoday.com^
 |adserver.friendfinder.com^
@@ -1400,6 +1401,7 @@ stgowan.com
 |js.hscollectedforms.net^
 |js.isboost.co.jp^
 |js.mtburn.com^
+|js.spotx.tv^
 |jsandboxer.cjt1.net^
 |jsfiddle.usesfathom.com^
 |juggler.services.disqus.com^
@@ -1411,7 +1413,6 @@ stgowan.com
 |kalymnos-rent-a-car.site^
 |kankokukopi.com^
 |karachaevocherkessia-express.shop^
-|karakoygumruk.net^
 |karat.hu^
 |karoonpc.com^
 |kcgwq.shop^
@@ -2465,7 +2466,6 @@ stgowan.com
 |tenupay.com^
 |tenvarios.biz^
 |teongas-tech.com^
-|terbangjauh.online^
 |tereportings.info^
 |termalase.com^
 |territoryboat.click^
@@ -2487,7 +2487,6 @@ stgowan.com
 |the-proficator-app.com^
 |the-quantumflashapp.com^
 |thebitcrew.com^
-|thecoachingaccelerator.online^
 |theflixplay.us^
 |theimmutableovral.org^
 |theryphorixappreviews.com^
@@ -2517,7 +2516,6 @@ stgowan.com
 |topmedsolution.com^
 |toppersailboats.ch^
 |toppillstore.com^
-|topservicesupdate.com^
 |toptanpiyasa.com^
 |topwomen.singles^
 |torolixtradersystem.com^
@@ -2955,6 +2953,7 @@ stgowan.com
 |www.cebrallets.com^
 |www.cebuwao.top^
 |www.ceneneo.com^
+|www.cespt.unaux.com^
 |www.cevoxau.com^
 |www.changeabdelmoumen.com^
 |www.choicedealz.com^
@@ -3455,6 +3454,7 @@ stgowan.com
 |www.staticfile-4e94b.vercel.app^
 |www.stats.data2.ero-advertising.com^
 |www.statsession.com^
+|www.stevemadden-au.com^
 |www.stillshie.bestavoffers.com^
 |www.strangerthingsnt.pl^
 |www.stravionelix.com^
@@ -3952,6 +3952,7 @@ stgowan.com
 ||01-car21-web-wwww11node-webapp.ns2.net.daraz.com^
 ||01-car21-web-wwww11node-webapp.partner.net.daraz.com^
 ||01-car21-web-wwww11node-webappmanagement-application-spring.net.daraz.com^
+||01-car21-web-wwww11node-webapps.net.daraz.com^
 ||01-car21-web-wwww11nolove-webapp.net.daraz.com^
 ||01-car21-web-wwww11nomonitoring-webapp.net.daraz.com^
 ||01-car21-web-wwww11stage-oaas-webapp.net.daraz.com^
@@ -4217,6 +4218,7 @@ stgowan.com
 ||121xpp689.com^
 ||1223.xg4ken.com^
 ||12233.url.tudown.com^
+||123.sogou.com^
 ||123ads.nl^
 ||123c.vn^
 ||123diagnostics.com^
@@ -4352,6 +4354,7 @@ stgowan.com
 ||189-46-221-18.dsl.telesp.net.br^
 ||189-46-241-246.dsl.telesp.net.br^
 ||189-46-35-5.dsl.telesp.net.br^
+||189-46-92-208.dsl.telesp.net.br^
 ||189-47-135-3.dsl.telesp.net.br^
 ||189-47-180-65.dsl.telesp.net.br^
 ||189-47-31-192.dsl.telesp.net.br^
@@ -4371,7 +4374,6 @@ stgowan.com
 ||190-82-9-212.adsl.tie.cl^
 ||19035955.mktg.tajawal.com^
 ||190421.engine.mobileapptracking.com^
-||1905uu.top^
 ||190911.engine.mobileapptracking.com^
 ||19097.hittail.com^
 ||191023.measurementapi.com^
@@ -4488,7 +4490,6 @@ stgowan.com
 ||201-27-211-112.dsl.telesp.net.br^
 ||201-42-11-141.dsl.telesp.net.br^
 ||201-42-144-191.dsl.telesp.net.br^
-||201-42-165-105.dsl.telesp.net.br^
 ||201-42-166-24.dsl.telesp.net.br^
 ||201-42-167-162.dsl.telesp.net.br^
 ||201-42-168-1.dsl.telesp.net.br^
@@ -4539,7 +4540,6 @@ stgowan.com
 ||21113138.com^
 ||211454394.keywordblocks.com^
 ||212-149-211-95.bb.dnainternet.fi^
-||212-236-133-95.pool.ukrtel.net^
 ||212.122.96.131.dyn.user.ono.com^
 ||212.183.223.167.dyn.user.ono.com^
 ||212.77.153.26.rikt.ru^
@@ -4566,6 +4566,7 @@ stgowan.com
 ||21804.engine.mobileapptracking.com^
 ||21988.engine.mobileapptracking.com^
 ||21cd0ebcd4.1f3912cb04.com^
+||21d5sf4fl76f.myveroangel.com^
 ||21stsextury.ucgalleries.com^
 ||21ukshoes.uk.com^
 ||22.sharedsource.org^
@@ -4623,11 +4624,9 @@ stgowan.com
 ||24x7customercaresupport.com^
 ||24x7itsupport.net.au^
 ||25.sub-75-227-239.myvzw.com^
-||250-70-132-95.pool.ukrtel.net^
 ||251-bls-301.mktoresp.com^
 ||25158.sock-qa1.marketingcloudqaops.com^
 ||25323.connector-qa1.marketingcloudqaapis.com^
-||254-41-133-95.pool.ukrtel.net^
 ||2558160.fls.doubleclick.net^
 ||25t.net^
 ||26006.editor-qa1.marketingcloudqaapis.com^
@@ -5030,7 +5029,6 @@ stgowan.com
 ||4885e2e6f7.com^
 ||4898337.fls.doubleclick.net^
 ||48qyx.voluumtrk.com^
-||48uu3.top^
 ||49.6.87.194.dynamic.dol.ru^
 ||490ce549429d5634.com^
 ||4917212.notify6.com^
@@ -5067,6 +5065,7 @@ stgowan.com
 ||4kyoutubevideodownloader.com^
 ||4leb0e.ru^
 ||4o27eqhiofotvkwz.net.daraz.com^
+||4pfxfinity.weebly.com^
 ||4pokertips.com^
 ||4pu.com^
 ||4qsurvey.com^
@@ -5126,6 +5125,7 @@ stgowan.com
 ||52f4272e21406fb2.com^
 ||52f79b55a7.93febf18c6.com^
 ||52flz.com^
+||52homie.cn^
 ||52zdm.com^
 ||53156.measurementapi.com^
 ||531d7be7e1c0a8ea.com^
@@ -5549,7 +5549,6 @@ stgowan.com
 ||818rx.com^
 ||81b839abf04145f0ed3b7f98a1c25392.info^
 ||81e56c5c030ca6e3.com^
-||82-234-124-91.pool.ukrtel.net^
 ||82.111.151.202.cc9.ne.jp^
 ||82.131.226.111.pool.invitel.hu^
 ||82.131.227.222.pool.invitel.hu^
@@ -6445,7 +6444,6 @@ stgowan.com
 ||aboutproperty.co.uk^
 ||aboveredirect.top^$popup
 ||abox-link.nginel.com^
-||abrilparadon.duckdns.org^
 ||abrmcbgt.traffictoday.nl^
 ||abruptcompliments.com^
 ||abruptcooperationbummer.com^
@@ -7586,7 +7584,6 @@ stgowan.com
 ||admin.phunusuckhoe.vn^
 ||admin.xham.live^
 ||admin14.testandtarget.omniture.com^
-||admin1960.linkpc.net^
 ||admininc.biz^
 ||administrator.stream^
 ||adminpc.ru^
@@ -7747,7 +7744,6 @@ stgowan.com
 ||ads.smowtion.com^
 ||ads.somd.com^
 ||ads.sourceforge.net^
-||ads.sportsseoul.com^
 ||ads.srax.com^
 ||ads.tiktok.com^
 ||ads.tiogolhd.com^
@@ -8115,7 +8111,6 @@ stgowan.com
 ||afm.umtradings.com^
 ||afm.vtmarketsjp.com^
 ||aformq.my^
-||afpols-seminaires.fr^
 ||afqgqg4e.com^
 ||afqyhuwea.web.app^
 ||afrdtech.com^
@@ -8233,6 +8228,7 @@ stgowan.com
 ||aiqua-config.c.appier.net^
 ||aiqx.thanksgiving.movie^
 ||airabreeze-ss.zavydeals.com^
+||airandom.com^
 ||airbnb-clone-zeta-drab.vercel.app^
 ||airbnbcouponreddit.com^
 ||aircraftairliner.com^
@@ -9768,7 +9764,6 @@ stgowan.com
 ||ascofame.org.co^
 ||asd.bauhaus.hr^
 ||asdf.eldos.xyz^
-||asdhackera.duckdns.org^
 ||aseanstore.com^
 ||aselsanprogrami.com^
 ||asen.xyz^
@@ -10184,6 +10179,7 @@ stgowan.com
 ||awsasia.cn^
 ||awsclic.com^$popup
 ||awsevents.tt.omtrdc.net^
+||awww.anshlag.com^
 ||awww.rescue8.org^
 ||awww10.rapidupload.com^
 ||awww14.rapidupload.com^
@@ -11348,7 +11344,6 @@ stgowan.com
 ||bosatria.cn^
 ||bosch-car-mohali.com^
 ||boskodating.com^
-||bosser.duckdns.org^
 ||bossmoney.ru^
 ||bosspattaya.com^
 ||bosssurf.co.cc^
@@ -11391,7 +11386,6 @@ stgowan.com
 ||boxlikesedativespinach.com^
 ||boxshows.com^
 ||boyloves.fun^*/img/20*.gif
-||bozok1.duckdns.org^
 ||bozoomerhealth.com^
 ||bpad.banyuasinkab.go.id^
 ||bpbeneficiarios.webcindario.com^
@@ -12296,7 +12290,6 @@ stgowan.com
 ||carrentalschennai.in^
 ||carrepairlakeelsinore.com^
 ||carritosrodantes.com^
-||cars4sale-online.lists.coqianlong.watchdogdns.duckdns.org^
 ||cart.am-display.hb.adx1.com^
 ||cartascelestes.com^
 ||carteiro.altashabilidadesesuperdotacao.com^
@@ -12314,7 +12307,6 @@ stgowan.com
 ||casadellacalza.it^
 ||casanostudio.com^
 ||casaruralelbombo.es^
-||casasasa.duckdns.org^
 ||casasprint.it^
 ||casavelharestaurant.com^
 ||casaxavier.com.mx^
@@ -12755,6 +12747,7 @@ stgowan.com
 ||chatvirtualbrasilcr.com^
 ||chaveran.com^
 ||chaz-avto.com.ua^
+||chbgj.com^
 ||chd-www-f8.partner.net.daraz.com^
 ||chd-www-oldmail.partner.net.daraz.com^
 ||chd-www.partner-qlikview.net.daraz.com^
@@ -15217,7 +15210,6 @@ stgowan.com
 ||dfw.mba^
 ||dg.champion-compressors.com^
 ||dgaxzn.samma3a.com^
-||dgbaoshi.com^
 ||dgcndg.112.2o7.net^
 ||dgn40.neoplus.adsl.tpnet.pl^
 ||dgpj.cv^
@@ -15312,7 +15304,6 @@ stgowan.com
 ||dimax.one^
 ||dimensionalresearch.co1.qualtrics.com^
 ||dimensionfunding.actonservice.com^
-||dimentos.com^
 ||dimex-export.de^
 ||dimmerlingowashable.com^
 ||dimoranta.biz^
@@ -15490,7 +15481,6 @@ stgowan.com
 ||dmsph.com^
 ||dmtrck.com^
 ||dmxthn8nb2w4weylrm0uve9ppvfdo1507012271.nuid.imrworldwide.com^
-||dmym.aixyy.com^
 ||dmzfw.cn^
 ||dmzjmp.com^$popup
 ||dna-btr10jt-clam.pages.dev^
@@ -15530,6 +15520,7 @@ stgowan.com
 ||docker-bing.co.cc^
 ||docs-ndax-cdn.github.io^
 ||docs.ddns.net^
+||docsign.iunh.duckdns.org^
 ||docsnewnautilus12345proxy3.restrict.net.daraz.com^
 ||doctolib-reunion.info^
 ||doctor-roshal.ru^
@@ -15751,7 +15742,6 @@ stgowan.com
 ||dreamhope.net^
 ||dreamine.com^$third-party
 ||dreamrealty.com.gh^
-||dreamx.duckdns.org^
 ||dreamzonekochi.com^
 ||dreem.linkpc.net^
 ||dressmaker.levitrawelloch.in^
@@ -15836,7 +15826,6 @@ stgowan.com
 ||dtdcinm.vip^
 ||dtdkembwsl.neliver.com^
 ||dti-ranker.com^
-||dtivkers.duckdns.org^
 ||dtjzcyjeywfaa.website^
 ||dtplkvixf.web.app^
 ||dtpvgzuxgdgmu.website^
@@ -16233,6 +16222,7 @@ stgowan.com
 ||eelosozeeftou.net^
 ||eelv7vhbgg.neliver.com^
 ||eemaata.com^
+||eennme.vidaxl.sk^
 ||eez1yraawt.neliver.com^
 ||ef16276d05.22a008da69.com^
 ||ef25996cb34a5fef.com^
@@ -18505,7 +18495,6 @@ stgowan.com
 ||frameip.com^
 ||frameport.com.br^
 ||fran33.weebly.com^
-||francemaes15.duckdns.org^
 ||francescoalfonsi.com^
 ||franchise.omnigenceam.com^
 ||francomil.com.br^
@@ -19088,6 +19077,7 @@ stgowan.com
 ||getter.csr41.net.daraz.com^
 ||gettingnewunblok.co.cc^
 ||gettopple.com^
+||gettowork.info^
 ||gettradeleads.com^
 ||gettubetv.com^
 ||gettywin.com^
@@ -19283,6 +19273,7 @@ stgowan.com
 ||go-aejp.nagase.com^
 ||go-crazy.co.cc^
 ||go-na-news.sika.com^
+||go-optimized-api.s3.eu-west-3.amazonaws.com^
 ||go-silpada-com.ct.impactradius.com^
 ||go-thank-you.sbcc.edu^
 ||go-to-links.web.app^
@@ -20411,7 +20402,6 @@ stgowan.com
 ||help.outbrain.com^
 ||help.payment.online.begetcomputers.com^
 ||help.zmhl.net^
-||help45.com^
 ||helpdesk-support.com^
 ||helpid92244723849185968484844.firebaseapp.com^
 ||helpnumber.wordpress.com^
@@ -20576,6 +20566,7 @@ stgowan.com
 ||hjelphabbo.hemsida24.se^
 ||hjfyms.istanbulhomes.com^
 ||hjgh7878.weebly.com^
+||hjhkhg.yao.cl^
 ||hk00.casalemedia.com^
 ||hk168.edo2008.com^
 ||hkekmym4-6b8f2559b2f85152d1dcc193cc2675dd3ccba4c7-am1.d.aa.online-metrix.net^
@@ -20611,7 +20602,6 @@ stgowan.com
 ||hobbitowa.pl^
 ||hobbybilgisayar.com^
 ||hobihoi.live^
-||hoboompaitu.net^
 ||hobsley.com^
 ||hobtron.112.2o7.net^
 ||hoctor-pharity.xyz^
@@ -20878,36 +20868,23 @@ stgowan.com
 ||httpdns.platform.dbankcloud.com^
 ||https-fiberyio.fibery.io^
 ||https.paypal.com.webapps-mpp-home.account-support-login-now.schweidenback.com^
-||https.secure.bank-of-america.login.sign.pvkhjorgxp.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.avsvusmdvp.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ccnutqhvgt.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.cfraujrzkp.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ctmhgxkatm.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.cuokghumvz.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.dbtjbmfcmr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ddunpbedza.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ecutrxnoos.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.edzartcpln.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.efcissnacf.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.eoywnfygpe.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.fouinvfruq.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.gaeqtsokmf.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gcuxyhqshi.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.igenenothu.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ihinqrnfva.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.iokgoflrjb.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.jlxeewjswy.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.jqpamveypw.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.kbaynnqexp.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ksjcmzcuvd.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ovsssogkmd.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ozihmqrugr.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.pwijtnmksi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.qaauyxjpeb.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ryialprndb.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.tzeujvsupb.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.uxmiurxowr.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.wnvnciajzp.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.xiwmrxyske.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.sicbqdxbbu.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.sijckrisjk.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.uxioqwsrkv.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.zweqdblgrh.underpains.duckdns.org^
 ||httpscorreuandorraad84431.godaddysites.com^
 ||httpsso.anbtr.com^
@@ -21139,7 +21116,6 @@ stgowan.com
 ||idhelpbusiness23948512354123.web.app^
 ||idineupromise.112.2o7.net^
 ||idkjustacc.github.io^
-||idklolthisismine.duckdns.org^
 ||idlecollect.com^
 ||idleidol.net^
 ||idm-serials.blogspot.com^
@@ -21229,7 +21205,6 @@ stgowan.com
 ||ilox.mx^
 ||ilptimfi.co.cc^
 ||ilron.com^
-||ilry.paperswriting.publicvm.com^
 ||ilte.info^
 ||ilwclwblahl.yi.org^
 ||ilyushinmoiqi.narod.ru^
@@ -21603,6 +21578,7 @@ stgowan.com
 ||inexpsfugg.com^
 ||infamousstream.com^
 ||infasd2a.is-best.net^
+||infectiontuition.com^
 ||inferforeh.pro^
 ||inferrible.info^
 ||infiniteinfostream.pro^
@@ -22253,6 +22229,7 @@ stgowan.com
 ||iubjgxqqzmyh.myfunnelish.com^
 ||iunblock.com^
 ||iunknown.net^
+||iuou.myadobe.cn^
 ||iuqkrdnldzsth.online^
 ||iuravtroch.pro^
 ||iuvskjhrpkmhl.web.app^
@@ -22430,7 +22407,6 @@ stgowan.com
 ||jhm3.ifgexecutive.com^
 ||jhrak.fi^
 ||jhucgajukrvhauskjvuweyi-wgsxjyhjhwcs.teemill.com^
-||jhvankeulen.nl^
 ||ji.enfoilcode.top^
 ||jiangliusa.bookonline.com.cn^
 ||jiankongbao.com^
@@ -22611,7 +22587,6 @@ stgowan.com
 ||js.center.io^
 ||js.mtburn.com^
 ||js.shunqi.com^
-||js.spotx.tv^
 ||js.verisoul.ai^
 ||js.wingowin.com^
 ||js3.clickzs.com^
@@ -23438,7 +23413,6 @@ stgowan.com
 ||legalmonster.com^
 ||legder.fr^
 ||legendhacks.com^
-||legenevyu.duckdns.org^
 ||leger-live-auth.pages.dev^
 ||legismedia.com^
 ||legrand.ma^
@@ -23457,7 +23431,6 @@ stgowan.com
 ||lendvero.digital^
 ||leniostreck.com.br^
 ||lenovoquickpick.com^
-||lenovoscanner.duckdns.org^
 ||lentrix-trade.com^
 ||lenztek.com^
 ||leo.goplay.be^
@@ -24514,6 +24487,7 @@ stgowan.com
 ||maarijfabrics.pk^
 ||mablet.com^
 ||maboucheensante.com^
+||mabqir.mo5hnap2sser.ru^
 ||macallinecn.com^
 ||macantivirus.org^
 ||macgruffus.com^
@@ -24574,6 +24548,7 @@ stgowan.com
 ||mail.estrem.it^
 ||mail.grabyourreviews.com^
 ||mail.hiltzik.net^
+||mail.incubatec.com^
 ||mail.invitespace.com^
 ||mail.ioc.ac.ru^
 ||mail.ipv6.la^
@@ -25009,6 +24984,7 @@ stgowan.com
 ||mbbgbxpvaymmw.store^
 ||mbdigi.org^
 ||mbilalkhan704.github.io^
+||mbp0rzq9hfdb.myveroangel.com^
 ||mbtc.news^
 ||mbtwk.com^
 ||mc-5lj.pages.dev^
@@ -25573,6 +25549,7 @@ stgowan.com
 ||miqdigital.com^
 ||mirabeau.122.2o7.net^
 ||mirai-fundris-800x.com^
+||mirailoversddos.duckdns.org^
 ||miraje-veltisapp.com^
 ||miretosy.top^
 ||mirjenshin.mirtesen.ru^
@@ -26254,7 +26231,6 @@ stgowan.com
 ||moleconcern.com^$popup
 ||mollatutto.it^
 ||mollymassesue.com^
-||momceysmith.duckdns.org^
 ||momentum-sphere-ai-soft.com^
 ||momentumai-app.com^
 ||momentumaiapp.net^
@@ -26528,7 +26504,6 @@ stgowan.com
 ||multiplayer.337.com^
 ||mundanenapkin.com^
 ||mundial.cocoas.net^
-||mundial3.duckdns.org^
 ||muniquerecotillo.gob.pe^
 ||muodaclf.yi.org^
 ||murd1k.period5ty1ed.ru^
@@ -26832,7 +26807,6 @@ stgowan.com
 ||nautilus.d2.sc.omtrdc.net^
 ||nav--sso--coinbasepro--cdn.framer.ai^
 ||nav-trezor-log-webs.created.app^
-||naval.duckdns.org^
 ||navaraburo.com^
 ||naveenks.com^
 ||naveenkumars.com^
@@ -27019,7 +26993,6 @@ stgowan.com
 ||nevrincea.50webs.com^
 ||new-auto.xyz^
 ||new-document977.weebly.com^
-||new-smarttv1.duckdns.org^
 ||new.az1.qualtrics.com^
 ||new.cetrk.com^
 ||new.idream.in^
@@ -27038,7 +27011,6 @@ stgowan.com
 ||newgoal.nut.cc^
 ||newgrouns.com^
 ||newinflux.com^
-||newjrat5isa.duckdns.org^
 ||newlimitedoffer.com^
 ||newlog.reader.qq.com^
 ||newmailverifiedapps.weebly.com^
@@ -27246,7 +27218,6 @@ stgowan.com
 ||nm3-apple.sbs^
 ||nm6c33x8a.com^
 ||nmaafswoiecv.com^
-||nmtr.duckdns.org^
 ||nn-cs.3dn.ru^
 ||nnconstructora.com^
 ||nnhxjd.zielonalazienka.pl^
@@ -27665,6 +27636,7 @@ stgowan.com
 ||officeminami.net^
 ||officepitara.shop^
 ||officequarentine.com^
+||offices504.ru^
 ||officespacesoho.co.uk^
 ||officestolet.app^
 ||officestoragebox.com^
@@ -27974,6 +27946,7 @@ stgowan.com
 ||op.88dush.com^
 ||op3t.info^
 ||opaltradeviax.net^
+||opayservicesupport.weebly.com^
 ||opcib.com^
 ||opdridriselmas.com^
 ||open-test-devsu-pichincha.gerson-ruiz.com^
@@ -28650,7 +28623,6 @@ stgowan.com
 ||pawanismmedia.blogspot.com^
 ||paxmedia.net^
 ||pay.kiwify.com.br^
-||pay.sboot.cn^
 ||pay4by.cc^
 ||payback.joyeggs.com^
 ||payconiq-app.firebaseapp.com^
@@ -29248,6 +29220,7 @@ stgowan.com
 ||platinumelec.com^
 ||platinumplay.com^
 ||plausible.cge.as^
+||plausible.goldanger.de^
 ||plausible.lobehub-inc.cn^
 ||plausible.pollunit.com^
 ||plavxml.com^
@@ -29645,6 +29618,7 @@ stgowan.com
 ||privacyzone.co.cc^
 ||privada.info^
 ||privata.info^
+||private-energy.nl^
 ||private.cgex.in^
 ||private.friendlyappz.com^
 ||private.lastlog.in^
@@ -29804,7 +29778,6 @@ stgowan.com
 ||protech.mn^
 ||protect-your-privacy.net^
 ||protection-suggestion.com^
-||protection.sketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||protectionreportnicely.com^
 ||protectsurf-a.akamaihd.net^
 ||protoraider.com^
@@ -30238,7 +30211,6 @@ stgowan.com
 ||pwrgrowthapi.com^
 ||pwtaaoncavyvy.rocks^
 ||pwu0e.voluumtrk.com^
-||pwuenm.duckdns.org^
 ||px.kjukenhi.in^
 ||px802557821623.cmediahub.ru^
 ||px8fcgygk4.perimeterx.net^
@@ -30499,7 +30471,6 @@ stgowan.com
 ||r.wallstrads.com^
 ||r13.57.ersbio.co.za^
 ||r18porn.com^
-||r31l.xyz^
 ||r33c.weebly.com^
 ||r4.gobookroom.com^
 ||r4i-sdhc.com^
@@ -31052,7 +31023,6 @@ stgowan.com
 ||retracez.web.app^
 ||retrackly.com^
 ||retrait-livrer.com^
-||retreg.duckdns.org^
 ||retrofuture.fr^
 ||retrowurkz.com^
 ||retryngs.com^
@@ -31863,6 +31833,7 @@ stgowan.com
 ||sasupenn.qualtrics.com^
 ||sasypua.com^
 ||satancoenz.pro^
+||satbhai444.github.io^
 ||satelietshop.nl^
 ||satinthreads.com^
 ||satisfactorymetalrub.com^
@@ -32009,6 +31980,7 @@ stgowan.com
 ||scrooge.theindychannel.com^
 ||sctwny.com^
 ||sculetus.nl^
+||scurity43254.atspace.cc^
 ||scvip998.com^
 ||scw.systems^
 ||scxsupport.com^
@@ -32399,7 +32371,6 @@ stgowan.com
 ||serviceconfirmationorange.ukit.me^
 ||servicemembershipoattloginscreen.boxmode.io^
 ||servicemms.weezbe.com^
-||serviceonline.duckdns.org^
 ||services-dkb.de.cool^
 ||services-erca.com^
 ||services-mondialrelay.com^
@@ -32877,7 +32848,6 @@ stgowan.com
 ||sizablelion.com^
 ||sizcsi.eobuv.cz^
 ||sizehd.cambaddies.com^
-||sjalipa.cn^
 ||sjc02-login-ds.dotomi.com^
 ||sjc05-usadmm.dotomi.com^
 ||sjc06-login.dotomi.com^
@@ -32968,7 +32938,6 @@ stgowan.com
 ||slimtrust.com^
 ||slimxxxtubejlp.ddns.name^
 ||slimxxxtubeopy.ddns.name^
-||slimy.duckdns.org^
 ||sliveron-real-estate-services.com^
 ||slo-engine.intextad.net^
 ||slo.sk^
@@ -33159,7 +33128,6 @@ stgowan.com
 ||smetrics.napaprolink.com^
 ||smetrics.nationaltrust.org.uk^
 ||smetrics.naturalretreats.com^
-||smetrics.nexgardspectra.co.uk^
 ||smetrics.nike.net^
 ||smetrics.nintendo.com^
 ||smetrics.nisbets.nl^
@@ -33438,7 +33406,6 @@ stgowan.com
 ||somehighvery.live^
 ||somersetautotints.co.uk^
 ||somethingapparel.com^
-||somethinglurking.duckdns.org^
 ||sommaclass.pro^
 ||sommetfintrix.net^
 ||somni.alaskaair.com^
@@ -33498,6 +33465,7 @@ stgowan.com
 ||sorynevarex.net^
 ||sos-leroymerlin.fr^
 ||sos-pc14.org^
+||sosclient.duckdns.org^
 ||sosi-nobu.net^
 ||sosialpha-system.com^
 ||sostelumin.pro^
@@ -34498,7 +34466,6 @@ stgowan.com
 ||success.vertigis.com^
 ||succhnobil.pro^
 ||succiwirel.pro^
-||sucka.duckdns.org^
 ||suckmyforex.co.cc^
 ||suddenservice.net^
 ||sudfrance.com^
@@ -34989,6 +34956,7 @@ stgowan.com
 ||tags.gskpro-com.preview-cf65.gskinternet.com^
 ||tags.mashaalradio.com^
 ||tags.msnbc.com.edgekey.net^
+||tags.mysynchrony.com.greylabeldelivery.com^
 ||tags.netmoms.de^
 ||tags.newdreamglobal.com^
 ||tags.news.com.au^$script
@@ -35012,7 +34980,6 @@ stgowan.com
 ||tailgatemagazine.com^
 ||tailieutuhoctienganh.blogspot.com^
 ||taiquandao1.cn^
-||tajanprint.com^
 ||takeads.com^
 ||takeitfromtheman.com^
 ||takmelody.sabzgostar.net^
@@ -35329,12 +35296,9 @@ stgowan.com
 ||telegntbfb.ink^
 ||telegokpmi.click^
 ||telegomp.wiki^
-||telegoympn.fit^
-||telegozlnb.fit^
 ||telegpfwkm.blue^
 ||telegplsx.wiki^
 ||telegqaws.wiki^
-||telegqawz.fit^
 ||telegqptgk.ink^
 ||telegram-acl.com^
 ||telegram-bot-service.ru^
@@ -35361,7 +35325,6 @@ stgowan.com
 ||telegtqew.ren^
 ||telegtvxqo.ink^
 ||telegtvxqo.wiki^
-||telegtwxkp.fit^
 ||teleguhqsn.ink^
 ||teleguhqsn.xin^
 ||teleguosf.wiki^
@@ -35369,7 +35332,6 @@ stgowan.com
 ||telegvobwi.ink^
 ||telegvpxs.click^
 ||telegwbzth.wiki^
-||telegwbzur.fit^
 ||telegwvxp.click^
 ||telegxsedc.fan^
 ||telegxswq.ink^
@@ -35388,7 +35350,6 @@ stgowan.com
 ||telemetry.servers.getgo.com^
 ||telemetryapi.logos.com^
 ||telenor.112.2o7.net^
-||teleoghsum.fit^
 ||teleplom.wiki^
 ||teleport.stream^
 ||teleqrma.ren^
@@ -35417,13 +35378,11 @@ stgowan.com
 ||tentacledraptor.pro^
 ||tenvorlapi.live^
 ||tenza.ru^
-||teosn.duckdns.org^
 ||teospikak.co.cc^
 ||tepoxye.com^
 ||teracraft.eu^
 ||teracreative.com^
 ||teraverseapp.com^
-||terbangjauh.online^
 ||teresacd.cn^
 ||terminatorios.firebaseapp.com^
 ||terminatorzy.cba.pl^
@@ -35926,7 +35885,6 @@ stgowan.com
 ||topnewsfeeds.net^
 ||topnewshub.live^
 ||topofwork.co.cc^
-||toppetsupplements.com^
 ||topptrend.info^
 ||toprevenuegate.com^$popup
 ||topsem.com^
@@ -36096,7 +36054,6 @@ stgowan.com
 ||tr.wuei.espmp-agfr.net^
 ||tr1.lr002.net^
 ||tra.scds.pmdstatic.net^
-||trabajolenovo.duckdns.org^
 ||trac.roomster.com^
 ||tracdelight.com^$third-party
 ||tracelog-debug.aiclk.com^
@@ -36883,6 +36840,7 @@ stgowan.com
 ||ui.chetrabi.ru^
 ||ui.phn.doublepimp.com^
 ||uiadz.fajastributo.com^
+||uii5y18ukyj.myveroangel.com^
 ||uiqouw.icu^
 ||uitfunds.com^
 ||uito.it^
@@ -36895,6 +36853,7 @@ stgowan.com
 ||uk-script.dotmetrics.net^
 ||uk-tom.videoplaza.tv^
 ||uk-whatsapp.com^
+||uk.parking-uk.vip^
 ||uk.techieustad.com^
 ||uk0086.com^
 ||ukabenerji.com^
@@ -37205,7 +37164,6 @@ stgowan.com
 ||usmatch-com.weebly.com^
 ||usmplatform.net^
 ||usn.cc^
-||usnsk.duckdns.org^
 ||usr.interactiveone.com^
 ||usr.trava.io^
 ||usr113.myavlive.com^
@@ -38402,7 +38360,6 @@ stgowan.com
 ||wcs.naver.com^
 ||wct.softonic-th.com^
 ||wcuc.com.my^
-||wcwkcus.top^
 ||wd.7477.com^
 ||wd.tynt.com^
 ||wddo.homes^
@@ -38442,6 +38399,7 @@ stgowan.com
 ||web-qmy-cn-whatsapp.com.cn^
 ||web-qqi-cn-whatsapp.com.cn^
 ||web-tjf-cn-whatsapp.com.cn^
+||web-ucg-cn-whatsapp.com.cn^
 ||web.acumenpi.com^
 ||web.ajostg.colonialfirststate.com.au^
 ||web.email.mishimoto.eu^
@@ -38751,6 +38709,7 @@ stgowan.com
 ||widiaoexhe.top^$popup
 ||wife-life.ru^
 ||wifi33.com^
+||wify.ru^
 ||wigglewoo.com^
 ||wiinvent.tv^
 ||wiki.corp.leanplum.com^
@@ -38762,7 +38721,6 @@ stgowan.com
 ||wildfilmsindia.com^
 ||wildfor.life^
 ||wildisgorb.pro^
-||wildlifer.duckdns.org^
 ||wildmedianetwork.com^
 ||wildroot.life^
 ||wildsuits.com^
@@ -38825,7 +38783,6 @@ stgowan.com
 ||wisepops.com^$domain=grist.org|prospect.org
 ||wishloop.com^
 ||wishpond.com^$third-party,domain=~markanthonywineandspirits.ca
-||wiskiriski12.duckdns.org^
 ||wispexpert.com^
 ||wissen.sage.de^
 ||wistfulwaste.com^
@@ -38983,7 +38940,6 @@ stgowan.com
 ||wspolnemiasto.dkonto.pl^
 ||wsstore.cc^
 ||wstohshlvmiqd.space^
-||wsync.vfchile.com^
 ||wtsdewnppyesy.life^
 ||wtzqznypmadeo.store^
 ||wud2g55ffy.com^
@@ -39022,10 +38978,12 @@ stgowan.com
 ||wwsupport.org^
 ||wwsupports.org^
 ||wwv.bradesco-avisa.click^
+||wwvqboerllbzr.top^
 ||www-83334.com^
 ||www-client-mardi-pgrm.com^
 ||www-google-analytics.com^
 ||www-la.addthis.com^
+||www-mechanicsbank.co.com^
 ||www-mercredi-redirection.com^
 ||www-mon-lockers.com^
 ||www-prb-mrelay.com^
@@ -39101,7 +39059,6 @@ stgowan.com
 ||www.22825.com^
 ||www.24-visionaryenterprise.com^
 ||www.24018.mydown.xaskm.com^
-||www.2419.duckdns.org^
 ||www.24541.xc.789msw.com^
 ||www.247-365.support^
 ||www.247livechatsupport.wordpress.com^
@@ -39244,6 +39201,7 @@ stgowan.com
 ||www.9r9.us^
 ||www.a-fs.co.za^
 ||www.a-o.ninja^
+||www.a1189.cc^
 ||www.a1bailbondsmd.blogspot.com^
 ||www.aaag-maroc.com^
 ||www.aaascreensavers.com^
@@ -39521,7 +39479,6 @@ stgowan.com
 ||www.amicc.com.br^
 ||www.amiehepperlin.com^
 ||www.ammadv.it^
-||www.amman.duckdns.org^
 ||www.ammonit-fv.ru^
 ||www.amperbit.pl^
 ||www.amruthanjali.in^
@@ -39618,6 +39575,7 @@ stgowan.com
 ||www.applepaycard.net^
 ||www.applerefix.com^
 ||www.appleservicecenterbd.com^
+||www.appleshop-service.ru^
 ||www.appletcloud.com^
 ||www.appletechgenius.com^
 ||www.appletechsupportz.wordpress.com^
@@ -39971,6 +39929,7 @@ stgowan.com
 ||www.birkentymm.com^
 ||www.bit-capitals.com^
 ||www.bitcoin-helpdesk.com^
+||www.bitcoinig.com^
 ||www.bitcoremining.com^
 ||www.bitrix-support.online^
 ||www.bits66.new-gift.ru^
@@ -40439,7 +40398,6 @@ stgowan.com
 ||www.coastmedicalservice.com^
 ||www.cocco-baby.com^
 ||www.cocgems.gratuitfile.com^
-||www.cocomputewww.watchdogdns.duckdns.org^
 ||www.coconia.net^
 ||www.codea.go.cr^
 ||www.codeavenue.com^
@@ -41187,7 +41145,6 @@ stgowan.com
 ||www.ezertrans.com^
 ||www.ezlink.ca^
 ||www.ezmoneylender.com^
-||www.ezoterra.com.ua^
 ||www.ezpaypal.com^
 ||www.ezprofitsupport.com^
 ||www.fabyboutique.com^
@@ -41747,7 +41704,6 @@ stgowan.com
 ||www.gyermekneurologia.hu^
 ||www.gyhscz.shop^
 ||www.gyjheewnlkdkcrbnj.in^
-||www.gyoung.com.cn^
 ||www.gyra.ru^
 ||www.gyroscopereview.com^
 ||www.gz-lawyer.net^
@@ -41923,7 +41879,6 @@ stgowan.com
 ||www.hourlypaidbtc.jp.tn^
 ||www.house-kas.com^
 ||www.houselight.com^
-||www.houseline.ge^
 ||www.houstonchinatown.com^
 ||www.houstonfringefestival.org^
 ||www.howcues.com^
@@ -41945,46 +41900,22 @@ stgowan.com
 ||www.htransitmapsdirections1.com^
 ||www.htsinteriors.com^
 ||www.https.secure.bank-of-america.login.sign.edqwuzuxda.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.erxokpmrbi.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.pvkhjorgxp.underpains.duckdns.org^
-||www.https.secure.bank-of-america.login.sign.rudigpgrpl.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.tlimerhbga.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.vonbosqgpd.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.aalvjsgpnz.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.aoksgeizma.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.cnlwmgemav.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.ekmqlxzfml.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.emdaotircv.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.fikykkihav.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.gmhwhtgtlw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.gnonmarqyf.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.hqftbkqlnn.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ihdxmicsck.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.izyzrqntat.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jqpamveypw.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.khsgsbedmz.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.klkqddqumi.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.lmgbzkmplm.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.maknnzouxs.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.nvpuqjevio.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.odbcqzhsfe.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.odkhpuywed.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.oeubdgywaf.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.prnjerlcfl.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.qadaqqclyw.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.qhipetooue.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.qqhcawmnhl.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.riqtspfdgv.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.senqoifzes.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.skfkwawxis.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.sswpgrlbxs.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.uaernccsho.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.uajfppwlch.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.uwixtobsjz.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.vjbmtsvakg.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xgnnaoskvf.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.xtybrwtvre.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.xgumyfyiog.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.yrblbgtvjb.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.zmbymulibz.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.zysmrauptc.underpains.duckdns.org^
 ||www.hubiaohui.com^
 ||www.hublotwatches.cn^
 ||www.humber-family.com^
@@ -42317,7 +42248,6 @@ stgowan.com
 ||www.jpe2010.it^
 ||www.jpgastemerin.rs^
 ||www.jpusa.org^
-||www.jra5tportdns.duckdns.org^
 ||www.jryanhill.com^
 ||www.jrzclay.com^
 ||www.jsfastener.cn^
@@ -42587,7 +42517,6 @@ stgowan.com
 ||www.lelcrb.by^
 ||www.lend.com.cn^
 ||www.lennon.sakura.ne.jp^
-||www.lenovo12.duckdns.org^
 ||www.leopardfinance.biz^
 ||www.lepalmyre.com^
 ||www.lerelais.com^
@@ -42635,7 +42564,6 @@ stgowan.com
 ||www.lindsaylohanpictures9.blogspot.com^
 ||www.linguapedia.info^
 ||www.linguisticaforense.ufsc.br^
-||www.link-run.com^
 ||www.link-techsolutions.com^
 ||www.link.shopview.in^
 ||www.link4u.com^
@@ -42684,7 +42612,6 @@ stgowan.com
 ||www.login.microsoftonline.com.auth.jamentrust.org^
 ||www.lokean.com^
 ||www.lolligirl.com^
-||www.lolz1991.duckdns.org^
 ||www.london.westleighinfants.co.uk^
 ||www.londonbusiness.support^
 ||www.longmaotrade.com^
@@ -43020,7 +42947,6 @@ stgowan.com
 ||www.mikemo.org^
 ||www.mikesmess.com^
 ||www.mikili.persiangig.com^
-||www.mikkymouse.duckdns.org^
 ||www.mildjs.com^
 ||www.milleniumdesp.com.br^
 ||www.miloservices.com^
@@ -43638,6 +43564,7 @@ stgowan.com
 ||www.phazethree.com^
 ||www.phelios.net^
 ||www.philippineswebdesign.com^
+||www.phillipdyson.com^
 ||www.phillipehorvath.com^
 ||www.philweb.com.ph^
 ||www.phim850.blogspot.com^
@@ -43761,6 +43688,7 @@ stgowan.com
 ||www.posciele.za.pl^
 ||www.poslovno-pregovaranje.com^
 ||www.postepay-myposte-verifica-di-routine.ddns.info^
+||www.postventa-vodafone.duckdns.org^
 ||www.poteckpower.com^
 ||www.potencialmultimarcas.com.br^
 ||www.power-essays.com^
@@ -43969,7 +43897,6 @@ stgowan.com
 ||www.rasera.com^
 ||www.raspberrykids.com^
 ||www.ravenblades.com^
-||www.razbigboy.duckdns.org^
 ||www.razkids.baseresults.com^
 ||www.rbgarciaseguros.com.br^
 ||www.rbnnetwork.com^
@@ -43995,7 +43922,6 @@ stgowan.com
 ||www.red.com.mx^
 ||www.redcometstudios.com^
 ||www.redfoxgroup.com.au^
-||www.redhackteam1997.duckdns.org^
 ||www.redirectsdown.blogspot.com^
 ||www.redirectzone.com^
 ||www.redlizardmedia.com^
@@ -44081,7 +44007,6 @@ stgowan.com
 ||www.rexuemi.com^
 ||www.rezve.com^
 ||www.rfrelevo.com.br^
-||www.rgoodiblaze.duckdns.org^
 ||www.rgs-rostock.de^
 ||www.rh-cst.com^
 ||www.riabir.ru^
@@ -44305,7 +44230,6 @@ stgowan.com
 ||www.searchshield.co^
 ||www.searchucf.com^
 ||www.seasasac.lflinkup.com^
-||www.sebas10.duckdns.org^
 ||www.sebaslorente.com^
 ||www.secondhack.com^
 ||www.secrets-d-artisan.fr^
@@ -44509,7 +44433,6 @@ stgowan.com
 ||www.smarttopchain.nl^
 ||www.smartzonuae.com^
 ||www.smbs.verify.co.jp.index.15vbn.help^
-||www.smesgroup.net.au^
 ||www.smetrics.imedeen.us^
 ||www.smetsys.net^
 ||www.smigel.kilu.de^
@@ -44532,6 +44455,7 @@ stgowan.com
 ||www.socco.nl^
 ||www.sochina.tw1.ru^
 ||www.social-mediapromotion.de^
+||www.socialboom.drupalgardens.com^
 ||www.socialboost.site^
 ||www.socontabil.com.br^
 ||www.sodecristo.org.br^
@@ -44824,6 +44748,7 @@ stgowan.com
 ||www.taekwondo-nitra.eu^
 ||www.tag4arm.com^
 ||www.taicamera360do.blogspot.com^
+||www.taidiyuan.com^
 ||www.tailicheng.com^
 ||www.talentedevents.com^
 ||www.tallfilm.nut.cc^
@@ -44864,6 +44789,7 @@ stgowan.com
 ||www.technicalsupportnumberca.blogspot.com^
 ||www.technix.it^
 ||www.technoff.com^
+||www.technohealth.co.uk^
 ||www.techosyconstruccionesmetalicassanjose.com^
 ||www.techsuperb.biz^
 ||www.techsupport.carbonmade.com^
@@ -45158,7 +45084,6 @@ stgowan.com
 ||www.tt-ltd.com^
 ||www.ttdating29.com^
 ||www.tterra.pt^
-||www.tty.ttyzx.com^
 ||www.tubgirl.me^
 ||www.tubies.com^
 ||www.tuckahoe.org^
@@ -45203,7 +45128,6 @@ stgowan.com
 ||www.ubssbank6ez8n23.americanpowerbrush.com^
 ||www.ubuhlecares.org.za^
 ||www.ucbrowservn.blogspot.com^
-||www.uchegod.duckdns.org^
 ||www.ucontext.com^
 ||www.udp.gm^
 ||www.ufasoft.com^
@@ -45239,6 +45163,7 @@ stgowan.com
 ||www.unitedprogamers.za.pl^
 ||www.unityquire.com^
 ||www.univers-soft.fr^
+||www.unlimx.duckdns.org^
 ||www.unrealboobs.com^
 ||www.unremote.org^
 ||www.unwindlife.com^
@@ -45458,10 +45383,8 @@ stgowan.com
 ||www.waptrickviet.blogspot.com^
 ||www.warningshortfilm.com^
 ||www.warpornhub.com^
-||www.warz.duckdns.org^
 ||www.wasagabeachrotary.ca^
 ||www.waschbaerli.com^
-||www.watchdogdns.duckdns.orgwatchdogdns.duckdns.org^
 ||www.watchforum.me^
 ||www.waterclean.net^
 ||www.waterfalltech.com^
@@ -45638,6 +45561,7 @@ stgowan.com
 ||www.www.deutsch-krone.privat.t-online.de^
 ||www.www.support.microsoft770275yfrmsrbchs9670.com.s3-website.eu-central-1.amazonaws.com^
 ||www.www.zap337656-1.plesk06.zap-webspace.com^
+||www.wwwbloomingdales.com^
 ||www.wwwcq.net^
 ||www.wwwdollar.com^
 ||www.wwwshopathome.com^
@@ -45736,7 +45660,6 @@ stgowan.com
 ||www.ydhydp.com^
 ||www.ydhyjy.com^
 ||www.ydwsjt-2.com^
-||www.yeisn.duckdns.org^
 ||www.yelingchuan.com^
 ||www.yellow500.com^
 ||www.yemek-evi.blogspot.com^
@@ -45799,7 +45722,6 @@ stgowan.com
 ||www.zadecu.com^
 ||www.zafado.com^
 ||www.zahidjee.com.pk^
-||www.zaira.my^
 ||www.zalukaj-online.24.eu^
 ||www.zam.co.in^
 ||www.zamgold.com^
@@ -46012,7 +45934,6 @@ stgowan.com
 ||wy12cewh4.com^
 ||wy3.minglecrate.ru^
 ||wyeetransport.com.au^
-||wyeis.duckdns.org^
 ||wyjazdy.tmc24.pl^
 ||wykowskilaw.com^
 ||wylaczone.5p.pl^
@@ -46049,7 +45970,6 @@ stgowan.com
 ||xay5o.toscane-boutique.fr^
 ||xaydungdanang.vn^
 ||xaydungtruonghung.com^
-||xazada.duckdns.org^
 ||xbet-promo-code.com^
 ||xbitcoin-club.io^
 ||xbosvsupnbtzx.website^
@@ -46979,7 +46899,6 @@ stgowan.com
 ||zzyxhvqjjtgxj.online^
 ||zzzjhkyprpsvl.store^
 ||zzzl.org^
-﻿-attr.appsflyersdk.com^
 ﻿-pia.appsflyersdk.com^
 ﻿/assets/ads/*$~image,domain=~outlook.live.com
 ﻿/googleads.$~script,domain=~googleads.github.io
