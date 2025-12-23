@@ -1,5 +1,4 @@
-﻿/assets/ads/*$~image,domain=~outlook.live.com
-/criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
+﻿/criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
 /exoclick.$~script,~xmlhttprequest,domain=~exoclick.bamboohr.co.uk|~exoclick.kayako.com
 ://r.reklam*.com^
 @@-ds.metric.gstatic.com^|
@@ -20,6 +19,7 @@
 @@||prod.impartner.live^|
 @@||promo.zendesk.com^$xmlhttprequest,domain=promo.com
 @@||pubads.g.doubleclick.net/gampad/ads?*&description_url=https%3A%2F%2Fani.gamer.com.tw$domain=imasdk.googleapis.com
+@@||raw.githubusercontent.com^$domain=viewscreen.githubusercontent.com
 @@||sdk.privacy-center.org^$script,domain=20minutos.es|24sata.hr|abc.es|allocine.fr|as.com|atresplayer.com|aukro.cz|auto.it|autopista.es|beinsports.com|belfasttelegraph.co.uk|bfmtv.com|bonduelle.it|cas.sk|ciclismoafondo.es|cnews.fr|corrieredellosport.it|decathlon.pl|dnevnik.hr|dumpert.nl|dziennikwschodni.pl|dziennikzachodni.pl|ebuyclub.com|edreams.de|edreams.net|elcomercio.es|elconfidencial.com|elespanol.com|eltiempo.es|euronews.com|europe1.fr|filmweb.pl|fip.fr|flair.be|france24.com|franceculture.fr|franceinfo.fr|franceinter.fr|francetvinfo.fr|frandroid.com|funradio.fr|fyndiq.dk|fyndiq.fi|fyndiq.no|fyndiq.se|gamepro.de|gamestar.de|giphy.com|gloswielkopolski.pl|gofeminin.de|goplay.be|gva.be|hablandoenplata.es|hbvl.be|idealista.it|ivoox.com|jeanmarcmorandini.com|jeuxvideo.com|jofogas.hu|kotimikro.fi|krone.at|kurier.at|ladepeche.fr|lalibre.be|lasexta.com|lasprovincias.es|lavanguardia.com|leboncoin.fr|leparisien.fr|lequipe.fr|letelegramme.fr|marca.com|marianne.net|mein-mmo.de|melty.fr|metronieuws.nl|mitula.pt|motociclismo.es|mountainbike.es|movilzona.es|mundo-geo.es|mundodeportivo.com|mundogravel.es|na.se|naszemiasto.pl|nicematin.com|nieuwsblad.be|numerama.com|ondacero.es|onmeda.de|opodo.ch|opodo.co.uk|opodo.com|opodo.com.au|opodo.de|opodo.dk|opodo.es|opodo.fi|opodo.fr|opodo.it|opodo.nl|opodo.no|opodo.pl|opodo.se|opto.sic.pt|orpi.com|otempo.pt|podcasts.leparisien.fr|profil.at|publicsenat.fr|rainberrytv.com|recup.paylib.fr|revistaoxigeno.es|rfi.fr|rmcbfmplay.com|rtbf.be|rtl.be|rtl.fr|science-et-vie.com|sensacine.com|serially.it|sfgame.net|sncf-connect.com|softonic.com|softonic.ru|soycorredor.es|sportlife.es|standaard.be|strefabiznesu.pl|telegraaf.nl|tportal.hr|trailrun.es|triatlonweb.es|tuttosport.com|vecernji.hr|video-streaming.orange.fr|xataka.com
 @@||sdk.privacy-center.org^$script,domain=20minutos.es|24sata.hr|abc.es|allocine.fr|as.com|atresplayer.com|aukro.cz|auto.it|autopista.es|beinsports.com|belfasttelegraph.co.uk|bfmtv.com|bonduelle.it|cas.sk|ciclismoafondo.es|cnews.fr|corrieredellosport.it|decathlon.pl|dnevnik.hr|dumpert.nl|dziennikwschodni.pl|dziennikzachodni.pl|ebuyclub.com|edreams.de|edreams.net|elcomercio.es|elconfidencial.com|elespanol.com|eltiempo.es|euronews.com|europe1.fr|filmweb.pl|fip.fr|flair.be|france24.com|franceculture.fr|franceinfo.fr|franceinter.fr|francetvinfo.fr|frandroid.com|funradio.fr|fyndiq.dk|fyndiq.fi|fyndiq.no|fyndiq.se|gamepro.de|gamestar.de|giphy.com|gloswielkopolski.pl|gofeminin.de|goplay.be|gva.be|hablandoenplata.es|hbvl.be|idealista.it|ivoox.com|jeanmarcmorandini.com|jeuxvideo.com|jofogas.hu|kotimikro.fi|krone.at|kurier.at|ladepeche.fr|lalibre.be|lasexta.com|lasprovincias.es|lavanguardia.com|leboncoin.fr|leparisien.fr|lequipe.fr|letelegramme.fr|marca.com|marianne.net|mein-mmo.de|melty.fr|metronieuws.nl|mitula.pt|motociclismo.es|mountainbike.es|movilzona.es|mundo-geo.es|mundodeportivo.com|mundogravel.es|na.se|naszemiasto.pl|nicematin.com|nieuwsblad.be|numerama.com|ondacero.es|onmeda.de|opodo.ch|opodo.co.uk|opodo.com|opodo.com.au|opodo.de|opodo.dk|opodo.es|opodo.fi|opodo.fr|opodo.it|opodo.nl|opodo.no|opodo.pl|opodo.se|opto.sic.pt|orpi.com|otempo.pt|podcasts.leparisien.fr|profil.at|publicsenat.fr|rainberrytv.com|recup.paylib.fr|revistaoxigeno.es|rfi.fr|rmcbfmplay.com|rtbf.be|rtl.be|rtl.fr|science-et-vie.com|sensacine.com|serially.it|sfgame.net|sncf-connect.com|softonic.com|soycorredor.es|sportlife.es|standaard.be|strefabiznesu.pl|telegraaf.nl|tportal.hr|trailrun.es|triatlonweb.es|tuttosport.com|vecernji.hr|video-streaming.orange.fr|xataka.com
 @@||search.spotxchange.com/vmap/*&content_page_url=www.bsfuji.tv$xmlhttprequest,domain=imasdk.googleapis.com
@@ -122,10 +122,10 @@ stgowan.com
 |above.com^
 |abserawood.com^
 |absolutering.com^
-|absolutezeros.duckdns.org^
 |abstractedauthority.com^
 |abtesting.perfectcorp.com^
 |ac-feedback.com^
+|access.skaparade.com^
 |acemetrics.aaa.com^
 |acezsoftware.com^
 |acfealanka.org^
@@ -1297,6 +1297,7 @@ stgowan.com
 |immediatealora-app.com^
 |immediatealphatradingapp.com^
 |immediatecapexaiapp.com^
+|immediatecipro-ai-com-gen1.trackfinanceworld.com^
 |immediatecormax-engine.com^
 |immediateduac.co^
 |immediateduac.com^
@@ -1763,6 +1764,7 @@ stgowan.com
 |nubybay.com^
 |nucleoinvexor.com^
 |nutritialzx.com^
+|nutritionbyshany.com^
 |ny.5.p2l.info^
 |ny.outbrain.com^
 |nycp-hlb.dvgtm.akadns.net^
@@ -1774,7 +1776,6 @@ stgowan.com
 |obsidianquantrexsolution.com^
 |occi.opencoccoc.com^
 |of.inviziads.com^
-|oferta-095829.icu^
 |offer.mediaz.vn^
 |offerreality.com^
 |ogladaj.link^
@@ -2775,7 +2776,6 @@ stgowan.com
 |wez-bon.24.eu^
 |wg.zaloapp.com^
 |wgfform.com^
-|whatishotnow.net^
 |whispervplan.sphyrai.com^
 |whitecorvo.pro^
 |whoisonline.net^
@@ -3352,7 +3352,6 @@ stgowan.com
 |www.polska24news.com^
 |www.polskiepremium.pl^
 |www.porlonimop.shop^
-|www.postergaleria.chh.pl^
 |www.power-evex-app.net^
 |www.powolye.pro^
 |www.premier-trade-pro.com^
@@ -3641,6 +3640,7 @@ stgowan.com
 |wydawca.lead.network^
 |x-bitcoin.org^
 |x-hosepl2.com^
+|x.azjmp.com^
 |x3.xclicks.net^
 |x40.mistyflare.ru^
 |xa.shinobi.jp^
@@ -4311,6 +4311,7 @@ stgowan.com
 ||166-186-42-89-cable.canals.ro^
 ||1688832.com^
 ||169a6766d149fb83.com^
+||16aab.pl^
 ||16aec8dddf.51a382f947.com^
 ||16btt.com^
 ||16caf238f0befab9.com^
@@ -4499,6 +4500,7 @@ stgowan.com
 ||201-42-71-81.dsl.telesp.net.br^
 ||201-43-12-192.dsl.telesp.net.br^
 ||201-43-132-30.dsl.telesp.net.br^
+||201-43-37-139.dsl.telesp.net.br^
 ||201-68-223-34.dsl.telesp.net.br^
 ||201-68-253-194.dsl.telesp.net.br^
 ||201-68-52-236.dsl.telesp.net.br^
@@ -4603,7 +4605,6 @@ stgowan.com
 ||23e56badabd5.shop^
 ||23e56badabd7.shop^
 ||23sdrfunkml4fuhjmrhj.weebly.com^
-||240-209-112-92.pool.ukrtel.net^
 ||2404a.s.fwmrm.net^
 ||240751470.keywordblocks.com^
 ||24278.xc.789msw.com^
@@ -4763,7 +4764,6 @@ stgowan.com
 ||3290454.notifysrv.com^
 ||3292164.notifysrv.com^
 ||32tsdgseg.co.cc^
-||33-94-134-95.pool.ukrtel.net^
 ||33.ip-51-77-145.eu^
 ||331-dyy-590.mktoresp.com^
 ||3312052.notifysrv.com^
@@ -5369,7 +5369,6 @@ stgowan.com
 ||70699flsdfo-czclqi051n45co.hop.clickbank.net^
 ||70fp7880qz.cn^
 ||71-211-149-83.hlrn.qwest.net^
-||71-70-132-95.pool.ukrtel.net^
 ||7111xsj.com^
 ||71158.hittail.com^
 ||711kk.com^
@@ -6462,7 +6461,6 @@ stgowan.com
 ||absolute-sports.com^
 ||absoluteclickscom.com^
 ||absoluteingredients.com^
-||absolutezeros.duckdns.org^
 ||abstracthomesolutions.com^
 ||abt.nl.bauhaus^
 ||abtest-va-tiktok.byteoversea.com^
@@ -8349,7 +8347,6 @@ stgowan.com
 ||alebilet.ogloszenie-6336183.shop^
 ||alebilet.ogloszenie-9816682.shop^
 ||alebilet.ogloszenie-99f11hj47xppmmta59uqz7.org^
-||alebilet.pl-487042940256.cfd^
 ||alebilet.pl-conformation98.shop^
 ||alebilet.pl-kategoria19745284528164725.shop^
 ||alebilet.pl-kategoria58483228674891436.shop^
@@ -8366,8 +8363,8 @@ stgowan.com
 ||alebilet.pl-kategorie831948712674127898124.shop^
 ||alebilet.pl-kategorie841069876247142.shop^
 ||alebilet.pl-kategorie9841872416728349842.shop^
+||alebilet.pl-oferta-kategorie-polecane29099.sbs^
 ||alebilet.pl-oferta537650835647151-macbook-air-m2.click^
-||alebilet.pl-oferta6728127.icu^
 ||alebilet.pl-oferta82940124.shop^
 ||alebilet.pl-oferta848213561.com^
 ||alebilet.pl-oferta864892471923673.com^
@@ -8445,6 +8442,7 @@ stgowan.com
 ||all4marriage.in^
 ||all4myspace.com^
 ||allaglongi.pro^
+||allamain.duckdns.org^
 ||allavv.xyz^
 ||allcommfiber.com^
 ||allebedrijveninbrabant.nl^
@@ -8488,6 +8486,7 @@ stgowan.com
 ||allegro.pl-kategorie8712515624398142512.shop^
 ||allegro.pl-kategorie91847269173827529.shop^
 ||allegro.pl-ofert21415.shop^
+||allegro.pl-oferta-kategorie-polecane2944040.sbs^
 ||allegro.pl-oferta3477213.shop^
 ||allegro.pl-oferta8463294835.shop^
 ||allegro.pl-oferta849602135.shop^
@@ -8499,6 +8498,7 @@ stgowan.com
 ||allegro.rozne-43948548.rest^
 ||allegrolokainie.pl-paczkqq.shop^
 ||allegrolokainie.pl-paczqk.shop^
+||allegrolokainie.pl-smart5681895.cfd^
 ||allegrolokalne.pl-doswaw.shop^
 ||allegrolokalnie.5483o23-3828n12.rest^
 ||allegrolokalnie.6252.click^
@@ -8524,7 +8524,6 @@ stgowan.com
 ||allegrolokalnie.pi-8201029351030192736.rest^
 ||allegrolokalnie.pi-91717262515152.rest^
 ||allegrolokalnie.pi-9201029351030192736.rest^
-||allegrolokalnie.pl-0190602.icu^
 ||allegrolokalnie.pl-6435523432.shop^
 ||allegrolokalnie.pl-kategoria12746412648578712478.shop^
 ||allegrolokalnie.pl-kategoria768264658575.shop^
@@ -8541,6 +8540,7 @@ stgowan.com
 ||allegrolokalnie.pl-kategorie84629142707613128.shop^
 ||allegrolokalnie.pl-kategorie84716294719042.shop^
 ||allegrolokalnie.pl-oferta-37125.rest^
+||allegrolokalnie.pl-oferta-kategorie-polecane2944040.sbs^
 ||allegrolokalnie.pl-oferta6734157.icu^
 ||allegrolokalnie.pl-oferta825265312.shop^
 ||allegrolokalnie.pl-oferta8528457362.com^
@@ -8550,7 +8550,6 @@ stgowan.com
 ||allegrolokalnie.pl-ogloszenie-23995.cfd^
 ||allegrolokalnie.pl-ogloszenie-854374.top^
 ||allegrolokalnie.pl-ogloszenie-elektronika-834213.rest^
-||allegrolokalnie.pl-smart46232.sbs^
 ||allegrolokalnie.pl-zakup-smart58298.shop^
 ||allegrolokalniepl.oferty-kategoria-przedmioty-warsztatowe-4.shop^
 ||allenanddeans.com^
@@ -9099,6 +9098,7 @@ stgowan.com
 ||anonimousforfree.co.cc^
 ||anonym.to^
 ||anonymite.com^
+||anonymizer.yw.sk^
 ||anonymous-net.com^
 ||anonymous-surf.ch.vu^
 ||anonymousdemographics.com^
@@ -10707,7 +10707,6 @@ stgowan.com
 ||bellca.tt.omtrdc.net^
 ||bellcazinc.112.2o7.net^
 ||bellesandbubbles.com^
-||bellevie.duckdns.org^
 ||bellevillerotary.org^
 ||belligerentchameleon.pro^
 ||bellingusto.it^
@@ -10798,7 +10797,6 @@ stgowan.com
 ||beta.localhost.net.daraz.com^
 ||beta.looksmartppc.com^
 ||beta.marketo.com^
-||betaapi.autoads.asia^
 ||betaborrachas.com.br^
 ||betack.com^
 ||betafeedback.coremetrics.com^
@@ -10818,6 +10816,7 @@ stgowan.com
 ||bettercollective.rocks^
 ||betterfuture.net^
 ||betterlivingweb.com^
+||betting-online-odds.com^
 ||bettydesign.cz^
 ||bevfpfekwskzg.world^
 ||bevo-eu-west-1.adsnative.com^
@@ -10986,6 +10985,7 @@ stgowan.com
 ||bit-iplex.com^
 ||bit-iq-app.com^
 ||bit-maxairapp.com^
+||bitalfard-app.com^
 ||bitano.shop^
 ||bitapp24-platform.com^
 ||bitbondapp.net^
@@ -11052,6 +11052,7 @@ stgowan.com
 ||bitte.net.ua^
 ||bitterkolacompany.blogspot.com^
 ||bittraderai20.com^
+||bittraders.io^
 ||bitx8-bumex.com^
 ||bitz6.vip^
 ||bivan1.tripod.com^
@@ -11454,7 +11455,6 @@ stgowan.com
 ||branded.com^
 ||brandfrutt.com^
 ||branding.virginmegastore.ae^
-||brandistryroll.cyou^
 ||brandreachsys.com^$popup
 ||brands.lingerize.com^
 ||brandscope.pl^
@@ -11529,6 +11529,7 @@ stgowan.com
 ||bringnorge.web.app^
 ||brinkprovenanceamenity.com^
 ||brioletredeyes.com^
+||brisbanerecycling.com^
 ||brisk.v0xletrill.ru^
 ||briskogain-ai.com^
 ||briskstorm.com^
@@ -12296,6 +12297,7 @@ stgowan.com
 ||carrepairlakeelsinore.com^
 ||carritosrodantes.com^
 ||cart.am-display.hb.adx1.com^
+||cartaocontinente-ptest.cfd^
 ||cartascelestes.com^
 ||carteiro.altashabilidadesesuperdotacao.com^
 ||carteosl.com^
@@ -12634,7 +12636,6 @@ stgowan.com
 ||certifiqueeua.com^
 ||certirever.com^
 ||certmanserv.com^
-||certuse.cfd^
 ||cerulean-puppy-776621.netlify.app^
 ||cerva.sk^
 ||cervera.com.mx^
@@ -12791,6 +12792,7 @@ stgowan.com
 ||checkontime.sytes.net^
 ||checkproxy.info^
 ||checkroof.comnub.com^
+||chedosumubsogn.com^
 ||cheerivybitwa.com^
 ||cheetahmobile.hotrk0.com^
 ||chemille-en-anjou.com^
@@ -13339,6 +13341,7 @@ stgowan.com
 ||club.techteam.it^
 ||clubalt.free.fr^
 ||clubeamigosdopedrosegundo.com.br^
+||clubecnc.com^
 ||clubmestre.com^
 ||clubnauticsantfeliu.com^
 ||clubtoday.xyz^
@@ -13859,7 +13862,6 @@ stgowan.com
 ||cooltisyntrix20.ru^
 ||cooltool.cc^
 ||coop-offers.com^
-||cooperative-design.net^
 ||cooren.transit-clients-fr.com^
 ||coosync.com^$document
 ||cootek-file.cdn.cootekservice.com^
@@ -14136,7 +14138,6 @@ stgowan.com
 ||cryp-lab.click^
 ||cryplister.com^
 ||crypproz.xyz^
-||crypt-expro.trackfinanceworld.com^
 ||crypticweb.com^
 ||crypto-astur.com^
 ||crypto-coins.club^
@@ -15200,12 +15201,14 @@ stgowan.com
 ||dewaeletransportes.atspace.com^
 ||dex-3arketing.net.daraz.com^
 ||dexanextrader-engine.com^
+||dexhib.b2nchikwa5te.ru^
 ||dexlaunchpads-v3.web.app^
 ||dexterresearch.com^
 ||dextronixbottrader.com^
 ||df.anamacedared.com^
 ||df2anarchy.free.fr^
 ||df5z8oivlb.neliver.com^
+||dfdgjk.duckdns.org^
 ||dfe.mic.mob.com^
 ||dferyrdsii.weebly.com^
 ||dff5e9f26efcfd.vip^
@@ -15369,6 +15372,7 @@ stgowan.com
 ||discover.commscope.com^
 ||discover.elevate.uk^
 ||discoverdailydelivery.info^
+||discoverositymedia.com^
 ||discovry.com^
 ||disgimanni.com^
 ||disgrmyelo.com^
@@ -15519,7 +15523,6 @@ stgowan.com
 ||doc-24-32-107-167.cabot.ar.cebridge.net^
 ||docc-121ee.web.app^
 ||doceminasjofeca.com.br^
-||docfile.duckdns.org^
 ||dochang.pe.kr^
 ||dochoikids.com^
 ||docka24.ru^
@@ -15923,6 +15926,7 @@ stgowan.com
 ||dxwwes05.com^
 ||dybxezbel1g44.cloudfront.net^
 ||dyhju.voluumtrk.com^
+||dylanwong.com^
 ||dyn-ads.perfectaudience.com^
 ||dyn-sumologic-iot-collection.sumologic.com^
 ||dynamic-ip-cr2001189894.cable.net.co^
@@ -16051,7 +16055,6 @@ stgowan.com
 ||eastus2-10.cloud.s11.sfmc-osl.com^
 ||easy-banking-langing-page-ivtcsb46a.vercel.app^
 ||easy-contact-club.com^
-||easy-tools.ru^
 ||easyadsapp.com^$third-party
 ||easybank-landing-page-redo.vercel.app^
 ||easychordworshipguitar.com^
@@ -16179,7 +16182,6 @@ stgowan.com
 ||edgewaycrescorapp.com^
 ||edgu.biz^
 ||edgypollnormandy.com^
-||edhitgfaaiobssg.nut.cc^
 ||ediliziatrinese.com^
 ||edimart.hu^
 ||edipresse.adocean.pl^
@@ -16256,6 +16258,7 @@ stgowan.com
 ||egopharmaceuticalspt.tt.omtrdc.net^
 ||egppb2bportalten.ciamlogin.com^
 ||egretswamper.com^$popup
+||eh-md.com^
 ||ehair4u.com^
 ||eharmony.112.2o7.net^
 ||ehc-e-healthsource.122.2o7.net^
@@ -16739,6 +16742,7 @@ stgowan.com
 ||email.laboiteaflyers.fr^
 ||email.lanisneedlepoint.com^
 ||email.lc.vanxfunnels.co.za^
+||email.libertyvillesigns.com^
 ||email.lms.zawarahmad.com^
 ||email.loancom.com.au^
 ||email.lookoutmountain.co.uk^
@@ -17090,6 +17094,7 @@ stgowan.com
 ||envious-attention.com^
 ||environmentalchemistry.com^
 ||envirotechdelhi.com^
+||envirotechnik.com.mx^
 ||envoke.d1.sc.omtrdc.net^
 ||envoymusicianpaid.com^
 ||enys.ee^
@@ -17135,6 +17140,7 @@ stgowan.com
 ||eqhvb-88ffe.web.app^
 ||eqint.utopiad.com^
 ||eqn0pzwngf.neliver.com^
+||eqsjtziha.top^
 ||equafundrex.com^
 ||equalfeijo.pro^
 ||equalworld.net^
@@ -17317,7 +17323,6 @@ stgowan.com
 ||eufingerlaw.com^
 ||eughsh.iafstore.com^
 ||euinsiderapp.com^
-||eul.s.360.cn^
 ||eulerian.brandalley.fr^
 ||eulerian.tgv-europe.it^
 ||eulerian.voyage-prive.com^
@@ -17442,7 +17447,6 @@ stgowan.com
 ||exchangecom.co.cc^
 ||exchangeo.fr^
 ||excitedteam.com^
-||exclusionremcoss.duckdns.org^
 ||exclusiveautomation.com^
 ||exclusiveclicks.com^$third-party
 ||exclusiveholidayresorts.com^
@@ -18062,6 +18066,7 @@ stgowan.com
 ||findinganna.com^
 ||findingeachother.ourtoolbar.com^
 ||findit-the-game.com^
+||findleggings.com^
 ||findmyautoparts.com^
 ||findserialnumber.com^
 ||findspeed.co.cc^
@@ -18261,6 +18266,7 @@ stgowan.com
 ||foi8q.voluumtrk.com^
 ||fokbrd.impo.ch^
 ||fokusvexfinsoftware.com^
+||fokuszgeodezia.hu^
 ||foldedxquad.shop^
 ||foliosend.com^
 ||folkebladet.top^
@@ -18291,6 +18297,7 @@ stgowan.com
 ||foothillstradercom.122.2o7.net^
 ||footprint.frizznflame.com^
 ||footprintlive.com^$third-party
+||foovouridog.net^
 ||fopasimlei.weebly.com^
 ||fopkjfvi.weebly.com^
 ||for-j.com^$popup
@@ -18408,12 +18415,14 @@ stgowan.com
 ||fox.paternal.ru^
 ||fox25boston.share.ntv.io^
 ||foxinteractivemedia.122.2o7.net^
+||foxsolutions.com.br^
 ||foxx.to^
 ||foybdfdodvgva.rocks^
 ||fp.free-peace.co.jp^
 ||fp.msedge.net^
 ||fp2nn4zxlp.com^
 ||fpa-events.arstechnica.com^
+||fpadga.mcruises.ru^
 ||fpb.sohu.com^
 ||fpc.golubcapital.com^
 ||fpc.laerdal.com^
@@ -18519,7 +18528,6 @@ stgowan.com
 ||frdoki.tapestry.work^
 ||frdoki.woodcut.work^
 ||fredrikhoyer.no^
-||free-counter.co.uk^$third-party
 ||free-help-number.com^
 ||free-movies.ws^
 ||free-mp4-to-mp3-converter.com^
@@ -19237,7 +19245,6 @@ stgowan.com
 ||glow2.l1ghtstorm.ru^
 ||glowingnews.com^$popup
 ||glowvember.com^
-||gluk.kg^
 ||glumobile.112.2o7.net^
 ||gluwiforex.co.cc^
 ||glwebsupport.com^
@@ -19866,7 +19873,6 @@ stgowan.com
 ||grindr2-d.openx.net^
 ||gripcorn.com^
 ||gritsuccess.com^
-||grkmhs.edu.bd^
 ||grobenextapro-platform.com^
 ||grocerydog.com^
 ||groceryshootworld.com^
@@ -19943,6 +19949,7 @@ stgowan.com
 ||gtm.colegioserios.com.br^
 ||gtm.compararsegurodeviagem.com.br^
 ||gtm.conectahorti.com.br^
+||gtm.cyberbot.website^
 ||gtm.decargo.com.br^
 ||gtm.disklimpezavianorte.com.br^
 ||gtm.dnhair.com.br^
@@ -20012,6 +20019,7 @@ stgowan.com
 ||gtm.recoveryhousedpn.com^
 ||gtm.residencialiracema.com.br^
 ||gtm.ribelim.com.br^
+||gtm.romsodonto.com.br^
 ||gtm.ruku1952.it^
 ||gtm.safepick.top^
 ||gtm.sahkoliitto.fi^
@@ -20315,6 +20323,7 @@ stgowan.com
 ||hb.1rx.io^
 ||hb.360yield.com^
 ||hb.jixie.io^
+||hbajwa18.github.io^
 ||hbcfranconville.com^
 ||hbfnzjzx.com^
 ||hbiq.net^
@@ -20446,6 +20455,7 @@ stgowan.com
 ||herpay.com.tw^
 ||herpes.3.p2l.info^
 ||herramientasyservicio.com^
+||herros-suplindo.co.id^
 ||hertechlife.com^
 ||herwehaveit.0fees.us^
 ||hesconet.actonservice.com^
@@ -20881,23 +20891,23 @@ stgowan.com
 ||https-fiberyio.fibery.io^
 ||https.paypal.com.webapps-mpp-home.account-support-login-now.schweidenback.com^
 ||https.secure.bank-of-america.login.sign.gwvllygsqr.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.kyewhddiav.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.xbsyioqsan.underpains.duckdns.org^
+||https.secure.bank-of-america.login.sign.xisrcxiybn.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ccnutqhvgt.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ctmhgxkatm.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.dbtjbmfcmr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ddunpbedza.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.efcissnacf.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.dxrbdqpvif.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.eoywnfygpe.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.fouinvfruq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.gcuxyhqshi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ipegtieqja.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.kbaynnqexp.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.ozihmqrugr.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.qaauyxjpeb.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.rcmahbmtcs.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.sgolkomjyk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sicbqdxbbu.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.sijckrisjk.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.uxioqwsrkv.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.xmfmcstqqw.underpains.duckdns.org^
-||https.secure.bankofamerica.login.sign.zweqdblgrh.underpains.duckdns.org^
 ||httpscorreuandorraad84431.godaddysites.com^
 ||httpsso.anbtr.com^
 ||hu-gmtdmp.mookie1.com^
@@ -20909,6 +20919,7 @@ stgowan.com
 ||hub.com.pl^
 ||hub.onfluencer.net^
 ||hubadnetwork.com^
+||hubqen.c1otheto0th.ru^
 ||hubrel.clearl1nk.ru^
 ||hubrisone.com^$document
 ||hubrus.com^
@@ -21192,7 +21203,6 @@ stgowan.com
 ||ikato.com^
 ||iklan-indo.org^
 ||ikmoon.com^
-||ikneio.aquantindia.com^
 ||iknowawomanlikethat.com^
 ||il.5.p2l.info^
 ||ilaydapromosyon.com^
@@ -21290,7 +21300,6 @@ stgowan.com
 ||images.go.bryantstratton.edu^
 ||images.go.elementfleet.com^
 ||images.go.firsttechfed.com^
-||images.go.kpmgisraelmail.co.il^
 ||images.go.optotechnik.zeiss.com^
 ||images.go.tennisfame.com^
 ||images.info.la-z-boy.com^
@@ -21916,6 +21925,7 @@ stgowan.com
 ||intelglobal.112.2o7.net^
 ||intellarae.net^
 ||intelli-direct.com^
+||intellibanners.com^
 ||intelligentflamingo.com^
 ||intelligentproxy.com^
 ||intelligenttravel.com.au^
@@ -22348,6 +22358,7 @@ stgowan.com
 ||jcplzp.lancel.com^
 ||jcsheriff.org^
 ||jd-bbs.com^*/gif/
+||jd823jdn74uhf1i.com^
 ||jdcartoon.com^
 ||jdfghfjhfkf.wordpress.com^
 ||jdgtgb.haz.de^
@@ -22405,6 +22416,7 @@ stgowan.com
 ||jfo0.societegenerale.fr^
 ||jfuxevakslazy.site^
 ||jgen11.cjt1.net^
+||jgen23.cjt1.net^
 ||jgen28.cjt1.net^
 ||jgen4.cjt1.net^
 ||jgen47.cjt1.net^
@@ -22571,7 +22583,6 @@ stgowan.com
 ||jqueryscript.net^
 ||jqueryserver.com^
 ||jr.rivka.mx^
-||jra5tportdns.duckdns.org^
 ||jraun.com^
 ||jrazorpoppassive.cjt1.net^
 ||jrcallaroundclevelandhomes.122.2o7.net^
@@ -22711,7 +22722,6 @@ stgowan.com
 ||k8s-prd.n-switchqr.net.daraz.com^
 ||k8s-prd.n-switchras.net.daraz.com^
 ||k8vif92e-b8fbb78270266afafa3530fef6b2e9ebe1b47470-sac.d.aa.online-metrix.net^
-||ka0z.com^
 ||kabeldeutschlanddecsc.122.2o7.net^
 ||kabeldeutschlanddewohnung.122.2o7.net^
 ||kabeldeutschlandmedienb.122.2o7.net^
@@ -22778,6 +22788,7 @@ stgowan.com
 ||kategorie-inne-39272.com^
 ||katherinegerman.github.io^
 ||kathollowell.com^
+||kathrynkstrong.com^
 ||katia.xhamsterlive.info^
 ||kauriessizzler.shop^$popup
 ||kaushalam.com^
@@ -23877,6 +23888,7 @@ stgowan.com
 ||lmjy.us^
 ||lmngvqqskhppa.online^
 ||lmqu.com^
+||lmrhotel.com^
 ||lmzhpzoycxjfn.top^
 ||ln.meudigio.com.br^
 ||lnddkooitabnj.online^
@@ -24162,6 +24174,7 @@ stgowan.com
 ||logwebs.kugou.com^
 ||lohegostaresh.com^
 ||loja-en-linea01.webcindario.com^
+||lojaonline.eurobar.pt^
 ||lojaponto.com.br^
 ||lolco.net^
 ||loli.net^$domain=520film.net|52pili.com|acglover.me|hdsky.me|youtaoqi.com
@@ -24355,6 +24368,7 @@ stgowan.com
 ||luponmedia.com^
 ||luqyvp.pandorashop.gr^
 ||lureproxy.co.cc^
+||lussoshop.au^
 ||lutherworks.com^
 ||lutondexapp-app.com^
 ||luuce.jp^
@@ -24551,6 +24565,7 @@ stgowan.com
 ||mail.3gtel.net^
 ||mail.captiv8axosinfluencer.com^
 ||mail.cleanersnearyou.co.uk^
+||mail.comut.net^
 ||mail.ebsb.ru^
 ||mail.ecemanns.nut.cc^
 ||mail.estrem.it^
@@ -25497,7 +25512,6 @@ stgowan.com
 ||mightyessays.com^
 ||mightyfinepizza.com^
 ||mightyslots.com^
-||migroseinlagens.com^
 ||migural.ru^
 ||mijinternational.com^
 ||mikeguide.com^
@@ -26103,6 +26117,7 @@ stgowan.com
 ||mktg.prime-expo.com^
 ||mktg.secuavail.com^
 ||mktlife.capitalmanor.com^
+||mky-osaka-office.com^
 ||mkyebumhdrhsg.store^
 ||mkzwvsibqknw.net^
 ||ml-company.com^
@@ -26316,7 +26331,6 @@ stgowan.com
 ||mor-diamonds.com^
 ||morden-ngw.com^
 ||morden-ykx.com^
-||more-data.ru^
 ||more.tripdrones.com^
 ||moreflashingstar.co.cc^
 ||moreherd.com^
@@ -26655,6 +26669,7 @@ stgowan.com
 ||mynetreklam.com^
 ||mynexus.nl^
 ||mynortoncom.com^
+||mynqob.a8ent5ing.ru^
 ||mynutraresearch.com^
 ||myoccu.demdex.net^
 ||mypagerank.ru^
@@ -26829,6 +26844,7 @@ stgowan.com
 ||navti-4lomeraq.click^
 ||nawec.gm^
 ||naxioveronium-pro.net^
+||nayan235.github.io^
 ||nazionitri.pro^
 ||nazywo.top^
 ||nb.myspace.com^
@@ -27084,7 +27100,6 @@ stgowan.com
 ||nexolane.wiki^
 ||nexorilamute12.life^
 ||nexorion-finance.net^
-||nexouas.cfd^
 ||nexpl.click^
 ||nexreichsoftware.com^
 ||nexro-fund.ru^
@@ -27363,6 +27378,7 @@ stgowan.com
 ||nova.st-1-lt-forge.ru^
 ||novaedge.my^
 ||novanet.vn^
+||novaopcaomotos.com.br^
 ||novaproxy.com^
 ||novarex-phorion.com^
 ||novarexphorion82.net^
@@ -27652,6 +27668,7 @@ stgowan.com
 ||officestoragebox.com^
 ||officeworks.xyz^
 ||officez.top^
+||officialgiveaway.net^
 ||officialmcafee.github.io^
 ||officialnewscaster.pro^
 ||officialtruthchronicle.pro^
@@ -27799,7 +27816,6 @@ stgowan.com
 ||olx.pl-ogloszenia-firmowe-83482.com^
 ||olx.pl-ogloszenie-2045264.rest^
 ||olx.pl-ogloszenie-934054.rest^
-||olx.pl-smart345541.sbs^
 ||olx.pzk135.rest^
 ||olx.zamowienie-42m446qv2dlf0znb86ryp1.onl^
 ||olxpl.moneta.world^
@@ -27868,7 +27884,6 @@ stgowan.com
 ||onebestwl.wix.com^
 ||onedocx-review.myportfolio.com^
 ||onedrive.liveviewuserauthaspx209hr28jh.srv157212.hoster-test.ru^
-||onedrive.liveviewuserauthaspx209hr28jh.srv158042.hoster-test.ru^
 ||onedriveclucproddm20004.blob.core.windows.net^
 ||onedriveclucproddm20011.blob.core.windows.net^
 ||onedrives.live^
@@ -27899,7 +27914,6 @@ stgowan.com
 ||online-sharepointmsn-live.weebly.com^
 ||online-software.org^
 ||online.adservicemedia.dk^
-||online.americanexpress.com.vikingsports.com^
 ||online.chrome-request.com^
 ||online.hnoexpo.com^
 ||online.paypal.com.au.c2fb.nightbird.net^
@@ -28536,7 +28550,6 @@ stgowan.com
 ||parlemonterix-pro.today^
 ||parlemonterixx.life^
 ||parlions-platform-app.com^
-||parlorscenes.com^
 ||parodentprim.com^
 ||parsamtech.com^
 ||parsimoniouspolice.com^
@@ -28747,6 +28760,7 @@ stgowan.com
 ||pdtc.offerbox-biz.jp^
 ||pdtrack.openlending.com^
 ||pduwvp.chanti.dk^
+||pdv.com.br^
 ||pdx-1-apex.go.sonobi.com^
 ||pdywlbjkeq.work^
 ||pdzutf.sftworks.jp^
@@ -28928,6 +28942,7 @@ stgowan.com
 ||philipselectronicsne.tt.omtrdc.net^
 ||phillipstottsandassociates.com^
 ||philocoffee.com.au^
+||philosopherswheel.com^
 ||philosophicalsuppliesjab.com^
 ||phimhcm.blogspot.com^
 ||phimsexmoinhat2013.blogspot.com^
@@ -29154,8 +29169,6 @@ stgowan.com
 ||pl-ogloszenia-frimowe-93891.com^
 ||pl-ogloszenie-02940492.rest^
 ||pl-poland-cl.com^
-||pl-smart27451.sbs^
-||pl-smart46232.sbs^
 ||pl.europaka.biz^
 ||pl.gamemine.com^
 ||pl.shemale.show^
@@ -29974,6 +29987,7 @@ stgowan.com
 ||ptinouth.com^
 ||ptk6n.voluumtrk.com^
 ||ptmjsc.com.vn^
+||ptmndpbkrbyuoom.com^
 ||ptwebcams.com^
 ||puadf.spanx.ca^
 ||pub-00bef5f99dab49e39fc5ca6f34eab29a.r2.dev^
@@ -30448,8 +30462,8 @@ stgowan.com
 ||quorixblinkai-app.com^
 ||qupeiyin.com^
 ||qurl.f.360.cn^
-||qusar.duckdns.org^
 ||qushad.com^
+||qusi.duckdns.org^
 ||qutwryam.com^
 ||qva.io^
 ||qvqcfau.cn^
@@ -31229,7 +31243,6 @@ stgowan.com
 ||robelity.com^
 ||robelux.digital^
 ||robert-c-pack.com^
-||robertberryphotography.com^
 ||robertoriveravicencio.cl^
 ||roberttrocina.com^
 ||robhahgirding.cfd^
@@ -32657,6 +32670,7 @@ stgowan.com
 ||shoesbright.com^
 ||shoesforsale.net^
 ||shoffice.xyz^
+||shonsurseetsey.net^
 ||shooterconjure.com^
 ||shop.chelpachenko.ru^
 ||shop.damcuoi.vn^
@@ -32766,6 +32780,7 @@ stgowan.com
 ||sikayetvarforex.com^
 ||sikhorhsp.com^
 ||silb3r.silberquarz4.ru^
+||silent-office.com^
 ||silesiadeuces.com^
 ||silkymood.com^
 ||silscrub.net^
@@ -33261,7 +33276,6 @@ stgowan.com
 ||sms.yashir.5555555.co.il^
 ||sms2.intellectads.co.in^
 ||smsfreeee.tripod.com^
-||smshanoi.edu.vn^
 ||smsiaki.eu^
 ||smsmobile2.godaddysites.com^
 ||smsphoneboxespaceclient.myfreesites.net^
@@ -34047,9 +34061,11 @@ stgowan.com
 ||stape.dermalys.com.br^
 ||stape.digitaltreinamentos.com.br^
 ||stape.donnaguerriera.com.br^
+||stape.dracarlateixeira.com.br^
 ||stape.draisabelasouza.com.br^
 ||stape.dukctproducoes.com^
 ||stape.e431.jp^
+||stape.efep.com.br^
 ||stape.elitefederal.com.br^
 ||stape.engplay.com.br^
 ||stape.eusebioadvocacia.com.br^
@@ -34450,6 +34466,7 @@ stgowan.com
 ||subbwollet.gitbook.io^
 ||subdfgjkgwallet.gitbook.io^
 ||subgradeert.com^
+||subhasmita-puja.github.io^
 ||subidariquelinoreview.com^
 ||subliincoi.pro^
 ||sublimepainting.net^
@@ -34988,6 +35005,7 @@ stgowan.com
 ||taiquandao1.cn^
 ||takeads.com^
 ||takeitfromtheman.com^
+||takizawa-office.com^
 ||takmelody.sabzgostar.net^
 ||takoashi.net^
 ||takuad.com^
@@ -35385,6 +35403,7 @@ stgowan.com
 ||tentacledraptor.pro^
 ||tenvorlapi.live^
 ||tenza.ru^
+||tenzinling.com.bt^
 ||teospikak.co.cc^
 ||tepoxye.com^
 ||teracraft.eu^
@@ -35572,7 +35591,6 @@ stgowan.com
 ||thereissomegoodqq.com^
 ||thereviewhub.co^
 ||thermabuild.ie^
-||thermantic.world^
 ||theroads.cn^
 ||thesaurusdefrostwoodlands.com^
 ||thesearchagency.net^$third-party
@@ -36284,7 +36302,6 @@ stgowan.com
 ||tradeiplex83-app.com^
 ||tradejorli.com^
 ||tradelexiproplatform.net^
-||tradelidex-ai-com.trackfinanceworld.com^
 ||tradelidex100.com^
 ||trademaxair-solution.com^
 ||trademoryn20.net^
@@ -36601,7 +36618,6 @@ stgowan.com
 ||ttusrifbdjqay.online^
 ||ttw-domiogrod.com^
 ||ttwmed.com^
-||tuan-7-a3ss.sbs^
 ||tuandat-vn.com^
 ||tube8vidsfgd.ddns.name^
 ||tube8vidsjtq.ddns.name^
@@ -37331,6 +37347,7 @@ stgowan.com
 ||vashikaranspecialistguru.in^
 ||vashikaranspecialistinpunjab.blogspot.com^
 ||vashike.blogspot.com^
+||vasia-vasia.github.io^
 ||vasontrexapp.net^
 ||vassudse.com^
 ||vast-cdn.adhigh.net^
@@ -37386,7 +37403,6 @@ stgowan.com
 ||vegannalein.xham.live^
 ||vegaproxy.com^
 ||vegasorder.com^
-||vegeland.co.nz^
 ||veillonellas.info^
 ||veiloc.com.br^
 ||vektorgrandiorapp.com^
@@ -37473,7 +37489,6 @@ stgowan.com
 ||verifyteam.com^
 ||verifyvpn.com^
 ||verite.pluto.ro^
-||verizon.ogkew.icu^
 ||verizonencryption.com^
 ||verizonentrprise.com^
 ||verizonwireless.tt.omtrdc.net^
@@ -37595,6 +37610,7 @@ stgowan.com
 ||videostir.com^
 ||videosvc.ezoic.com^
 ||videoyoutube.ru^
+||vidhigupta14.github.io^
 ||vidimus.lt^
 ||vidoevo.com^
 ||vidspot-adn.ad-stir.com^
@@ -37957,6 +37973,7 @@ stgowan.com
 ||vigorcoinlore.com^
 ||vigour.org^
 ||vihocui.com^
+||viifmuts.com^$popup
 ||vijayawada.biz^
 ||vikasgroup.net^
 ||vikashpatel0.github.io^
@@ -38000,7 +38017,6 @@ stgowan.com
 ||vinted.pl-oferta46819235.shop^
 ||vinted.pl-oferta6734153.icu^
 ||vinted.pl-oferta86483460936.com^
-||vinted.pl-oferta90408-nowy-dron-dji-air-3-fly.sbs^
 ||vinted.pl-ogloszenie-294064.rest^
 ||vinted.purchases034.com^
 ||vintedhka.shop^
@@ -38127,6 +38143,7 @@ stgowan.com
 ||vodafoneuk.tt.omtrdc.net^
 ||vodovod-doboj.com^
 ||vogozara.ru^
+||vogue-family-office.com^
 ||voicifrance.com^
 ||voland-rocker.fatal.ru^
 ||volanixedge53ai.com^
@@ -38327,6 +38344,7 @@ stgowan.com
 ||watch-me-live.be^
 ||watch.vipa.me^
 ||watchbelleonlinefree.jottit.com^
+||watchdogdns.duckdns.org^
 ||watchdy.pro^
 ||watches-shop.me^
 ||watchessales.cn^
@@ -39400,6 +39418,7 @@ stgowan.com
 ||www.aleepanich.blogspot.com^
 ||www.alefbookstores.com^
 ||www.aleijadinho.org.br^
+||www.alemania.duckdns.org^
 ||www.alert360smartsecurity.com^
 ||www.alerta-seguridad.com^
 ||www.alertoptions.com^
@@ -39464,6 +39483,7 @@ stgowan.com
 ||www.altosenlaciudad.com^
 ||www.alyacht.com^
 ||www.alyosha.co.id^
+||www.alzaeem.ps^
 ||www.amaltheiayada.gr^
 ||www.amandagrossman.com^
 ||www.amandajunk.com^
@@ -39471,7 +39491,6 @@ stgowan.com
 ||www.amazingcheck.com^
 ||www.amazonbusiness.jp^
 ||www.amazonco.uk^
-||www.amazulu.duckdns.org^
 ||www.ambiances-toiles.fr^
 ||www.amda.ie^
 ||www.amdconcepts.com^
@@ -39637,7 +39656,6 @@ stgowan.com
 ||www.artndmore.com^
 ||www.artplast.uz^
 ||www.artwithheart.com.au^
-||www.arujalagos.com.br^
 ||www.asadtekgroup.com^
 ||www.asaivam.com^
 ||www.asalesguyonlinetraining.com^
@@ -39827,6 +39845,7 @@ stgowan.com
 ||www.bav-zirkel.de^
 ||www.baysideapparel.com^
 ||www.bazaosobposzukiwanych.you2.pl^
+||www.bazesteam.pips.ru^
 ||www.bazingandroid.com^
 ||www.bbarclaysus.com^
 ||www.bbhotel.gm^
@@ -40357,7 +40376,6 @@ stgowan.com
 ||www.clarisapenzini.com^
 ||www.classactionlawsuitnewscenter.com^
 ||www.classboard.net^
-||www.classifieds1000.com^
 ||www.classof78.net^
 ||www.classofis.com^
 ||www.clawap.fr^
@@ -40386,7 +40404,6 @@ stgowan.com
 ||www.clubdating22.com^
 ||www.clubnauticobogliasco.it^
 ||www.clverify.net^
-||www.cmail-oln040092069015.outbound.protection.sketchwefair-watduoliprudential.com.watchdogdns.duckdns.org^
 ||www.cmbcc.org^
 ||www.cmdsfoil.com^
 ||www.cmetrays.com^
@@ -40545,6 +40562,7 @@ stgowan.com
 ||www.creativiklab.com^
 ||www.credito.com.pl^
 ||www.creepycollective.com^
+||www.crepohacker.duckdns.org^
 ||www.criticalcrypto.com^
 ||www.criticalserver13.net^
 ||www.criticaltheoriesconsortium.com^
@@ -40602,6 +40620,7 @@ stgowan.com
 ||www.czjrhhpnigalslkpztv1.viomil.ro^
 ||www.czternastkowa-muzyka.cba.pl^
 ||www.d3n.com^
+||www.da.com.pk^
 ||www.daaa.ero-advertising.com^
 ||www.dabaowude.com^
 ||www.dabcap.com^
@@ -40626,7 +40645,6 @@ stgowan.com
 ||www.dannomedico.org^
 ||www.danslab.net^
 ||www.dantecar.com^
-||www.daokers.org^
 ||www.daqingsc.com^
 ||www.darakht.com^
 ||www.darfanja.com^
@@ -40684,7 +40702,6 @@ stgowan.com
 ||www.defence.org.cn^
 ||www.defensasecurity.nl^
 ||www.deferenceclothing.com^
-||www.definehost.com^
 ||www.deiceland.org^
 ||www.dejer.net^
 ||www.deksaazaacdserti.blogspot.com^
@@ -40703,6 +40720,7 @@ stgowan.com
 ||www.dental.xiaoxiao.media^
 ||www.dentaljua.com.br^
 ||www.dentalveneersmatizz.com^
+||www.deotadm.edu.bd^
 ||www.depedpasay.ph^
 ||www.dereso.fr^
 ||www.derfrisoerladen.com^
@@ -40787,7 +40805,6 @@ stgowan.com
 ||www.dobrymotor.pl^
 ||www.doc.rankinggospel.com.br^
 ||www.docair.com.au^
-||www.docsign.iunh.duckdns.org^
 ||www.dogpike.com^
 ||www.dogtipping.com^
 ||www.doguskargo.com^
@@ -40832,6 +40849,7 @@ stgowan.com
 ||www.downwilson.com^
 ||www.downza.down.gsxzq.com^
 ||www.dr-faraji.com^
+||www.dragonfly.com.hk^
 ||www.dramione.org^
 ||www.drawstringsheet.com^
 ||www.dreamdrop.org^
@@ -41485,6 +41503,7 @@ stgowan.com
 ||www.gattoapps.net^
 ||www.gay-porn-pictures.blogspot.com^
 ||www.gay-spiele.com^
+||www.gay09.duckdns.org^
 ||www.gaztone.com.au^
 ||www.gazzi.ucoz.net^
 ||www.gbdco.com^
@@ -41910,19 +41929,22 @@ stgowan.com
 ||www.htsinteriors.com^
 ||www.https.secure.bank-of-america.login.sign.edqwuzuxda.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.erxokpmrbi.underpains.duckdns.org^
-||www.https.secure.bank-of-america.login.sign.pvkhjorgxp.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.hjmwnbdonr.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.vonbosqgpd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.begieoqsdz.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.gnonmarqyf.underpains.duckdns.org^
-||www.https.secure.bankofamerica.login.sign.izyzrqntat.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.bnabbhcrwf.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.fveqjrhytg.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.jqpamveypw.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.khsgsbedmz.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.ksjcmzcuvd.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.lmgbzkmplm.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.nvpuqjevio.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.qqhcawmnhl.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.tlqbndygon.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xgnnaoskvf.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.xgumyfyiog.underpains.duckdns.org^
 ||www.https.secure.bankofamerica.login.sign.yrblbgtvjb.underpains.duckdns.org^
+||www.https.secure.bankofamerica.login.sign.yzovjxluyi.underpains.duckdns.org^
 ||www.hubiaohui.com^
 ||www.hublotwatches.cn^
 ||www.humber-family.com^
@@ -42090,6 +42112,7 @@ stgowan.com
 ||www.installwindowsnow.com^
 ||www.instantclients.network^
 ||www.instasupports.com^
+||www.institutobushido.org.br^
 ||www.int-verifycomfirmation.info^
 ||www.intcursos.com.br^
 ||www.integctr.com^
@@ -42187,6 +42210,7 @@ stgowan.com
 ||www.janeirodegrandesespetaculos.com^
 ||www.janhrabik.com^
 ||www.janlschwartz.com^
+||www.janpolet.nl^
 ||www.jap-art.com^
 ||www.japan.inmobi.com^
 ||www.jasmyns.com^
@@ -42553,6 +42577,7 @@ stgowan.com
 ||www.life-ecodefatting.com^
 ||www.lifefisio.com.br^
 ||www.lifeforlife.info^
+||www.lifelabs.vn^
 ||www.lifenews.net^
 ||www.lifenews.ru^
 ||www.lifepsychologists.com.au^
@@ -42586,7 +42611,6 @@ stgowan.com
 ||www.liquidheat.co.za^
 ||www.liquiditybars.com^
 ||www.listroot.com^
-||www.lists.coqianlong.watchdogdns.duckdns.org^
 ||www.lithcon.com^
 ||www.litnotlit.com^
 ||www.little.my1.ru^
@@ -43307,6 +43331,7 @@ stgowan.com
 ||www.nuclear.com.au^
 ||www.nucleuscoop.com^
 ||www.nude-naked-full-pic-sanileon.blogspot.com^
+||www.nuevesito0504.duckdns.org^
 ||www.nuggad.net^
 ||www.nujindia.com^
 ||www.numediamarketing.com^
@@ -43392,7 +43417,6 @@ stgowan.com
 ||www.onu-edu.myfreesites.net^
 ||www.onyx-tools.com^
 ||www.onyx.co.za^
-||www.onyx.com.au^
 ||www.oocities.org^
 ||www.oomyo.com^
 ||www.openavatars.com^
@@ -43903,7 +43927,6 @@ stgowan.com
 ||www.raspberrykids.com^
 ||www.ravenblades.com^
 ||www.razkids.baseresults.com^
-||www.rbgarciaseguros.com.br^
 ||www.rbnnetwork.com^
 ||www.rbwise.com^
 ||www.rcbfast.se^
@@ -44162,6 +44185,7 @@ stgowan.com
 ||www.sansilvestrebilbao.com^
 ||www.santandercobsumerusa.com^
 ||www.santanderdigitaltechnology.com^
+||www.santavita.com.br^
 ||www.santedentairebromont.com^
 ||www.santelifecare.com^
 ||www.sapconinstruments.com^
@@ -44432,6 +44456,7 @@ stgowan.com
 ||www.smart-scripts.com^
 ||www.smartcargosa.com^
 ||www.smartcode.com^
+||www.smartconnect.duckdns.org^
 ||www.smartino.ru^
 ||www.smartoffer.site^
 ||www.smartshutter.co^
@@ -45204,6 +45229,7 @@ stgowan.com
 ||www.users.freenetname.co.uk^
 ||www.usonlinesupport.com^
 ||www.usseek.com^
+||www.ussvictory.org^
 ||www.ust.md^
 ||www.utiafirfxk.info^
 ||www.utopia.brands.brandcollections.ru^
@@ -45793,7 +45819,6 @@ stgowan.com
 ||www.zuzu-criss.blogspot.com^
 ||www.zv0wp.voluumtrk.com^
 ||www.zxyxjx.1039.net^
-||www09.clicktale.net^
 ||www1.aozorabank.co.jp^
 ||www1.bestkiller1.xorg.pl^
 ||www1.carestream.com^
@@ -45805,9 +45830,7 @@ stgowan.com
 ||www1.hug-srss.com^
 ||www1.leddental.com^
 ||www1.xmediaserve.com^
-||www14.clicktale.net^
 ||www15.a8.net^
-||www16.clicktale.net^
 ||www18.a8.net^
 ||www2.0zz0.com^
 ||www2.3dsystems.com^
@@ -46125,6 +46148,7 @@ stgowan.com
 ||xn--4l8aa2c0bjc.com^
 ||xn--79qw71a5g430f.com^
 ||xn--albilet-b9a.pl-dosw.shop^
+||xn--albilet-b9a.pl-smart0159802.cfd^
 ||xn--berprfung-des-web-kontos3-ewcf.weebly.com^
 ||xn--bitrex-k17b.com^
 ||xn--blockchan-75a.com^
@@ -46272,6 +46296,7 @@ stgowan.com
 ||yard.pincerloom.ru^
 ||yarglah.free.fr^
 ||yashh56.github.io^
+||yashisahay.github.io^
 ||yast.rutube.ru^
 ||yasuma.com^
 ||yatirm-xivo-app.com^
@@ -46435,6 +46460,7 @@ stgowan.com
 ||yucpihodztolh.space^
 ||yudedj.canadianprotein.com^
 ||yueli.me^
+||yug-tur.ru^
 ||yugk.net^
 ||yuki-takase.com^
 ||yukmapan.com^
@@ -46821,7 +46847,6 @@ stgowan.com
 ||ztidu.com^
 ||ztiei.my^
 ||ztkyevuemenmj.online^
-||ztm-warszawa.online^
 ||ztm.myavlive.com^
 ||ztm.zestdent.com^
 ||ztrck.me^
@@ -46909,7 +46934,6 @@ stgowan.com
 ||zzzjhkyprpsvl.store^
 ||zzzl.org^
 ﻿-pia.appsflyersdk.com^
-﻿/assets/ads/*$~image,domain=~outlook.live.com
 ﻿/googleads.$~script,domain=~googleads.github.io
 ﻿://mine.torrent.pw^
 ﻿://r.reklam*.com^
