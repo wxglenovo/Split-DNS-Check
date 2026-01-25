@@ -1,10 +1,11 @@
-﻿/criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
-/googleads.$~script,domain=~googleads.github.io
+﻿/googleads.$~script,domain=~googleads.github.io
 ://mine.torrent.pw^
 ://r.reklam*.com^
+@@-ds.metric.gstatic.com^|
 @@||adm.crowdicity.com^
 @@||c.mipcdn.com^$domain=prpcoin.com
 @@||cdn.rawgit.com/dmauro/keypress/master/keypress.js$script,domain=dmauro.github.io
+de.as.pptv.com
 wjyhao.com^
 |005.free-counter.co.uk^
 |006.free-counter.co.uk^
@@ -204,7 +205,6 @@ wjyhao.com^
 |admanagement.ch^
 |admedia.com^
 |admin.iovation.com^
-|admin.novanet.vn^
 |admin.phunusuckhoe.vn^
 |adnetwork-core.aiactiv.io^
 |adocean.pl^
@@ -846,7 +846,6 @@ wjyhao.com^
 |counter22.bravenet.com^
 |counter25.bravenet.com^
 |counter3.sextracker.com^
-|cp.novanet.vn^
 |cp109.sn1pcradle.ru^
 |cpm.d.eclick.vn^
 |cpusall.112.2o7.net^
@@ -2118,7 +2117,6 @@ wjyhao.com^
 |pix522.adtech.fr^
 |pixel-us-east.rubiconproject.com^
 |pixel-user-1039.everesttech.net^
-|pixel.autoads.asia^
 |pixel.bounceexchange.com^
 |pixel.n1ghtbreeze.ru^
 |pixel.runative-syndicate.com^
@@ -2212,7 +2210,6 @@ wjyhao.com^
 |proflojistik.com^
 |programattik.com^
 |projectwonderful.com^
-|promenadesfantomes.com^
 |promo.cityads.com^
 |promo.mes-meilleurs-films.fr^
 |promos.bwin.it^
@@ -2429,7 +2426,6 @@ wjyhao.com^
 |screzol.floresflorchuva.cfd^
 |scrippsrecipezaar.112.2o7.net^
 |script.banstex.com^
-|script.novanet.vn^
 |sdc.roadandtrack.com^
 |sdk-cdn.aiactiv.io^
 |sdk-info.gimbal.com^
@@ -2582,7 +2578,6 @@ wjyhao.com^
 |spot10t-vyno-software.com^
 |spotlessstamp.com^
 |spotwurnix-pro.com^
-|spotx.tv^
 |sprawdzianyonline.pl^
 |sprawdzikk.v0r.org^
 |spritekazar.com^
@@ -4558,6 +4553,7 @@ wjyhao.com^
 ||102.122.207.net^
 ||1029.editor-qa1.marketingcloudqaapis.com^
 ||10298198.info.sofi.org^
+||103-138-112-92.pool.ukrtel.net^
 ||10314.ftp-qa1.marketingcloudqaops.com^
 ||10366.editor-qa1.marketingcloudqaapis.com^
 ||103847237c1.online^
@@ -4684,6 +4680,7 @@ wjyhao.com^
 ||144372871.keywordblocks.com^
 ||145-116-225-52.uilenstede.casema.nl^
 ||14612.sock-qa1.marketingcloudqaops.com^
+||148-138-133-95.pool.ukrtel.net^
 ||148-mho-590.mktoresp.com^
 ||1480d5060b.8b023d788d.com^
 ||14830.engine.mobileapptracking.com^
@@ -4964,7 +4961,6 @@ wjyhao.com^
 ||201-92-191-203.dsl.telesp.net.br^
 ||201-92-99-86.dsl.telesp.net.br^
 ||201-95-16-6.dsl.telesp.net.br^
-||201-95-169-132.dsl.telesp.net.br^
 ||201-95-28-78.dsl.telesp.net.br^
 ||201-95-38-134.dsl.telesp.net.br^
 ||2015.icse-conferences.org^
@@ -5935,6 +5931,7 @@ wjyhao.com^
 ||6549af56e9.3696a16444.com^
 ||654c9c8169b3e9648935211963df5470.com^
 ||65e08396fc2a8d74.com^
+||66-81-178-94.pool.ukrtel.net^
 ||66.117.151.202.cc9.ne.jp^
 ||66.6.87.194.dynamic.dol.ru^
 ||66.net-31.172.shemale.show^
@@ -6353,6 +6350,7 @@ wjyhao.com^
 ||87-205-180-213.adsl.inetia.pl^
 ||87-205-254-237.adsl.inetia.pl^
 ||87-205-39-30.adsl.inetia.pl^
+||87-229-17-147.saghysat.hu^
 ||87.68.49.181.cable.012.net.il^
 ||87.97.10.247.pool.invitel.hu^
 ||87.97.100.112.pool.invitel.hu^
@@ -6692,7 +6690,6 @@ wjyhao.com^
 ||a.lifehacker.ru^
 ||a.medtronic.com^
 ||a.mnet-ad.net^
-||a.muloqot.uz^
 ||a.myapp.com^
 ||a.ns.inbox.lv^
 ||a.o.nf^
@@ -7274,6 +7271,7 @@ wjyhao.com^
 ||accolabbru.pro^
 ||accomplishedpersuadedprinter.com^$popup
 ||accomplishlearningjourney.com^
+||accoun.twapil.cn^
 ||account-captchaid5324.cfd^
 ||account-faq.info^
 ||account-microsoft.blogspot.com^
@@ -7359,6 +7357,7 @@ wjyhao.com^
 ||activplus11.web.app^
 ||actlife.com^
 ||actualcomment.mirtesen.ru^
+||actualisation-de-mon-compte.com^
 ||actually-reward.co.cc^
 ||actualresearch.com^
 ||acu.gov.kh^
@@ -7439,7 +7438,6 @@ wjyhao.com^
 ||ad.amtk-media.com.37890.9302.302br.net^
 ||ad.ch.doubleclick.net^
 ||ad.clickotmedia.com^
-||ad.cooks.com^
 ||ad.cosp.jp^
 ||ad.dev.360.cn^
 ||ad.dlrwebservice.com^
@@ -8935,6 +8933,7 @@ wjyhao.com^
 ||ae.networkdev.veeva.com^
 ||ae.providence.edu^
 ||ae.zpt.aplcare.com^
+||ae07d651-b225-4a05-a850-cc574aaf7767-00-1etsuo5i5kovv.riker.replit.dev^
 ||ae2-dfw3-qlikview.net.daraz.com^
 ||ae241521773f832d.com^
 ||ae29-sjc12-dr01-10-marketing.net.daraz.com^
@@ -9110,6 +9109,7 @@ wjyhao.com^
 ||agor-engineering.com^
 ||agora.pushwoosh.com^
 ||agozarnyc.com^
+||agpgtunukfis.com^
 ||agraeta.com^
 ||agreeablearch.com^
 ||agrffumclt.neliver.com^
@@ -9139,7 +9139,6 @@ wjyhao.com^
 ||ahtas.guess.com^
 ||ahuman.us^
 ||ai-arbitrix-platform.com^
-||ai-log.biz^
 ||ai-telegram.online^
 ||ai-trading-esn.com^
 ||ai.nanda.vn^
@@ -9378,7 +9377,6 @@ wjyhao.com^
 ||alfastream.cfd^
 ||alfatrade.com.br^
 ||alfonsodns.duckdns.org^
-||alfy.com^
 ||alfynetwork.com^
 ||algarvesup.com^
 ||algodreamy.com^
@@ -9446,6 +9444,7 @@ wjyhao.com^
 ||allegro.78642.net^
 ||allegro.78684.me^
 ||allegro.83457.vu^
+||allegro.982853fof221.cfd^
 ||allegro.conformation-1801.shop^
 ||allegro.dostw-126.shop^
 ||allegro.id568982.org^
@@ -9930,7 +9929,6 @@ wjyhao.com^
 ||analytics.hotradiators.com^
 ||analytics.hub-box.com^
 ||analytics.hvylya.net^
-||analytics.ifog.ch^
 ||analytics.ikarao-shop.com^
 ||analytics.ikk-classic.de^
 ||analytics.infinitidesign.it^
@@ -9959,7 +9957,6 @@ wjyhao.com^
 ||analytics.metro.com.kz^
 ||analytics.metro.de^
 ||analytics.mindivy.net^
-||analytics.mustafacanyucel.com^
 ||analytics.mymtnlite.com.gh^
 ||analytics.myqnapcloud.io^
 ||analytics.nationwide.com^
@@ -10552,7 +10549,6 @@ wjyhao.com^
 ||appitate.affise.com^
 ||appl.marketo.com^
 ||apple-and-yann.com^
-||apple-contents.com^
 ||apple-glasses.shop^
 ||apple-helpnumber.com^
 ||apple-info-us.live^
@@ -11289,7 +11285,6 @@ wjyhao.com^
 ||b4dhd9ds0g.neliver.com^
 ||b4efed32d2.4bd92c373a.com^
 ||b4inxs.magalional.dpdns.org^
-||b4tu.com^
 ||b5413a88a624bd49a5e517f473fbd2f0.xyz^
 ||b56daf73e7868239.com^
 ||b61f667d28df.site^
@@ -12367,6 +12362,7 @@ wjyhao.com^
 ||bobolie-live-service.org^
 ||bobswatches.actonservice.com^
 ||bobyfrancisandpradeep.com^
+||bobyhack.duckdns.org^
 ||boccumetam.pro^
 ||bocees04.com^
 ||bochnvmvvzeqc.space^
@@ -13546,6 +13542,7 @@ wjyhao.com^
 ||ccanning157.wixstudio.com^
 ||cccc.celebjihad.live^
 ||cccrs.com^
+||ccdollar.linkpc.net^
 ||cceebbdd01.top^
 ||ccf222613058fe03.com^
 ||ccf48809987f04e3.com^
@@ -14030,7 +14027,6 @@ wjyhao.com^
 ||ciencia.ao^
 ||cigarettes-alcohol-delivery.com^
 ||cignahealth.com^
-||cihangcapital.com^
 ||cijopor1.m-pages.com^
 ||cikez.net^
 ||cikmayedekparca.com^
@@ -14824,6 +14820,7 @@ wjyhao.com^
 ||conduentfornewjerseyezpassnj.112.2o7.net^
 ||conectalitoral.com.br^
 ||conemaxil.web.app^
+||conesoftdobrasil.com^
 ||conexionesymanguerashidrocalidas.com.mx^
 ||conf-bn-cr472.webcindario.com^
 ||conf-in-dc.heytapdl.com^
@@ -15573,7 +15570,6 @@ wjyhao.com^
 ||cylindrical-wave.com^
 ||cypherscans.xyz^
 ||cypressresearch.co1.qualtrics.com^
-||cyprusnike.com^
 ||cyruslogistics.com^
 ||cysis.cl^
 ||cyuforex.co.cc^
@@ -15584,6 +15580,7 @@ wjyhao.com^
 ||czaragroup.com^
 ||czdxto.radiopopular.pt^
 ||czea9hvedc.neliver.com^
+||czech-power.4fan.cz^
 ||czf.cchfjz.com^
 ||czhfjdhjxshhvsvjk.weebly.com^
 ||czinvestseven.info^
@@ -16785,7 +16782,6 @@ wjyhao.com^
 ||disparitydegenerateconstrict.com^
 ||dispaschio.pro^
 ||display.360totalsecurity.com^
-||displaze-inc.com^
 ||displink.com^$third-party
 ||dispowear.lk^
 ||dissosudor.pro^
@@ -16929,17 +16925,18 @@ wjyhao.com^
 ||doceminasjofeca.com.br^
 ||docevidastore.com.br^
 ||docfile.duckdns.org^
-||dochedse.lescigales.org^
 ||dock.plume-anchor.ru^
 ||doclec.supersmart.com^
 ||dococrew.com^
 ||docomo-analytics.com^
 ||docs--exodus-web3.pages.dev^
+||docs-uphold-wallet.blogspot.pt^
 ||docs.performancerevenues.com^
 ||docs.smoothsailing.ws^
 ||docsnewnadb2tildb2s12345proxy3.net.daraz.com^
 ||doct-umb.org^
 ||doctmoude.web.app^
+||doctolib-consultation.help^
 ||doctordays.com^
 ||doctordirect.net^
 ||doctorfisher.com^
@@ -17172,7 +17169,6 @@ wjyhao.com^
 ||drinkengril.top^
 ||drip9y.ra1nbyte.ru^
 ||dripdropfilter.com^
-||dritefpolice.com^
 ||drive-secu.myportfolio.com^
 ||drivejet.ru^
 ||driverboostersupport.weebly.com^
@@ -17459,6 +17455,7 @@ wjyhao.com^
 ||eadwww.ujn.edu.cn^
 ||eagamerz.com^
 ||eagamesuk.112.2o7.net^
+||eager-colors-002519.framer.app^
 ||eager-dirac.196-251-72-149.plesk.page^
 ||eaglerivercu.com.102.112.2o7.net^
 ||eajaykumar.com^
@@ -17482,6 +17479,7 @@ wjyhao.com^
 ||eastoffice.uk^
 ||eastpacfinance.com.au^
 ||eastpakeu.btttag.com^
+||easy-bank-landing-page-ecru.vercel.app^
 ||easy-bank-landing-page-olive.vercel.app^
 ||easy-hit-counter.com^
 ||easy-when-you-know-how.com^
@@ -17927,7 +17925,6 @@ wjyhao.com^
 ||email.anesthesia-criticalcare.com^
 ||email.antry.co.jp^
 ||email.ao.disciplinedmuzzle.com^
-||email.ap1.co.id^
 ||email.apharaon.com^
 ||email.apicepsico.com.br^
 ||email.app.archlet.io^
@@ -18085,7 +18082,6 @@ wjyhao.com^
 ||email.coxandkings.co.uk^
 ||email.cpc-india.net^
 ||email.cps4jobs.com^
-||email.cravcitech.ro^
 ||email.crawhen.com^
 ||email.crearonline.edu.ec^
 ||email.creasp.org.br^
@@ -19915,7 +19911,6 @@ wjyhao.com^
 ||faszuimnertunfer.weebly.com^
 ||fat-van-echoing.on-fleek.app^
 ||fatall-error.info^
-||fatimalilyanncan.com^
 ||fatssupport.com^
 ||faunugraipt.com^
 ||fauracia.biz^
@@ -22039,6 +22034,7 @@ wjyhao.com^
 ||greyrock-capital.com^
 ||grfz.de^
 ||grgnsht.nzxt.com^
+||grhgq.printique.com^
 ||griefmental.digital^
 ||grifdesign.com^
 ||griffithlampack-layton.blogspot.com^
@@ -22081,7 +22077,6 @@ wjyhao.com^
 ||gscounters.eu1.gigya.com^
 ||gsentec.com^
 ||gsgir.tt.omtrdc.net^
-||gsgsc.com^
 ||gshyxh.com^
 ||gsiccbmocaprdi2.112.2o7.net^
 ||gsjdzx.com^$third-party
@@ -22100,6 +22095,7 @@ wjyhao.com^
 ||gta5-pcdownload.com^
 ||gta5spot.altervista.org^
 ||gtag.data-prod.aws.air-up.com^
+||gtasrv.ru^
 ||gtcslt-di2.com^$third-party
 ||gtechsoftware.in^
 ||gtifund.cn^
@@ -22146,7 +22142,6 @@ wjyhao.com^
 ||gtm.cursobiscoitoscaseiros.com.br^
 ||gtm.dannyclosetboutique.com.br^
 ||gtm.davidguerrerofx.com^
-||gtm.decargo.com.br^
 ||gtm.dicaminuta.com.br^
 ||gtm.dogcare24.de^
 ||gtm.dysoncanada.ca^
@@ -23059,6 +23054,7 @@ wjyhao.com^
 ||hotelparadise.com.br^
 ||hotelsamudramundra.com^
 ||hotelscom.122.2o7.net^
+||hotelseaworld.com^
 ||hotelsurf.co.cc^
 ||hoteltaishan.com^
 ||hotelup.top^
@@ -23208,7 +23204,9 @@ wjyhao.com^
 ||https.secure.bankofamerica.login.sign.lbikhskweh.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.mauoycxfmi.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.mdrzrlcczh.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.mmcoqtjezo.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.nuiftfhgea.underpains.duckdns.org^
+||https.secure.bankofamerica.login.sign.oeubdgywaf.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ofiwwzwmfq.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.ozihmqrugr.underpains.duckdns.org^
 ||https.secure.bankofamerica.login.sign.pgubadxqse.underpains.duckdns.org^
@@ -24425,6 +24423,7 @@ wjyhao.com^
 ||investors.healthysmileclub.com^
 ||investorsstartpage.com^
 ||investpro-ai-app.net^
+||invincibleacid.com^
 ||invinciblefurniture.com^
 ||invisible.ws^
 ||invitae-sales.labcorp.com^
@@ -24630,11 +24629,9 @@ wjyhao.com^
 ||itdise.info^
 ||ite.scsk.jp^
 ||itechni.com^
-||itelkom.net^
 ||itelligent.nl^
 ||itemsorter.com^
 ||itforcesupport.com^
-||itgastaldi.com^
 ||itgeekx.com^
 ||itgene.com^
 ||itgrl.de^
@@ -24907,7 +24904,6 @@ wjyhao.com^
 ||jj-google.com.cn^
 ||jjjgaasda.live^
 ||jjltj.58thstreet.co.uk^
-||jjsadvocates.com^
 ||jjzuqyezehdnj.space^
 ||jk-artstudio.com^
 ||jkgeyo.urbanara.de^
@@ -25045,6 +25041,7 @@ wjyhao.com^
 ||jrkziw.pystravel.vn^
 ||jrs-live-espn.com^
 ||jrs-live-football.com^
+||jrs-live-vip.com^
 ||jrs-nba-live.com^
 ||jrs.es^
 ||jrso-tiktok.com^
@@ -25497,6 +25494,7 @@ wjyhao.com^
 ||klinikaideal.com^
 ||kliqz.com^
 ||kljnoorderwijk.be^
+||klmaiil.weebly.com^
 ||klmc88.cn^
 ||klockan.info^
 ||klopterjmk.s3-website-us-west-2.amazonaws.com^
@@ -25514,6 +25512,7 @@ wjyhao.com^
 ||kmfzm.oxygenetix.com^
 ||kmindex.ru^$third-party
 ||kmqhmn.helen-marlen.com^
+||kmr.www.watchdogdns.duckdns.orgwatchdogdns.duckdns.org^
 ||kms-tool.com^
 ||kmss.kanzleimauss.de^
 ||kmusic.tk^
@@ -26443,6 +26442,7 @@ wjyhao.com^
 ||liteproxy.com^
 ||literethoxyl.shop^
 ||litige-pp-client.com^
+||litiglanai.rest^
 ||litmus.evergage.com^
 ||litnotlit.com^
 ||litstenreadio.myuniversitytoolbar.com^
@@ -26746,7 +26746,6 @@ wjyhao.com^
 ||load.sd.outwell.com^
 ||load.server.discount-supplements.co.uk^
 ||load.server.huskandseedskincare.co.uk^
-||load.server.janelabar.com.br^
 ||load.server.masterfulmoissanite.com^
 ||load.server.mybleen.com^
 ||load.server.mycustomheart.com^
@@ -27366,6 +27365,7 @@ wjyhao.com^
 ||machiyane-kasukabe.com^
 ||macintosh-support.com^
 ||macintoshguru-10.access.nethere.net^
+||macledigitale-activation.com^
 ||macro.adnami.io^
 ||macrocon.com.br^
 ||macronet.cz^
@@ -27558,7 +27558,6 @@ wjyhao.com^
 ||manx.datengang.de^
 ||manyielding.com^
 ||manzana.net^
-||mao1.jsnovel.com^
 ||maoda.se^
 ||map.appdlab.com^
 ||map.blue-line.com^
@@ -28515,6 +28514,7 @@ wjyhao.com^
 ||minhalogo.provisorio.ws^
 ||minibilling.com^
 ||minifyurl.net^
+||minimal-motivation-439578.framer.app^
 ||minimum-lots-850454.framer.app^
 ||miningbase.cloud^
 ||miningspeed.com^
@@ -30061,7 +30061,6 @@ wjyhao.com^
 ||newstarplastic.co.id^
 ||newsyoucanread24.com^
 ||newtest.wunderman-email.cjm.adobe.com^
-||newtontool.ca^
 ||newvefierdairmilescanda.weebly.com^
 ||newworldtradingpartners.com^
 ||newyorkandcompany.112.2o7.net^
@@ -30448,7 +30447,6 @@ wjyhao.com^
 ||nscash.com^$third-party
 ||nscrskxrpsezh.site^
 ||nsdlteachersdomain.112.2o7.net^
-||nsgrafica.ao^
 ||nslee.jenshansen.com^
 ||nso-dam.firebaseapp.com^
 ||nspmotion.com^
@@ -30471,7 +30469,6 @@ wjyhao.com^
 ||nubom.com^
 ||nudecosplays.com^
 ||nudesonline.com^
-||nuevaesperanza.edu.ar^
 ||nugenix.co^
 ||nujindia.com^
 ||nukql.hyperlitemountaingear.com^
@@ -30643,6 +30640,7 @@ wjyhao.com^
 ||office-sapporo.net^
 ||office-space-for-lease-rzj.sbs^
 ||office-x.net^
+||office-yamawaki.com^
 ||office.com.ng^
 ||office33mebel.ru^
 ||office365-onedrive.com^
@@ -31704,6 +31702,7 @@ wjyhao.com^
 ||paypal-us.flappie.nl^
 ||paypal-verify.byethost9.com^
 ||paypal.112.2o7.net^
+||paypal.com.support21.duckdns.org^
 ||paypal.com.update.token.x0twl1mck7p4auyq8bf3.service.loisirs77.fr^
 ||paypalbank.xyz^
 ||paypalbettingsites.com^
@@ -31778,7 +31777,6 @@ wjyhao.com^
 ||pcpatchers.net^
 ||pcplayz.com^
 ||pcsoftwarez.blogspot.com^
-||pcsreg.softbi.com^
 ||pcsupport.fr^
 ||pctmps.com^
 ||pcupd.com^
@@ -31959,7 +31957,6 @@ wjyhao.com^
 ||phimhaynhatvietnam.blogspot.com^
 ||phixls.uaubox.com.br^
 ||phlpolice.com^
-||phlwedding.com^
 ||phoenixcon.ae^
 ||phoenixduiatts.co.cc^
 ||phoenixriseg.info^
@@ -32301,7 +32298,6 @@ wjyhao.com^
 ||pmrzoo.fruttaebacche.it^
 ||pmta2.adleadevent.com^
 ||pmweb.com.br^$third-party
-||pn-ciamis.go.id^
 ||pnable.com^
 ||pneutechproducts.com^
 ||pngfp.com^
@@ -32560,7 +32556,6 @@ wjyhao.com^
 ||pqsjujuhicwrx.online^
 ||pr-7831.1inch-io-app.pages.dev^
 ||pr-kuhni.ru^
-||pr-linktausch.de^$third-party
 ||pr.iplatforms.com.au^
 ||pr.wilkhahn.co.jp^
 ||pr.ybp.yahoo.com^
@@ -33731,6 +33726,7 @@ wjyhao.com^
 ||rcdna.gwallet.com^
 ||rchkup.com^
 ||rcjqzugspmife.online^
+||rcoanaplsn.com^
 ||rcpsuae.com^
 ||rcsbar.com^
 ||rctwvizgssraz.store^
@@ -35077,7 +35073,6 @@ wjyhao.com^
 ||scrippsnetworks.com^
 ||scripts.chitika.net^
 ||scripts.dadata.com.br^
-||scripts.donglogs.com^
 ||scripts.myfirsttab.com^
 ||scripts.simpleanalyticscdn.com^
 ||scripts.speedshiftmedia.com^
@@ -35290,7 +35285,6 @@ wjyhao.com^
 ||seguretat-wordpress.com^
 ||seguridad.in^
 ||seguridadecudor.webcindario.com^
-||seisingenieria.cl^
 ||sekolahsuryabangsa.sch.id^
 ||sekstoi.com^
 ||sekudewicz.zovantis.info^
@@ -35533,6 +35527,7 @@ wjyhao.com^
 ||servicedgtes.com^
 ||serviceidreset.sytes.net^
 ||servicenowadministrator.org^
+||serviceonline.duckdns.org^
 ||servicepaymentinfo.servehttp.com^
 ||servicereactivate.myvnc.com^
 ||services.adroll.com^
@@ -36175,7 +36170,6 @@ wjyhao.com^
 ||slydi.com^
 ||slyrun.info^
 ||sm-live.com^
-||sm.desguaces-coches.es^
 ||sm.legendyuvas.cz^
 ||sm.makino.com^
 ||sm.pastelerias-pastel.es^
@@ -36480,7 +36474,6 @@ wjyhao.com^
 ||smmpoint.com^
 ||smmprice.ru^
 ||smodus.nike.com^
-||smoketest-ws.insert.io^
 ||smokeyshandcraftedloghomes.com^
 ||smokintech.com^
 ||smon.asianpacificheritage.gov^
@@ -37684,7 +37677,6 @@ wjyhao.com^
 ||stay-assistant-now.com^
 ||staygueshub.click^
 ||stbg.standardbank.co.za^
-||stbudo.com^
 ||stc.interactive.brand.zing.vn^
 ||stc.qualtrics.com^
 ||stdm.ayudante.jp^
@@ -39410,7 +39402,6 @@ wjyhao.com^
 ||tools8.casa^
 ||toomanyfonts.com^
 ||toopsoug.net^$document
-||toosbar.com^
 ||toothbless.com^
 ||toots-a.akamaihd.net^
 ||top-access.co.cc^
@@ -39525,6 +39516,7 @@ wjyhao.com^
 ||tr-facebook.blogspot.jp^
 ||tr-gdpr-vgc-datacenter.vivoglobal.com^
 ||tr-mynet.cdn.videoplaza.tv^
+||tr-sportswear.com^
 ||tr-vcode-od.vivoglobal.com^
 ||tr.academy.canal-plus.com^
 ||tr.applift.com^
@@ -40984,6 +40976,7 @@ wjyhao.com^
 ||vanisle360.com^
 ||vanna-master.ru^
 ||vanpeski.org^
+||vansaj0701.github.io^
 ||vanscheers.com^
 ||vantaggio.today^
 ||vantex-finance.net^
@@ -41645,6 +41638,7 @@ wjyhao.com^
 ||vinted.80173.click^
 ||vinted.90-ji-54-p-l.rest^
 ||vinted.95428.sbs^
+||vinted.98137612013712.cfd^
 ||vinted.99077.click^
 ||vinted.aukcja-8fg2lz64qftgfe12xys9.org^
 ||vinted.conformation-168.shop^
@@ -41674,10 +41668,12 @@ wjyhao.com^
 ||vinted.pl-ogloszenie-23905.rest^
 ||vinted.pl-oglosznie-20453.rest^
 ||vinted.pl-smart05812424.cfd^
+||vinted.pll-ogloszenie7519257123794.sbs^
 ||vinted.rozne-934894585.rest^
 ||vinted.rozne-954383.rest^
 ||vinuxhome.com^
 ||violation-pages.start.page^
+||violet-throat.pro^
 ||vip-live-9games.com^
 ||vip50z.com^
 ||vipads.offerstrack.net^
@@ -42124,6 +42120,7 @@ wjyhao.com^
 ||web.eurotax.at^
 ||web.eurotax.ro^
 ||web.hpaopao.com^
+||web.icewarp.cn^
 ||web.kuaiwan.com^
 ||web.news.gnv.it^
 ||web.news.paganistore.com^
@@ -42360,6 +42357,7 @@ wjyhao.com^
 ||whatsappio.com^
 ||whatsappmod.net^
 ||whatsappp.info^
+||whatsapt.cc^
 ||whatscsapp.com^
 ||whauzavouweb.com^
 ||wheelhousela.com^
@@ -42969,6 +42967,7 @@ wjyhao.com^
 ||www.accessoirecamion.com^
 ||www.accessoiresdumobile.com^
 ||www.account-certification.com^
+||www.account-google-com.katalog-ru.net^
 ||www.account-microsoft.blogspot.com^
 ||www.accountsupport1.com^
 ||www.accountupdat.webcindario.com^
@@ -43182,7 +43181,6 @@ wjyhao.com^
 ||www.alexvox.com^
 ||www.alfaalimentacao.com.br^
 ||www.alfacom.com.tn^
-||www.alfarooqint.com^
 ||www.alfathsoft.net^
 ||www.algaealliance.com^
 ||www.algom-law.com^
@@ -43260,6 +43258,7 @@ wjyhao.com^
 ||www.analiticaweb.es^
 ||www.anaokulupark.com^
 ||www.anapa-novosel.ru^
+||www.anastasiasaffiliate.com^
 ||www.ancientvoyages.com^
 ||www.andanterondo.com^
 ||www.andradevdp.com^
@@ -43287,7 +43286,6 @@ wjyhao.com^
 ||www.animefreewallpapers.com^
 ||www.animeshi.tv^
 ||www.ankapsikiyatri.com^
-||www.ankaratemizlik.web.tr^
 ||www.annavieza.com^
 ||www.annuaire-casino.net^
 ||www.ano-aic.ru^
@@ -43988,7 +43986,6 @@ wjyhao.com^
 ||www.carson.net.au^
 ||www.cartascelestes.com^
 ||www.carte-vital-sante.com^
-||www.carulit.editoramelhoramentos.com.br^
 ||www.casalemedia.com^
 ||www.casalsexoliberal.blogspot.com^
 ||www.casavells.com^
@@ -44003,7 +44000,6 @@ wjyhao.com^
 ||www.casinodeauville.com^
 ||www.caspianlab.ir^
 ||www.cassovia.sk^
-||www.castlehomeimprovement.com^
 ||www.cataldobombasinjetoras.com.br^
 ||www.catalytic.science^
 ||www.catchmag.com^
@@ -44029,6 +44025,7 @@ wjyhao.com^
 ||www.cdkeyshere.com^
 ||www.cdthuchanhchatluong.blogspot.com^
 ||www.cdx4062864.mike-ehrmantraut.wikaba.com^
+||www.cdxudong.com^
 ||www.cea.lk^
 ||www.cebolasurfboards.com.br^
 ||www.cecopgroup.com^
@@ -44104,7 +44101,6 @@ wjyhao.com^
 ||www.chris-jasnowidz.pl^
 ||www.chrisdejager-attorneys.co.za^
 ||www.chrismaisano.com^
-||www.chrisnagy.com^
 ||www.christchurchcarnforth.co.uk^
 ||www.christianstay.com^
 ||www.chronfamily.org^
@@ -44211,7 +44207,6 @@ wjyhao.com^
 ||www.colegioanchieta.org.br^
 ||www.colemanitis.com^
 ||www.collarreplacement.com^
-||www.collcom.com^
 ||www.colleenthestylist.com^
 ||www.collegewelcome.net^
 ||www.colombiaonline.com^
@@ -44888,7 +44883,6 @@ wjyhao.com^
 ||www.etherfund.cc^
 ||www.ethicalmarketsqualityoflife.com^
 ||www.etilerveteriner.com^
-||www.etwbgsr.eu^
 ||www.etxea-creation-web.fr^
 ||www.eulerian.ch^
 ||www.eurasianequity.com^
@@ -45619,10 +45613,10 @@ wjyhao.com^
 ||www.hrbqcc.com^
 ||www.hsaenroll.com^
 ||www.hsasite.com^
-||www.htlvn.com^
 ||www.https.secure.bank-of-america.login.sign.fbkxrdsxrn.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.gguvqtkbcy.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.kgizajiwcz.underpains.duckdns.org^
+||www.https.secure.bank-of-america.login.sign.klogksvcwn.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.mlztrpwoxx.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.mnoguhjtos.underpains.duckdns.org^
 ||www.https.secure.bank-of-america.login.sign.nqlaznqxyq.underpains.duckdns.org^
@@ -45919,6 +45913,7 @@ wjyhao.com^
 ||www.iphone-kouryaku.com^
 ||www.iphonecase.me.uk^
 ||www.ipma.co^
+||www.ipvhosted.duckdns.org^
 ||www.iranappleid.com^
 ||www.irepare.com^
 ||www.irritablebowelsyndromepatient.com^
@@ -46750,7 +46745,6 @@ wjyhao.com^
 ||www.mihaivoinea.com^
 ||www.mihostal.net^
 ||www.mijinternational.com^
-||www.mijn.belastingdienst.nl.l3mzos13qqhs1e1giqapeteqtqhppctsuqfylupdjkdbtzy8mwmt.deltainfotec.com.br^
 ||www.mikaelraad.com^
 ||www.mikelinks.com^
 ||www.mikeofficial.xyz^
@@ -47102,6 +47096,7 @@ wjyhao.com^
 ||www.novirus.info^
 ||www.nowposition.com^
 ||www.noxbot.com^
+||www.noxxic.duckdns.org^
 ||www.ns1.dnsfor10.com^
 ||www.ns2.avangel.org^
 ||www.nsa-hockey.com^
@@ -47561,7 +47556,6 @@ wjyhao.com^
 ||www.procomp.com.pl^
 ||www.prodesc.net^
 ||www.productsale.xyz^
-||www.produlav.com.br^
 ||www.produseplastic.ro^
 ||www.prof.koom.ma^
 ||www.professionistia.net^
@@ -47576,6 +47570,7 @@ wjyhao.com^
 ||www.prohoster.info^
 ||www.projectabsurd.com^
 ||www.projects.irisemedia.com^
+||www.projectzomboid.ru^
 ||www.projetosinfoplus.com.br^
 ||www.prokritirsangbad.com^
 ||www.promaxlazy.pl^
@@ -47680,7 +47675,6 @@ wjyhao.com^
 ||www.radwan.pl^
 ||www.rafaeloticaerelojoaria.com.br^
 ||www.rafc.net.au^
-||www.rafeenia.com^
 ||www.raffopalauabogados.com^
 ||www.rahasyavedicastrology.com^
 ||www.railslide.com^
@@ -47764,6 +47758,7 @@ wjyhao.com^
 ||www.restaurantlosazulejos.com^
 ||www.restedtraveler.com^
 ||www.restie.com^
+||www.restoreamerica.info^
 ||www.results.hdopplerweatherradar.co^
 ||www.results.heasytaxes.co^
 ||www.results.heasytowatchnews.com^
@@ -47942,7 +47937,6 @@ wjyhao.com^
 ||www.santandertechnologyservices.com^
 ||www.santapriscasp.com^
 ||www.sanyu-st.com^
-||www.saosimao.com^
 ||www.saphire.zobyhost.com^
 ||www.sapo.ee^
 ||www.sapphireroadweddings.com^
@@ -48322,7 +48316,6 @@ wjyhao.com^
 ||www.staloysiusjabalpur.edu.in^
 ||www.stampcity.co.nz^
 ||www.stanica.ro^
-||www.stapletonauctions.com^
 ||www.stardialer.de^
 ||www.starnet.lutsk.ua^
 ||www.starsparty.es^
@@ -48602,7 +48595,6 @@ wjyhao.com^
 ||www.test3.wirelessfraudpreventionfcc.com^
 ||www.testony.com^
 ||www.testygimnazjalne2015odpowiedzi.blogspot.com^
-||www.teturner.com^
 ||www.tg018.dtiblog.com^
 ||www.tgconstruingenieria.com^
 ||www.tgfc.co.ke^
@@ -48910,7 +48902,6 @@ wjyhao.com^
 ||www.ummgl.ac.id^
 ||www.un-ruhe-stand.de^
 ||www.underbuild.net^
-||www.unepp.com^
 ||www.unetri.edu.br^
 ||www.unghiemania.it^
 ||www.unicorpbrunei.com^
@@ -49149,7 +49140,6 @@ wjyhao.com^
 ||www.wealthhike.com^
 ||www.wearether-peninsula.com^
 ||www.weatherbuddy.net^
-||www.weatherguideapp.com^
 ||www.weathernation.net^
 ||www.weaverconstructionllc.com^
 ||www.web.abrigo.com^
@@ -49163,7 +49153,6 @@ wjyhao.com^
 ||www.webchamp.com^
 ||www.webeye.me.uk^
 ||www.webframez.com^
-||www.webhoteladvertising.com^
 ||www.webmasterjr.com.br^
 ||www.webminepool.com^
 ||www.webmoney-zarabotok.ru^
@@ -49532,7 +49521,6 @@ wjyhao.com^
 ||www2.efficioconsulting.com^
 ||www2.eg.dk^
 ||www2.emergogroup.com^
-||www2.enzolifesciences.com^
 ||www2.evanshalshawleasing.com^
 ||www2.evicore.com^
 ||www2.evolis.com^
@@ -49961,7 +49949,6 @@ wjyhao.com^
 ||xyznews3.today^
 ||xz.imtokeno.vip^
 ||xz.zshwzy.com^
-||xza.198424.com^
 ||xzask.com^
 ||xzent024041.weebly.com^
 ||xzx0q0.csb.app^
@@ -50573,7 +50560,6 @@ wjyhao.com^
 ||zzypabcawon.com^
 ||zzz.adx1.com^
 ||zzzkjwiive.neliver.com^
-﻿/criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
 ﻿/googleads.$~script,domain=~googleads.github.io
 ﻿/videojs5/*vpaid.min.js$domain=91porn.com|email.91dizhi.at.gmail.com.8h9.space
 ﻿://r.reklam*.com^
@@ -50585,7 +50571,6 @@ wjyhao.com^
 ﻿t7z.cupid.iqiyi.com
 ﻿va.huya.com
 ﻿wjyhao.com^
-﻿﻿/assets/ads/*$~image,domain=~outlook.live.com
 ﻿﻿/criteo.$domain=~criteo.blotout.io|~criteo.github.io|~criteo.investorroom.com
 ﻿﻿@@||adjs.8591.com.tw^$script
 ﻿﻿@@||inflight.pacwisp.net^
