@@ -60,6 +60,7 @@
 - DOMAIN,17.251comcastentertainmentgroup.hb.tt.omtrdc.net
 - DOMAIN,17.251corus.hb.tt.omtrdc.net
 - DOMAIN,17.251nfl.hb.tt.omtrdc.net
+- DOMAIN,17.251pluralsight.hb.tt.omtrdc.net
 - DOMAIN,171-63.tt.omtrdc.net
 - DOMAIN,17dishpurchasingcorporation.hb-api.tt.omtrdc.net
 - DOMAIN,182crackle.hb.tt.omtrdc.net
@@ -140,6 +141,7 @@
 - DOMAIN,apollomunich.tt.omtrdc.net
 - DOMAIN,apple.tt.omtrdc.net
 - DOMAIN,argenx.tt.omtrdc.net
+- DOMAIN,arxada.tt.omtrdc.net
 - DOMAIN,asiainspectionltd.tt.omtrdc.net
 - DOMAIN,asiamileslimited.tt.omtrdc.net
 - DOMAIN,atcogroup.tt.omtrdc.net
@@ -270,6 +272,7 @@
 - DOMAIN,concordiach.tt.omtrdc.net
 - DOMAIN,connectedvehicle.tt.omtrdc.net
 - DOMAIN,consent-notice.magix.com
+- DOMAIN,consumentenbond.tt.omtrdc.net
 - DOMAIN,consumercellular.tt.omtrdc.net
 - DOMAIN,contaazul.tt.omtrdc.net
 - DOMAIN,corporacionderadioyt.tt.omtrdc.net
@@ -297,6 +300,7 @@
 - DOMAIN,dnsbl.test.allstate.tt.omtrdc.net
 - DOMAIN,dnsbl.test.amazonwebservicesinc.tt.omtrdc.net
 - DOMAIN,dnsbl.test.canadiantire.tt.omtrdc.net
+- DOMAIN,dnsbl.test.capitaloneservices.tt.omtrdc.net
 - DOMAIN,dnsbl.test.eonline.tt.omtrdc.net
 - DOMAIN,dnsbl.test.espndotcom.tt.omtrdc.net
 - DOMAIN,dnsbl.test.fedex.tt.omtrdc.net
@@ -350,6 +354,7 @@
 - DOMAIN,genesiscare.tt.omtrdc.net
 - DOMAIN,gigamon.tt.omtrdc.net
 - DOMAIN,globetelecom.tt.omtrdc.net
+- DOMAIN,gonytours.tt.omtrdc.net
 - DOMAIN,goodlifefitnesscentr.tt.omtrdc.net
 - DOMAIN,gpa.tt.omtrdc.net
 - DOMAIN,greateasternlife.tt.omtrdc.net
@@ -367,6 +372,7 @@
 - DOMAIN,homedepot.tt.omtrdc.net
 - DOMAIN,homedepotcanada.tt.omtrdc.net
 - DOMAIN,honeywellchina.tt.omtrdc.net
+- DOMAIN,honeywellinternation.tt.omtrdc.net
 - DOMAIN,housingdevelopment.tt.omtrdc.net
 - DOMAIN,hrblock.tt.omtrdc.net
 - DOMAIN,hsbcbankar.tt.omtrdc.net
@@ -429,8 +435,10 @@
 - DOMAIN,malayalamanorama.tt.omtrdc.net
 - DOMAIN,mandarinorientalmgt.tt.omtrdc.net
 - DOMAIN,mbox.tt.omtrdc.net
+- DOMAIN,mboxedge1-alb.tt-stage-ci1.omtrdc.net
 - DOMAIN,mboxedge19.tt.omtrdc.net
 - DOMAIN,mcafee12.tt.omtrdc.net
+- DOMAIN,mckinseyknow.tt.omtrdc.net
 - DOMAIN,mdanderson.tt.omtrdc.net
 - DOMAIN,medibankltdau.tt.omtrdc.net
 - DOMAIN,medtronicinc.tt.omtrdc.net
@@ -502,6 +510,7 @@
 - DOMAIN,panpacificmarketings.tt.omtrdc.net
 - DOMAIN,parkerhannifin.tt.omtrdc.net
 - DOMAIN,pepperstone.tt.omtrdc.net
+- DOMAIN,pfizer.tt.omtrdc.net
 - DOMAIN,pggm.tt.omtrdc.net
 - DOMAIN,pictet.tt.omtrdc.net
 - DOMAIN,pmi.tt.omtrdc.net
@@ -661,6 +670,7 @@
 - DOMAIN,wildlifereservessing.tt.omtrdc.net
 - DOMAIN,windowslive.tt.omtrdc.net
 - DOMAIN,wmwwicbb3ad3dql4.0.9.pp.tt.omtrdc.net
+- DOMAIN,wmwwicbb3ad3dql4.lb.tt.omtrdc.net
 - DOMAIN,wmwwicbb3ad3dql4.partnerportal.edeka.de.tt.omtrdc.net
 - DOMAIN,wrenchgroup.tt.omtrdc.net
 - DOMAIN,ws-samssng-dev.sc.tt.omtrdc.net
@@ -673,6 +683,7 @@
 - DOMAIN,www.thedowchemicalcompan.tt.omtrdc.net
 - DOMAIN,y0d55bd7vsclehyk.aa.tt.omtrdc.net
 - DOMAIN,yellow1.tt.omtrdc.net
+- DOMAIN,yesbank.tt.omtrdc.net
 - DOMAIN,yonseiuniversity.tt.omtrdc.net
 - DOMAIN,zasmcmmgvhtyumbe.78.tt.omtrdc.net
 - DOMAIN,zebratechnologies.tt.omtrdc.net
@@ -681,6 +692,7 @@
 - DOMAIN,zm.tt.omtrdc.net
 - DOMAIN,zn427hq0xs6mls7w.42.tt.omtrdc.net
 - DOMAIN,zsassociatesindiapvt.tt.omtrdc.net
+- DOMAIN,zurichversicherungs.tt.omtrdc.net
 - DOMAIN-SUFFIX,0-2nask-us.aetna.tt.omtrdc.net
 - DOMAIN-SUFFIX,0-2nask-us.lot.tt.omtrdc.net
 - DOMAIN-SUFFIX,0-cdburner-express-okta-idpcdburner.axisbank.tt.omtrdc.net
@@ -806,7 +818,6 @@
 - DOMAIN-SUFFIX,airmillees.weebly.com
 - DOMAIN-SUFFIX,airstreamwebmain.weebly.com
 - DOMAIN-SUFFIX,akv2-br-cdn.kwai.net.iberostar.com
-- DOMAIN-SUFFIX,aliyaoberbrunnergreg21.myshopify.com
 - DOMAIN-SUFFIX,allegro.moseasia.com
 - DOMAIN-SUFFIX,aman-codehub.github.io
 - DOMAIN-SUFFIX,amazon-clone-xi-blush.vercel.app
@@ -829,8 +840,8 @@
 - DOMAIN-SUFFIX,anz.brandkit.io
 - DOMAIN-SUFFIX,aoxnprtll.web.app
 - DOMAIN-SUFFIX,api.apiok.net.iberostar.com
-- DOMAIN-SUFFIX,api.costuraai.com.br
 - DOMAIN-SUFFIX,api.gimbal.com
+- DOMAIN-SUFFIX,api.ritzbsm.com.br
 - DOMAIN-SUFFIX,app-id6016.firebaseapp.com
 - DOMAIN-SUFFIX,app.lifeinside.io
 - DOMAIN-SUFFIX,app.trade.mogo.ca
@@ -1024,6 +1035,7 @@
 - DOMAIN-SUFFIX,data-63224ea7ba.apps.iocnt.de
 - DOMAIN-SUFFIX,data-63659a24a7.apps.iocnt.de
 - DOMAIN-SUFFIX,data-855289ee2d.apps.iocnt.de
+- DOMAIN-SUFFIX,data-93346271bf.holidaycheck.de
 - DOMAIN-SUFFIX,data-a06fecb5b2.apps.iocnt.de
 - DOMAIN-SUFFIX,data-a4ca7c0f04.apps.iocnt.de
 - DOMAIN-SUFFIX,data-a85b10211f.rhein-neckar-zeitung.net
@@ -1111,6 +1123,7 @@
 - DOMAIN-SUFFIX,email.billing.springhealth.com
 - DOMAIN-SUFFIX,email.boingnet.com
 - DOMAIN-SUFFIX,email.book.roomzzz.com
+- DOMAIN-SUFFIX,email.bravium.movidesk.com
 - DOMAIN-SUFFIX,email.dedicatedplanet.com
 - DOMAIN-SUFFIX,email.designmynight.com
 - DOMAIN-SUFFIX,email.doplim.com.ve
@@ -1319,6 +1332,7 @@
 - DOMAIN-SUFFIX,glowin2003lid3.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,glprdalid3.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,gmufag.wday.ru
+- DOMAIN-SUFFIX,gmxgmxgmxgmxmx.weebly.com
 - DOMAIN-SUFFIX,gmxmainde.weebly.com
 - DOMAIN-SUFFIX,gmxmet.weebly.com
 - DOMAIN-SUFFIX,gmxxdde.weebly.com
@@ -1388,7 +1402,6 @@
 - DOMAIN-SUFFIX,icsondersteuning.firebaseapp.com
 - DOMAIN-SUFFIX,id-0000777-updatenow.weebly.com
 - DOMAIN-SUFFIX,id-0115481-updatenow.weebly.com
-- DOMAIN-SUFFIX,id.idionosverify.lagdr.com
 - DOMAIN-SUFFIX,id.liveandsexy.cam
 - DOMAIN-SUFFIX,idhelpbusiness23948512354123.firebaseapp.com
 - DOMAIN-SUFFIX,idhelpbusiness23948512354123.web.app
@@ -1404,6 +1417,7 @@
 - DOMAIN-SUFFIX,inapps.appsflyersdk.com
 - DOMAIN-SUFFIX,info.businesscentre.yp.ca
 - DOMAIN-SUFFIX,info.leaserv.com
+- DOMAIN-SUFFIX,info.psi.org
 - DOMAIN-SUFFIX,info.stageclip.com
 - DOMAIN-SUFFIX,info845.weebly.com
 - DOMAIN-SUFFIX,infodavisolucionns.vercel.app
@@ -1570,6 +1584,7 @@
 - DOMAIN-SUFFIX,nebimtis.web.app
 - DOMAIN-SUFFIX,neoviafinancial.tt.omtrdc.net
 - DOMAIN-SUFFIX,net35.net.jumia.cm
+- DOMAIN-SUFFIX,netpool.netbookia.net
 - DOMAIN-SUFFIX,nett.minside.my
 - DOMAIN-SUFFIX,netv-igator.weebly.com
 - DOMAIN-SUFFIX,new-project-c3ead.web.app
@@ -1665,8 +1680,10 @@
 - DOMAIN-SUFFIX,qkhrit.mimovrste.com
 - DOMAIN-SUFFIX,qorhybphtazg.firebaseapp.com
 - DOMAIN-SUFFIX,qq51f.short.gy
+- DOMAIN-SUFFIX,quatangskin1.weebly.com
 - DOMAIN-SUFFIX,qustk.aerosleep.com
 - DOMAIN-SUFFIX,raharharx.blogspot.ca
+- DOMAIN-SUFFIX,raiffeisen-sso-login.web.app
 - DOMAIN-SUFFIX,rasunalo20.firebaseapp.com
 - DOMAIN-SUFFIX,raven.konquadrat.de
 - DOMAIN-SUFFIX,rdudeboygay.web.app
@@ -2027,8 +2044,8 @@
 - DOMAIN-SUFFIX,zvscfbeid.web.app
 - DOMAIN-SUFFIX,zyyj97.webwave.dev
 - DOMAIN-SUFFIX,zzy1.quyaoya.com
-﻿- DOMAIN,clck.yandex.ru
-﻿- DOMAIN,cm.jd.com
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.activecampaign.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
 ﻿- DOMAIN,consent-notice.magix.com
 ﻿- DOMAIN-SUFFIX,0-2nask-us.aetna.tt.omtrdc.net
 ﻿- DOMAIN-SUFFIX,0-2nask-us.lot.tt.omtrdc.net
