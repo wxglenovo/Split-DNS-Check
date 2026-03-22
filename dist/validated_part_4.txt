@@ -1,6 +1,5 @@
-﻿- DOMAIN,aa-mock-kor.hb-fa-stage.tt.omtrdc.net
-- DOMAIN,credem.tt.omtrdc.net
-- DOMAIN,dnsbl.test.sephora.tt.omtrdc.net
+﻿- DOMAIN,dnsbl.test.sephora.tt.omtrdc.net
+- DOMAIN,ekornes.tt.omtrdc.net
 - DOMAIN,hcsc.tt.omtrdc.net
 - DOMAIN,loblawsinc.tt.omtrdc.net
 - DOMAIN,minitab.tt.omtrdc.net
@@ -645,11 +644,13 @@
 - DOMAIN-SUFFIX,email-am.jll.com.mx
 - DOMAIN-SUFFIX,email-ap.jll.com.hk
 - DOMAIN-SUFFIX,email-cm.jll.com.mx
+- DOMAIN-SUFFIX,email.accounts.bitly.com
 - DOMAIN-SUFFIX,email.agthia.com
 - DOMAIN-SUFFIX,email.baitzsolutions.movidesk.com
 - DOMAIN-SUFFIX,email.baremetrics.acuityscheduling.com
 - DOMAIN-SUFFIX,email.big-brain.movidesk.com
 - DOMAIN-SUFFIX,email.bigdealsmedia.net
+- DOMAIN-SUFFIX,email.bmat.com.vn
 - DOMAIN-SUFFIX,email.breezejmu.org
 - DOMAIN-SUFFIX,email.cafcia.it
 - DOMAIN-SUFFIX,email.campaigns.clearcompany.com
@@ -827,6 +828,7 @@
 - DOMAIN-SUFFIX,faiwax.golfhouse.de
 - DOMAIN-SUFFIX,falabella2clnts.webcindario.com
 - DOMAIN-SUFFIX,falabella3clntss.webcindario.com
+- DOMAIN-SUFFIX,familygiftlove.myshopify.com
 - DOMAIN-SUFFIX,fantastic-salamander-c721cb.netlify.app
 - DOMAIN-SUFFIX,faq-suit-trezor.wasmer.app
 - DOMAIN-SUFFIX,farayankarasetisnis.web.app
@@ -1765,6 +1767,7 @@
 - DOMAIN-SUFFIX,ss.pjfashionbd.com
 - DOMAIN-SUFFIX,ss.rigvert.com
 - DOMAIN-SUFFIX,ss.seheran.com
+- DOMAIN-SUFFIX,ssc.nickelodeon.se
 - DOMAIN-SUFFIX,ssisdisoidsoidi.weebly.com
 - DOMAIN-SUFFIX,sspuppetsfr.web.app
 - DOMAIN-SUFFIX,sst.biohac.pl
@@ -1864,7 +1867,6 @@
 - DOMAIN-SUFFIX,toll-9f8.firebaseapp.com
 - DOMAIN-SUFFIX,tone-lamer.web.app
 - DOMAIN-SUFFIX,tonkeeper-wallet.vercel.app
-- DOMAIN-SUFFIX,tools.3g.qq.com
 - DOMAIN-SUFFIX,toyotamotorcorporati.tt.omtrdc.net
 - DOMAIN-SUFFIX,track-id3998.web.app
 - DOMAIN-SUFFIX,track-id4952.web.app
@@ -1954,7 +1956,6 @@
 - DOMAIN-SUFFIX,vibrant-event-172401.framer.app
 - DOMAIN-SUFFIX,videotroy.weebly.com
 - DOMAIN-SUFFIX,vieroodjjaaaaaa.weebly.com
-- DOMAIN-SUFFIX,view.email.baya.vn
 - DOMAIN-SUFFIX,view.stylebob.com
 - DOMAIN-SUFFIX,vimateain.m-pages.com
 - DOMAIN-SUFFIX,violation-management-a6bc6.firebaseapp.com
@@ -2099,7 +2100,6 @@
 - DOMAIN-SUFFIX,zwatgf.megaknihy.cz
 - DOMAIN-SUFFIX,zxiimbra.weebly.com
 ﻿- DOMAIN,360training.tt.omtrdc.net
-﻿- DOMAIN,aa-mock-kor.hb-fa-stage.tt.omtrdc.net
 ﻿- DOMAIN,craommunications.tt.omtrdc.net
 ﻿- DOMAIN,credem.tt.omtrdc.net
 ﻿- DOMAIN-SUFFIX,0-chd.peoplesunitedbank.tt.omtrdc.net
