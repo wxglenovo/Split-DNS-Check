@@ -122,7 +122,6 @@
 - DOMAIN-SUFFIX,ads.tiki.vn
 - DOMAIN-SUFFIX,ads.tripod.lycos.nl
 - DOMAIN-SUFFIX,ads.wikia.nocookie.net
-- DOMAIN-SUFFIX,adserver.infotorg.se
 - DOMAIN-SUFFIX,adv.autosurf.vn
 - DOMAIN-SUFFIX,advmanager.techfun.pl
 - DOMAIN-SUFFIX,aelca.tt.omtrdc.net
@@ -529,7 +528,6 @@
 - DOMAIN-SUFFIX,email.linktrackr.com
 - DOMAIN-SUFFIX,email.luxon.com
 - DOMAIN-SUFFIX,email.m.callreports.com
-- DOMAIN-SUFFIX,email.maesteszinhaz.hu
 - DOMAIN-SUFFIX,email.mail.plick.se
 - DOMAIN-SUFFIX,email.mail.samtrygg.se
 - DOMAIN-SUFFIX,email.mail.tctabs.se
@@ -567,7 +565,6 @@
 - DOMAIN-SUFFIX,email.primeirazona.movidesk.com
 - DOMAIN-SUFFIX,email.recruitee.com
 - DOMAIN-SUFFIX,email.recruiting.mongodb.com
-- DOMAIN-SUFFIX,email.recruiting.okta.com
 - DOMAIN-SUFFIX,email.rnsoftware.movidesk.com
 - DOMAIN-SUFFIX,email.roosdomtijhuis.nl
 - DOMAIN-SUFFIX,email.rqdq.net
@@ -1446,7 +1443,6 @@
 - DOMAIN-SUFFIX,ss.tapetenagentur.de
 - DOMAIN-SUFFIX,ssc-eu.evergreencertifications.com
 - DOMAIN-SUFFIX,ssc-eu.psychotherapynetworker.org
-- DOMAIN-SUFFIX,ssc.cc.com
 - DOMAIN-SUFFIX,ssl.bblck.me
 - DOMAIN-SUFFIX,sso-ehess2.weebly.com
 - DOMAIN-SUFFIX,ssslobalid3.click.s11.sfmc-osl.com
@@ -1537,7 +1533,6 @@
 - DOMAIN-SUFFIX,tmimaypostirixispelaton.web.app
 - DOMAIN-SUFFIX,tnebnet-org-zimbra-login.weebly.com
 - DOMAIN-SUFFIX,toll2903.web.app
-- DOMAIN-SUFFIX,top.hsdn.org
 - DOMAIN-SUFFIX,tr.liveclicker.com
 - DOMAIN-SUFFIX,tr2.kaspersky.co.uk
 - DOMAIN-SUFFIX,track-acton.healthengine.com.au
@@ -1756,6 +1751,7 @@
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.omron.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.mboxedge18-tyo2.tt.omtrdc.net
 ﻿- DOMAIN,0-docs-us.subaruofamerica.tt.omtrdc.net
+﻿- DOMAIN,0.20dupont.hb.tt.omtrdc.net
 ﻿- DOMAIN,241nbaprop.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,pfp.sina.net
 ﻿- DOMAIN-SUFFIX,0-0-0-birkart-clws-ifs-globalmn.premera.tt.omtrdc.net
@@ -1773,7 +1769,6 @@
 ﻿- DOMAIN-SUFFIX,br.potato1.influitive.com
 ﻿- DOMAIN-SUFFIX,branchio.hipages.com.au
 ﻿- DOMAIN-SUFFIX,client-logger.beta.salemove.com
-﻿- DOMAIN-SUFFIX,connect.sigbee.com
 ﻿- DOMAIN-SUFFIX,counter.packa2.cz
 ﻿- DOMAIN-SUFFIX,cts.tradepub.com
 ﻿- DOMAIN-SUFFIX,cyohmj.catawiki.com
@@ -1784,4 +1779,5 @@
 ﻿- DOMAIN-SUFFIX,email-em.jll.co.uk
 ﻿- DOMAIN-SUFFIX,eniac.net.jumia.com.gh
 ﻿- DOMAIN-SUFFIX,entryhit.wp.pl
+﻿﻿- DOMAIN,0.20dupont.hb.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,br.potato1.influitive.com
