@@ -680,7 +680,6 @@
 - DOMAIN-SUFFIX,email.mail.patientrewardshub.com
 - DOMAIN-SUFFIX,email.mail.stcpay.com.bh
 - DOMAIN-SUFFIX,email.mailbiz1.zibster.com
-- DOMAIN-SUFFIX,email.marketing.estatesales.org
 - DOMAIN-SUFFIX,email.mg.blue.nl
 - DOMAIN-SUFFIX,email.mg.bookbot.fr
 - DOMAIN-SUFFIX,email.mg.global-tunnelling-experts.com
@@ -864,7 +863,6 @@
 - DOMAIN-SUFFIX,go.meridian.org
 - DOMAIN-SUFFIX,go.mon-expert-en-gestion.com
 - DOMAIN-SUFFIX,go.sfmiowacity.com
-- DOMAIN-SUFFIX,go.stanthonysf.org
 - DOMAIN-SUFFIX,go.travelite.app
 - DOMAIN-SUFFIX,go.unitedplanners.com
 - DOMAIN-SUFFIX,go.voypost.com
@@ -1078,10 +1076,8 @@
 - DOMAIN-SUFFIX,lrtoepo.web.app
 - DOMAIN-SUFFIX,m.91heima.cn
 - DOMAIN-SUFFIX,m.biqugezw.com
-- DOMAIN-SUFFIX,m.ehwhwz.cn
 - DOMAIN-SUFFIX,m.go-static.info
 - DOMAIN-SUFFIX,m.stage.click.s11.sfmc-osl.com
-- DOMAIN-SUFFIX,m365cld.mnaces.org
 - DOMAIN-SUFFIX,m93djrfquxtem8t-p.adkoffer.fr
 - DOMAIN-SUFFIX,mail-cichnovabrno-cz.weebly.com
 - DOMAIN-SUFFIX,mail.abtmimmobilier.com
@@ -1447,11 +1443,9 @@
 - DOMAIN-SUFFIX,somni.choicehotels.com
 - DOMAIN-SUFFIX,sonar6-bcn1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-fra5-2.xx.fbcdn.net.iberostar.com
-- DOMAIN-SUFFIX,sonar6-gru1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-lim1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-maa2-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-mia3-2.xx.fbcdn.net.iberostar.com
-- DOMAIN-SUFFIX,sonar6-tpe1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonic999.weebly.com
 - DOMAIN-SUFFIX,sopportdeceunta.webcindario.com
 - DOMAIN-SUFFIX,soupe.fumblingvacation.pro
@@ -1495,7 +1489,6 @@
 - DOMAIN-SUFFIX,statistics.hagnauer.org
 - DOMAIN-SUFFIX,stats.ecomail.pl
 - DOMAIN-SUFFIX,stats.edicy.com
-- DOMAIN-SUFFIX,stats.searchftps.org
 - DOMAIN-SUFFIX,stats.stb-ottow.de
 - DOMAIN-SUFFIX,stats.vican.me
 - DOMAIN-SUFFIX,stawar-prosgfant00020.web.app
@@ -1676,7 +1669,6 @@
 - DOMAIN-SUFFIX,webcache.datareporter.eu
 - DOMAIN-SUFFIX,webdriver-select.vg
 - DOMAIN-SUFFIX,webhome-post.weebly.com
-- DOMAIN-SUFFIX,webinars.tech-institute.org
 - DOMAIN-SUFFIX,webmail-a5b4c3d2e1f0a9b8c7d6e5f4a3b2c1e.github.io
 - DOMAIN-SUFFIX,webmail-telkomsa-net-mail-log-za.weebly.com
 - DOMAIN-SUFFIX,webmailaspczit.weebly.com
@@ -1767,8 +1759,9 @@
 - DOMAIN-SUFFIX,zuwmbztn.firebaseapp.com
 - DOMAIN-SUFFIX,zvscfbeid.firebaseapp.com
 - DOMAIN-SUFFIX,zxn532zimbra.weebly.com
+﻿- DOMAIN,0--skitch--0.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.activecampaign.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.wdcflashco.tt.omtrdc.net
 ﻿- DOMAIN,0-174.tt.omtrdc.net
 ﻿- DOMAIN,32.17.241newscorpau.hb.tt.omtrdc.net
 ﻿- DOMAIN,webcache.datareporter.eu
