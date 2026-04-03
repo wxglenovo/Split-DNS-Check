@@ -1,5 +1,4 @@
 ﻿- DOMAIN,analytics.zendesk.com
-- DOMAIN,andromeda.iad-01.braze.com
 - DOMAIN,as.v7.cdn.onthe.io
 - DOMAIN,asia-monitor-stsdk.vivoglobal.com
 - DOMAIN,dbsystel.tt.omtrdc.net
@@ -12,6 +11,7 @@
 - DOMAIN,sdk.iad-03.braze.com
 - DOMAIN,sigma-statistics-push.proxima.nie.easebar.com
 - DOMAIN,tapjoy.go2cloud.org
+- DOMAIN,tastecard.tt.omtrdc.net
 - DOMAIN,tr-vcode-od.vivoglobal.com
 - DOMAIN,tracking.pandoiq.com
 - DOMAIN,ulink.adjust.com
@@ -421,7 +421,6 @@
 - DOMAIN-SUFFIX,cxcfvgccfvgbnnhgfgh65.framer.website
 - DOMAIN-SUFFIX,cyberark.tt.omtrdc.net
 - DOMAIN-SUFFIX,cyberport.tt.omtrdc.net
-- DOMAIN-SUFFIX,cybersource.shoplineapp.com
 - DOMAIN-SUFFIX,czech-power.4fan.cz
 - DOMAIN-SUFFIX,d.aesthetify.de
 - DOMAIN-SUFFIX,d26z9x.blogspot.de
@@ -468,7 +467,6 @@
 - DOMAIN-SUFFIX,deskloni.web.app
 - DOMAIN-SUFFIX,desktop-live.framer.ai
 - DOMAIN-SUFFIX,detectioncenter-case100052351.web.app
-- DOMAIN-SUFFIX,device-fingerprint.pay2.checkout.worldline-solutions.com
 - DOMAIN-SUFFIX,dfgfghgv.w3spaces.com
 - DOMAIN-SUFFIX,dfkrezd.firebaseapp.com
 - DOMAIN-SUFFIX,dgpugzqswtczge.web.app
@@ -499,7 +497,6 @@
 - DOMAIN-SUFFIX,donnasanchez113.wixstudio.com
 - DOMAIN-SUFFIX,donx2y.webwave.dev
 - DOMAIN-SUFFIX,download-exo-dus.created.app
-- DOMAIN-SUFFIX,dpcivmogzkbpwu9-p.adkclicker.fr
 - DOMAIN-SUFFIX,dqsdazd-zadaa.blogspot.nl
 - DOMAIN-SUFFIX,dr-usp.firebaseapp.com
 - DOMAIN-SUFFIX,drallen0.wixstudio.com
@@ -1546,7 +1543,6 @@
 - DOMAIN-SUFFIX,sonar6-mrs2-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-qro1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonic-secure1.weebly.com
-- DOMAIN-SUFFIX,sopr-api.cian.ru
 - DOMAIN-SUFFIX,sorgenia.tt.omtrdc.net
 - DOMAIN-SUFFIX,sortcodeooi3442.weebly.com
 - DOMAIN-SUFFIX,sosocr1.firebaseapp.com
@@ -1892,6 +1888,7 @@
 - DOMAIN-SUFFIX,zwtiif.veillon.ch
 - DOMAIN-SUFFIX,zxcvb-24208.firebaseapp.com
 ﻿- DOMAIN,aicpa.tt.omtrdc.net
+﻿- DOMAIN,analytics.zendesk.com
 ﻿- DOMAIN,andromeda.iad-01.braze.com
 ﻿- DOMAIN,apache.tt.omtrdc.net
 ﻿- DOMAIN,brinker.tt.omtrdc.net
