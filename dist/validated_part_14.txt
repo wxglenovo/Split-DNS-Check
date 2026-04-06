@@ -1,6 +1,4 @@
-﻿- DOMAIN,10.hb-api.tt.omtrdc.net
-- DOMAIN,108-174-10-18.fwd.tt.omtrdc.net
-- DOMAIN,108-62-26-249.fios.tt.omtrdc.net
+﻿- DOMAIN,108-62-26-249.fios.tt.omtrdc.net
 - DOMAIN,112.tt.omtrdc.net
 - DOMAIN,127.10foxnews.hb.tt.omtrdc.net
 - DOMAIN,143pluralsight.hb.tt.omtrdc.net
@@ -272,6 +270,7 @@
 - DOMAIN,hvmllc.tt.omtrdc.net
 - DOMAIN,icicisecurities.tt.omtrdc.net
 - DOMAIN,idfc.tt.omtrdc.net
+- DOMAIN,illuminainc.tt.omtrdc.net
 - DOMAIN,ilotteryillinois.tt.omtrdc.net
 - DOMAIN,indochino.tt.omtrdc.net
 - DOMAIN,infineontechnologies.tt.omtrdc.net
@@ -360,6 +359,7 @@
 - DOMAIN,nhs.tt.omtrdc.net
 - DOMAIN,nomurasecurities.tt.omtrdc.net
 - DOMAIN,norwegiancruiselines.tt.omtrdc.net
+- DOMAIN,nsonycomputerentertai.tt.omtrdc.net
 - DOMAIN,ntelegraphmediagroupl.tt.omtrdc.net
 - DOMAIN,nurtureinc.tt.omtrdc.net
 - DOMAIN,nutanix.tt.omtrdc.net
@@ -958,11 +958,15 @@
 - DOMAIN-SUFFIX,email-ap.jll.nz
 - DOMAIN-SUFFIX,email-em.jll.co.uk
 - DOMAIN-SUFFIX,email-em.jll.com.hk
+- DOMAIN-SUFFIX,email.aceorder.com.au
+- DOMAIN-SUFFIX,email.akhanani.co.za
 - DOMAIN-SUFFIX,email.auth.manytest.xyz
 - DOMAIN-SUFFIX,email.authen.movidesk.com
 - DOMAIN-SUFFIX,email.ballertv.com
+- DOMAIN-SUFFIX,email.base-britania.movidesk.com
 - DOMAIN-SUFFIX,email.casasclub.com
 - DOMAIN-SUFFIX,email.clevelandwest.serenityclean.com
+- DOMAIN-SUFFIX,email.consopay.com
 - DOMAIN-SUFFIX,email.credilink.movidesk.com
 - DOMAIN-SUFFIX,email.dapdeblauweark.fuga.eu
 - DOMAIN-SUFFIX,email.doc9.movidesk.com
@@ -970,6 +974,7 @@
 - DOMAIN-SUFFIX,email.elliman.com
 - DOMAIN-SUFFIX,email.emails.beatstars.com
 - DOMAIN-SUFFIX,email.emails.thewholepersonproject.com
+- DOMAIN-SUFFIX,email.fakturownia.pl
 - DOMAIN-SUFFIX,email.fcz.ch
 - DOMAIN-SUFFIX,email.flexsmart.movidesk.com
 - DOMAIN-SUFFIX,email.gh-mail.6sense.com
@@ -983,6 +988,7 @@
 - DOMAIN-SUFFIX,email.iont.tech
 - DOMAIN-SUFFIX,email.iperjob.com
 - DOMAIN-SUFFIX,email.isustudentmedia.com
+- DOMAIN-SUFFIX,email.ligagestao.movidesk.com
 - DOMAIN-SUFFIX,email.litebreeze.com
 - DOMAIN-SUFFIX,email.lluert.net
 - DOMAIN-SUFFIX,email.mail.birdie.so
@@ -994,6 +1000,7 @@
 - DOMAIN-SUFFIX,email.mail.solarisbank.de
 - DOMAIN-SUFFIX,email.mail.tradler.io
 - DOMAIN-SUFFIX,email.mailer.surecritic.com
+- DOMAIN-SUFFIX,email.mailgun.connexservice.com
 - DOMAIN-SUFFIX,email.medline.narvar.com
 - DOMAIN-SUFFIX,email.metalradar.com
 - DOMAIN-SUFFIX,email.mg.campaigns.zenchef.com
@@ -1132,6 +1139,7 @@
 - DOMAIN-SUFFIX,gionghatvietnhi2022-thevoicekids.weebly.com
 - DOMAIN-SUFFIX,glasgovv.weebly.com
 - DOMAIN-SUFFIX,glbellbalid3.click.s11.sfmc-osl.com
+- DOMAIN-SUFFIX,global.schroders.email
 - DOMAIN-SUFFIX,globalicg.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,globalid3.dds.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,globalid3.desktop.click.s11.sfmc-osl.com
@@ -1317,6 +1325,7 @@
 - DOMAIN-SUFFIX,l.stylist.fr
 - DOMAIN-SUFFIX,l.tencho.cc
 - DOMAIN-SUFFIX,l.yoka-yoka.jp
+- DOMAIN-SUFFIX,lafourchette.tt.omtrdc.net
 - DOMAIN-SUFFIX,lanapengar.expressen.se
 - DOMAIN-SUFFIX,landline-109604.weeblysite.com
 - DOMAIN-SUFFIX,lbghuif.firebaseapp.com
@@ -1360,6 +1369,7 @@
 - DOMAIN-SUFFIX,magimal.weebly.com
 - DOMAIN-SUFFIX,mail-tennet-eu.weebly.com
 - DOMAIN-SUFFIX,mail-transvision-co-id.weebly.com
+- DOMAIN-SUFFIX,mail1.mailgun.skgcollect.nl
 - DOMAIN-SUFFIX,mail2update-c386.firebaseapp.com
 - DOMAIN-SUFFIX,mailaccountupdatesunit.weebly.com
 - DOMAIN-SUFFIX,mailboxbeta.weebly.com
@@ -1471,6 +1481,7 @@
 - DOMAIN-SUFFIX,noethwestelofficialwebsitemanagementss.weebly.com
 - DOMAIN-SUFFIX,notedefraisbist.firebaseapp.com
 - DOMAIN-SUFFIX,notedefraisbist.web.app
+- DOMAIN-SUFFIX,nrjqps.teufelaudio.be
 - DOMAIN-SUFFIX,ns2.mailgun.commpartners.com
 - DOMAIN-SUFFIX,nsc-ru.weebly.com
 - DOMAIN-SUFFIX,nslhy.broadwaysanjose.com
@@ -1597,6 +1608,7 @@
 - DOMAIN-SUFFIX,refer.lendingclub.com
 - DOMAIN-SUFFIX,refer.montgomeryadvertiser.com
 - DOMAIN-SUFFIX,refundbill24.web.app
+- DOMAIN-SUFFIX,releventsportsllc.tt.omtrdc.net
 - DOMAIN-SUFFIX,repdata.caller.com
 - DOMAIN-SUFFIX,repdata.golfweek.com
 - DOMAIN-SUFFIX,repdata.tallahassee.com
@@ -1973,7 +1985,6 @@
 ﻿- DOMAIN,10.32.17.182fortis.hb.tt.omtrdc.net
 ﻿- DOMAIN,10.32.17.182nbcume.hb.tt.omtrdc.net
 ﻿- DOMAIN,10.32.17.251newscorpau.hb.tt.omtrdc.net
-﻿- DOMAIN,10.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,108-174-10-18.fwd.tt.omtrdc.net
 ﻿- DOMAIN-SUFFIX,0-chd.skipton.tt.omtrdc.net
 ﻿- DOMAIN-SUFFIX,031kr-72z7z.ads.tremorhub.com
