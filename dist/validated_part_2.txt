@@ -1,6 +1,4 @@
-﻿- DOMAIN,0--skitch--0.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.activecampaign.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
 - DOMAIN,0-0-0-birkart-clws-ifs-globalmn.hrblock.tt.omtrdc.net
 - DOMAIN,0-2nask-us.disney.tt.omtrdc.net
 - DOMAIN,0-2nask-us.helenoftroy.tt.omtrdc.net
@@ -71,14 +69,19 @@
 - DOMAIN,a0123s.tt.omtrdc.net
 - DOMAIN,aa-mock-kor.hb-fa-stage.tt.omtrdc.net
 - DOMAIN,aa-mockeuw.hb-fa-stage.tt.omtrdc.net
+- DOMAIN,aaacarolinasnewmedia.hb.tt.omtrdc.net
 - DOMAIN,abbinformationsystem.tt.omtrdc.net
+- DOMAIN,abercrombie.tt.hb-fa-dev.tt.omtrdc.net
 - DOMAIN,aboutamzn.tt.omtrdc.net
 - DOMAIN,academysportsandoutd.tt.omtrdc.net
+- DOMAIN,adaiggerandcompanyin.tt.omtrdc.net
+- DOMAIN,adio.hb.tt.omtrdc.net
 - DOMAIN,adldigital.tt.omtrdc.net
 - DOMAIN,admin.sapglobalmarketingin.tt.omtrdc.net
 - DOMAIN,adobeinternalags294.tt.omtrdc.net
 - DOMAIN,adobeinternalags395.tt.omtrdc.net
 - DOMAIN,adobeintmuditrastogi.tt.omtrdc.net
+- DOMAIN,adobemarketingcloud.tt.omtrdc.net
 - DOMAIN,ads.vrvm.com
 - DOMAIN,ads2.msn.com
 - DOMAIN,agilenttechnologies.tt.omtrdc.net
@@ -193,6 +196,7 @@
 - DOMAIN,dnp.tt.omtrdc.net
 - DOMAIN,dnsbl.test.aboutamzn.tt.omtrdc.net
 - DOMAIN,dnsbl.test.enterpriseholdingsin.tt.omtrdc.net
+- DOMAIN,dnsbl.test.jpmorganchase.tt.omtrdc.net
 - DOMAIN,dnsbl.test.sephora.tt.omtrdc.net
 - DOMAIN,dnsbl.test.united.tt.omtrdc.net
 - DOMAIN,doitbest.tt.omtrdc.net
@@ -470,7 +474,6 @@
 - DOMAIN-SUFFIX,035261.weebly.com
 - DOMAIN-SUFFIX,09c1d5c3-1a6e-4c05-8e4e-eff75c6b5dd6.usrfiles.com
 - DOMAIN-SUFFIX,0fkhtavzxo9np2g-p.adktrack32.xyz
-- DOMAIN-SUFFIX,1.800400.net
 - DOMAIN-SUFFIX,10.32.17.182fandango.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,10q2026.github.io
 - DOMAIN-SUFFIX,1183894433.rsc.sound.ag
@@ -559,6 +562,7 @@
 - DOMAIN-SUFFIX,adkjcqkuz.firebaseapp.com
 - DOMAIN-SUFFIX,admins.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,adobe.tt.omtrdc.net
+- DOMAIN-SUFFIX,adobetarget.tt.omtrdc.net
 - DOMAIN-SUFFIX,adrishikharchowdhury.github.io
 - DOMAIN-SUFFIX,adscdn.orbi.kr
 - DOMAIN-SUFFIX,adserver.adultfriendfinder.com
@@ -820,7 +824,6 @@
 - DOMAIN-SUFFIX,data-3eff3aac07.kino-zeit.de
 - DOMAIN-SUFFIX,data-4cb57634de.apps.iocnt.de
 - DOMAIN-SUFFIX,data-5acce9c32f.apps.iocnt.de
-- DOMAIN-SUFFIX,data-7613d707d4.enbausa.de
 - DOMAIN-SUFFIX,data-8459ce106e.bike-x.de
 - DOMAIN-SUFFIX,data-8ad4a97c5f.apps.iocnt.de
 - DOMAIN-SUFFIX,data-8b46aa892b.apps.iocnt.de
@@ -911,16 +914,15 @@
 - DOMAIN-SUFFIX,email.blazeloop.com
 - DOMAIN-SUFFIX,email.centertheatregroup.org
 - DOMAIN-SUFFIX,email.central-nstech.movidesk.com
+- DOMAIN-SUFFIX,email.cynet.cz
 - DOMAIN-SUFFIX,email.dsfnet.movidesk.com
 - DOMAIN-SUFFIX,email.dyslexiaactionshop.co.uk
 - DOMAIN-SUFFIX,email.em.myloomly.com
 - DOMAIN-SUFFIX,email.email.balancemd.com
 - DOMAIN-SUFFIX,email.eq-events.co.za
 - DOMAIN-SUFFIX,email.eurochauffeurs.com
-- DOMAIN-SUFFIX,email.fullerbianka.hu
 - DOMAIN-SUFFIX,email.gh-mail.affinity.co
 - DOMAIN-SUFFIX,email.gh-mail.atomicwork.com
-- DOMAIN-SUFFIX,email.ghost.ktai.vn
 - DOMAIN-SUFFIX,email.heis.ch
 - DOMAIN-SUFFIX,email.hi.okta.com
 - DOMAIN-SUFFIX,email.hi.springhealth.com
@@ -930,21 +932,21 @@
 - DOMAIN-SUFFIX,email.iwe.verspieren.com
 - DOMAIN-SUFFIX,email.kertrucks.com
 - DOMAIN-SUFFIX,email.kjbm.galacticastrology.com
-- DOMAIN-SUFFIX,email.kjbm.ismeniaginebra.com
 - DOMAIN-SUFFIX,email.lacuna.movidesk.com
 - DOMAIN-SUFFIX,email.lambreslezdouai.fr
 - DOMAIN-SUFFIX,email.linkxpress.com
+- DOMAIN-SUFFIX,email.madab.hu
 - DOMAIN-SUFFIX,email.maddesignnyc.com
 - DOMAIN-SUFFIX,email.mail.cuebooking.com
 - DOMAIN-SUFFIX,email.mail.frappecloud.com
 - DOMAIN-SUFFIX,email.mail.metalradar.com
-- DOMAIN-SUFFIX,email.mail.thedrz.com
 - DOMAIN-SUFFIX,email.mailer1.evicertia.com
 - DOMAIN-SUFFIX,email.mailgun.devcb.in
 - DOMAIN-SUFFIX,email.mailgun.gingrapp.com
 - DOMAIN-SUFFIX,email.mailgun.pmg.com
 - DOMAIN-SUFFIX,email.marketing.smrtapp.com
 - DOMAIN-SUFFIX,email.marketingparaeducadores.com
+- DOMAIN-SUFFIX,email.marnixstaete.nl
 - DOMAIN-SUFFIX,email.mega100.movidesk.com
 - DOMAIN-SUFFIX,email.metroairproducts.com
 - DOMAIN-SUFFIX,email.mg.apuestamos.com
@@ -954,7 +956,6 @@
 - DOMAIN-SUFFIX,email.mgmail.sinfulaffairs.com
 - DOMAIN-SUFFIX,email.mgmail.spicyhookups4free.com
 - DOMAIN-SUFFIX,email.mgmail.temptingdates.com
-- DOMAIN-SUFFIX,email.mgnoc.24seven.co.uk
 - DOMAIN-SUFFIX,email.netglobe.movidesk.com
 - DOMAIN-SUFFIX,email.netpositive.hu
 - DOMAIN-SUFFIX,email.nl.onetwotrip.com
@@ -971,7 +972,6 @@
 - DOMAIN-SUFFIX,email.rdesk.com
 - DOMAIN-SUFFIX,email.recruiting.mongodb.com
 - DOMAIN-SUFFIX,email.research.personio.com
-- DOMAIN-SUFFIX,email.rolda.org
 - DOMAIN-SUFFIX,email.sattva-controladoria-ltda.movidesk.com
 - DOMAIN-SUFFIX,email.sec.fundoo.io
 - DOMAIN-SUFFIX,email.secure.hotelcard.ch
@@ -979,7 +979,6 @@
 - DOMAIN-SUFFIX,email.sqvr.ru
 - DOMAIN-SUFFIX,email.store-factory.com
 - DOMAIN-SUFFIX,email.talentbait.com
-- DOMAIN-SUFFIX,email.tele-sonic.fr
 - DOMAIN-SUFFIX,email.ticketscloud.org
 - DOMAIN-SUFFIX,email.track.senselashes.com
 - DOMAIN-SUFFIX,email.tradekey.com
@@ -1004,7 +1003,6 @@
 - DOMAIN-SUFFIX,emu.pin13.net
 - DOMAIN-SUFFIX,en-trezorbridgeapp.vercel.app
 - DOMAIN-SUFFIX,enc-90128738.b-cdn.net
-- DOMAIN-SUFFIX,enchantestore.myshopify.com
 - DOMAIN-SUFFIX,entrepreneur.share.ntv.io
 - DOMAIN-SUFFIX,equilist.raj-ohlavek.cz
 - DOMAIN-SUFFIX,equipodesoportedeunaledu.weebly.com
@@ -1105,6 +1103,7 @@
 - DOMAIN-SUFFIX,go.bonniernews.se
 - DOMAIN-SUFFIX,go.cleartouch.in
 - DOMAIN-SUFFIX,go.configit.com
+- DOMAIN-SUFFIX,go.emconsultinginc.com
 - DOMAIN-SUFFIX,go.etoro.com
 - DOMAIN-SUFFIX,go.facilitysource.com
 - DOMAIN-SUFFIX,go.gefco.net
@@ -1186,7 +1185,6 @@
 - DOMAIN-SUFFIX,il-9205.web.app
 - DOMAIN-SUFFIX,ilivewpfrsefr.web.app
 - DOMAIN-SUFFIX,illdedd.w3spaces.com
-- DOMAIN-SUFFIX,images.identity.okta.com
 - DOMAIN-SUFFIX,img2.paywithmybank.com
 - DOMAIN-SUFFIX,immadkhanz.github.io
 - DOMAIN-SUFFIX,index-support9.firebaseapp.com
@@ -1194,7 +1192,6 @@
 - DOMAIN-SUFFIX,indochino.tt.omtrdc.net
 - DOMAIN-SUFFIX,inexpensive-manager-332431.framer.app
 - DOMAIN-SUFFIX,info.foresthillsdc.org
-- DOMAIN-SUFFIX,info.marshbellofram.com
 - DOMAIN-SUFFIX,informa0050pft00.firebaseapp.com
 - DOMAIN-SUFFIX,iniciobienvenido.webcindario.com
 - DOMAIN-SUFFIX,insights.majesticsteel.com
@@ -1253,6 +1250,7 @@
 - DOMAIN-SUFFIX,kycverification.typeform.com
 - DOMAIN-SUFFIX,kyimbra.weebly.com
 - DOMAIN-SUFFIX,l.coachos.app
+- DOMAIN-SUFFIX,l.mail.rula.com
 - DOMAIN-SUFFIX,l.toushiikusei.net
 - DOMAIN-SUFFIX,l11kse.webwave.dev
 - DOMAIN-SUFFIX,lbkn4a.webwave.dev
@@ -1494,8 +1492,10 @@
 - DOMAIN-SUFFIX,pressyahhhhh.weebly.com
 - DOMAIN-SUFFIX,preview.webflow.com
 - DOMAIN-SUFFIX,pro-coins-secure-cdns.created.app
+- DOMAIN-SUFFIX,pro.lebeddie.cz
 - DOMAIN-SUFFIX,pro111-guardian-cu-technow.firebaseapp.com
 - DOMAIN-SUFFIX,prod-freedom.branchcustom.xyz
+- DOMAIN-SUFFIX,prod.roadplast.com
 - DOMAIN-SUFFIX,produgrupameric.webcindario.com
 - DOMAIN-SUFFIX,produnetenlin3a.webcindario.com
 - DOMAIN-SUFFIX,projecta-common-1258344701.file.myqcloud.com
@@ -1607,11 +1607,9 @@
 - DOMAIN-SUFFIX,seguro-allianz-delta.vercel.app
 - DOMAIN-SUFFIX,senseihx4.github.io
 - DOMAIN-SUFFIX,senshukai.tt.omtrdc.net
-- DOMAIN-SUFFIX,sentry.mediacdn.vn
 - DOMAIN-SUFFIX,serv1correiooserverr33c8eebbeef0c9.vercel.app
 - DOMAIN-SUFFIX,server-101724.square.site
 - DOMAIN-SUFFIX,server.abdomendefinidoem2meses.com.br
-- DOMAIN-SUFFIX,server.carolinamalaguth.com.br
 - DOMAIN-SUFFIX,server.httreinamentos.com.br
 - DOMAIN-SUFFIX,server.lifeprosalud.com
 - DOMAIN-SUFFIX,server.menortaxa.pagplan.com.br
@@ -1621,9 +1619,12 @@
 - DOMAIN-SUFFIX,serverupdateauthorization01.weebly.com
 - DOMAIN-SUFFIX,sew.tt.omtrdc.net
 - DOMAIN-SUFFIX,seznam10098765.weebly.com
+- DOMAIN-SUFFIX,sfgtm.imagroup.com
+- DOMAIN-SUFFIX,sgtm.bc-cosmetics.com.ua
 - DOMAIN-SUFFIX,sgtm.eis-greissler.at
 - DOMAIN-SUFFIX,sgtm.erecepta.app
 - DOMAIN-SUFFIX,sgtm.fucturatecnologia.com.br
+- DOMAIN-SUFFIX,sgtmt.weiterdenken.legal
 - DOMAIN-SUFFIX,shaik-reform.weebly.com
 - DOMAIN-SUFFIX,shaikayaz9.github.io
 - DOMAIN-SUFFIX,share.independentmail.com
@@ -1691,10 +1692,7 @@
 - DOMAIN-SUFFIX,ss.toolsta.lt
 - DOMAIN-SUFFIX,ss1.notifysrv.com
 - DOMAIN-SUFFIX,ssc.mtv.es
-- DOMAIN-SUFFIX,ssc.mtv.nl
-- DOMAIN-SUFFIX,ssc.mtvla.com
 - DOMAIN-SUFFIX,ssc.mundonick.com
-- DOMAIN-SUFFIX,ssc.nick.tv
 - DOMAIN-SUFFIX,ssc.nickelodeon.nl
 - DOMAIN-SUFFIX,ssc.southparkstudios.co.uk
 - DOMAIN-SUFFIX,ssc.tvland.com
@@ -1871,7 +1869,6 @@
 - DOMAIN-SUFFIX,vided-s.firebaseapp.com
 - DOMAIN-SUFFIX,videotron87.weebly.com
 - DOMAIN-SUFFIX,vidhiprajapati25.github.io
-- DOMAIN-SUFFIX,view.email.baya.vn
 - DOMAIN-SUFFIX,view.mc.buser.com.br
 - DOMAIN-SUFFIX,viltbrasilsystemasamerptrsd.tt.omtrdc.net
 - DOMAIN-SUFFIX,viraj-9.github.io
@@ -1913,6 +1910,7 @@
 - DOMAIN-SUFFIX,wire-app.cyberfish.io
 - DOMAIN-SUFFIX,wisedialogbankspa.tt.omtrdc.net
 - DOMAIN-SUFFIX,wl.jd.com
+- DOMAIN-SUFFIX,wlan.sound.ag
 - DOMAIN-SUFFIX,wmail003tgzkr344556.weebly.com
 - DOMAIN-SUFFIX,wmailzzkrzjkutkr0.weebly.com
 - DOMAIN-SUFFIX,wmwwicbb3ad3dql4.0.9.pp.tt.omtrdc.net
@@ -1985,7 +1983,6 @@
 - DOMAIN-SUFFIX,zsxmbra.weebly.com
 - DOMAIN-SUFFIX,ztugn.transformationbody.com
 - DOMAIN-SUFFIX,zxcv00-po123.firebaseapp.com
-﻿- DOMAIN,0--skitch--0.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.activecampaign.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.bcbsnc.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
@@ -2014,7 +2011,6 @@
 ﻿- DOMAIN-SUFFIX,ali-pro-origin-pull.kwai.net.iberostar.com
 ﻿- DOMAIN-SUFFIX,cdnjs.hro-cosmetics.com
 ﻿- DOMAIN-SUFFIX,email-ap.jll.co.th
-﻿﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,1.glook.cn
 ﻿﻿- DOMAIN-SUFFIX,a.hbf23.cn
