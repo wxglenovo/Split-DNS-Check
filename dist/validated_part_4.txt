@@ -3,6 +3,7 @@
 - DOMAIN,advancelocal-adapter-image-uploads.s3.amazonaws.com
 - DOMAIN,americancentury.tt.omtrdc.net
 - DOMAIN,c.bing.com
+- DOMAIN,computersciencescorp.tt.omtrdc.net
 - DOMAIN,crocs.tt.omtrdc.net
 - DOMAIN,daviik.iad-03.braze.com
 - DOMAIN,deutschebahn.sc.omtrdc.net
@@ -49,7 +50,6 @@
 - DOMAIN-SUFFIX,1ps6e7sort397gy9.edge46.testandtarget.omniture.com
 - DOMAIN-SUFFIX,26gg.bnq86.com
 - DOMAIN-SUFFIX,2hbifq9ks2wt-pages-dev.translate.goog
-- DOMAIN-SUFFIX,3115164.notifysrv.com
 - DOMAIN-SUFFIX,3115166.notifysrv.com
 - DOMAIN-SUFFIX,3164315.notifysrv.com
 - DOMAIN-SUFFIX,3165779.notify6.com
@@ -137,6 +137,7 @@
 - DOMAIN-SUFFIX,aarowingclub.weebly.com
 - DOMAIN-SUFFIX,aatdfwjcqzeo4j3-p.adkoffer.fr
 - DOMAIN-SUFFIX,abbottlaboratories.tt.omtrdc.net
+- DOMAIN-SUFFIX,abercrombie.tt.hb-fa-dev.tt.omtrdc.net
 - DOMAIN-SUFFIX,ablink.pomelofashion.com
 - DOMAIN-SUFFIX,ablinks.notify.healthengine.com.au
 - DOMAIN-SUFFIX,abundant-industry-908412.framer.app
@@ -163,6 +164,7 @@
 - DOMAIN-SUFFIX,admin1.notifysrv.com
 - DOMAIN-SUFFIX,adminmailruh8uqngpb32.weebly.com
 - DOMAIN-SUFFIX,adminweb66.weebly.com
+- DOMAIN-SUFFIX,adobemarketingcloud.tt.omtrdc.net
 - DOMAIN-SUFFIX,ads.alt.com
 - DOMAIN-SUFFIX,ads.asiafriendfinder.com
 - DOMAIN-SUFFIX,ads.passion.com
@@ -203,6 +205,7 @@
 - DOMAIN-SUFFIX,allianceseksfr.web.app
 - DOMAIN-SUFFIX,allowcoook.framer.ai
 - DOMAIN-SUFFIX,ambiente2133.weebly.com
+- DOMAIN-SUFFIX,americancentury.tt.omtrdc.net
 - DOMAIN-SUFFIX,amptrack-dailymail-co-uk.cdn.ampproject.org
 - DOMAIN-SUFFIX,ams-pageview-public.s3.amazonaws.com
 - DOMAIN-SUFFIX,amu-univ00.weebly.com
@@ -212,7 +215,6 @@
 - DOMAIN-SUFFIX,analytics.kerns.co
 - DOMAIN-SUFFIX,analytics.kidoz.net
 - DOMAIN-SUFFIX,analytics.loadweb.com
-- DOMAIN-SUFFIX,analytics.net.dz.jumia.com
 - DOMAIN-SUFFIX,analytics.regex101.com
 - DOMAIN-SUFFIX,analytics.rover.io
 - DOMAIN-SUFFIX,angelic-report-254694.framer.app
@@ -243,7 +245,6 @@
 - DOMAIN-SUFFIX,app.select.id
 - DOMAIN-SUFFIX,app.semanadapromocao.digital
 - DOMAIN-SUFFIX,app.wudju.de
-- DOMAIN-SUFFIX,app.youla.io
 - DOMAIN-SUFFIX,appitau.liberar-app.info
 - DOMAIN-SUFFIX,applinks.laoshi.io
 - DOMAIN-SUFFIX,applogapi.autohome.com.cn
@@ -272,7 +273,6 @@
 - DOMAIN-SUFFIX,attmanagementsupport.boxmode.io
 - DOMAIN-SUFFIX,attnewverrsion.weebly.com
 - DOMAIN-SUFFIX,attributiontrackingga.googlecode.com
-- DOMAIN-SUFFIX,attupdatein.boxmode.io
 - DOMAIN-SUFFIX,attupdateinfo.pory.app
 - DOMAIN-SUFFIX,attupdateinfools.boxmode.io
 - DOMAIN-SUFFIX,atualizarquota.weebly.com
@@ -387,7 +387,6 @@
 - DOMAIN-SUFFIX,bymnail.weebly.com
 - DOMAIN-SUFFIX,bzdsklou.web.app
 - DOMAIN-SUFFIX,bzmufhqtybi.web.app
-- DOMAIN-SUFFIX,c.booksir.com.cn
 - DOMAIN-SUFFIX,c.salon24.pl
 - DOMAIN-SUFFIX,c1.czcol.cn
 - DOMAIN-SUFFIX,c24hdp.webwave.dev
@@ -676,10 +675,12 @@
 - DOMAIN-SUFFIX,email.freterapido.movidesk.com
 - DOMAIN-SUFFIX,email.fyreants.net
 - DOMAIN-SUFFIX,email.gant.cz
+- DOMAIN-SUFFIX,email.gestoriamartinezllanos.es
 - DOMAIN-SUFFIX,email.getcredithelpnow.com
 - DOMAIN-SUFFIX,email.gh-mail.bamboohr.com
 - DOMAIN-SUFFIX,email.gh-mail.cultureamp.com
 - DOMAIN-SUFFIX,email.gh-mail.datagrail.io
+- DOMAIN-SUFFIX,email.gh-mail.fareharbor.com
 - DOMAIN-SUFFIX,email.gh-mail.prevail.ai
 - DOMAIN-SUFFIX,email.glowout.me
 - DOMAIN-SUFFIX,email.gorgias.io
@@ -768,6 +769,7 @@
 - DOMAIN-SUFFIX,email.supportcplug.movidesk.com
 - DOMAIN-SUFFIX,email.swautoinspections.com
 - DOMAIN-SUFFIX,email.synup.com
+- DOMAIN-SUFFIX,email.tanzleila.ch
 - DOMAIN-SUFFIX,email.teladoc.movidesk.com
 - DOMAIN-SUFFIX,email.tende.be
 - DOMAIN-SUFFIX,email.tgasistemas.movidesk.com
@@ -973,6 +975,7 @@
 - DOMAIN-SUFFIX,go.infotech.com
 - DOMAIN-SUFFIX,go.intelligencebank.com
 - DOMAIN-SUFFIX,go.kappadelta.org
+- DOMAIN-SUFFIX,go.newbaymedia.com
 - DOMAIN-SUFFIX,go.powerfleet.com
 - DOMAIN-SUFFIX,go.pricesearch.jp
 - DOMAIN-SUFFIX,go.sexchatters.com
@@ -1178,6 +1181,7 @@
 - DOMAIN-SUFFIX,kufar-promo-block.s3-eu-west-1.amazonaws.com
 - DOMAIN-SUFFIX,kundeonline.firebaseapp.com
 - DOMAIN-SUFFIX,kundeserviceoppgjr4.mitiendanube.com
+- DOMAIN-SUFFIX,kuonigtd.tt.omtrdc.net
 - DOMAIN-SUFFIX,kvbofdl6tesraab-c.akming.xyz
 - DOMAIN-SUFFIX,kwdbtrmww.web.app
 - DOMAIN-SUFFIX,kzuqqvru.web.app
@@ -1279,7 +1283,6 @@
 - DOMAIN-SUFFIX,manulifefinancial.tt.omtrdc.net
 - DOMAIN-SUFFIX,market.yandex.ru
 - DOMAIN-SUFFIX,marketing.advantage.tech
-- DOMAIN-SUFFIX,marketing.commercehomemortgage.com
 - DOMAIN-SUFFIX,marketing.northroprealty.com
 - DOMAIN-SUFFIX,marketing.traxretail.com
 - DOMAIN-SUFFIX,marketplace.uat.mksiegowosc.cashdirector.io
@@ -2102,6 +2105,8 @@
 ﻿- DOMAIN,4699.api.swrve.com
 ﻿- DOMAIN,6379.eu-api.swrve.com
 ﻿- DOMAIN,8397396.fls.doubleclick.net
+﻿- DOMAIN,adobecorp.hb-api.omtrdc.netadobecorp.hb-api.tt.omtrdc.net
+﻿- DOMAIN,adobeinternalags629.tt.omtrdc.net
 ﻿- DOMAIN,craommunications.tt.omtrdc.net
 ﻿- DOMAIN,credem.tt.omtrdc.net
 ﻿- DOMAIN,ekornes.tt.omtrdc.net
