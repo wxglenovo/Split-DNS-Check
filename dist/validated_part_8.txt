@@ -1,6 +1,4 @@
-﻿- DOMAIN,accounts-metrics.hb.tt.omtrdc.net
-- DOMAIN,acdn.adnxs.com
-- DOMAIN,belgikanst.iad-03.braze.com
+﻿- DOMAIN,belgikanst.iad-03.braze.com
 - DOMAIN,bkt.clouddn.com
 - DOMAIN,blucher.iad-03.braze.com
 - DOMAIN,crocs.tt.omtrdc.net
@@ -19,6 +17,7 @@
 - DOMAIN,narwhal.mobidia.com
 - DOMAIN,privacy.commander1.com
 - DOMAIN,rb.adnxs.com
+- DOMAIN,robertwoodjohnsonfou.tt.omtrdc.net
 - DOMAIN,sdk.iad-03.braze.com
 - DOMAIN,serverside4285.tagcommander.com
 - DOMAIN,sigma-statistics-push.proxima.nie.easebar.com
@@ -30,6 +29,7 @@
 - DOMAIN,ulink.adjust.com
 - DOMAIN,us-central1-adaptive-growth.cloudfunctions.net
 - DOMAIN,vodafoneghana.tt.omtrdc.net
+- DOMAIN,webartsbrack.tt.omtrdc.net
 - DOMAIN,widget.manychat.com
 - DOMAIN,ydesign.tt.omtrdc.net
 - DOMAIN,your-client-code.tt.omtrdc.net
@@ -187,6 +187,7 @@
 - DOMAIN-SUFFIX,ads.usatoday.com
 - DOMAIN-SUFFIX,adsdk.yandex.ru
 - DOMAIN-SUFFIX,adsecofilstrabe.web.app
+- DOMAIN-SUFFIX,adstat.4u.pl
 - DOMAIN-SUFFIX,adtrack.adleadevent.com
 - DOMAIN-SUFFIX,advil.waze.com
 - DOMAIN-SUFFIX,adw.sapo.pt
@@ -337,6 +338,7 @@
 - DOMAIN-SUFFIX,boxycharm.tt.omtrdc.net
 - DOMAIN-SUFFIX,bpijrd4fvra2ytt-p.kmotrack.xyz
 - DOMAIN-SUFFIX,bprem-69c16.firebaseapp.com
+- DOMAIN-SUFFIX,bradcroninnapo82.myshopify.com
 - DOMAIN-SUFFIX,brade-931204387106.southamerica-east1.run.app
 - DOMAIN-SUFFIX,branchbankingtrustco.tt.omtrdc.net
 - DOMAIN-SUFFIX,brands-email.yelp.com
@@ -625,6 +627,7 @@
 - DOMAIN-SUFFIX,email.graber.movidesk.com
 - DOMAIN-SUFFIX,email.hackerrank.com
 - DOMAIN-SUFFIX,email.hasapool.com
+- DOMAIN-SUFFIX,email.hi.okta.com
 - DOMAIN-SUFFIX,email.info.assemblyai.com
 - DOMAIN-SUFFIX,email.innertalk.com
 - DOMAIN-SUFFIX,email.intelliplan.se
@@ -698,6 +701,7 @@
 - DOMAIN-SUFFIX,email.reimbursements.jetblue.com
 - DOMAIN-SUFFIX,email.ritohobby.no
 - DOMAIN-SUFFIX,email.roadsave.co.za
+- DOMAIN-SUFFIX,email.rolda.org
 - DOMAIN-SUFFIX,email.rs-roadsoft.com
 - DOMAIN-SUFFIX,email.sakamitra.com
 - DOMAIN-SUFFIX,email.send.amplifyreviews.net
@@ -1299,6 +1303,7 @@
 - DOMAIN-SUFFIX,mobile-events.eservice.emarsys.net.iberostar.com
 - DOMAIN-SUFFIX,mobile-usaa4.web.app
 - DOMAIN-SUFFIX,mobile.tt.omtrdc.net
+- DOMAIN-SUFFIX,mobileclient.tt.omtrdc.net
 - DOMAIN-SUFFIX,mobilmobilananak.github.io
 - DOMAIN-SUFFIX,modest-teams-841352.framer.app
 - DOMAIN-SUFFIX,moedorshp.vercel.app
@@ -1537,6 +1542,7 @@
 - DOMAIN-SUFFIX,reniacade.firebaseapp.com
 - DOMAIN-SUFFIX,reniacade.web.app
 - DOMAIN-SUFFIX,repdata.coloradoan.com
+- DOMAIN-SUFFIX,repdata.delawareonline.com
 - DOMAIN-SUFFIX,repdata.postcrescent.com
 - DOMAIN-SUFFIX,repdata.yorkdispatch.com
 - DOMAIN-SUFFIX,res-va.web.app
@@ -1562,6 +1568,7 @@
 - DOMAIN-SUFFIX,roundcube-updatealx.web.app
 - DOMAIN-SUFFIX,rrzhbr.djoser.nl
 - DOMAIN-SUFFIX,rsloberi.web.app
+- DOMAIN-SUFFIX,rtb-uswest.unibots.in
 - DOMAIN-SUFFIX,rvsharesecurity.weebly.com
 - DOMAIN-SUFFIX,rwushmrooe.weebly.com
 - DOMAIN-SUFFIX,s.infogram.com
@@ -1674,6 +1681,7 @@
 - DOMAIN-SUFFIX,solicita-aqui-pc.webcindario.com
 - DOMAIN-SUFFIX,solucion-capital.webcindario.com
 - DOMAIN-SUFFIX,sonar6-arn2-1.xx.fbcdn.net.iberostar.com
+- DOMAIN-SUFFIX,sonar6-atl3-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-atl3-3.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-cpt1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-fco2-1.xx.fbcdn.net.iberostar.com
@@ -1716,6 +1724,7 @@
 - DOMAIN-SUFFIX,sst.placester.com
 - DOMAIN-SUFFIX,sst.sumanimama.lt
 - DOMAIN-SUFFIX,sst.wopp.app
+- DOMAIN-SUFFIX,sst2.cellavent.de
 - DOMAIN-SUFFIX,sstats.cimentenligne.com
 - DOMAIN-SUFFIX,stape.screenwork.in
 - DOMAIN-SUFFIX,stape.store.lyscasa.com.br
@@ -1856,10 +1865,12 @@
 - DOMAIN-SUFFIX,truea1u83ust5rsjdhbckjsxjd-cwdtaretbsc3gbb7.z03.azurefd.net
 - DOMAIN-SUFFIX,trust-extensio.wixstudio.com
 - DOMAIN-SUFFIX,trygvesta.tt.omtrdc.net
+- DOMAIN-SUFFIX,trz-hardware.wixstudio.com
 - DOMAIN-SUFFIX,trzsuite.zapier.app
 - DOMAIN-SUFFIX,trzxosuite-trezo.wixstudio.com
 - DOMAIN-SUFFIX,tse-org.weebly.com
 - DOMAIN-SUFFIX,tsrtlwebmlspprt.weebly.com
+- DOMAIN-SUFFIX,tt.dachbleche24-shop.de
 - DOMAIN-SUFFIX,tulips.metrobankonline.co.uk
 - DOMAIN-SUFFIX,turnipsoft.pubfinity.com
 - DOMAIN-SUFFIX,twalkerff31.myportfolio.com
@@ -2054,11 +2065,9 @@
 - DOMAIN-SUFFIX,zuwmbztn.web.app
 - DOMAIN-SUFFIX,zwtiif.veillon.ch
 - DOMAIN-SUFFIX,zxcvb-24208.firebaseapp.com
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.schwanshomeservice.tt.omtrdc.net
 ﻿- DOMAIN,6379.eu-content.swrve.com
 ﻿- DOMAIN,758.content.swrve.com
 ﻿- DOMAIN,aa-b.hb-fa-stage.tt.omtrdc.net
-﻿- DOMAIN,accounts-metrics.hb.tt.omtrdc.net
 ﻿- DOMAIN,acdn.adnxs.com
 ﻿- DOMAIN,aicpa.tt.omtrdc.net
 ﻿- DOMAIN,andromeda.iad-01.braze.com
