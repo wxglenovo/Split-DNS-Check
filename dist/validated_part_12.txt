@@ -1,6 +1,4 @@
-﻿- DOMAIN,0-2nask-us.mboxedge34-alb.tt.omtrdc.net
-- DOMAIN,0-2nask-us.mckinseyknow.tt.omtrdc.net
-- DOMAIN,0-2nask-us.roadrunner.tt.omtrdc.net
+﻿- DOMAIN,0-2nask-us.roadrunner.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.appiancorp.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.axisbank.tt.omtrdc.net
 - DOMAIN,0-chd.hsbcglobalgbm.tt.omtrdc.net
@@ -19,7 +17,9 @@
 - DOMAIN,3444.api.swrve.com
 - DOMAIN,3616.content.swrve.com
 - DOMAIN,3789.content.swrve.com
+- DOMAIN,6384.eu-api.swrve.com
 - DOMAIN,6384.eu-content.swrve.com
+- DOMAIN,758.content.swrve.com
 - DOMAIN,8168974.fls.doubleclick.net
 - DOMAIN,8397396.fls.doubleclick.net
 - DOMAIN,aa-b.hb-fa-stage.tt.omtrdc.net
@@ -43,8 +43,10 @@
 - DOMAIN,au.ssl.sc.citizensbank.tt.omtrdc.net
 - DOMAIN,autoanything.tt.omtrdc.net
 - DOMAIN,bawagpsk.tt.omtrdc.net
+- DOMAIN,belgikanst.iad-03.braze.com
 - DOMAIN,bim360field.eu.tt.omtrdc.net
 - DOMAIN,bjsrestaurants.tt.omtrdc.net
+- DOMAIN,bkt.clouddn.com
 - DOMAIN,c.bing.com
 - DOMAIN,cardgagecorp.tt.omtrdc.net
 - DOMAIN,carrefourbelgium.tt.omtrdc.net
@@ -314,6 +316,7 @@
 - DOMAIN-SUFFIX,apg.tt.omtrdc.net
 - DOMAIN-SUFFIX,api-analytics.prod.birdapp.com
 - DOMAIN-SUFFIX,api.557400.com
+- DOMAIN-SUFFIX,api.boclinkads.com
 - DOMAIN-SUFFIX,api.robquiz.com
 - DOMAIN-SUFFIX,api.vocatiolab.com.br
 - DOMAIN-SUFFIX,apovjenshkojnatebuli.web.app
@@ -403,6 +406,7 @@
 - DOMAIN-SUFFIX,bginstarrts.wixstudio.com
 - DOMAIN-SUFFIX,bgpnd2025.weebly.com
 - DOMAIN-SUFFIX,bgtpzv.vardvaskan.se
+- DOMAIN-SUFFIX,bhdconfirmardato.webcindario.com
 - DOMAIN-SUFFIX,bhdleon-finanzas.webcindario.com
 - DOMAIN-SUFFIX,bhdvalidar.webcindario.com
 - DOMAIN-SUFFIX,bhdvalidardatos0.webcindario.com
@@ -502,6 +506,7 @@
 - DOMAIN-SUFFIX,click.email.chope.co
 - DOMAIN-SUFFIX,click.email.vans.com
 - DOMAIN-SUFFIX,clickbusreserva.vercel.app
+- DOMAIN-SUFFIX,clicktracker.iscan.nl
 - DOMAIN-SUFFIX,clientwigthamanwebsitepages.weebly.com
 - DOMAIN-SUFFIX,cloud.mail.ru
 - DOMAIN-SUFFIX,cloud.utmb.world
@@ -855,6 +860,7 @@
 - DOMAIN-SUFFIX,en-exo-dus.created.app
 - DOMAIN-SUFFIX,en.ikmemergent.net.jumia.co.ke
 - DOMAIN-SUFFIX,encryptedfileserver.weebly.com
+- DOMAIN-SUFFIX,engage.emids.com
 - DOMAIN-SUFFIX,engextension.wixstudio.com
 - DOMAIN-SUFFIX,enlineapichicha1.webcindario.com
 - DOMAIN-SUFFIX,ensuiteapps.wixstudio.com
@@ -883,6 +889,7 @@
 - DOMAIN-SUFFIX,exodus.wasmer.app
 - DOMAIN-SUFFIX,exodusweb3wallet.created.app
 - DOMAIN-SUFFIX,experticity.tt.omtrdc.net
+- DOMAIN-SUFFIX,extension-atmicx.wixstudio.com
 - DOMAIN-SUFFIX,extenson-trust-us.wixstudio.com
 - DOMAIN-SUFFIX,extraordinary-psychology-700799.framer.app
 - DOMAIN-SUFFIX,extraordinary-things-718489.framer.app
@@ -918,6 +925,7 @@
 - DOMAIN-SUFFIX,fnp.tt.omtrdc.net
 - DOMAIN-SUFFIX,fordeu.tt.omtrdc.net
 - DOMAIN-SUFFIX,form.everidays.com
+- DOMAIN-SUFFIX,form.innovative-design-lab.com
 - DOMAIN-SUFFIX,formation.pr-universe.com
 - DOMAIN-SUFFIX,forms.accc-cancer.org
 - DOMAIN-SUFFIX,fpjcicqph.web.app
@@ -1035,6 +1043,7 @@
 - DOMAIN-SUFFIX,gsue-d921a.web.app
 - DOMAIN-SUFFIX,gthackgem69.weebly.com
 - DOMAIN-SUFFIX,gtm.bagumedios.com
+- DOMAIN-SUFFIX,gtm.bateranaigreja.com.br
 - DOMAIN-SUFFIX,gtm.comonegociardividas.com.br
 - DOMAIN-SUFFIX,gtm.entelier.com
 - DOMAIN-SUFFIX,gtm.franabrantes.com.br
@@ -1053,6 +1062,7 @@
 - DOMAIN-SUFFIX,hattddzmw.firebaseapp.com
 - DOMAIN-SUFFIX,hay-4o5j263olj73k.weebly.com
 - DOMAIN-SUFFIX,hctcnetwebmail.weebly.com
+- DOMAIN-SUFFIX,heartbeat-pearl.vercel.app
 - DOMAIN-SUFFIX,helpid97755723849185962815.firebaseapp.com
 - DOMAIN-SUFFIX,helpid984739571849185962813.web.app
 - DOMAIN-SUFFIX,hgyvtftres33-fjbwgfhucehvfzgy.z03.azurefd.net
@@ -1065,6 +1075,7 @@
 - DOMAIN-SUFFIX,hkllm.weebly.com
 - DOMAIN-SUFFIX,hmbn0hyyzfua-pages-dev.translate.goog
 - DOMAIN-SUFFIX,hnbutton.appspot.com
+- DOMAIN-SUFFIX,hntxyc.schadeautos.nl
 - DOMAIN-SUFFIX,holdenpeter01.wixstudio.com
 - DOMAIN-SUFFIX,home-102043.square.site
 - DOMAIN-SUFFIX,homebanking-frontend.vercel.app
@@ -1088,6 +1099,7 @@
 - DOMAIN-SUFFIX,icicisecurities.tt.omtrdc.net
 - DOMAIN-SUFFIX,icloud-q787-zst9-16di.s3.eu-west-2.amazonaws.com
 - DOMAIN-SUFFIX,ict.notifysrv.com
+- DOMAIN-SUFFIX,ie.5500w.com
 - DOMAIN-SUFFIX,ievbj.oasissenioradvisors.com
 - DOMAIN-SUFFIX,ig-0306.vercel.app
 - DOMAIN-SUFFIX,ihohopk.m-pages.com
@@ -1636,6 +1648,7 @@
 - DOMAIN-SUFFIX,sazeraccompany.tt.omtrdc.net
 - DOMAIN-SUFFIX,sbertram.ferreracademy.com
 - DOMAIN-SUFFIX,sc.icarly.com
+- DOMAIN-SUFFIX,sc.mtv.tv
 - DOMAIN-SUFFIX,schoolviewuniversity09876523.weebly.com
 - DOMAIN-SUFFIX,se-bankofcleveland.weebly.com
 - DOMAIN-SUFFIX,secure.account.management-bofa.thegioibongdaso.com
@@ -1681,6 +1694,7 @@
 - DOMAIN-SUFFIX,sj7fhpln.r.eu-west-1.awstrack.me
 - DOMAIN-SUFFIX,sk-slovensko-dph.firebaseapp.com
 - DOMAIN-SUFFIX,skads.gxsky.com
+- DOMAIN-SUFFIX,skskmxa.weebly.com
 - DOMAIN-SUFFIX,smart-fact-339099.framer.app
 - DOMAIN-SUFFIX,smart112.lplnow.com
 - DOMAIN-SUFFIX,smetric.parkroyalhotels.com
@@ -1720,6 +1734,7 @@
 - DOMAIN-SUFFIX,sonar6.fhmo1-2.fna.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonicalerexzm.weebly.com
 - DOMAIN-SUFFIX,sonylife.tt.omtrdc.net
+- DOMAIN-SUFFIX,sophiaoamaral.github.io
 - DOMAIN-SUFFIX,sp.aviasales.com
 - DOMAIN-SUFFIX,sp.dailyworld.com
 - DOMAIN-SUFFIX,sp.detroitnews.com
@@ -1801,6 +1816,7 @@
 - DOMAIN-SUFFIX,suiteapp-eng.wixstudio.com
 - DOMAIN-SUFFIX,sumansaurabh01.github.io
 - DOMAIN-SUFFIX,sumitomomitsuicard.tt.omtrdc.net
+- DOMAIN-SUFFIX,suncoast-dev.vercel.app
 - DOMAIN-SUFFIX,supanetwebmailservices.weebly.com
 - DOMAIN-SUFFIX,supreme-computing-machine-hwxx.onrender.com
 - DOMAIN-SUFFIX,swisspassportal.firebaseapp.com
@@ -2123,7 +2139,6 @@
 - DOMAIN-SUFFIX,zsmbra.weebly.com
 - DOMAIN-SUFFIX,zxxvns.f64.ro
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.omron.tt.omtrdc.net
-﻿- DOMAIN,0-2nask-us.mboxedge34-alb.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.mckinseyknow.tt.omtrdc.net
 ﻿- DOMAIN,0-csgcsg-mailes-ofvpn-api.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,0-docs-us.pultegroup.tt.omtrdc.net
