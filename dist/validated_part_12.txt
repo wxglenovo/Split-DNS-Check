@@ -250,7 +250,6 @@
 - DOMAIN-SUFFIX,ads.its-newid.net
 - DOMAIN-SUFFIX,ads.meetcelebs.com
 - DOMAIN-SUFFIX,adsassets.waze.com
-- DOMAIN-SUFFIX,adserver.infotorg.se
 - DOMAIN-SUFFIX,adserver.scr.sk
 - DOMAIN-SUFFIX,adserver.twitpic.com
 - DOMAIN-SUFFIX,adsrv.deviantart.com
@@ -514,7 +513,6 @@
 - DOMAIN-SUFFIX,cin-lorane.firebaseapp.com
 - DOMAIN-SUFFIX,click.email.chope.co
 - DOMAIN-SUFFIX,click.email.vans.com
-- DOMAIN-SUFFIX,click.trustalerts.okta.com
 - DOMAIN-SUFFIX,clickbusreserva.vercel.app
 - DOMAIN-SUFFIX,clientwigthamanwebsitepages.weebly.com
 - DOMAIN-SUFFIX,cloud.mail.ru
@@ -557,7 +555,6 @@
 - DOMAIN-SUFFIX,correos.tt.omtrdc.net
 - DOMAIN-SUFFIX,count.enet.com.cn
 - DOMAIN-SUFFIX,counter.tianjimedia.com
-- DOMAIN-SUFFIX,coy.jouarnda.better-than.tv
 - DOMAIN-SUFFIX,cp-serverdata393030.firebaseapp.com
 - DOMAIN-SUFFIX,cpgo.avatacar.com
 - DOMAIN-SUFFIX,cpjswsdta.firebaseapp.com
@@ -734,7 +731,6 @@
 - DOMAIN-SUFFIX,email.cliffinsurance.com
 - DOMAIN-SUFFIX,email.dapdemol.fuga.eu
 - DOMAIN-SUFFIX,email.delivery.pushpress.com
-- DOMAIN-SUFFIX,email.dotmanaged.eu
 - DOMAIN-SUFFIX,email.dpsp.movidesk.com
 - DOMAIN-SUFFIX,email.e-permits.co.uk
 - DOMAIN-SUFFIX,email.echoinfo.movidesk.com
@@ -799,6 +795,7 @@
 - DOMAIN-SUFFIX,email.mg.bookbot.es
 - DOMAIN-SUFFIX,email.mg.capedge.com
 - DOMAIN-SUFFIX,email.mg.cashback.co.il
+- DOMAIN-SUFFIX,email.mg.chuhaiyan.net
 - DOMAIN-SUFFIX,email.mg.contactmailserver.com
 - DOMAIN-SUFFIX,email.mg.planningcenteronline.com
 - DOMAIN-SUFFIX,email.mg.scientist.com
@@ -832,7 +829,6 @@
 - DOMAIN-SUFFIX,email.puppis.com.ar
 - DOMAIN-SUFFIX,email.rayzzer.sk
 - DOMAIN-SUFFIX,email.recaccess.com
-- DOMAIN-SUFFIX,email.recruiting.okta.com
 - DOMAIN-SUFFIX,email.rentpath.com
 - DOMAIN-SUFFIX,email.reply.unboundmotherhood.com
 - DOMAIN-SUFFIX,email.retail.heartland.us
@@ -1211,7 +1207,6 @@
 - DOMAIN-SUFFIX,kbc.tt.omtrdc.net
 - DOMAIN-SUFFIX,kdcmarketing.wixstudio.com
 - DOMAIN-SUFFIX,kddi.tt.omtrdc.net
-- DOMAIN-SUFFIX,kdostjva.e-kei.pl
 - DOMAIN-SUFFIX,kepco.tt.omtrdc.net
 - DOMAIN-SUFFIX,keshavdevi814-art.github.io
 - DOMAIN-SUFFIX,kevinruiz3865-ui.github.io
@@ -1354,7 +1349,6 @@
 - DOMAIN-SUFFIX,metrics.egencia.no
 - DOMAIN-SUFFIX,metrics.helenair.com
 - DOMAIN-SUFFIX,metrics.ingdirect.es
-- DOMAIN-SUFFIX,metrics.lycos.com
 - DOMAIN-SUFFIX,metrics.passivelearningbd.com
 - DOMAIN-SUFFIX,metrics.rent.com
 - DOMAIN-SUFFIX,mex-nexfly.webcindario.com
@@ -1550,7 +1544,6 @@
 - DOMAIN-SUFFIX,please-wait--connection.web.app
 - DOMAIN-SUFFIX,plsbl-staging.edison.se
 - DOMAIN-SUFFIX,plum-future-573955.framer.app
-- DOMAIN-SUFFIX,pm.poqwua.cn
 - DOMAIN-SUFFIX,pm7svehxoymqsng-p.adktrack44.xyz
 - DOMAIN-SUFFIX,poised-tuna-214053.framer.app
 - DOMAIN-SUFFIX,popcashjs.b-cdn.net
@@ -2214,6 +2207,8 @@
 ﻿- DOMAIN,0-csgcsg-mailes-ofvpn-api.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,0-docs-us.pultegroup.tt.omtrdc.net
 ﻿- DOMAIN,10.212.54.132200cdn.tt.omtrdc.net
+﻿- DOMAIN,1188.content.swrve.com
+﻿- DOMAIN,1353.api.swrve.com
 ﻿- DOMAIN,182comcastentertainmentgroup.hb.tt.omtrdc.net
 ﻿- DOMAIN,242hulu.hb.tt.omtrdc.net
 ﻿- DOMAIN,6384.eu-content.swrve.com
