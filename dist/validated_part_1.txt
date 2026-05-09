@@ -15,10 +15,12 @@
 - DOMAIN,0-cdburner-express-okta-idpcdburner.axisbank.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.cuna.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.expressllc.tt.omtrdc.net
+- DOMAIN,0-cdburner-express-okta-idpcdburner.institutstraumann.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.johnhancockfinancial.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.leroymerlin.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.ricohusa.tt.omtrdc.net
 - DOMAIN,0-cdburner-express-okta-idpcdburner.vodafonehu.tt.omtrdc.net
+- DOMAIN,0-chd.coherent.tt.omtrdc.net
 - DOMAIN,0-chd.hsbcglobalgbm.tt.omtrdc.net
 - DOMAIN,0-chd.incommholdings.tt.omtrdc.net
 - DOMAIN,0-chd.ingredionincorporate.tt.omtrdc.net
@@ -72,8 +74,12 @@
 - DOMAIN,17.242abcnews.hb-api.tt.omtrdc.net
 - DOMAIN,17.242discovery.hb-api.tt.omtrdc.net
 - DOMAIN,17.251abcotv.hb-api.tt.omtrdc.net
+- DOMAIN,17.251cbsdigitalmedia.hb.tt.omtrdc.net
+- DOMAIN,17.251comcastentertainmentgroup.hb.tt.omtrdc.net
 - DOMAIN,17.251nascardigitalsap.hb.tt.omtrdc.net
 - DOMAIN,182aetv.hb.tt.omtrdc.net
+- DOMAIN,182nascardigitalsap.hb.tt.omtrdc.net
+- DOMAIN,195191195191pn.hb.tt.omtrdc.net
 - DOMAIN,207171-182-8.tt.omtrdc.net
 - DOMAIN,210-196.tt.omtrdc.net
 - DOMAIN,242aetv.hb.tt.omtrdc.net
@@ -481,6 +487,7 @@
 - DOMAIN-SUFFIX,21d10b3382.c9559f1638.com
 - DOMAIN-SUFFIX,222133ww3.weebly.com
 - DOMAIN-SUFFIX,23c455.weebly.com
+- DOMAIN-SUFFIX,241abcnews.hb-api.tt.omtrdc.net
 - DOMAIN-SUFFIX,2fdaimlermobilityservicesnewmedia.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,2fwebmail-maastrich-tuniversity-nl.weebly.com
 - DOMAIN-SUFFIX,3180624.notifysrv.com
@@ -522,6 +529,7 @@
 - DOMAIN-SUFFIX,8myvisionfcu.weebly.com
 - DOMAIN-SUFFIX,9786544t5r.weebly.com
 - DOMAIN-SUFFIX,a-creator-collab.github.io
+- DOMAIN-SUFFIX,a-tomic.wixstudio.com
 - DOMAIN-SUFFIX,a.32.17.241plantronics.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,a.hbf23.cn
 - DOMAIN-SUFFIX,a.koudai.com
@@ -1002,10 +1010,12 @@
 - DOMAIN-SUFFIX,dvheeiik.weebly.com
 - DOMAIN-SUFFIX,dynarkdynark.wixstudio.com
 - DOMAIN-SUFFIX,e6b4cfdb36.8381a73c4d.com
+- DOMAIN-SUFFIX,ea.franziskasager.de
 - DOMAIN-SUFFIX,ea.greenweez.es
 - DOMAIN-SUFFIX,easy-bank-alpha.vercel.app
 - DOMAIN-SUFFIX,easy-bank-landing-page-ecru.vercel.app
 - DOMAIN-SUFFIX,easy-banking-rho.vercel.app
+- DOMAIN-SUFFIX,easy.au.ru
 - DOMAIN-SUFFIX,easybank-landing-page-dngtnv.vercel.app
 - DOMAIN-SUFFIX,easybank-landing-page-master-lime.vercel.app
 - DOMAIN-SUFFIX,ebay-seller-center-managedpayments.vercel.app
@@ -1304,6 +1314,7 @@
 - DOMAIN-SUFFIX,guineapig.themenaffin.de
 - DOMAIN-SUFFIX,guvenlikonlemlerimizi.weebly.com
 - DOMAIN-SUFFIX,gvtcpages.weebly.com
+- DOMAIN-SUFFIX,gw.d.ywopt.com
 - DOMAIN-SUFFIX,hacher666.github.io
 - DOMAIN-SUFFIX,haltrafcu.weebly.com
 - DOMAIN-SUFFIX,hamedmoradidev.github.io
@@ -1321,6 +1332,7 @@
 - DOMAIN-SUFFIX,heavenly-start-976023.framer.app
 - DOMAIN-SUFFIX,hehe-100262.weeblysite.com
 - DOMAIN-SUFFIX,hejlobalid3.click.s11.sfmc-osl.com
+- DOMAIN-SUFFIX,hello.ozyegin.edu.tr
 - DOMAIN-SUFFIX,hellzimb.weebly.com
 - DOMAIN-SUFFIX,help-exods-wallet.wasmer.app
 - DOMAIN-SUFFIX,helpid100235789238974.web.app
@@ -1949,6 +1961,7 @@
 - DOMAIN-SUFFIX,sonar6-syd2-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,sonar6-tpe1-1.xx.fbcdn.net.iberostar.com
 - DOMAIN-SUFFIX,soporte.timeforsurveys.com
+- DOMAIN-SUFFIX,sopr-api.cian.ru
 - DOMAIN-SUFFIX,soulful-level-280372.framer.app
 - DOMAIN-SUFFIX,soumyajana466.github.io
 - DOMAIN-SUFFIX,source-suiteapp.wixstudio.com
@@ -2322,8 +2335,10 @@
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.d1.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.hrblock.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.jcb.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.premera.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.schwanshomeservice.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.vmlnavy.tt.omtrdc.net
 ﻿- DOMAIN,0-174.tt.omtrdc.net
 ﻿- DOMAIN,0-2-83.tt.omtrdc.net
