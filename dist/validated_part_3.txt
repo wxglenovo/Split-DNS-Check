@@ -22,6 +22,8 @@
 - DOMAIN,10.114.6.24cbsdigitalmedia.hb.tt.omtrdc.net
 - DOMAIN,10.156.2.22foxnews.hb.tt.omtrdc.net
 - DOMAIN,10.32.17.179abcnews.hb-api.tt.omtrdc.net
+- DOMAIN,10.32.17.182adobecorp.hb-api.tt.omtrdc.net
+- DOMAIN,10.32.17.182cbsinteractive.hb.tt.omtrdc.net
 - DOMAIN,10.32.17.182nationalgeographic.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.182nbcume.hb.tt.omtrdc.net
 - DOMAIN,10.32.17.241adobecorp.hb-api.tt.omtrdc.net
@@ -778,7 +780,6 @@
 - DOMAIN-SUFFIX,email.butterfly.ai
 - DOMAIN-SUFFIX,email.caballocampana.com
 - DOMAIN-SUFFIX,email.canny.io
-- DOMAIN-SUFFIX,email.capsulehotel.ch
 - DOMAIN-SUFFIX,email.carovnapolicka.sk
 - DOMAIN-SUFFIX,email.centeredgeonline.com
 - DOMAIN-SUFFIX,email.chargify.vendhq.com
@@ -2366,7 +2367,6 @@
 - DOMAIN-SUFFIX,www.survey.notifysrv.com
 - DOMAIN-SUFFIX,www.untrueaddition.pro
 - DOMAIN-SUFFIX,www.vykup-olomouc.eu.tt.omtrdc.net
-- DOMAIN-SUFFIX,www.xz8.ru
 - DOMAIN-SUFFIX,www2.dotsource.com
 - DOMAIN-SUFFIX,www2.freshbooks.com
 - DOMAIN-SUFFIX,www2.goodwaygroup.com
@@ -2425,8 +2425,8 @@
 - DOMAIN-SUFFIX,zionsbancorp.tt.omtrdc.net
 - DOMAIN-SUFFIX,ziypmdyydl.251foxnews.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,zoll-de97042.web.app
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.anntaylorinc.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.vmlnavy.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.volvo.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.wdcflashco.tt.omtrdc.net
 ﻿- DOMAIN,0-101.tt.omtrdc.net
@@ -2451,7 +2451,7 @@
 ﻿- DOMAIN-SUFFIX,act.davistech.edu
 ﻿- DOMAIN-SUFFIX,adadmin.house365.com
 ﻿- DOMAIN-SUFFIX,adx.mala.cn
-﻿﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
+﻿﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.anntaylorinc.tt.omtrdc.net
 ﻿﻿- DOMAIN,0-2nask-us.creditcardscom.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,0-2nask-us.aetna.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,1wincdn.b-cdn.net
