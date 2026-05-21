@@ -1,6 +1,6 @@
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.vmlnavy.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.wdcflashco.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.bcbsnc.tt.omtrdc.net
 - DOMAIN,0-101.tt.omtrdc.net
+- DOMAIN,0-174.tt.omtrdc.net
 - DOMAIN,0-2-83.tt.omtrdc.net
 - DOMAIN,0-2nask-us.angaraltd.tt.omtrdc.net
 - DOMAIN,0-2nask-us.starhubltd.tt.omtrdc.net
@@ -25,6 +25,7 @@
 - DOMAIN,10.32.17.182nationalgeographic.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.182nbcume.hb.tt.omtrdc.net
 - DOMAIN,10.32.17.241adobecorp.hb-api.tt.omtrdc.net
+- DOMAIN,10.32.17.242cbsnews.hb-api.tt.omtrdc.net
 - DOMAIN,108-174-11-205.fwd.tt.omtrdc.net
 - DOMAIN,108-174-4-155.fwd.tt.omtrdc.net
 - DOMAIN,1456.api.swrve.com
@@ -242,9 +243,6 @@
 - DOMAIN-SUFFIX,a8cv.studycompass.io
 - DOMAIN-SUFFIX,aa-mockeuw.hb-fa-stage.tt.omtrdc.net
 - DOMAIN-SUFFIX,aa.247sports.com
-- DOMAIN-SUFFIX,aa.dyson.at
-- DOMAIN-SUFFIX,aa.dyson.de
-- DOMAIN-SUFFIX,aa.dyson.it
 - DOMAIN-SUFFIX,aa.dyson.pt
 - DOMAIN-SUFFIX,aafp.tt.hb-fa-dev.tt.omtrdc.net
 - DOMAIN-SUFFIX,aaryan-musk.github.io
@@ -352,8 +350,10 @@
 - DOMAIN-SUFFIX,apac.zendesk.com
 - DOMAIN-SUFFIX,api-bill-dev-services.net.jumia.com
 - DOMAIN-SUFFIX,api-pravoved.s3.amazonaws.com
+- DOMAIN-SUFFIX,api.boclinkads.com
 - DOMAIN-SUFFIX,api.costuraai.com.br
 - DOMAIN-SUFFIX,api.expensestatus.com
+- DOMAIN-SUFFIX,api2.boclinkads.com
 - DOMAIN-SUFFIX,app-bpichinchaec.webcindario.com
 - DOMAIN-SUFFIX,app-clicks-corporate.firstrepublic.com
 - DOMAIN-SUFFIX,app-dev.mave.ly
@@ -718,6 +718,7 @@
 - DOMAIN-SUFFIX,dhsunfhbi.web.app
 - DOMAIN-SUFFIX,dibakar8927.github.io
 - DOMAIN-SUFFIX,diff3.orange.es
+- DOMAIN-SUFFIX,digi.vinut.com.vn
 - DOMAIN-SUFFIX,digital-bridge-en.wixstudio.com
 - DOMAIN-SUFFIX,dinersvalid.webcindario.com
 - DOMAIN-SUFFIX,discord-clone-rajdeep019.vercel.app
@@ -1199,6 +1200,7 @@
 - DOMAIN-SUFFIX,hejhs8hbb.cc.rs6.net
 - DOMAIN-SUFFIX,heliosgesundheit.tt.omtrdc.net
 - DOMAIN-SUFFIX,hellenmary877.wixstudio.com
+- DOMAIN-SUFFIX,hello.ozyegin.edu.tr
 - DOMAIN-SUFFIX,helpbrigde.wixstudio.com
 - DOMAIN-SUFFIX,helpid9947395718491859388111.web.app
 - DOMAIN-SUFFIX,helpid994739571849185962813.web.app
@@ -1309,6 +1311,7 @@
 - DOMAIN-SUFFIX,io-changelly.wixstudio.com
 - DOMAIN-SUFFIX,io-web-ec451.web.app
 - DOMAIN-SUFFIX,ioritest.zeabur.app
+- DOMAIN-SUFFIX,iostart-app-trexio.wixstudio.com
 - DOMAIN-SUFFIX,iostart-ledgr.wixstudio.com
 - DOMAIN-SUFFIX,ip.net.jumia.cm
 - DOMAIN-SUFFIX,ip7prksb2muxvmmh25t6rxl2te0tfulc.lambda-url.eu-west-1.on.aws
@@ -1448,6 +1451,7 @@
 - DOMAIN-SUFFIX,liveapp-platform.wixstudio.com
 - DOMAIN-SUFFIX,liveglive-eng.wixstudio.com
 - DOMAIN-SUFFIX,lmcuacesmainsecureorg.weebly.com
+- DOMAIN-SUFFIX,load.gtm.alea-evolution.com
 - DOMAIN-SUFFIX,load.metis.manual.com.br
 - DOMAIN-SUFFIX,load.sgtm.bricksite.io
 - DOMAIN-SUFFIX,load.sst.kompaszycia.pl
@@ -1687,6 +1691,7 @@
 - DOMAIN-SUFFIX,onlsthesfnc.weebly.com
 - DOMAIN-SUFFIX,onmwepichi.webcindario.com
 - DOMAIN-SUFFIX,ontarioteacherspensi.tt.omtrdc.net
+- DOMAIN-SUFFIX,oofmnail.weebly.com
 - DOMAIN-SUFFIX,op80fsvlztcvafi-p.adkoffer.fr
 - DOMAIN-SUFFIX,open-ladgar.wixstudio.com
 - DOMAIN-SUFFIX,open-leddgerlive.framer.media
@@ -1899,7 +1904,6 @@
 - DOMAIN-SUFFIX,s.neuwdenim.com
 - DOMAIN-SUFFIX,s3.rtnews.pro
 - DOMAIN-SUFFIX,saa.dyson.lu
-- DOMAIN-SUFFIX,saa.dysoncanada.ca
 - DOMAIN-SUFFIX,saaoreoplselam.weebly.com
 - DOMAIN-SUFFIX,safeledgestart.wixstudio.com
 - DOMAIN-SUFFIX,saicmotorcorporation.tt.omtrdc.net
@@ -1916,6 +1920,7 @@
 - DOMAIN-SUFFIX,sanya-gangamma19.github.io
 - DOMAIN-SUFFIX,sasars.short.gy
 - DOMAIN-SUFFIX,sbbanner-com.cdn.ampproject.org
+- DOMAIN-SUFFIX,sc.paramountnetwork.com
 - DOMAIN-SUFFIX,scan-desktop.wixstudio.com
 - DOMAIN-SUFFIX,sdd.dzsc.com
 - DOMAIN-SUFFIX,seconddimension.028426.com
@@ -2089,6 +2094,7 @@
 - DOMAIN-SUFFIX,stats.media.onet.pl
 - DOMAIN-SUFFIX,stats.searchftps.org
 - DOMAIN-SUFFIX,stats.servicedesignjobs.com
+- DOMAIN-SUFFIX,stats.stephlow.audio
 - DOMAIN-SUFFIX,stawar-prosgfant00020.firebaseapp.com
 - DOMAIN-SUFFIX,stepp7-98a8e.web.app
 - DOMAIN-SUFFIX,steveganger.wixstudio.com
@@ -2434,6 +2440,7 @@
 - DOMAIN-SUFFIX,yuganshjoshi.github.io
 - DOMAIN-SUFFIX,yuiyiuyuireuitrwehhgfsdhuirtui.weebly.com
 - DOMAIN-SUFFIX,yyyyynittty.weebly.com
+- DOMAIN-SUFFIX,z1.cyla.cn
 - DOMAIN-SUFFIX,z29zymsvuio5khn-c.missivequotidienne.fr
 - DOMAIN-SUFFIX,zany-checkout-044270.framer.app
 - DOMAIN-SUFFIX,zgmsc.dyson.com
@@ -2446,8 +2453,8 @@
 - DOMAIN-SUFFIX,zionsbancorp.tt.omtrdc.net
 - DOMAIN-SUFFIX,ziypmdyydl.251foxnews.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,zoll-de97042.web.app
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.bcbsnc.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.vmlnavy.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.volvo.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.wdcflashco.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.sharecare.tt.omtrdc.net
@@ -2471,7 +2478,6 @@
 ﻿- DOMAIN-SUFFIX,act.davistech.edu
 ﻿- DOMAIN-SUFFIX,adadmin.house365.com
 ﻿- DOMAIN-SUFFIX,adx.mala.cn
-﻿﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
 ﻿﻿- DOMAIN,0-2nask-us.creditcardscom.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,0-2nask-us.aetna.tt.omtrdc.net
 ﻿﻿- DOMAIN-SUFFIX,1wincdn.b-cdn.net
