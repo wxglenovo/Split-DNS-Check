@@ -1,6 +1,4 @@
-﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.expressllc.tt.omtrdc.net
-- DOMAIN,0-cdburner-express-okta-idpcdburner.leroymerlin.tt.omtrdc.net
-- DOMAIN,indus.iad-01.braze.com
+﻿- DOMAIN,indus.iad-01.braze.com
 - DOMAIN,lcsdk.3g.qq.com
 - DOMAIN,lepoint.tt.omtrdc.net
 - DOMAIN,logs-01.loggly.com
@@ -271,7 +269,6 @@
 - DOMAIN-SUFFIX,anvibrt.m-pages.com
 - DOMAIN-SUFFIX,apgfcublnk.weebly.com
 - DOMAIN-SUFFIX,api.pubfinity.com
-- DOMAIN-SUFFIX,api2.boclinkads.com
 - DOMAIN-SUFFIX,apinto.moseasia.com
 - DOMAIN-SUFFIX,apm-native.redbascket.com
 - DOMAIN-SUFFIX,app-pichincha.webcindario.com
@@ -301,6 +298,9 @@
 - DOMAIN-SUFFIX,approbinhoodcdn.wixstudio.com
 - DOMAIN-SUFFIX,apps-ldgrcom.wixstudio.com
 - DOMAIN-SUFFIX,apps-livedesktop.wixstudio.com
+- DOMAIN-SUFFIX,apps-luno.wixstudio.com
+- DOMAIN-SUFFIX,apps-ndaxxcdns.wixstudio.com
+- DOMAIN-SUFFIX,apps-taetetrade.wixstudio.com
 - DOMAIN-SUFFIX,appsio-trezror.wixstudio.com
 - DOMAIN-SUFFIX,appsstart-ledgrlive.wixstudio.com
 - DOMAIN-SUFFIX,appssuite.wixstudio.com
@@ -519,6 +519,7 @@
 - DOMAIN-SUFFIX,closingaccountportaldata.weebly.com
 - DOMAIN-SUFFIX,clyss.customlanyard.net
 - DOMAIN-SUFFIX,cmm1t9xro80glzx-p.adkclicker.fr
+- DOMAIN-SUFFIX,cnci--seguridad019.replit.app
 - DOMAIN-SUFFIX,coc-106847.weeblysite.com
 - DOMAIN-SUFFIX,codashop-ff-wen.vercel.app
 - DOMAIN-SUFFIX,collectiblestoday.tt.omtrdc.net
@@ -527,6 +528,7 @@
 - DOMAIN-SUFFIX,comcast-108807.weeblysite.com
 - DOMAIN-SUFFIX,commchoicec.weebly.com
 - DOMAIN-SUFFIX,community-standards-1006436512.firebaseapp.com
+- DOMAIN-SUFFIX,communitycb2goonline.weebly.com
 - DOMAIN-SUFFIX,compassionate-volunteers-791449.framer.app
 - DOMAIN-SUFFIX,comtinue-to-bex-next.weebly.com
 - DOMAIN-SUFFIX,comworkspaceone.comvmware.tt.omtrdc.net
@@ -703,6 +705,7 @@
 - DOMAIN-SUFFIX,echoela1.wixstudio.io
 - DOMAIN-SUFFIX,ecology-desktop.wixstudio.com
 - DOMAIN-SUFFIX,ecommrce-web-amazon.netlify.app
+- DOMAIN-SUFFIX,ecostart-trxero.wixstudio.com
 - DOMAIN-SUFFIX,ecountt.vercel.app
 - DOMAIN-SUFFIX,ecountwebmail-redirect.vercel.app
 - DOMAIN-SUFFIX,edavki-depozit.web.app
@@ -723,6 +726,7 @@
 - DOMAIN-SUFFIX,em1jn-4rwts.ads.tremorhub.com
 - DOMAIN-SUFFIX,email-authwestriv.weebly.com
 - DOMAIN-SUFFIX,email-cm.jll.com.lk
+- DOMAIN-SUFFIX,email-ionos-mx-portal-appsuite-app-mailbox.s3.eu-north-1.amazonaws.com
 - DOMAIN-SUFFIX,email.0.md
 - DOMAIN-SUFFIX,email.aaar.org
 - DOMAIN-SUFFIX,email.adelapastor.com
@@ -823,7 +827,6 @@
 - DOMAIN-SUFFIX,email.mojenazory.sk
 - DOMAIN-SUFFIX,email.mujvyzkum.cz
 - DOMAIN-SUFFIX,email.neosoft.hu
-- DOMAIN-SUFFIX,email.netpositive.hu
 - DOMAIN-SUFFIX,email.newsletter.pissedconsumer.com
 - DOMAIN-SUFFIX,email.noerr.com
 - DOMAIN-SUFFIX,email.notificaciones.ticontable.com
@@ -880,17 +883,20 @@
 - DOMAIN-SUFFIX,emamazumder.github.io
 - DOMAIN-SUFFIX,emdcadvertise.eastmoney.com
 - DOMAIN-SUFFIX,ems-a8net-tracking.easy-myshop.jp
+- DOMAIN-SUFFIX,en-blofim.wixstudio.com
 - DOMAIN-SUFFIX,en-desktop-live.wixstudio.com
+- DOMAIN-SUFFIX,en-entro-apps.wixstudio.com
 - DOMAIN-SUFFIX,en-ledgarcom-apps.wixstudio.com
 - DOMAIN-SUFFIX,en-ledgrstart-us.framer.media
 - DOMAIN-SUFFIX,en-started.wixstudio.com
-- DOMAIN-SUFFIX,enchantestore.myshopify.com
 - DOMAIN-SUFFIX,encouraging-kiwi-865832.framer.app
 - DOMAIN-SUFFIX,eng-desktopsldgr.wixstudio.com
 - DOMAIN-SUFFIX,eng-ldger-live.wixstudio.com
 - DOMAIN-SUFFIX,eng-ldgrliveapp.wixstudio.com
 - DOMAIN-SUFFIX,eng-livedesktop.wixstudio.com
+- DOMAIN-SUFFIX,eng-okxx.wixstudio.com
 - DOMAIN-SUFFIX,eng-start-ledger.wixstudio.com
+- DOMAIN-SUFFIX,eng-tangem.wixstudio.com
 - DOMAIN-SUFFIX,eng-webintro-logon.wixstudio.com
 - DOMAIN-SUFFIX,engage.inspectpoint.com
 - DOMAIN-SUFFIX,engine.espace.netavenir.com
@@ -993,6 +999,7 @@
 - DOMAIN-SUFFIX,fiverr-clone-mauve.vercel.app
 - DOMAIN-SUFFIX,fiznail.weebly.com
 - DOMAIN-SUFFIX,fluid-journey-170217.framer.app
+- DOMAIN-SUFFIX,fluxio-en.wixstudio.com
 - DOMAIN-SUFFIX,flwngdc6.paperform.co
 - DOMAIN-SUFFIX,fmbnc-acctservices.firebaseapp.com
 - DOMAIN-SUFFIX,fndiefnlkfkefnf.weebly.com
@@ -1221,6 +1228,7 @@
 - DOMAIN-SUFFIX,home-suiteapps.wixstudio.com
 - DOMAIN-SUFFIX,homedepot.tt.omtrdc.net
 - DOMAIN-SUFFIX,homeless-trexor.wixstudio.com
+- DOMAIN-SUFFIX,homepage-blufin.wixstudio.com
 - DOMAIN-SUFFIX,homepage-suitps.wixstudio.com
 - DOMAIN-SUFFIX,homepage-troi.wixstudio.com
 - DOMAIN-SUFFIX,homepage-us-bridges.wixstudio.com
@@ -1242,7 +1250,6 @@
 - DOMAIN-SUFFIX,ibercaja.tt.omtrdc.net
 - DOMAIN-SUFFIX,ibpsoluciones25.webcindario.com
 - DOMAIN-SUFFIX,ibrahimkamal5.github.io
-- DOMAIN-SUFFIX,icelandclothing.myshopify.com
 - DOMAIN-SUFFIX,iciciprulife.tt.omtrdc.net
 - DOMAIN-SUFFIX,icloud-b800-uxr9-22ov.s3.eu-west-2.amazonaws.com
 - DOMAIN-SUFFIX,iclxlm.drink.ch
@@ -1630,6 +1637,7 @@
 - DOMAIN-SUFFIX,n4ci02023.webcindario.com
 - DOMAIN-SUFFIX,n8sqapzpg7ef3jt-p.adktrack34.xyz
 - DOMAIN-SUFFIX,nabil-islam776.github.io
+- DOMAIN-SUFFIX,nav-simplswep-io.wixstudio.com
 - DOMAIN-SUFFIX,navigate-department-115966.framer.app
 - DOMAIN-SUFFIX,ncwrjh.sos-verkehrsrecht.de
 - DOMAIN-SUFFIX,ndaxappscom.wixstudio.com
@@ -1651,6 +1659,7 @@
 - DOMAIN-SUFFIX,netzeromailsdfghj.weebly.com
 - DOMAIN-SUFFIX,new-bridge-trezio.wixstudio.com
 - DOMAIN-SUFFIX,new-directions-686483.framer.app
+- DOMAIN-SUFFIX,new-startlive.wixstudio.com
 - DOMAIN-SUFFIX,newestty.weeblysite.com
 - DOMAIN-SUFFIX,newnet.qsrch.com
 - DOMAIN-SUFFIX,newvefierdairmilescanda.weebly.com
@@ -1717,6 +1726,7 @@
 - DOMAIN-SUFFIX,opfin-caaf9.firebaseapp.com
 - DOMAIN-SUFFIX,opfin-caaf9.web.app
 - DOMAIN-SUFFIX,original-concept-745376.framer.app
+- DOMAIN-SUFFIX,ote1co.weebly.com
 - DOMAIN-SUFFIX,outlook-web26.weebly.com
 - DOMAIN-SUFFIX,outlook76fr.weebly.com
 - DOMAIN-SUFFIX,overly.dinergysolutions.org
@@ -1795,6 +1805,8 @@
 - DOMAIN-SUFFIX,poojasugathan.github.io
 - DOMAIN-SUFFIX,poppin-405201.web.app
 - DOMAIN-SUFFIX,porezna-uperava.web.app
+- DOMAIN-SUFFIX,portal.acessoseguro.info
+- DOMAIN-SUFFIX,portal.iniciar-moduloapp.click
 - DOMAIN-SUFFIX,portal111-guardian-cu-tech.web.app
 - DOMAIN-SUFFIX,posgrados-unisabana-edu-co-1207474081.p04.elqsandbox.com
 - DOMAIN-SUFFIX,postbank-id268.firebaseapp.com
@@ -1914,6 +1926,7 @@
 - DOMAIN-SUFFIX,rltnrewards.weebly.com
 - DOMAIN-SUFFIX,rockwellautomation.tt.omtrdc.net
 - DOMAIN-SUFFIX,rodoviaweb.vercel.app
+- DOMAIN-SUFFIX,roh-it05.github.io
 - DOMAIN-SUFFIX,roundcube-updatealx.web.app
 - DOMAIN-SUFFIX,rrzhbr.djoser.nl
 - DOMAIN-SUFFIX,rsloberi.web.app
@@ -2113,6 +2126,7 @@
 - DOMAIN-SUFFIX,startd-liveledger.wixstudio.com
 - DOMAIN-SUFFIX,startden-live.wixstudio.com
 - DOMAIN-SUFFIX,started-desktop.wixstudio.com
+- DOMAIN-SUFFIX,started-en-ledgre.wixstudio.com
 - DOMAIN-SUFFIX,started-lebger.zapier.app
 - DOMAIN-SUFFIX,started-ledgrsso.wixstudio.com
 - DOMAIN-SUFFIX,started-livelogon.wixstudio.com
@@ -2120,6 +2134,7 @@
 - DOMAIN-SUFFIX,started-trejo.wixstudio.com
 - DOMAIN-SUFFIX,started-treser-io.wixstudio.com
 - DOMAIN-SUFFIX,startedtrezos.wixstudio.com
+- DOMAIN-SUFFIX,startin-ettoro.wixstudio.com
 - DOMAIN-SUFFIX,starting-bridges.wixstudio.com
 - DOMAIN-SUFFIX,starting-trexor-io.wixstudio.com
 - DOMAIN-SUFFIX,startiolezer-comcdn.wixstudio.com
@@ -2271,6 +2286,7 @@
 - DOMAIN-SUFFIX,tre2fc.web.app
 - DOMAIN-SUFFIX,trellix.tt.omtrdc.net
 - DOMAIN-SUFFIX,trembo-lopez.firebaseapp.com
+- DOMAIN-SUFFIX,trexor-learnpage.wixstudio.com
 - DOMAIN-SUFFIX,trexor-startiio.wixstudio.com
 - DOMAIN-SUFFIX,trezbrge-us-en.wixstudio.com
 - DOMAIN-SUFFIX,trezon-sute-eng.framer.media
@@ -2341,6 +2357,7 @@
 - DOMAIN-SUFFIX,userloginmicrosofft.dudaone.com
 - DOMAIN-SUFFIX,users-liveapp.wixstudio.com
 - DOMAIN-SUFFIX,usersid3.click.s11.sfmc-osl.com
+- DOMAIN-SUFFIX,ushtxcdn.wixstudio.com
 - DOMAIN-SUFFIX,usledgrlivedesktp.wixstudio.com
 - DOMAIN-SUFFIX,usstart-ledger.zapier.app
 - DOMAIN-SUFFIX,utkarshpra78.github.io
@@ -2433,6 +2450,7 @@
 - DOMAIN-SUFFIX,webservicemail2.weebly.com
 - DOMAIN-SUFFIX,webspectrummailauths.weebly.com
 - DOMAIN-SUFFIX,webstartpublic.framer.media
+- DOMAIN-SUFFIX,webuphldio.wixstudio.com
 - DOMAIN-SUFFIX,webzonabdb.webcindario.com
 - DOMAIN-SUFFIX,wedfcboiu.web.app
 - DOMAIN-SUFFIX,welcome-eng-trezo.github.io
@@ -2548,8 +2566,6 @@
 ﻿- DOMAIN,0-25.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.mckinseyknow.tt.omtrdc.net
 ﻿- DOMAIN,0-5.com.hopac.api.tt.omtrdc.net
-﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.cuna.tt.omtrdc.net
-﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.expressllc.tt.omtrdc.net
 ﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.leroymerlin.tt.omtrdc.net
 ﻿- DOMAIN,6379.eu-content.swrve.com
 ﻿- DOMAIN,758.content.swrve.com
