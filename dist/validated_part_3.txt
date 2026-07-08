@@ -1,5 +1,4 @@
-﻿- DOMAIN,0-chd.bitdefender.tt.omtrdc.net
-- DOMAIN,0-chd.ncmec.tt.omtrdc.net
+﻿- DOMAIN,0-chd.ncmec.tt.omtrdc.net
 - DOMAIN,0-enakamai-lanwp.homedepotmx.tt.omtrdc.net
 - DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
 - DOMAIN,0.212.54.132200cdn.tt.omtrdc.net
@@ -8,6 +7,7 @@
 - DOMAIN,10.114.6.24cbsdigitalmedia.hb.tt.omtrdc.net
 - DOMAIN,10.156.2.22foxnews.hb.tt.omtrdc.net
 - DOMAIN,10.32.17.179abcnews.hb-api.tt.omtrdc.net
+- DOMAIN,10.32.17.181abcnews.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.182adobecorp.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.182cbsinteractive.hb.tt.omtrdc.net
 - DOMAIN,10.32.17.182nationalgeographic.hb-api.tt.omtrdc.net
@@ -28,6 +28,7 @@
 - DOMAIN,1456.api.swrve.com
 - DOMAIN,17.241cbsdigitalmedia.hb.tt.omtrdc.net
 - DOMAIN,17.241corus.hb.tt.omtrdc.net
+- DOMAIN,2405.api.swrve.com
 - DOMAIN,254nbcume.hb.tt.omtrdc.net
 - DOMAIN,2578.content.swrve.com
 - DOMAIN,2712.api.swrve.com
@@ -113,7 +114,6 @@
 - DOMAIN-SUFFIX,09fsyc3eixa6fzc-p.bonnelectureatous.fr
 - DOMAIN-SUFFIX,09h7htngbjtos6d-c.bonnelectureatous.fr
 - DOMAIN-SUFFIX,0b34zkgkylov2gt-c.adkclicker.fr
-- DOMAIN-SUFFIX,0f614c737e.b84f93087e.com
 - DOMAIN-SUFFIX,0mrl621ukqdfifs-p.monmessage.fr
 - DOMAIN-SUFFIX,0n8wbfisvlc1gxl-c.unenoteunjour.fr
 - DOMAIN-SUFFIX,0umld4fsig3qw7m-p.adkoffer.fr
@@ -367,6 +367,7 @@
 - DOMAIN-SUFFIX,app-clicks-corporate.firstrepublic.com
 - DOMAIN-SUFFIX,app-dev.mave.ly
 - DOMAIN-SUFFIX,app-mercadodeofertastododia.myshopify.com
+- DOMAIN-SUFFIX,app-mercadollivre.myshopify.com
 - DOMAIN-SUFFIX,app-promocopa2026.myshopify.com
 - DOMAIN-SUFFIX,app.atendimento-resgate.info
 - DOMAIN-SUFFIX,app.biabonuscompleto.pro
@@ -453,7 +454,6 @@
 - DOMAIN-SUFFIX,aziz-070.github.io
 - DOMAIN-SUFFIX,azrxtr.trenyrkarna.cz
 - DOMAIN-SUFFIX,b.arenum.games
-- DOMAIN-SUFFIX,b3b281b815.5acba06d35.com
 - DOMAIN-SUFFIX,b83isa8u3.webcindario.com
 - DOMAIN-SUFFIX,babs147.weeblysite.com
 - DOMAIN-SUFFIX,baby58.tt.omtrdc.net
@@ -520,6 +520,7 @@
 - DOMAIN-SUFFIX,booking-com-teal.vercel.app
 - DOMAIN-SUFFIX,bookonrer.web.app
 - DOMAIN-SUFFIX,br.drtuberlive.com
+- DOMAIN-SUFFIX,bradcroninnapo82.myshopify.com
 - DOMAIN-SUFFIX,bradesco.atendimentoempresarial.app
 - DOMAIN-SUFFIX,bradesco.autenticacaocontato.click
 - DOMAIN-SUFFIX,bradesco.biaportalcliente.com
@@ -1313,6 +1314,7 @@
 - DOMAIN-SUFFIX,hejhs8hbb.cc.rs6.net
 - DOMAIN-SUFFIX,heliosgesundheit.tt.omtrdc.net
 - DOMAIN-SUFFIX,hellenmary877.wixstudio.com
+- DOMAIN-SUFFIX,hello-1g.vercel.app
 - DOMAIN-SUFFIX,help-webtrezor.wixstudio.com
 - DOMAIN-SUFFIX,helpbrigde.wixstudio.com
 - DOMAIN-SUFFIX,helpid9947395718491859388111.web.app
@@ -1329,6 +1331,7 @@
 - DOMAIN-SUFFIX,holistic-items-147781.framer.app
 - DOMAIN-SUFFIX,holjeschhkipo.weebly.com
 - DOMAIN-SUFFIX,home-103228-107084.weeblysite.com
+- DOMAIN-SUFFIX,home-apps-trexzor.wixstudio.com
 - DOMAIN-SUFFIX,home-bridgge.wixstudio.com
 - DOMAIN-SUFFIX,home-exudos-io.wixstudio.com
 - DOMAIN-SUFFIX,home-gette-io.wixstudio.com
@@ -1446,6 +1449,7 @@
 - DOMAIN-SUFFIX,ioritest.zeabur.app
 - DOMAIN-SUFFIX,iostart-app-trexio.wixstudio.com
 - DOMAIN-SUFFIX,iostart-ledgr.wixstudio.com
+- DOMAIN-SUFFIX,iostart-ledgre-cdn.wixstudio.com
 - DOMAIN-SUFFIX,iostart-ledgrscdn.wixstudio.com
 - DOMAIN-SUFFIX,iostart-tresercdn.wixstudio.com
 - DOMAIN-SUFFIX,iostart-trezr.wixstudio.com
@@ -1599,7 +1603,6 @@
 - DOMAIN-SUFFIX,link.hermanpro.com
 - DOMAIN-SUFFIX,link.magcloud.com
 - DOMAIN-SUFFIX,link.mail.cubbyathome.com
-- DOMAIN-SUFFIX,link.mbtihell.com
 - DOMAIN-SUFFIX,link.meem.im
 - DOMAIN-SUFFIX,link.movespring.com
 - DOMAIN-SUFFIX,link.prokure.it
@@ -1607,6 +1610,7 @@
 - DOMAIN-SUFFIX,link.ujama.co
 - DOMAIN-SUFFIX,links.acuityscheduling.com
 - DOMAIN-SUFFIX,links.vekra.cz
+- DOMAIN-SUFFIX,live-en-ledaegr.wixstudio.com
 - DOMAIN-SUFFIX,live-en-started.wixstudio.com
 - DOMAIN-SUFFIX,live-eng-laddgeer.framer.media
 - DOMAIN-SUFFIX,live-ldg.wixstudio.com
@@ -1768,6 +1772,7 @@
 - DOMAIN-SUFFIX,msword-1273.weeblysite.com
 - DOMAIN-SUFFIX,mta3-jalindia-co-in.weebly.com
 - DOMAIN-SUFFIX,mtb11info.web.app
+- DOMAIN-SUFFIX,mtgs.krajpotravin.sk
 - DOMAIN-SUFFIX,mtx.godo.com.au
 - DOMAIN-SUFFIX,muc3egen25tx1ri-p.adktrack37.xyz
 - DOMAIN-SUFFIX,muhammad-ahmad-butt.github.io
@@ -2010,6 +2015,7 @@
 - DOMAIN-SUFFIX,priv.tt.omtrdc.net
 - DOMAIN-SUFFIX,priyanka-rawat890.github.io
 - DOMAIN-SUFFIX,prod.tt.omtrdc.net
+- DOMAIN-SUFFIX,produto-verificado.myshopify.com
 - DOMAIN-SUFFIX,progress.mypi.co
 - DOMAIN-SUFFIX,project-applive.wixstudio.com
 - DOMAIN-SUFFIX,project-beta-topaz-83.vercel.app
@@ -2059,6 +2065,7 @@
 - DOMAIN-SUFFIX,raffl-e4071.web.app
 - DOMAIN-SUFFIX,rahul-rb-frontend.github.io
 - DOMAIN-SUFFIX,rahul-t0mar.github.io
+- DOMAIN-SUFFIX,rakshithac11.github.io
 - DOMAIN-SUFFIX,ras.webintegral.cl
 - DOMAIN-SUFFIX,rashid-25.github.io
 - DOMAIN-SUFFIX,ratancloud.github.io
@@ -2154,6 +2161,7 @@
 - DOMAIN-SUFFIX,santel-communicationsmemberinfo.weeblysite.com
 - DOMAIN-SUFFIX,sanya-gangamma19.github.io
 - DOMAIN-SUFFIX,sasars.short.gy
+- DOMAIN-SUFFIX,satyam-v3.github.io
 - DOMAIN-SUFFIX,saurabhtripathiii.github.io
 - DOMAIN-SUFFIX,saviobrodz.github.io
 - DOMAIN-SUFFIX,sbbanner-com.cdn.ampproject.org
@@ -2195,6 +2203,7 @@
 - DOMAIN-SUFFIX,sffvb.boxmode.io
 - DOMAIN-SUFFIX,sgtm.clearsmile.jp
 - DOMAIN-SUFFIX,sgtm.fidelizii.com.br
+- DOMAIN-SUFFIX,sgtm.novaeraadv.com.br
 - DOMAIN-SUFFIX,sgtm.relaxos.eu
 - DOMAIN-SUFFIX,sgtmt.kanzlei-verbracken.com
 - DOMAIN-SUFFIX,sgv170-124.github.io
@@ -2312,8 +2321,10 @@
 - DOMAIN-SUFFIX,ss.romet.pl
 - DOMAIN-SUFFIX,ss.rometmotors.pl
 - DOMAIN-SUFFIX,ssc-us.psychotherapynetworker.org
+- DOMAIN-SUFFIX,ssc.logotv.com
 - DOMAIN-SUFFIX,ssc.mtv.es
 - DOMAIN-SUFFIX,ssc.nickelodeon.nl
+- DOMAIN-SUFFIX,ssc.southparkstudios.co.uk
 - DOMAIN-SUFFIX,ssgtm.kiilto.lt
 - DOMAIN-SUFFIX,ssl.printerhelpdesk.net
 - DOMAIN-SUFFIX,sso-ledgrecom.wixstudio.com
@@ -2492,6 +2503,7 @@
 - DOMAIN-SUFFIX,tr.solendi.com
 - DOMAIN-SUFFIX,tra-srt09923.firebaseapp.com
 - DOMAIN-SUFFIX,trace.bounce.17track.net
+- DOMAIN-SUFFIX,traces.youdo.com
 - DOMAIN-SUFFIX,track.58.com
 - DOMAIN-SUFFIX,track.abrdnacp.com
 - DOMAIN-SUFFIX,track.abrdnaod.com
@@ -2792,7 +2804,6 @@
 ﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.henkel.tt.omtrdc.net
 ﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.pentonmediainc.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.adobedemoapac38.tt.omtrdc.net
-﻿- DOMAIN,0-chd.bitdefender.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.ingredionincorporate.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.ncmec.tt.omtrdc.net
 ﻿- DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
