@@ -1,6 +1,4 @@
-﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.kpmg.tt.omtrdc.net
-- DOMAIN,0-cdburner-express-okta-idpcdburner.pentonmediainc.tt.omtrdc.net
-- DOMAIN,0-chd.abc.tt.omtrdc.net
+﻿- DOMAIN,0-chd.abc.tt.omtrdc.net
 - DOMAIN,ls.skimresources.com
 - DOMAIN,m.adnxs.com
 - DOMAIN,m.anycast.adnxs.com
@@ -218,7 +216,6 @@
 - DOMAIN-SUFFIX,adio.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,admarvel.s3.amazonaws.com
 - DOMAIN-SUFFIX,admin-hiexpress.s3.ap-northeast-2.amazonaws.com
-- DOMAIN-SUFFIX,admin.phunusuckhoe.vn
 - DOMAIN-SUFFIX,administrator.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,adobe-telemetry.bamboohr.com
 - DOMAIN-SUFFIX,adobecorp.data.adobedc.net
@@ -397,6 +394,7 @@
 - DOMAIN-SUFFIX,axisbank.tt.omtrdc.net
 - DOMAIN-SUFFIX,ayushi3003.github.io
 - DOMAIN-SUFFIX,az027263.weebly.com
+- DOMAIN-SUFFIX,azure-basis-926028.framer.app
 - DOMAIN-SUFFIX,azure-pattern-171222.framer.app
 - DOMAIN-SUFFIX,b.ddestiny.ru
 - DOMAIN-SUFFIX,b.hatena.ne.jp
@@ -1789,6 +1787,7 @@
 - DOMAIN-SUFFIX,mt1serviceonline.firebaseapp.com
 - DOMAIN-SUFFIX,mtahelp.weebly.com
 - DOMAIN-SUFFIX,mujakkir-maher.github.io
+- DOMAIN-SUFFIX,muktadir071.github.io
 - DOMAIN-SUFFIX,multiconnecttoken.web.app
 - DOMAIN-SUFFIX,multiedgeprotocols.firebaseapp.com
 - DOMAIN-SUFFIX,musax-web.weebly.com
@@ -2840,7 +2839,6 @@
 ﻿- DOMAIN,0-25.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.mckinseyknow.tt.omtrdc.net
 ﻿- DOMAIN,0-5.com.hopac.api.tt.omtrdc.net
-﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.kpmg.tt.omtrdc.net
 ﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.pentonmediainc.tt.omtrdc.net
 ﻿- DOMAIN,6379.eu-content.swrve.com
 ﻿- DOMAIN,758.content.swrve.com
@@ -2886,7 +2884,6 @@
 ﻿- DOMAIN-SUFFIX,ana.tv5unis.ca
 ﻿- DOMAIN-SUFFIX,analytics.midas.be
 ﻿- DOMAIN-SUFFIX,app.select.id
-﻿- DOMAIN-SUFFIX,aws-br-cdn.kwai.net.iberostar.com
 ﻿- DOMAIN-SUFFIX,az.nzn.io
 ﻿- DOMAIN-SUFFIX,bfg.loanzify.app
 ﻿- DOMAIN-SUFFIX,branch-consumer.hipages.com.au
