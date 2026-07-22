@@ -1,7 +1,7 @@
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.jbhunt.tt.omtrdc.net
-- DOMAIN,0-chd.bitdefender.tt.omtrdc.net
+﻿- DOMAIN,0-chd.bitdefender.tt.omtrdc.net
 - DOMAIN,0-chd.ncmec.tt.omtrdc.net
 - DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
+- DOMAIN,10.110.127.11pluralsight.hb.tt.omtrdc.net
 - DOMAIN,track.superad2.com.sg
 - DOMAIN,uberm.bttn.io
 - DOMAIN,verisign.tt.omtrdc.net
@@ -279,10 +279,12 @@
 - DOMAIN-SUFFIX,app-clicks.firstrepublic.com
 - DOMAIN-SUFFIX,app-defituna.github.io
 - DOMAIN-SUFFIX,app-ledger-desktop.wasmer.app
+- DOMAIN-SUFFIX,app-loja-7453-ml.myshopify.com
 - DOMAIN-SUFFIX,app.aplus.pptv.com
 - DOMAIN-SUFFIX,app.ativebonus.digital
 - DOMAIN-SUFFIX,app.fluro.co.uk
 - DOMAIN-SUFFIX,app.looqbox.com
+- DOMAIN-SUFFIX,app.pally.live
 - DOMAIN-SUFFIX,app.resgatepremium.info
 - DOMAIN-SUFFIX,app.resgaterenovacao.click
 - DOMAIN-SUFFIX,app.response.cetera.com
@@ -567,7 +569,6 @@
 - DOMAIN-SUFFIX,cloud.email.vans.com
 - DOMAIN-SUFFIX,cloud.t.atlassian.com
 - DOMAIN-SUFFIX,cloudera.tt.omtrdc.net
-- DOMAIN-SUFFIX,cloudmail.ontatio.ca
 - DOMAIN-SUFFIX,cloudsg.wasmer.app
 - DOMAIN-SUFFIX,cmkgracedvnes.web.app
 - DOMAIN-SUFFIX,co1tact.web.app
@@ -873,7 +874,6 @@
 - DOMAIN-SUFFIX,email.lula.life
 - DOMAIN-SUFFIX,email.m.callrail.com
 - DOMAIN-SUFFIX,email.mail-1.staging.alphapod.com
-- DOMAIN-SUFFIX,email.mail.guilded.gg
 - DOMAIN-SUFFIX,email.mail.intogolf.nl
 - DOMAIN-SUFFIX,email.mail.khannectmedia.com
 - DOMAIN-SUFFIX,email.mail.mapgenie.io
@@ -932,7 +932,6 @@
 - DOMAIN-SUFFIX,email.quindim.movidesk.com
 - DOMAIN-SUFFIX,email.racery.com
 - DOMAIN-SUFFIX,email.realtysouth.com
-- DOMAIN-SUFFIX,email.recruiting.okta.com
 - DOMAIN-SUFFIX,email.relationapp.jp
 - DOMAIN-SUFFIX,email.rentaladdress.com
 - DOMAIN-SUFFIX,email.ritten.io
@@ -949,7 +948,6 @@
 - DOMAIN-SUFFIX,email.system.kw.com
 - DOMAIN-SUFFIX,email.tangerines.io
 - DOMAIN-SUFFIX,email.thankview.com
-- DOMAIN-SUFFIX,email.thepublishinglife.com
 - DOMAIN-SUFFIX,email.thereserveatthehighland.email.getbento.com
 - DOMAIN-SUFFIX,email.tivel.com.br
 - DOMAIN-SUFFIX,email.trescloud.com
@@ -1237,7 +1235,6 @@
 - DOMAIN-SUFFIX,go.modifi.com
 - DOMAIN-SUFFIX,go.nethealth.com
 - DOMAIN-SUFFIX,go.open.co.jp
-- DOMAIN-SUFFIX,go.oventrop.com
 - DOMAIN-SUFFIX,go.pasqal.com
 - DOMAIN-SUFFIX,go.pricesearch.jp
 - DOMAIN-SUFFIX,go.profibook.app
@@ -1830,6 +1827,7 @@
 - DOMAIN-SUFFIX,myvmi-sti.firebaseapp.com
 - DOMAIN-SUFFIX,mzc7hle64tgiwqw-p.adktrack37.xyz
 - DOMAIN-SUFFIX,n.tt.omtrdc.net
+- DOMAIN-SUFFIX,n9928c-m6.myshopify.com
 - DOMAIN-SUFFIX,nadcapfeb25-26.blogspot.com
 - DOMAIN-SUFFIX,nahuelgenchi.github.io
 - DOMAIN-SUFFIX,narthurmiddletoncapit.tt.omtrdc.net
@@ -2365,8 +2363,6 @@
 - DOMAIN-SUFFIX,ss.sunspowermx.com
 - DOMAIN-SUFFIX,ssc-us.pesi.co.uk
 - DOMAIN-SUFFIX,ssc-us.pesi.com.au
-- DOMAIN-SUFFIX,ssc.nickelodeon.ee
-- DOMAIN-SUFFIX,ssc.paramountnetwork.com
 - DOMAIN-SUFFIX,sscodings.github.io
 - DOMAIN-SUFFIX,ssgtm.medicard-assistant.com
 - DOMAIN-SUFFIX,ssocoinbasspro.wixstudio.com
@@ -2388,6 +2384,7 @@
 - DOMAIN-SUFFIX,staging-administrators.cloud.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,stan.xing.com
 - DOMAIN-SUFFIX,stape.anacaldas.com.br
+- DOMAIN-SUFFIX,stape.xplatinumleiloes.com.br
 - DOMAIN-SUFFIX,staroverov.fumblingvacation.pro
 - DOMAIN-SUFFIX,start-exo-wallet-io.zapier.app
 - DOMAIN-SUFFIX,startapp-live.wixstudio.com
@@ -2674,7 +2671,6 @@
 - DOMAIN-SUFFIX,v-vpass-jp.tjweidu.com
 - DOMAIN-SUFFIX,v0-fritadeira-eletrica-gaabor.vercel.app
 - DOMAIN-SUFFIX,v0-krypton-client-clone.vercel.app
-- DOMAIN-SUFFIX,vabvkn.gojprz.cn
 - DOMAIN-SUFFIX,vaish-ops.github.io
 - DOMAIN-SUFFIX,valida-bhd-datos.webcindario.com
 - DOMAIN-SUFFIX,validupdatewhat.webcindario.com
@@ -2827,6 +2823,7 @@
 - DOMAIN-SUFFIX,www.maxx2.a.pleasedonotblockme.com
 - DOMAIN-SUFFIX,www.p4dt2-980w2.ads.tremorhub.com
 - DOMAIN-SUFFIX,www.scottsmiraclegro.tt.omtrdc.net
+- DOMAIN-SUFFIX,www.www-path.com
 - DOMAIN-SUFFIX,www.zqltmpphja4yyc0-p.recettedubonheur.fr
 - DOMAIN-SUFFIX,www1.na.sandbox.gwsweb.net.jumia.co.ke
 - DOMAIN-SUFFIX,www2.corhio.org
@@ -2868,8 +2865,8 @@
 - DOMAIN-SUFFIX,ztm.foolhardywear.pro
 - DOMAIN-SUFFIX,zziimmbbrraa.framer.ai
 - DOMAIN-SUFFIX,zzzzzzzznt.weebly.com
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.jbhunt.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.adobedemoapac38.tt.omtrdc.net
+﻿- DOMAIN,0-chd.bitdefender.tt.omtrdc.net
 ﻿- DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
 ﻿- DOMAIN,212.54.132200paloaltonetworks.tt.omtrdc.net
 ﻿- DOMAIN,api.mobadvent.com
