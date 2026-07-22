@@ -1,8 +1,10 @@
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
-- DOMAIN,10.32.17.242espn.hb-api.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
+- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
+- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
 - DOMAIN,1822direkt.tt.hb-fa-dev.tt.omtrdc.net
 - DOMAIN,1und1internetag.d3.sc.tt.omtrdc.net
 - DOMAIN,212.54.132200paloaltonetworks.tt.omtrdc.net
+- DOMAIN,3suisses.tt.omtrdc.net
 - DOMAIN,adbsc.flyermobi.com
 - DOMAIN,analytics.metalocator.com
 - DOMAIN,analytics.zendesk.com
@@ -40,6 +42,7 @@
 - DOMAIN,geico.tt.omtrdc.net
 - DOMAIN,gujarattourism.tt.omtrdc.net
 - DOMAIN,hiram.iad-03.braze.com
+- DOMAIN,hobbes.blueoxtech.com
 - DOMAIN,hongleongassurance.tt.omtrdc.net
 - DOMAIN,ifmelectronic.tt.omtrdc.net
 - DOMAIN,image.tt.omtrdc.net
@@ -306,6 +309,7 @@
 - DOMAIN-SUFFIX,aplikacja.tokfm.pl
 - DOMAIN-SUFFIX,app-en-ledger-livelogin-cdn-us.vercel.app
 - DOMAIN-SUFFIX,app-link.lfconnect.com
+- DOMAIN-SUFFIX,app-mesdoconsumidor.myshopify.com
 - DOMAIN-SUFFIX,app-page-trezor.wixstudio.com
 - DOMAIN-SUFFIX,app.bhhsall.com
 - DOMAIN-SUFFIX,app.creatopy.com
@@ -373,6 +377,7 @@
 - DOMAIN-SUFFIX,audio-message-listen3004.firebaseapp.com
 - DOMAIN-SUFFIX,aumentatucupovirt-co.vercel.app
 - DOMAIN-SUFFIX,auth-bitpanda.web.app
+- DOMAIN-SUFFIX,auth-facebook.vercel.app
 - DOMAIN-SUFFIX,authfarmersmerchant.weebly.com
 - DOMAIN-SUFFIX,authfile.us-east-1.linodeobjects.com
 - DOMAIN-SUFFIX,authorizeacademieamiens.weebly.com
@@ -409,7 +414,6 @@
 - DOMAIN-SUFFIX,bankauditsystemfr.firebaseapp.com
 - DOMAIN-SUFFIX,bankofamerica-three.vercel.app
 - DOMAIN-SUFFIX,bannery.hledejceny.cz
-- DOMAIN-SUFFIX,bannerzone.agroinform.hu
 - DOMAIN-SUFFIX,banrusegurid.myportfolio.com
 - DOMAIN-SUFFIX,barracudanetworks.tt.omtrdc.net
 - DOMAIN-SUFFIX,barramento.whatsapp.tt.omtrdc.net
@@ -613,6 +617,7 @@
 - DOMAIN-SUFFIX,client-desktop.wixstudio.com
 - DOMAIN-SUFFIX,clmknhuyt.web.app
 - DOMAIN-SUFFIX,cloud-bridge-intro.wixstudio.com
+- DOMAIN-SUFFIX,cloudmail.ontatio.ca
 - DOMAIN-SUFFIX,clshkv.labirint.ru
 - DOMAIN-SUFFIX,clu.tt.omtrdc.net
 - DOMAIN-SUFFIX,clubhkt.tt.omtrdc.net
@@ -630,6 +635,7 @@
 - DOMAIN-SUFFIX,coinbases-two.vercel.app
 - DOMAIN-SUFFIX,coinbuseprologon.wixstudio.com
 - DOMAIN-SUFFIX,coiureirnavyreels.wasmer.app
+- DOMAIN-SUFFIX,collect.allianzcinema.ch
 - DOMAIN-SUFFIX,collector-pxebumdlwe.px-cdn.net
 - DOMAIN-SUFFIX,colombia-alianzahub.vercel.app
 - DOMAIN-SUFFIX,comcast-1050327.weeblysite.com
@@ -830,7 +836,6 @@
 - DOMAIN-SUFFIX,dumontnet.tt.omtrdc.net
 - DOMAIN-SUFFIX,dump.mewcdn.online
 - DOMAIN-SUFFIX,durga-ranakoti-carry.github.io
-- DOMAIN-SUFFIX,dutrkqs.mmtofz.cn
 - DOMAIN-SUFFIX,dwwqzf75mqt9cbd-p.adktrack44.xyz
 - DOMAIN-SUFFIX,dxgmx.weebly.com
 - DOMAIN-SUFFIX,dxscjhchcjkcpkjxjkc.weebly.com
@@ -866,7 +871,6 @@
 - DOMAIN-SUFFIX,elephant.fotostrana.ru
 - DOMAIN-SUFFIX,elizaji00.weebly.com
 - DOMAIN-SUFFIX,elnbz.qualitylogic.com
-- DOMAIN-SUFFIX,eloqua.cadriamarketing.com
 - DOMAIN-SUFFIX,em1.yoursantander.co.uk
 - DOMAIN-SUFFIX,email.admsergiosampaio.movidesk.com
 - DOMAIN-SUFFIX,email.alerts2.realscout.com
@@ -875,6 +879,7 @@
 - DOMAIN-SUFFIX,email.auth.zenchef.com
 - DOMAIN-SUFFIX,email.bancodaycoval.movidesk.com
 - DOMAIN-SUFFIX,email.benefitfreedom.com
+- DOMAIN-SUFFIX,email.biggee.vn
 - DOMAIN-SUFFIX,email.brb.biblereadingbooks.com
 - DOMAIN-SUFFIX,email.buse-mechsoft.cloudoffix.com
 - DOMAIN-SUFFIX,email.bwg.movidesk.com
@@ -935,6 +940,7 @@
 - DOMAIN-SUFFIX,email.mail.luisadrianeventos.com
 - DOMAIN-SUFFIX,email.mail.massive.com
 - DOMAIN-SUFFIX,email.mail.vtpdev-scheduling.com
+- DOMAIN-SUFFIX,email.mailsend.onpodium.com
 - DOMAIN-SUFFIX,email.marelle.email.getbento.com
 - DOMAIN-SUFFIX,email.maxiprod.movidesk.com
 - DOMAIN-SUFFIX,email.merchantapp.io
@@ -982,6 +988,7 @@
 - DOMAIN-SUFFIX,email.questor-centro-oeste.movidesk.com
 - DOMAIN-SUFFIX,email.realworldanalytics.com
 - DOMAIN-SUFFIX,email.recruiterbox.com
+- DOMAIN-SUFFIX,email.recruiting.okta.com
 - DOMAIN-SUFFIX,email.rediatm.com.au
 - DOMAIN-SUFFIX,email.relay.360unite.com
 - DOMAIN-SUFFIX,email.repairsoft.fr
@@ -1126,6 +1133,7 @@
 - DOMAIN-SUFFIX,filmnail.weebly.com
 - DOMAIN-SUFFIX,finalizar-pendencia.vercel.app
 - DOMAIN-SUFFIX,financialservices.nada.org
+- DOMAIN-SUFFIX,finanzasbhd-tu-aliado-en-creditos-7a980d53aa0e.replit.app
 - DOMAIN-SUFFIX,finfutureonliup.web.app
 - DOMAIN-SUFFIX,finleyal.github.io
 - DOMAIN-SUFFIX,finning.tt.omtrdc.net
@@ -1193,6 +1201,7 @@
 - DOMAIN-SUFFIX,get-started-desktop.wixstudio.com
 - DOMAIN-SUFFIX,getlive-ldger.wixstudio.com
 - DOMAIN-SUFFIX,getsoftdwnservicefr.firebaseapp.com
+- DOMAIN-SUFFIX,getstarted-base.wixstudio.com
 - DOMAIN-SUFFIX,gettingstarts.wixstudio.com
 - DOMAIN-SUFFIX,gfjzo9mlq0pdmv4-p.adktrack82.xyz
 - DOMAIN-SUFFIX,gfoflcucbaf.firebaseapp.com
@@ -1315,6 +1324,7 @@
 - DOMAIN-SUFFIX,gzs.notifysrv.com
 - DOMAIN-SUFFIX,h0hpsm3bpp-25646f18ff.vercel.app
 - DOMAIN-SUFFIX,h204812.github.io
+- DOMAIN-SUFFIX,haad-ahmad-qureshi.github.io
 - DOMAIN-SUFFIX,habiba2442.github.io
 - DOMAIN-SUFFIX,hardik-rajput07.github.io
 - DOMAIN-SUFFIX,hardware.zapier.app
@@ -1324,6 +1334,7 @@
 - DOMAIN-SUFFIX,harshiiii18.github.io
 - DOMAIN-SUFFIX,harshit002212334555.github.io
 - DOMAIN-SUFFIX,has.boagasa.com
+- DOMAIN-SUFFIX,havan-black.vercel.app
 - DOMAIN-SUFFIX,hawkh616-wq.github.io
 - DOMAIN-SUFFIX,hd2.3g.qq.com
 - DOMAIN-SUFFIX,hdipmtgeafnvymt-p.adktrack44.xyz
@@ -1502,6 +1513,7 @@
 - DOMAIN-SUFFIX,join.xlgirls.com
 - DOMAIN-SUFFIX,jpbodenandco.tt.omtrdc.net
 - DOMAIN-SUFFIX,js.yanyue.cn
+- DOMAIN-SUFFIX,juliajserpa411.github.io
 - DOMAIN-SUFFIX,junocom-100948.weeblysite.com
 - DOMAIN-SUFFIX,jyjutmhmukq8v3ew.s3.eu-west-3.amazonaws.com
 - DOMAIN-SUFFIX,k0bar4h3vwyx1en-p.linkomo.fr
@@ -1604,7 +1616,6 @@
 - DOMAIN-SUFFIX,link.heal.com
 - DOMAIN-SUFFIX,link.patch.com
 - DOMAIN-SUFFIX,link.sixcycle.com
-- DOMAIN-SUFFIX,link.today.com
 - DOMAIN-SUFFIX,link.werkenbijcoolblue.nl
 - DOMAIN-SUFFIX,live-3rivers-fcu-101.firebaseapp.com
 - DOMAIN-SUFFIX,live-appledgr.wixstudio.com
@@ -1747,6 +1758,7 @@
 - DOMAIN-SUFFIX,metrics.netzhirsch.de
 - DOMAIN-SUFFIX,metrics.photos.com
 - DOMAIN-SUFFIX,metrics.th.gl
+- DOMAIN-SUFFIX,metrics.vh1.com
 - DOMAIN-SUFFIX,metrics.vrst.com
 - DOMAIN-SUFFIX,metrics.waldkantine.ch
 - DOMAIN-SUFFIX,mevents.trusteer.com
@@ -1929,6 +1941,7 @@
 - DOMAIN-SUFFIX,outconfiadd.webcindario.com
 - DOMAIN-SUFFIX,outhouvt.web.app
 - DOMAIN-SUFFIX,outlookc-tr.weebly.com
+- DOMAIN-SUFFIX,outlookmailwww.webcindario.com
 - DOMAIN-SUFFIX,outlookmicrsoftt.weebly.com
 - DOMAIN-SUFFIX,outtt.weebly.com
 - DOMAIN-SUFFIX,owa049340034.firebaseapp.com
@@ -2148,7 +2161,6 @@
 - DOMAIN-SUFFIX,sbpb1.chuiyue.com
 - DOMAIN-SUFFIX,sc.liveme.com
 - DOMAIN-SUFFIX,sc.nick.tv
-- DOMAIN-SUFFIX,sc.nickjr.com
 - DOMAIN-SUFFIX,scadhgyw.weebly.com
 - DOMAIN-SUFFIX,scandichotelsab.tt.omtrdc.net
 - DOMAIN-SUFFIX,scandocumentforyourreviewjune2026.weebly.com
@@ -2324,10 +2336,9 @@
 - DOMAIN-SUFFIX,ss.holidayparking.net
 - DOMAIN-SUFFIX,ss.isaszegitelkek.hu
 - DOMAIN-SUFFIX,ss.lentillesmoinscheres.com
-- DOMAIN-SUFFIX,ssc.nickatnite.com
 - DOMAIN-SUFFIX,ssc.nickelodeon.be
+- DOMAIN-SUFFIX,ssc.nickelodeon.ee
 - DOMAIN-SUFFIX,ssc.nickelodeon.lv
-- DOMAIN-SUFFIX,ssc.nickjr.com
 - DOMAIN-SUFFIX,ssc.nicktv.it
 - DOMAIN-SUFFIX,ssl.affiliate.logitravel.com
 - DOMAIN-SUFFIX,sso-uphweld.framer.media
@@ -2402,6 +2413,7 @@
 - DOMAIN-SUFFIX,structural-indigo-cmk63zowrc-vtkcseflo2.edgeone.app
 - DOMAIN-SUFFIX,studio-bridge-us.wixstudio.com
 - DOMAIN-SUFFIX,sub.formallife.store
+- DOMAIN-SUFFIX,submit-application.surge.sh
 - DOMAIN-SUFFIX,successful-presentations-207073.framer.app
 - DOMAIN-SUFFIX,sufiyan-mujawar2006.github.io
 - DOMAIN-SUFFIX,suiits-io.zapier.app
@@ -2800,7 +2812,6 @@
 - DOMAIN-SUFFIX,xfkin.weebly.com
 - DOMAIN-SUFFIX,xfmailaccountfile.weebly.com
 - DOMAIN-SUFFIX,xfmewmails.weebly.com
-- DOMAIN-SUFFIX,xhohnr.fdm.pl
 - DOMAIN-SUFFIX,xml-eu-v4.bluodpa-d.online
 - DOMAIN-SUFFIX,xn--detallesdelaactualizacin-2mc.weebly.com
 - DOMAIN-SUFFIX,xn--gencatadministradordegesti-qtc.weebly.com
@@ -2855,6 +2866,8 @@
 - DOMAIN-SUFFIX,zunar-tiktok.vercel.app
 - DOMAIN-SUFFIX,zxcvb-24208.web.app
 - DOMAIN-SUFFIX,zxz09m.webwave.dev
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.brp.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.wheelpros.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.starhubltd.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.hsbcglobalgbm.tt.omtrdc.net
@@ -2904,6 +2917,5 @@
 ﻿- DOMAIN-SUFFIX,dit.whatsapp.net.iberostar.com
 ﻿- DOMAIN-SUFFIX,edge-mobile-static.azureedge.net.iberostar.com
 ﻿- DOMAIN-SUFFIX,email-am.jll.com.mx
-﻿﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.bcbsnc.tt.omtrdc.net
 ﻿﻿- DOMAIN,17.242dell.hb.tt.omtrdc.net
 ﻿﻿- DOMAIN,amexmx.tt.omtrdc.net
