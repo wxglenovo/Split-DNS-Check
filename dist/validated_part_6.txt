@@ -341,6 +341,7 @@
 - DOMAIN,garena2.petplan.tt.omtrdc.net
 - DOMAIN,gateway-cus-acc.dteenergy.tt.omtrdc.net
 - DOMAIN,gateway-ui-staging.peoplesunitedbank.tt.omtrdc.net
+- DOMAIN,gateway.union.genuinepartscompany.tt.omtrdc.net
 - DOMAIN,gcesg.tt-qe2.omtrdc.net
 - DOMAIN,gcore-sbx-gsso02.accountausflphdisp01-vip.tt-qe2.omtrdc.net
 - DOMAIN,gcssmc-tri.tt.omtrdc.net
@@ -660,6 +661,7 @@
 - DOMAIN,v9.duluthtrading.tt.omtrdc.net
 - DOMAIN,va801685.account2enipr.tt-stage1.omtrdc.net
 - DOMAIN,vaping-stg.tt.tt.omtrdc.net
+- DOMAIN,vauban6go.tt.omtrdc.net
 - DOMAIN,vault.asp.getaws.tt.omtrdc.net
 - DOMAIN,vault22.awscmhinfra2.k8s.tt.omtrdc.net
 - DOMAIN,vdemetrx.usertesting.tt.omtrdc.net
@@ -1097,7 +1099,6 @@
 - DOMAIN-SUFFIX,7bu2q873nunrejva.s3.eu-west-3.amazonaws.com
 - DOMAIN-SUFFIX,8009smipjtxuqmjjarficwgd-b2ffcjb5b4dehpf8.z03.azurefd.net
 - DOMAIN-SUFFIX,8273501.fls.doubleclick.net
-- DOMAIN-SUFFIX,84029188ab.339f59c980.com
 - DOMAIN-SUFFIX,8800chrtrtwc.weebly.com
 - DOMAIN-SUFFIX,89044.weebly.com
 - DOMAIN-SUFFIX,8gmvynlab.cc.rs6.net
@@ -1154,7 +1155,6 @@
 - DOMAIN-SUFFIX,actubnpffrteois.firebaseapp.com
 - DOMAIN-SUFFIX,acumb0z7adw9mnh-c.linkomo.fr
 - DOMAIN-SUFFIX,ad-1258444056.cos.accelerate.myqcloud.com
-- DOMAIN-SUFFIX,ad.cooks.com
 - DOMAIN-SUFFIX,ad.nachtagenten.de
 - DOMAIN-SUFFIX,ad.qanda.ai
 - DOMAIN-SUFFIX,ad.tt.omtrdc.net
@@ -1615,6 +1615,7 @@
 - DOMAIN-SUFFIX,click.research.stubhub.com
 - DOMAIN-SUFFIX,clickmail.stubhub.com
 - DOMAIN-SUFFIX,client.botchk.net
+- DOMAIN-SUFFIX,client.sexchatters.com
 - DOMAIN-SUFFIX,clientvolgsysteem.tt.omtrdc.net
 - DOMAIN-SUFFIX,clk.onet.pl
 - DOMAIN-SUFFIX,cloud-23526.firebaseapp.com
@@ -2124,7 +2125,6 @@
 - DOMAIN-SUFFIX,email.lead-queue.com
 - DOMAIN-SUFFIX,email.lesmillsplus.com
 - DOMAIN-SUFFIX,email.lobtec.movidesk.com
-- DOMAIN-SUFFIX,email.locked.hu
 - DOMAIN-SUFFIX,email.logicasolucoes.com.br
 - DOMAIN-SUFFIX,email.lomarsen.shop
 - DOMAIN-SUFFIX,email.m2data.movidesk.com
@@ -3925,9 +3925,7 @@
 - DOMAIN-SUFFIX,srtcontiubencorrect.weebly.com
 - DOMAIN-SUFFIX,ss-jupter.wixstudio.com
 - DOMAIN-SUFFIX,ss.koernerbude.de
-- DOMAIN-SUFFIX,ssc.mtv.nl
 - DOMAIN-SUFFIX,ssc.mundonick.com.br
-- DOMAIN-SUFFIX,ssc.nick.de
 - DOMAIN-SUFFIX,ssl.secureinvestingonline.com
 - DOMAIN-SUFFIX,ssocoinbsae.wixstudio.com
 - DOMAIN-SUFFIX,ssomycoinbasepro.wixstudio.com
@@ -3955,7 +3953,6 @@
 - DOMAIN-SUFFIX,staging-proxy-stg.cloud.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,stape.digitalguru.sk
 - DOMAIN-SUFFIX,stape.fluencypass.com
-- DOMAIN-SUFFIX,stape.raafahbd.com
 - DOMAIN-SUFFIX,stape.visation.ai
 - DOMAIN-SUFFIX,starrtio-trzore.wixstudio.com
 - DOMAIN-SUFFIX,startapp-eng.wixstudio.com
@@ -4253,7 +4250,6 @@
 - DOMAIN-SUFFIX,trezrorhome.wixstudio.com
 - DOMAIN-SUFFIX,trezuroisuite.m-pages.com
 - DOMAIN-SUFFIX,trezurs-logon.wixstudio.com
-- DOMAIN-SUFFIX,trezurstrt-io.framer.ai
 - DOMAIN-SUFFIX,trgfx.b-cdn.net
 - DOMAIN-SUFFIX,trial.aria.tt.omtrdc.net
 - DOMAIN-SUFFIX,trialloughton.tt.omtrdc.net
@@ -4507,6 +4503,7 @@
 - DOMAIN-SUFFIX,varta.caats-stage.tt.omtrdc.net
 - DOMAIN-SUFFIX,varunnachimuthu-s.github.io
 - DOMAIN-SUFFIX,vas-api-dev.tt-qe-ci1.omtrdc.net
+- DOMAIN-SUFFIX,vauban7gg.tt.omtrdc.net
 - DOMAIN-SUFFIX,vault-fiserv-emea.tt-qe5.omtrdc.net
 - DOMAIN-SUFFIX,vault-non-prod.accountchef-api-backup-s3-cache-production.tt.omtrdc.net
 - DOMAIN-SUFFIX,vault-pr.accountbackup-v2.tt-stage-ci1.omtrdc.net
@@ -4737,6 +4734,7 @@
 - DOMAIN-SUFFIX,wpqu.weebly.com
 - DOMAIN-SUFFIX,ws-kirsch.tt.omtrdc.net
 - DOMAIN-SUFFIX,ws-s29-shared.accountalpha-s3-chef-status-stagingdefaultproduction.tt-stage3.omtrdc.net
+- DOMAIN-SUFFIX,ws-timelines.tt-qe-ci1.omtrdc.net
 - DOMAIN-SUFFIX,ws.accountchef-api-backup-s3-cache-production.tt.omtrdc.net
 - DOMAIN-SUFFIX,wssdddddwwws.framer.website
 - DOMAIN-SUFFIX,wssgmstats.vibbo.com
@@ -4986,6 +4984,7 @@
 - DOMAIN-SUFFIX,zoomdvo57mrt.tt.omtrdc.net
 - DOMAIN-SUFFIX,zoomhkn8mmr.net.mydays.de
 - DOMAIN-SUFFIX,zoomhyn225mmr.hk.tt.omtrdc.net
+- DOMAIN-SUFFIX,zoomny14zc.tt.omtrdc.net
 - DOMAIN-SUFFIX,zoomnyc211mmr.tt.omtrdc.net
 - DOMAIN-SUFFIX,zoomnyg234mrt.tt.omtrdc.net
 - DOMAIN-SUFFIX,zoomnyn136tg.ny.tt.omtrdc.net
@@ -5019,6 +5018,8 @@
 ﻿- DOMAIN,accounts-metrics.hb.tt.omtrdc.net
 ﻿- DOMAIN,acdn.adnxs.com
 ﻿- DOMAIN,adobedemoamericas94.tt.omtrdc.net
+﻿- DOMAIN,aetv.hb.tt.omtrdc.net
+﻿- DOMAIN,aetvly.hb.tt.omtrdc.net
 ﻿- DOMAIN,audible.tt.omtrdc.net
 ﻿- DOMAIN,autocalisia-maruszak-2.tt.omtrdc.net
 ﻿- DOMAIN,avivasingapore.tt.omtrdc.net
