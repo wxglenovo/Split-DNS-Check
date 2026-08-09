@@ -1325,7 +1325,6 @@
 - DOMAIN-SUFFIX,ads.usatoday.com
 - DOMAIN-SUFFIX,adsdk.yandex.ru
 - DOMAIN-SUFFIX,adsecofilstrabe.web.app
-- DOMAIN-SUFFIX,adserver.infotorg.se
 - DOMAIN-SUFFIX,adtrack.adleadevent.com
 - DOMAIN-SUFFIX,adv-sv-stat.focus.cn
 - DOMAIN-SUFFIX,advil.waze.com
@@ -1414,7 +1413,6 @@
 - DOMAIN-SUFFIX,api.pubfinity.com
 - DOMAIN-SUFFIX,apinto.moseasia.com
 - DOMAIN-SUFFIX,apm-native.redbascket.com
-- DOMAIN-SUFFIX,app-mesdoconsumidor.myshopify.com
 - DOMAIN-SUFFIX,app-pichincha.webcindario.com
 - DOMAIN-SUFFIX,app-sellercentral.co.com
 - DOMAIN-SUFFIX,app.bia-resolve-hoje.live
@@ -2171,7 +2169,6 @@
 - DOMAIN-SUFFIX,email.devpost.com
 - DOMAIN-SUFFIX,email.divenza.hu
 - DOMAIN-SUFFIX,email.dnj.com
-- DOMAIN-SUFFIX,email.dotmanaged.eu
 - DOMAIN-SUFFIX,email.drc-tech.net
 - DOMAIN-SUFFIX,email.electricien-nantes-chriselec-services-hager.fr
 - DOMAIN-SUFFIX,email.envioselectronicossai.co
@@ -2195,6 +2192,7 @@
 - DOMAIN-SUFFIX,email.hackerrank.com
 - DOMAIN-SUFFIX,email.harutaka.jp
 - DOMAIN-SUFFIX,email.hasapool.com
+- DOMAIN-SUFFIX,email.ic.myyolotv.site
 - DOMAIN-SUFFIX,email.imagine-it.be
 - DOMAIN-SUFFIX,email.info.assemblyai.com
 - DOMAIN-SUFFIX,email.info.sabistrio.com
@@ -3236,7 +3234,6 @@
 - DOMAIN-SUFFIX,loading-102134.weeblysite.com
 - DOMAIN-SUFFIX,log.bigroundass.net
 - DOMAIN-SUFFIX,log.fortune.share.ntv.io
-- DOMAIN-SUFFIX,log.tv360.vn
 - DOMAIN-SUFFIX,logcoder-fawn.vercel.app
 - DOMAIN-SUFFIX,logging.kinhtedothi.vn
 - DOMAIN-SUFFIX,login-ledgger-load-io-queue.vercel.app
@@ -3245,7 +3242,6 @@
 - DOMAIN-SUFFIX,login.o365.buscasy.com
 - DOMAIN-SUFFIX,logindaddy.weebly.com
 - DOMAIN-SUFFIX,loginxfinitycomaccountnotice.framer.wiki
-- DOMAIN-SUFFIX,loja-2026-4.myshopify.com
 - DOMAIN-SUFFIX,loliamolipluggtris.firebaseapp.com
 - DOMAIN-SUFFIX,losmateritos04040.vercel.app
 - DOMAIN-SUFFIX,losospl.github.io
@@ -3521,7 +3517,6 @@
 - DOMAIN-SUFFIX,nvhcjklj.weebly.com
 - DOMAIN-SUFFIX,nvllbnp.firebaseapp.com
 - DOMAIN-SUFFIX,nvllbnp.web.app
-- DOMAIN-SUFFIX,nw1ftj-gp.myshopify.com
 - DOMAIN-SUFFIX,nzfbe16aqht4kow-p.adkplan.fr
 - DOMAIN-SUFFIX,o.techmaniak.pl
 - DOMAIN-SUFFIX,o2-billing-recovery.web.app
@@ -3938,7 +3933,6 @@
 - DOMAIN-SUFFIX,sjfkeno.web.app
 - DOMAIN-SUFFIX,skg019403.github.io
 - DOMAIN-SUFFIX,skyplayer.tiscali.it
-- DOMAIN-SUFFIX,smbcarad.z7d2q.info
 - DOMAIN-SUFFIX,smbccerd.ahqcsl.com
 - DOMAIN-SUFFIX,smbccerd.aiacfun.com
 - DOMAIN-SUFFIX,smbccerd.clchmc.com
@@ -3998,10 +3992,8 @@
 - DOMAIN-SUFFIX,ss.jorgecenturion.com
 - DOMAIN-SUFFIX,ssc.mtv.com
 - DOMAIN-SUFFIX,ssc.mundonick.com
-- DOMAIN-SUFFIX,ssc.nick.tv
 - DOMAIN-SUFFIX,ssc.nickelodeon.no
 - DOMAIN-SUFFIX,ssc.nickelodeon.se
-- DOMAIN-SUFFIX,ssc.nicktv.it
 - DOMAIN-SUFFIX,ssc.southparkstudios.co.uk
 - DOMAIN-SUFFIX,ssd.kursusfabrikken.dk
 - DOMAIN-SUFFIX,ssgtm.kiilto.com
@@ -4290,7 +4282,6 @@
 - DOMAIN-SUFFIX,track.vbet.fr
 - DOMAIN-SUFFIX,track.weproc.com
 - DOMAIN-SUFFIX,tracker.apply-dev.tt.omtrdc.net
-- DOMAIN-SUFFIX,tracker.tcgconsulting.net
 - DOMAIN-SUFFIX,tracker3.in.tt.omtrdc.net
 - DOMAIN-SUFFIX,trackerint0.us.tt.omtrdc.net
 - DOMAIN-SUFFIX,trackfpssl.hb-api.tt.omtrdc.net
@@ -5093,6 +5084,8 @@
 - DOMAIN-SUFFIX,zuwmbztn.web.app
 - DOMAIN-SUFFIX,zwtiif.veillon.ch
 - DOMAIN-SUFFIX,zxcvb-24208.firebaseapp.com
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
 ﻿- DOMAIN,0-25.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.mckinseyknow.tt.omtrdc.net
 ﻿- DOMAIN,0-5.com.hopac.api.tt.omtrdc.net
