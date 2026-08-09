@@ -1,6 +1,4 @@
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
-- DOMAIN,1353.api.swrve.com
+﻿- DOMAIN,1353.api.swrve.com
 - DOMAIN,13923.tt.omtrdc.net
 - DOMAIN,169470542021452.tt.omtrdc.net
 - DOMAIN,2fopservicesltdmboxedge37-02.tt.omtrdc.net
@@ -124,6 +122,7 @@
 - DOMAIN,eaw8de.tt.omtrdc.net
 - DOMAIN,ec2-52-91-178-92.tt-stage1.omtrdc.net
 - DOMAIN,ec2-54-82-9-216.tt-qe5.omtrdc.net
+- DOMAIN,echo-flight.awscmhqa.k8s.tt.omtrdc.net
 - DOMAIN,echo-roseanne.citizensbank.tt.omtrdc.net
 - DOMAIN,echosystem-qat.lib-test.lib.tt.omtrdc.net
 - DOMAIN,ecklers.cuna.tt.omtrdc.net
@@ -203,6 +202,7 @@
 - DOMAIN,emeaic-emea.eu.tt.omtrdc.net
 - DOMAIN,emeffsee.tt.omtrdc.net
 - DOMAIN,emergo5.tt.omtrdc.net
+- DOMAIN,emft-dev.tt-qe5.omtrdc.net
 - DOMAIN,emft1.test.tt.omtrdc.net
 - DOMAIN,eml.cbp21.tt.omtrdc.net
 - DOMAIN,emmelk.trustmarknational.tt.omtrdc.net
@@ -555,6 +555,7 @@
 - DOMAIN,mmspdistribe.n-tvgo.tt.omtrdc.net
 - DOMAIN,nx-kt6crg7t.tt.omtrdc.net
 - DOMAIN,opentable.tt.omtrdc.net
+- DOMAIN,otsukacorporation-mboxedge37-02.tt.omtrdc.net
 - DOMAIN,owenscorning-mboxedge37-02.tt.omtrdc.net
 - DOMAIN,rogerscommunicaitonp-mmspdistribe.tt.omtrdc.net
 - DOMAIN,selectquote-mboxedge37-02.tt.omtrdc.net
@@ -973,6 +974,7 @@
 - DOMAIN,workfront-dev-aws-prod.tt.omtrdc.net
 - DOMAIN,workplacehr.tt-qe-ci1.omtrdc.net
 - DOMAIN,workshop12.tt.omtrdc.net
+- DOMAIN,wpcu.ca.ssl.sc.tt.omtrdc.net
 - DOMAIN,wpdemo2.tt.omtrdc.net
 - DOMAIN,ws-api-platform.tt-stage3.omtrdc.net
 - DOMAIN,ws-etstabil2.smile.tt.omtrdc.net
@@ -1287,7 +1289,6 @@
 - DOMAIN-SUFFIX,4795556.notify6.com
 - DOMAIN-SUFFIX,4832634.notify6.com
 - DOMAIN-SUFFIX,4882844.notify6.com
-- DOMAIN-SUFFIX,48cv80-xk.myshopify.com
 - DOMAIN-SUFFIX,4sesor14d3cuenta.webcindario.com
 - DOMAIN-SUFFIX,5110f56bf0.c3a36bbaca.com
 - DOMAIN-SUFFIX,567898765tyutryuj.weeblysite.com
@@ -1373,7 +1374,6 @@
 - DOMAIN-SUFFIX,ads-server.mxplay.com
 - DOMAIN-SUFFIX,ads-verification-for-pay.vercel.app
 - DOMAIN-SUFFIX,ads.orbi.kr
-- DOMAIN-SUFFIX,ads.phunusuckhoe.vn
 - DOMAIN-SUFFIX,ads.sift.co.uk
 - DOMAIN-SUFFIX,ads.smartclick.com
 - DOMAIN-SUFFIX,adserve.ph
@@ -2301,6 +2301,7 @@
 - DOMAIN-SUFFIX,email.mg.flashframe.io
 - DOMAIN-SUFFIX,email.mg.getrapl.com
 - DOMAIN-SUFFIX,email.mg.lenovoleap.com
+- DOMAIN-SUFFIX,email.mg.qwinky.com
 - DOMAIN-SUFFIX,email.mg.select-essentials.co.uk
 - DOMAIN-SUFFIX,email.mg.urbyo.com
 - DOMAIN-SUFFIX,email.mg.vikey.it
@@ -2567,6 +2568,7 @@
 - DOMAIN-SUFFIX,feappdv01.tt.omtrdc.net
 - DOMAIN-SUFFIX,feature-gd.feature-pc4.tt.omtrdc.net
 - DOMAIN-SUFFIX,featurechangewidgetloadingicon.tt-qe5.omtrdc.net
+- DOMAIN-SUFFIX,feb-mboxedge38-02.tt.omtrdc.net
 - DOMAIN-SUFFIX,fedex.tt.omtrdc.net
 - DOMAIN-SUFFIX,fedtel-webmail-info.weeblysite.com
 - DOMAIN-SUFFIX,feedback.market.se
@@ -3491,6 +3493,7 @@
 - DOMAIN-SUFFIX,mlsqha.color4care.fi
 - DOMAIN-SUFFIX,mlv465778p0.web.app
 - DOMAIN-SUFFIX,mm-devices-deletion-form.firebaseapp.com
+- DOMAIN-SUFFIX,mmspdistribe.caller.tt.omtrdc.net
 - DOMAIN-SUFFIX,mmspdistriberakutenhensei.tt.omtrdc.net
 - DOMAIN-SUFFIX,mmustafanazeer22-cmd.github.io
 - DOMAIN-SUFFIX,mobile-answers-605858.framer.app
@@ -4231,7 +4234,6 @@
 - DOMAIN-SUFFIX,step2-9f5d0.firebaseapp.com
 - DOMAIN-SUFFIX,step2-9f5d0.web.app
 - DOMAIN-SUFFIX,stepp16-52ee1.web.app
-- DOMAIN-SUFFIX,stingcool-com.myshopify.com
 - DOMAIN-SUFFIX,stitch-pb-helm-lyric.s3.ap-southeast-2.amazonaws.com
 - DOMAIN-SUFFIX,stjude.tt.omtrdc.net
 - DOMAIN-SUFFIX,stonesriverpm.us-southeast-1.linodeobjects.com
@@ -4379,7 +4381,6 @@
 - DOMAIN-SUFFIX,toaxq311.tt.omtrdc.net
 - DOMAIN-SUFFIX,toc11.tt.omtrdc.net
 - DOMAIN-SUFFIX,tock.weg.plus
-- DOMAIN-SUFFIX,today.vuer.net
 - DOMAIN-SUFFIX,tofian-pl.tt.omtrdc.net
 - DOMAIN-SUFFIX,tokan-top.tt.omtrdc.net
 - DOMAIN-SUFFIX,tola-guape.web.app
@@ -4781,7 +4782,6 @@
 - DOMAIN-SUFFIX,voucherbomb.tt.omtrdc.net
 - DOMAIN-SUFFIX,vouchers-be-at-nl.forum.forum.tt.omtrdc.net
 - DOMAIN-SUFFIX,voxxxdebitpayment.weebly.com
-- DOMAIN-SUFFIX,vpbank.appvest.vn
 - DOMAIN-SUFFIX,vpn.env3.cyber.cyber.tt.omtrdc.net
 - DOMAIN-SUFFIX,vpn221091.tt.omtrdc.net
 - DOMAIN-SUFFIX,vpn23.tsa.tt.omtrdc.net
@@ -5171,7 +5171,6 @@
 - DOMAIN-SUFFIX,zyjqtjoynf.76adobecorp.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,zziimmbbrraa.framer.ai
 - DOMAIN-SUFFIX,zzzzzzzznt.weebly.com
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
 ﻿- DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
 ﻿- DOMAIN,212.54.132200paloaltonetworks.tt.omtrdc.net
