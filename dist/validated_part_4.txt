@@ -197,6 +197,7 @@
 - DOMAIN,eps-bastion.suntrust.tt.omtrdc.net
 - DOMAIN,epsilon-107-159.tt.omtrdc.net
 - DOMAIN,epsilon-110-242.tt.omtrdc.net
+- DOMAIN,epsilon-118-188.tt.omtrdc.net
 - DOMAIN,eric-staging.ns.tt.omtrdc.net
 - DOMAIN,ernestjonesmboxedge37-02.tt.omtrdc.net
 - DOMAIN,es-vis.tt-stage3.omtrdc.net
@@ -952,7 +953,6 @@
 - DOMAIN,ymq01.aeroviasdelcontinent.tt.omtrdc.net
 - DOMAIN,ymq02.makemytrip.tt.omtrdc.net
 - DOMAIN,yogurgriego.tt.omtrdc.net
-- DOMAIN,yunzhihui.tt-stage-ci1.omtrdc.net
 - DOMAIN,z-gautamsbrahma.citizensbank.tt.omtrdc.net
 - DOMAIN,z.assetsfree-uatadmin1careers-new.hb-api.tt.omtrdc.net
 - DOMAIN,zammad.tt.omtrdc.net
@@ -972,7 +972,6 @@
 - DOMAIN,zlp11511.tt-qe2.omtrdc.net
 - DOMAIN,zlp11512.tt-qe2.omtrdc.net
 - DOMAIN,zlp17840.accountacceptatie-db2-corp.tt-stage3.omtrdc.net
-- DOMAIN,zlp22150.tt-qe5.omtrdc.net
 - DOMAIN,zlp25046.tt-qe5.omtrdc.net
 - DOMAIN,zlp26443.tt-qe-ci1.omtrdc.net
 - DOMAIN,zlp35623.tt-stage1.omtrdc.net
@@ -990,7 +989,6 @@
 - DOMAIN,zoomdvc105mmr.tt.omtrdc.net
 - DOMAIN,zoomdvc199mmr.tt.omtrdc.net
 - DOMAIN,zoomdvg144aiapp.tt.omtrdc.net
-- DOMAIN,zoomdvm110mmr.tt-qe-ci1.omtrdc.net
 - DOMAIN,zoomdvo46mrt.tt.omtrdc.net
 - DOMAIN,zoomfr153zc.tt.omtrdc.net
 - DOMAIN,zoomhy52mmr.tt.omtrdc.net
@@ -1009,7 +1007,6 @@
 - DOMAIN,zoomscg165zc.sc.tt.omtrdc.net
 - DOMAIN,zoomscm8.tt.omtrdc.net
 - DOMAIN,zoomscn13rg.tt.omtrdc.net
-- DOMAIN,zoomscs189rg.tt.omtrdc.net
 - DOMAIN,zoomtr34mra.tt.omtrdc.net
 - DOMAIN,zooplus.fr.ssl.sc.tt.omtrdc.net
 - DOMAIN,zooplus.gh.tt.omtrdc.net
@@ -4499,6 +4496,7 @@
 - DOMAIN-SUFFIX,usfiamail01.tt.omtrdc.net
 - DOMAIN-SUFFIX,usivvmroa31.tt-qe5.omtrdc.net
 - DOMAIN-SUFFIX,uslaxadc03.tt-qe5.omtrdc.net
+- DOMAIN-SUFFIX,usma-ex-cas2.tt.omtrdc.net
 - DOMAIN-SUFFIX,utp-ac-de-panama.weebly.com
 - DOMAIN-SUFFIX,utut-service-ue.tt.omtrdc.net
 - DOMAIN-SUFFIX,utyeb26udp.tt.omtrdc.net
@@ -4638,6 +4636,7 @@
 - DOMAIN-SUFFIX,waketech-authentication.weebly.com
 - DOMAIN-SUFFIX,walgreencosn.tt.omtrdc.net
 - DOMAIN-SUFFIX,wallet-qabeta.tt.omtrdc.net
+- DOMAIN-SUFFIX,wallet1-int9.tt.omtrdc.net
 - DOMAIN-SUFFIX,wamc-2580.tt.omtrdc.net
 - DOMAIN-SUFFIX,wandering-darlings-034248.framer.app
 - DOMAIN-SUFFIX,warmhearted-gazelle-836856.framer.app
@@ -5087,9 +5086,11 @@
 ﻿- DOMAIN,amazonwebservicessupport37-02.tt.omtrdc.net
 ﻿- DOMAIN,americancentury.tt.omtrdc.net
 ﻿- DOMAIN,axa-direct-life.tt.omtrdc.net
+﻿- DOMAIN,boardriders37-02.tt.omtrdc.net
 ﻿- DOMAIN,computersciencescorp.tt.omtrdc.net
 ﻿- DOMAIN,craommunications.tt.omtrdc.net
 ﻿- DOMAIN,credem.tt.omtrdc.net
+﻿- DOMAIN,cs.curs.tt.omtrdc.net
 ﻿- DOMAIN,daviik.iad-03.braze.com
 ﻿- DOMAIN,dnsbl.test.xerolimited.tt.omtrdc.net
 ﻿- DOMAIN,ekornes.tt.omtrdc.net
