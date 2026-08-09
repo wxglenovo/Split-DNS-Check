@@ -120,10 +120,12 @@
 - DOMAIN,easymarket-hotels-gke.accountcatalogue.tt.omtrdc.net
 - DOMAIN,easypay.rogerscommunicaitonp.tt.omtrdc.net
 - DOMAIN,eaw8de.tt.omtrdc.net
+- DOMAIN,ec2-35-91-162-64.accountchef-api-backup-s3-cache-production.tt.omtrdc.net
 - DOMAIN,ec2-52-91-178-92.tt-stage1.omtrdc.net
 - DOMAIN,ec2-54-82-9-216.tt-qe5.omtrdc.net
 - DOMAIN,echo-flight.awscmhqa.k8s.tt.omtrdc.net
 - DOMAIN,echo-roseanne.citizensbank.tt.omtrdc.net
+- DOMAIN,echogeo4.tt.omtrdc.net
 - DOMAIN,echosystem-qat.lib-test.lib.tt.omtrdc.net
 - DOMAIN,ecklers.cuna.tt.omtrdc.net
 - DOMAIN,eclaimant-pbm-api.tt.omtrdc.net
@@ -380,6 +382,7 @@
 - DOMAIN,fpssl-event.hb-api.tt.omtrdc.net
 - DOMAIN,frame.bjsrestaurants.tt.omtrdc.net
 - DOMAIN,frame.illinoisdepartmentof.tt.omtrdc.net
+- DOMAIN,framsa.orion.tt.omtrdc.net
 - DOMAIN,frankie.tt.omtrdc.net
 - DOMAIN,frantest.tt.omtrdc.net
 - DOMAIN,fraters.tt.omtrdc.net
@@ -531,6 +534,7 @@
 - DOMAIN,groupsdad.tt.omtrdc.net
 - DOMAIN,groupwise.abap-gallery.citizensbank.tt.omtrdc.net
 - DOMAIN,gsax.growth.tt.omtrdc.net
+- DOMAIN,gth3.ibi.tt.omtrdc.net
 - DOMAIN,gtm7ftp3.na.tt.omtrdc.net
 - DOMAIN,gtr.landing.indigoaviation.tt.omtrdc.net
 - DOMAIN,gtrm-rt.tt.omtrdc.net
@@ -971,6 +975,7 @@
 - DOMAIN,wms-dss.rcci.tt.omtrdc.net
 - DOMAIN,wmsuat.aafp.tt.omtrdc.net
 - DOMAIN,worker.p4.indigoaviation.tt.omtrdc.net
+- DOMAIN,workflow-management.svc.c2stage.pvhnorthamerica.tt.omtrdc.net
 - DOMAIN,workfront-dev-aws-prod.tt.omtrdc.net
 - DOMAIN,workplacehr.tt-qe-ci1.omtrdc.net
 - DOMAIN,workshop12.tt.omtrdc.net
@@ -1378,7 +1383,6 @@
 - DOMAIN-SUFFIX,ads.smartclick.com
 - DOMAIN-SUFFIX,adserve.ph
 - DOMAIN-SUFFIX,adshownew.it168.com
-- DOMAIN-SUFFIX,adstat.4u.pl
 - DOMAIN-SUFFIX,advice-ads.s3.amazonaws.com
 - DOMAIN-SUFFIX,adx.hoanggia.net.vn
 - DOMAIN-SUFFIX,aeoncredit.tt.omtrdc.net
@@ -1415,7 +1419,6 @@
 - DOMAIN-SUFFIX,alerts-test2-whitelabel.links.rosieapp.com
 - DOMAIN-SUFFIX,alerts.steadyapp.com
 - DOMAIN-SUFFIX,alexa-hybrid-interaction-log-config-prod-na.s3.amazonaws.com
-- DOMAIN-SUFFIX,alfa-production-1ab8.up.railway.app
 - DOMAIN-SUFFIX,algarve-keto-gummies-5.tt.omtrdc.net
 - DOMAIN-SUFFIX,ali-pro-pull.kwai.net.iberostar.com
 - DOMAIN-SUFFIX,alishah18105.github.io
@@ -1682,7 +1685,6 @@
 - DOMAIN-SUFFIX,bpiiggeon.wixstudio.com
 - DOMAIN-SUFFIX,bqyjxdrxsq.web.app
 - DOMAIN-SUFFIX,br.sexchatters.com
-- DOMAIN-SUFFIX,bradcroninnapo82.myshopify.com
 - DOMAIN-SUFFIX,bradesco.atendimentonet.info
 - DOMAIN-SUFFIX,bradesco.chatcorporativopj.digital
 - DOMAIN-SUFFIX,bradesco.empresaatuliza.digital
@@ -2481,6 +2483,7 @@
 - DOMAIN-SUFFIX,eurowingsaviationgmb.tt.omtrdc.net
 - DOMAIN-SUFFIX,euve60733.tt.omtrdc.net
 - DOMAIN-SUFFIX,euw3-dev3-pub-alb.tt.omtrdc.net
+- DOMAIN-SUFFIX,euwe-lauer.tt.omtrdc.net
 - DOMAIN-SUFFIX,euwerealindianfreebies.tt.omtrdc.net
 - DOMAIN-SUFFIX,ev-web-preview.accountbac2.tt-stage-ci1.omtrdc.net
 - DOMAIN-SUFFIX,evenementlesinfos.web.app
@@ -3078,7 +3081,6 @@
 - DOMAIN-SUFFIX,info.furykeywest.com
 - DOMAIN-SUFFIX,info.grantfinder.com
 - DOMAIN-SUFFIX,info.jacksoncoker.com
-- DOMAIN-SUFFIX,info.marshbellofram.com
 - DOMAIN-SUFFIX,info.onturtle.eu
 - DOMAIN-SUFFIX,info.sancleair.jp
 - DOMAIN-SUFFIX,info.staedteverband.ch
@@ -3545,7 +3547,6 @@
 - DOMAIN-SUFFIX,mydelvstatus.abrdns.com
 - DOMAIN-SUFFIX,mydropboxdocs.weebly.com
 - DOMAIN-SUFFIX,mydtccomnetservnown247.framer.website
-- DOMAIN-SUFFIX,myhandshops.myshopify.com
 - DOMAIN-SUFFIX,mynetzeroupdatemail.framer.website
 - DOMAIN-SUFFIX,myoutlookshomewee.weebly.com
 - DOMAIN-SUFFIX,myprepaidcenter-app.co.com
@@ -4215,7 +4216,6 @@
 - DOMAIN-SUFFIX,startsso-ledzorcdn.wixstudio.com
 - DOMAIN-SUFFIX,startsso-trexioapps.wixstudio.com
 - DOMAIN-SUFFIX,startsuit-enapp.wixstudio.com
-- DOMAIN-SUFFIX,stat.4u.pl
 - DOMAIN-SUFFIX,stat.enter-system.com
 - DOMAIN-SUFFIX,stat.russianfood.com
 - DOMAIN-SUFFIX,statement445.weebly.com
@@ -5015,6 +5015,7 @@
 - DOMAIN-SUFFIX,www.produkce.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.rainharodeiobrasil.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.reystarr.tt.omtrdc.net
+- DOMAIN-SUFFIX,www.salaktrailrun.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.san.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.scottsmiraclegro.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.serverpark.tt.omtrdc.net
@@ -5026,6 +5027,7 @@
 - DOMAIN-SUFFIX,www.thegermangirl.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.thehost.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.thekhabri.tt.omtrdc.net
+- DOMAIN-SUFFIX,www.townofbluffton.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.vlearning.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.whm73.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.wielkopolska.tt.omtrdc.net
@@ -5173,6 +5175,7 @@
 - DOMAIN-SUFFIX,zzzzzzzznt.weebly.com
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
 ﻿- DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
+﻿- DOMAIN,1353.api.swrve.com
 ﻿- DOMAIN,212.54.132200paloaltonetworks.tt.omtrdc.net
 ﻿- DOMAIN,2fewieeinfach.tt.omtrdc.net
 ﻿- DOMAIN,adfspocb.dev.az.ciam.tt.omtrdc.net
@@ -5211,4 +5214,5 @@
 ﻿- DOMAIN-SUFFIX,ads.house365.com
 ﻿- DOMAIN-SUFFIX,adserve.ph
 ﻿- DOMAIN-SUFFIX,ali-pro-pull.kwai.net.iberostar.com
+﻿﻿- DOMAIN,1353.api.swrve.com
 ﻿﻿- DOMAIN,tataaig.tt.omtrdc.net
