@@ -1,6 +1,4 @@
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
 - DOMAIN,0-0-0-birkart-clws-ifs-globalmn.volvo.tt.omtrdc.net
 - DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
 - DOMAIN,004-angels.tt.omtrdc.net
@@ -142,6 +140,7 @@
 - DOMAIN,ecube2tst.e.tt.omtrdc.net
 - DOMAIN,ecv-prd1ircnda01.tt.omtrdc.net
 - DOMAIN,edge202.azurestaging.tt.omtrdc.net
+- DOMAIN,ee7mqm6h0ak4bmdl.accountbac2.tt-stage-ci1.omtrdc.net
 - DOMAIN,effd8c4cb6bcbd750e7858350de2f0b0.adminhosting.accountart-of-falco.tt-qe-ci1.omtrdc.net
 - DOMAIN,effectwerkt.generalmotorscorporation.tt.omtrdc.net
 - DOMAIN,eformseditor-cb-nft-nft.tt.omtrdc.net
@@ -282,6 +281,7 @@
 - DOMAIN,f710bb3c809800f0abc0de7a9f07a8d2.accountbackup-v2.tt-stage-ci1.omtrdc.net
 - DOMAIN,f8483ae7ab5ddd17fc94e4b921500a32.accountfcanr.tt.omtrdc.net
 - DOMAIN,f88b8c00ec70be565f5e3812f17c623f.admins4.accountalpha-s3-chef-status-stagingdefaultproduction.tt-stage3.omtrdc.net
+- DOMAIN,fa44d53186a1ee80621ef39623b6f20b.analytics-hs-test.admin-silver-cicd.tt-qe5.omtrdc.net
 - DOMAIN,fa9e3d5f1714dfa15834c550a9853628.analytics-hs-test.admin-silver-cicd.tt-qe5.omtrdc.net
 - DOMAIN,fab3-2-grd.takedapharmaceutical.tt.omtrdc.net
 - DOMAIN,fantasticbabyotaku.tt.omtrdc.net
@@ -824,6 +824,7 @@
 - DOMAIN,vpn2m.gslb.tt.omtrdc.net
 - DOMAIN,vpn673072335.tt-stage-ci1.omtrdc.net
 - DOMAIN,vpnelson.citizensbank.tt.omtrdc.net
+- DOMAIN,vqa2.zegna.tt.omtrdc.net
 - DOMAIN,vqae.cuna.tt.omtrdc.net
 - DOMAIN,vtc-wc-mm820v-07.cable.tt.omtrdc.net
 - DOMAIN,vtoocn3ihkqiffpr.sparta.tt.omtrdc.net
@@ -2167,7 +2168,6 @@
 - DOMAIN-SUFFIX,email.dasa.movidesk.com
 - DOMAIN-SUFFIX,email.dellavolpe.movidesk.com
 - DOMAIN-SUFFIX,email.devpost.com
-- DOMAIN-SUFFIX,email.divenza.hu
 - DOMAIN-SUFFIX,email.dnj.com
 - DOMAIN-SUFFIX,email.drc-tech.net
 - DOMAIN-SUFFIX,email.electricien-nantes-chriselec-services-hager.fr
@@ -2207,7 +2207,6 @@
 - DOMAIN-SUFFIX,email.konacam.com
 - DOMAIN-SUFFIX,email.kotas.movidesk.com
 - DOMAIN-SUFFIX,email.kuanttum.movidesk.com
-- DOMAIN-SUFFIX,email.lays.nl
 - DOMAIN-SUFFIX,email.leadcenter.ai
 - DOMAIN-SUFFIX,email.lonelyorphans.org
 - DOMAIN-SUFFIX,email.ls.movidesk.com
@@ -2491,7 +2490,6 @@
 - DOMAIN-SUFFIX,fa2994059c1b207c37e5a1850befecd6.adminhosting.accountart-of-falco.tt-qe-ci1.omtrdc.net
 - DOMAIN-SUFFIX,fa73a534a86e1aba5228736d2cf04d1f.administracion-8.accountfcanr.tt.omtrdc.net
 - DOMAIN-SUFFIX,fa9d489e0718074e2f0ace76600cede0.analytics-hs-test.admin-silver-cicd.tt-qe5.omtrdc.net
-- DOMAIN-SUFFIX,faacebook.hop.ru
 - DOMAIN-SUFFIX,facebook-ads-acc1.github.io
 - DOMAIN-SUFFIX,facebook-task-one.vercel.app
 - DOMAIN-SUFFIX,facebookclone-pearl.vercel.app
@@ -2669,6 +2667,7 @@
 - DOMAIN-SUFFIX,gcfgvh.weeblysite.com
 - DOMAIN-SUFFIX,gcloud-test.tt.omtrdc.net
 - DOMAIN-SUFFIX,gdb4.link.quail.sci.tt.omtrdc.net
+- DOMAIN-SUFFIX,gdesktop.massmutual.tt.omtrdc.net
 - DOMAIN-SUFFIX,gdphhl.elite-auto.fr
 - DOMAIN-SUFFIX,gdss23.github.io
 - DOMAIN-SUFFIX,ge-host03-old.tt.omtrdc.net
@@ -3260,7 +3259,6 @@
 - DOMAIN-SUFFIX,lwmail.xedrix.se
 - DOMAIN-SUFFIX,lx-89f3.web.app
 - DOMAIN-SUFFIX,lziqkx.countryoutfitter.com
-- DOMAIN-SUFFIX,m.19981.buzz
 - DOMAIN-SUFFIX,m.allyant.com
 - DOMAIN-SUFFIX,m.ehwhwz.cn
 - DOMAIN-SUFFIX,m.hf839.com
@@ -3838,7 +3836,6 @@
 - DOMAIN-SUFFIX,satisfied-project-666760.framer.app
 - DOMAIN-SUFFIX,sawiosl-f51a2.web.app
 - DOMAIN-SUFFIX,sbcglobal-107559.weeblysite.com
-- DOMAIN-SUFFIX,sc.mtv.tv
 - DOMAIN-SUFFIX,sc.paramountnetwork.com
 - DOMAIN-SUFFIX,sc.thedailyshow.com
 - DOMAIN-SUFFIX,scceure-well05access.firebaseapp.com
@@ -4088,7 +4085,6 @@
 - DOMAIN-SUFFIX,stats.glyphs.fyi
 - DOMAIN-SUFFIX,stats.tradingacademy.com
 - DOMAIN-SUFFIX,status.acutx.org
-- DOMAIN-SUFFIX,steamcamunity.hop.ru
 - DOMAIN-SUFFIX,steelcase.tt.omtrdc.net
 - DOMAIN-SUFFIX,steh-cpu.github.io
 - DOMAIN-SUFFIX,step4-30f38.firebaseapp.com
@@ -4195,7 +4191,6 @@
 - DOMAIN-SUFFIX,tempo-client-metric-prod.s3.amazonaws.com
 - DOMAIN-SUFFIX,tengam-signin.wixstudio.com
 - DOMAIN-SUFFIX,teslaamg.obs.cn-east-3.myhuaweicloud.com
-- DOMAIN-SUFFIX,test.oliver-graeber.de
 - DOMAIN-SUFFIX,testshop.notifysrv.com
 - DOMAIN-SUFFIX,text.mitarbeiterangebote.de
 - DOMAIN-SUFFIX,textraupddatee.weebly.com
@@ -4507,6 +4502,7 @@
 - DOMAIN-SUFFIX,uphld-lgnn-en.pineapple.page
 - DOMAIN-SUFFIX,upload-02-stg.tt.omtrdc.net
 - DOMAIN-SUFFIX,uploadanywhere.links.rosieapp.com
+- DOMAIN-SUFFIX,uploads.sound.ag
 - DOMAIN-SUFFIX,upputurimadhuri897-hue.github.io
 - DOMAIN-SUFFIX,upscalechelsea.tt.omtrdc.net
 - DOMAIN-SUFFIX,upsell-prod-3.new.tt.omtrdc.net
@@ -4539,6 +4535,7 @@
 - DOMAIN-SUFFIX,userguides12api.tt.omtrdc.net
 - DOMAIN-SUFFIX,userloginmicrosofft.dudaone.com
 - DOMAIN-SUFFIX,users-liveapp.wixstudio.com
+- DOMAIN-SUFFIX,users.connect.tt.omtrdc.net
 - DOMAIN-SUFFIX,usersid3.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,ushtxcdn.wixstudio.com
 - DOMAIN-SUFFIX,usinauguration-staging.tt.omtrdc.net
@@ -4857,6 +4854,7 @@
 - DOMAIN-SUFFIX,www.foxsports.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.hb2.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.huggies.com.vn.tt.omtrdc.net
+- DOMAIN-SUFFIX,www.int.auth.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.jmu.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.landsend.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.lasmisiones.tt.omtrdc.net
@@ -5084,7 +5082,6 @@
 - DOMAIN-SUFFIX,zuwmbztn.web.app
 - DOMAIN-SUFFIX,zwtiif.veillon.ch
 - DOMAIN-SUFFIX,zxcvb-24208.firebaseapp.com
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
 ﻿- DOMAIN,0-25.tt.omtrdc.net
 ﻿- DOMAIN,0-2nask-us.mckinseyknow.tt.omtrdc.net
