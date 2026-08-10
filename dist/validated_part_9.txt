@@ -404,6 +404,7 @@
 - DOMAIN,events.astroclub.tt.omtrdc.net
 - DOMAIN,ewan.tt.omtrdc.net
 - DOMAIN,ewesta-camp.tt.omtrdc.net
+- DOMAIN,ewesta-mot.tt.omtrdc.net
 - DOMAIN,ewmar-moto.tt.omtrdc.net
 - DOMAIN,exchange.csi.umuc.tt.omtrdc.net
 - DOMAIN,exchange.drna.tt.omtrdc.net
@@ -618,6 +619,7 @@
 - DOMAIN,gatemboxedge22.tt.omtrdc.net
 - DOMAIN,gateway-cus.brp.tt.omtrdc.net
 - DOMAIN,gateway-ext.higherone.tt.omtrdc.net
+- DOMAIN,gateway-internal.gpa.tt.omtrdc.net
 - DOMAIN,gateway-prod.tt.omtrdc.net
 - DOMAIN,gateway-rasta.citizensbank.tt.omtrdc.net
 - DOMAIN,gateway-testci-stableqa2.moncton-dev.tt.omtrdc.net
@@ -1948,12 +1950,15 @@
 - DOMAIN-SUFFIX,571-ac-eucalyptus-kindle.s3.eu-central-1.amazonaws.com
 - DOMAIN-SUFFIX,5mm.zxfw5.cn
 - DOMAIN-SUFFIX,5rclzihbb.cc.rs6.net
+- DOMAIN-SUFFIX,6.www.425kmk7n9wn21pwvl18.xyz
 - DOMAIN-SUFFIX,63789weu.weebly.com
 - DOMAIN-SUFFIX,6c0f832f38.4058e46800.com
 - DOMAIN-SUFFIX,6c800efb18.f8f311a27a.com
 - DOMAIN-SUFFIX,7b26070d7b.68d48e2725.com
 - DOMAIN-SUFFIX,7fe9w8rzsxp621j-c.clead.xyz
 - DOMAIN-SUFFIX,8e10526c37.2b8fa02c00.com
+- DOMAIN-SUFFIX,9.www.2wu0m0ms098w7148.xyz
+- DOMAIN-SUFFIX,9.www.4tr3sopq592o7svp1q6mn3.xyz
 - DOMAIN-SUFFIX,9000-firebase-link-1781076144085.cluster-dccle54vc5d26v2fsixd2icgqi.cloudworkstations.dev
 - DOMAIN-SUFFIX,9013351951-1.github.io
 - DOMAIN-SUFFIX,99088.weebly.com
@@ -3916,7 +3921,6 @@
 - DOMAIN-SUFFIX,kp8008.github.io
 - DOMAIN-SUFFIX,kq0hgp.webwave.dev
 - DOMAIN-SUFFIX,kq0i2onrdfws15o-p.adkplan.fr
-- DOMAIN-SUFFIX,krakenlogin.co.com
 - DOMAIN-SUFFIX,kraxckaokaokaokaokaokaokaokaokaokao.weebly.com
 - DOMAIN-SUFFIX,kredikartsparkass234.firebaseapp.com
 - DOMAIN-SUFFIX,krishna31012007.github.io
@@ -4364,7 +4368,6 @@
 - DOMAIN-SUFFIX,photo-albuum.vercel.app
 - DOMAIN-SUFFIX,photomaxost.vercel.app
 - DOMAIN-SUFFIX,php-web-server--zurdacovas.replit.app
-- DOMAIN-SUFFIX,phyon.visit-x.net
 - DOMAIN-SUFFIX,pichin399segur.webcindario.com
 - DOMAIN-SUFFIX,pichin54cha.webcindario.com
 - DOMAIN-SUFFIX,pichincha.firebaseapp.com
@@ -4734,6 +4737,7 @@
 - DOMAIN-SUFFIX,sst.inaessentials.cz
 - DOMAIN-SUFFIX,sst.linkeagroup.com
 - DOMAIN-SUFFIX,sst.litescreen.se
+- DOMAIN-SUFFIX,sst.overnightprints.eu
 - DOMAIN-SUFFIX,sst.synevo.pl
 - DOMAIN-SUFFIX,sst.ychworkshop.com
 - DOMAIN-SUFFIX,sst.yodeck.com
@@ -4910,6 +4914,7 @@
 - DOMAIN-SUFFIX,tools.ecpdev.assistant.tt.omtrdc.net
 - DOMAIN-SUFFIX,tools.kobieta.pl
 - DOMAIN-SUFFIX,toolshub-engine.cmhprod2.k8s.tt.omtrdc.net
+- DOMAIN-SUFFIX,toolsmboxedge1-jag.tt-stage3.omtrdc.net
 - DOMAIN-SUFFIX,toothybird.tt.omtrdc.net
 - DOMAIN-SUFFIX,top-future-760532.framer.app
 - DOMAIN-SUFFIX,top-portal-api-test.tt-stage1.omtrdc.net
@@ -5601,7 +5606,6 @@
 - DOMAIN-SUFFIX,wittchen133.strefamarek.tt.omtrdc.net
 - DOMAIN-SUFFIX,wittweidentest2.tt.omtrdc.net
 - DOMAIN-SUFFIX,wizardstage.tt.omtrdc.net
-- DOMAIN-SUFFIX,wl.yna.co.kr
 - DOMAIN-SUFFIX,wlltledgr-liveus.wixstudio.com
 - DOMAIN-SUFFIX,wms1.tt.omtrdc.net
 - DOMAIN-SUFFIX,wnny7lzqzn7r1v0k.mboxedge31-alb.tt.omtrdc.net
@@ -6071,6 +6075,8 @@
 ﻿- DOMAIN,control.earth-1f4c93.tt.omtrdc.net
 ﻿- DOMAIN,cuna.tt.omtrdc.net
 ﻿- DOMAIN,dds-hd.tt.omtrdc.net
+﻿- DOMAIN,delivery-system.tt.omtrdc.net
+﻿- DOMAIN,devops.tt.omtrdc.net
 ﻿- DOMAIN,dnbbankasa.tt.omtrdc.net
 ﻿- DOMAIN,email.mail.appcast.io
 ﻿- DOMAIN,eset.tt.omtrdc.net
