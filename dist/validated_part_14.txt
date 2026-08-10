@@ -1,6 +1,4 @@
-﻿- DOMAIN,aa-sql.hb-fa-stage.tt.omtrdc.net
-- DOMAIN,aafp.tt.omtrdc.net
-- DOMAIN,aaidmboxedge36.tt.omtrdc.net
+﻿- DOMAIN,aaidmboxedge36.tt.omtrdc.net
 - DOMAIN,abbviecommercial.tt.omtrdc.net
 - DOMAIN,acadpartnershipsllc.tt.omtrdc.net
 - DOMAIN,acc-bskyb.hb-api.tt.omtrdc.net
@@ -759,6 +757,7 @@
 - DOMAIN,guroymak.tt.omtrdc.net
 - DOMAIN,guru-cp-fe.tt.omtrdc.net
 - DOMAIN,guru.tt-qe-ci1.omtrdc.net
+- DOMAIN,gusp2m03.tt.omtrdc.net
 - DOMAIN,gustestnewer.tt.omtrdc.net
 - DOMAIN,hargreaveslansdownpl.tt.omtrdc.net
 - DOMAIN,hbkworld.tt.omtrdc.net
@@ -851,6 +850,7 @@
 - DOMAIN,mboxedge38-alb.tt.omtrdc.net
 - DOMAIN,mboxmcmillanshakespeare37-02.tt.omtrdc.net
 - DOMAIN,mcgrawhill.tt.omtrdc.net
+- DOMAIN,mercolaconsultingser.mmspdistribe.tt.omtrdc.net
 - DOMAIN,meridianenergy.tt.omtrdc.net
 - DOMAIN,metlifeglobal.tt.omtrdc.net
 - DOMAIN,metro.tt.omtrdc.net
@@ -1382,6 +1382,7 @@
 - DOMAIN,volocblog.tt.omtrdc.net
 - DOMAIN,vologda.brinker.tt.omtrdc.net
 - DOMAIN,voltage-pp-0000.us.tt.omtrdc.net
+- DOMAIN,volterra.tt.omtrdc.net
 - DOMAIN,voo.mboxedge36-alb.tt.omtrdc.net
 - DOMAIN,vopcdl11.tt-qe5.omtrdc.net
 - DOMAIN,vpn.cc.dynamo.sre.scit.tt.omtrdc.net
@@ -1696,6 +1697,7 @@
 - DOMAIN,zoomsc08xp.tt.omtrdc.net
 - DOMAIN,zoomscc166mmr.tt.omtrdc.net
 - DOMAIN,zoomscm179mmr.tt.omtrdc.net
+- DOMAIN,zoomscn132mmr.sc.tt.omtrdc.net
 - DOMAIN,zoomscs122mmr.tt.omtrdc.net
 - DOMAIN,zoomscs125sbcpxy.tt.omtrdc.net
 - DOMAIN,zoomscs174rg.tt.omtrdc.net
@@ -1904,8 +1906,6 @@
 - DOMAIN-SUFFIX,app-id8109.firebaseapp.com
 - DOMAIN-SUFFIX,app-interactive-endpoint-d58l.s3.eu-central-1.amazonaws.com
 - DOMAIN-SUFFIX,app-ledger-us.wixstudio.com
-- DOMAIN-SUFFIX,app.ajudaresgatx.com
-- DOMAIN-SUFFIX,app.biaresgateclientes.live
 - DOMAIN-SUFFIX,app.diadoclientevip.com
 - DOMAIN-SUFFIX,app.e2ma.net
 - DOMAIN-SUFFIX,app.gopremium.africa
@@ -2054,13 +2054,9 @@
 - DOMAIN-SUFFIX,boxxystory.fumblingvacation.pro
 - DOMAIN-SUFFIX,bppstceles.firebaseapp.com
 - DOMAIN-SUFFIX,br9qjffs.r.us-east-1.awstrack.me
-- DOMAIN-SUFFIX,bradesco.analiseempresanet.pro
-- DOMAIN-SUFFIX,bradesco.biasuportenet.live
-- DOMAIN-SUFFIX,bradesco.netclientepro.info
 - DOMAIN-SUFFIX,bradesco.netempresas-chatjuridico.digital
 - DOMAIN-SUFFIX,bradesco.netpj.click
 - DOMAIN-SUFFIX,bradesco.pc-empresas.click
-- DOMAIN-SUFFIX,bradesco.sistemadigitalnet.pro
 - DOMAIN-SUFFIX,bradesco.sistemajuridico.info
 - DOMAIN-SUFFIX,bradesco.validacaoempresanet.life
 - DOMAIN-SUFFIX,brainy-influence-082073.framer.app
@@ -4683,6 +4679,7 @@
 - DOMAIN-SUFFIX,web-uphold-portal.onepage.website
 - DOMAIN-SUFFIX,web.adm.tt.omtrdc.net
 - DOMAIN-SUFFIX,web.whatsapp.tl.hl.cn
+- DOMAIN-SUFFIX,web13193.tt.omtrdc.net
 - DOMAIN-SUFFIX,web17111.tt.omtrdc.net
 - DOMAIN-SUFFIX,web3c.tt.omtrdc.net
 - DOMAIN-SUFFIX,web4125.ciscolearningnetwork.tt.omtrdc.net
@@ -4962,6 +4959,7 @@
 - DOMAIN-SUFFIX,yo-kfc.tales.tt.omtrdc.net
 - DOMAIN-SUFFIX,yogurt.tt.omtrdc.net
 - DOMAIN-SUFFIX,yolusem-goiglecom.web.app
+- DOMAIN-SUFFIX,ypn-portaui.tt.omtrdc.net
 - DOMAIN-SUFFIX,yqsqzb.mfcentralerisk.it
 - DOMAIN-SUFFIX,yreeadsxoplmertubfhg.weebly.com
 - DOMAIN-SUFFIX,yrtuyifcomcastwebmailsignin.weebly.com
@@ -5094,7 +5092,6 @@
 ﻿- DOMAIN,91.hb-fa-stage.tt.omtrdc.net
 ﻿- DOMAIN,a.market.tt.omtrdc.net
 ﻿- DOMAIN,aa-c.hb-fa-stage.tt.omtrdc.net
-﻿- DOMAIN,aa-sql.hb-fa-stage.tt.omtrdc.net
 ﻿- DOMAIN,aafp.tt.omtrdc.net
 ﻿- DOMAIN,claflinmedical.tt.omtrdc.net
 ﻿- DOMAIN,m.adnxs.com
