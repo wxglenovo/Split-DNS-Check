@@ -1,6 +1,4 @@
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
-- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
-- DOMAIN,10.32.17.179abcnews.hb-api.tt.omtrdc.net
+﻿- DOMAIN,10.32.17.179abcnews.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.181abcnews.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.182adobecorp.hb-api.tt.omtrdc.net
 - DOMAIN,10.32.17.182cbsinteractive.hb.tt.omtrdc.net
@@ -144,6 +142,7 @@
 - DOMAIN,dpcomepost.tt.omtrdc.net
 - DOMAIN,dpl5.consumerinfo.tt.omtrdc.net
 - DOMAIN,dpma.tt.omtrdc.net
+- DOMAIN,dpod.accountcatalogue.tt.omtrdc.net
 - DOMAIN,dprism.ukarmyrecruiting.tt.omtrdc.net
 - DOMAIN,dpv.brookdaleseniorlivin.tt.omtrdc.net
 - DOMAIN,drmx.walmartisd.tt.omtrdc.net
@@ -304,6 +303,7 @@
 - DOMAIN,entreprises.dardenrestaurants.tt.omtrdc.net
 - DOMAIN,entsec.henkel.tt.omtrdc.net
 - DOMAIN,environment.environmentalreport2002.tt.omtrdc.net
+- DOMAIN,envoy-profileapi-stg.tt.omtrdc.net
 - DOMAIN,epm-uat-vip1.accountbackup-v2.tt-stage-ci1.omtrdc.net
 - DOMAIN,epm.greenbaypackersinc.tt.omtrdc.net
 - DOMAIN,epmowa-vza.mow.tt.omtrdc.net
@@ -391,7 +391,6 @@
 - DOMAIN,f8552bd7ad1847f19d1d.tt-qe-ci1.omtrdc.net
 - DOMAIN,fa624c9d48938e7cd1b8418718431ae2.analytics-hs-test.admin-silver-cicd.tt-qe5.omtrdc.net
 - DOMAIN,faas-service-prod.dpcomdhl.tt.omtrdc.net
-- DOMAIN,faportal-crt-dev.tt.omtrdc.net
 - DOMAIN,faq-dev.tt.omtrdc.net
 - DOMAIN,faq-worker.3.tt.omtrdc.net
 - DOMAIN,favoriten.greatdentalplans.tt.omtrdc.net
@@ -1217,8 +1216,6 @@
 - DOMAIN-SUFFIX,118.162.sound.ag
 - DOMAIN-SUFFIX,12.bhartiairtel.tt.omtrdc.net
 - DOMAIN-SUFFIX,13.notifysrv.com
-- DOMAIN-SUFFIX,1664891182.app.chronicle.com
-- DOMAIN-SUFFIX,168.it168.com
 - DOMAIN-SUFFIX,17.182corus.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,17.251corus.hb.tt.omtrdc.net
 - DOMAIN-SUFFIX,19l-o819ke4y8liuqplr.s3.eu-central-2.amazonaws.com
@@ -1337,7 +1334,6 @@
 - DOMAIN-SUFFIX,a8cv.studycompass.io
 - DOMAIN-SUFFIX,aa-mockeuw.hb-fa-stage.tt.omtrdc.net
 - DOMAIN-SUFFIX,aa.247sports.com
-- DOMAIN-SUFFIX,aafp.tt.hb-fa-dev.tt.omtrdc.net
 - DOMAIN-SUFFIX,aakashrohtela.github.io
 - DOMAIN-SUFFIX,aaryan-musk.github.io
 - DOMAIN-SUFFIX,abasssaqafi-blip.github.io
@@ -1386,7 +1382,6 @@
 - DOMAIN-SUFFIX,adsdk.bing.net
 - DOMAIN-SUFFIX,adsdot.ph
 - DOMAIN-SUFFIX,adshanteen.firebaseapp.com
-- DOMAIN-SUFFIX,adstat.4u.pl
 - DOMAIN-SUFFIX,advance-desktop.wixstudio.com
 - DOMAIN-SUFFIX,adventurous-context-656368.framer.app
 - DOMAIN-SUFFIX,advert.api.thejoyrun.com
@@ -1460,7 +1455,6 @@
 - DOMAIN-SUFFIX,analytics.simpler.so
 - DOMAIN-SUFFIX,analytics.slashdotmedia.com
 - DOMAIN-SUFFIX,analytics.sohatv.vn
-- DOMAIN-SUFFIX,analytics.tiki.vn
 - DOMAIN-SUFFIX,android.notifysrv.com
 - DOMAIN-SUFFIX,angieslist.tt.omtrdc.net
 - DOMAIN-SUFFIX,anicobin.ldblog.jp
@@ -1482,7 +1476,6 @@
 - DOMAIN-SUFFIX,app-filmes-theta.vercel.app
 - DOMAIN-SUFFIX,app-mercadollivre.myshopify.com
 - DOMAIN-SUFFIX,app-mercadollivreofertas.myshopify.com
-- DOMAIN-SUFFIX,app-mercadopromo.myshopify.com
 - DOMAIN-SUFFIX,app.ajudaresgatx.com
 - DOMAIN-SUFFIX,app.areyouin.io
 - DOMAIN-SUFFIX,app.atendimento-resgate.info
@@ -1510,7 +1503,6 @@
 - DOMAIN-SUFFIX,appcloudfare.github.io
 - DOMAIN-SUFFIX,appdownload.hellosugar.salon
 - DOMAIN-SUFFIX,appesstart-trzo.wixstudio.com
-- DOMAIN-SUFFIX,appgift.sinaapp.com
 - DOMAIN-SUFFIX,appleapp.istyle.sk
 - DOMAIN-SUFFIX,applink.heyzyra.ai
 - DOMAIN-SUFFIX,applive-ledgre.wixstudio.com
@@ -1804,7 +1796,6 @@
 - DOMAIN-SUFFIX,club.click.s11.sfmc-osl.com
 - DOMAIN-SUFFIX,cmgstrategycollc.tt.omtrdc.net
 - DOMAIN-SUFFIX,cms.nativomobileapps.share.ntv.io
-- DOMAIN-SUFFIX,cocoawu.b0.upaiyun.com
 - DOMAIN-SUFFIX,cocona-foliobranchiate-nonalkaloid.s3.us-west-004.tt.omtrdc.net
 - DOMAIN-SUFFIX,codermiki.github.io
 - DOMAIN-SUFFIX,codersir195.github.io
@@ -2238,7 +2229,6 @@
 - DOMAIN-SUFFIX,email.chargify.vendhq.com
 - DOMAIN-SUFFIX,email.cherehapa.ru
 - DOMAIN-SUFFIX,email.claimyhr.com
-- DOMAIN-SUFFIX,email.cliffinsurance.com
 - DOMAIN-SUFFIX,email.cloverdomains.com
 - DOMAIN-SUFFIX,email.construction.email
 - DOMAIN-SUFFIX,email.covek.movidesk.com
@@ -2261,6 +2251,7 @@
 - DOMAIN-SUFFIX,email.electricien-fonsorbes-bruselec-hager.fr
 - DOMAIN-SUFFIX,email.email.coreware.app
 - DOMAIN-SUFFIX,email.email.iam-sold.ie
+- DOMAIN-SUFFIX,email.email.nutritionbreakthrough.com
 - DOMAIN-SUFFIX,email.entegysuite.com
 - DOMAIN-SUFFIX,email.eu.zeneducate.com
 - DOMAIN-SUFFIX,email.expressctb.movidesk.com
@@ -2344,7 +2335,6 @@
 - DOMAIN-SUFFIX,email.mg.ktozblinds.com
 - DOMAIN-SUFFIX,email.mg.mongostudio.com
 - DOMAIN-SUFFIX,email.mg.redeem-your-code.com
-- DOMAIN-SUFFIX,email.mg.test.getcellar.co
 - DOMAIN-SUFFIX,email.mgmail.casualattraction.com
 - DOMAIN-SUFFIX,email.mgmail.casualfreedates.com
 - DOMAIN-SUFFIX,email.mgmail.casualhookup.com
@@ -2400,7 +2390,6 @@
 - DOMAIN-SUFFIX,email.rcky.movidesk.com
 - DOMAIN-SUFFIX,email.rechat-mail.cbhrealty.com
 - DOMAIN-SUFFIX,email.rechat-mail.theagencyre.com
-- DOMAIN-SUFFIX,email.recruiting.okta.com
 - DOMAIN-SUFFIX,email.redmineup.com
 - DOMAIN-SUFFIX,email.reply.casteloportraitart.com
 - DOMAIN-SUFFIX,email.reply.emilyrooney.com
@@ -2910,8 +2899,6 @@
 - DOMAIN-SUFFIX,grussegeh.firebaseapp.com
 - DOMAIN-SUFFIX,grussegeh.web.app
 - DOMAIN-SUFFIX,gsouxd.missetam.nl
-- DOMAIN-SUFFIX,gss.skatepro.ee
-- DOMAIN-SUFFIX,gss.skatepro.uk
 - DOMAIN-SUFFIX,gsssuplementosss-main.vercel.app
 - DOMAIN-SUFFIX,gsystem.tt.omtrdc.net
 - DOMAIN-SUFFIX,gteasyme.tt.omtrdc.net
@@ -3672,7 +3659,6 @@
 - DOMAIN-SUFFIX,partner.montessorihracky.cz
 - DOMAIN-SUFFIX,partner.naslouchamesrdcem.cz
 - DOMAIN-SUFFIX,partner.net.jumia.com
-- DOMAIN-SUFFIX,partner.pravopisne.cz
 - DOMAIN-SUFFIX,partner.thelisteningworld.com
 - DOMAIN-SUFFIX,partner.tozax.sk
 - DOMAIN-SUFFIX,partneri.anglictinarychlo.sk
@@ -4349,6 +4335,7 @@
 - DOMAIN-SUFFIX,tpass.serc.tt.omtrdc.net
 - DOMAIN-SUFFIX,tpe.dhja.tt.omtrdc.net
 - DOMAIN-SUFFIX,tpe.tt-stage-ci1.omtrdc.net
+- DOMAIN-SUFFIX,tpexengen.tt.omtrdc.net
 - DOMAIN-SUFFIX,tq-eu.fdkox-d.online
 - DOMAIN-SUFFIX,tr.solendi.com
 - DOMAIN-SUFFIX,tr45647gffg.blogspot.am
@@ -4388,6 +4375,7 @@
 - DOMAIN-SUFFIX,traeger.tt.omtrdc.net
 - DOMAIN-SUFFIX,tranifer-bnb.vercel.app
 - DOMAIN-SUFFIX,tranqu08d.tt.omtrdc.net
+- DOMAIN-SUFFIX,tranqu12.tt.omtrdc.net
 - DOMAIN-SUFFIX,transa-nowe.tt.omtrdc.net
 - DOMAIN-SUFFIX,transaction-qa1.tt-qe5.omtrdc.net
 - DOMAIN-SUFFIX,transfer-sdons-fis.tt.omtrdc.net
@@ -5152,7 +5140,6 @@
 - DOMAIN-SUFFIX,zta-test-sso.tt.omtrdc.net
 - DOMAIN-SUFFIX,zyangtao.administrador.accountalpha-s3-chef-status-stagingdefaultproduction.tt-stage3.omtrdc.net
 - DOMAIN-SUFFIX,zyash.tt.omtrdc.net
-﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.homepointfinancial.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.jcb.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.lululemonusa.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
@@ -5167,7 +5154,6 @@
 ﻿- DOMAIN,0.212.54.132200cdn.tt.omtrdc.net
 ﻿- DOMAIN,004-angels.tt.omtrdc.net
 ﻿- DOMAIN,10-mock.hb-fa-stage.tt.omtrdc.net
-﻿- DOMAIN,10.156.2.22foxnews.hb.tt.omtrdc.net
 ﻿- DOMAIN,1188.api.swrve.com
 ﻿- DOMAIN,2359.api.swrve.com
 ﻿- DOMAIN,251dell.hb.tt.omtrdc.net
