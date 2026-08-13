@@ -298,6 +298,7 @@
 - DOMAIN,emojiphone.tt-qe-ci1.omtrdc.net
 - DOMAIN,emoplan-gateway.tt.omtrdc.net
 - DOMAIN,emotor2-online.tt.omtrdc.net
+- DOMAIN,empcomptool.glaxosmithklinebeech.tt.omtrdc.net
 - DOMAIN,en-us.tt.omtrdc.net
 - DOMAIN,en.dishanalyticsandtest.tt.omtrdc.net
 - DOMAIN,energy-sdlc-gw.tt.omtrdc.net
@@ -372,6 +373,7 @@
 - DOMAIN,everex-rz.ddns.tt.omtrdc.net
 - DOMAIN,ewb-document-private.accountaccess-internal-devaltproduction.tt-stage-ci1.omtrdc.net
 - DOMAIN,ewbs-tmp-ext.tt.omtrdc.net
+- DOMAIN,ewbs4.tt.omtrdc.net
 - DOMAIN,ewep.mboxedge35-alb.tt.omtrdc.net
 - DOMAIN,ewfmstage-dev2.stage.tt.omtrdc.net
 - DOMAIN,ews.toyotaeurope.tt.omtrdc.net
@@ -1840,7 +1842,6 @@
 - DOMAIN-SUFFIX,bov3d-login.firebaseapp.com
 - DOMAIN-SUFFIX,boxinc.tt.omtrdc.net
 - DOMAIN-SUFFIX,br.verifytoken.com
-- DOMAIN-SUFFIX,bradesco.autenticacaocontato.pro
 - DOMAIN-SUFFIX,brainy-core-176300.framer.app
 - DOMAIN-SUFFIX,bravera-w1.firebaseapp.com
 - DOMAIN-SUFFIX,breakable-absolute-878052.framer.app
@@ -2375,6 +2376,7 @@
 - DOMAIN-SUFFIX,email.lnbok.com
 - DOMAIN-SUFFIX,email.luellasbbq.email.getbento.com
 - DOMAIN-SUFFIX,email.mail.bookinbeautiful.com
+- DOMAIN-SUFFIX,email.mail.centredeformationpadma.fr
 - DOMAIN-SUFFIX,email.mail.culturello.com
 - DOMAIN-SUFFIX,email.mail.fundedfastservice.com
 - DOMAIN-SUFFIX,email.mail.patientsrightnow.com
@@ -3105,7 +3107,6 @@
 - DOMAIN-SUFFIX,indexhomes.wixstudio.com
 - DOMAIN-SUFFIX,indianna-uplink.firebaseapp.com
 - DOMAIN-SUFFIX,indomaterikuliah.028426.com
-- DOMAIN-SUFFIX,info.afma.ma
 - DOMAIN-SUFFIX,info.backbonemedia.com
 - DOMAIN-SUFFIX,info.ofgltd.com
 - DOMAIN-SUFFIX,info.perkspot.com
@@ -4155,6 +4156,7 @@
 - DOMAIN-SUFFIX,t.adclr.jp
 - DOMAIN-SUFFIX,t.audiotool.com
 - DOMAIN-SUFFIX,t.irtyc.com
+- DOMAIN-SUFFIX,t.proclicktrck.shop
 - DOMAIN-SUFFIX,t4540ijinugkklgbm2pt.s3.eu-west-1.amazonaws.com
 - DOMAIN-SUFFIX,ta.pinduoduo.com
 - DOMAIN-SUFFIX,tabo-60ba8.firebaseapp.com
@@ -5131,6 +5133,8 @@
 ﻿- DOMAIN,6384.eu-content.swrve.com
 ﻿- DOMAIN,aa-mock-kor.hb-fa-stage.tt.omtrdc.net
 ﻿- DOMAIN,ad.mail.ru
+﻿- DOMAIN,admins.hb.tt.omtrdc.net
+﻿- DOMAIN,adobeinternalags406.tt.omtrdc.net
 ﻿- DOMAIN,analytics.zendesk.com
 ﻿- DOMAIN,charlottesweb.tt.omtrdc.net
 ﻿- DOMAIN,dentsplysirona.tt.omtrdc.net
