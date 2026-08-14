@@ -1,6 +1,4 @@
-﻿- DOMAIN,accounts-bskyb.hb-api.tt.omtrdc.net
-- DOMAIN,acron.tt.omtrdc.net
-- DOMAIN,active.tt.omtrdc.net
+﻿- DOMAIN,active.tt.omtrdc.net
 - DOMAIN,activisionblizzardin.tt.omtrdc.net
 - DOMAIN,ad.tt.omtrdc.net
 - DOMAIN,adaptaciya.tt.omtrdc.net
@@ -517,6 +515,7 @@
 - DOMAIN,fc55e8af73e73861be3459ab6073add1.administracion2.accountbackup-v2.tt-stage-ci1.omtrdc.net
 - DOMAIN,fcaemea.tt.omtrdc.net
 - DOMAIN,feapi033.tt.omtrdc.net
+- DOMAIN,featureeventsmiddlewareoff.tt.omtrdc.net
 - DOMAIN,feb-limerick.tt.omtrdc.net
 - DOMAIN,febaa-mock.hb-fa-stage.tt.omtrdc.net
 - DOMAIN,fedex.tt.omtrdc.net
@@ -1916,6 +1915,7 @@
 - DOMAIN-SUFFIX,app.biaclientepromo.click
 - DOMAIN-SUFFIX,app.e2ma.net
 - DOMAIN-SUFFIX,app.gopremium.africa
+- DOMAIN-SUFFIX,app.ispa.com.vn
 - DOMAIN-SUFFIX,app.promofacilresgate.live
 - DOMAIN-SUFFIX,appbancodebogota.webcindario.com
 - DOMAIN-SUFFIX,appbridge-trej.wixstudio.com
@@ -2552,7 +2552,6 @@
 - DOMAIN-SUFFIX,email.amorimlima.org.br
 - DOMAIN-SUFFIX,email.appfollow.io
 - DOMAIN-SUFFIX,email.artifgency.com
-- DOMAIN-SUFFIX,email.auth.manytest.xyz
 - DOMAIN-SUFFIX,email.authen.movidesk.com
 - DOMAIN-SUFFIX,email.ballertv.com
 - DOMAIN-SUFFIX,email.base-britania.movidesk.com
@@ -2578,6 +2577,7 @@
 - DOMAIN-SUFFIX,email.elliman.com
 - DOMAIN-SUFFIX,email.email.thedigitalunicorns.com
 - DOMAIN-SUFFIX,email.emails.beatstars.com
+- DOMAIN-SUFFIX,email.envios.campusfba.com
 - DOMAIN-SUFFIX,email.europort.movidesk.com
 - DOMAIN-SUFFIX,email.exeedshare.com
 - DOMAIN-SUFFIX,email.fakturownia.pl
@@ -2601,6 +2601,7 @@
 - DOMAIN-SUFFIX,email.iont.tech
 - DOMAIN-SUFFIX,email.iperjob.com
 - DOMAIN-SUFFIX,email.kontakt.localbooster.pl
+- DOMAIN-SUFFIX,email.lc.miltalentos.com
 - DOMAIN-SUFFIX,email.ligagestao.movidesk.com
 - DOMAIN-SUFFIX,email.litebreeze.com
 - DOMAIN-SUFFIX,email.lluert.net
@@ -2678,6 +2679,7 @@
 - DOMAIN-SUFFIX,email.talent.robinhood.com
 - DOMAIN-SUFFIX,email.team.eventpasshero.com
 - DOMAIN-SUFFIX,email.teamber.com
+- DOMAIN-SUFFIX,email.theirthreads.com
 - DOMAIN-SUFFIX,email.trpoint.com
 - DOMAIN-SUFFIX,email.trumpet.app
 - DOMAIN-SUFFIX,email.trynavattic.com
@@ -3965,6 +3967,7 @@
 - DOMAIN-SUFFIX,server.bdmarketvalley.com
 - DOMAIN-SUFFIX,server.flowtechbd.com
 - DOMAIN-SUFFIX,server.investeringogferiebolig.dk
+- DOMAIN-SUFFIX,server.mrhommies.com
 - DOMAIN-SUFFIX,serveradminpage.weebly.com
 - DOMAIN-SUFFIX,service2.antik-seider.de
 - DOMAIN-SUFFIX,sfalobalid3.click.s11.sfmc-osl.com
@@ -4804,7 +4807,6 @@
 - DOMAIN-SUFFIX,ws-mebert.ads.corp.tt.omtrdc.net
 - DOMAIN-SUFFIX,ws-test2.www-test.tt.omtrdc.net
 - DOMAIN-SUFFIX,ws.bbc34.cs.tt.omtrdc.net
-- DOMAIN-SUFFIX,wss.edge-fast-whatsapp.com.cn
 - DOMAIN-SUFFIX,wsww15.admin.tt.omtrdc.net
 - DOMAIN-SUFFIX,wtipxyek2f5ijkl-p.adkoffer.fr
 - DOMAIN-SUFFIX,wvtm13.share.ntv.io
@@ -4909,12 +4911,10 @@
 - DOMAIN-SUFFIX,www.willfredericksttammany.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.xp.idmapper.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.yeld9auto.com
-- DOMAIN-SUFFIX,www.you1ad.com
 - DOMAIN-SUFFIX,www.ziele.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.zoof.tt.omtrdc.net
 - DOMAIN-SUFFIX,www2-festo-com-3663994.p06.elqsandbox.com
 - DOMAIN-SUFFIX,www2.allsupinc.com
-- DOMAIN-SUFFIX,www2.businessinantwerp.eu
 - DOMAIN-SUFFIX,www2.evolving.com
 - DOMAIN-SUFFIX,www2.in-cloud.ca
 - DOMAIN-SUFFIX,www2.iseazy.com
@@ -5129,7 +5129,6 @@
 ﻿- DOMAIN,aafp.tt.omtrdc.net
 ﻿- DOMAIN,abbviecommercial.tt.omtrdc.net
 ﻿- DOMAIN,acc-bskyb.hb-api.tt.omtrdc.net
-﻿- DOMAIN,accounts-bskyb.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,acron.tt.omtrdc.net
 ﻿- DOMAIN,claflinmedical.tt.omtrdc.net
 ﻿- DOMAIN,m.adnxs.com
