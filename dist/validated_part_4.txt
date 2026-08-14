@@ -30,6 +30,7 @@
 - DOMAIN,docsbskyb.hb-api.tt.omtrdc.net
 - DOMAIN,docscanner-st.apb.service.tt.omtrdc.net
 - DOMAIN,docsets.pultegroup.tt.omtrdc.net
+- DOMAIN,docsorigin.casiocomputer.tt.omtrdc.net
 - DOMAIN,doctissimo-by.tt.omtrdc.net
 - DOMAIN,document-cf.tt.omtrdc.net
 - DOMAIN,dol-152-180-10-2.tt.omtrdc.net
@@ -566,6 +567,7 @@
 - DOMAIN,turkey-latka.citizensbank.tt.omtrdc.net
 - DOMAIN,turmoil2.demo.tt.omtrdc.net
 - DOMAIN,twn3.tt.omtrdc.net
+- DOMAIN,two-pdev.citizensbank.tt.omtrdc.net
 - DOMAIN,two.annapolis.citizensbank.tt.omtrdc.net
 - DOMAIN,twojeautoelblag-opel.tt.omtrdc.net
 - DOMAIN,twr1.tt.omtrdc.net
@@ -605,6 +607,7 @@
 - DOMAIN,uat.pilot.invest.tt.omtrdc.net
 - DOMAIN,uat.qa-api.tt.omtrdc.net
 - DOMAIN,uat.trademarks.americas.cf.tt.omtrdc.net
+- DOMAIN,uat04.cms.tt.omtrdc.net
 - DOMAIN,uat05.environmentals.tt.omtrdc.net
 - DOMAIN,uat1t.secure1.tt.omtrdc.net
 - DOMAIN,uatsftp-ina.tt.omtrdc.net
@@ -1119,6 +1122,7 @@
 - DOMAIN-SUFFIX,4274616.notify6.com
 - DOMAIN-SUFFIX,4300970.notify6.com
 - DOMAIN-SUFFIX,438bab4aeb69b5.lhr.life
+- DOMAIN-SUFFIX,447c339ed2.da7a60f765.com
 - DOMAIN-SUFFIX,4598765432943749.weebly.com
 - DOMAIN-SUFFIX,4795272.notify6.com
 - DOMAIN-SUFFIX,4djehr4.weebly.com
@@ -2260,7 +2264,6 @@
 - DOMAIN-SUFFIX,email.servier.com
 - DOMAIN-SUFFIX,email.shotguntheapp.com
 - DOMAIN-SUFFIX,email.siarena.hu
-- DOMAIN-SUFFIX,email.sikerhekker.hu
 - DOMAIN-SUFFIX,email.site.readyplanet.com
 - DOMAIN-SUFFIX,email.smugmug.com
 - DOMAIN-SUFFIX,email.solarstorage24.de
@@ -2464,6 +2467,7 @@
 - DOMAIN-SUFFIX,f47b35c31dedc3a176c8f1de0bf89946.accountbackup-v2.tt-stage-ci1.omtrdc.net
 - DOMAIN-SUFFIX,f670be6d3a2adfa1d1164dd4cf7e2702.administracion-3.accountbac2.tt-stage-ci1.omtrdc.net
 - DOMAIN-SUFFIX,f6ac5fb92694536ca9216962642c7802.admins1.accountfcanr.tt.omtrdc.net
+- DOMAIN-SUFFIX,f6gc4v9oonmu6.accountfcanr.tt.omtrdc.net
 - DOMAIN-SUFFIX,f8-3.tt.omtrdc.net
 - DOMAIN-SUFFIX,f81-194.tt.omtrdc.net
 - DOMAIN-SUFFIX,f82ca6decc0e93f0e9c7dd9b6de33233.adminhosting.accountfcanr.tt.omtrdc.net
@@ -3440,7 +3444,6 @@
 - DOMAIN-SUFFIX,metaplatforms-case10005023532.firebaseapp.com
 - DOMAIN-SUFFIX,metaprofile.web.app
 - DOMAIN-SUFFIX,metric.baylorhealth.com
-- DOMAIN-SUFFIX,metrics.cmt.com
 - DOMAIN-SUFFIX,metrics.egencia.ca
 - DOMAIN-SUFFIX,metrics.egencia.dk
 - DOMAIN-SUFFIX,metrics.ellen.wb.com
@@ -3964,7 +3967,6 @@
 - DOMAIN-SUFFIX,server-index-page--lezzuzh.replit.app
 - DOMAIN-SUFFIX,server-networksolutions.firebaseapp.com
 - DOMAIN-SUFFIX,server-security-page--redarazoukitv.replit.app
-- DOMAIN-SUFFIX,server.cracksstyle.com
 - DOMAIN-SUFFIX,server1093.weebly.com
 - DOMAIN-SUFFIX,serveriukas.ekoproduktas.com
 - DOMAIN-SUFFIX,service1-106822.weeblysite.com
@@ -4129,7 +4131,6 @@
 - DOMAIN-SUFFIX,ss.boxit.dk
 - DOMAIN-SUFFIX,ss.btv168sensational17.store
 - DOMAIN-SUFFIX,ss.rigvert.com
-- DOMAIN-SUFFIX,ssc.nickatnite.com
 - DOMAIN-SUFFIX,ssgtm.diveassure.com
 - DOMAIN-SUFFIX,ssisdisoidsoidi.weebly.com
 - DOMAIN-SUFFIX,sso-auth-uphold-eng.square.site
@@ -4144,7 +4145,6 @@
 - DOMAIN-SUFFIX,sst.compass24.fr
 - DOMAIN-SUFFIX,sst.faszination-lateinamerika.de
 - DOMAIN-SUFFIX,sst.icdsoft.com
-- DOMAIN-SUFFIX,sst.supertrader.me
 - DOMAIN-SUFFIX,sstats.dagensmedia.se
 - DOMAIN-SUFFIX,sstgtmm.gentsjeans.com
 - DOMAIN-SUFFIX,sststape.mobiusdesk.pl
@@ -5173,6 +5173,8 @@
 ﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.cuna.tt.omtrdc.net
 ﻿- DOMAIN,0-cdburner-express-okta-idpcdburner.leroymerlin.tt.omtrdc.net
 ﻿- DOMAIN,0-chd.mboxedge18-tyo2.tt.omtrdc.net
+﻿- DOMAIN,10.114.6.24cbsdigitalmedia.hb.tt.omtrdc.net
+﻿- DOMAIN,10.156.2.22foxnews.hb.tt.omtrdc.net
 ﻿- DOMAIN,10.32.17.242espn.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,1188.content.swrve.com
 ﻿- DOMAIN,1und1internetag.d3.sc.tt.omtrdc.net
