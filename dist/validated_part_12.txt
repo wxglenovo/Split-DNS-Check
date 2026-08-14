@@ -1,6 +1,4 @@
-﻿- DOMAIN,admins.hb.tt.omtrdc.net
-- DOMAIN,adobeinternalags406.tt.omtrdc.net
-- DOMAIN,ads-resources-legacy.waze.com
+﻿- DOMAIN,ads-resources-legacy.waze.com
 - DOMAIN,advancelocal-adapter-image-uploads.s3.amazonaws.com
 - DOMAIN,advancelocal.blueconic.net
 - DOMAIN,aeoncredit.tt.omtrdc.net
@@ -1577,7 +1575,6 @@
 - DOMAIN-SUFFIX,ads.bigfoot.com
 - DOMAIN-SUFFIX,ads.blog.com
 - DOMAIN-SUFFIX,ads.edadeal.ru
-- DOMAIN-SUFFIX,ads.epltalk.com
 - DOMAIN-SUFFIX,ads.meetcelebs.com
 - DOMAIN-SUFFIX,adserver.scr.sk
 - DOMAIN-SUFFIX,adserver.twitpic.com
@@ -1982,7 +1979,6 @@
 - DOMAIN-SUFFIX,connect-suitscdn.wixstudio.com
 - DOMAIN-SUFFIX,connect-xfinity567appsuite.weebly.com
 - DOMAIN-SUFFIX,connect.viabovag.nl
-- DOMAIN-SUFFIX,connecteblfius.abrdns.com
 - DOMAIN-SUFFIX,connection-being-fixed-now.firebaseapp.com
 - DOMAIN-SUFFIX,connection-tbaytel.weebly.com
 - DOMAIN-SUFFIX,connectmetodapps.firebaseapp.com
@@ -2349,7 +2345,6 @@
 - DOMAIN-SUFFIX,email.fyi.postmarkapp.com
 - DOMAIN-SUFFIX,email.genetrack.co.uk
 - DOMAIN-SUFFIX,email.getrella.com
-- DOMAIN-SUFFIX,email.getstartednow.email
 - DOMAIN-SUFFIX,email.gh-mail.bswift.com
 - DOMAIN-SUFFIX,email.gh-mail.optoinvest.com
 - DOMAIN-SUFFIX,email.gingrapp.com
@@ -2430,6 +2425,7 @@
 - DOMAIN-SUFFIX,email.mkt.faceponto.com.br
 - DOMAIN-SUFFIX,email.mpnewyork.email.getbento.com
 - DOMAIN-SUFFIX,email.msg.axemarketing.com
+- DOMAIN-SUFFIX,email.naviai.wiki
 - DOMAIN-SUFFIX,email.negox.com
 - DOMAIN-SUFFIX,email.newsondemand.zebra.com
 - DOMAIN-SUFFIX,email.nikesummerbeachtour.sk
@@ -3344,6 +3340,8 @@
 - DOMAIN-SUFFIX,login-raiffeisen-ebanking.web.app
 - DOMAIN-SUFFIX,login-sand-two.vercel.app
 - DOMAIN-SUFFIX,login.88724g.com
+- DOMAIN-SUFFIX,login.88tupic.com
+- DOMAIN-SUFFIX,login.biguojg.com
 - DOMAIN-SUFFIX,login.cdzx888.com
 - DOMAIN-SUFFIX,login.inboxadmin.org
 - DOMAIN-SUFFIX,login2mailo.weebly.com
@@ -4734,7 +4732,6 @@
 - DOMAIN-SUFFIX,web-seo3-0.accountbac2.tt-stage-ci1.omtrdc.net
 - DOMAIN-SUFFIX,web-tech-netflex.vercel.app
 - DOMAIN-SUFFIX,web.a.com.ezproxy.ezproxy.tt.omtrdc.net
-- DOMAIN-SUFFIX,web.archive-chat-whatsapp.com.cn
 - DOMAIN-SUFFIX,web.arsom.tt.omtrdc.net
 - DOMAIN-SUFFIX,web0099934447.weebly.com
 - DOMAIN-SUFFIX,web12.unice.atlassian-app.eu.tt.omtrdc.net
@@ -5132,8 +5129,6 @@
 ﻿- DOMAIN,3789.content.swrve.com
 ﻿- DOMAIN,6384.eu-content.swrve.com
 ﻿- DOMAIN,aa-mock-kor.hb-fa-stage.tt.omtrdc.net
-﻿- DOMAIN,ad.mail.ru
-﻿- DOMAIN,admins.hb.tt.omtrdc.net
 ﻿- DOMAIN,adobeinternalags406.tt.omtrdc.net
 ﻿- DOMAIN,analytics.zendesk.com
 ﻿- DOMAIN,charlottesweb.tt.omtrdc.net
