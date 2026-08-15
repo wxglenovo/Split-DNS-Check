@@ -1,6 +1,4 @@
-﻿- DOMAIN,dishanalyticsandtest.tt.omtrdc.net
-- DOMAIN,dishpurchasingcorporation-firewall.hb-api.tt.omtrdc.net
-- DOMAIN,dishpurchasingcorporation-nginx.hb-api.tt.omtrdc.net
+﻿- DOMAIN,dishpurchasingcorporation-nginx.hb-api.tt.omtrdc.net
 - DOMAIN,dishpurchasingcorporationaccept.hb-api.tt.omtrdc.net
 - DOMAIN,dishpurchasingcorporationaccounts.hb-api.tt.omtrdc.net
 - DOMAIN,dishpurchasingcorporationmetrics.hb-api.tt.omtrdc.net
@@ -4922,7 +4920,6 @@
 - DOMAIN-SUFFIX,treatwellationsdevdiscovid19.sa-api-mx5.email.brasil.athena.tt.omtrdc.net
 - DOMAIN-SUFFIX,treatwellationsdevdiscovid19.sa-api.brasilbbs-bbs.owa.tt.omtrdc.net
 - DOMAIN-SUFFIX,treatwellationsdevdiscovid19.sa-api.brasilhost-dev4.athena.tt.omtrdc.net
-- DOMAIN-SUFFIX,treatwellationsdevdiscovid19.sa-api.owa2-brasil.brasil.tt.omtrdc.net
 - DOMAIN-SUFFIX,treatwellationsdevdiscovid19.sa-api.testbrasilbrasil.athena.tt.omtrdc.net
 - DOMAIN-SUFFIX,treatwellationsdevdiscovid19.sa-apimx0.mx.brasil.athena.tt.omtrdc.net
 - DOMAIN-SUFFIX,treatwellationsdevdiscovid191.mailin-api.athena.athena.tt.omtrdc.net
@@ -6017,7 +6014,6 @@
 ﻿- DOMAIN,discovery-dev-acc2.tt.omtrdc.net
 ﻿- DOMAIN,discovery.daimlerde.tt.omtrdc.net
 ﻿- DOMAIN,dishanalyticsandtest.info.tt.omtrdc.net
-﻿- DOMAIN,dishanalyticsandtest.tt.omtrdc.net
 ﻿- DOMAIN,dishpurchasingcorporation-firewall.hb-api.tt.omtrdc.net
 ﻿- DOMAIN,dnbbankasa.tt.omtrdc.net
 ﻿- DOMAIN,eset.tt.omtrdc.net
