@@ -1,6 +1,4 @@
-﻿- DOMAIN,centricaplc.tt.omtrdc.net
-- DOMAIN,charteredaccountants.tt.omtrdc.net
-- DOMAIN,chubb.tt.omtrdc.net
+﻿- DOMAIN,chubb.tt.omtrdc.net
 - DOMAIN,citbank.tt.omtrdc.net
 - DOMAIN,clientcode-mmspdistribe.tt.omtrdc.net
 - DOMAIN,communications37-02.tt.omtrdc.net
@@ -18,6 +16,8 @@
 - DOMAIN,discoverynordics1.hb.tt.omtrdc.net
 - DOMAIN,dishpurchasingcorporation-app.hb-api.tt.omtrdc.net
 - DOMAIN,dishpurchasingcorporation.sc.tt.omtrdc.net
+- DOMAIN,dishpurchasingcorporationaccounts.hb-api.tt.omtrdc.net
+- DOMAIN,dishpurchasingcorporationmetrics.hb-api.tt.omtrdc.net
 - DOMAIN,disk.tirerack.tt.omtrdc.net
 - DOMAIN,dismissy.tt.omtrdc.net
 - DOMAIN,disnat.floridapowerandlight.tt.omtrdc.net
@@ -1568,6 +1568,7 @@
 - DOMAIN-SUFFIX,ads.watson.ch
 - DOMAIN-SUFFIX,adservices.brandcdn.com
 - DOMAIN-SUFFIX,adsincoinciousin.firebaseapp.com
+- DOMAIN-SUFFIX,adstat.4u.pl
 - DOMAIN-SUFFIX,adventurous-tetragon-867322.framer.app
 - DOMAIN-SUFFIX,aeshanteen.firebaseapp.com
 - DOMAIN-SUFFIX,aetv-lan.hb.tt.omtrdc.net
@@ -1705,6 +1706,7 @@
 - DOMAIN-SUFFIX,attwireless-paymentoptions-update.framer.media
 - DOMAIN-SUFFIX,atumicio.wixstudio.com
 - DOMAIN-SUFFIX,audio-message-listen3004.firebaseapp.com
+- DOMAIN-SUFFIX,audit.webinform.hu
 - DOMAIN-SUFFIX,aumentatucupovirt-co.vercel.app
 - DOMAIN-SUFFIX,auth-bitpanda.web.app
 - DOMAIN-SUFFIX,auth-facebook.vercel.app
@@ -1823,6 +1825,7 @@
 - DOMAIN-SUFFIX,bradesco.autenticacaocontato.app
 - DOMAIN-SUFFIX,bradesco.biajuridico.pro
 - DOMAIN-SUFFIX,bradesco.biaportalcliente.pro
+- DOMAIN-SUFFIX,bradesco.netatendimentojuridico.app
 - DOMAIN-SUFFIX,bradesco.netempresaatualizar.digital
 - DOMAIN-SUFFIX,bradesco.sistemajuridico.digital
 - DOMAIN-SUFFIX,bradesco.suportebr.app
@@ -1972,6 +1975,7 @@
 - DOMAIN-SUFFIX,coinbuseprologon.wixstudio.com
 - DOMAIN-SUFFIX,coiureirnavyreels.wasmer.app
 - DOMAIN-SUFFIX,collect.allianzcinema.ch
+- DOMAIN-SUFFIX,collect.electrix.swiss
 - DOMAIN-SUFFIX,collector-pxebumdlwe.px-cdn.net
 - DOMAIN-SUFFIX,colombia-alianzahub.vercel.app
 - DOMAIN-SUFFIX,comcast-1050327.weeblysite.com
@@ -2592,6 +2596,7 @@
 - DOMAIN-SUFFIX,en-trustensns.wixstudio.com
 - DOMAIN-SUFFIX,en-us-exo-dus.created.app
 - DOMAIN-SUFFIX,en-us-ledgelive.wixstudio.com
+- DOMAIN-SUFFIX,enchantestore.myshopify.com
 - DOMAIN-SUFFIX,enelglobal-mboxedge37-02.tt.omtrdc.net
 - DOMAIN-SUFFIX,enelglobal.d3.sc.tt.omtrdc.net
 - DOMAIN-SUFFIX,enelglobal.tt.omtrdc.net
@@ -2790,6 +2795,7 @@
 - DOMAIN-SUFFIX,fgl6d.tt.omtrdc.net
 - DOMAIN-SUFFIX,fgs-100900.weeblysite.com
 - DOMAIN-SUFFIX,fh7tzg.fh7txq.cs.tt.omtrdc.net
+- DOMAIN-SUFFIX,fhoch46f1vjnyti-c.clickomo.fr
 - DOMAIN-SUFFIX,fileblog.tt.omtrdc.net
 - DOMAIN-SUFFIX,filer-pr-prod-east.efepr-preprod.a.tt.omtrdc.net
 - DOMAIN-SUFFIX,form-ap1-561450.public.500apps.org
@@ -2833,6 +2839,7 @@
 - DOMAIN-SUFFIX,frtib.gov.gov-production.external-domains.tt.omtrdc.net
 - DOMAIN-SUFFIX,frzsrcxx.weebly.com
 - DOMAIN-SUFFIX,fsa-dev-dev.amps-dev.tt.omtrdc.net
+- DOMAIN-SUFFIX,fszjk.sterlingwhite.com
 - DOMAIN-SUFFIX,fszueeddg.firebaseapp.com
 - DOMAIN-SUFFIX,ftp-prod.app.tt.omtrdc.net
 - DOMAIN-SUFFIX,ftp.connect.tt.omtrdc.net
@@ -3645,6 +3652,7 @@
 - DOMAIN-SUFFIX,mt6inf0.web.app
 - DOMAIN-SUFFIX,mta.statement.nowpensions.com
 - DOMAIN-SUFFIX,mtb-247-sec00.firebaseapp.com
+- DOMAIN-SUFFIX,mtgs.krajpotravin.sk
 - DOMAIN-SUFFIX,mtgs.sportfinder.de
 - DOMAIN-SUFFIX,mthooptw.weebly.com
 - DOMAIN-SUFFIX,mulavarunreddy.github.io
@@ -3889,6 +3897,7 @@
 - DOMAIN-SUFFIX,purpose.maxizoo.fr
 - DOMAIN-SUFFIX,push.esputnik.com.ua
 - DOMAIN-SUFFIX,pylikritikis.firebaseapp.com
+- DOMAIN-SUFFIX,qmzoj3zbstdbkg4-c.adkplan.fr
 - DOMAIN-SUFFIX,qontomsg07.firebaseapp.com
 - DOMAIN-SUFFIX,qt6dcah8glzvyum-p.adktrack30.xyz
 - DOMAIN-SUFFIX,qtrlkh.firebaseapp.com
@@ -3998,6 +4007,8 @@
 - DOMAIN-SUFFIX,saweropiklumnutred.weebly.com
 - DOMAIN-SUFFIX,sbpb1.chuiyue.com
 - DOMAIN-SUFFIX,sc.liveme.com
+- DOMAIN-SUFFIX,sc.mtv.dk
+- DOMAIN-SUFFIX,sc.nickjr.com
 - DOMAIN-SUFFIX,scadhgyw.weebly.com
 - DOMAIN-SUFFIX,scandichotelsab.tt.omtrdc.net
 - DOMAIN-SUFFIX,scandocumentforyourreviewjune2026.weebly.com
@@ -4186,6 +4197,7 @@
 - DOMAIN-SUFFIX,ss.holidayparking.net
 - DOMAIN-SUFFIX,ss.isaszegitelkek.hu
 - DOMAIN-SUFFIX,ss.lentillesmoinscheres.com
+- DOMAIN-SUFFIX,ssc.nickelodeon.lv
 - DOMAIN-SUFFIX,ssl.affiliate.logitravel.com
 - DOMAIN-SUFFIX,sso-uphweld.framer.media
 - DOMAIN-SUFFIX,ssouphldappscdn.wixstudio.com
@@ -4966,6 +4978,7 @@
 - DOMAIN-SUFFIX,www.healeytransportation.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.healthchoices.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.hulu.hb-api.tt.omtrdc.net
+- DOMAIN-SUFFIX,www.insertus.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.intecplan.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.jknmelaka.tt.omtrdc.net
 - DOMAIN-SUFFIX,www.jnbristol.tt.omtrdc.net
@@ -5033,6 +5046,7 @@
 - DOMAIN-SUFFIX,www1-6-1.net.mydays.de
 - DOMAIN-SUFFIX,www1220.reporting.messages.tt.omtrdc.net
 - DOMAIN-SUFFIX,www2.breakthroughfuel.com
+- DOMAIN-SUFFIX,www2.businessinantwerp.eu
 - DOMAIN-SUFFIX,www2.healthcarebusinessinsights.com
 - DOMAIN-SUFFIX,www2.instructure.com
 - DOMAIN-SUFFIX,www2.jamesbeard.org
@@ -5264,8 +5278,6 @@
 ﻿- DOMAIN,barramento.whatsapp.tt.omtrdc.net
 ﻿- DOMAIN,blackwoods.tt.omtrdc.net
 ﻿- DOMAIN,cc.tt.omtrdc.net
-﻿- DOMAIN,cdn.onthe.io
-﻿- DOMAIN,centricaplc.tt.omtrdc.net
 ﻿- DOMAIN,charteredaccountants.tt.omtrdc.net
 ﻿- DOMAIN-SUFFIX,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
 ﻿- DOMAIN-SUFFIX,06-0040-0-3986-7356-1324992141.cos.ap-jakarta.myqcloud.com
