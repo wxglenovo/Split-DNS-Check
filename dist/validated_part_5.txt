@@ -1,6 +1,4 @@
-﻿- DOMAIN,1aa-mock.hb-fa-stage.tt.omtrdc.net
-- DOMAIN,207-171-184-103.tt.omtrdc.net
-- DOMAIN,3193.api.swrve.com
+﻿- DOMAIN,3193.api.swrve.com
 - DOMAIN,active.tt.omtrdc.net
 - DOMAIN,activisionblizzardin.tt.omtrdc.net
 - DOMAIN,amazonfreight.tt.omtrdc.net
@@ -212,6 +210,7 @@
 - DOMAIN,cmp1online.tt.omtrdc.net
 - DOMAIN,cmpsbx7-dev.tt.omtrdc.net
 - DOMAIN,cmpstg-test01.tt.omtrdc.net
+- DOMAIN,cms-aggregation-kafka-sub.accountbackup-v2.tt-stage-ci1.omtrdc.net
 - DOMAIN,cms1.netspendcorp.tt.omtrdc.net
 - DOMAIN,cms2mboxedge47.tt.omtrdc.net
 - DOMAIN,cms5.br.tt.omtrdc.net
@@ -251,6 +250,7 @@
 - DOMAIN,conn-i-0f8aeb41eadbf7a1a-eu-west-1.adminhosting.accountart-of-falco.tt-qe-ci1.omtrdc.net
 - DOMAIN,consumer-prod-eu.samsungbenelux.tt.omtrdc.net
 - DOMAIN,contacts-43360.sandbox.tt.omtrdc.net
+- DOMAIN,contactsapi-8594.sandbox.tt.omtrdc.net
 - DOMAIN,content-search-api.tt-qe2.omtrdc.net
 - DOMAIN,content-test.sandpit1.tt.omtrdc.net
 - DOMAIN,content1-gi.tt.omtrdc.net
@@ -2539,7 +2539,6 @@
 - DOMAIN-SUFFIX,agreeable-backgrounds-160819.framer.app
 - DOMAIN-SUFFIX,agripacea.firebaseapp.com
 - DOMAIN-SUFFIX,agrizzap.web.app
-- DOMAIN-SUFFIX,aikguairn.osmt.link
 - DOMAIN-SUFFIX,aimiaproprietaryloya.tt.omtrdc.net
 - DOMAIN-SUFFIX,ainamulyana.blogspot.com
 - DOMAIN-SUFFIX,aiq-in.caranddriver.com
@@ -6225,7 +6224,6 @@
 - DOMAIN-SUFFIX,ss.woningontruiming-regionaal.nl
 - DOMAIN-SUFFIX,ssc-us.pesi.co.uk
 - DOMAIN-SUFFIX,ssc-us.pesi.com.au
-- DOMAIN-SUFFIX,ssc.southparkstudios.com
 - DOMAIN-SUFFIX,sscodings.github.io
 - DOMAIN-SUFFIX,ssgtm.medicard-assistant.com
 - DOMAIN-SUFFIX,sso.blackafrican.co.za
@@ -7160,7 +7158,6 @@
 - DOMAIN-SUFFIX,xh031304.tt.omtrdc.net
 - DOMAIN-SUFFIX,xlamd.tt.omtrdc.net
 - DOMAIN-SUFFIX,xlrestore.upchungary.tt.omtrdc.net
-- DOMAIN-SUFFIX,xml-v4.bluodpa-d.online
 - DOMAIN-SUFFIX,xn--o-ylbabddnaas1abkweaj4bf6ad4bobibhe7yqa.weebly.com
 - DOMAIN-SUFFIX,xnity.framer.website
 - DOMAIN-SUFFIX,xolm-zc1.maillist-manage.eu
@@ -7254,7 +7251,6 @@
 - DOMAIN-SUFFIX,zziimmbbrraa.framer.ai
 - DOMAIN-SUFFIX,zzzzzzzznt.weebly.com
 ﻿- DOMAIN,13923.tt.omtrdc.net
-﻿- DOMAIN,1aa-mock.hb-fa-stage.tt.omtrdc.net
 ﻿- DOMAIN,207-171-184-103.tt.omtrdc.net
 ﻿- DOMAIN,212.54.132200paloaltonetworks.tt.omtrdc.net
 ﻿- DOMAIN,2fewieeinfach.tt.omtrdc.net
@@ -7295,7 +7291,6 @@
 ﻿- DOMAIN-SUFFIX,ads.house365.com
 ﻿- DOMAIN-SUFFIX,adserve.ph
 ﻿- DOMAIN-SUFFIX,ali-pro-pull.kwai.net.iberostar.com
-﻿﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.jbhunt.tt.omtrdc.net
 ﻿﻿- DOMAIN,1353.api.swrve.com
 ﻿﻿- DOMAIN,13923.tt.omtrdc.net
 ﻿﻿- DOMAIN,aa-b.hb-fa-stage.tt.omtrdc.net
