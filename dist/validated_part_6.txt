@@ -794,6 +794,7 @@
 - DOMAIN,faportal-crt-dev.tt.omtrdc.net
 - DOMAIN,faportal-pdc.prod.tt.omtrdc.net
 - DOMAIN,faq-invio.citizensbank.tt.omtrdc.net
+- DOMAIN,fargate-cassini-preview.accountfcanr.tt.omtrdc.net
 - DOMAIN,fax.muroo.citizensbank.tt.omtrdc.net
 - DOMAIN,faxliberty.tt.omtrdc.net
 - DOMAIN,faxserve2go.news.tt.omtrdc.net
@@ -1542,6 +1543,7 @@
 - DOMAIN,mountainamericacredi-rpc.tt.omtrdc.net
 - DOMAIN,mousoufamily.x.tt.omtrdc.net
 - DOMAIN,mouton.tt.omtrdc.net
+- DOMAIN,msfirakis.acomemerging.tt.omtrdc.net
 - DOMAIN,msh-w3-cds-cds.tt.omtrdc.net
 - DOMAIN,msoid.carnivalbrands.tt.omtrdc.net
 - DOMAIN,msoid4covid19.tt.omtrdc.net
@@ -1576,6 +1578,7 @@
 - DOMAIN,na191-spare.tt.omtrdc.net
 - DOMAIN,na6.cloudstation.eu-west-1.inf.hydra.tt.omtrdc.net
 - DOMAIN,ndgrants-aws10.tt.omtrdc.net
+- DOMAIN,ndnsmtp.cr.tt.omtrdc.net
 - DOMAIN,netlocal.tt.omtrdc.net
 - DOMAIN,newscorp.grapeshot.co.uk
 - DOMAIN,nginxkrehbiel.tt.omtrdc.net
@@ -1607,6 +1610,7 @@
 - DOMAIN,occ-0-301-969.1.tt.omtrdc.net
 - DOMAIN,occ-0-308-114.1.tt.omtrdc.net
 - DOMAIN,occ-0-534-1360.1.tt.omtrdc.net
+- DOMAIN,odin-parentapp.tt.omtrdc.net
 - DOMAIN,odlo.carnivalbrands.tt.omtrdc.net
 - DOMAIN,oitvdc-edge-12.tt.omtrdc.net
 - DOMAIN,okada.tt.omtrdc.net
@@ -1684,7 +1688,6 @@
 - DOMAIN,tnodev-z4t5pjitrvx3ptr4.tt.omtrdc.net
 - DOMAIN,tnqa.tt-qe5.omtrdc.net
 - DOMAIN,tnsclbaws302.tt.omtrdc.net
-- DOMAIN,tnsecimawsp102.tt.omtrdc.net
 - DOMAIN,tnt-159.tt.omtrdc.net
 - DOMAIN,to.mboxedge36-alb.tt.omtrdc.net
 - DOMAIN,toad-geo-lon.hb-api.tt.omtrdc.net
@@ -2444,7 +2447,6 @@
 - DOMAIN-SUFFIX,a8.ocnk.net
 - DOMAIN-SUFFIX,a8.shukatsu-note.com
 - DOMAIN-SUFFIX,a8clk.ma-platform.com
-- DOMAIN-SUFFIX,a8cv.kabu-online.jp
 - DOMAIN-SUFFIX,a8cv.will-gocon.net
 - DOMAIN-SUFFIX,a8live-vote.eventos.work
 - DOMAIN-SUFFIX,aa.philippineairlines.com
@@ -2640,6 +2642,7 @@
 - DOMAIN-SUFFIX,app.showroomprive.com
 - DOMAIN-SUFFIX,app.tadatada.com
 - DOMAIN-SUFFIX,app.trysit.info
+- DOMAIN-SUFFIX,app.vitabuddy.de
 - DOMAIN-SUFFIX,app.web-sender.com
 - DOMAIN-SUFFIX,app.xlcenter.com
 - DOMAIN-SUFFIX,app1.fumblingvacation.pro
@@ -2685,7 +2688,6 @@
 - DOMAIN-SUFFIX,arpg-b000d.firebaseapp.com
 - DOMAIN-SUFFIX,arsrsffarcw.w3spaces.com
 - DOMAIN-SUFFIX,artemis-cdn.ocdn.eu
-- DOMAIN-SUFFIX,arub-it.myshopify.com
 - DOMAIN-SUFFIX,aruba-it.weebly.com
 - DOMAIN-SUFFIX,asadsheikh622.github.io
 - DOMAIN-SUFFIX,asc.asc-net.com
@@ -3451,7 +3453,6 @@
 - DOMAIN-SUFFIX,data-5f4e914553.apps.iocnt.de
 - DOMAIN-SUFFIX,data-5f7ebd9560.apps.iocnt.de
 - DOMAIN-SUFFIX,data-62e4650bcc.apps.iocnt.de
-- DOMAIN-SUFFIX,data-639ebd97e3.transport-online.de
 - DOMAIN-SUFFIX,data-7609d780e9.apps.iocnt.de
 - DOMAIN-SUFFIX,data-80b614ee0f.apps.iocnt.de
 - DOMAIN-SUFFIX,data-87563bd275.apps.iocnt.de
@@ -3784,7 +3785,6 @@
 - DOMAIN-SUFFIX,e0b65a4ee7d5754a6a1c119c565b71b6.accountariemonn.tt-qe-ci1.omtrdc.net
 - DOMAIN-SUFFIX,e1ff2dcbaf.80a16e63df.com
 - DOMAIN-SUFFIX,e4985d3fcad4f3f57c090189b6fe5831.administracion-5.accountbackup-v2.tt-stage-ci1.omtrdc.net
-- DOMAIN-SUFFIX,e6499697e6.d97d3231b2.com
 - DOMAIN-SUFFIX,ea741062c78422eec52c4f17341d5590.adminhosting.accountchef-api-backup-s3-cache-production.tt.omtrdc.net
 - DOMAIN-SUFFIX,easybank-barc9090.up.railway.app
 - DOMAIN-SUFFIX,eb7811.icefactory.cl
@@ -4001,7 +4001,6 @@
 - DOMAIN-SUFFIX,email.mail.strengthfysio-mail.com
 - DOMAIN-SUFFIX,email.mail.texanclean.com
 - DOMAIN-SUFFIX,email.mail.track123.com
-- DOMAIN-SUFFIX,email.mail.vtpdev-scheduling.com
 - DOMAIN-SUFFIX,email.mail2.maspedidos.com.ar
 - DOMAIN-SUFFIX,email.mailbox.digitalmediavending.com
 - DOMAIN-SUFFIX,email.mailer.jfrog.com
@@ -4053,7 +4052,6 @@
 - DOMAIN-SUFFIX,email.oceanpact.movidesk.com
 - DOMAIN-SUFFIX,email.odysseydcs.com
 - DOMAIN-SUFFIX,email.officium.app
-- DOMAIN-SUFFIX,email.onlyleadsco.com
 - DOMAIN-SUFFIX,email.operation.17track.net
 - DOMAIN-SUFFIX,email.parkingpro.nl
 - DOMAIN-SUFFIX,email.payments.disco.ac
@@ -4555,7 +4553,6 @@
 - DOMAIN-SUFFIX,gcpaexp.my.site.com
 - DOMAIN-SUFFIX,gct.com.d1.sc.tt.omtrdc.net
 - DOMAIN-SUFFIX,gcvc1ai.tt.omtrdc.net
-- DOMAIN-SUFFIX,gd.189.cn
 - DOMAIN-SUFFIX,gd3go.v2.tt.omtrdc.net
 - DOMAIN-SUFFIX,gdb1-pr.accountariemonn.tt-qe-ci1.omtrdc.net
 - DOMAIN-SUFFIX,gdcc.tt-qe5.omtrdc.net
@@ -5897,7 +5894,6 @@
 - DOMAIN-SUFFIX,newmagicmail.weebly.com
 - DOMAIN-SUFFIX,newofferxfinitymailuser.weebly.com
 - DOMAIN-SUFFIX,news.franchiseparis.com
-- DOMAIN-SUFFIX,news.vuer.net
 - DOMAIN-SUFFIX,newxfsync.weebly.com
 - DOMAIN-SUFFIX,ngc-saqw.wasmer.app
 - DOMAIN-SUFFIX,nhanquanrofreene.weebly.com
@@ -6506,7 +6502,6 @@
 - DOMAIN-SUFFIX,smetrics.kamloopshonda.ca
 - DOMAIN-SUFFIX,smetrics.keysight.com.br
 - DOMAIN-SUFFIX,smetrics.pwc.ad
-- DOMAIN-SUFFIX,smetrics.schindler.ar
 - DOMAIN-SUFFIX,smetrics.secure.ehc.com
 - DOMAIN-SUFFIX,smetrics.tui.be
 - DOMAIN-SUFFIX,smetrics.tv2media.dk
@@ -7376,7 +7371,6 @@
 - DOMAIN-SUFFIX,utfcusecureauth0z7i1.weebly.com
 - DOMAIN-SUFFIX,utforsdenmarkas.tt.omtrdc.net
 - DOMAIN-SUFFIX,utiq.holidaycheck.at
-- DOMAIN-SUFFIX,utiq.mail.de
 - DOMAIN-SUFFIX,utp--ac--pa.weebly.com
 - DOMAIN-SUFFIX,utxeipapp.utxeipapp01.tt.omtrdc.net
 - DOMAIN-SUFFIX,uvmmxx.weebly.com
@@ -7970,10 +7964,11 @@
 - DOMAIN-SUFFIX,zupymlllg.firebaseapp.com
 - DOMAIN-SUFFIX,zwwfaqh1xbfn1g86.tt.omtrdc.net
 - DOMAIN-SUFFIX,zyclothescell.tt.omtrdc.net
+﻿- DOMAIN,0--skitch--0.tt.omtrdc.net
+﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.activecampaign.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.anntaylorinc.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.schwanshomeservice.tt.omtrdc.net
 ﻿- DOMAIN,0-0-0-birkart-clws-ifs-globalmn.tatasiaairlinesltd.tt.omtrdc.net
-﻿- DOMAIN,0.0.0.0032cbsinteractive.hb.tt.omtrdc.net
 ﻿- DOMAIN,1188.content.swrve.com
 ﻿- DOMAIN,11main-02.tt.omtrdc.net
 ﻿- DOMAIN,1822direkt.tt.hb-fa-dev.tt.omtrdc.net
@@ -8027,10 +8022,8 @@
 ﻿- DOMAIN-SUFFIX,18-devthakor.github.io
 ﻿- DOMAIN-SUFFIX,1f0rtfib300.weebly.com
 ﻿- DOMAIN-SUFFIX,33.autohome.com.cn
-﻿- DOMAIN-SUFFIX,app.aplus.pptv.com
 ﻿- DOMAIN-SUFFIX,banners.alt.com
 ﻿- DOMAIN-SUFFIX,eniac.net.jumia.com.gh
-﻿﻿- DOMAIN,0-enakamai-lanwp.homedepotmx.tt.omtrdc.net
 ﻿﻿- DOMAIN,3791.api.swrve.com
 ﻿﻿- DOMAIN,929jackfm.mmspdistribe.tt.omtrdc.net
 ﻿﻿- DOMAIN,avivasingapore.tt.omtrdc.net
