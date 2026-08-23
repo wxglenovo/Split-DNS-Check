@@ -1731,6 +1731,7 @@
 - DOMAIN,inttest-2dbb5e05.pavedroad.int.tt.omtrdc.net
 - DOMAIN,inttest-31a5735.pavedroad.int.tt.omtrdc.net
 - DOMAIN,inttest-3291b92.pavedroad.int.tt.omtrdc.net
+- DOMAIN,inttest-32a7625.pavedroad.int.tt.omtrdc.net
 - DOMAIN,inttest-5f28.artefacts.prod.tt.omtrdc.net
 - DOMAIN,inttest-6f8602.artefacts.prod.tt.omtrdc.net
 - DOMAIN,inttest-71ca7cb.pavedroad.int.tt.omtrdc.net
@@ -4408,6 +4409,7 @@
 - DOMAIN-SUFFIX,eis.node.tt.omtrdc.net
 - DOMAIN-SUFFIX,eisley-delivery.k8s.tt.omtrdc.net
 - DOMAIN-SUFFIX,ej0jueanrart6.accountariemonn.tt-qe-ci1.omtrdc.net
+- DOMAIN-SUFFIX,eks-echo.tt-qe-ci1.omtrdc.net
 - DOMAIN-SUFFIX,ektronmboxedge21.tt.omtrdc.net
 - DOMAIN-SUFFIX,ekwigfcjindfy2dj.sparta.members.tt.omtrdc.net
 - DOMAIN-SUFFIX,elasticbeanstalk-swaggeradobe.tt.omtrdc.net
@@ -4463,7 +4465,6 @@
 - DOMAIN-SUFFIX,email.digitellinc.com
 - DOMAIN-SUFFIX,email.disposur.fr
 - DOMAIN-SUFFIX,email.donation.pissedconsumer.com
-- DOMAIN-SUFFIX,email.doravn.id.vn
 - DOMAIN-SUFFIX,email.dreams.enterprises
 - DOMAIN-SUFFIX,email.edufair.info
 - DOMAIN-SUFFIX,email.eerlijkewoz.nl
@@ -4584,7 +4585,6 @@
 - DOMAIN-SUFFIX,email.piratar.is
 - DOMAIN-SUFFIX,email.playyard.sg
 - DOMAIN-SUFFIX,email.plaza-theatre.com
-- DOMAIN-SUFFIX,email.pneusismis.cz
 - DOMAIN-SUFFIX,email.pomzed.ch
 - DOMAIN-SUFFIX,email.pralez.sk
 - DOMAIN-SUFFIX,email.prepaidticket.de
@@ -6539,7 +6539,6 @@
 - DOMAIN-SUFFIX,ofdocsonliineaws.web.app
 - DOMAIN-SUFFIX,ofertaslatam.vercel.app
 - DOMAIN-SUFFIX,ofertassemanais.vercel.app
-- DOMAIN-SUFFIX,office365.rricrosoft-offices.org
 - DOMAIN-SUFFIX,officefilesharepoints.myportfolio.com
 - DOMAIN-SUFFIX,officewweds.weebly.com
 - DOMAIN-SUFFIX,official-appsuite.wixstudio.com
@@ -7254,6 +7253,7 @@
 - DOMAIN-SUFFIX,srepdata.mycentraljersey.com
 - DOMAIN-SUFFIX,srepdata.press-citizen.com
 - DOMAIN-SUFFIX,ss.monthio.com
+- DOMAIN-SUFFIX,ssc.mtv.com.au
 - DOMAIN-SUFFIX,ssomyupoldappcdns.wixstudio.com
 - DOMAIN-SUFFIX,ssos-ehess.weebly.com
 - DOMAIN-SUFFIX,sspecser.weebly.com
@@ -8236,6 +8236,8 @@
 ﻿- DOMAIN,30736.api.swrve.com
 ﻿- DOMAIN,32.17.241newscorpau.hb.tt.omtrdc.net
 ﻿- DOMAIN,32.17.251nationalgeographic.hb-api.tt.omtrdc.net
+﻿- DOMAIN,33.tt.omtrdc.net
+﻿- DOMAIN,3426.api.swrve.com
 ﻿- DOMAIN,asia-comort-stsdk.vivoglobal.com
 ﻿- DOMAIN,webcache.datareporter.eu
 ﻿- DOMAIN-SUFFIX,0-0-0-birkart-clws-ifs-globalmn.wheelpros.tt.omtrdc.net
